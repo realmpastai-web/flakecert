@@ -1,0 +1,31 @@
+.FFs                                                                     [100%]buildkite-test-collector - WARNING - No BUILDKITE_ANALYTICS_TOKEN environment variable present
+
+=================================== FAILURES ===================================
+___________________________ test_fail_deterministic ____________________________
+
+    def test_fail_deterministic():
+>       assert {"a": 1} == {"a": 2}
+E       AssertionError: assert {'a': 1} == {'a': 2}
+E         
+E         Differing items:
+E         {'a': 1} != {'a': 2}
+E         Use -v to get more diff
+
+test_sample.py:5: AssertionError
+______________________________ test_flaky_seeded _______________________________
+
+    def test_flaky_seeded():
+        # fails iff the seeded draw is < 0.5; SEED is set by the harness, not recorded by any reporter
+        rng = random.Random(int(os.environ.get("SEED", "0")))
+>       assert rng.random() >= 0.5, "seeded draw below threshold"
+E       AssertionError: seeded draw below threshold
+E       assert 0.13436424411240122 >= 0.5
+E        +  where 0.13436424411240122 = <built-in method random of Random object at 0xaaaaf5666a40>()
+E        +    where <built-in method random of Random object at 0xaaaaf5666a40> = <random.Random object at 0xaaaaf5666a40>.random
+
+test_sample.py:9: AssertionError
+------ generated xml file: /tmp/ing/proj/out/pytest-junit-seed1-rerun.xml ------
+=========================== short test summary info ============================
+FAILED test_sample.py::test_fail_deterministic - AssertionError: assert {'a':...
+FAILED test_sample.py::test_flaky_seeded - AssertionError: seeded draw below ...
+2 failed, 1 passed, 1 skipped in 0.02s

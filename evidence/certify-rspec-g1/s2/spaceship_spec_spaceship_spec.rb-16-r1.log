@@ -1,0 +1,1725 @@
++ logical=rspec './spaceship/spec/spaceship_spec.rb[1:4]'
++ rspec_argv_len=142
++ rspec_argv_n=8
++ docker_argv_len=430
++ docker_argv_n=25
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -v /tmp/flakecert-g1-1019/work/rspec-json:/out -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --format documentation --no-color './spaceship/spec/spaceship_spec.rb[1:4]' --format json --out /out/spaceship_spec_spaceship_spec.rb-16-r1.json
+elapsed_s=2.626
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:ids=>{"./spaceship/spec/spaceship_spec.rb"=>["1:4"]}}
+
+Spaceship
+  Certificate (FAILED - 1)
+
+Failures:
+
+  1) Spaceship Certificate
+     Failure/Error: before { Spaceship.login }
+
+     WebMock::NetConnectNotAllowedError:
+       Real HTTP connections are disabled. Unregistered request: POST https://idmsa.apple.com/appleauth/auth/signin/init with body '{"a":"fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg==","accountName":"spaceship@krausefx.com","protocols":["s2k","s2k_fo"]}' with headers {'Accept'=>'application/json, text/javascript', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Spaceship 2.239.0', 'X-Apple-Widget-Key'=>'e0abc', 'X-Requested-With'=>'XMLHttpRequest'}
+
+       You can stub this request with the following snippet:
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/signin/init").
+         with(
+           body: "{\"a\":\"fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg==\",\"accountName\":\"spaceship@krausefx.com\",\"protocols\":[\"s2k\",\"s2k_fo\"]}",
+           headers: {
+       	  'Accept'=>'application/json, text/javascript',
+       	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+       	  'Content-Type'=>'application/json',
+       	  'User-Agent'=>'Spaceship 2.239.0',
+       	  'X-Apple-Widget-Key'=>'e0abc',
+       	  'X-Requested-With'=>'XMLHttpRequest'
+           }).
+         to_return(status: 200, body: "", headers: {})
+
+       registered request stubs:
+
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/users")
+       stub_request(:delete, "https://api.appstoreconnect.apple.com/v1/webhooks/webhook-123")
+       stub_request(:post, "https://api.appstoreconnect.apple.com/v1/webhooks")
+       stub_request(:get, "https://api.appstoreconnect.apple.com/v1/apps/123456789/webhooks")
+       stub_request(:post, "https://appstoreconnect.apple.com/iris/v1/appStoreVersionReleaseRequests")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/preReleaseVersions")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/builds?include=buildBetaDetail,betaBuildMetrics&limit=10&sort=uploadedDate")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/apps/1234/buildUploads")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/apps/1234/buildDeliveries")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/buildBundles/48a9bb1f-5f0f-4133-8c72-3fb93e92603a/buildBundleFileSizes")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/buildBetaDetails")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaTesterMetrics")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaTesters")
+       stub_request(:delete, "https://appstoreconnect.apple.com/iris/v1/betaGroups/123456789")
+       stub_request(:post, "https://appstoreconnect.apple.com/iris/v1/betaGroups")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaGroups")
+       stub_request(:delete, "https://appstoreconnect.apple.com/iris/v1/betaFeedbacks/987654321")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaFeedbacks")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaBuildMetrics")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaBuildLocalizations")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaAppReviewSubmissions")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaAppReviewDetails")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/betaAppLocalizations")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/apps/123456789")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/apps?filter%5BbundleId%5D=com.joshholtz.FastlaneTest&include=appStoreVersions")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/apps?include=appStoreVersions")
+       stub_request(:get, "https://appstoreconnect.apple.com/iris/v1/apps")
+       stub_request(:post, "https://developer.apple.com/services-account/v1/profiles")
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/devices/987654321")
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/devices/123456789")
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/devices/13371337")
+       stub_request(:post, "https://developer.apple.com/services-account/v1/devices")
+       stub_request(:post, "https://developer.apple.com/services-account/v1/certificates")
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>false, "settings"=>[]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"ICLOUD"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>{"enabled"=>false, "settings"=>[]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>{"type"=>"capabilities", "id"=>"ICLOUD"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>true, "settings"=>[{"key"=>"ICLOUD_VERSION", "options"=>[{"key"=>"XCODE_6"}]}]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"ICLOUD"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>
+                  {"enabled"=>true,
+                   "settings"=>
+                    [{"key"=>"ICLOUD_VERSION", "options"=>[{"key"=>"XCODE_6"}]}]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>{"type"=>"capabilities", "id"=>"ICLOUD"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>true, "settings"=>[{"key"=>"ICLOUD_VERSION", "options"=>[{"key"=>"XCODE_5"}]}]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"ICLOUD"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>
+                  {"enabled"=>true,
+                   "settings"=>
+                    [{"key"=>"ICLOUD_VERSION", "options"=>[{"key"=>"XCODE_5"}]}]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>{"type"=>"capabilities", "id"=>"ICLOUD"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>false, "settings"=>[]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"DATA_PROTECTION"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>{"enabled"=>false, "settings"=>[]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>
+                      {"type"=>"capabilities", "id"=>"DATA_PROTECTION"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>true, "settings"=>[{"key"=>"DATA_PROTECTION_PERMISSION_LEVEL", "options"=>[{"key"=>"PROTECTED_UNTIL_FIRST_USER_AUTH"}]}]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"DATA_PROTECTION"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>
+                  {"enabled"=>true,
+                   "settings"=>
+                    [{"key"=>"DATA_PROTECTION_PERMISSION_LEVEL",
+                      "options"=>[{"key"=>"PROTECTED_UNTIL_FIRST_USER_AUTH"}]}]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>
+                      {"type"=>"capabilities", "id"=>"DATA_PROTECTION"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>true, "settings"=>[{"key"=>"DATA_PROTECTION_PERMISSION_LEVEL", "options"=>[{"key"=>"PROTECTED_UNLESS_OPEN"}]}]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"DATA_PROTECTION"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>
+                  {"enabled"=>true,
+                   "settings"=>
+                    [{"key"=>"DATA_PROTECTION_PERMISSION_LEVEL",
+                      "options"=>[{"key"=>"PROTECTED_UNLESS_OPEN"}]}]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>
+                      {"type"=>"capabilities", "id"=>"DATA_PROTECTION"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>true, "settings"=>[{"key"=>"DATA_PROTECTION_PERMISSION_LEVEL", "options"=>[{"key"=>"COMPLETE_PROTECTION"}]}]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"DATA_PROTECTION"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>
+                  {"enabled"=>true,
+                   "settings"=>
+                    [{"key"=>"DATA_PROTECTION_PERMISSION_LEVEL",
+                      "options"=>[{"key"=>"COMPLETE_PROTECTION"}]}]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>
+                      {"type"=>"capabilities", "id"=>"DATA_PROTECTION"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>true, "settings"=>[]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"ACCESS_WIFI_INFORMATION"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>{"enabled"=>true, "settings"=>[]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>
+                      {"type"=>"capabilities",
+                       "id"=>"ACCESS_WIFI_INFORMATION"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>false, "settings"=>[]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"ACCESS_WIFI_INFORMATION"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>{"enabled"=>false, "settings"=>[]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>
+                      {"type"=>"capabilities",
+                       "id"=>"ACCESS_WIFI_INFORMATION"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>true, "settings"=>[]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"APP_ATTEST"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>{"enabled"=>true, "settings"=>[]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>{"type"=>"capabilities", "id"=>"APP_ATTEST"}}}}]}}}]]
+
+       stub_request(:patch, "https://developer.apple.com/services-account/v1/bundleIds/ABCD1234").
+         with(
+           body: {"data"=>{"type"=>"bundleIds", "id"=>"ABCD1234", "attributes"=>{"permissions"=>{"edit"=>true, "delete"=>true}, "seedId"=>"SEEDID", "teamId"=>"XXXXXXXXXX"}, "relationships"=>{"bundleIdCapabilities"=>{"data"=>[{"type"=>"bundleIdCapabilities", "attributes"=>{"enabled"=>false, "settings"=>[]}, "relationships"=>{"capability"=>{"data"=>{"type"=>"capabilities", "id"=>"APP_ATTEST"}}}}]}}}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "data",
+         {"type"=>"bundleIds",
+          "id"=>"ABCD1234",
+          "attributes"=>
+           {"permissions"=>{"edit"=>true, "delete"=>true},
+            "seedId"=>"SEEDID",
+            "teamId"=>"XXXXXXXXXX"},
+          "relationships"=>
+           {"bundleIdCapabilities"=>
+             {"data"=>
+               [{"type"=>"bundleIdCapabilities",
+                 "attributes"=>{"enabled"=>false, "settings"=>[]},
+                 "relationships"=>
+                  {"capability"=>
+                    {"data"=>{"type"=>"capabilities", "id"=>"APP_ATTEST"}}}}]}}}]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/v1/bundleIds/123456789")
+       stub_request(:post, "https://developer.apple.com/services-account/v1/bundleIds")
+       stub_request(:post, "https://developer.apple.com/services-account/v1/capabilities")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/pricing/supportedCountries")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/promocodes/history")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/promocodes/versions")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/promocodes/versions")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/versions/812106519/phasedRelease/state/COMPLETE").
+         with(
+           body: "898536088")
+
+       Body diff:
+        [["~",
+         "",
+         {"a"=>
+           "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg==",
+          "accountName"=>"spaceship@krausefx.com",
+          "protocols"=>["s2k", "s2k_fo"]},
+         898536088]]
+
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/versions/812106519/releaseToStore").
+         with(
+           body: "898536088")
+
+       Body diff:
+        [["~",
+         "",
+         {"a"=>
+           "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg==",
+          "accountName"=>"spaceship@krausefx.com",
+          "protocols"=>["s2k", "s2k_fo"]},
+         898536088]]
+
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/iaps/pricing/matrix")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/versions/812106519/candidateBuilds")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/users/iap/delete").
+         with(
+           body: "[{\"emailAddress\":{\"value\":\"test@test.com\"}}]")
+
+       Body diff:
+        [["~",
+         "",
+         {"a"=>
+           "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg==",
+          "accountName"=>"spaceship@krausefx.com",
+          "protocols"=>["s2k", "s2k_fo"]},
+         [{"emailAddress"=>{"value"=>"test@test.com"}}]]]
+
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/users/iap/add").
+         with(
+           body: {"user"=>{"emailAddress"=>{"value"=>"test2@test.com"}, "password"=>{"value"=>"Passwordtest1"}, "confirmPassword"=>{"value"=>"Passwordtest1"}, "firstName"=>{"value"=>"Steve"}, "lastName"=>{"value"=>"Brule"}, "storeFront"=>{"value"=>"US"}, "birthDay"=>{"value"=>1}, "birthMonth"=>{"value"=>1}, "secretQuestion"=>{"value"=>"so_secret"}, "secretAnswer"=>{"value"=>"so_secret"}, "sandboxAccount"=>nil}})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "user",
+         {"emailAddress"=>{"value"=>"test2@test.com"},
+          "password"=>{"value"=>"Passwordtest1"},
+          "confirmPassword"=>{"value"=>"Passwordtest1"},
+          "firstName"=>{"value"=>"Steve"},
+          "lastName"=>{"value"=>"Brule"},
+          "storeFront"=>{"value"=>"US"},
+          "birthDay"=>{"value"=>1},
+          "birthMonth"=>{"value"=>1},
+          "secretQuestion"=>{"value"=>"so_secret"},
+          "secretAnswer"=>{"value"=>"so_secret"},
+          "sandboxAccount"=>nil}]]
+
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/users/iap")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/user/detail")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/version/ref")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/platforms/ios/trains/1.0/builds/10/review/submit")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/platforms/ios/trains/1.0/builds/10/reject").
+         with(
+           body: "{}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]]]
+
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/platforms/ios/trains/1.0/builds/10/testInformation")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/platforms/appletvos/trains/1.0/builds/10/review/submit")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/platforms/appletvos/trains/1.0/builds/10/reject").
+         with(
+           body: "{}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]]]
+
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/platforms/appletvos/trains/1.0/builds/10/testInformation")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/user/internalTesters/898536088/")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/users/pre/ext")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/users/pre/int")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/testingTypes/external/trains/")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/trains/?testingType=external")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/trains/?platform=appletvos&testingType=external")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/trains/?platform=ios&testingType=external")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/testingTypes/internal/trains/")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/trains/?testingType=internal")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/trains/?platform=appletvos&testingType=internal")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/trains/?platform=ios&testingType=internal")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/1000000000/platforms/ios/versions/800000000")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/platforms/ios/versions/113314675")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/platforms/ios/versions/813314674")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/versions/814624685/stateHistory?platform=ios")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/stateHistory?platform=ios")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/details")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/1000000000/overview")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/898536088/overview")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/1013943394/overview")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/create/v2")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/create/v2/?platformString=ios")
+       stub_request(:post, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/version/create/1013943394").
+         with(
+           body: "{\"version\":\"0.1\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "version", "0.1"]]
+
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/manageyourapps/summary/v2")
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/mac/identifiers/deletePassTypeId.action").
+         with(
+           body: {"passTypeId"=>"R7878HDXC3", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "passTypeId", "R7878HDXC3"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/deletePassTypeId.action").
+         with(
+           body: {"passTypeId"=>"R7878HDXC3", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "passTypeId", "R7878HDXC3"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/mac/identifiers/addPassTypeId.action").
+         with(
+           body: {"identifier"=>"web.com.fastlane.example", "name"=>"Fastlane Passbook", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "identifier", "web.com.fastlane.example"],
+        ["+", "name", "Fastlane Passbook"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/addPassTypeId.action").
+         with(
+           body: {"identifier"=>"pass.com.fastlane.example", "name"=>"Fastlane Passbook", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "identifier", "pass.com.fastlane.example"],
+        ["+", "name", "Fastlane Passbook"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/mac/identifiers/listPassTypeIds.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/listPassTypeIds.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/mac/identifiers/deleteWebsitePushId.action").
+         with(
+           body: {"teamId"=>"XXXXXXXXXX", "websitePushId"=>"R7878HDXC3"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "websitePushId", "R7878HDXC3"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/deleteWebsitePushId.action").
+         with(
+           body: {"teamId"=>"XXXXXXXXXX", "websitePushId"=>"R7878HDXC3"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "websitePushId", "R7878HDXC3"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/mac/identifiers/addWebsitePushId.action").
+         with(
+           body: {"identifier"=>"web.com.fastlane.example", "name"=>"Fastlane Website Push", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "identifier", "web.com.fastlane.example"],
+        ["+", "name", "Fastlane Website Push"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/addWebsitePushId.action").
+         with(
+           body: {"identifier"=>"web.com.fastlane.example", "name"=>"Fastlane Website Push", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "identifier", "web.com.fastlane.example"],
+        ["+", "name", "Fastlane Website Push"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/mac/identifiers/listWebsitePushIds.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/listWebsitePushIds.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/setTeamMemberRoles").
+         with(
+           body: "{\"teamId\":\"XXXXXXXXXX\",\"role\":\"member\",\"teamMemberIds\":[\"5M8TWKRZ3J\"]}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "role", "member"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "teamMemberIds", ["5M8TWKRZ3J"]]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/removeTeamMembers").
+         with(
+           body: "{\"teamId\":\"XXXXXXXXXX\",\"teamMemberIds\":[\"5M8TWKRZ3J\"]}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "teamMemberIds", ["5M8TWKRZ3J"]]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/getInvites").
+         with(
+           body: "{\"teamId\":\"XXXXXXXXXX\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/sendInvites").
+         with(
+           body: "{\"invites\":[{\"recipientEmail\":\"helmut@januschka.com\",\"recipientRole\":\"admin\"}],\"teamId\":\"XXXXXXXXXX\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+",
+         "invites",
+         [{"recipientEmail"=>"helmut@januschka.com", "recipientRole"=>"admin"}]],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/getTeamMembers").
+         with(
+           body: "{\"teamId\":\"XXXXXXXXXX\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"includeRemovedDevices"=>"false", "pageNumber"=>"2", "pageSize"=>"8", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "includeRemovedDevices", "false"],
+        ["+", "pageNumber", "2"],
+        ["+", "pageSize", "8"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"includeRemovedDevices"=>"false", "pageNumber"=>"1", "pageSize"=>"8", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "includeRemovedDevices", "false"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "8"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/addDevices.action").
+         with(
+           body: {"deviceClasses"=>"iphone", "deviceNames"=>"Demo Device", "deviceNumbers"=>"1234", "register"=>"single", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceClasses", "iphone"],
+        ["+", "deviceNames", "Demo Device"],
+        ["+", "deviceNumbers", "1234"],
+        ["+", "register", "single"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/addDevices.action").
+         with(
+           body: {"deviceClasses"=>"iphone", "deviceNames"=>"Demo Device", "deviceNumbers"=>"7f6c8dc83d77134b5a3a1c53f1202b395b04482b", "register"=>"single", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceClasses", "iphone"],
+        ["+", "deviceNames", "Demo Device"],
+        ["+", "deviceNumbers", "7f6c8dc83d77134b5a3a1c53f1202b395b04482b"],
+        ["+", "register", "single"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/enableDevice.action").
+         with(
+           body: {"deviceNumber"=>"44ee59893cb94ead4635743b25012e5b9f8c67c1", "displayId"=>"DISABLED_B", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceNumber", "44ee59893cb94ead4635743b25012e5b9f8c67c1"],
+        ["+", "displayId", "DISABLED_B"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/deleteDevice.action").
+         with(
+           body: {"deviceId"=>"AAAAAAAAAA", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceId", "AAAAAAAAAA"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"includeRemovedDevices"=>"true", "pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "includeRemovedDevices", "true"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"includeRemovedDevices"=>"false", "pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "includeRemovedDevices", "false"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"deviceClasses"=>"watch", "includeRemovedDevices"=>"false", "pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceClasses", "watch"],
+        ["+", "includeRemovedDevices", "false"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"deviceClasses"=>"tvOS", "includeRemovedDevices"=>"false", "pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceClasses", "tvOS"],
+        ["+", "includeRemovedDevices", "false"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"deviceClasses"=>"watch", "includeRemovedDevices"=>"false", "pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceClasses", "watch"],
+        ["+", "includeRemovedDevices", "false"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"deviceClasses"=>"tvOS", "pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceClasses", "tvOS"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"deviceClasses"=>"ipod", "includeRemovedDevices"=>"false", "pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceClasses", "ipod"],
+        ["+", "includeRemovedDevices", "false"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/device/listDevices.action").
+         with(
+           body: {"deviceClasses"=>"iphone", "includeRemovedDevices"=>"false", "pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "deviceClasses", "iphone"],
+        ["+", "includeRemovedDevices", "false"],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/certificate/revokeCertificate.action").
+         with(
+           body: {"certificateId"=>"XC5PH8DAAA", "teamId"=>"XXXXXXXXXX", "type"=>"R58UK2EAAA"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "certificateId", "XC5PH8DAAA"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "type", "R58UK2EAAA"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/certificate/submitCertificateRequest.action").
+         with(
+           body: {"appIdId"=>"2HNR359G63", "csrContent"=>"-----BEGIN CERTIFICATE REQUEST-----\nMIIClDCCAXwCAQAwTzEnMCUGCSqGSIb3DQEJARYYc3RlZmFuLm5hdGNoZXZAZ21h\naWwuY29tMRcwFQYDVQQDDA5TdGVmYW4gTmF0Y2hldjELMAkGA1UEBhMCVVMwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCn7ehaeM1yXqGEbd+FlsqwZTbI\n7SyG38tb5BLvjTIHppsCTVLvInJbW/GhyLxrI+mKeyk4zI4JKIKOkrmKRtF/bv6w\nLutQnJSTw09Qo/X/uqNtgxabCBMlTKpNTE49PGYri/mRnc+y6PzwA/t0xKNk1cBI\nYpQ4nxZzTNXAwiAy+fUzfby2tQsKrb19twM+7PdVeDv20MPAoyfusx5IKRIIftSJ\n+re8nCYM2vJGPbsF/nutDrdUOrJoNAn7ouXgn06dPe9P1EXvv7A59zaFRDwnIlVa\neJnN80FB4BLPAGoDADPtt50iEWDNOCrGrz6TfNgsf+F9nwUn56FcQh0w+RHvAgMB\nAAGgADANBgkqhkiG9w0BAQUFAAOCAQEAHtvAId/YNGisy3ENM7klf7OeCgsYecqW\nXyqGgFEpLsf/S1mhmKNod62iDr2Cd2WcbHL/5exN7jXZ9yCg5qZqmY5M0P7Nv/wr\njU3KQ/A5qE8FeLs5wlnFk4g3rOYvLc3ZM7gWIGnc1KMcER6LFN+W4va3bPeokKvR\nWO7G8+fkwpVP8nTE8/rQMJB2pTK50uFNVp94ASfD+JQLfsBfWHFeGX+T1FCjjF9c\nXa27xMEh6nxxTqHvkbi9HE9OH4rugCIh46TXjNGAwYax1bnc/y8nWR+7Y8jDscm8\nZRu+PuSTeHX5Z8bjddr4DwSbwFssgcL8/6xhSDudp9TXv8jrQui02Q==\n-----END CERTIFICATE REQUEST-----", "specialIdentifierDisplayId"=>"2HNR359G63", "teamId"=>"XXXXXXXXXX", "type"=>"BKLRAVXMGM"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "2HNR359G63"],
+        ["+",
+         "csrContent",
+         "-----BEGIN CERTIFICATE REQUEST-----\n" +
+         "MIIClDCCAXwCAQAwTzEnMCUGCSqGSIb3DQEJARYYc3RlZmFuLm5hdGNoZXZAZ21h\n" +
+         "aWwuY29tMRcwFQYDVQQDDA5TdGVmYW4gTmF0Y2hldjELMAkGA1UEBhMCVVMwggEi\n" +
+         "MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCn7ehaeM1yXqGEbd+FlsqwZTbI\n" +
+         "7SyG38tb5BLvjTIHppsCTVLvInJbW/GhyLxrI+mKeyk4zI4JKIKOkrmKRtF/bv6w\n" +
+         "LutQnJSTw09Qo/X/uqNtgxabCBMlTKpNTE49PGYri/mRnc+y6PzwA/t0xKNk1cBI\n" +
+         "YpQ4nxZzTNXAwiAy+fUzfby2tQsKrb19twM+7PdVeDv20MPAoyfusx5IKRIIftSJ\n" +
+         "+re8nCYM2vJGPbsF/nutDrdUOrJoNAn7ouXgn06dPe9P1EXvv7A59zaFRDwnIlVa\n" +
+         "eJnN80FB4BLPAGoDADPtt50iEWDNOCrGrz6TfNgsf+F9nwUn56FcQh0w+RHvAgMB\n" +
+         "AAGgADANBgkqhkiG9w0BAQUFAAOCAQEAHtvAId/YNGisy3ENM7klf7OeCgsYecqW\n" +
+         "XyqGgFEpLsf/S1mhmKNod62iDr2Cd2WcbHL/5exN7jXZ9yCg5qZqmY5M0P7Nv/wr\n" +
+         "jU3KQ/A5qE8FeLs5wlnFk4g3rOYvLc3ZM7gWIGnc1KMcER6LFN+W4va3bPeokKvR\n" +
+         "WO7G8+fkwpVP8nTE8/rQMJB2pTK50uFNVp94ASfD+JQLfsBfWHFeGX+T1FCjjF9c\n" +
+         "Xa27xMEh6nxxTqHvkbi9HE9OH4rugCIh46TXjNGAwYax1bnc/y8nWR+7Y8jDscm8\n" +
+         "ZRu+PuSTeHX5Z8bjddr4DwSbwFssgcL8/6xhSDudp9TXv8jrQui02Q==\n" +
+         "-----END CERTIFICATE REQUEST-----"],
+        ["+", "specialIdentifierDisplayId", "2HNR359G63"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "type", "BKLRAVXMGM"]]
+
+       stub_request(:get, "https://developer.apple.com/services-account/QH65B2/account/ios/certificate/downloadCertificateContent.action?certificateId=XC5PH8DAAA&teamId=XXXXXXXXXX&type=R58UK2EAAA")
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/certificate/listCertRequests.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"certRequestStatusCode=asc", "teamId"=>"XXXXXXXXXX", "types"=>"R58UK2EWSO"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "certRequestStatusCode=asc"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "types", "R58UK2EWSO"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/certificate/listCertRequests.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"certRequestStatusCode=asc", "teamId"=>"XXXXXXXXXX", "types"=>"5QPB9NHCEI"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "certRequestStatusCode=asc"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "types", "5QPB9NHCEI"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/certificate/listCertRequests.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"certRequestStatusCode=asc", "teamId"=>"XXXXXXXXXX", "types"=>"83Q87W3TGH,WXV89964HE,5QPB9NHCEI,R58UK2EWSO,9RQEK7MSXA,LA30L5BJEU,JKG5JZ54H7,UPV3DW712I,Y3B2F3TYSI,3T2ZP62QW8,E5D663CMZW,4APLUP237T,MD8Q2VRT6A,3BQKVH9I2X,BKLRAVXMGM,T44PTHVNID,DZQUP8189Y,FGQUP4785Z,S5WE21TULA,FUOY7LWJET"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "certRequestStatusCode=asc"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+",
+         "types",
+         "83Q87W3TGH,WXV89964HE,5QPB9NHCEI,R58UK2EWSO,9RQEK7MSXA,LA30L5BJEU,JKG5JZ54H7,UPV3DW712I,Y3B2F3TYSI,3T2ZP62QW8,E5D663CMZW,4APLUP237T,MD8Q2VRT6A,3BQKVH9I2X,BKLRAVXMGM,T44PTHVNID,DZQUP8189Y,FGQUP4785Z,S5WE21TULA,FUOY7LWJET"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/createProvisioningProfile.action").
+         with(
+           body: {"appIdId"=>"2UMR2S6PAA", "certificateIds"=>"C8DL7464RQ", "deviceIds"=>"EEEEEEEEEE", "distributionType"=>"limited", "provisioningProfileName"=>"Delete Me", "subPlatform"=>"tvOS", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "2UMR2S6PAA"],
+        ["+", "certificateIds", "C8DL7464RQ"],
+        ["+", "deviceIds", "EEEEEEEEEE"],
+        ["+", "distributionType", "limited"],
+        ["+", "provisioningProfileName", "Delete Me"],
+        ["+", "subPlatform", "tvOS"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/deleteProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"2MAY7NPHRU", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "2MAY7NPHRU"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/regenProvisioningProfile.action").
+         with(
+           body: {"appIdId"=>"572XTN75U2", "certificateIds"=>"XC5PH8D47H", "deviceIds"=>["AAAAAAAAAA", "BBBBBBBBBB", "CCCCCCCCCC", "DDDDDDDDDD"], "distributionType"=>"store", "provisioningProfileName"=>"net.sunapps.7 AppStore", "subPlatform"=>"tvOS", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "572XTN75U2"],
+        ["+", "certificateIds", "XC5PH8D47H"],
+        ["+", "deviceIds", ["AAAAAAAAAA", "BBBBBBBBBB", "CCCCCCCCCC", "DDDDDDDDDD"]],
+        ["+", "distributionType", "store"],
+        ["+", "provisioningProfileName", "net.sunapps.7 AppStore"],
+        ["+", "subPlatform", "tvOS"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/regenProvisioningProfile.action").
+         with(
+           body: {"appIdId"=>"572XTN75U2", "certificateIds"=>"XC5PH8D47H", "deviceIds"=>["AAAAAAAAAA", "BBBBBBBBBB", "CCCCCCCCCC", "DDDDDDDDDD"], "distributionType"=>"store", "provisioningProfileName"=>"net.sunapps.7 AppStore", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "572XTN75U2"],
+        ["+", "certificateIds", "XC5PH8D47H"],
+        ["+", "deviceIds", ["AAAAAAAAAA", "BBBBBBBBBB", "CCCCCCCCCC", "DDDDDDDDDD"]],
+        ["+", "distributionType", "store"],
+        ["+", "provisioningProfileName", "net.sunapps.7 AppStore"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/createProvisioningProfile.action").
+         with(
+           body: {"appIdId"=>"R9YNDTPLJX", "certificateIds"=>"C8DL7464RQ", "deviceIds"=>"", "distributionType"=>"limited", "provisioningProfileName"=>"net.sunapps.106 limited", "teamId"=>"XXXXXXXXXX", "template"=>"Subscription Service iOS (dist)"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "R9YNDTPLJX"],
+        ["+", "certificateIds", "C8DL7464RQ"],
+        ["+", "deviceIds", ""],
+        ["+", "distributionType", "limited"],
+        ["+", "provisioningProfileName", "net.sunapps.106 limited"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "template", "Subscription Service iOS (dist)"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/createProvisioningProfile.action").
+         with(
+           body: {"appIdId"=>"R9YNDTPLJX", "certificateIds"=>"C8DL7464RQ", "deviceIds"=>"C8DLAAAARQ", "distributionType"=>"limited", "provisioningProfileName"=>"taken", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "R9YNDTPLJX"],
+        ["+", "certificateIds", "C8DL7464RQ"],
+        ["+", "deviceIds", "C8DLAAAARQ"],
+        ["+", "distributionType", "limited"],
+        ["+", "provisioningProfileName", "taken"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/createProvisioningProfile.action").
+         with(
+           body: {"appIdId"=>"R9YNDTPLJX", "certificateIds"=>"C8DL7464RQ", "deviceIds"=>"C8DLAAAARQ", "distributionType"=>"limited", "provisioningProfileName"=>"net.sunapps.106 limited", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "R9YNDTPLJX"],
+        ["+", "certificateIds", "C8DL7464RQ"],
+        ["+", "deviceIds", "C8DLAAAARQ"],
+        ["+", "distributionType", "limited"],
+        ["+", "provisioningProfileName", "net.sunapps.106 limited"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"PP00000007", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "PP00000007"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"PP00000005", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "PP00000005"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"2MAY7NPHRF", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "2MAY7NPHRF"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"2MAY7NPHRU", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "2MAY7NPHRU"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"PP00000004", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "PP00000004"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"PP00000003", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "PP00000003"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"PP00000002", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "PP00000002"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"PP00000006", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "PP00000006"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/getProvisioningProfile.action").
+         with(
+           body: {"provisioningProfileId"=>"PP00000001", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provisioningProfileId", "PP00000001"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:get, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/downloadProfileContent?provisioningProfileId=PP00000001&teamId=XXXXXXXXXX")
+       stub_request(:post, "https://developerservices2.apple.com/services/QH65B2/ios/listProvisioningProfiles.action?includeExpiredProfiles=true&includeInactiveProfiles=true&onlyCountLists=true&teamId=XXXXXXXXXX")
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/profile/listProvisioningProfiles.action")
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/addAppId.action").
+         with(
+           body: {"gameCenter"=>"on", "identifier"=>"tools.fastlane.spaceship.some-explicit-app", "inAppPurchase"=>"on", "name"=>"Production App", "push"=>"true", "teamId"=>"XXXXXXXXXX", "type"=>"explicit"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "gameCenter", "on"],
+        ["+", "identifier", "tools.fastlane.spaceship.some-explicit-app"],
+        ["+", "inAppPurchase", "on"],
+        ["+", "name", "Production App"],
+        ["+", "push", "true"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "type", "explicit"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/deleteAppId.action").
+         with(
+           body: {"appIdId"=>"LXD24VUE49", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "LXD24VUE49"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/addAppId.action").
+         with(
+           body: {"gameCenter"=>"on", "identifier"=>"tools.fastlane.spaceship.some-explicit-app", "inAppPurchase"=>"on", "name"=>"pp Test 1ed9e25c93ac7142ff9df53e7f80e84c", "teamId"=>"XXXXXXXXXX", "type"=>"explicit"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "gameCenter", "on"],
+        ["+", "identifier", "tools.fastlane.spaceship.some-explicit-app"],
+        ["+", "inAppPurchase", "on"],
+        ["+", "name", "pp Test 1ed9e25c93ac7142ff9df53e7f80e84c"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "type", "explicit"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/addAppId.action").
+         with(
+           body: {"identifier"=>"tools.fastlane.spaceship.*", "name"=>"Development App", "teamId"=>"XXXXXXXXXX", "type"=>"wildcard"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "identifier", "tools.fastlane.spaceship.*"],
+        ["+", "name", "Development App"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "type", "wildcard"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/addAppId.action").
+         with(
+           body: {"gameCenter"=>"on", "identifier"=>"tools.fastlane.spaceship.some-explicit-app", "inAppPurchase"=>"on", "name"=>"Production App", "teamId"=>"XXXXXXXXXX", "type"=>"explicit"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "gameCenter", "on"],
+        ["+", "identifier", "tools.fastlane.spaceship.some-explicit-app"],
+        ["+", "inAppPurchase", "on"],
+        ["+", "name", "Production App"],
+        ["+", "teamId", "XXXXXXXXXX"],
+        ["+", "type", "explicit"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/getAppIdDetail.action").
+         with(
+           body: {"appIdId"=>"B7JBD8LHAA", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "appIdId", "B7JBD8LHAA"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/mac/identifiers/listAppIds.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/listAppIds.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/deleteApplicationGroup.action").
+         with(
+           body: {"applicationGroup"=>"2GKKV64NUG", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "applicationGroup", "2GKKV64NUG"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/addApplicationGroup.action").
+         with(
+           body: {"identifier"=>"group.tools.fastlane.spaceship", "name"=>"Production App Group", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "identifier", "group.tools.fastlane.spaceship"],
+        ["+", "name", "Production App Group"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/ios/identifiers/listApplicationGroups.action").
+         with(
+           body: {"pageNumber"=>"1", "pageSize"=>"500", "sort"=>"name=asc", "teamId"=>"XXXXXXXXXX"})
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "pageNumber", "1"],
+        ["+", "pageSize", "500"],
+        ["+", "sort", "name=asc"],
+        ["+", "teamId", "XXXXXXXXXX"]]
+
+       stub_request(:post, "https://developer.apple.com/services-account/QH65B2/account/listTeams.action")
+       stub_request(:get, "https://idmsa.apple.com/appleauth/auth/2sv/trust")
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/verify/trusteddevice/securitycode").
+         with(
+           body: "{\"securityCode\":{\"code\":\"123\"}}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "securityCode", {"code"=>"123"}]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/verify/phone/securitycode").
+         with(
+           body: "{\"securityCode\":{\"code\":\"123\"},\"phoneNumber\":{\"id\":1},\"mode\":\"voice\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "mode", "voice"],
+        ["+", "phoneNumber", {"id"=>1}],
+        ["+", "securityCode", {"code"=>"123"}]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/verify/phone/securitycode").
+         with(
+           body: "{\"securityCode\":{\"code\":\"123\"},\"phoneNumber\":{\"id\":3},\"mode\":\"voice\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "mode", "voice"],
+        ["+", "phoneNumber", {"id"=>3}],
+        ["+", "securityCode", {"code"=>"123"}]]
+
+       stub_request(:put, "https://idmsa.apple.com/appleauth/auth/verify/phone").
+         with(
+           body: "{\"phoneNumber\":{\"id\":3},\"mode\":\"voice\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "mode", "voice"],
+        ["+", "phoneNumber", {"id"=>3}]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/verify/phone/securitycode").
+         with(
+           body: "{\"securityCode\":{\"code\":\"123\"},\"phoneNumber\":{\"id\":2},\"mode\":\"sms\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "mode", "sms"],
+        ["+", "phoneNumber", {"id"=>2}],
+        ["+", "securityCode", {"code"=>"123"}]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/verify/phone/securitycode").
+         with(
+           body: "{\"securityCode\":{\"code\":\"123\"},\"phoneNumber\":{\"id\":1},\"mode\":\"sms\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "mode", "sms"],
+        ["+", "phoneNumber", {"id"=>1}],
+        ["+", "securityCode", {"code"=>"123"}]]
+
+       stub_request(:put, "https://idmsa.apple.com/appleauth/auth/verify/phone").
+         with(
+           body: "{\"phoneNumber\":{\"id\":2},\"mode\":\"sms\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "mode", "sms"],
+        ["+", "phoneNumber", {"id"=>2}]]
+
+       stub_request(:put, "https://idmsa.apple.com/appleauth/auth/verify/phone").
+         with(
+           body: "{\"phoneNumber\":{\"id\":1},\"mode\":\"sms\"}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "mode", "sms"],
+        ["+", "phoneNumber", {"id"=>1}]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/signin").
+         with(
+           body: "{\"accountName\":\"bad-username\",\"password\":\"bad-password\",\"rememberMe\":true}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["~", "accountName", "spaceship@krausefx.com", "bad-username"],
+        ["+", "password", "bad-password"],
+        ["+", "rememberMe", true]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/signin/init").
+         with(
+           body: "{\"a\":\"jzDOg7Zg8Dq7D4VwwjXg4eHThgoiIwSs8Y6Ym9wGXckioUHm2kVj8FWGYFsOEFNdh1yn4Prn/hAM/lMzdPKaqoA837LGGU9FhIXof3aYj2zdqhgpMJQ44aqatlKxfPwIH/9ANWyzrzXGIenze6bioD5qusWmv+GN20iUErfFY1UpLmw1X4hZJw0EBjuEPSPB73UDw8XdLFZ0AQGj71v+xr/x5txV4/cIQKg6ldez0gqzUNBHKAnOh6Tjwp7ZaF63ch3Ie6v629nmXnXV31VUe8/5hxHd6ue44ebb9Snpb3yqS4MLQ1dc3cUs68OflSL4XL8zrDXuWfZvSBCcEvu3jQ==\",\"accountName\":\"bad-username\",\"protocols\":[\"s2k\",\"s2k_fo\"]}")
+
+       Body diff:
+        [["~",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg==",
+         "jzDOg7Zg8Dq7D4VwwjXg4eHThgoiIwSs8Y6Ym9wGXckioUHm2kVj8FWGYFsOEFNdh1yn4Prn/hAM/lMzdPKaqoA837LGGU9FhIXof3aYj2zdqhgpMJQ44aqatlKxfPwIH/9ANWyzrzXGIenze6bioD5qusWmv+GN20iUErfFY1UpLmw1X4hZJw0EBjuEPSPB73UDw8XdLFZ0AQGj71v+xr/x5txV4/cIQKg6ldez0gqzUNBHKAnOh6Tjwp7ZaF63ch3Ie6v629nmXnXV31VUe8/5hxHd6ue44ebb9Snpb3yqS4MLQ1dc3cUs68OflSL4XL8zrDXuWfZvSBCcEvu3jQ=="],
+        ["~", "accountName", "spaceship@krausefx.com", "bad-username"]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/signin/complete?isRememberMeEnabled=false").
+         with(
+           body: "{\"accountName\":\"spaceship@krausefx.com\",\"c\":\"d-227-a6ae7b06-8e82-11ef-8ba6-e5527b74d559:PRN\",\"m1\":\"EjQ=\",\"m2\":\"\",\"rememberMe\":false}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "c", "d-227-a6ae7b06-8e82-11ef-8ba6-e5527b74d559:PRN"],
+        ["+", "m1", "EjQ="],
+        ["+", "m2", ""],
+        ["+", "rememberMe", false]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/signin/init").
+         with(
+           body: "{\"a\":\"jzDOg7Zg8Dq7D4VwwjXg4eHThgoiIwSs8Y6Ym9wGXckioUHm2kVj8FWGYFsOEFNdh1yn4Prn/hAM/lMzdPKaqoA837LGGU9FhIXof3aYj2zdqhgpMJQ44aqatlKxfPwIH/9ANWyzrzXGIenze6bioD5qusWmv+GN20iUErfFY1UpLmw1X4hZJw0EBjuEPSPB73UDw8XdLFZ0AQGj71v+xr/x5txV4/cIQKg6ldez0gqzUNBHKAnOh6Tjwp7ZaF63ch3Ie6v629nmXnXV31VUe8/5hxHd6ue44ebb9Snpb3yqS4MLQ1dc3cUs68OflSL4XL8zrDXuWfZvSBCcEvu3jQ==\",\"accountName\":\"spaceship@krausefx.com\",\"protocols\":[\"s2k\",\"s2k_fo\"]}")
+
+       Body diff:
+        [["~",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg==",
+         "jzDOg7Zg8Dq7D4VwwjXg4eHThgoiIwSs8Y6Ym9wGXckioUHm2kVj8FWGYFsOEFNdh1yn4Prn/hAM/lMzdPKaqoA837LGGU9FhIXof3aYj2zdqhgpMJQ44aqatlKxfPwIH/9ANWyzrzXGIenze6bioD5qusWmv+GN20iUErfFY1UpLmw1X4hZJw0EBjuEPSPB73UDw8XdLFZ0AQGj71v+xr/x5txV4/cIQKg6ldez0gqzUNBHKAnOh6Tjwp7ZaF63ch3Ie6v629nmXnXV31VUe8/5hxHd6ue44ebb9Snpb3yqS4MLQ1dc3cUs68OflSL4XL8zrDXuWfZvSBCcEvu3jQ=="]]
+
+       stub_request(:post, "https://idmsa.apple.com/appleauth/auth/signin").
+         with(
+           body: "{\"accountName\":\"spaceship@krausefx.com\",\"password\":\"so_secret\",\"rememberMe\":true}")
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "password", "so_secret"],
+        ["+", "rememberMe", true]]
+
+       stub_request(:get, "https://idmsa.apple.com/appleauth/auth/signin?widgetKey=e0abc")
+       stub_request(:post, "https://appstoreconnect.apple.com/olympus/v1/session").
+         with(
+           body: "{\"provider\":{\"providerId\":5678}}",
+           headers: {
+       	  'Content-Type'=>'application/json',
+       	  'X-Requested-With'=>'olympus-ui'
+           })
+
+       Body diff:
+        [["-",
+         "a",
+         "fp2JaO4YaBhTvaArX9oEBMLcM0rq2t5KSixoBPMraS8/QdwAvrgxnWBmoorjbu8t2degP+hNahvBu3RTElj6Hnft2I48UVkcWkLajKNs4bwdG8dVhEYq1qYwtfLqd/gyOX9ksWqKUgNzL92CPNS2UCzob7eKLKFyS7a5J7cVD43G5oeVfCxJHm7Q7G8/h8zlJdT9bMh3EXmyxxP3DrIfW2yxDd64B55cnanrGf0DDAsbjfOrqDFXyUbjqK9Tc9ImI4FgHj8dTR2qOp9d3BFf06hgdGj1Ga9cVOpUwnzs/fltIqS8GO1TYwPlIs/3+9eqUOLsfzXqbZhWobatMkBsFg=="],
+        ["-", "accountName", "spaceship@krausefx.com"],
+        ["-", "protocols", ["s2k", "s2k_fo"]],
+        ["+", "provider", {"providerId"=>5678}]]
+
+       stub_request(:get, "https://appstoreconnect.apple.com/olympus/v1/app/config?hostname=itunesconnect.apple.com")
+       stub_request(:get, "https://appstoreconnect.apple.com/olympus/v1/session")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/wa")
+       stub_request(:get, "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa")
+       stub_request(:get, "https://appstoreconnect.apple.com/itc/static-resources/controllers/_cntrl.js")
+
+       ============================================================
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/http_lib_adapters/net_http.rb:120:in `request'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-net_http-3.4.4/lib/faraday/adapter/net_http.rb:113:in `block in request_with_wrapped_block'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/http_lib_adapters/net_http.rb:130:in `start_without_connect'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/http_lib_adapters/net_http.rb:157:in `start'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-net_http-3.4.4/lib/faraday/adapter/net_http.rb:112:in `request_with_wrapped_block'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-net_http-3.4.4/lib/faraday/adapter/net_http.rb:102:in `perform_request'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-net_http-3.4.4/lib/faraday/adapter/net_http.rb:66:in `block in call'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-2.14.3/lib/faraday/adapter.rb:52:in `connection'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-net_http-3.4.4/lib/faraday/adapter/net_http.rb:65:in `call'
+     # ./spaceship/lib/spaceship/stats_middleware.rb:46:in `call'
+     # ./spaceship/lib/spaceship/helper/rels_middleware.rb:17:in `call'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-cookie_jar-0.0.8/lib/faraday/cookie_jar.rb:24:in `call'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-2.14.3/lib/faraday/middleware.rb:56:in `call'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-2.14.3/lib/faraday/middleware.rb:56:in `call'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-2.14.3/lib/faraday/rack_builder.rb:158:in `build_response'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-2.14.3/lib/faraday/connection.rb:452:in `run_request'
+     # ./vendor/bundle/ruby/3.1.0/gems/faraday-2.14.3/lib/faraday/connection.rb:280:in `post'
+     # ./spaceship/lib/spaceship/client.rb:1049:in `block in send_request'
+     # ./spaceship/lib/spaceship/client.rb:807:in `with_retry'
+     # ./spaceship/lib/spaceship/client.rb:1048:in `send_request'
+     # ./spaceship/lib/spaceship/client.rb:892:in `request'
+     # ./spaceship/lib/spaceship/client.rb:465:in `do_sirp'
+     # ./spaceship/lib/spaceship/client.rb:671:in `perform_login_method'
+     # ./spaceship/lib/spaceship/client.rb:595:in `send_shared_login_request'
+     # ./spaceship/lib/spaceship/portal/portal_client.rb:29:in `send_login_request'
+     # ./spaceship/lib/spaceship/client.rb:974:in `do_login'
+     # ./spaceship/lib/spaceship/client.rb:393:in `login'
+     # ./spaceship/lib/spaceship/client.rb:354:in `login'
+     # ./spaceship/lib/spaceship/portal/spaceship.rb:25:in `login'
+     # ./spaceship/lib/spaceship/portal/spaceship.rb:103:in `login'
+     # ./spaceship/spec/spaceship_spec.rb:2:in `block (2 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.22201 seconds (files took 1.55 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/spaceship_spec.rb:16 # Spaceship Certificate
+
+docker_exit=1

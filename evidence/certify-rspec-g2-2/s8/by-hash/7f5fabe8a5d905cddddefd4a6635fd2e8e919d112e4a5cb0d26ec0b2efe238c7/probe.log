@@ -1,0 +1,23 @@
++ phase=probe
++ seed=16
++ round=2
++ confirm=0
++ ids_n=2656
++ ids_sha256=5ca45cc11578f8dde4f3141d0b3c98901dc0f0665af997e80fa3ba2575b6a26d
++ ids_file=evidence/certify-rspec-g2-2/s8/by-hash/7f5fabe8a5d905cddddefd4a6635fd2e8e919d112e4a5cb0d26ec0b2efe238c7/ids.txt
++ attempt=1
+elapsed_s=32.716
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:271:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:271:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:246:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:246:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:124:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:124:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:100:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:100:in `block (3 levels) in <top (required)>'.
+[] ⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE TEST !!
+
+	* Exception: StandardError
+	* Message: logger is misconfigured
+	* From: message_expectation.rb:188
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+docker_exit=1

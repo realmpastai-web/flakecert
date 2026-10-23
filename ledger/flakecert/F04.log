@@ -1,0 +1,131 @@
+# flakecert-log-version: 1
+# id: F04
+# method: flakecert
+# category: NOD
+# project: https://github.com/ericmjl/nxviz
+# sha: d2a2a622e834148a9f4337dbe1021a05c5f18548
+# python: 3.8.20
+# image: sha256:35dfca679079409d44e535ab8d65e4468eb927cde50370d1209647e858f3efec
+# image_tag: flakecert:F04
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/test_geometry.py::test_correct_negative_angle
+# node_id: tests/test_geometry.py::test_correct_negative_angle
+# test_file: tests/test_geometry.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 157
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=3.613 node=tests/test_geometry.py::test_correct_negative_angle
+SCHEDULE run=2 {"order": ["tests/test_geometry.py::test_correct_negative_angle", "tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=failed exc=FailedHealthCheck sig=4a84b5e6c3789ea63114e1a2bd28ed75a97b94bca2e327faccd52d8fde6caee4 duration_s=2.069 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=2
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 9 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+---------------------------------- Hypothesis ----------------------------------
+You can add @seed(159989298279910942348746976227391354042) to this test or run pytest with --hypothesis-seed=159989298279910942348746976227391354042 to reproduce this failure.
+ENDTRACEBACK run=2
+SCHEDULE run=3 {"order": ["tests/test_geometry.py::test_correct_negative_angle", "tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "159989298279910942348746976227391354042", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=2.486 node=tests/test_geometry.py::test_correct_negative_angle
+SCHEDULE run=4 {"order": ["tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=failed exc=FailedHealthCheck sig=4f1499d30947686659c75a77233f2005363f2fa791e6ef5c32d523d1e23e5aa2 duration_s=2.927 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=4
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 8 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+---------------------------------- Hypothesis ----------------------------------
+You can add @seed(78152451104954499202356392153494138003) to this test or run pytest with --hypothesis-seed=78152451104954499202356392153494138003 to reproduce this failure.
+ENDTRACEBACK run=4
+ABLATE source=order necessary=yes
+SCHEDULE run=5 {"order": ["tests/test_geometry.py::test_correct_negative_angle", "tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=5 outcome=failed exc=FailedHealthCheck sig=71856844332e16ecf1a20802bb7ef127d8b4a29a764433cce14e9e2e3440470c duration_s=2.016 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=5
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 9 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+---------------------------------- Hypothesis ----------------------------------
+You can add @seed(2835060579781790212277569608967154608) to this test or run pytest with --hypothesis-seed=2835060579781790212277569608967154608 to reproduce this failure.
+ENDTRACEBACK run=5
+SCHEDULE run=6 {"order": ["tests/test_geometry.py::test_correct_negative_angle", "tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=6 outcome=passed exc=- sig=- duration_s=3.425 node=tests/test_geometry.py::test_correct_negative_angle
+SCHEDULE run=7 {"order": ["tests/test_geometry.py::test_correct_negative_angle", "tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=7 outcome=passed exc=- sig=- duration_s=2.561 node=tests/test_geometry.py::test_correct_negative_angle
+REPLAY id=F04 matched=0/3 sig=4a84b5e6c3789ea63114e1a2bd28ed75a97b94bca2e327faccd52d8fde6caee4
+SEARCH_CONTINUE banned=4a84b5e6c3789ea63114e1a2bd28ed75a97b94bca2e327faccd52d8fde6caee4
+SCHEDULE run=8 {"order": ["tests/test_geometry.py::test_circos_radius", "tests/test_geometry.py::test_node_theta", "tests/test_geometry.py::test_get_cartesian", "tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=8 outcome=failed exc=FailedHealthCheck sig=4081706bde47d121190a2e616ed8528f4eab168f3ac6403d230c6c98750984d7 duration_s=2.196 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=8
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 9 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+---------------------------------- Hypothesis ----------------------------------
+You can add @seed(67301745399446783071885373769482976719) to this test or run pytest with --hypothesis-seed=67301745399446783071885373769482976719 to reproduce this failure.
+ENDTRACEBACK run=8
+SCHEDULE run=9 {"order": ["tests/test_geometry.py::test_circos_radius", "tests/test_geometry.py::test_node_theta", "tests/test_geometry.py::test_get_cartesian", "tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "67301745399446783071885373769482976719", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=9 outcome=failed exc=FailedHealthCheck sig=913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec duration_s=2.048 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=9
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 8 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+ENDTRACEBACK run=9
+SCHEDULE run=10 {"order": ["tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "67301745399446783071885373769482976719", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=10 outcome=failed exc=FailedHealthCheck sig=913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec duration_s=1.717 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=10
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 8 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+ENDTRACEBACK run=10
+ABLATE source=order necessary=no
+SCHEDULE run=11 {"order": ["tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=11 outcome=passed exc=- sig=- duration_s=2.606 node=tests/test_geometry.py::test_correct_negative_angle
+ABLATE source=seed necessary=yes
+SCHEDULE run=12 {"order": ["tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "67301745399446783071885373769482976719", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=12 outcome=failed exc=FailedHealthCheck sig=913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec duration_s=1.835 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=12
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 8 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+ENDTRACEBACK run=12
+SCHEDULE run=13 {"order": ["tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "67301745399446783071885373769482976719", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=13 outcome=failed exc=FailedHealthCheck sig=913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec duration_s=1.720 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=13
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 8 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+ENDTRACEBACK run=13
+SCHEDULE run=14 {"order": ["tests/test_geometry.py::test_correct_negative_angle"], "pythonhashseed": "", "seed": "67301745399446783071885373769482976719", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=14 outcome=failed exc=FailedHealthCheck sig=913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec duration_s=1.866 node=tests/test_geometry.py::test_correct_negative_angle
+TRACEBACK run=14
+_________________________ test_correct_negative_angle __________________________
+tests/test_geometry.py:63: in test_correct_negative_angle
+    def test_correct_negative_angle(angle):
+E   hypothesis.errors.FailedHealthCheck: It looks like your strategy is filtering out a lot of data. Health check found 50 filtered examples but only 8 good ones. This will make your tests much slower, and also will probably distort the data generation quite a lot. You should adapt your strategy to filter less. This can also be caused by a low max_leaves parameter in recursive() calls
+E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.filter_too_much to the suppress_health_check settings for this test.
+ENDTRACEBACK run=14
+REPLAY id=F04 matched=3/3 sig=913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec
+CERT id=F04 certified=yes d=1 m=5 k=3 per_run_lower=1/5 runs_to_failure=9 sig=913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec
+SEARCH_STOP reason=certified index=14
+FLAKECERT_SUMMARY id=F04 runs=14 failures=9

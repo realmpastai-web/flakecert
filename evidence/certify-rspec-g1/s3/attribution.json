@@ -1,0 +1,74 @@
+[
+  {
+    "id": "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+    "location": "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5",
+    "status": "ATTRIBUTED",
+    "reason": null,
+    "predecessor_count": 75,
+    "rspec_argv_len": 4111,
+    "polluter_ids": [
+      "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+    ],
+    "minimal_reproduction_command": "rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' --no-color --seed 48174"
+  },
+  {
+    "id": "./spaceship/spec/connect_api/models/beta_build_metric_spec.rb[1:1:1]",
+    "location": "./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5",
+    "status": "ATTRIBUTED",
+    "reason": null,
+    "predecessor_count": 82,
+    "rspec_argv_len": 4441,
+    "polluter_ids": [
+      "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+    ],
+    "minimal_reproduction_command": "rspec './spaceship/spec/connect_api/models/beta_build_metric_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' --no-color --seed 48174"
+  },
+  {
+    "id": "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb[1:1:1]",
+    "location": "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5",
+    "status": "ATTRIBUTED",
+    "reason": null,
+    "predecessor_count": 121,
+    "rspec_argv_len": 6435,
+    "polluter_ids": [
+      "./spaceship/spec/connect_api/models/capabilities_spec.rb[1:1:1]"
+    ],
+    "minimal_reproduction_command": "rspec './spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/capabilities_spec.rb[1:1:1]' --no-color --seed 48174"
+  },
+  {
+    "id": "./spaceship/spec/connect_api/models/build_delivery_spec.rb[1:1:1]",
+    "location": "./spaceship/spec/connect_api/models/build_delivery_spec.rb:5",
+    "status": "ATTRIBUTED",
+    "reason": null,
+    "predecessor_count": 179,
+    "rspec_argv_len": 10135,
+    "polluter_ids": [
+      "./spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb[1:1:2:1:2]"
+    ],
+    "minimal_reproduction_command": "rspec './spaceship/spec/connect_api/models/build_delivery_spec.rb[1:1:1]' './spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb[1:1:2:1:2]' --no-color --seed 48174"
+  },
+  {
+    "id": "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+    "location": "./spaceship/spec/portal/certificate_spec.rb:111",
+    "status": "ATTRIBUTED",
+    "reason": null,
+    "predecessor_count": 412,
+    "rspec_argv_len": 22547,
+    "polluter_ids": [
+      "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+    ],
+    "minimal_reproduction_command": "rspec './spaceship/spec/portal/certificate_spec.rb[1:5:3]' './spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]' --no-color --seed 48174"
+  },
+  {
+    "id": "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+    "location": "./spaceship/spec/two_step_or_factor_client_spec.rb:76",
+    "status": "ATTRIBUTED",
+    "reason": null,
+    "predecessor_count": 777,
+    "rspec_argv_len": 41883,
+    "polluter_ids": [
+      "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+    ],
+    "minimal_reproduction_command": "rspec './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1,1:2:3:1]' --no-color --seed 48174"
+  }
+]

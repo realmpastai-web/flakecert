@@ -1,0 +1,21 @@
+PASS	pin.pins/rspec-cert-b9f2c9e.json	bc87ebe6c1e619e5
+PASS	pin.pins/rspec-results-b9f2c9e.json	811a6f0edfffb458
+PASS	fix.sha prefix	8496e9a8e342ff48
+PASS	fix.sha wrong_fix	ed722088487412a8
+PASS	fix.sha real_fix	7e5cb3c8b09f32d2
+PASS	fix.prefix_is_frozen_sample	
+PASS	fix.wrong_fix_adds_one_hook_only	  before(:all) { Cart.default_discount = nil }  
+PASS	fix.real_fix_adds_one_hook_only	  after { Cart.default_discount = nil }         
+PASS	fix.ids_unchanged	2 examples, hooks get no scoped id
+PASS	cert.schedule_0_0	{'order_seed': 0, 'srand_seed': 0}
+PASS	cert.node_is_victim	
+PASS	cert.replay_cmd	FLAKECERT_SRAND=0 bundle exec rspec --order rand:0 --require
+PASS	cert.exc	
+PASS	ruby.prefix_schedule_0_0_fails_every_replay	2 runs ['failed']
+PASS	ruby.prefix_plain_rerun_never_fails_victim	0/100
+PASS	ruby.prefix_fail_seeds_equal_prediction	39/100
+PASS	pred.seed0_polluter_before_victim	1088897018 < 3135682379
+PASS	pred.wrong_fix_fail_seeds_equal_prefix	polluter-first seeds == prefix fail seeds
+PASS	stats.20_of_20_exact_one_sided_upper_95	0.1391
+PASS	dd.attempt_to_fix_is_20_retries	
+GATE PASS

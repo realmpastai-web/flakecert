@@ -1,0 +1,80 @@
+rung files requirements-dev.txt,requirements.txt
+rung test_file tests/test_views.py
+rung python=3.11 start
+#9 0.162 FLAKECERT_INSTALL python 3.11.17
+#9 0.164 FLAKECERT_INSTALL files requirements-dev.txt,requirements.txt
+#9 0.165 FLAKECERT_INSTALL pipenv no
+#9 0.165 FLAKECERT_INSTALL package yes
+#9 3.893 FLAKECERT_INSTALL req /opt/pristine/requirements-dev.txt
+#9 4.666 FLAKECERT_INSTALL req_fail_full /opt/pristine/requirements-dev.txt
+#9 4.666 FLAKECERT_INSTALL include -r requirements.txt
+#9 13.59 FLAKECERT_INSTALL line_ok -r requirements.txt
+#9 15.22 FLAKECERT_INSTALL line_ok black
+#9 19.36 FLAKECERT_INSTALL line_ok recommonmark
+#9 20.24 FLAKECERT_INSTALL line_ok sphinx
+#9 21.72 FLAKECERT_INSTALL line_ok sphinx_rtd_theme
+#9 25.00 FLAKECERT_INSTALL line_ok django-reversion
+#9 26.14 FLAKECERT_INSTALL line_ok django-autocomplete-light
+#9 26.14 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 32.58 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#9 32.58 FLAKECERT_INSTALL package_begin
+#9 34.81 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#9 34.81 FLAKECERT_INSTALL pytest_pin none
+#9 36.09 FLAKECERT_INSTALL pytest_version 9.1.1
+rung python=3.11 build_exit=0
+collect nodes=0 matched=none
+rung python=3.11 result=FAIL collect
+INTERNALERROR>   File "/usr/local/lib/python3.11/site-packages/pluggy/_execution.py", line 195, in _multicall
+INTERNALERROR>     raise exception
+INTERNALERROR>   File "/usr/local/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>           ^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "/work/tests/conftest.py", line 50, in pytest_configure
+INTERNALERROR>     django.setup()
+INTERNALERROR>   File "/usr/local/lib/python3.11/site-packages/django/__init__.py", line 24, in setup
+INTERNALERROR>     apps.populate(settings.INSTALLED_APPS)
+INTERNALERROR>   File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 91, in populate
+INTERNALERROR>     app_config = AppConfig.create(entry)
+INTERNALERROR>                  ^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "/usr/local/lib/python3.11/site-packages/django/apps/config.py", line 136, in create
+INTERNALERROR>     import_module(entry)
+INTERNALERROR>   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+INTERNALERROR>     return _bootstrap._gcd_import(name[level:], package, level)
+INTERNALERROR>            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+INTERNALERROR>   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+INTERNALERROR>   File "/work/tests/beam/contrib/autocomplete_light/__init__.py", line 3, in <module>
+INTERNALERROR>     from dal import autocomplete
+INTERNALERROR>   File "/usr/local/lib/python3.11/site-packages/dal/autocomplete.py", line 20, in <module>
+INTERNALERROR>     from .views import ViewMixin
+INTERNALERROR>   File "/usr/local/lib/python3.11/site-packages/dal/views.py", line 8, in <module>
+INTERNALERROR>     from django.contrib.admin.utils import lookup_spawns_duplicates
+INTERNALERROR> ImportError: cannot import name 'lookup_spawns_duplicates' from 'django.contrib.admin.utils' (/usr/local/lib/python3.11/site-packages/django/contrib/admin/utils.py)
+rung python=3.9 start
+#10 0.172 FLAKECERT_INSTALL python 3.9.25
+#10 0.174 FLAKECERT_INSTALL files requirements-dev.txt,requirements.txt
+#10 0.174 FLAKECERT_INSTALL pipenv no
+#10 0.174 FLAKECERT_INSTALL package yes
+#10 4.365 FLAKECERT_INSTALL req /opt/pristine/requirements-dev.txt
+#10 5.236 FLAKECERT_INSTALL req_fail_full /opt/pristine/requirements-dev.txt
+#10 5.236 FLAKECERT_INSTALL include -r requirements.txt
+#10 13.39 FLAKECERT_INSTALL line_ok -r requirements.txt
+#10 15.51 FLAKECERT_INSTALL line_ok black
+#10 20.61 FLAKECERT_INSTALL line_ok recommonmark
+#10 21.95 FLAKECERT_INSTALL line_ok sphinx
+#10 23.82 FLAKECERT_INSTALL line_ok sphinx_rtd_theme
+#10 28.76 FLAKECERT_INSTALL line_ok django-reversion
+#10 31.67 FLAKECERT_INSTALL line_ok django-autocomplete-light
+#10 31.67 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#10 36.42 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#10 36.42 FLAKECERT_INSTALL package_begin
+#10 38.76 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#10 38.76 FLAKECERT_INSTALL pytest_pin none
+#10 39.92 FLAKECERT_INSTALL pytest_version 8.4.2
+rung python=3.9 build_exit=0
+collect nodes=14 matched=tests/test_views.py::test_detail
+rung python=3.9 result=PASS

@@ -1,0 +1,23 @@
++ phase=probe
++ seed=14
++ round=1
++ confirm=0
++ ids_n=572
++ ids_sha256=7a8b05a24cdbbe65bad3785d281e475028b3763f477a164c931a551c295bfcfc
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/f5b07b0ddef62b6225597763f171571f6f3f20e84606ce15e59be4fa3d5240ac/ids.txt
++ attempt=1
+elapsed_s=5.248
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:124:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:124:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:100:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:100:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:246:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:246:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:271:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:271:in `block (3 levels) in <top (required)>'.
+⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE LOGGING A RESET! COLLISION !!
+
+	* Exception: RuntimeError
+	* Message: logger exploded
+	* From: configurable_spec.rb:801
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+docker_exit=1

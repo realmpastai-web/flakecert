@@ -1,0 +1,48 @@
+===== R4-148c1c9-r1 2026-10-19T06:43:00Z =====
++ timeout 420 docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-f6-1019/src/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04:/src -w /src flakecert-dryrun-fastlane:ruby31 bash -lc 'ruby -v; bundle -v; bundle exec rspec --format documentation --no-color --order defined ./spaceship/spec/connect_api/models/build_delivery_spec.rb:5 ./spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb; ec=$?; echo RSPEC_EXIT:$ec; exit $ec'
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:locations=>{"./spaceship/spec/connect_api/models/build_delivery_spec.rb"=>[5]}}
+
+Spaceship::ConnectAPI::BuildDelivery
+  #Spaceship::ConnectAPI
+    #get_build_deliveries
+
+Spaceship::ConnectAPI::Provisioning::Client
+  sends api request
+    bundleIds
+      get_bundle_ids
+        succeeds
+    bundleId Capability
+      patch_bundle_id_capability
+        should make a request to turn APP_ATTEST on
+        should make a request to turn APP_ATTEST off
+        should make a request to turn ACCESS_WIFI on
+        should make a request to turn ACCESS_WIFI off
+        should make a request to turn DATA_PROTECTION complete
+        should make a request to turn DATA_PROTECTION unless_open
+        should make a request to turn DATA_PROTECTION until_first_auth
+        should make a request to turn DATA_PROTECTION off
+        should make a request to turn ICLOUD xcode6_compatible
+        should make a request to turn ICLOUD xcode5_compatible
+        should make a request to turn ICLOUD off
+    certificates
+      get_certificates
+        succeeds
+      get_certificates_for_profile
+        succeeds
+    devices
+      get_devices
+        succeeds
+    profiles
+      get_profiles
+        succeeds
+
+Finished in 1.65 seconds (files took 1.91 seconds to load)
+17 examples, 0 failures
+
+RSPEC_EXIT:0
+docker_exit=0

@@ -1,0 +1,97 @@
+# flakecert-log-version: 1
+# id: F10
+# method: flakecert
+# category: NOD
+# project: https://github.com/stfc/fparser
+# sha: 4be91d2e1078fa5588e84a3299131f297afba675
+# python: 3.11.17
+# image: sha256:41246081a7c7235f9b21bc4eb467dc09fb5d7cb500850cd8b11b0d0b4a71ac11
+# image_tag: flakecert:F10
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+# node_id: src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+# test_file: src/fparser/one/tests/test_block_stmts.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 341
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=failed exc=AssertionError sig=976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f duration_s=0.681 node=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+TRACEBACK run=1
+_____________________________ test_implicit_topyf ______________________________
+src/fparser/one/tests/test_block_stmts.py:126: in test_implicit_topyf
+    assert "! default IMPLICIT rules apply" not in code
+E   AssertionError: assert '! default I... rules apply' not in 'MODULE some...some_block/n'
+E     '! default IMPLICIT rules apply' is contained here:
+E       MODULE some_block
+E         ! default IMPLICIT rules apply
+E         CONTAINS
+E       END MODULE some_block
+ENDTRACEBACK run=1
+SCHEDULE run=2 {"order": ["src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf", "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=failed exc=AssertionError sig=976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f duration_s=0.655 node=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+TRACEBACK run=2
+_____________________________ test_implicit_topyf ______________________________
+src/fparser/one/tests/test_block_stmts.py:126: in test_implicit_topyf
+    assert "! default IMPLICIT rules apply" not in code
+E   AssertionError: assert '! default I... rules apply' not in 'MODULE some...some_block/n'
+E     '! default IMPLICIT rules apply' is contained here:
+E       MODULE some_block
+E         ! default IMPLICIT rules apply
+E         CONTAINS
+E       END MODULE some_block
+ENDTRACEBACK run=2
+SCHEDULE run=3 {"order": ["src/fparser/one/tests/test_block_stmts.py::test_get_type_by_name", "src/fparser/one/tests/test_block_stmts.py::test_get_type_by_name_implicit", "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=0.644 node=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+SCHEDULE run=4 {"order": ["src/fparser/one/tests/test_block_stmts.py::test_get_type_by_name", "src/fparser/one/tests/test_block_stmts.py::test_get_type_by_name_implicit", "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=passed exc=- sig=- duration_s=0.608 node=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+ABLATE source=order necessary=yes
+SCHEDULE run=5 {"order": ["src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf", "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=5 outcome=failed exc=AssertionError sig=976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f duration_s=0.751 node=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+TRACEBACK run=5
+_____________________________ test_implicit_topyf ______________________________
+src/fparser/one/tests/test_block_stmts.py:126: in test_implicit_topyf
+    assert "! default IMPLICIT rules apply" not in code
+E   AssertionError: assert '! default I... rules apply' not in 'MODULE some...some_block/n'
+E     '! default IMPLICIT rules apply' is contained here:
+E       MODULE some_block
+E         ! default IMPLICIT rules apply
+E         CONTAINS
+E       END MODULE some_block
+ENDTRACEBACK run=5
+SCHEDULE run=6 {"order": ["src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf", "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=6 outcome=failed exc=AssertionError sig=976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f duration_s=0.661 node=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+TRACEBACK run=6
+_____________________________ test_implicit_topyf ______________________________
+src/fparser/one/tests/test_block_stmts.py:126: in test_implicit_topyf
+    assert "! default IMPLICIT rules apply" not in code
+E   AssertionError: assert '! default I... rules apply' not in 'MODULE some...some_block/n'
+E     '! default IMPLICIT rules apply' is contained here:
+E       MODULE some_block
+E         ! default IMPLICIT rules apply
+E         CONTAINS
+E       END MODULE some_block
+ENDTRACEBACK run=6
+SCHEDULE run=7 {"order": ["src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf", "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=7 outcome=failed exc=AssertionError sig=976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f duration_s=0.713 node=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+TRACEBACK run=7
+_____________________________ test_implicit_topyf ______________________________
+src/fparser/one/tests/test_block_stmts.py:126: in test_implicit_topyf
+    assert "! default IMPLICIT rules apply" not in code
+E   AssertionError: assert '! default I... rules apply' not in 'MODULE some...some_block/n'
+E     '! default IMPLICIT rules apply' is contained here:
+E       MODULE some_block
+E         ! default IMPLICIT rules apply
+E         CONTAINS
+E       END MODULE some_block
+ENDTRACEBACK run=7
+REPLAY id=F10 matched=3/3 sig=976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f
+CERT id=F10 certified=yes d=1 m=5 k=3 per_run_lower=1/5 runs_to_failure=1 sig=976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f
+SEARCH_STOP reason=certified index=7
+FLAKECERT_SUMMARY id=F10 runs=7 failures=5

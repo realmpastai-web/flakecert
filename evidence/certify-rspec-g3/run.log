@@ -1,0 +1,496 @@
+2026-10-19T17:06:52Z commit 8004fe1c22e780c44d0db138293326037d847bf2
+2026-10-19T17:06:52Z todo sha256 2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53 expected 2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53
+2026-10-19T17:06:52Z check sha256 4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83 expected 4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83
+2026-10-19T17:07:27Z commit 8004fe1c22e780c44d0db138293326037d847bf2
+2026-10-19T17:07:27Z todo sha256 2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53 expected 2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53
+2026-10-19T17:07:27Z check sha256 4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83 expected 4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83
+2026-10-19T17:07:36Z create gitlabhq_test_sec2 rc=0 
+2026-10-19T17:07:44Z create gitlabhq_test_ci2 rc=0 
+2026-10-19T17:07:52Z create gitlabhq_test2 rc=0 
+2026-10-19T17:07:52Z saved pristine todo bytes=447993
+2026-10-19T17:07:52Z wrote s20.txt lines=20
+2026-10-19T17:07:52Z wrote cat_a.txt lines=10 b1.txt lines=1
+2026-10-19T17:07:52Z BEGIN timeout=1800s log=evidence/certify-rspec-g3/arm-g/00031d8665bd69bb.log
+2026-10-19T17:17:47Z END rc=0 elapsed_s=595.0 log=evidence/certify-rspec-g3/arm-g/00031d8665bd69bb.log
+2026-10-19T17:17:47Z BEGIN timeout=1800s log=evidence/certify-rspec-g3/arm-g/000823af86f945f3.log
+2026-10-19T17:17:47Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-01.log
+2026-10-19T17:19:12Z END rc=0 elapsed_s=85.3 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-01.log
+2026-10-19T17:19:12Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-02.log
+2026-10-19T17:20:33Z END rc=0 elapsed_s=80.7 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-02.log
+2026-10-19T17:20:33Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-03.log
+2026-10-19T17:21:57Z END rc=0 elapsed_s=83.9 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-03.log
+2026-10-19T17:21:57Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-04.log
+2026-10-19T17:23:20Z END rc=0 elapsed_s=83.4 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-04.log
+2026-10-19T17:23:20Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-05.log
+2026-10-19T17:24:43Z END rc=0 elapsed_s=82.5 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-05.log
+2026-10-19T17:24:43Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-06.log
+2026-10-19T17:26:04Z END rc=0 elapsed_s=81.6 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-06.log
+2026-10-19T17:26:04Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-07.log
+2026-10-19T17:26:35Z END rc=0 elapsed_s=528.2 log=evidence/certify-rspec-g3/arm-g/000823af86f945f3.log
+2026-10-19T17:26:35Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-01.log
+2026-10-19T17:27:25Z END rc=0 elapsed_s=80.8 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-07.log
+2026-10-19T17:27:25Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-08.log
+2026-10-19T17:27:49Z END rc=0 elapsed_s=74.0 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-01.log
+2026-10-19T17:27:49Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-02.log
+2026-10-19T17:28:50Z END rc=0 elapsed_s=84.8 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-08.log
+2026-10-19T17:28:50Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-09.log
+2026-10-19T17:29:06Z END rc=0 elapsed_s=76.6 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-02.log
+2026-10-19T17:29:06Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-03.log
+2026-10-19T17:30:18Z END rc=0 elapsed_s=88.0 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-09.log
+2026-10-19T17:30:18Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-10.log
+2026-10-19T17:30:28Z END rc=0 elapsed_s=81.8 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-03.log
+2026-10-19T17:30:28Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-04.log
+2026-10-19T17:31:45Z END rc=0 elapsed_s=77.1 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-04.log
+2026-10-19T17:31:45Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-05.log
+2026-10-19T17:31:53Z END rc=0 elapsed_s=94.8 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-10.log
+2026-10-19T17:31:53Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-11.log
+2026-10-19T17:32:57Z END rc=0 elapsed_s=72.8 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-05.log
+2026-10-19T17:32:57Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-06.log
+2026-10-19T17:33:13Z END rc=0 elapsed_s=79.9 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-11.log
+2026-10-19T17:33:13Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-12.log
+2026-10-19T17:34:11Z END rc=0 elapsed_s=73.5 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-06.log
+2026-10-19T17:34:11Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-07.log
+2026-10-19T17:34:36Z END rc=0 elapsed_s=83.1 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-12.log
+2026-10-19T17:34:36Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-13.log
+2026-10-19T17:35:25Z END rc=0 elapsed_s=73.7 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-07.log
+2026-10-19T17:35:25Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-08.log
+2026-10-19T17:35:59Z END rc=0 elapsed_s=83.1 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-13.log
+2026-10-19T17:35:59Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-14.log
+2026-10-19T17:36:39Z END rc=0 elapsed_s=74.5 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-08.log
+2026-10-19T17:36:39Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-09.log
+2026-10-19T17:37:20Z END rc=0 elapsed_s=81.7 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-14.log
+2026-10-19T17:37:20Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-15.log
+2026-10-19T17:37:56Z END rc=0 elapsed_s=76.7 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-09.log
+2026-10-19T17:37:56Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-10.log
+2026-10-19T17:38:44Z END rc=0 elapsed_s=83.2 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-15.log
+2026-10-19T17:38:44Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-16.log
+2026-10-19T17:39:10Z END rc=0 elapsed_s=74.3 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-10.log
+2026-10-19T17:39:10Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-11.log
+2026-10-19T17:40:11Z END rc=0 elapsed_s=87.0 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-16.log
+2026-10-19T17:40:11Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-17.log
+2026-10-19T17:40:28Z END rc=0 elapsed_s=77.9 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-11.log
+2026-10-19T17:40:28Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-12.log
+2026-10-19T17:41:32Z END rc=0 elapsed_s=81.7 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-17.log
+2026-10-19T17:41:32Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-18.log
+2026-10-19T17:41:46Z END rc=0 elapsed_s=77.4 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-12.log
+2026-10-19T17:41:46Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-13.log
+2026-10-19T17:42:55Z END rc=0 elapsed_s=83.1 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-18.log
+2026-10-19T17:42:55Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-19.log
+2026-10-19T17:43:01Z END rc=0 elapsed_s=75.5 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-13.log
+2026-10-19T17:43:01Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-14.log
+2026-10-19T17:44:22Z END rc=0 elapsed_s=80.6 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-14.log
+2026-10-19T17:44:22Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-15.log
+2026-10-19T17:44:24Z END rc=0 elapsed_s=88.6 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-19.log
+2026-10-19T17:44:24Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-20.log
+2026-10-19T17:45:49Z END rc=0 elapsed_s=87.0 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-15.log
+2026-10-19T17:45:49Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-16.log
+2026-10-19T17:45:58Z END rc=0 elapsed_s=93.6 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-20.log
+2026-10-19T17:45:58Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-21.log
+2026-10-19T17:47:10Z END rc=0 elapsed_s=80.8 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-16.log
+2026-10-19T17:47:10Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-17.log
+2026-10-19T17:47:25Z END rc=0 elapsed_s=86.9 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-21.log
+2026-10-19T17:47:25Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-22.log
+2026-10-19T17:48:32Z END rc=0 elapsed_s=82.7 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-17.log
+2026-10-19T17:48:32Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-18.log
+2026-10-19T17:48:52Z END rc=0 elapsed_s=88.0 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-22.log
+2026-10-19T17:48:52Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-23.log
+2026-10-19T17:52:04Z END rc=1 elapsed_s=211.5 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-18.log
+2026-10-19T17:52:04Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-19.log
+2026-10-19T17:52:16Z END rc=1 elapsed_s=203.7 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-23.log
+2026-10-19T17:52:16Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-24.log
+2026-10-19T17:52:31Z END rc=1 elapsed_s=27.5 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-19.log
+2026-10-19T17:52:31Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-20.log
+2026-10-19T17:52:37Z END rc=1 elapsed_s=20.8 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-24.log
+2026-10-19T17:52:37Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-25.log
+2026-10-19T17:52:49Z END rc=1 elapsed_s=17.8 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-20.log
+2026-10-19T17:52:49Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-21.log
+2026-10-19T17:52:56Z END rc=1 elapsed_s=18.9 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-25.log
+2026-10-19T17:52:56Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-26.log
+2026-10-19T17:53:06Z END rc=1 elapsed_s=16.6 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-21.log
+2026-10-19T17:53:06Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-22.log
+2026-10-19T17:53:13Z END rc=1 elapsed_s=17.3 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-26.log
+2026-10-19T17:53:13Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-27.log
+2026-10-19T17:53:24Z END rc=1 elapsed_s=18.3 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-22.log
+2026-10-19T17:53:24Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-23.log
+2026-10-19T17:53:32Z END rc=1 elapsed_s=18.4 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-27.log
+2026-10-19T17:53:32Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-28.log
+2026-10-19T17:53:42Z END rc=1 elapsed_s=18.2 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-23.log
+2026-10-19T17:53:42Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-24.log
+2026-10-19T17:53:50Z END rc=1 elapsed_s=18.1 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-28.log
+2026-10-19T17:53:50Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-29.log
+2026-10-19T17:54:00Z END rc=1 elapsed_s=17.6 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-24.log
+2026-10-19T17:54:00Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-25.log
+2026-10-19T17:54:06Z END rc=1 elapsed_s=16.7 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-29.log
+2026-10-19T17:54:06Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-30.log
+2026-10-19T17:56:06Z commit 8004fe1c22e780c44d0db138293326037d847bf2
+2026-10-19T17:56:06Z todo sha256 2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53 expected 2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53
+2026-10-19T17:56:06Z check sha256 4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83 expected 4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83
+2026-10-19T17:56:06Z database gitlabhq_test_sec2 already present
+2026-10-19T17:56:07Z database gitlabhq_test_ci2 already present
+2026-10-19T17:56:07Z database gitlabhq_test2 already present
+2026-10-19T17:56:07Z saved pristine todo bytes=447993
+2026-10-19T17:56:07Z wrote s20.txt lines=20
+2026-10-19T17:56:07Z wrote cat_a.txt lines=10 b1.txt lines=1
+2026-10-19T17:56:07Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-18.log
+2026-10-19T17:56:07Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-23.log
+2026-10-19T17:57:32Z END rc=0 elapsed_s=85.3 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-18.log
+2026-10-19T17:57:32Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-19.log
+2026-10-19T17:57:40Z END rc=0 elapsed_s=93.0 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-23.log
+2026-10-19T17:57:40Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-24.log
+2026-10-19T17:58:55Z END rc=0 elapsed_s=82.9 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-19.log
+2026-10-19T17:58:55Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-20.log
+2026-10-19T17:59:12Z END rc=0 elapsed_s=92.4 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-24.log
+2026-10-19T17:59:12Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-25.log
+2026-10-19T18:00:15Z END rc=0 elapsed_s=80.5 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-20.log
+2026-10-19T18:00:15Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-21.log
+2026-10-19T18:00:43Z END rc=0 elapsed_s=90.6 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-25.log
+2026-10-19T18:00:43Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-26.log
+2026-10-19T18:01:44Z END rc=0 elapsed_s=88.5 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-21.log
+2026-10-19T18:01:44Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-22.log
+2026-10-19T18:02:14Z END rc=0 elapsed_s=91.4 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-26.log
+2026-10-19T18:02:14Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-27.log
+2026-10-19T18:03:05Z END rc=0 elapsed_s=80.7 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-22.log
+2026-10-19T18:03:05Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-23.log
+2026-10-19T18:03:42Z END rc=0 elapsed_s=87.7 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-27.log
+2026-10-19T18:03:42Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-28.log
+2026-10-19T18:04:24Z END rc=0 elapsed_s=79.0 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-23.log
+2026-10-19T18:04:24Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-24.log
+2026-10-19T18:05:09Z END rc=0 elapsed_s=87.7 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-28.log
+2026-10-19T18:05:09Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-29.log
+2026-10-19T18:05:43Z END rc=0 elapsed_s=79.8 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-24.log
+2026-10-19T18:05:43Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-25.log
+2026-10-19T18:06:35Z END rc=0 elapsed_s=85.9 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-29.log
+2026-10-19T18:06:35Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-30.log
+2026-10-19T18:07:06Z END rc=0 elapsed_s=82.2 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-25.log
+2026-10-19T18:07:06Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-26.log
+2026-10-19T18:08:06Z END rc=0 elapsed_s=91.0 log=evidence/certify-rspec-g3/arm-f/00031d8665bd69bb/seed-30.log
+2026-10-19T18:08:06Z FILE ./spec/models/board_spec.rb G=True F=BOUNDED_CLEAN failures=0/30
+2026-10-19T18:08:06Z BEGIN timeout=1073s log=evidence/certify-rspec-g3/arm-g/001a329edc1a9ae1.log
+2026-10-19T18:08:32Z END rc=0 elapsed_s=86.2 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-26.log
+2026-10-19T18:08:32Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-27.log
+2026-10-19T18:09:48Z END rc=0 elapsed_s=76.3 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-27.log
+2026-10-19T18:09:48Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-28.log
+2026-10-19T18:11:07Z END rc=0 elapsed_s=79.1 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-28.log
+2026-10-19T18:11:07Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-29.log
+2026-10-19T18:12:20Z END rc=0 elapsed_s=72.5 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-29.log
+2026-10-19T18:12:20Z BEGIN timeout=480s log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-30.log
+2026-10-19T18:13:37Z END rc=0 elapsed_s=77.4 log=evidence/certify-rspec-g3/arm-f/000823af86f945f3/seed-30.log
+2026-10-19T18:13:37Z FILE ./spec/models/concerns/from_intersect_spec.rb G=True F=BOUNDED_CLEAN failures=0/30
+2026-10-19T18:20:08Z END rc=0 elapsed_s=721.7 log=evidence/certify-rspec-g3/arm-g/001a329edc1a9ae1.log
+2026-10-19T18:20:08Z BEGIN timeout=742s log=evidence/certify-rspec-g3/arm-g/001b5959e258723a.log
+2026-10-19T18:20:08Z BEGIN timeout=351s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-01.log
+2026-10-19T18:20:48Z END rc=0 elapsed_s=39.8 log=evidence/certify-rspec-g3/arm-g/001b5959e258723a.log
+2026-10-19T18:20:48Z BEGIN timeout=311s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-01.log
+2026-10-19T18:20:53Z END rc=0 elapsed_s=5.2 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-01.log
+2026-10-19T18:20:53Z BEGIN timeout=306s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-02.log
+2026-10-19T18:20:58Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-02.log
+2026-10-19T18:20:58Z BEGIN timeout=301s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-03.log
+2026-10-19T18:21:03Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-03.log
+2026-10-19T18:21:03Z BEGIN timeout=296s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-04.log
+2026-10-19T18:21:07Z END rc=0 elapsed_s=4.9 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-04.log
+2026-10-19T18:21:07Z BEGIN timeout=292s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-05.log
+2026-10-19T18:21:12Z END rc=0 elapsed_s=5.0 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-05.log
+2026-10-19T18:21:12Z BEGIN timeout=287s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-06.log
+2026-10-19T18:21:18Z END rc=0 elapsed_s=5.4 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-06.log
+2026-10-19T18:21:18Z BEGIN timeout=281s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-07.log
+2026-10-19T18:21:23Z END rc=0 elapsed_s=4.9 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-07.log
+2026-10-19T18:21:23Z BEGIN timeout=276s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-08.log
+2026-10-19T18:21:29Z END rc=0 elapsed_s=6.1 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-08.log
+2026-10-19T18:21:29Z BEGIN timeout=270s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-09.log
+2026-10-19T18:21:34Z END rc=0 elapsed_s=5.2 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-09.log
+2026-10-19T18:21:34Z BEGIN timeout=265s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-10.log
+2026-10-19T18:21:39Z END rc=0 elapsed_s=5.1 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-10.log
+2026-10-19T18:21:39Z BEGIN timeout=260s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-11.log
+2026-10-19T18:21:44Z END rc=0 elapsed_s=5.3 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-11.log
+2026-10-19T18:21:44Z BEGIN timeout=255s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-12.log
+2026-10-19T18:21:46Z END rc=0 elapsed_s=97.6 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-01.log
+2026-10-19T18:21:46Z BEGIN timeout=253s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-02.log
+2026-10-19T18:21:50Z END rc=0 elapsed_s=5.5 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-12.log
+2026-10-19T18:21:50Z BEGIN timeout=249s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-13.log
+2026-10-19T18:21:55Z END rc=0 elapsed_s=5.2 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-13.log
+2026-10-19T18:21:55Z BEGIN timeout=244s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-14.log
+2026-10-19T18:22:00Z END rc=0 elapsed_s=5.1 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-14.log
+2026-10-19T18:22:00Z BEGIN timeout=239s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-15.log
+2026-10-19T18:22:06Z END rc=0 elapsed_s=5.5 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-15.log
+2026-10-19T18:22:06Z BEGIN timeout=233s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-16.log
+2026-10-19T18:22:11Z END rc=0 elapsed_s=5.5 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-16.log
+2026-10-19T18:22:11Z BEGIN timeout=228s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-17.log
+2026-10-19T18:22:16Z END rc=0 elapsed_s=5.2 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-17.log
+2026-10-19T18:22:16Z BEGIN timeout=223s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-18.log
+2026-10-19T18:22:22Z END rc=0 elapsed_s=5.4 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-18.log
+2026-10-19T18:22:22Z BEGIN timeout=217s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-19.log
+2026-10-19T18:22:27Z END rc=0 elapsed_s=5.5 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-19.log
+2026-10-19T18:22:27Z BEGIN timeout=212s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-20.log
+2026-10-19T18:22:33Z END rc=0 elapsed_s=5.2 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-20.log
+2026-10-19T18:22:33Z BEGIN timeout=206s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-21.log
+2026-10-19T18:22:38Z END rc=0 elapsed_s=5.3 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-21.log
+2026-10-19T18:22:38Z BEGIN timeout=201s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-22.log
+2026-10-19T18:22:43Z END rc=0 elapsed_s=5.4 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-22.log
+2026-10-19T18:22:43Z BEGIN timeout=196s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-23.log
+2026-10-19T18:22:49Z END rc=0 elapsed_s=5.5 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-23.log
+2026-10-19T18:22:49Z BEGIN timeout=190s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-24.log
+2026-10-19T18:22:54Z END rc=0 elapsed_s=4.9 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-24.log
+2026-10-19T18:22:54Z BEGIN timeout=185s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-25.log
+2026-10-19T18:22:59Z END rc=0 elapsed_s=5.0 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-25.log
+2026-10-19T18:22:59Z BEGIN timeout=180s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-26.log
+2026-10-19T18:23:04Z END rc=0 elapsed_s=5.3 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-26.log
+2026-10-19T18:23:04Z BEGIN timeout=175s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-27.log
+2026-10-19T18:23:09Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-27.log
+2026-10-19T18:23:09Z BEGIN timeout=170s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-28.log
+2026-10-19T18:23:14Z END rc=0 elapsed_s=5.0 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-28.log
+2026-10-19T18:23:14Z BEGIN timeout=165s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-29.log
+2026-10-19T18:23:19Z END rc=0 elapsed_s=4.7 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-29.log
+2026-10-19T18:23:19Z BEGIN timeout=160s log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-30.log
+2026-10-19T18:23:20Z END rc=0 elapsed_s=93.9 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-02.log
+2026-10-19T18:23:20Z BEGIN timeout=159s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-03.log
+2026-10-19T18:23:23Z END rc=0 elapsed_s=4.9 log=evidence/certify-rspec-g3/arm-f/001b5959e258723a/seed-30.log
+2026-10-19T18:23:23Z FILE ./spec/lib/gitlab/pagination/keyset/page_spec.rb G=True F=BOUNDED_CLEAN failures=0/30
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/throttle_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/models/concerns/limitable_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/auth/atlassian/user_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/memory/reports/jemalloc_stats_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/github_import_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/api_authentication/token_resolver_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/models/review_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/markdown_cache/redis/store_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/ci/matching/build_matcher_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/ci/reports/terraform_reports_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/models/integrations/chat_message/issue_message_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/database/schema_cache_with_renamed_table_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/ci/build/artifacts/metadata/entry_spec.rb left_s=156
+2026-10-19T18:23:23Z STOP budget before path=./spec/lib/gitlab/diff/position_tracer/image_strategy_spec.rb left_s=156
+2026-10-19T18:24:50Z END rc=0 elapsed_s=90.8 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-03.log
+2026-10-19T18:24:50Z BEGIN timeout=69s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-04.log
+2026-10-19T18:27:30Z END rc=124 elapsed_s=159.4 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-04.log
+2026-10-19T18:27:30Z STOP budget path=./spec/lib/gitlab/git/blame_spec.rb before seed=5
+2026-10-19T18:27:30Z FILE ./spec/lib/gitlab/git/blame_spec.rb G=True F=INCOMPLETE failures=0/3
+2026-10-19T18:27:30Z STOP budget before category and B1
+2026-10-19T18:27:30Z exit_ok=False reason=WALL_CLOCK wall=13410.4
+2026-10-20T04:52:06Z commit 8004fe1c22e780c44d0db138293326037d847bf2
+2026-10-20T04:52:06Z todo sha256 2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53 expected 2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53
+2026-10-20T04:52:06Z check sha256 4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83 expected 4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83
+2026-10-20T04:52:06Z database gitlabhq_test_sec2 already present
+2026-10-20T04:52:06Z database gitlabhq_test_ci2 already present
+2026-10-20T04:52:07Z database gitlabhq_test2 already present
+2026-10-20T04:52:07Z saved pristine todo bytes=447993
+2026-10-20T04:52:07Z wrote s20.txt lines=20
+2026-10-20T04:52:07Z wrote cat_a.txt lines=10 b1.txt lines=1
+2026-10-20T04:52:07Z RESUME cert action=skip_verified sha256=25d805477519ccb38e632b962efa3823c4ae1f10c6c484ade3e9821210706c89 cert=certificates/00031d8665bd69bb.txt
+2026-10-20T04:52:07Z RESUME cert action=skip_verified sha256=cf48a804bdd4c54eb923ad30718bb3996b4dde7a3367a584aa6af94634ed4ba6 cert=certificates/000823af86f945f3.txt
+2026-10-20T04:52:07Z RESUME cert action=skip_verified sha256=e36af5400046ea3448e8e5b4dd0378feee85c8d56e0a598abf9be2e041deaee1 cert=certificates/001b5959e258723a.txt
+2026-10-20T04:52:07Z RESUME continue from_seed=4 path=./spec/lib/gitlab/git/blame_spec.rb
+2026-10-20T04:52:07Z RESUME order continue=1 excluded=10 reverse=1 later=16
+2026-10-20T04:52:07Z SEED_TIMEOUT seconds=2165 arm_g_elapsed_s=721.66 path=./spec/lib/gitlab/git/blame_spec.rb
+2026-10-20T04:52:07Z RESUME rerun unfinished seed=4 log=seed-04.log
+2026-10-20T04:52:07Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-04.log
+2026-10-20T04:53:45Z END rc=0 elapsed_s=98.0 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-04.log
+2026-10-20T04:53:45Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-05.log
+2026-10-20T04:55:12Z END rc=0 elapsed_s=87.4 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-05.log
+2026-10-20T04:55:12Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-06.log
+2026-10-20T04:56:39Z END rc=0 elapsed_s=87.3 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-06.log
+2026-10-20T04:56:39Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-07.log
+2026-10-20T04:58:08Z END rc=0 elapsed_s=88.7 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-07.log
+2026-10-20T04:58:08Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-08.log
+2026-10-20T04:59:33Z END rc=0 elapsed_s=84.8 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-08.log
+2026-10-20T04:59:33Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-09.log
+2026-10-20T05:00:59Z END rc=0 elapsed_s=86.5 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-09.log
+2026-10-20T05:00:59Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-10.log
+2026-10-20T05:02:25Z END rc=0 elapsed_s=85.8 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-10.log
+2026-10-20T05:02:25Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-11.log
+2026-10-20T05:03:52Z END rc=0 elapsed_s=86.9 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-11.log
+2026-10-20T05:03:52Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-12.log
+2026-10-20T05:05:17Z END rc=0 elapsed_s=85.3 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-12.log
+2026-10-20T05:05:17Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-13.log
+2026-10-20T05:06:47Z END rc=0 elapsed_s=90.0 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-13.log
+2026-10-20T05:06:47Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-14.log
+2026-10-20T05:08:18Z END rc=0 elapsed_s=91.1 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-14.log
+2026-10-20T05:08:18Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-15.log
+2026-10-20T05:09:49Z END rc=0 elapsed_s=91.0 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-15.log
+2026-10-20T05:09:49Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-16.log
+2026-10-20T05:11:17Z END rc=0 elapsed_s=87.6 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-16.log
+2026-10-20T05:11:17Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-17.log
+2026-10-20T05:12:43Z END rc=0 elapsed_s=85.9 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-17.log
+2026-10-20T05:12:43Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-18.log
+2026-10-20T05:14:14Z END rc=0 elapsed_s=91.3 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-18.log
+2026-10-20T05:14:14Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-19.log
+2026-10-20T05:15:42Z END rc=0 elapsed_s=87.3 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-19.log
+2026-10-20T05:15:42Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-20.log
+2026-10-20T05:17:13Z END rc=0 elapsed_s=91.2 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-20.log
+2026-10-20T05:17:13Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-21.log
+2026-10-20T05:18:51Z END rc=0 elapsed_s=97.8 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-21.log
+2026-10-20T05:18:51Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-22.log
+2026-10-20T05:20:20Z END rc=0 elapsed_s=88.9 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-22.log
+2026-10-20T05:20:20Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-23.log
+2026-10-20T05:21:50Z END rc=0 elapsed_s=90.2 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-23.log
+2026-10-20T05:21:50Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-24.log
+2026-10-20T05:26:15Z END rc=0 elapsed_s=265.7 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-24.log
+2026-10-20T05:26:16Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-25.log
+2026-10-20T05:27:46Z END rc=0 elapsed_s=90.2 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-25.log
+2026-10-20T05:27:46Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-26.log
+2026-10-20T05:29:16Z END rc=0 elapsed_s=90.0 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-26.log
+2026-10-20T05:29:16Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-27.log
+2026-10-20T05:30:48Z END rc=0 elapsed_s=92.4 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-27.log
+2026-10-20T05:30:48Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-28.log
+2026-10-20T05:32:15Z END rc=0 elapsed_s=87.3 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-28.log
+2026-10-20T05:32:15Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-29.log
+2026-10-20T05:33:43Z END rc=0 elapsed_s=87.6 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-29.log
+2026-10-20T05:33:43Z BEGIN timeout=2165s log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-30.log
+2026-10-20T05:35:10Z END rc=0 elapsed_s=87.0 log=evidence/certify-rspec-g3/arm-f/001a329edc1a9ae1/seed-30.log
+2026-10-20T05:35:10Z FILE ./spec/lib/gitlab/git/blame_spec.rb G=True F=BOUNDED_CLEAN failures=0/30
+2026-10-20T05:35:10Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/4920aeb197e8c272-alone.log
+2026-10-20T05:36:21Z END rc=1 elapsed_s=71.3 log=evidence/certify-rspec-g3/cat-a/4920aeb197e8c272-alone.log
+2026-10-20T05:36:21Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/4920aeb197e8c272-siblings.log
+2026-10-20T05:49:36Z END rc=1 elapsed_s=794.2 log=evidence/certify-rspec-g3/cat-a/4920aeb197e8c272-siblings.log
+2026-10-20T05:49:36Z CAT path=spec/mailers/devise_mailer_spec.rb label=UNRESOLVED
+2026-10-20T05:49:36Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/3b8d4a2618e4d3b0-alone.log
+2026-10-20T05:51:21Z END rc=0 elapsed_s=105.0 log=evidence/certify-rspec-g3/cat-a/3b8d4a2618e4d3b0-alone.log
+2026-10-20T05:51:21Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/3b8d4a2618e4d3b0-siblings.log
+2026-10-20T05:53:28Z END rc=0 elapsed_s=127.5 log=evidence/certify-rspec-g3/cat-a/3b8d4a2618e4d3b0-siblings.log
+2026-10-20T05:53:28Z CAT path=spec/models/ci/build_trace_chunks/fog_spec.rb label=PASSES_ALONE
+2026-10-20T05:53:28Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/44968f98661aa9b2-alone.log
+2026-10-20T05:55:31Z END rc=0 elapsed_s=122.8 log=evidence/certify-rspec-g3/cat-a/44968f98661aa9b2-alone.log
+2026-10-20T05:55:31Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/44968f98661aa9b2-siblings.log
+2026-10-20T06:17:40Z END rc=1 elapsed_s=1328.8 log=evidence/certify-rspec-g3/cat-a/44968f98661aa9b2-siblings.log
+2026-10-20T06:17:40Z CAT path=spec/models/concerns/reactive_caching_spec.rb label=PASSES_ALONE
+2026-10-20T06:17:40Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/0b26e1c3f997c549-alone.log
+2026-10-20T06:19:08Z END rc=0 elapsed_s=87.9 log=evidence/certify-rspec-g3/cat-a/0b26e1c3f997c549-alone.log
+2026-10-20T06:19:08Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/0b26e1c3f997c549-siblings.log
+2026-10-20T06:20:35Z END rc=0 elapsed_s=87.1 log=evidence/certify-rspec-g3/cat-a/0b26e1c3f997c549-siblings.log
+2026-10-20T06:20:35Z CAT path=spec/lib/gitlab/query_limiting/active_support_subscriber_spec.rb label=PASSES_ALONE
+2026-10-20T06:20:35Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/22a8c2cf06015b64-alone.log
+2026-10-20T06:22:19Z END rc=0 elapsed_s=104.0 log=evidence/certify-rspec-g3/cat-a/22a8c2cf06015b64-alone.log
+2026-10-20T06:22:19Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/22a8c2cf06015b64-siblings.log
+2026-10-20T06:26:21Z END rc=0 elapsed_s=242.4 log=evidence/certify-rspec-g3/cat-a/22a8c2cf06015b64-siblings.log
+2026-10-20T06:26:21Z CAT path=spec/requests/api/graphql/mutations/ci/job_token_scope/remove_project_spec.rb label=PASSES_ALONE
+2026-10-20T06:26:21Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/ac7023540d80b3f3-alone.log
+2026-10-20T06:28:03Z END rc=0 elapsed_s=101.8 log=evidence/certify-rspec-g3/cat-a/ac7023540d80b3f3-alone.log
+2026-10-20T06:28:03Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/ac7023540d80b3f3-siblings.log
+2026-10-20T06:33:29Z END rc=0 elapsed_s=325.7 log=evidence/certify-rspec-g3/cat-a/ac7023540d80b3f3-siblings.log
+2026-10-20T06:33:29Z CAT path=spec/requests/api/graphql/mutations/issues/set_escalation_status_spec.rb label=PASSES_ALONE
+2026-10-20T06:33:29Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/9ba4cff6870f3776-alone.log
+2026-10-20T06:35:11Z END rc=0 elapsed_s=102.6 log=evidence/certify-rspec-g3/cat-a/9ba4cff6870f3776-alone.log
+2026-10-20T06:35:11Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/9ba4cff6870f3776-siblings.log
+2026-10-20T06:39:05Z END rc=0 elapsed_s=233.3 log=evidence/certify-rspec-g3/cat-a/9ba4cff6870f3776-siblings.log
+2026-10-20T06:39:05Z CAT path=spec/requests/api/graphql/project/error_tracking/sentry_errors_request_spec.rb label=PASSES_ALONE
+2026-10-20T06:39:05Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/9a4670a41e91cf6b-alone.log
+2026-10-20T06:40:52Z END rc=0 elapsed_s=107.5 log=evidence/certify-rspec-g3/cat-a/9a4670a41e91cf6b-alone.log
+2026-10-20T06:40:52Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/9a4670a41e91cf6b-siblings.log
+2026-10-20T07:01:08Z END rc=1 elapsed_s=1216.3 log=evidence/certify-rspec-g3/cat-a/9a4670a41e91cf6b-siblings.log
+2026-10-20T07:01:08Z CAT path=spec/requests/api/graphql/project/recent_issue_boards_query_spec.rb label=PASSES_ALONE
+2026-10-20T07:01:08Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/fb59d6ac7d0fdc52-alone.log
+2026-10-20T07:04:48Z END rc=1 elapsed_s=220.0 log=evidence/certify-rspec-g3/cat-a/fb59d6ac7d0fdc52-alone.log
+2026-10-20T07:04:48Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/fb59d6ac7d0fdc52-siblings.log
+2026-10-20T07:29:55Z END rc=1 elapsed_s=1506.1 log=evidence/certify-rspec-g3/cat-a/fb59d6ac7d0fdc52-siblings.log
+2026-10-20T07:29:55Z CAT path=spec/requests/users_controller_spec.rb label=UNRESOLVED
+2026-10-20T07:29:55Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/cat-a/504c938610b95fb9-alone.log
+2026-10-20T07:31:24Z END rc=0 elapsed_s=89.2 log=evidence/certify-rspec-g3/cat-a/504c938610b95fb9-alone.log
+2026-10-20T07:31:24Z BEGIN timeout=3600s log=evidence/certify-rspec-g3/cat-a/504c938610b95fb9-siblings.log
+2026-10-20T07:33:36Z END rc=0 elapsed_s=131.9 log=evidence/certify-rspec-g3/cat-a/504c938610b95fb9-siblings.log
+2026-10-20T07:33:36Z CAT path=spec/services/design_management/generate_image_versions_service_spec.rb label=PASSES_ALONE
+2026-10-20T07:33:36Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/b1/defined.log
+2026-10-20T07:35:03Z END rc=0 elapsed_s=86.8 log=evidence/certify-rspec-g3/b1/defined.log
+2026-10-20T07:35:03Z BEGIN timeout=1200s log=evidence/certify-rspec-g3/b1/reverse.log
+2026-10-20T07:36:26Z END rc=0 elapsed_s=83.9 log=evidence/certify-rspec-g3/b1/reverse.log
+2026-10-20T07:36:26Z BEGIN timeout=2400s log=evidence/certify-rspec-g3/b1/bisect.log
+2026-10-20T07:37:37Z END rc=1 elapsed_s=70.6 log=evidence/certify-rspec-g3/b1/bisect.log
+2026-10-20T07:40:20Z REPLAY replay-b1.sh twice_ok=True
+2026-10-20T07:40:20Z B1 path=spec/services/timelogs/delete_service_spec.rb label=PASSES_ALONE same_file=False replay_twice=True
+2026-10-20T07:40:20Z RESUME remaining sample paths=16
+2026-10-20T07:40:20Z BEGIN timeout=1800s log=evidence/certify-rspec-g3/arm-g/003e9fa2e3451681.log
+2026-10-20T07:40:56Z END rc=0 elapsed_s=35.7 log=evidence/certify-rspec-g3/arm-g/003e9fa2e3451681.log
+2026-10-20T07:40:56Z BEGIN timeout=1800s log=evidence/certify-rspec-g3/arm-g/007aff8231bde71e.log
+2026-10-20T07:40:56Z SEED_TIMEOUT seconds=300 arm_g_elapsed_s=35.656 path=./spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
+2026-10-20T07:40:56Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-01.log
+2026-10-20T07:41:01Z END rc=0 elapsed_s=5.2 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-01.log
+2026-10-20T07:41:01Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-02.log
+2026-10-20T07:41:06Z END rc=0 elapsed_s=5.0 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-02.log
+2026-10-20T07:41:06Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-03.log
+2026-10-20T07:41:11Z END rc=0 elapsed_s=5.3 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-03.log
+2026-10-20T07:41:11Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-04.log
+2026-10-20T07:41:16Z END rc=0 elapsed_s=4.9 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-04.log
+2026-10-20T07:41:16Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-05.log
+2026-10-20T07:41:21Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-05.log
+2026-10-20T07:41:21Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-06.log
+2026-10-20T07:41:26Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-06.log
+2026-10-20T07:41:26Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-07.log
+2026-10-20T07:41:31Z END rc=0 elapsed_s=5.5 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-07.log
+2026-10-20T07:41:31Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-08.log
+2026-10-20T07:41:36Z END rc=0 elapsed_s=4.7 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-08.log
+2026-10-20T07:41:36Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-09.log
+2026-10-20T07:41:41Z END rc=0 elapsed_s=4.7 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-09.log
+2026-10-20T07:41:41Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-10.log
+2026-10-20T07:41:45Z END rc=0 elapsed_s=4.5 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-10.log
+2026-10-20T07:41:45Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-11.log
+2026-10-20T07:41:50Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-11.log
+2026-10-20T07:41:50Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-12.log
+2026-10-20T07:41:55Z END rc=0 elapsed_s=5.2 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-12.log
+2026-10-20T07:41:55Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-13.log
+2026-10-20T07:42:00Z END rc=0 elapsed_s=5.0 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-13.log
+2026-10-20T07:42:00Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-14.log
+2026-10-20T07:42:05Z END rc=0 elapsed_s=4.7 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-14.log
+2026-10-20T07:42:05Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-15.log
+2026-10-20T07:42:10Z END rc=0 elapsed_s=4.5 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-15.log
+2026-10-20T07:42:10Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-16.log
+2026-10-20T07:42:14Z END rc=0 elapsed_s=4.5 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-16.log
+2026-10-20T07:42:14Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-17.log
+2026-10-20T07:42:19Z END rc=0 elapsed_s=4.7 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-17.log
+2026-10-20T07:42:19Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-18.log
+2026-10-20T07:42:23Z END rc=0 elapsed_s=4.7 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-18.log
+2026-10-20T07:42:23Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-19.log
+2026-10-20T07:42:28Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-19.log
+2026-10-20T07:42:28Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-20.log
+2026-10-20T07:42:33Z END rc=0 elapsed_s=5.1 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-20.log
+2026-10-20T07:42:33Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-21.log
+2026-10-20T07:42:38Z END rc=0 elapsed_s=5.1 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-21.log
+2026-10-20T07:42:38Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-22.log
+2026-10-20T07:42:43Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-22.log
+2026-10-20T07:42:43Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-23.log
+2026-10-20T07:42:48Z END rc=0 elapsed_s=5.4 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-23.log
+2026-10-20T07:42:48Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-24.log
+2026-10-20T07:42:53Z END rc=0 elapsed_s=4.7 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-24.log
+2026-10-20T07:42:53Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-25.log
+2026-10-20T07:42:58Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-25.log
+2026-10-20T07:42:58Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-26.log
+2026-10-20T07:43:03Z END rc=0 elapsed_s=5.0 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-26.log
+2026-10-20T07:43:03Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-27.log
+2026-10-20T07:43:08Z END rc=0 elapsed_s=4.9 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-27.log
+2026-10-20T07:43:08Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-28.log
+2026-10-20T07:43:13Z END rc=0 elapsed_s=4.8 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-28.log
+2026-10-20T07:43:13Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-29.log
+2026-10-20T07:43:18Z END rc=0 elapsed_s=5.3 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-29.log
+2026-10-20T07:43:18Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-30.log
+2026-10-20T07:43:23Z END rc=0 elapsed_s=4.6 log=evidence/certify-rspec-g3/arm-f/003e9fa2e3451681/seed-30.log
+2026-10-20T07:43:23Z FILE ./spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb G=True F=BOUNDED_CLEAN failures=0/30
+2026-10-20T07:49:47Z END rc=0 elapsed_s=530.9 log=evidence/certify-rspec-g3/arm-g/007aff8231bde71e.log
+2026-10-20T07:49:47Z BEGIN timeout=1800s log=evidence/certify-rspec-g3/arm-g/00a05162a528756d.log
+2026-10-20T07:49:47Z SEED_TIMEOUT seconds=1593 arm_g_elapsed_s=530.889 path=./spec/lib/gitlab/throttle_spec.rb
+2026-10-20T07:49:47Z BEGIN timeout=1593s log=evidence/certify-rspec-g3/arm-f/007aff8231bde71e/seed-01.log
+2026-10-20T07:49:59Z END rc=1 elapsed_s=11.8 log=evidence/certify-rspec-g3/arm-g/00a05162a528756d.log
+2026-10-20T07:49:59Z SEED_TIMEOUT seconds=300 arm_g_elapsed_s=11.839 path=./spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb
+2026-10-20T07:49:59Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/00a05162a528756d/seed-01.log
+2026-10-20T07:50:04Z END rc=1 elapsed_s=5.6 log=evidence/certify-rspec-g3/arm-f/00a05162a528756d/seed-01.log
+2026-10-20T07:50:04Z ENV_SETUP_FAILURE count=1
+2026-10-20T07:50:04Z BEGIN timeout=300s log=evidence/certify-rspec-g3/arm-f/00a05162a528756d/seed-01.log
+2026-10-20T07:50:10Z END rc=1 elapsed_s=5.8 log=evidence/certify-rspec-g3/arm-f/00a05162a528756d/seed-01.log
+2026-10-20T07:50:10Z ENV_SETUP_FAILURE count=2
+2026-10-20T07:50:10Z STOP env setup failure limit
+2026-10-20T07:50:10Z FILE ./spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb G=False F=INCOMPLETE failures=0/0
+2026-10-20T07:50:10Z STOP budget before path=./spec/models/concerns/limitable_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/auth/atlassian/user_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/memory/reports/jemalloc_stats_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/github_import_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/api_authentication/token_resolver_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/models/review_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/markdown_cache/redis/store_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/ci/matching/build_matcher_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/ci/reports/terraform_reports_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/models/integrations/chat_message/issue_message_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/database/schema_cache_with_renamed_table_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/ci/build/artifacts/metadata/entry_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:50:10Z STOP budget before path=./spec/lib/gitlab/diff/position_tracer/image_strategy_spec.rb left_s=2635 reason=ENV_SETUP
+2026-10-20T07:51:02Z END rc=0 elapsed_s=75.0 log=evidence/certify-rspec-g3/arm-f/007aff8231bde71e/seed-01.log
+2026-10-20T07:51:02Z STOP budget path=./spec/lib/gitlab/throttle_spec.rb before seed=2 reason=ENV_SETUP
+2026-10-20T07:51:02Z FILE ./spec/lib/gitlab/throttle_spec.rb G=True F=INCOMPLETE failures=0/1
+2026-10-20T07:51:02Z exit_ok=False reason=ENV_SETUP wall=10736.3

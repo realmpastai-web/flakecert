@@ -1,0 +1,137 @@
+PASS	res.rspec_core	
+PASS	res.image_digest_is_cert	
+PASS	res.lock_is_cert	
+PASS	res.schedule_is_cert	{'order_seed': 0, 'srand_seed': 0}
+PASS	res.three_variants	['prefix', 'real_fix', 'wrong_fix']
+PASS	prefix.cart_spec_sha	
+PASS	prefix.rest_of_sample_unchanged	7/7 files
+PASS	prefix.plain_retry_20_of_20_pass	20/20
+PASS	prefix.cert_replay_3_runs	['failed', 'failed', 'failed']
+PASS	prefix.cert_replay_polluter_passes	
+PASS	prefix.cert_replay_identical	
+PASS	prefix.failure_is_the_leak	 expected: 100      got: 90  (compared using ==) 
+PASS	prefix.sig_equals_cert	8625d7e13427e1dd
+PASS	wrong_fix.cart_spec_sha	
+PASS	wrong_fix.rest_of_sample_unchanged	7/7 files
+PASS	wrong_fix.plain_retry_20_of_20_pass	20/20
+PASS	wrong_fix.cert_replay_3_runs	['passed', 'passed', 'passed']
+PASS	wrong_fix.cert_replay_polluter_passes	
+PASS	wrong_fix.cert_replay_identical	
+PASS	wrong_fix.sweep_0_99_victim_fail_seeds	39 failing, want 39
+PASS	wrong_fix.sweep_polluter_always_passes	
+PASS	real_fix.cart_spec_sha	
+PASS	real_fix.rest_of_sample_unchanged	7/7 files
+PASS	real_fix.plain_retry_20_of_20_pass	20/20
+PASS	real_fix.cert_replay_3_runs	['passed', 'passed', 'passed']
+PASS	real_fix.cert_replay_polluter_passes	
+PASS	real_fix.cert_replay_identical	
+PASS	real_fix.sweep_0_99_victim_fail_seeds	0 failing, want 0
+PASS	real_fix.sweep_polluter_always_passes	
+FAIL	verdict.certified	{'prefix': 'NOT_FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+PASS	verdict.plain_retry_cannot_tell_wrong_from_real	{'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['verdict.certified']
+mutant=mutant-wrong-fix-accepted exit=1
+PASS	res.rspec_core	
+PASS	res.image_digest_is_cert	
+PASS	res.lock_is_cert	
+PASS	res.schedule_is_cert	{'order_seed': 0, 'srand_seed': 0}
+PASS	res.three_variants	['prefix', 'real_fix', 'wrong_fix']
+PASS	prefix.cart_spec_sha	
+PASS	prefix.rest_of_sample_unchanged	7/7 files
+PASS	prefix.plain_retry_20_of_20_pass	20/20
+FAIL	prefix.cert_replay_3_runs	[]
+FAIL	prefix.cert_replay_polluter_passes	
+FAIL	prefix.cert_replay_identical	
+PASS	wrong_fix.cart_spec_sha	
+PASS	wrong_fix.rest_of_sample_unchanged	7/7 files
+PASS	wrong_fix.plain_retry_20_of_20_pass	20/20
+FAIL	wrong_fix.cert_replay_3_runs	[]
+FAIL	wrong_fix.cert_replay_polluter_passes	
+FAIL	wrong_fix.cert_replay_identical	
+PASS	wrong_fix.sweep_0_99_victim_fail_seeds	39 failing, want 39
+PASS	wrong_fix.sweep_polluter_always_passes	
+PASS	real_fix.cart_spec_sha	
+PASS	real_fix.rest_of_sample_unchanged	7/7 files
+PASS	real_fix.plain_retry_20_of_20_pass	20/20
+FAIL	real_fix.cert_replay_3_runs	[]
+FAIL	real_fix.cert_replay_polluter_passes	
+FAIL	real_fix.cert_replay_identical	
+PASS	real_fix.sweep_0_99_victim_fail_seeds	0 failing, want 0
+PASS	real_fix.sweep_polluter_always_passes	
+FAIL	verdict.certified	{'prefix': 'INCONSISTENT', 'wrong_fix': 'INCONSISTENT', 'real_fix': 'INCONSISTENT'}
+PASS	verdict.plain_retry_cannot_tell_wrong_from_real	{'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+INFO	certified={'prefix': 'INCONSISTENT', 'wrong_fix': 'INCONSISTENT', 'real_fix': 'INCONSISTENT'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['prefix.cert_replay_3_runs', 'prefix.cert_replay_polluter_passes', 'prefix.cert_replay_identical', 'wrong_fix.cert_replay_3_runs', 'wrong_fix.cert_replay_polluter_passes', 'wrong_fix.cert_replay_identical', 'real_fix.cert_replay_3_runs', 'real_fix.cert_replay_polluter_passes', 'real_fix.cert_replay_identical', 'verdict.certified']
+mutant=mutant-plain-retry-only exit=1
+PASS	res.rspec_core	
+PASS	res.image_digest_is_cert	
+PASS	res.lock_is_cert	
+FAIL	res.schedule_is_cert	{'order_seed': 1, 'srand_seed': 0}
+PASS	res.three_variants	['prefix', 'real_fix', 'wrong_fix']
+PASS	prefix.cart_spec_sha	
+PASS	prefix.rest_of_sample_unchanged	7/7 files
+PASS	prefix.plain_retry_20_of_20_pass	20/20
+PASS	prefix.cert_replay_3_runs	['failed', 'failed', 'failed']
+PASS	prefix.cert_replay_polluter_passes	
+PASS	prefix.cert_replay_identical	
+PASS	prefix.failure_is_the_leak	 expected: 100      got: 90  (compared using ==) 
+PASS	prefix.sig_equals_cert	8625d7e13427e1dd
+PASS	wrong_fix.cart_spec_sha	
+PASS	wrong_fix.rest_of_sample_unchanged	7/7 files
+PASS	wrong_fix.plain_retry_20_of_20_pass	20/20
+PASS	wrong_fix.cert_replay_3_runs	['failed', 'failed', 'failed']
+PASS	wrong_fix.cert_replay_polluter_passes	
+PASS	wrong_fix.cert_replay_identical	
+PASS	wrong_fix.failure_is_the_leak	 expected: 100      got: 90  (compared using ==) 
+PASS	wrong_fix.sweep_0_99_victim_fail_seeds	39 failing, want 39
+PASS	wrong_fix.sweep_polluter_always_passes	
+PASS	real_fix.cart_spec_sha	
+PASS	real_fix.rest_of_sample_unchanged	7/7 files
+PASS	real_fix.plain_retry_20_of_20_pass	20/20
+PASS	real_fix.cert_replay_3_runs	['passed', 'passed', 'passed']
+PASS	real_fix.cert_replay_polluter_passes	
+PASS	real_fix.cert_replay_identical	
+PASS	real_fix.sweep_0_99_victim_fail_seeds	0 failing, want 0
+PASS	real_fix.sweep_polluter_always_passes	
+PASS	verdict.certified	{'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'}
+PASS	verdict.plain_retry_cannot_tell_wrong_from_real	{'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['res.schedule_is_cert']
+mutant=mutant-schedule-drift exit=1
+PASS	res.rspec_core	
+PASS	res.image_digest_is_cert	
+PASS	res.lock_is_cert	
+PASS	res.schedule_is_cert	{'order_seed': 0, 'srand_seed': 0}
+PASS	res.three_variants	['prefix', 'real_fix', 'wrong_fix']
+PASS	prefix.cart_spec_sha	
+PASS	prefix.rest_of_sample_unchanged	7/7 files
+PASS	prefix.plain_retry_20_of_20_pass	20/20
+PASS	prefix.cert_replay_3_runs	['failed', 'failed', 'failed']
+PASS	prefix.cert_replay_polluter_passes	
+PASS	prefix.cert_replay_identical	
+PASS	prefix.failure_is_the_leak	 expected: 100      got: 90  (compared using ==) 
+PASS	prefix.sig_equals_cert	8625d7e13427e1dd
+PASS	wrong_fix.cart_spec_sha	
+PASS	wrong_fix.rest_of_sample_unchanged	7/7 files
+PASS	wrong_fix.plain_retry_20_of_20_pass	20/20
+PASS	wrong_fix.cert_replay_3_runs	['failed', 'failed', 'failed']
+PASS	wrong_fix.cert_replay_polluter_passes	
+PASS	wrong_fix.cert_replay_identical	
+PASS	wrong_fix.failure_is_the_leak	 expected: 100      got: 90  (compared using ==) 
+PASS	wrong_fix.sweep_0_99_victim_fail_seeds	39 failing, want 39
+PASS	wrong_fix.sweep_polluter_always_passes	
+PASS	real_fix.cart_spec_sha	
+FAIL	real_fix.rest_of_sample_unchanged	7/7 files
+PASS	real_fix.plain_retry_20_of_20_pass	20/20
+PASS	real_fix.cert_replay_3_runs	['passed', 'passed', 'passed']
+PASS	real_fix.cert_replay_polluter_passes	
+PASS	real_fix.cert_replay_identical	
+PASS	real_fix.sweep_0_99_victim_fail_seeds	0 failing, want 0
+PASS	real_fix.sweep_polluter_always_passes	
+PASS	verdict.certified	{'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'}
+PASS	verdict.plain_retry_cannot_tell_wrong_from_real	{'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['real_fix.rest_of_sample_unchanged']
+mutant=mutant-real-fix-edits-model exit=1
+exit=0

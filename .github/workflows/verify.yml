@@ -1,0 +1,78 @@
+name: verify
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - name: fetch pinned datadog-ci gem
+        run: bash scripts/fetch-inputs.sh
+      - name: verdict audit
+        run: |
+          cd inputs/flakecert-verdict-audit && sha256sum -c SHA256SUMS && python3 gate_verdict_audit.py | diff - gate-output.txt && cd -
+          make unit
+          make audit && diff audit/verdicts.json inputs/flakecert-verdict-audit/expected-audit.json
+          python3 inputs/flakecert-verdict-audit/gate_verdict_audit.py --report audit/verdicts.json
+          ! python3 inputs/flakecert-verdict-audit/gate_verdict_audit.py --report inputs/flakecert-verdict-audit/controls/mutant-approx.json
+      - name: csv sample
+        run: |
+          cd inputs/flakecert-csv-sample && sha256sum -c SHA256SUMS && python3 gate_csv_sample.py | diff - gate-output.txt && cd -
+          make audit-csv && python3 inputs/flakecert-csv-sample/gate_csv_sample.py --report audit/verdicts-csv.json --kind pup
+          make audit-csv-real && python3 inputs/flakecert-csv-sample/gate_csv_sample.py --report audit/verdicts-csv-real.json --kind real
+          ! python3 inputs/flakecert-csv-sample/gate_csv_sample.py --report inputs/flakecert-csv-sample/controls/mutant-file-order.json --kind pup
+      - name: freeze and verify committed logs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        # This job does not build the per-fixture images from `make envs`.
+        # Live replay is SKIP with pass null, not a 3/3 pass and not an N/3 mismatch.
+        run: make freeze && make verify REPLAY_SKIP=1
+      - name: queuetrail tests
+        run: |
+          python3 -m pip install pytest==9.1.1
+          make queuetrail-test
+          make queuetrail-rails-test
+      - name: atf20 gates
+        run: make atf20-gates
+
+  heavy:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: fetch pinned datadog-ci gem
+        run: bash scripts/fetch-inputs.sh
+      - name: heavy targets
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        # Full live replay after `make envs`. Do not set REPLAY_SKIP.
+        run: |
+          make freeze
+          make envs
+          make baseline
+          make flakecert
+          make comparator
+          make ledger
+          make verify
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: flakecert-evidence
+          path: |
+            ledger/
+            certs/
+            evidence/

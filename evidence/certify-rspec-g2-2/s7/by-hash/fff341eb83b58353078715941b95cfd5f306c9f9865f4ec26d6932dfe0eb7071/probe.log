@@ -1,0 +1,19 @@
++ phase=probe
++ seed=16
++ round=1
++ confirm=0
++ ids_n=84
++ ids_sha256=323e50d882eea6e9a033e9c7e54ef71101ed891696285399b0c0095ece105586
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/fff341eb83b58353078715941b95cfd5f306c9f9865f4ec26d6932dfe0eb7071/ids.txt
++ attempt=1
+elapsed_s=1.659
+[] ⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE TEST !!
+
+	* Exception: StandardError
+	* Message: logger is misconfigured
+	* From: message_expectation.rb:188
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+docker_exit=0

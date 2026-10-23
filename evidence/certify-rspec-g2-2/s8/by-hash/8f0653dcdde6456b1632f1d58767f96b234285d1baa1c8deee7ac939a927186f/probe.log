@@ -1,0 +1,14 @@
++ phase=probe
++ seed=14
++ round=2
++ confirm=0
++ ids_n=287
++ ids_sha256=0766f619414e3076a9a5dc4bb636cf9e6a453244860b7150d37969306fdcb6f7
++ ids_file=evidence/certify-rspec-g2-2/s8/by-hash/8f0653dcdde6456b1632f1d58767f96b234285d1baa1c8deee7ac939a927186f/ids.txt
++ attempt=1
+elapsed_s=3.771
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:124:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:124:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:100:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:100:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:246:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:246:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:271:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:271:in `block (3 levels) in <top (required)>'.
+docker_exit=0

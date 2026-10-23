@@ -1,0 +1,70 @@
+W, [2026-10-20T05:50:37.373100 #128993]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Test environment set up in 0.4134597800002666 seconds
+
+Ci::BuildTraceChunks::Fog
+  # order defined
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+  does not allow STI
+  #available?
+    when object storage is enabled
+      is expected to be truthy
+    when object storage is disabled
+      is expected to be falsy
+  #data
+    when data exists
+      returns the data
+    when data does not exist
+      returns nil
+  #set_data
+    when data exists
+      overwrites data
+    when data does not exist
+      sets new data
+      when using an S3 provider
+        creates a file with content_type application/octet-stream
+        when fog_attributes already includes a content_type
+          preserves the content_type from fog_attributes
+      when using a non-S3 provider
+        does not set a default content_type
+      when S3 server side encryption is enabled
+        creates a file with attributes
+  #append_data
+    appends ASCII data
+    appends UTF-8 data
+    when initial data is UTF-8
+      appends ASCII data
+  #delete_data
+    when data exists
+      deletes data
+    when data does not exist
+      does nothing
+  #size
+    when data exists
+      returns data bytesize correctly
+    when data does not exist
+      returns zero
+  #keys
+    returns keys
+  #connection
+    reuses a single connection across data store instances
+    builds the Fog connection only once
+    caches a distinct connection per credentials set and reuses it per set
+    when object storage is disabled
+      returns nil
+
+Finished in 24.94 seconds (files took 1 minute 4.45 seconds to load)
+23 examples, 0 failures
+
+[TEST PROF INFO] Time spent in factories: 00:14.115 (34.8% of total time)
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+/gitlab/app/models/concerns/integrations/base/integration.rb:67: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/models/work_items/widgets/start_and_due_date.rb:47: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/config/initializers/7_redis.rb:8: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/models/geo/container_repository_registry.rb:16: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/api/import_github_oauth_webhooks.rb:12: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/config.rb:97: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/cycle_analytics/summary/defaults.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.

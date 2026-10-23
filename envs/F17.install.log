@@ -1,0 +1,29 @@
+rung files dev-requirements.txt,tests/requirements.txt
+rung test_file tests/test_waf_assist.py
+rung python=3.11 start
+#10 0.172 FLAKECERT_INSTALL python 3.11.17
+#10 0.174 FLAKECERT_INSTALL files dev-requirements.txt,tests/requirements.txt
+#10 0.174 FLAKECERT_INSTALL pipenv no
+#10 0.174 FLAKECERT_INSTALL package yes
+#10 3.549 FLAKECERT_INSTALL req /opt/pristine/dev-requirements.txt
+#10 4.473 FLAKECERT_INSTALL req_fail_full /opt/pristine/dev-requirements.txt
+#10 4.473 FLAKECERT_INSTALL include -r docs/requirements.txt
+#10 9.577 FLAKECERT_INSTALL line_ok -r docs/requirements.txt
+#10 9.577 FLAKECERT_INSTALL include -r tests/requirements.txt
+#10 11.50 FLAKECERT_INSTALL line_ok -r tests/requirements.txt
+#10 12.24 FLAKECERT_INSTALL line_ok setuptools
+#10 14.39 FLAKECERT_INSTALL line_ok keyring
+#10 16.23 FLAKECERT_INSTALL line_ok twine
+#10 17.33 FLAKECERT_INSTALL line_ok requests
+#10 18.41 FLAKECERT_INSTALL line_ok pyyaml<5.3; python_version < '3.5'
+#10 19.56 FLAKECERT_INSTALL line_ok pyyaml; python_version >= '3.5'
+#10 20.63 FLAKECERT_INSTALL line_ok msgpack
+#10 20.63 FLAKECERT_INSTALL req /opt/pristine/tests/requirements.txt
+#10 21.44 FLAKECERT_INSTALL req_ok /opt/pristine/tests/requirements.txt
+#10 21.44 FLAKECERT_INSTALL package_begin
+#10 24.40 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#10 24.40 FLAKECERT_INSTALL pytest_pin none
+#10 25.71 FLAKECERT_INSTALL pytest_version 9.1.1
+rung python=3.11 build_exit=0
+collect nodes=10 matched=tests/test_waf_assist.py::testUsedWafTaskKeys
+rung python=3.11 result=PASS

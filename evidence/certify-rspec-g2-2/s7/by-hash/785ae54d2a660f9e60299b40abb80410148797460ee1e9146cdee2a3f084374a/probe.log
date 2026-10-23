@@ -1,0 +1,25 @@
++ phase=probe
++ seed=14
++ round=1
++ confirm=0
++ ids_n=1144
++ ids_sha256=2bff872483e0e5a65aa36e5d24f180e2468dcef3f974ca4f6e5d33f3103cad66
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/785ae54d2a660f9e60299b40abb80410148797460ee1e9146cdee2a3f084374a/ids.txt
++ attempt=1
+elapsed_s=8.695
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: already initialized constant #<Class:0x00007f880027ef68>::Axns::Calculate
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: previous definition of Calculate was here
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:124:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:124:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:100:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:100:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:246:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:246:in `block (3 levels) in <top (required)>'.
+WARNING: You're overriding a previous stub implementation of `on_exception`. Called from /src/spec/axn/core/additional_execution_context_spec.rb:271:in `block (3 levels) in <top (required)>'.. Called from /src/spec/axn/core/additional_execution_context_spec.rb:271:in `block (3 levels) in <top (required)>'.
+⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE LOGGING A RESET! COLLISION !!
+
+	* Exception: RuntimeError
+	* Message: logger exploded
+	* From: configurable_spec.rb:801
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+docker_exit=1

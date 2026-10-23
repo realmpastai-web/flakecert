@@ -1,0 +1,54 @@
+# source: flakecert main a75858b (= PR #8 head dff194a) evidence/dryrun-2026-10-19/rspec/F1-76eeb3f-r1.log
+b1018b2fc2e6718a4cc0e9c14149012d16422d12978b838fd2923928b5d6c923  evidence/dryrun-2026-10-19/rspec/F1-76eeb3f-r1.log
+# cmd: sed strip ANSI | awk top-level groups (blank line then column-0 name) | annotate spec files that write ConnectAPI @client
+144|Spaceship::ConnectAPI::BundleId
+148|Spaceship::ConnectAPI::Webhook
+158|Spaceship::TestFlight::TestInfo
+163|Spaceship::ConnectAPI::BuildBetaDetail
+167|Spaceship::Hashcash
+171|Spaceship::Tunes::Territory
+177|Spaceship::Portal::ProvisioningProfile
+183|Spaceship::ConnectAPI::BetaBuildMetric
+187|Spaceship::Tunes::SandboxTester
+197|Spaceship::Client
+210|Spaceship::ConnectAPI::Capabilities
+214|Spaceship::Tunes::Availability
+247|Spaceship::Tunes::IAPFamilies
+252|Spaceship::ConnectAPI::AppStoreVersionReleaseRequest
+256|Spaceship::ConnectAPI
+276|Spaceship::Portal::Persons
+280|Spaceship::Tunes::AppDetails
+288|Spaceship::ConnectAPI::BundleIdCapability
+292|Spaceship::ConnectAPI::PreReleaseVersion
+296|String
+304|Spaceship::Portal::ProvisioningProfile
+311|Spaceship::ConnectAPI::Users::Client
+339|Spaceship::ConnectAPI::Profile
+343|Spaceship::Tunes::IAPList
+350|Spaceship::ConnectAPI::Provisioning::Client
+380|Spaceship::ConnectAPI::BuildDelivery
+384|Spaceship::Tunes::Members
+# two_step contexts, F1 r1 and F2 r1:
+F1-76eeb3f-r1
+1409:    when running non-interactive and force 2FA to be interactive only
+1411:    when running interactive
+1413:    when running non-interactive
+1415:    when interactive mode is not set
+F2-148c1c9-r1
+1409:    when running non-interactive and force 2FA to be interactive only
+1411:    when running interactive
+1413:    when running non-interactive
+1415:    when interactive mode is not set
+# F1 r1 failure headers for the 4 TypeError victims:
+  15) Spaceship::ConnectAPI::BuildBetaDetail#Spaceship::ConnectAPI #get_build_beta_details ::         You need to instantiate this module with test_flight_request_client
+  16) Spaceship::ConnectAPI::BetaBuildMetric#Spaceship::ConnectAPI #get_beta_build_metrics ::         You need to instantiate this module with test_flight_request_client
+  17) Spaceship::ConnectAPI::AppStoreVersionReleaseRequest#Spaceship::ConnectAPI #post_app_store_version_release_request ::         You need to instantiate this module with tunes_request_client
+  18) Spaceship::ConnectAPI::BuildDelivery#Spaceship::ConnectAPI #get_build_deliveries ::         You need to instantiate this module with test_flight_request_client
+# F4 q4.log rows (OD ids)
+15	./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5	pass/pass/pass	none	y	pass
+16	./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5	pass/pass/pass	none	y	pass
+17	./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5	pass/pass/pass	none	y	pass
+18	./spaceship/spec/connect_api/models/build_delivery_spec.rb:5	pass/pass/pass	none	y	pass
+19	./spaceship/spec/portal/certificate_spec.rb:111	pass/pass/pass	none	y	pass
+31	./spaceship/spec/two_step_or_factor_client_spec.rb:76	pass/pass/pass	none	y	fail
+3823ad9ced469e5cff45453b6cd550deff8217a15924ee4021628cc5e5999b28  evidence/dryrun-2026-10-19-f4/q4.log

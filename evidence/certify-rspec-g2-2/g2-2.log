@@ -1,0 +1,193 @@
+image_id sha256:75d96121b9c7cad7a3f00037beaf3e80596aea21b14a34dff24a0e8760fef6e6
+image_digest ruby@sha256:0a5633bcfe247d312edbc1e1c4a048ae3f5a99bea482af2d484b036c09cbd5a4
+docker_server 26.1.5+dfsg1
+ruby 3.3.12 (2026-07-16 revision 0581089df9) [x86_64-linux]
+Bundler version 2.5.6
+rspec-core 3.13.2
+wall_s 699.421
+
+RESIDUAL_SEEDS ./spec/axn/strategies_spec.rb[1:1:5:1] 16,24,26,27
+RESIDUAL_SEEDS ./spec/axn/tools/registry_spec.rb[1:5:7] 3,7,8,13,14,15,20,24,25,26,29,30
+RESIDUAL_SEEDS ./spec/axn/tools/registry_spec.rb[1:5:6] 3,7,8,13,14,15,20,24,25,26,29,30
+RESIDUAL_SEEDS ./spec/axn/tools/registry_spec.rb[1:5:3] 3,7,8,13,14,15,20,24,25,26,29,30
+RESIDUAL_SEEDS ./spec/axn/tools/registry_spec.rb[1:4:2] 3,4,7,14,16,18,19,23,24,28,30
+RESIDUAL_SEEDS ./spec/axn/async/registry_spec.rb[1:1:5:1]
+SEED 16 ROUND 1 SET ./spec/axn/core/use_strategy_spec.rb[1:1:3] PROBES 20 STATUS CAP_REACHED
+SEED 16 ROUND 2 SET ./spec/axn/core/use_strategy_spec.rb[1:1:1] PROBES 17 STATUS CAP_REACHED
+SEED 16 ROUND 3 SET ./spec/axn/core/use_strategy_spec.rb[1:1:2] PROBES 17 STATUS CAP_REACHED
+SEED 24 ROUND 1 SET ./spec/axn/strategies_spec.rb[1:3:1] PROBES 25 STATUS EXPLAINED
+SEED 24 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 26 ROUND 1 SET ./spec/axn/core/use_strategy_spec.rb[1:1:2] PROBES 20 STATUS CAP_REACHED
+SEED 26 ROUND 2 SET ./spec/axn/core/use_strategy_spec.rb[1:1:1] PROBES 18 STATUS CAP_REACHED
+SEED 26 ROUND 3 SET ./spec/axn/core/use_strategy_spec.rb[1:1:3] PROBES 17 STATUS CAP_REACHED
+SEED 27 ROUND 1 SET ./spec/axn/strategies_spec.rb[1:3:1] PROBES 29 STATUS EXPLAINED
+SEED 27 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 3 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 23 STATUS CAP_REACHED
+SEED 3 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS CAP_REACHED
+SEED 3 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 19 STATUS CAP_REACHED
+SEED 7 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 26 STATUS CAP_REACHED
+SEED 7 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 23 STATUS CAP_REACHED
+SEED 7 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 24 STATUS CAP_REACHED
+SEED 8 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS EXPLAINED
+SEED 8 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 19 STATUS EXPLAINED
+SEED 8 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 13 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 26 STATUS EXPLAINED
+SEED 13 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 24 STATUS EXPLAINED
+SEED 13 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 14 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 30 STATUS EXPLAINED
+SEED 14 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 24 STATUS EXPLAINED
+SEED 14 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 15 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 27 STATUS EXPLAINED
+SEED 15 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 25 STATUS EXPLAINED
+SEED 15 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 20 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 23 STATUS EXPLAINED
+SEED 20 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 24 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 22 STATUS EXPLAINED
+SEED 24 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 25 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 23 STATUS CAP_REACHED
+SEED 25 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 18 STATUS CAP_REACHED
+SEED 25 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 18 STATUS CAP_REACHED
+SEED 26 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 23 STATUS CAP_REACHED
+SEED 26 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS CAP_REACHED
+SEED 26 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 21 STATUS CAP_REACHED
+SEED 29 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 23 STATUS CAP_REACHED
+SEED 29 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 18 STATUS CAP_REACHED
+SEED 29 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 18 STATUS CAP_REACHED
+SEED 30 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 26 STATUS EXPLAINED
+SEED 30 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 25 STATUS EXPLAINED
+SEED 30 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 3 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 24 STATUS CAP_REACHED
+SEED 3 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS CAP_REACHED
+SEED 3 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 22 STATUS CAP_REACHED
+SEED 7 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 26 STATUS CAP_REACHED
+SEED 7 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 22 STATUS CAP_REACHED
+SEED 7 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 24 STATUS CAP_REACHED
+SEED 8 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 19 STATUS EXPLAINED
+SEED 8 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 18 STATUS EXPLAINED
+SEED 8 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 13 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 26 STATUS EXPLAINED
+SEED 13 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 24 STATUS EXPLAINED
+SEED 13 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 14 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 26 STATUS EXPLAINED
+SEED 14 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 25 STATUS EXPLAINED
+SEED 14 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 15 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 26 STATUS EXPLAINED
+SEED 15 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 24 STATUS EXPLAINED
+SEED 15 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 20 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 27 STATUS EXPLAINED
+SEED 20 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 24 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 20 STATUS EXPLAINED
+SEED 24 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 25 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 20 STATUS CAP_REACHED
+SEED 25 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 21 STATUS CAP_REACHED
+SEED 25 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 17 STATUS CAP_REACHED
+SEED 26 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 23 STATUS CAP_REACHED
+SEED 26 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS CAP_REACHED
+SEED 26 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 21 STATUS CAP_REACHED
+SEED 29 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 23 STATUS CAP_REACHED
+SEED 29 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS CAP_REACHED
+SEED 29 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 21 STATUS CAP_REACHED
+SEED 30 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 28 STATUS EXPLAINED
+SEED 30 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 23 STATUS EXPLAINED
+SEED 30 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 3 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 23 STATUS CAP_REACHED
+SEED 3 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS CAP_REACHED
+SEED 3 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 21 STATUS CAP_REACHED
+SEED 7 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 24 STATUS CAP_REACHED
+SEED 7 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 23 STATUS CAP_REACHED
+SEED 7 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 26 STATUS CAP_REACHED
+SEED 8 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS EXPLAINED
+SEED 8 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 16 STATUS EXPLAINED
+SEED 8 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 13 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 27 STATUS EXPLAINED
+SEED 13 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 23 STATUS EXPLAINED
+SEED 13 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 14 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 27 STATUS EXPLAINED
+SEED 14 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:12:1] PROBES 24 STATUS EXPLAINED
+SEED 14 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 15 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 27 STATUS EXPLAINED
+SEED 15 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 23 STATUS EXPLAINED
+SEED 15 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 20 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 24 STATUS EXPLAINED
+SEED 20 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 24 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 21 STATUS EXPLAINED
+SEED 24 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 25 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 19 STATUS CAP_REACHED
+SEED 25 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 20 STATUS CAP_REACHED
+SEED 25 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 21 STATUS CAP_REACHED
+SEED 26 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 26 STATUS CAP_REACHED
+SEED 26 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 20 STATUS CAP_REACHED
+SEED 26 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 21 STATUS CAP_REACHED
+SEED 29 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 24 STATUS CAP_REACHED
+SEED 29 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 18 STATUS CAP_REACHED
+SEED 29 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 19 STATUS CAP_REACHED
+SEED 30 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 28 STATUS EXPLAINED
+SEED 30 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 22 STATUS EXPLAINED
+SEED 30 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 3 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 26 STATUS EXPLAINED
+SEED 3 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 20 STATUS EXPLAINED
+SEED 3 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 4 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 29 STATUS EXPLAINED
+SEED 4 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 22 STATUS EXPLAINED
+SEED 4 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 7 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 28 STATUS EXPLAINED
+SEED 7 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 26 STATUS EXPLAINED
+SEED 7 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 14 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 28 STATUS EXPLAINED
+SEED 14 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 16 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 25 STATUS EXPLAINED
+SEED 16 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 18 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 22 STATUS EXPLAINED
+SEED 18 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 20 STATUS EXPLAINED
+SEED 18 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 19 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:11:1] PROBES 24 STATUS EXPLAINED
+SEED 19 ROUND 2 SET - PROBES 1 STATUS EXPLAINED
+SEED 23 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 25 STATUS CAP_REACHED
+SEED 23 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 23 STATUS CAP_REACHED
+SEED 23 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 23 STATUS CAP_REACHED
+SEED 24 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:7:1] PROBES 21 STATUS EXPLAINED
+SEED 24 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:11:1] PROBES 21 STATUS EXPLAINED
+SEED 24 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+SEED 28 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:11:1] PROBES 26 STATUS CAP_REACHED
+SEED 28 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:13:1] PROBES 24 STATUS CAP_REACHED
+SEED 28 ROUND 3 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 25 STATUS CAP_REACHED
+SEED 30 ROUND 1 SET ./spec/axn/tools/registry_spec.rb[1:8:1] PROBES 26 STATUS EXPLAINED
+SEED 30 ROUND 2 SET ./spec/axn/tools/registry_spec.rb[1:8:2] PROBES 24 STATUS EXPLAINED
+SEED 30 ROUND 3 SET - PROBES 1 STATUS EXPLAINED
+NEW_POLLUTERS ./spec/axn/core/use_strategy_spec.rb[1:1:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/core/use_strategy_spec.rb[1:1:2] CERTIFIED
+NEW_POLLUTERS ./spec/axn/core/use_strategy_spec.rb[1:1:3] CERTIFIED
+NEW_POLLUTERS ./spec/axn/strategies_spec.rb[1:3:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:12:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:13:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:7:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:8:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:8:2] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:12:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:13:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:7:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:8:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:8:2] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:12:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:13:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:7:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:8:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:8:2] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:11:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:13:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:7:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:8:1] CERTIFIED
+NEW_POLLUTERS ./spec/axn/tools/registry_spec.rb[1:8:2] CERTIFIED
+G2_LABELS_UNCHANGED, EXIT_OK
+ACCEPTANCE_1 True
+ACCEPTANCE_2 True
+ACCEPTANCE_3 True
+ACCEPTANCE_4 True
+GO True
+===== acceptance 1 grep =====
++ grep -RInE 'custom|ErrorHandlerMiddleware|on_exception|RegistryFixtures|clear!|use_strategy|strategies_spec' tools/certify_rspec
+
+grep_exit=1
++ grep -nE 'custom|ErrorHandlerMiddleware|on_exception|RegistryFixtures|clear!|use_strategy|strategies_spec' evidence/certify-rspec-g2-2/invocation.txt
+
+grep_exit=1

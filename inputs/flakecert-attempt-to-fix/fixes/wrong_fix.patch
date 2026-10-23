@@ -1,0 +1,11 @@
+--- cart_spec.prefix.rb	2026-10-18 14:41:27.272000000 +0000
++++ cart_spec.wrong_fix.rb	2026-10-18 14:41:27.288000000 +0000
+@@ -1,6 +1,8 @@
+ require "spec_helper"
+ 
+ RSpec.describe Cart do
++  before(:all) { Cart.default_discount = nil }      # plausible fix: resets once per group, not per example
++
+   it "charges full price by default" do            # id ./spec/models/cart_spec.rb[1:1]  (victim)
+     expect(Cart.new(100).total).to eq(100)
+   end

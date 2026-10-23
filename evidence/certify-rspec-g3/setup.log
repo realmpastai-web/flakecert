@@ -1,0 +1,12 @@
+RAKE_START 2026-10-19T15:30:11Z
+Created database 'gitlabhq_test'
+Created database 'gitlabhq_test_ci'
+Created database 'gitlabhq_test_sec'
+W, [2026-10-19T15:31:27.828636 #59203]  WARN -- : Failed lock_writes, because merge_request_diff_commits_archived raised an error. Error: PG::UndefinedTable: ERROR:  relation "merge_request_diff_commits_archived" does not exist
+
+W, [2026-10-19T15:31:39.701313 #59203]  WARN -- : Failed lock_writes, because merge_request_diff_commits_archived raised an error. Error: PG::UndefinedTable: ERROR:  relation "merge_request_diff_commits_archived" does not exist
+
+RAKE_OK 2026-10-19T15:32:02Z
+SELECT pg_catalog.set_config('search_path', '', false);
+CREATE DATABASE praefect_test ENCODING 'UTF8';
+DB2_DONE 2026-10-19T15:32:02Z

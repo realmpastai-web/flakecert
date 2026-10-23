@@ -1,0 +1,38 @@
+===== F4-23-r3 2026-10-19T06:11:19Z =====
++ timeout 420 docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-dryrun-1019/src/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -w /src flakecert-dryrun-fastlane:ruby31 bash -lc 'ruby -v; bundle -v; bundle exec rspec "$1"; ec=$?; echo RSPEC_EXIT:$ec; exit $ec' bash ./spaceship/spec/connect_api/models/device_spec.rb:62
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:locations=>{"./spaceship/spec/connect_api/models/device_spec.rb"=>[62]}}
+
+Spaceship::ConnectAPI::Device
+  #client
+    #disable an existing disabled udid (FAILED - 1)
+
+Failures:
+
+  1) Spaceship::ConnectAPI::Device#client #disable an existing disabled udid
+     Failure/Error: existing_device = Spaceship::ConnectAPI::Device.disable(udid)
+
+     TypeError:
+       You need to instantiate this module with provisioning_request_client
+     # ./spaceship/lib/spaceship/connect_api/provisioning/provisioning.rb:17:in `provisioning_request_client'
+     # ./spaceship/lib/spaceship/connect_api/provisioning/provisioning.rb:171:in `get_devices'
+     # ./spaceship/lib/spaceship/connect_api/models/device.rb:58:in `all'
+     # ./spaceship/lib/spaceship/connect_api/models/device.rb:148:in `find_by_udid'
+     # ./spaceship/lib/spaceship/connect_api/models/device.rb:181:in `modify'
+     # ./spaceship/lib/spaceship/connect_api/models/device.rb:204:in `disable'
+     # ./spaceship/spec/connect_api/models/device_spec.rb:64:in `block (3 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.20152 seconds (files took 1.48 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:62 # Spaceship::ConnectAPI::Device#client #disable an existing disabled udid
+
+RSPEC_EXIT:1
+docker_exit=1

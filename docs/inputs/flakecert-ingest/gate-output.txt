@@ -1,0 +1,58 @@
+PASS	pytest-junit.G1.outcomes	pytest-junit-seed1.xml: flaky=failed rerun=failed | pytest-junit-seed0.xml: flaky=passed; deterministic fails in all 3 -> same-commit flip observable
+PASS	pytest-junit.G2.test_identity	present (expected present)
+PASS	pytest-junit.G2.file	MISSING (expected missing)
+PASS	pytest-junit.G2.line	MISSING (expected missing)
+PASS	pytest-junit.G2.failure_text	present (expected present)
+PASS	pytest-junit.G2.duration	present (expected present)
+PASS	pytest-junit.G2.commit_sha	MISSING (expected missing)
+PASS	pytest-junit.G2.seed	MISSING (expected missing)
+PASS	pytest-junit.G2.image_digest	MISSING (expected missing)
+PASS	pytest-junit.G2.dep_lock_hash	MISSING (expected missing)
+PASS	pytest-junit.G2.failure_sig	MISSING (expected missing)
+PASS	pytest-junit.G2.toolchain_version	MISSING (expected missing)
+PASS	pytest-junit.G3.sig_stable	flaky failure raw-text sha equal across same-seed reruns: False; normalized sig equal: True; sig=68049fc125096ab2; != deterministic sig
+PASS	jest-junit.G1.outcomes	jest-junit-seed1.xml: flaky=failed rerun=failed | jest-junit-seed2.xml: flaky=passed; deterministic fails in all 3 -> same-commit flip observable
+PASS	jest-junit.G2.test_identity	present (expected present)
+PASS	jest-junit.G2.file	present (expected present)
+PASS	jest-junit.G2.line	MISSING (expected missing)
+PASS	jest-junit.G2.failure_text	present (expected present)
+PASS	jest-junit.G2.duration	present (expected present)
+PASS	jest-junit.G2.commit_sha	MISSING (expected missing)
+PASS	jest-junit.G2.seed	MISSING (expected missing)
+PASS	jest-junit.G2.image_digest	MISSING (expected missing)
+PASS	jest-junit.G2.dep_lock_hash	MISSING (expected missing)
+PASS	jest-junit.G2.failure_sig	MISSING (expected missing)
+PASS	jest-junit.G2.toolchain_version	MISSING (expected missing)
+PASS	jest-junit.G3.sig_stable	flaky failure raw-text sha equal across same-seed reruns: True; normalized sig equal: True; sig=9ae717a8c3632a89; != deterministic sig
+PASS	gotestsum-junit.G1.outcomes	gotestsum-junit-seed2.xml: flaky=failed rerun=failed | gotestsum-junit-seed0.xml: flaky=passed; deterministic fails in all 3 -> same-commit flip observable
+PASS	gotestsum-junit.G2.test_identity	present (expected present)
+PASS	gotestsum-junit.G2.file	MISSING (expected missing)
+PASS	gotestsum-junit.G2.line	MISSING (expected missing)
+PASS	gotestsum-junit.G2.failure_text	present (expected present)
+PASS	gotestsum-junit.G2.duration	present (expected present)
+PASS	gotestsum-junit.G2.commit_sha	MISSING (expected missing)
+PASS	gotestsum-junit.G2.seed	MISSING (expected missing)
+PASS	gotestsum-junit.G2.image_digest	MISSING (expected missing)
+PASS	gotestsum-junit.G2.dep_lock_hash	MISSING (expected missing)
+PASS	gotestsum-junit.G2.failure_sig	MISSING (expected missing)
+PASS	gotestsum-junit.G2.toolchain_version	present (expected present)
+PASS	gotestsum-junit.G3.sig_stable	flaky failure raw-text sha equal across same-seed reruns: True; normalized sig equal: True; sig=c3a2a44cde5fb1c9; != deterministic sig
+PASS	buildkite-collector-json.G1.outcomes	buildkite-collector-seed1.json: flaky=failed rerun=failed | buildkite-collector-seed0.json: flaky=passed; deterministic fails in all 3 -> same-commit flip observable
+PASS	buildkite-collector-json.G2.test_identity	present (expected present)
+PASS	buildkite-collector-json.G2.file	present (expected present)
+PASS	buildkite-collector-json.G2.line	present (expected present)
+PASS	buildkite-collector-json.G2.failure_text	present (expected present)
+PASS	buildkite-collector-json.G2.duration	present (expected present)
+PASS	buildkite-collector-json.G2.commit_sha	MISSING (expected missing)
+PASS	buildkite-collector-json.G2.seed	MISSING (expected missing)
+PASS	buildkite-collector-json.G2.image_digest	MISSING (expected missing)
+PASS	buildkite-collector-json.G2.dep_lock_hash	MISSING (expected missing)
+PASS	buildkite-collector-json.G2.failure_sig	MISSING (expected missing)
+PASS	buildkite-collector-json.G2.toolchain_version	MISSING (expected missing)
+PASS	buildkite-collector-json.G3.sig_stable	flaky failure raw-text sha equal across same-seed reruns: False; normalized sig equal: True; sig=68049fc125096ab2; != deterministic sig
+PASS	collector.G4.local_json_drops_run_env	--json writes payload['data'] only; run_env (commit_sha, branch, CI) exists only in the uploaded payload (payload.py "run_env": self.run_env.as_json())
+PASS	collector.G4.upload_payload_keys	upload = {format, run_env, data[, tags]}
+PASS	collector.G4.ci_detection	Buildkite + CircleCI -> commit_sha set; GitLab env -> CI=generic, no commit_sha (run_env.py has no GitLab detector)
+PASS	collector.G4.id_not_stable	per-execution id is a fresh uuid4 each run, so it can't key a test; use scope::name (or file_name+name)
+PASS	jest.G4.identity_quirk	jest-junit 16 defaults: testsuite name="undefined", testcase names have a leading space with no describe(); ingest must strip, and key on file+name
+VERDICT ingest: JUnit/collector output gives identity, outcome, failure text and duration; the cert's sha, seed, image_digest, pip_freeze_sha and sig must come from FlakeCert's own run (or CI env), not the reports

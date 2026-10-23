@@ -1,0 +1,67 @@
+W, [2026-10-19T17:29:46.304833 #104632]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Randomized with seed 9
+
+Test environment set up in 0.31322131900378736 seconds
+
+Board
+  # order random
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+  does not allow STI
+  validations
+    validates name length is at most 255 characters when name is changed
+    is expected to validate that :project cannot be empty/falsy
+    allows names up to 255 characters
+    is expected to validate that :name cannot be empty/falsy
+    group and project mutually exclusive
+      when project is not present
+        is expected not to validate that :group is empty/falsy
+      when project is present
+        is expected to validate that :group is empty/falsy, producing a custom validation error on failure
+  #disabled_for?
+    for project board
+      behaves like board disabled_for?
+        when current user cannot create non backlog issues
+          is expected to equal true
+        when user can create backlog issues
+          is expected to equal false
+          when block_issue_repositioning is enabled
+            is expected to equal true
+    for group board
+      behaves like board disabled_for?
+        when current user cannot create non backlog issues
+          is expected to equal true
+        when user can create backlog issues
+          is expected to equal false
+          when block_issue_repositioning is enabled
+            is expected to equal true
+  #order_by_name_asc
+    returns in case-insensitive alphabetical order and then by ascending id
+  constants
+    is expected to be a kind of Integer
+  #first_board
+    return the first case-insensitive alphabetical board as a relation
+    raises an error when find is done on a non-existent record
+  relationships
+    is expected to belong to project required: false
+    is expected to have many lists order => {:list_type=>:asc, :position=>:asc} dependent => delete_all inverse_of => board
+    is expected to have many destroyable_lists order => {:list_type=>:asc, :position=>:asc} inverse_of => board
+
+Finished in 15.6 seconds (files took 1 minute 0.02 seconds to load)
+20 examples, 0 failures
+
+Randomized with seed 9
+
+[TEST PROF INFO] Time spent in factories: 00:06.807 (22.18% of total time)
+LABKIT_LOGGING_OFFENSE: {"callsite":"app/services/users/refresh_authorized_projects_service.rb","lineno":74,"deprecated_field":"user_id","standard_field":"gl_user_id","logger_class":"Gitlab::AppJsonLogger"}
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+/gitlab/app/models/concerns/integrations/base/integration.rb:67: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/models/work_items/widgets/start_and_due_date.rb:47: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/config/initializers/7_redis.rb:8: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/models/geo/container_repository_registry.rb:16: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/api/import_github_oauth_webhooks.rb:12: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/config.rb:97: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/cycle_analytics/summary/defaults.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.

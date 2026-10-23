@@ -1,0 +1,872 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "43798e9482273e1c4deab048b925c9cde68ebc85-dirty"
+  },
+  "repo": "fastlane/fastlane",
+  "base": {
+    "commit": "76eeb3f9352a657fd979ae00e89e49a388729e30",
+    "tarball_sha256": "078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa"
+  },
+  "head": {
+    "commit": "148c1c9b4c041b1659ea633f2632dd47eef8cb04",
+    "tarball_sha256": "db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5"
+  },
+  "image_id": "sha256:1f3248c0b71fb38ce02d05bc3cee8da5257792360158a660b83518c8cb827e63",
+  "ruby": "ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]",
+  "bundler": "Bundler version 2.6.9",
+  "rspec_core": "3.12.2",
+  "gemfile_lock_sha256": {
+    "base": "26645914f0dfa289ce50992aebfa8e750dadd987007de63d9cc27c8621d10053",
+    "head": "26645914f0dfa289ce50992aebfa8e750dadd987007de63d9cc27c8621d10053"
+  },
+  "seed": 48174,
+  "victim_id": "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+  "victim_location": "./spaceship/spec/two_step_or_factor_client_spec.rb:76",
+  "polluter_ids": [
+    "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+  ],
+  "minimal_reproduction_command": "rspec './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1,1:2:3:1]' --no-color --seed 48174",
+  "commands": {
+    "A": "rspec --seed 48174 './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]' './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]'",
+    "B": "rspec './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]'",
+    "C": "rspec --order defined './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]' './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]'"
+  },
+  "runs": {
+    "base": {
+      "A": [
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RuntimeError",
+          "first_error_message_line": "2FA can only be performed in interactive mode",
+          "failed_ids": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "10dd1ef534f610e44dc7ee666087008c6892572ca9c87b16b5f4652152e027ec",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r1.log",
+          "elapsed_s": 2.655,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RuntimeError",
+          "first_error_message_line": "2FA can only be performed in interactive mode",
+          "failed_ids": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "8b3c7b252e8a591af9eada3b7962c9d4433470221315a5c329040ff4aef8cc44",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r2.log",
+          "elapsed_s": 3.263,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RuntimeError",
+          "first_error_message_line": "2FA can only be performed in interactive mode",
+          "failed_ids": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "b7b5575bac83f8ea606831a23fbf5a6050c2092bec3a2c7052d2fa4ab6e60610",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r3.log",
+          "elapsed_s": 2.525,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r3.json",
+          "tree_side": "base"
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "b9d3736bb32cda87b27a39b09da28986479e9594c05263f06cc42253cf568b44",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r1.log",
+          "elapsed_s": 3.124,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "356b233960ed2d24503039fc82cb0719505c37267514b22f7e9c52ca1860c606",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r2.log",
+          "elapsed_s": 2.799,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "f37daae8b37ecfe639413838530a6e752dcca29ea9a0d556a5bde04f08e09e40",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r3.log",
+          "elapsed_s": 2.754,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r3.json",
+          "tree_side": "base"
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "e0013a815e694e81446b9d21f3ee489c598ba148ada8eb784b33023f27ccecb2",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r1.log",
+          "elapsed_s": 3.117,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "3b18741c4611142f859d15ab2cde03fc58bb04db9f443d97012a9a34cfa32439",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r2.log",
+          "elapsed_s": 2.708,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "679024352b0d8456e50e984a856e00ff4b64524361e2a29fe0cf91ef930dfd95",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r3.log",
+          "elapsed_s": 2.536,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r3.json",
+          "tree_side": "base"
+        }
+      ]
+    },
+    "head": {
+      "A": [
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RuntimeError",
+          "first_error_message_line": "2FA can only be performed in interactive mode",
+          "failed_ids": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "7773a2eba02a062d4ec1732e22ce0ef9828510a7321c8c35933a1630299b6152",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r1.log",
+          "elapsed_s": 2.717,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RuntimeError",
+          "first_error_message_line": "2FA can only be performed in interactive mode",
+          "failed_ids": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "db81a088aa60164b98fbde622d55668978f9a7280be6c226f8b6316ccfc2255e",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r2.log",
+          "elapsed_s": 3.283,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RuntimeError",
+          "first_error_message_line": "2FA can only be performed in interactive mode",
+          "failed_ids": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "ee49423fb5a4b1649ec20f11ad5d7d4ca8b6ba1ef366faf860743420384edc4f",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r3.log",
+          "elapsed_s": 2.554,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r3.json",
+          "tree_side": "head"
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "26aab848d40211ce14ec290e5fbaf39848a33737dbae2a1ca7d4e653fad995dc",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r1.log",
+          "elapsed_s": 2.537,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "4307adc5bf53b83885bcf9bd7060dfaa3fb5af661e7610ec62bd4815d210bbc0",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r2.log",
+          "elapsed_s": 2.815,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "ce08bed9e3d320374e6973143c96632a53b3b494e823ab5efee15f0766fca867",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r3.log",
+          "elapsed_s": 2.766,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r3.json",
+          "tree_side": "head"
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "30a681ed837dd605815f55ccf09aee319fe30d0dc8d623359a6afcb55fbc2af7",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r1.log",
+          "elapsed_s": 2.698,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "6a451b7c9474e50a85063c2ade5b86452846174d4c423ac19f349429330a672b",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r2.log",
+          "elapsed_s": 2.719,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "c5c9dbb624fe5c3374fec028e354de6929603bf58fbb1e52e4bd52827f9aff07",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r3.log",
+          "elapsed_s": 2.888,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r3.json",
+          "tree_side": "head"
+        }
+      ]
+    }
+  },
+  "verdicts": {
+    "base": "NOT_FIXED",
+    "head": "NOT_FIXED"
+  },
+  "plain_retry_verdict": {
+    "base": "FIXED",
+    "head": "FIXED"
+  },
+  "rep_disagreement": false,
+  "c_passes": true,
+  "label": "CONTROL",
+  "execution": {
+    "mode": "docker",
+    "image": "flakecert-dryrun-fastlane:ruby31",
+    "trees": {
+      "base": "/tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30",
+      "head": "/tmp/flakecert-g1-1019/work/extract-head/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04"
+    },
+    "timeout_s": 240,
+    "exec_argv": {
+      "base": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-76eeb3f-C-r3.json"
+          ]
+        ]
+      },
+      "head": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+            "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-C-r3.json"
+          ]
+        ]
+      }
+    }
+  }
+}

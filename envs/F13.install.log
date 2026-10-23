@@ -1,0 +1,34 @@
+rung files requirements.txt,requirements_dev.txt
+rung test_file eppy/tests/test_modeleditor.py
+rung python=3.11 start
+#9 0.231 FLAKECERT_INSTALL python 3.11.17
+#9 0.236 FLAKECERT_INSTALL files requirements.txt,requirements_dev.txt
+#9 0.236 FLAKECERT_INSTALL pipenv no
+#9 0.236 FLAKECERT_INSTALL package yes
+#9 3.882 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 13.22 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#9 13.22 FLAKECERT_INSTALL req /opt/pristine/requirements_dev.txt
+#9 28.94 FLAKECERT_INSTALL req_ok /opt/pristine/requirements_dev.txt
+#9 28.94 FLAKECERT_INSTALL package_begin
+#9 34.35 FLAKECERT_INSTALL package_ok no-deps
+#9 34.61 FLAKECERT_INSTALL pytest_pin 3.4.2
+#9 36.67 FLAKECERT_INSTALL pytest_import_fail
+36.67 FLAKECERT_INSTALL pytest_import_fail
+rung python=3.11 build_exit=1
+rung python=3.11 result=FAIL build
+rung python=3.9 start
+#10 0.156 FLAKECERT_INSTALL python 3.9.25
+#10 0.158 FLAKECERT_INSTALL files requirements.txt,requirements_dev.txt
+#10 0.158 FLAKECERT_INSTALL pipenv no
+#10 0.158 FLAKECERT_INSTALL package yes
+#10 4.820 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#10 11.44 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#10 11.44 FLAKECERT_INSTALL req /opt/pristine/requirements_dev.txt
+#10 24.43 FLAKECERT_INSTALL req_ok /opt/pristine/requirements_dev.txt
+#10 24.43 FLAKECERT_INSTALL package_begin
+#10 26.92 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#10 27.17 FLAKECERT_INSTALL pytest_pin 3.4.2
+#10 30.44 FLAKECERT_INSTALL pytest_version 3.4.2
+rung python=3.9 build_exit=0
+collect nodes=22 matched=eppy/tests/test_modeleditor.py::test_initread
+rung python=3.9 result=PASS

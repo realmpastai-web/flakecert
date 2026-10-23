@@ -1,0 +1,24 @@
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+.env
+*.log.partial
+envs/context/
+envs/rspec/install.log
+*.tar
+.DS_Store
+ingest/
+evidence/offline/
+audit/
+
+# QueueTrail: unpacked gem bytes stay out of git; the .gem files are the artifact.
+inputs/rea-brief-test-queue/unpack/
+inputs/rea-brief-test-queue/HOLDOUT-QT.txt
+inputs/rea-brief-rails-parallel/cited/rea-lib/
+inputs/rea-brief-rails-parallel/HOLDOUT-QTR.txt
+/queuetrail/
+atf20/out/
+

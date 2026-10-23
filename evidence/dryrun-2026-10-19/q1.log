@@ -1,0 +1,1185 @@
+===== q1 docker build eb925fa 2026-10-19T05:30:13Z =====
++ docker build -t flakecert-dryrun-arena:eb925fa /tmp/flakecert-dryrun-1019/docker/eb925fa
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 251B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 153.91kB done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 DONE 0.0s
+
+#6 [2/4] COPY requirements-ci.lock /tmp/requirements-ci.lock
+#6 DONE 0.0s
+
+#7 [3/4] RUN python -m pip install --require-hashes -r /tmp/requirements-ci.lock
+#7 1.460 Ignoring async-timeout: markers 'python_full_version < "3.11"' don't match your environment
+#7 1.460 Ignoring exceptiongroup: markers 'python_full_version < "3.11"' don't match your environment
+#7 1.460 Ignoring pywin32-ctypes: markers 'platform_machine != "ppc64le" and platform_machine != "s390x" and sys_platform == "win32"' don't match your environment
+#7 1.461 Ignoring tomli: markers 'python_full_version <= "3.11"' don't match your environment
+#7 1.633 Collecting aiohappyeyeballs==2.7.1 (from -r /tmp/requirements-ci.lock (line 3))
+#7 1.671   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+#7 2.223 Collecting aiohttp==3.14.3 (from -r /tmp/requirements-ci.lock (line 7))
+#7 2.234   Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+#7 2.279      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 41.3 MB/s eta 0:00:00
+#7 2.304 Collecting aiosignal==1.4.0 (from -r /tmp/requirements-ci.lock (line 128))
+#7 2.313   Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+#7 2.336 Collecting annotated-types==0.8.0 (from -r /tmp/requirements-ci.lock (line 132))
+#7 2.346   Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#7 2.377 Collecting attrs==26.1.0 (from -r /tmp/requirements-ci.lock (line 140))
+#7 2.387   Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+#7 2.391      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 21.1 MB/s eta 0:00:00
+#7 2.411 Collecting backports-tarfile==1.2.0 (from -r /tmp/requirements-ci.lock (line 146))
+#7 2.421   Downloading backports.tarfile-1.2.0-py3-none-any.whl (30 kB)
+#7 2.449 Collecting beautifulsoup4==4.15.0 (from -r /tmp/requirements-ci.lock (line 150))
+#7 2.458   Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+#7 2.465      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.9/109.9 kB 21.1 MB/s eta 0:00:00
+#7 2.494 Collecting build==1.5.0 (from -r /tmp/requirements-ci.lock (line 154))
+#7 2.504   Downloading build-1.5.0-py3-none-any.whl (26 kB)
+#7 2.537 Collecting certifi==2026.7.22 (from -r /tmp/requirements-ci.lock (line 158))
+#7 2.547   Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+#7 2.552      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 45.3 MB/s eta 0:00:00
+#7 2.702 Collecting cffi==2.1.0 (from -r /tmp/requirements-ci.lock (line 162))
+#7 2.713   Downloading cffi-2.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+#7 2.719      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 217.9/217.9 kB 49.8 MB/s eta 0:00:00
+#7 2.847 Collecting charset-normalizer==3.4.9 (from -r /tmp/requirements-ci.lock (line 264))
+#7 2.857   Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+#7 2.862      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.3/221.3 kB 71.6 MB/s eta 0:00:00
+#7 2.888 Collecting check-wheel-contents==0.6.3 (from -r /tmp/requirements-ci.lock (line 359))
+#7 2.898   Downloading check_wheel_contents-0.6.3-py3-none-any.whl (27 kB)
+#7 2.932 Collecting click==8.4.2 (from -r /tmp/requirements-ci.lock (line 363))
+#7 2.941   Downloading click-8.4.2-py3-none-any.whl (119 kB)
+#7 2.946      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.2/119.2 kB 33.1 MB/s eta 0:00:00
+#7 2.972 Collecting colorama==0.4.6 (from -r /tmp/requirements-ci.lock (line 369))
+#7 2.982   Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#7 3.432 Collecting coverage==7.15.3 (from -r /tmp/requirements-ci.lock (line 377))
+#7 3.442   Downloading coverage-7.15.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (255 kB)
+#7 3.449      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 255.2/255.2 kB 60.6 MB/s eta 0:00:00
+#7 3.772 Collecting cryptography==50.0.0 (from -r /tmp/requirements-ci.lock (line 470))
+#7 3.782   Downloading cryptography-50.0.0-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+#7 3.811      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 174.6 MB/s eta 0:00:00
+#7 3.846 Collecting docutils==0.23 (from -r /tmp/requirements-ci.lock (line 518))
+#7 3.856   Downloading docutils-0.23-py3-none-any.whl (634 kB)
+#7 3.865      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 634.7/634.7 kB 102.0 MB/s eta 0:00:00
+#7 3.967 Collecting frozenlist==1.8.0 (from -r /tmp/requirements-ci.lock (line 528))
+#7 3.977   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+#7 3.983      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.1/231.1 kB 67.3 MB/s eta 0:00:00
+#7 4.173 Collecting greenlet==3.5.4 (from -r /tmp/requirements-ci.lock (line 662))
+#7 4.183   Downloading greenlet-3.5.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+#7 4.190      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.7/624.7 kB 114.0 MB/s eta 0:00:00
+#7 4.314 Collecting grimp==3.15 (from -r /tmp/requirements-ci.lock (line 743))
+#7 4.324   Downloading grimp-3.15-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
+#7 4.337      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 201.9 MB/s eta 0:00:00
+#7 4.946 Collecting hypothesis==6.165.7 (from -r /tmp/requirements-ci.lock (line 840))
+#7 4.957   Downloading hypothesis-6.165.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+#7 4.966      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 149.7 MB/s eta 0:00:00
+#7 4.990 Collecting id==1.6.1 (from -r /tmp/requirements-ci.lock (line 907))
+#7 5.000   Downloading id-1.6.1-py3-none-any.whl (14 kB)
+#7 5.029 Collecting idna==3.18 (from -r /tmp/requirements-ci.lock (line 911))
+#7 5.039   Downloading idna-3.18-py3-none-any.whl (65 kB)
+#7 5.043      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 27.3 MB/s eta 0:00:00
+#7 5.069 Collecting import-linter==2.13 (from -r /tmp/requirements-ci.lock (line 918))
+#7 5.078   Downloading import_linter-2.13-py3-none-any.whl (638 kB)
+#7 5.085      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 638.2/638.2 kB 136.5 MB/s eta 0:00:00
+#7 5.134 Collecting importlib-metadata==9.0.0 (from -r /tmp/requirements-ci.lock (line 922))
+#7 5.144   Downloading importlib_metadata-9.0.0-py3-none-any.whl (27 kB)
+#7 5.166 Collecting iniconfig==2.3.0 (from -r /tmp/requirements-ci.lock (line 928))
+#7 5.176   Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#7 5.200 Collecting jaraco-classes==3.4.0 (from -r /tmp/requirements-ci.lock (line 932))
+#7 5.210   Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+#7 5.236 Collecting jaraco-context==6.1.2 (from -r /tmp/requirements-ci.lock (line 936))
+#7 5.246   Downloading jaraco_context-6.1.2-py3-none-any.whl (7.9 kB)
+#7 5.276 Collecting jaraco-functools==4.6.0 (from -r /tmp/requirements-ci.lock (line 940))
+#7 5.286   Downloading jaraco_functools-4.6.0-py3-none-any.whl (11 kB)
+#7 5.309 Collecting jeepney==0.9.0 (from -r /tmp/requirements-ci.lock (line 944))
+#7 5.320   Downloading jeepney-0.9.0-py3-none-any.whl (49 kB)
+#7 5.324      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.0/49.0 kB 16.6 MB/s eta 0:00:00
+#7 5.478 Collecting keyring==25.7.0 (from -r /tmp/requirements-ci.lock (line 950))
+#7 5.488   Downloading keyring-25.7.0-py3-none-any.whl (39 kB)
+#7 5.520 Collecting markdown-it-py==4.2.0 (from -r /tmp/requirements-ci.lock (line 954))
+#7 5.530   Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+#7 5.535      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 29.4 MB/s eta 0:00:00
+#7 5.555 Collecting mdurl==0.1.2 (from -r /tmp/requirements-ci.lock (line 958))
+#7 5.565   Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#7 5.595 Collecting more-itertools==11.1.0 (from -r /tmp/requirements-ci.lock (line 962))
+#7 5.605   Downloading more_itertools-11.1.0-py3-none-any.whl (72 kB)
+#7 5.609      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.2/72.2 kB 31.7 MB/s eta 0:00:00
+#7 5.869 Collecting multidict==6.7.1 (from -r /tmp/requirements-ci.lock (line 968))
+#7 5.880   Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+#7 5.885      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.3/246.3 kB 69.9 MB/s eta 0:00:00
+#7 5.934 Collecting nh3==0.3.6 (from -r /tmp/requirements-ci.lock (line 1118))
+#7 5.945   Downloading nh3-0.3.6-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (806 kB)
+#7 5.954      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.7/806.7 kB 129.6 MB/s eta 0:00:00
+#7 5.984 Collecting packaging==26.2 (from -r /tmp/requirements-ci.lock (line 1147))
+#7 5.993   Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#7 5.998      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 31.7 MB/s eta 0:00:00
+#7 6.022 Collecting pathspec==1.1.1 (from -r /tmp/requirements-ci.lock (line 1156))
+#7 6.031   Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+#7 6.035      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 26.5 MB/s eta 0:00:00
+#7 6.082 Collecting playwright==1.62.0 (from -r /tmp/requirements-ci.lock (line 1160))
+#7 6.092   Downloading playwright-1.62.0-py3-none-manylinux1_x86_64.whl (47.7 MB)
+#7 6.489      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.7/47.7 MB 67.2 MB/s eta 0:00:00
+#7 6.560 Collecting pluggy==1.6.0 (from -r /tmp/requirements-ci.lock (line 1170))
+#7 6.570   Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#7 6.654 Collecting propcache==0.5.2 (from -r /tmp/requirements-ci.lock (line 1176))
+#7 6.664   Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (58 kB)
+#7 6.670      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.9/58.9 kB 11.9 MB/s eta 0:00:00
+#7 6.762 Collecting psutil==7.2.2 (from -r /tmp/requirements-ci.lock (line 1301))
+#7 6.772   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+#7 6.820      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 3.3 MB/s eta 0:00:00
+#7 6.846 Collecting pycparser==3.0 (from -r /tmp/requirements-ci.lock (line 1324))
+#7 6.855   Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+#7 6.862      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 10.6 MB/s eta 0:00:00
+#7 6.989 Collecting pydantic==2.13.4 (from -r /tmp/requirements-ci.lock (line 1328))
+#7 6.999   Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+#7 7.022      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 472.3/472.3 kB 75.6 MB/s eta 0:00:00
+#7 7.905 Collecting pydantic-core==2.46.4 (from -r /tmp/requirements-ci.lock (line 1332))
+#7 7.915   Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#7 7.931      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 166.5 MB/s eta 0:00:00
+#7 7.964 Collecting pyee==13.0.1 (from -r /tmp/requirements-ci.lock (line 1454))
+#7 7.975   Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
+#7 8.178 Collecting pygments==2.20.0 (from -r /tmp/requirements-ci.lock (line 1458))
+#7 8.189   Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+#7 8.201      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 133.6 MB/s eta 0:00:00
+#7 8.227 Collecting pyproject-hooks==1.2.0 (from -r /tmp/requirements-ci.lock (line 1465))
+#7 8.238   Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+#7 8.334 Collecting pyrefly==1.2.0 (from -r /tmp/requirements-ci.lock (line 1469))
+#7 8.345   Downloading pyrefly-1.2.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.4 MB)
+#7 8.487      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.4/14.4 MB 89.8 MB/s eta 0:00:00
+#7 8.671 Collecting pytest==9.1.1 (from -r /tmp/requirements-ci.lock (line 1483))
+#7 8.681   Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+#7 8.690      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.5/386.5 kB 55.4 MB/s eta 0:00:00
+#7 8.724 Collecting pytest-cov==7.1.0 (from -r /tmp/requirements-ci.lock (line 1491))
+#7 8.733   Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+#7 8.765 Collecting pytest-randomly==4.1.0 (from -r /tmp/requirements-ci.lock (line 1495))
+#7 8.775   Downloading pytest_randomly-4.1.0-py3-none-any.whl (8.4 kB)
+#7 8.802 Collecting pytest-timeout==2.4.0 (from -r /tmp/requirements-ci.lock (line 1499))
+#7 8.815   Downloading pytest_timeout-2.4.0-py3-none-any.whl (14 kB)
+#7 8.862 Collecting pyyaml==6.0.3 (from -r /tmp/requirements-ci.lock (line 1507))
+#7 8.872   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#7 8.883      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 92.8 MB/s eta 0:00:00
+#7 8.910 Collecting readme-renderer==45.0 (from -r /tmp/requirements-ci.lock (line 1582))
+#7 8.921   Downloading readme_renderer-45.0-py3-none-any.whl (14 kB)
+#7 8.964 Collecting requests==2.34.2 (from -r /tmp/requirements-ci.lock (line 1586))
+#7 8.973   Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+#7 8.978      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 21.7 MB/s eta 0:00:00
+#7 9.002 Collecting requests-toolbelt==1.0.0 (from -r /tmp/requirements-ci.lock (line 1593))
+#7 9.012   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+#7 9.016      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 15.3 MB/s eta 0:00:00
+#7 9.038 Collecting rfc3986==2.0.0 (from -r /tmp/requirements-ci.lock (line 1597))
+#7 9.048   Downloading rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+#7 9.119 Collecting rich==15.0.0 (from -r /tmp/requirements-ci.lock (line 1601))
+#7 9.129   Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+#7 9.134      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 90.6 MB/s eta 0:00:00
+#7 9.483 Collecting ruff==0.16.3 (from -r /tmp/requirements-ci.lock (line 1607))
+#7 9.493   Downloading ruff-0.16.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.1 MB)
+#7 9.581      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 123.3 MB/s eta 0:00:00
+#7 9.617 Collecting secretstorage==3.5.0 (from -r /tmp/requirements-ci.lock (line 1627))
+#7 9.627   Downloading secretstorage-3.5.0-py3-none-any.whl (15 kB)
+#7 9.783 Collecting setuptools==84.0.0 (from -r /tmp/requirements-ci.lock (line 1631))
+#7 9.793   Downloading setuptools-84.0.0-py3-none-any.whl (818 kB)
+#7 9.800      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 139.7 MB/s eta 0:00:00
+#7 9.830 Collecting sortedcontainers==2.4.0 (from -r /tmp/requirements-ci.lock (line 1635))
+#7 9.840   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+#7 9.876 Collecting soupsieve==2.9.1 (from -r /tmp/requirements-ci.lock (line 1639))
+#7 9.886   Downloading soupsieve-2.9.1-py3-none-any.whl (37 kB)
+#7 9.916 Collecting twine==7.0.0 (from -r /tmp/requirements-ci.lock (line 1698))
+#7 9.927   Downloading twine-7.0.0-py3-none-any.whl (43 kB)
+#7 9.931      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.2/43.2 kB 11.5 MB/s eta 0:00:00
+#7 9.959 Collecting typing-extensions==4.16.0 (from -r /tmp/requirements-ci.lock (line 1702))
+#7 9.969   Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#7 9.974      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 13.1 MB/s eta 0:00:00
+#7 9.997 Collecting typing-inspection==0.4.2 (from -r /tmp/requirements-ci.lock (line 1717))
+#7 10.01   Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+#7 10.05 Collecting urllib3==2.7.0 (from -r /tmp/requirements-ci.lock (line 1721))
+#7 10.06   Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+#7 10.07      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.1/131.1 kB 37.1 MB/s eta 0:00:00
+#7 10.10 Collecting vulture==2.16 (from -r /tmp/requirements-ci.lock (line 1728))
+#7 10.11   Downloading vulture-2.16-py3-none-any.whl (26 kB)
+#7 10.23 Collecting websockets==16.1.1 (from -r /tmp/requirements-ci.lock (line 1732))
+#7 10.24   Downloading websockets-16.1.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (186 kB)
+#7 10.25      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.9/186.9 kB 32.7 MB/s eta 0:00:00
+#7 10.49 Collecting wheel==0.48.0 (from -r /tmp/requirements-ci.lock (line 1843))
+#7 10.50   Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+#7 10.53 Collecting wheel-filename==1.4.2 (from -r /tmp/requirements-ci.lock (line 1847))
+#7 10.54   Downloading wheel_filename-1.4.2-py3-none-any.whl (6.2 kB)
+#7 10.82 Collecting yarl==1.24.5 (from -r /tmp/requirements-ci.lock (line 1851))
+#7 10.83   Downloading yarl-1.24.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (111 kB)
+#7 10.84      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.9/111.9 kB 26.5 MB/s eta 0:00:00
+#7 10.88 Collecting zipp==4.1.0 (from -r /tmp/requirements-ci.lock (line 1957))
+#7 10.89   Downloading zipp-4.1.0-py3-none-any.whl (10 kB)
+#7 11.94 Installing collected packages: sortedcontainers, zipp, wheel-filename, websockets, vulture, urllib3, typing-extensions, soupsieve, setuptools, ruff, rfc3986, pyyaml, pyrefly, pyproject-hooks, pygments, pycparser, psutil, propcache, pluggy, pathspec, packaging, nh3, multidict, more-itertools, mdurl, jeepney, iniconfig, idna, hypothesis, grimp, greenlet, frozenlist, docutils, coverage, colorama, click, charset-normalizer, certifi, backports-tarfile, attrs, annotated-types, aiohappyeyeballs, yarl, wheel, typing-inspection, requests, readme-renderer, pytest, pyee, pydantic-core, markdown-it-py, jaraco-functools, jaraco-context, jaraco-classes, importlib-metadata, id, cffi, build, beautifulsoup4, aiosignal, rich, requests-toolbelt, pytest-timeout, pytest-randomly, pytest-cov, pydantic, playwright, cryptography, aiohttp, secretstorage, import-linter, check-wheel-contents, keyring, twine
+#7 12.21   Attempting uninstall: setuptools
+#7 12.21     Found existing installation: setuptools 79.0.1
+#7 12.24     Uninstalling setuptools-79.0.1:
+#7 12.30       Successfully uninstalled setuptools-79.0.1
+#7 13.69   Attempting uninstall: packaging
+#7 13.69     Found existing installation: packaging 26.3
+#7 13.69     Uninstalling packaging-26.3:
+#7 13.70       Successfully uninstalled packaging-26.3
+#7 14.92   Attempting uninstall: wheel
+#7 14.92     Found existing installation: wheel 0.46.3
+#7 14.92     Uninstalling wheel-0.46.3:
+#7 14.92       Successfully uninstalled wheel-0.46.3
+#7 17.81 Successfully installed aiohappyeyeballs-2.7.1 aiohttp-3.14.3 aiosignal-1.4.0 annotated-types-0.8.0 attrs-26.1.0 backports-tarfile-1.2.0 beautifulsoup4-4.15.0 build-1.5.0 certifi-2026.7.22 cffi-2.1.0 charset-normalizer-3.4.9 check-wheel-contents-0.6.3 click-8.4.2 colorama-0.4.6 coverage-7.15.3 cryptography-50.0.0 docutils-0.23 frozenlist-1.8.0 greenlet-3.5.4 grimp-3.15 hypothesis-6.165.7 id-1.6.1 idna-3.18 import-linter-2.13 importlib-metadata-9.0.0 iniconfig-2.3.0 jaraco-classes-3.4.0 jaraco-context-6.1.2 jaraco-functools-4.6.0 jeepney-0.9.0 keyring-25.7.0 markdown-it-py-4.2.0 mdurl-0.1.2 more-itertools-11.1.0 multidict-6.7.1 nh3-0.3.6 packaging-26.2 pathspec-1.1.1 playwright-1.62.0 pluggy-1.6.0 propcache-0.5.2 psutil-7.2.2 pycparser-3.0 pydantic-2.13.4 pydantic-core-2.46.4 pyee-13.0.1 pygments-2.20.0 pyproject-hooks-1.2.0 pyrefly-1.2.0 pytest-9.1.1 pytest-cov-7.1.0 pytest-randomly-4.1.0 pytest-timeout-2.4.0 pyyaml-6.0.3 readme-renderer-45.0 requests-2.34.2 requests-toolbelt-1.0.0 rfc3986-2.0.0 rich-15.0.0 ruff-0.16.3 secretstorage-3.5.0 setuptools-84.0.0 sortedcontainers-2.4.0 soupsieve-2.9.1 twine-7.0.0 typing-extensions-4.16.0 typing-inspection-0.4.2 urllib3-2.7.0 vulture-2.16 websockets-16.1.1 wheel-0.48.0 wheel-filename-1.4.2 yarl-1.24.5 zipp-4.1.0
+#7 17.81 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 18.15 
+#7 18.15 [notice] A new release of pip is available: 24.0 -> 26.2.1
+#7 18.15 [notice] To update, run: pip install --upgrade pip
+#7 DONE 20.4s
+
+#8 [4/4] WORKDIR /src
+#8 DONE 0.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.9s done
+#9 writing image sha256:167e5e8cb43925fe95caa31b9cde94880a09410bc8bf940eb758b23fb00ad261 done
+#9 naming to docker.io/library/flakecert-dryrun-arena:eb925fa done
+#9 DONE 0.9s
+eb925fa_image_build_exit=0
+
+===== q1 env eb925fa 2026-10-19T05:31:54Z =====
++ uname -a
+Linux 6ce596449be0 6.12.94+ #1 SMP PREEMPT_DYNAMIC Fri Oct 16 00:53:04 UTC 2026 x86_64 GNU/Linux
++ python -V
+Python 3.11.17
++ pip freeze
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+annotated-types==0.8.0
+attrs==26.1.0
+backports.tarfile==1.2.0
+beautifulsoup4==4.15.0
+build==1.5.0
+certifi==2026.7.22
+cffi==2.1.0
+charset-normalizer==3.4.9
+check-wheel-contents==0.6.3
+click==8.4.2
+colorama==0.4.6
+coverage==7.15.3
+cryptography==50.0.0
+docutils==0.23
+frozenlist==1.8.0
+greenlet==3.5.4
+grimp==3.15
+hypothesis==6.165.7
+id==1.6.1
+idna==3.18
+import-linter==2.13
+importlib_metadata==9.0.0
+iniconfig==2.3.0
+jaraco.classes==3.4.0
+jaraco.context==6.1.2
+jaraco.functools==4.6.0
+jeepney==0.9.0
+keyring==25.7.0
+markdown-it-py==4.2.0
+mdurl==0.1.2
+more-itertools==11.1.0
+multidict==6.7.1
+nh3==0.3.6
+packaging==26.2
+pathspec==1.1.1
+playwright==1.62.0
+pluggy==1.6.0
+propcache==0.5.2
+psutil==7.2.2
+pycparser==3.0
+pydantic==2.13.4
+pydantic_core==2.46.4
+pyee==13.0.1
+Pygments==2.20.0
+pyproject_hooks==1.2.0
+pyrefly==1.2.0
+pytest==9.1.1
+pytest-cov==7.1.0
+pytest-randomly==4.1.0
+pytest-timeout==2.4.0
+PyYAML==6.0.3
+readme_renderer==45.0
+requests==2.34.2
+requests-toolbelt==1.0.0
+rfc3986==2.0.0
+rich==15.0.0
+ruff==0.16.3
+SecretStorage==3.5.0
+sortedcontainers==2.4.0
+soupsieve==2.9.1
+twine==7.0.0
+typing-inspection==0.4.2
+typing_extensions==4.16.0
+urllib3==2.7.0
+vulture==2.16
+websockets==16.1.1
+wheel-filename==1.4.2
+yarl==1.24.5
+zipp==4.1.0
++ pytest-randomly
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: module 'pytest_randomly' has no attribute '__version__'
+env_exit=1
+
+===== A0-eb925fa-r1 smoke 2026-10-19T05:31:55Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A0-eb925fa-r1.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.                                                                        [100%]
+1 passed in 0.60s
+pytest_exit=0
+
+===== A1-eb925fa-r1 2026-10-19T05:32:14Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A1-eb925fa-r1.xml tests/e2e/test_bridge_live.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+................F..                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f0b4131a9d0>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': '7595f67a-e130-406d-9215-f9f1888704c6', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f0b4116aec0>('ok')
+E            +    where <built-in method get of dict object at 0x7f0b4116aec0> = {'ok': False, 'request_id': '7595f67a-e130-406d-9215-f9f1888704c6', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.79s
+pytest_exit=1
+
+===== q1 env aec7800 2026-10-19T05:32:50Z =====
++ uname -a
+Linux 203ab6d02119 6.12.94+ #1 SMP PREEMPT_DYNAMIC Fri Oct 16 00:53:04 UTC 2026 x86_64 GNU/Linux
++ python -V
+Python 3.11.17
++ importlib.metadata pytest-randomly
+4.1.0
++ pip freeze
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+annotated-types==0.8.0
+attrs==26.1.0
+backports.tarfile==1.2.0
+beautifulsoup4==4.15.0
+build==1.6.0
+certifi==2026.7.22
+cffi==2.1.0
+charset-normalizer==3.4.9
+check-wheel-contents==0.6.3
+click==8.4.2
+colorama==0.4.6
+coverage==7.15.3
+cryptography==50.0.0
+docutils==0.23
+frozenlist==1.8.0
+greenlet==3.5.4
+grimp==3.15
+hypothesis==6.167.1
+id==1.6.1
+idna==3.19
+import-linter==2.14
+importlib_metadata==9.0.0
+iniconfig==2.3.0
+jaraco.classes==3.4.0
+jaraco.context==6.1.2
+jaraco.functools==4.6.0
+jeepney==0.9.0
+jsonschema==4.26.0
+jsonschema-path==0.5.0
+jsonschema-specifications==2025.9.1
+keyring==25.7.0
+lazy-object-proxy==1.12.0
+markdown-it-py==4.2.0
+mdurl==0.1.2
+more-itertools==11.1.0
+multidict==6.7.1
+nh3==0.3.6
+openapi-schema-validator==0.9.0
+openapi-spec-validator==0.9.0
+packaging==26.2
+pathable==0.6.0
+pathspec==1.1.1
+playwright==1.62.0
+pluggy==1.6.0
+propcache==0.5.2
+psutil==7.2.2
+pycparser==3.0
+pydantic==2.13.4
+pydantic-settings==2.15.0
+pydantic_core==2.46.4
+pyee==13.0.1
+Pygments==2.20.0
+pyproject_hooks==1.2.0
+pyrefly==1.2.0
+pytest==9.1.1
+pytest-cov==7.1.0
+pytest-randomly==4.1.0
+pytest-timeout==2.4.0
+python-dotenv==1.2.3
+PyYAML==6.0.3
+readme_renderer==45.0
+referencing==0.37.0
+requests==2.34.2
+requests-toolbelt==1.0.0
+rfc3339-validator==0.1.4
+rfc3986==2.0.0
+rich==15.0.0
+rpds-py==2026.6.3
+ruff==0.16.5
+SecretStorage==3.5.0
+six==1.17.0
+sortedcontainers==2.4.0
+soupsieve==2.9.1
+twine==7.0.0
+typing-inspection==0.4.2
+typing_extensions==4.16.0
+urllib3==2.7.0
+vulture==2.16
+websockets==16.1.1
+wheel-filename==1.4.2
+yarl==1.24.5
+zipp==4.1.0
+aec_env_exit=0
+
+===== q1 env eb925fa pytest-randomly version 2026-10-19T05:32:51Z =====
+4.1.0
+
+===== A0-eb925fa-r2 2026-10-19T05:32:51Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A0-eb925fa-r2.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.                                                                        [100%]
+1 passed in 0.59s
+pytest_exit=0
+
+===== A0-eb925fa-r3 2026-10-19T05:32:53Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A0-eb925fa-r3.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.                                                                        [100%]
+1 passed in 0.64s
+pytest_exit=0
+
+===== A1-eb925fa-r2 2026-10-19T05:32:54Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A1-eb925fa-r2.xml tests/e2e/test_bridge_live.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+................F..                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f66d48af790>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': 'bc623093-524b-4585-a726-130677dbfbda', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f66d3b36280>('ok')
+E            +    where <built-in method get of dict object at 0x7f66d3b36280> = {'ok': False, 'request_id': 'bc623093-524b-4585-a726-130677dbfbda', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.20s
+pytest_exit=1
+
+===== A1-eb925fa-r3 2026-10-19T05:33:01Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A1-eb925fa-r3.xml tests/e2e/test_bridge_live.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+................F..                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f7193fb9850>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': '04e92246-8e04-412c-a4fb-0556a2fd1349', 'exit_code': 128, 'duration_sec': 0.002, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f7193b2a340>('ok')
+E            +    where <built-in method get of dict object at 0x7f7193b2a340> = {'ok': False, 'request_id': '04e92246-8e04-412c-a4fb-0556a2fd1349', 'exit_code': 128, 'duration_sec': 0.002, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.18s
+pytest_exit=1
+
+===== A2-eb925fa-r1 2026-10-19T05:33:08Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A2-eb925fa-r1.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path tests/e2e/test_bridge_live.py
+.................F.                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f40710f6850>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': 'd5f3b9a4-90f3-441a-b439-03432ce333ef', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f4070e8a4c0>('ok')
+E            +    where <built-in method get of dict object at 0x7f4070e8a4c0> = {'ok': False, 'request_id': 'd5f3b9a4-90f3-441a-b439-03432ce333ef', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.21s
+pytest_exit=1
+
+===== A2-eb925fa-r2 2026-10-19T05:33:14Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A2-eb925fa-r2.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path tests/e2e/test_bridge_live.py
+.................F.                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f0695613a90>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': 'dd9aa1a4-04e9-4df9-bbc0-b1fa7b7a2570', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f069489a640>('ok')
+E            +    where <built-in method get of dict object at 0x7f069489a640> = {'ok': False, 'request_id': 'dd9aa1a4-04e9-4df9-bbc0-b1fa7b7a2570', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.24s
+pytest_exit=1
+
+===== A2-eb925fa-r3 2026-10-19T05:33:21Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A2-eb925fa-r3.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path tests/e2e/test_bridge_live.py
+.................F.                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7fdd5ca8e850>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': '312bbb90-8de2-4a25-9c0c-ba9adabbee35', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7fdd5c822400>('ok')
+E            +    where <built-in method get of dict object at 0x7fdd5c822400> = {'ok': False, 'request_id': '312bbb90-8de2-4a25-9c0c-ba9adabbee35', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.23s
+pytest_exit=1
+
+===== A0-aec7800-r1 2026-10-19T05:33:28Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A0-aec7800-r1.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.                                                                        [100%]
+1 passed in 0.71s
+pytest_exit=0
+
+===== A0-aec7800-r2 2026-10-19T05:33:29Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A0-aec7800-r2.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.                                                                        [100%]
+1 passed in 0.59s
+pytest_exit=0
+
+===== A0-aec7800-r3 2026-10-19T05:33:31Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A0-aec7800-r3.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.                                                                        [100%]
+1 passed in 0.62s
+pytest_exit=0
+
+===== A1-aec7800-r1 2026-10-19T05:33:32Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A1-aec7800-r1.xml tests/e2e/test_bridge_live.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+................F..                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f878cf64cd0>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': '36aea207-24c3-4edc-bf52-316b38a2b5e8', 'exit_code': 128, 'duration_sec': 0.002, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f878cf2b480>('ok')
+E            +    where <built-in method get of dict object at 0x7f878cf2b480> = {'ok': False, 'request_id': '36aea207-24c3-4edc-bf52-316b38a2b5e8', 'exit_code': 128, 'duration_sec': 0.002, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.75s
+pytest_exit=1
+
+===== A1-aec7800-r2 2026-10-19T05:33:40Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A1-aec7800-r2.xml tests/e2e/test_bridge_live.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+................F..                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f6a10e4dd10>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': 'c01bc6a5-a1a8-42f1-94b7-5eaf2fd27c04', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f6a1010d740>('ok')
+E            +    where <built-in method get of dict object at 0x7f6a1010d740> = {'ok': False, 'request_id': 'c01bc6a5-a1a8-42f1-94b7-5eaf2fd27c04', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.25s
+pytest_exit=1
+
+===== A1-aec7800-r3 2026-10-19T05:33:47Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A1-aec7800-r3.xml tests/e2e/test_bridge_live.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+................F..                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7fc20fd4ee90>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': '1ee5b559-d8cf-4151-ada7-9ddd59ad371a', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7fc20f8dd5c0>('ok')
+E            +    where <built-in method get of dict object at 0x7fc20f8dd5c0> = {'ok': False, 'request_id': '1ee5b559-d8cf-4151-ada7-9ddd59ad371a', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.22s
+pytest_exit=1
+
+===== A2-aec7800-r1 2026-10-19T05:33:54Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A2-aec7800-r1.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path tests/e2e/test_bridge_live.py
+.................F.                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7fc7c74adf10>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': '804e87b0-8aa0-4008-bc67-a40ad1d60d6e', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7fc7c7241e40>('ok')
+E            +    where <built-in method get of dict object at 0x7fc7c7241e40> = {'ok': False, 'request_id': '804e87b0-8aa0-4008-bc67-a40ad1d60d6e', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.46s
+pytest_exit=1
+
+===== A2-aec7800-r2 2026-10-19T05:34:01Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A2-aec7800-r2.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path tests/e2e/test_bridge_live.py
+.................F.                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f3499491d50>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': 'a4a250b2-0481-4a4e-b6d0-31e9f684660a', 'exit_code': 128, 'duration_sec': 0.004, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f3499225680>('ok')
+E            +    where <built-in method get of dict object at 0x7f3499225680> = {'ok': False, 'request_id': 'a4a250b2-0481-4a4e-b6d0-31e9f684660a', 'exit_code': 128, 'duration_sec': 0.004, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.26s
+pytest_exit=1
+
+===== A2-aec7800-r3 2026-10-19T05:34:08Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/A2-aec7800-r3.xml tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path tests/e2e/test_bridge_live.py
+.................F.                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_shell_allowlist_keeps_legitimate_commands_working ____________
+
+bridge = <test_bridge_live.BridgeClient object at 0x7f43a1195f10>
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+>           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': '6e3273d6-2563-4bcc-8474-b2b9086d3c72', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = <built-in method get of dict object at 0x7f43a0f29e40>('ok')
+E            +    where <built-in method get of dict object at 0x7f43a0f29e40> = {'ok': False, 'request_id': '6e3273d6-2563-4bcc-8474-b2b9086d3c72', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_bridge_live.py::test_shell_allowlist_keeps_legitimate_commands_working
+1 failed, 18 passed in 6.21s
+pytest_exit=1
+
+===== S1-eb925fa-r01 2026-10-19T05:34:14Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r01.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.59s
+pytest_exit=0
+
+===== S1-eb925fa-r02 2026-10-19T05:34:16Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r02.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.61s
+pytest_exit=0
+
+===== S1-eb925fa-r03 2026-10-19T05:34:17Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r03.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+_________________________ test_client_start_happy_path _________________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7efce1296750>
+
+    def test_client_start_happy_path(monkeypatch):
+        init_resp = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {"protocolVersion": "2025-03-26", "serverInfo": {"name": "test-server", "version": "0.1"}},
+        }
+        mock_proc = _MockPopen()
+        captured_popen = {}
+    
+        def _fake_popen(args, **kwargs):
+            captured_popen["args"] = args
+            captured_popen["kwargs"] = kwargs
+            return mock_proc
+    
+        monkeypatch.setattr(mcp_mod.subprocess, "Popen", _fake_popen)
+        client = mcp_mod.McpStdioClient("node", ["server.js"], cwd="/app")
+    
+        # Push matching response into queue
+        client._stdout_q.put_nowait(json.dumps(init_resp) + "\n")
+    
+        info = client.start(timeout=10)
+        assert info == init_resp["result"]
+        assert client.server_info == init_resp["result"]
+        assert client.alive() is True
+    
+        # Check Popen kwargs
+>       assert captured_popen["args"] == ["node", "server.js"]
+E       AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+E         
+E         At index 0 diff: '/usr/local/bin/python' != 'node'
+E         Use -v to get more diff
+
+tests/test_mcp_client_parity_v4_169_39.py:169: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+1 failed, 1 passed in 9.80s
+pytest_exit=1
+
+===== S1-eb925fa-r04 2026-10-19T05:34:27Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r04.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+_________________________ test_client_start_happy_path _________________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f615a5b3b90>
+
+    def test_client_start_happy_path(monkeypatch):
+        init_resp = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {"protocolVersion": "2025-03-26", "serverInfo": {"name": "test-server", "version": "0.1"}},
+        }
+        mock_proc = _MockPopen()
+        captured_popen = {}
+    
+        def _fake_popen(args, **kwargs):
+            captured_popen["args"] = args
+            captured_popen["kwargs"] = kwargs
+            return mock_proc
+    
+        monkeypatch.setattr(mcp_mod.subprocess, "Popen", _fake_popen)
+        client = mcp_mod.McpStdioClient("node", ["server.js"], cwd="/app")
+    
+        # Push matching response into queue
+        client._stdout_q.put_nowait(json.dumps(init_resp) + "\n")
+    
+        info = client.start(timeout=10)
+        assert info == init_resp["result"]
+        assert client.server_info == init_resp["result"]
+        assert client.alive() is True
+    
+        # Check Popen kwargs
+>       assert captured_popen["args"] == ["node", "server.js"]
+E       AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+E         
+E         At index 0 diff: '/usr/local/bin/python' != 'node'
+E         Use -v to get more diff
+
+tests/test_mcp_client_parity_v4_169_39.py:169: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+1 failed, 1 passed in 11.49s
+pytest_exit=1
+
+===== S1-eb925fa-r05 2026-10-19T05:34:39Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r05.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.60s
+pytest_exit=0
+
+===== S1-eb925fa-r06 2026-10-19T05:34:41Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r06.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.59s
+pytest_exit=0
+
+===== S1-eb925fa-r07 2026-10-19T05:34:42Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r07.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+_________________________ test_client_start_happy_path _________________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f70a3ba83d0>
+
+    def test_client_start_happy_path(monkeypatch):
+        init_resp = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {"protocolVersion": "2025-03-26", "serverInfo": {"name": "test-server", "version": "0.1"}},
+        }
+        mock_proc = _MockPopen()
+        captured_popen = {}
+    
+        def _fake_popen(args, **kwargs):
+            captured_popen["args"] = args
+            captured_popen["kwargs"] = kwargs
+            return mock_proc
+    
+        monkeypatch.setattr(mcp_mod.subprocess, "Popen", _fake_popen)
+        client = mcp_mod.McpStdioClient("node", ["server.js"], cwd="/app")
+    
+        # Push matching response into queue
+        client._stdout_q.put_nowait(json.dumps(init_resp) + "\n")
+    
+        info = client.start(timeout=10)
+        assert info == init_resp["result"]
+        assert client.server_info == init_resp["result"]
+        assert client.alive() is True
+    
+        # Check Popen kwargs
+>       assert captured_popen["args"] == ["node", "server.js"]
+E       AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+E         
+E         At index 0 diff: '/usr/local/bin/python' != 'node'
+E         Use -v to get more diff
+
+tests/test_mcp_client_parity_v4_169_39.py:169: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+1 failed, 1 passed in 8.40s
+pytest_exit=1
+
+===== S1-eb925fa-r08 2026-10-19T05:34:51Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r08.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.61s
+pytest_exit=0
+
+===== S1-eb925fa-r09 2026-10-19T05:34:52Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r09.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+_________________________ test_client_start_happy_path _________________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f4e8c9da750>
+
+    def test_client_start_happy_path(monkeypatch):
+        init_resp = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {"protocolVersion": "2025-03-26", "serverInfo": {"name": "test-server", "version": "0.1"}},
+        }
+        mock_proc = _MockPopen()
+        captured_popen = {}
+    
+        def _fake_popen(args, **kwargs):
+            captured_popen["args"] = args
+            captured_popen["kwargs"] = kwargs
+            return mock_proc
+    
+        monkeypatch.setattr(mcp_mod.subprocess, "Popen", _fake_popen)
+        client = mcp_mod.McpStdioClient("node", ["server.js"], cwd="/app")
+    
+        # Push matching response into queue
+        client._stdout_q.put_nowait(json.dumps(init_resp) + "\n")
+    
+        info = client.start(timeout=10)
+        assert info == init_resp["result"]
+        assert client.server_info == init_resp["result"]
+        assert client.alive() is True
+    
+        # Check Popen kwargs
+>       assert captured_popen["args"] == ["node", "server.js"]
+E       AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+E         
+E         At index 0 diff: '/usr/local/bin/python' != 'node'
+E         Use -v to get more diff
+
+tests/test_mcp_client_parity_v4_169_39.py:169: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+1 failed, 1 passed in 11.27s
+pytest_exit=1
+
+===== S1-eb925fa-r10 2026-10-19T05:35:04Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r10.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.61s
+pytest_exit=0
+
+===== S1-eb925fa-r11 2026-10-19T05:35:05Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r11.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.62s
+pytest_exit=0
+
+===== S1-eb925fa-r12 2026-10-19T05:35:06Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r12.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.63s
+pytest_exit=0
+
+===== S1-eb925fa-r13 2026-10-19T05:35:08Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r13.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.65s
+pytest_exit=0
+
+===== S1-eb925fa-r14 2026-10-19T05:35:09Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r14.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+_________________________ test_client_start_happy_path _________________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f71e4497590>
+
+    def test_client_start_happy_path(monkeypatch):
+        init_resp = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {"protocolVersion": "2025-03-26", "serverInfo": {"name": "test-server", "version": "0.1"}},
+        }
+        mock_proc = _MockPopen()
+        captured_popen = {}
+    
+        def _fake_popen(args, **kwargs):
+            captured_popen["args"] = args
+            captured_popen["kwargs"] = kwargs
+            return mock_proc
+    
+        monkeypatch.setattr(mcp_mod.subprocess, "Popen", _fake_popen)
+        client = mcp_mod.McpStdioClient("node", ["server.js"], cwd="/app")
+    
+        # Push matching response into queue
+        client._stdout_q.put_nowait(json.dumps(init_resp) + "\n")
+    
+        info = client.start(timeout=10)
+        assert info == init_resp["result"]
+        assert client.server_info == init_resp["result"]
+        assert client.alive() is True
+    
+        # Check Popen kwargs
+>       assert captured_popen["args"] == ["node", "server.js"]
+E       AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+E         
+E         At index 0 diff: '/usr/local/bin/python' != 'node'
+E         Use -v to get more diff
+
+tests/test_mcp_client_parity_v4_169_39.py:169: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+1 failed, 1 passed in 11.73s
+pytest_exit=1
+
+===== S1-eb925fa-r15 2026-10-19T05:35:22Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r15.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.81s
+pytest_exit=0
+
+===== S1-eb925fa-r16 2026-10-19T05:35:23Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r16.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.60s
+pytest_exit=0
+
+===== S1-eb925fa-r17 2026-10-19T05:35:24Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r17.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.62s
+pytest_exit=0
+
+===== S1-eb925fa-r18 2026-10-19T05:35:25Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r18.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.63s
+pytest_exit=0
+
+===== S1-eb925fa-r19 2026-10-19T05:35:27Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r19.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.66s
+pytest_exit=0
+
+===== S1-eb925fa-r20 2026-10-19T05:35:28Z =====
++ python -m pytest -p no:randomly --no-cov --junitxml=/junit/S1-eb925fa-r20.xml tests/test_000_sabotage_popen_thread.py tests/test_mcp_client_parity_v4_169_39.py::test_client_start_happy_path
+..                                                                       [100%]
+2 passed in 0.60s
+pytest_exit=0

@@ -1,0 +1,34 @@
+{
+  "id": "RSPEC-CART",
+  "project": "inputs/flakecert-rspec-runner/sample",
+  "sha": "91102ec27ba9c65d3a40b77847b7d29598d7636845bd55cb392edf0372937165",
+  "node_id": "./spec/models/cart_spec.rb[1:1]",
+  "image_digest": "sha256:2e32876dfe84913ec84eb4a59617f72dab7c0989d38f8219487491e384543975",
+  "image_tag": "flakecert-rspec:sample",
+  "lock_sha256": "91102ec27ba9c65d3a40b77847b7d29598d7636845bd55cb392edf0372937165",
+  "flakecert_version": "0.2.0",
+  "ruby": "ruby 3.3.12 (2026-07-16 revision 0581089df9) [x86_64-linux]",
+  "sources": [
+    "order_seed",
+    "srand_seed"
+  ],
+  "m": 2,
+  "k": 100,
+  "d": 2,
+  "schedule": {
+    "order_seed": 0,
+    "srand_seed": 0
+  },
+  "replay": "FLAKECERT_SRAND=0 bundle exec rspec --order rand:0 --require /flakecert/srand.rb --format json --out /out/0-0.json",
+  "expected_failure": {
+    "exc": "RSpec::Expectations::ExpectationNotMetError",
+    "sig": "8625d7e13427e1ddd232563f2fbf6b3af90e5a6eee1fa18571ec0f26fd8e6dca"
+  },
+  "bound": {
+    "per_run_lower": "1/200",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 1,
+    "empirical_rate": "1",
+    "compare": "empirical>=lower"
+  }
+}

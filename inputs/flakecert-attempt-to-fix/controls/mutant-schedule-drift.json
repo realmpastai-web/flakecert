@@ -1,0 +1,986 @@
+{
+ "image_digest": "sha256:2e32876dfe84913ec84eb4a59617f72dab7c0989d38f8219487491e384543975",
+ "lock_sha256": "91102ec27ba9c65d3a40b77847b7d29598d7636845bd55cb392edf0372937165",
+ "rspec_core": "3.13.6",
+ "schedule": {
+  "order_seed": 1,
+  "srand_seed": 0
+ },
+ "variants": {
+  "prefix": {
+   "cart_spec_sha256": "8496e9a8e342ff4884b7613362cb5dcb80ab98246df32511a0bf98cb39cf02a3",
+   "cert_replay": [
+    {
+     "exc": "RSpec::Expectations::ExpectationNotMetError",
+     "message": "\nexpected: 100\n     got: 90\n\n(compared using ==)\n",
+     "polluter": "passed",
+     "sig": "8625d7e13427e1ddd232563f2fbf6b3af90e5a6eee1fa18571ec0f26fd8e6dca",
+     "victim": "failed"
+    },
+    {
+     "exc": "RSpec::Expectations::ExpectationNotMetError",
+     "message": "\nexpected: 100\n     got: 90\n\n(compared using ==)\n",
+     "polluter": "passed",
+     "sig": "8625d7e13427e1ddd232563f2fbf6b3af90e5a6eee1fa18571ec0f26fd8e6dca",
+     "victim": "failed"
+    },
+    {
+     "exc": "RSpec::Expectations::ExpectationNotMetError",
+     "message": "\nexpected: 100\n     got: 90\n\n(compared using ==)\n",
+     "polluter": "passed",
+     "sig": "8625d7e13427e1ddd232563f2fbf6b3af90e5a6eee1fa18571ec0f26fd8e6dca",
+     "victim": "failed"
+    }
+   ],
+   "plain_retry": [
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed"
+   ],
+   "sample_other_sha256": {
+    ".rspec": "4e49217efe7180cad2c65d4b38137be253185ed8a422464c0dbda26efb5e57de",
+    "Gemfile": "2c49d06de0977bb4db2a83a69b29fb32fba35658119e5d5e09c77d73d3b29ea0",
+    "app/models/cart.rb": "f3234565575808465c2e981323c7cc210b57a18a8843e6fb3ec0f09f355c1fd1",
+    "app/models/coupon.rb": "c21260cc17516dbf8ada5f46532106ec8a0cd70a1a371ee2cae540184294c561",
+    "spec/models/coupon_spec.rb": "9c3150ea5427a919ac49289c2ff7f0d664ad8b707ca9ab725dd0d3931e38d053",
+    "spec/models/stable_spec.rb": "d54f791ce2958d96c222c89d9afa0de1f0121d516107f82d7f5556bd3ebc0818",
+    "spec/spec_helper.rb": "13cb3a3168b9441e37fc1a0f1d79e76fd8f134eab70b7489f5e18814f2f5ec0f"
+   }
+  },
+  "real_fix": {
+   "cart_spec_sha256": "7e5cb3c8b09f32d2d6761554e378208e7208a649172dbc5415b5e723b76ece84",
+   "cert_replay": [
+    {
+     "exc": null,
+     "message": null,
+     "polluter": "passed",
+     "sig": null,
+     "victim": "passed"
+    },
+    {
+     "exc": null,
+     "message": null,
+     "polluter": "passed",
+     "sig": null,
+     "victim": "passed"
+    },
+    {
+     "exc": null,
+     "message": null,
+     "polluter": "passed",
+     "sig": null,
+     "victim": "passed"
+    }
+   ],
+   "plain_retry": [
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed"
+   ],
+   "sample_other_sha256": {
+    ".rspec": "4e49217efe7180cad2c65d4b38137be253185ed8a422464c0dbda26efb5e57de",
+    "Gemfile": "2c49d06de0977bb4db2a83a69b29fb32fba35658119e5d5e09c77d73d3b29ea0",
+    "app/models/cart.rb": "f3234565575808465c2e981323c7cc210b57a18a8843e6fb3ec0f09f355c1fd1",
+    "app/models/coupon.rb": "c21260cc17516dbf8ada5f46532106ec8a0cd70a1a371ee2cae540184294c561",
+    "spec/models/coupon_spec.rb": "9c3150ea5427a919ac49289c2ff7f0d664ad8b707ca9ab725dd0d3931e38d053",
+    "spec/models/stable_spec.rb": "d54f791ce2958d96c222c89d9afa0de1f0121d516107f82d7f5556bd3ebc0818",
+    "spec/spec_helper.rb": "13cb3a3168b9441e37fc1a0f1d79e76fd8f134eab70b7489f5e18814f2f5ec0f"
+   },
+   "sweep": {
+    "0": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "1": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "10": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "11": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "12": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "13": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "14": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "15": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "16": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "17": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "18": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "19": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "2": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "20": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "21": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "22": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "23": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "24": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "25": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "26": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "27": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "28": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "29": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "3": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "30": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "31": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "32": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "33": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "34": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "35": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "36": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "37": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "38": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "39": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "4": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "40": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "41": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "42": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "43": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "44": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "45": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "46": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "47": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "48": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "49": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "5": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "50": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "51": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "52": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "53": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "54": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "55": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "56": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "57": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "58": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "59": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "6": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "60": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "61": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "62": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "63": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "64": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "65": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "66": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "67": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "68": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "69": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "7": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "70": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "71": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "72": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "73": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "74": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "75": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "76": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "77": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "78": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "79": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "8": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "80": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "81": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "82": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "83": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "84": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "85": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "86": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "87": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "88": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "89": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "9": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "90": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "91": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "92": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "93": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "94": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "95": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "96": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "97": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "98": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "99": {
+     "polluter": "passed",
+     "victim": "passed"
+    }
+   }
+  },
+  "wrong_fix": {
+   "cart_spec_sha256": "ed722088487412a8a8c32151e0ed55784a97d75104e533d6eab3d070faf65757",
+   "cert_replay": [
+    {
+     "exc": "RSpec::Expectations::ExpectationNotMetError",
+     "message": "\nexpected: 100\n     got: 90\n\n(compared using ==)\n",
+     "polluter": "passed",
+     "sig": "synthetic-wrong-fix-sig",
+     "victim": "failed"
+    },
+    {
+     "exc": "RSpec::Expectations::ExpectationNotMetError",
+     "message": "\nexpected: 100\n     got: 90\n\n(compared using ==)\n",
+     "polluter": "passed",
+     "sig": "synthetic-wrong-fix-sig",
+     "victim": "failed"
+    },
+    {
+     "exc": "RSpec::Expectations::ExpectationNotMetError",
+     "message": "\nexpected: 100\n     got: 90\n\n(compared using ==)\n",
+     "polluter": "passed",
+     "sig": "synthetic-wrong-fix-sig",
+     "victim": "failed"
+    }
+   ],
+   "plain_retry": [
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed",
+    "passed"
+   ],
+   "sample_other_sha256": {
+    ".rspec": "4e49217efe7180cad2c65d4b38137be253185ed8a422464c0dbda26efb5e57de",
+    "Gemfile": "2c49d06de0977bb4db2a83a69b29fb32fba35658119e5d5e09c77d73d3b29ea0",
+    "app/models/cart.rb": "f3234565575808465c2e981323c7cc210b57a18a8843e6fb3ec0f09f355c1fd1",
+    "app/models/coupon.rb": "c21260cc17516dbf8ada5f46532106ec8a0cd70a1a371ee2cae540184294c561",
+    "spec/models/coupon_spec.rb": "9c3150ea5427a919ac49289c2ff7f0d664ad8b707ca9ab725dd0d3931e38d053",
+    "spec/models/stable_spec.rb": "d54f791ce2958d96c222c89d9afa0de1f0121d516107f82d7f5556bd3ebc0818",
+    "spec/spec_helper.rb": "13cb3a3168b9441e37fc1a0f1d79e76fd8f134eab70b7489f5e18814f2f5ec0f"
+   },
+   "sweep": {
+    "0": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "1": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "10": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "11": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "12": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "13": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "14": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "15": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "16": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "17": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "18": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "19": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "2": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "20": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "21": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "22": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "23": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "24": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "25": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "26": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "27": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "28": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "29": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "3": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "30": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "31": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "32": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "33": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "34": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "35": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "36": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "37": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "38": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "39": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "4": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "40": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "41": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "42": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "43": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "44": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "45": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "46": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "47": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "48": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "49": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "5": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "50": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "51": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "52": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "53": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "54": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "55": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "56": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "57": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "58": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "59": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "6": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "60": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "61": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "62": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "63": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "64": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "65": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "66": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "67": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "68": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "69": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "7": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "70": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "71": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "72": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "73": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "74": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "75": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "76": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "77": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "78": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "79": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "8": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "80": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "81": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "82": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "83": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "84": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "85": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "86": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "87": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "88": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "89": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "9": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "90": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "91": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "92": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "93": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "94": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "95": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "96": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "97": {
+     "polluter": "passed",
+     "victim": "failed"
+    },
+    "98": {
+     "polluter": "passed",
+     "victim": "passed"
+    },
+    "99": {
+     "polluter": "passed",
+     "victim": "passed"
+    }
+   }
+  }
+ }
+}

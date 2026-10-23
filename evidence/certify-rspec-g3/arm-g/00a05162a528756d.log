@@ -1,0 +1,96 @@
+Running in defined order:
+
+An error occurred while loading ./spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb. - Did you mean?
+                    rspec ./spec/lib/gitlab/background_migration/update_duo_secret_detection_fp_enabled_to_false_spec.rb
+
+Failure/Error: __send__(method, file)
+
+LoadError:
+  cannot load such file -- /gitlab/spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:2139:in `load'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:2139:in `load_file_handling_errors'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:1638:in `block in load_spec_files'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:1636:in `each'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:1636:in `load_spec_files'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/runner.rb:102:in `setup'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/runner.rb:86:in `run'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/runner.rb:71:in `run'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/runner.rb:45:in `invoke'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/exe/rspec:4:in `<top (required)>'
+# bin/rspec:5:in `load'
+# bin/rspec:5:in `<main>'
+# 
+#   Showing full backtrace because every line was filtered out.
+#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+#   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+No examples found.
+
+
+Finished in 0.00009 seconds (files took 5.5 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+WARNING: Specs failed. Running RSpec bisect:
+Bisect started using options: "--fail-fast --format progress --order defined spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb"
+Running suite to find failures...
+Bisect failed! Failed to get results from the spec run. Spec run output:
+
+
+An error occurred while loading ./spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb. - Did you mean?
+                    rspec ./spec/lib/gitlab/background_migration/update_duo_secret_detection_fp_enabled_to_false_spec.rb
+
+Failure/Error: __send__(method, file)
+
+LoadError:
+  cannot load such file -- /gitlab/spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:2139:in `load'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:2139:in `load_file_handling_errors'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:1638:in `block in load_spec_files'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:1636:in `each'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/configuration.rb:1636:in `load_spec_files'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/fork_runner.rb:111:in `block in run_specs'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/fork_runner.rb:108:in `run_specs'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/fork_runner.rb:94:in `block in dispatch_specs'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/fork_runner.rb:94:in `fork'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/fork_runner.rb:94:in `dispatch_specs'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/fork_runner.rb:70:in `dispatch_run'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/fork_runner.rb:59:in `original_results'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/example_minimizer.rb:118:in `block in prep'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/example_minimizer.rb:155:in `track_duration'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/example_minimizer.rb:117:in `prep'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/example_minimizer.rb:20:in `find_minimal_repro'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/coordinator.rb:31:in `block in bisect'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/fork_runner.rb:38:in `start'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/coordinator.rb:49:in `start_bisect_runner'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/coordinator.rb:27:in `bisect'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/bisect/coordinator.rb:17:in `bisect_with'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/invocations.rb:36:in `call'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/runner.rb:69:in `run'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/lib/rspec/core/runner.rb:45:in `invoke'
+# /gitlab/vendor/ruby/3.3.0/gems/rspec-core-3.13.1/exe/rspec:4:in `<top (required)>'
+# bin/rspec:5:in `load'
+# bin/rspec:5:in `<main>'
+# 
+#   Showing full backtrace because every line was filtered out.
+#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+#   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+No examples found.
+
++ export RSPEC_WARN_MISSING_FEATURE_CATEGORY=0
++ RSPEC_WARN_MISSING_FEATURE_CATEGORY=0
++ echo 'Running in defined order:'
++ rspec_run --order defined spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb
++ bin/rspec --fail-fast --format progress --order defined spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb
++ tee /tmp/rspec-check-order_dependence-V2T1et
++ echo 'WARNING: Specs failed. Running RSpec bisect:'
++ rspec_bisect --order defined spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb
+++ grep 'Randomized with seed ' /tmp/rspec-check-order_dependence-V2T1et
+++ grep -oE '[0-9]+'
+++ head -1
+++ true
++ seed=
++ local args
++ args=("${RSPEC_ARGS[@]}")
++ [[ -n '' ]]
++ bin/rspec --bisect --fail-fast --format progress --order defined spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb
++ cleanup
++ rm -f /tmp/rspec-check-order_dependence-V2T1et

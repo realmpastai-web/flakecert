@@ -1,0 +1,9 @@
+# flakecert image for F11 on Python 3.11
+# ladder: 3.11 3.9 3.8 3.7
+FROM flakecert-base:3.11
+COPY sitecustomize.py collect_nodes.py run_pytest.py /opt/flakecert/
+COPY install.sh /tmp/install.sh
+COPY src/ /opt/pristine/
+RUN bash /tmp/install.sh
+ENV PYTHONPATH=/opt/flakecert
+WORKDIR /

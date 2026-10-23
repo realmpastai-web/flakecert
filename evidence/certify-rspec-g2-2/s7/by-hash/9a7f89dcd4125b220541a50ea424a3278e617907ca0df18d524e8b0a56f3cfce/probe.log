@@ -1,0 +1,22 @@
++ phase=probe
++ seed=13
++ round=1
++ confirm=0
++ ids_n=737
++ ids_sha256=294bce48e78155c9ac17cb9dfaf54e2201d87ed51ef79d4499638721d5e1ac65
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/9a7f89dcd4125b220541a50ea424a3278e617907ca0df18d524e8b0a56f3cfce/ids.txt
++ attempt=1
+elapsed_s=5.848
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: already initialized constant #<Class:0x00007f700a780dd0>::Axns::Calculate
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: previous definition of Calculate was here
+docker_exit=1

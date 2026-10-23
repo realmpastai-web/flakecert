@@ -1,0 +1,26 @@
++ logical=rspec --order defined './spaceship/spec/connect_api/models/build_delivery_spec.rb[1:1:1]' './spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb[1:1:2:1:2]'
++ rspec_argv_len=298
++ rspec_argv_n=11
++ docker_argv_len=586
++ docker_argv_n=28
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -v /tmp/flakecert-g1-1019/work/rspec-json:/out -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --format documentation --no-color --order defined './spaceship/spec/connect_api/models/build_delivery_spec.rb[1:1:1]' './spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb[1:1:2:1:2]' --format json --out /out/spaceship_spec_connect_api_models_build_delivery_spec.rb-5-76eeb3f-C-r1.json
+elapsed_s=2.851
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:ids=>{"./spaceship/spec/connect_api/models/build_delivery_spec.rb"=>["1:1:1"], "./spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb"=>["1:1:2:1:2"]}}
+
+Spaceship::ConnectAPI::BuildDelivery
+  #Spaceship::ConnectAPI
+    #get_build_deliveries
+
+Spaceship::ConnectAPI::Provisioning::Client
+  sends api request
+    bundleId Capability
+      patch_bundle_id_capability
+        should make a request to turn APP_ATTEST off
+
+Finished in 0.29412 seconds (files took 1.69 seconds to load)
+2 examples, 0 failures
+
+docker_exit=0

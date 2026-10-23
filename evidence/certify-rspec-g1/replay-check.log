@@ -1,0 +1,24 @@
+===== replay-1.sh ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5 =====
+REPLAY_OK
+
+replay_exit=0
+===== replay-2.sh ./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5 =====
+REPLAY_OK
+
+replay_exit=0
+===== replay-3.sh ./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5 =====
+REPLAY_OK
+
+replay_exit=0
+===== replay-4.sh ./spaceship/spec/connect_api/models/build_delivery_spec.rb:5 =====
+REPLAY_OK
+
+replay_exit=0
+===== replay-5.sh ./spaceship/spec/portal/certificate_spec.rb:111 =====
+REPLAY_OK
+
+replay_exit=0
+===== replay-6.sh ./spaceship/spec/two_step_or_factor_client_spec.rb:76 =====
+REPLAY_OK
+
+replay_exit=0

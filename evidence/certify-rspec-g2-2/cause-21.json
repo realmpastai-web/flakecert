@@ -1,0 +1,1381 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "ba96a102444bc60fcc86dcf89221c0da70e2e5fd-dirty"
+  },
+  "repo": "teamshares/axn",
+  "base": {
+    "commit": "8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9",
+    "tarball_sha256": "63119f8a743e6681677668d5f9ba274b978e224c88d7044e72077bec7411823c"
+  },
+  "head": {
+    "commit": "6c62d568e27844bf7500be0a54425b7c9c65a8cc",
+    "tarball_sha256": "6b21ebd8606559104cfae3d2df20f2d55143a8f074a866378c980189303f46e0"
+  },
+  "image_id": "sha256:75d96121b9c7cad7a3f00037beaf3e80596aea21b14a34dff24a0e8760fef6e6",
+  "ruby": "ruby 3.3.12 (2026-07-16 revision 0581089df9) [x86_64-linux]",
+  "bundler": "Bundler version 2.5.6",
+  "rspec_core": "3.13.2",
+  "gemfile_lock_sha256": {
+    "base": "42ae032a7dfca943379c77d492fff5560f1338f36755f6e352b68ed4778c604a",
+    "head": "42ae032a7dfca943379c77d492fff5560f1338f36755f6e352b68ed4778c604a"
+  },
+  "seed": 4,
+  "victim_id": "./spec/axn/tools/registry_spec.rb[1:4:2]",
+  "victim_location": "./spec/axn/tools/registry_spec.rb:171",
+  "polluter_ids": [
+    "./spec/axn/tools/registry_spec.rb[1:13:1]"
+  ],
+  "minimal_reproduction_command": "rspec --require /flakecert/ordering.rb './spec/axn/tools/registry_spec.rb[1:13:1]' './spec/axn/tools/registry_spec.rb[1:4:2]'",
+  "commands": {
+    "A": "rspec --require /flakecert/ordering.rb './spec/axn/tools/registry_spec.rb[1:13:1]' './spec/axn/tools/registry_spec.rb[1:4:2]'",
+    "B": "rspec --require /flakecert/ordering.rb './spec/axn/tools/registry_spec.rb[1:4:2]'",
+    "C": "rspec --require /flakecert/ordering.rb './spec/axn/tools/registry_spec.rb[1:4:2]' './spec/axn/tools/registry_spec.rb[1:13:1]'"
+  },
+  "runs": {
+    "base": {
+      "A": [
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RSpec::Expectations::ExpectationNotMetError",
+          "first_error_message_line": "",
+          "failed_ids": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "8597c1ddc51354653d69ff79e4ce9b425546a8b365daea182f8c23485110d734",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-A-r1.log",
+          "elapsed_s": 1.573,
+          "order_status": "OK",
+          "victim_status": "failed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-A-r1.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-A-r1.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:13:1] ./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RSpec::Expectations::ExpectationNotMetError",
+          "first_error_message_line": "",
+          "failed_ids": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "55eca36e64b478f7aaf5df530f60f9ed5aebfe04602f56131b52abeed8109f1c",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-A-r2.log",
+          "elapsed_s": 1.384,
+          "order_status": "OK",
+          "victim_status": "failed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-A-r2.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-A-r2.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:13:1] ./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "RSpec::Expectations::ExpectationNotMetError",
+          "first_error_message_line": "",
+          "failed_ids": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "9967483a5d20c97c20b31c28296a7e591b1ce4cd6e0053386a7ad58574ebefd3",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-A-r3.log",
+          "elapsed_s": 1.388,
+          "order_status": "OK",
+          "victim_status": "failed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-A-r3.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-A-r3.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:13:1] ./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "b7e2f6a6b59299bcdd6a891dc988d45e2b0029dd7655aee1a904c726224944a5",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-B-r1.log",
+          "elapsed_s": 1.179,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-B-r1.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-B-r1.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "d009de4504b620e0e34cc533785dad288356dbefff63b18345386667a9bb69e8",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-B-r2.log",
+          "elapsed_s": 1.345,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-B-r2.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-B-r2.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "d8b607e51fe096df3881f1a50e75388fd7a9e6dec8b84216edcce1e1f1d17550",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-B-r3.log",
+          "elapsed_s": 1.403,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-B-r3.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-B-r3.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "216b4b612de6808e043488671b71abdd5e5ada8af4ad13fc4f998027453070a0",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-C-r1.log",
+          "elapsed_s": 1.283,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-C-r1.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-C-r1.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2] ./spec/axn/tools/registry_spec.rb[1:13:1]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "6d05fc0422f916271e09bd28d87d944d0d8a1511bc6466603dd2164d1d86403a",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-C-r2.log",
+          "elapsed_s": 1.234,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-C-r2.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-C-r2.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2] ./spec/axn/tools/registry_spec.rb[1:13:1]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "645ae2b9b7d569159ce91db7cc5f2c4e92cde3ce38181e1fe3db7a30ed0463d0",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-C-r3.log",
+          "elapsed_s": 1.301,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-C-r3.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-8daba1d-C-r3.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2] ./spec/axn/tools/registry_spec.rb[1:13:1]"
+            ]
+          ]
+        }
+      ]
+    },
+    "head": {
+      "A": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "bbc128121caf094e7b17da6e29f2c4201988587ee5bec092b2dcd53cbf66a4e0",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-A-r1.log",
+          "elapsed_s": 1.164,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-A-r1.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-A-r1.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:13:1] ./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "e287d86b0a80acd97478990e6cc84406244274b66eac07a1df08314dc2d1b597",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-A-r2.log",
+          "elapsed_s": 1.172,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-A-r2.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-A-r2.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:13:1] ./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "8290904d0b171e51bbf27a8983155df18a7205226a9c04605767c4e011681de4",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-A-r3.log",
+          "elapsed_s": 1.162,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-A-r3.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-A-r3.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:13:1] ./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "dd83bd6162bdf2949890dc91c8dd3ef9d03a0be88d44d5d181737aab0d2f004e",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-B-r1.log",
+          "elapsed_s": 1.102,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-B-r1.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-B-r1.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "2d78c48022b50344ed5c1cec859d4cf1d672b28810cd16f48018046a70ff2690",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-B-r2.log",
+          "elapsed_s": 1.179,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-B-r2.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-B-r2.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "0553c52c86e600dd305da329328cc1b9b2b364b89cca7829c63e56ba129f2ee4",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-B-r3.log",
+          "elapsed_s": 1.202,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-B-r3.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-B-r3.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2]"
+            ]
+          ]
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "8bd98e62933dd1a70bbac9a337053de795ce4ae7405e1d700cb25843b9d84694",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-C-r1.log",
+          "elapsed_s": 1.086,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-C-r1.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-C-r1.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2] ./spec/axn/tools/registry_spec.rb[1:13:1]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "f2278efbb39cd68a95d9f43fd31a8cf0327cc291a60f78b21aedbd65f55c438c",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-C-r2.log",
+          "elapsed_s": 1.074,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-C-r2.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-C-r2.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2] ./spec/axn/tools/registry_spec.rb[1:13:1]"
+            ]
+          ]
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "713c144d2b84a108e5ca61f5a62d56734fd73cad324b2e26406562030f5db231",
+          "log": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-C-r3.log",
+          "elapsed_s": 1.162,
+          "order_status": "OK",
+          "victim_status": "passed",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-C-r3.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2-2/s9/cause-21-6c62d56-C-r3.json",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/tools/registry_spec.rb[1:4:2] ./spec/axn/tools/registry_spec.rb[1:13:1]"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "verdicts": {
+    "base": "NOT_FIXED",
+    "head": "FIXED"
+  },
+  "plain_retry_verdict": {
+    "base": "FIXED",
+    "head": "FIXED"
+  },
+  "rep_disagreement": false,
+  "c_passes": true,
+  "label": "CERTIFIED",
+  "execution": {
+    "mode": "docker",
+    "image": "ruby:3.3",
+    "trees": {
+      "base": "/tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9",
+      "head": "/tmp/flakecert-g2-1019/probe/src/axn-6c62d568e27844bf7500be0a54425b7c9c65a8cc"
+    },
+    "timeout_s": 240,
+    "bundler": "2.5.6",
+    "extra_mounts": [
+      "-v",
+      "/tmp/flakecert-g2-1019/probe/bundle:/bundle",
+      "-v",
+      "/tmp/flakecert-g2-1019/probe/gems:/gems"
+    ],
+    "extra_env": [
+      [
+        "GEM_HOME",
+        "/gems"
+      ],
+      [
+        "PATH",
+        "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      ],
+      [
+        "BUNDLE_PATH",
+        "/bundle"
+      ],
+      [
+        "BUNDLE_SILENCE_ROOT_WARNING",
+        "1"
+      ]
+    ],
+    "clear_status": true,
+    "exec_argv": {
+      "base": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-8daba1d-C-r3.json"
+          ]
+        ]
+      },
+      "head": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/tools/registry_spec.rb[1:4:2]",
+            "./spec/axn/tools/registry_spec.rb[1:13:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/cause-21-6c62d56-C-r3.json"
+          ]
+        ]
+      }
+    }
+  },
+  "kind": "ORDER-DEPENDENT",
+  "seed_provenance": {
+    "seed": 4,
+    "seeds_failed": [
+      4,
+      16,
+      28
+    ],
+    "s0": {
+      "seed": 4,
+      "source": "s0/base-seed-04.json"
+    },
+    "seeds": [
+      4,
+      16,
+      28
+    ],
+    "rounds": [
+      {
+        "seed": 4,
+        "round": 1
+      },
+      {
+        "seed": 16,
+        "round": 1
+      },
+      {
+        "seed": 28,
+        "round": 2
+      }
+    ],
+    "candidate_source": "s6/residual-seeds.json"
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "body": "Added a second commit to fix a pre-existing flaky test that surfaced in this PR's CI.\n\n`spec/system/avo/tags_spec.rb:206` (`keep correct tags on validations error and edit` in the `format_using ... with fetch_values_from` describe) was failing because it implicitly depended on the leaked `with_temporary_items` state from the preceding `fetches the labels` test in the same describe. Under randomised test order — or when the leak just didn't land in the right place — the second test ran against the default Course resource, which doesn't have `fetch_values_from`, and failed.\n\nThe same failure has been hitting `main` CI (e.g. [system_specs job in run 25716241257](https://github.com/avo-hq/avo/actions/runs/25716241257) on commit 92dc420f).\n\nFix: moved the `with_temporary_items` setup into a `before` hook and the cleanup into an `after` hook in that describe. Both tests are now self-contained and independent of execution order. This is consistent with the pattern used in many other specs that were already in \"Category A\" in the audit above.",
+    "created_at": "2026-05-14T14:29:15Z",
+    "user": "ursm"
+  },
+  {
+    "body": "> Open question: should with_temporary_items itself be scope-bound?\r\n\r\nI think yes, your suggestion makes sense. At this point, we'll leave it as is since we're currently developing on both branches `main` for Avo 3 and `4-dev` for Avo 4, and this kind of change would result in conflicts that are not really necessary right now.\r\n\r\nIt’s a good idea to implement in the future, but for now let’s keep it as is.\r\n\r\nThanks for this submission and for the deep analysis. We really appreciate all the help and well argued opinions!",
+    "created_at": "2026-05-18T17:24:21Z",
+    "user": "Paul-Bob"
+  }
+]

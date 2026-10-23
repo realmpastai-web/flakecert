@@ -1,0 +1,85 @@
+# datadog-api-client-rust @0c6dbfbf73069fc670ca25083918606ecd6f58a2 (pinned in pup v2.0.0 Cargo.lock as datadog-api-client 0.38.0), model excerpts
+
+## src/datadogV2/model/model_ci_app_test_event.rs
+// Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+// This product includes software developed at Datadog (https://www.datadoghq.com/).
+// Copyright 2019-Present Datadog, Inc.
+use serde::de::{Error, MapAccess, Visitor};
+use serde::{Deserialize, Deserializer, Serialize};
+use serde_with::skip_serializing_none;
+use std::fmt::{self, Formatter};
+
+/// Object description of test event after being processed and stored by Datadog.
+#[non_exhaustive]
+#[skip_serializing_none]
+#[derive(Clone, Debug, PartialEq, Serialize)]
+pub struct CIAppTestEvent {
+    /// JSON object containing all event attributes and their associated values.
+    #[serde(rename = "attributes")]
+    pub attributes: Option<crate::datadogV2::model::CIAppEventAttributes>,
+    /// Unique ID of the event.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
+    /// Type of the event.
+    #[serde(rename = "type")]
+    pub type_: Option<crate::datadogV2::model::CIAppTestEventTypeName>,
+    #[serde(flatten)]
+    pub additional_properties: std::collections::BTreeMap<String, serde_json::Value>,
+    #[serde(skip)]
+    #[serde(default)]
+
+## src/datadogV2/model/model_ci_app_event_attributes.rs
+// Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+// This product includes software developed at Datadog (https://www.datadoghq.com/).
+// Copyright 2019-Present Datadog, Inc.
+use serde::de::{Error, MapAccess, Visitor};
+use serde::{Deserialize, Deserializer, Serialize};
+use serde_with::skip_serializing_none;
+use std::fmt::{self, Formatter};
+
+/// JSON object containing all event attributes and their associated values.
+#[non_exhaustive]
+#[skip_serializing_none]
+#[derive(Clone, Debug, PartialEq, Serialize)]
+pub struct CIAppEventAttributes {
+    /// JSON object of attributes from CI Visibility test events.
+    #[serde(rename = "attributes")]
+    pub attributes: Option<std::collections::BTreeMap<String, serde_json::Value>>,
+    /// Array of tags associated with your event.
+    #[serde(rename = "tags")]
+    pub tags: Option<Vec<String>>,
+    /// Test run level.
+    #[serde(rename = "test_level")]
+    pub test_level: Option<crate::datadogV2::model::CIAppTestLevel>,
+    #[serde(flatten)]
+    pub additional_properties: std::collections::BTreeMap<String, serde_json::Value>,
+    #[serde(skip)]
+    #[serde(default)]
+
+## src/datadogV2/model/model_ci_app_test_events_response.rs
+// Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+// This product includes software developed at Datadog (https://www.datadoghq.com/).
+// Copyright 2019-Present Datadog, Inc.
+use serde::de::{Error, MapAccess, Visitor};
+use serde::{Deserialize, Deserializer, Serialize};
+use serde_with::skip_serializing_none;
+use std::fmt::{self, Formatter};
+
+/// Response object with all test events matching the request and pagination information.
+#[non_exhaustive]
+#[skip_serializing_none]
+#[derive(Clone, Debug, PartialEq, Serialize)]
+pub struct CIAppTestEventsResponse {
+    /// Array of events matching the request.
+    #[serde(rename = "data")]
+    pub data: Option<Vec<crate::datadogV2::model::CIAppTestEvent>>,
+    /// Links attributes.
+    #[serde(rename = "links")]
+    pub links: Option<crate::datadogV2::model::CIAppResponseLinks>,
+    /// The metadata associated with a request.
+    #[serde(rename = "meta")]
+    pub meta: Option<crate::datadogV2::model::CIAppResponseMetadataWithPagination>,
+    #[serde(flatten)]
+    pub additional_properties: std::collections::BTreeMap<String, serde_json::Value>,
+    #[serde(skip)]
+    #[serde(default)]

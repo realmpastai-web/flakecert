@@ -1,0 +1,219 @@
+## sha256
+63119f8a743e6681677668d5f9ba274b978e224c88d7044e72077bec7411823c  base.tgz
+6b21ebd8606559104cfae3d2df20f2d55143a8f074a866378c980189303f46e0  merge.tgz
+155b54480f28e2b2813185077fe435c2d663031616360ed3b179a9d6a55d2551  rspec-core-3.12.2.gem
+94fbda6e4738e478f1c7532b7cc241272fcdc8b9eac03a97338b1122e4573300  rspec-core-3.13.2.gem
+## A1 merge tree = base + PR: files differing (expect the 9 spec files only)
+Files b/spec/axn/core/global_on_exception_spec.rb and m/spec/axn/core/global_on_exception_spec.rb differ
+Files b/spec/axn/core/method_call_spec.rb and m/spec/axn/core/method_call_spec.rb differ
+Files b/spec/axn/core/nested_exception_reporting_spec.rb and m/spec/axn/core/nested_exception_reporting_spec.rb differ
+Files b/spec/axn/core/testing/result_for_specs_spec.rb and m/spec/axn/core/testing/result_for_specs_spec.rb differ
+Files b/spec/axn/extras/strategies/client_spec.rb and m/spec/axn/extras/strategies/client_spec.rb differ
+Files b/spec/axn/mountable/steps/failure_semantics_spec.rb and m/spec/axn/mountable/steps/failure_semantics_spec.rb differ
+Files b/spec/axn/strategies_spec.rb and m/spec/axn/strategies_spec.rb differ
+Files b/spec/axn/tools/registry_spec.rb and m/spec/axn/tools/registry_spec.rb differ
+Files b/spec/support/shared_examples/registry_behavior.rb and m/spec/support/shared_examples/registry_behavior.rb differ
+## A2 lockfile pins
+220:    rspec-core (3.13.2)
+225:    rspec-mocks (3.13.2)
+283:   2.5.6
+BUNDLED WITH
+   2.5.6
+## A3 CI ruby matrix + spec command (main.yml); Rakefile :spec is RSpec::Core::RakeTask (no --order)
+    name: Main Specs (Ruby ${{ matrix.ruby }})
+    strategy:
+      matrix:
+        ruby:
+          - '3.2'
+          - '3.3'
+          - '3.4'
+
+    steps:
+    - uses: actions/checkout@v7
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
+    - name: Run main specs
+      run: bundle exec rake spec
+    - name: Run RuboCop linting
+require "rspec/core/rake_task"
+
+RSpec::Core::RakeTask.new(:spec)
+## A4 .rspec (no --order/--seed => defined order in CI)
+--format documentation
+--color
+--require spec_helper
+grep order|seed|random spec_helper:
+(none)
+## A5 spec_helper global before: Testing.reset! + reset_adapters! (does not reset @on_exception, registries, consts)
+  # file-load time and cannot be re-established mid-process), so axn's own suite — which does
+  # register adapters, unlike a host app — resets them separately here.
+  config.before do
+    Axn::Testing.reset!
+    Axn::Tools::Registry.reset_adapters!
+  end
+end
+      def reset!
+        Axn::Internal::Tracing.reset!
+        Axn::Async::Adapters::Sidekiq::AutoConfigure.reset_validation! if defined?(Axn::Async::Adapters::Sidekiq::AutoConfigure)
+        Axn::Core::NestingTracking._reset_isolation_warning!
+
+        nil
+      end
+## M1 registry duplicate raise + :custom writers in shared examples; .clear! example registers without clearing (base)
+        def register(name, item)
+          items = all # ensure built_in is initialized
+          key = name.to_sym
+          raise duplicate_error_class, "#{item_type} #{name} already registered" if items.key?(key)
+
+          items[key] = item
+          items
+        end
+5:    it "loads all files from the appropriate directory" do
+10:    it "returns a hash with module values" do
+16:    it "memoizes the result" do
+26:    it "adds an item to the list" do
+27:      described_class.clear!
+28:      described_class.register(:custom, custom_item)
+32:    it "allows custom items to be used" do
+33:      described_class.clear!
+34:      described_class.register(:custom, custom_item)
+38:    it "raises an error when registering a duplicate item by name" do
+39:      described_class.clear!
+40:      described_class.register(:custom, custom_item)
+42:        described_class.register(:custom, custom_item)
+46:    it "initializes items if not already done" do
+47:      described_class.clear!
+49:      described_class.register(:custom, custom_item)
+54:    it "returns all registered items as a hash" do
+60:    it "initializes items if not already done" do
+61:      described_class.clear!
+70:    it "finds an existing item" do
+74:    it "raises error for non-existent item" do
+80:    it "raises error for nil name" do
+86:    it "raises error for empty name" do
+92:    it "raises error for whitespace-only name" do
+99:  describe ".clear!" do
+100:    it "resets to built-in items only" do
+101:      described_class.register(:custom, Module.new)
+102:      described_class.clear!
+b/spec/axn/strategies_spec.rb:5:RSpec.describe Axn::Strategies do
+b/spec/axn/strategies_spec.rb:9:  it_behaves_like "a registry" do
+b/spec/axn/async/registry_spec.rb:5:RSpec.describe Axn::Async::Adapters do
+b/spec/axn/async/registry_spec.rb:7:  it_behaves_like "a registry" do
+    it "allows custom strategies to be used" do
+      described_class.clear!
+      described_class.register(:custom, custom_strategy)
+      expect { test_action.use(:custom) }.to output("Custom strategy included!\n").to_stdout
+b/lib/axn/strategies.rb:25:      def duplicate_error_class = DuplicateStrategyError
+b/lib/axn/async/adapters.rb:27:        def duplicate_error_class = DuplicateAdapterError
+## M2 ErrorHandlerMiddleware defined lazily (client.rb) and referenced by constant in client_spec (base)
+                  # Inject error handler middleware if configured
+                  if error_handler_config
+                    unless Client.const_defined?(:ErrorHandlerMiddleware, false)
+                      Client.const_set(:ErrorHandlerMiddleware, Class.new(::Faraday::Middleware) do
+                        def initialize(app, config)
+163:      it "injects ErrorHandlerMiddleware when error_handler is provided" do
+166:        expect(middleware_klasses(instance.client)).to include(Axn::Extras::Strategies::Client::ErrorHandlerMiddleware)
+169:      it "does not inject ErrorHandlerMiddleware when error_handler is nil" do
+172:        expect(middleware_klasses(instance.client)).not_to include(Axn::Extras::Strategies::Client::ErrorHandlerMiddleware)
+175:      it "does not inject ErrorHandlerMiddleware when error_handler is not provided" do
+178:        expect(middleware_klasses(instance.client)).not_to include(Axn::Extras::Strategies::Client::ErrorHandlerMiddleware)
+## M3 real-require fixtures in tools/registry_spec + exact-membership assertions
+114:      Object.send(:remove_const, :AutoloadProbe) if Object.const_defined?(:AutoloadProbe, false)
+335:  describe ".ensure_loaded! (non-Rails require fallback)", :aggregate_failures do
+336:    let(:fixture_dir) { File.expand_path("../../support/fixtures/registry_tools", __dir__) }
+350:  describe ".ensure_loaded! (non-Rails, isolates per-file load failures)", :aggregate_failures do
+351:    let(:fixture_dir) { File.expand_path("../../support/fixtures/registry_tools_mixed", __dir__) }
+380:  describe ".ensure_loaded! (per-file rescue reads the raised exception's own #message)", :aggregate_failures do
+383:    # raises), so it is NOT caught by ensure_loaded!'s own outer `rescue StandardError => e` — it escapes
+385:    it "does not let a hostile #message on the raised exception escape ensure_loaded!" do
+399:        expect { described_class.ensure_loaded! }.not_to raise_error
+408:        Object.send(:remove_const, :RegistryHostileFileError) if Object.const_defined?(:RegistryHostileFileError, false)
+413:  describe ".ensure_loaded! (outer rescue reads its own caught exception's #message)", :aggregate_failures do
+414:    # The method-level `rescue StandardError => e` at the bottom of ensure_loaded! is the LAST guard in
+416:    # `#message` on whatever it caught (here, a failure enumerating adapter dirs) escapes ensure_loaded!
+418:    it "does not let a hostile #message on the caught exception escape ensure_loaded!" do
+435:      expect { described_class.ensure_loaded! }.not_to raise_error
+441:  describe ".ensure_loaded! (non-Rails, isolates a SyntaxError in one tool file from valid siblings)", :aggregate_failures do
+479:  describe ".ensure_loaded! (non-Rails, rolls back registrations from a file that fails after the class body)", :aggregate_failures do
+480:    let(:fixture_dir) { File.expand_path("../../support/fixtures/registry_tools_failed", __dir__) }
+494:      # The failing file DID define/register its class before raising, but ensure_loaded! rolled
+504:  describe ".ensure_loaded! (non-Rails, scopes rollback to the failing file's own classes)", :aggregate_failures do
+505:    let(:fixture_dir) { File.expand_path("../../support/fixtures/registry_tools_nested", __dir__) }
+532:  describe ".ensure_loaded! (Rails eager_load_dir branch rolls back a failed dir's registrations)", :aggregate_failures do
+533:    # Faithfully drives ensure_loaded!'s Rails branch by stubbing the Zeitwerk surface (rather than
+571:      described_class.ensure_loaded!
+582:  describe ".ensure_loaded! (Rails eager_load_dir branch reads its own caught exception's #message)", :aggregate_failures do
+585:    # hostile `#message` answers with a non-StandardError that ensure_loaded!'s outer
+594:    it "does not let a hostile #message escape ensure_loaded!" do
+614:      expect { described_class.ensure_loaded! }.not_to raise_error
+620:  describe ".ensure_loaded! (Rails branch warns instead of eager-loading an unmanaged dir)", :aggregate_failures do
+646:      expect { described_class.ensure_loaded! }.not_to raise_error
+660:      described_class.ensure_loaded!
+14:      expect(described_class.adapters).to contain_exactly(:mcp, :ruby_llm)
+20:      expect(described_class.adapters.to_a).to eq([:mcp])
+44:      expect(described_class.adapters.to_a).to eq([:mcp])
+187:      expect(members).to eq([alpha, bravo, charlie])
+253:      expect(Axn::Tools.for(:mcp)).to contain_exactly(mcp_klass)
+254:      expect(Axn::Tools.for(:ruby_llm)).to contain_exactly(ruby_llm_klass)
+295:      expect(Axn::Tools.for(:mcp)).to contain_exactly(a)
+296:      expect(Axn::Tools.for(:ruby_llm)).to contain_exactly(a, b)
+312:      expect(Axn::Tools.for(:mcp)).to eq([a, z])
+818:      expect(versions).to eq([v1, v2])
+825:      expect(group.all).to eq([v1, v2])
+853:      expect(Axn::Tools.versions(:mcp, solo.tool_name(:mcp)).all).to eq([solo])
+885:      expect(Axn::Tools.versions(:mcp, "billing").all).to eq([good])
+900:      expect(Axn::Tools.versions(:mcp, "approve_loan").all).to eq([v2])
+## M4 lazy let original_handler restore (5 files)
+b/spec/axn/mountable/steps/failure_semantics_spec.rb:8:  let(:original_handler) { Axn.config.instance_variable_get(:@on_exception) }
+b/spec/axn/core/testing/result_for_specs_spec.rb:170:    let(:original_handler) { Axn.config.instance_variable_get(:@on_exception) }
+b/spec/axn/core/nested_exception_reporting_spec.rb:7:  let(:original) { Axn.config.instance_variable_get(:@on_exception) }
+b/spec/axn/core/method_call_spec.rb:356:    let(:original_handler) { Axn.config.instance_variable_get(:@on_exception) }
+b/spec/axn/core/global_on_exception_spec.rb:4:  let(:original_handler) { Axn.config.instance_variable_get(:@on_exception) }
+## B10 rspec-core --bisect unchanged 3.12.2 -> 3.13.2? (diff of bisect/ + example_minimizer)
+diff -r r12/lib/rspec/core/bisect/example_minimizer.rb r13/lib/rspec/core/bisect/example_minimizer.rb
+139c139
+<           ids_to_run = ids + failed_example_ids
+---
+>           ids_to_run = all_example_ids & (ids + failed_example_ids)
+diff -r r12/lib/rspec/core/bisect/fork_runner.rb r13/lib/rspec/core/bisect/fork_runner.rb
+104a105
+>             # :nocov: - Executed in a forked process, by integration/bisect_spec
+127a129
+>             # :nocov:
+## B11 3.13.2 minimizer reproduce rule (enablers cannot be found: a subset counts only if the original failures FAIL)
+45:        def bisect_over(candidate_ids)
+55:          lhs, rhs = candidate_ids.each_slice(slice_size).to_a
+58:            [lhs, rhs].find do |ids|
+150:          (failed_example_ids & results.failed_example_ids) == failed_example_ids
+## B12 3.13.2 option_parser --bisect / --seed
+59:        parser.on('--order TYPE[:SEED]', 'Run examples by the specified order type.',
+68:        parser.on('--seed SEED', Integer, 'Equivalent of --order rand:SEED.') do |seed|
+72:        parser.on('--bisect[=verbose]', 'Repeatedly runs the suite in order to isolate the failures to the ',
+## B13 PR diff (spec only)
++++ m/spec/axn/core/global_on_exception_spec.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -1,15 +1,20 @@
++++ m/spec/axn/core/method_call_spec.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -353,9 +353,13 @@
++++ m/spec/axn/core/nested_exception_reporting_spec.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -4,14 +4,18 @@
++++ m/spec/axn/core/testing/result_for_specs_spec.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -167,14 +167,18 @@
++++ m/spec/axn/extras/strategies/client_spec.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -169,13 +169,16 @@
++++ m/spec/axn/mountable/steps/failure_semantics_spec.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -5,15 +5,19 @@
++++ m/spec/axn/strategies_spec.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -32,6 +32,10 @@
++++ m/spec/axn/tools/registry_spec.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -339,6 +339,13 @@
+@@ -354,6 +361,15 @@
+@@ -472,6 +488,9 @@
+@@ -483,6 +502,12 @@
+@@ -508,6 +533,12 @@
++++ m/spec/support/shared_examples/registry_behavior.rb	2026-08-14 23:21:41.000000000 +0000
+@@ -1,6 +1,13 @@
+@@ -98,6 +105,10 @@

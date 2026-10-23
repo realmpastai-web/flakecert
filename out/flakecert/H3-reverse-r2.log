@@ -1,0 +1,44 @@
+===== flakecert H3-reverse-r2 2026-10-21T07:01:21Z =====
++ sha256sum /tmp/flakecert-f6-1019/tarballs/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04.tar.gz
+db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5  /tmp/flakecert-f6-1019/tarballs/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04.tar.gz
++ docker run bash /evidence/cmd/f6-H3-reverse-r2.sh
+----- script -----
+#!/bin/bash
+ruby -v
+bundle -v
+printf "TARBALL_SHA256:%s\n" "$TARBALL_SHA256"
+printf "COMMIT:%s\n" "$COMMIT"
+'bundle' 'exec' 'rspec' '--format' 'documentation' '--no-color' '--order' 'defined' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5' './spaceship/spec/connect_api/models/webhook_spec.rb'
+ec=$?
+echo "RSPEC_EXIT:$ec"
+exit $ec
+----- output -----
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+TARBALL_SHA256:db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5
+COMMIT:148c1c9b4c041b1659ea633f2632dd47eef8cb04
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:locations=>{"./spaceship/spec/connect_api/models/build_beta_detail_spec.rb"=>[5]}}
+
+Spaceship::ConnectAPI::BuildBetaDetail
+  #Spaceship::ConnectAPI
+    #get_build_beta_details
+
+Spaceship::ConnectAPI::Webhook
+  .all
+  .create
+  #client
+    #post_webhook
+    #delete_webhook
+    #get_webhooks
+      returns all webhooks for an app
+      deserializes second webhook correctly
+
+Finished in 0.54104 seconds (files took 1.36 seconds to load)
+7 examples, 0 failures
+
+RSPEC_EXIT:0
+
+docker_exit=0

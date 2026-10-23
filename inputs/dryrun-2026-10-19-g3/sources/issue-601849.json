@@ -1,0 +1,90 @@
+{
+  "_links": {
+    "award_emoji": "https://gitlab.com/api/v4/projects/278964/issues/601849/award_emoji",
+    "closed_as_duplicate_of": null,
+    "notes": "https://gitlab.com/api/v4/projects/278964/issues/601849/notes",
+    "project": "https://gitlab.com/api/v4/projects/278964",
+    "self": "https://gitlab.com/api/v4/projects/278964/issues/601849"
+  },
+  "assignee": null,
+  "assignees": [],
+  "author": {
+    "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/438961/avatar.png?v=1792389436",
+    "id": 438961,
+    "locked": false,
+    "name": "Peter Leitzen",
+    "public_email": "",
+    "state": "active",
+    "username": "splattael",
+    "web_url": "https://gitlab.com/splattael"
+  },
+  "blocking_issues_count": 0,
+  "closed_at": null,
+  "closed_by": null,
+  "confidential": false,
+  "created_at": "2026-06-02T15:23:44.734Z",
+  "description": "<!--IssueSummary start-->\n\n<details>\n<summary>\n\nEveryone can contribute. [Help move this issue forward](https://handbook.gitlab.com/handbook/marketing/developer-relations/contributor-success/community-contributors-workflows/#contributor-links) while earning points, leveling up and collecting rewards.\n\n</summary>\n\n- [Work on this issue](https://contributors.gitlab.com/manage-issue?action=work&projectId=278964&issueIid=601849)\n- [Close this issue](https://contributors.gitlab.com/manage-issue?action=close&projectId=278964&issueIid=601849)\n\n</details>\n\n<!--IssueSummary end-->\n\n## Summary\n\nThis issue tracks FOSS spec files from\n[`spec/support/rspec_order_todo.yml`](../blob/master/spec/support/rspec_order_todo.yml)\nthat **failed** the `scripts/rspec_check_order_dependence` check while being\nprocessed by AI agents working on https://gitlab.com/gitlab-org/gitlab/-/issues/601848.\n\nEach failing file falls into one of two categories — see below. The category\ndetermines what the AI agent reports and what the human fix looks like.\n\n---\n\n## Excluded specs\n\nThis list is the **machine-readable exclusion set** for AI agents. It contains every spec that has failed the check and must be skipped in future batch runs. Agents read this list during pre-flight and append to it whenever a new failure is reported.\n\n```yaml\n# Specs confirmed as failing scripts/rspec_check_order_dependence.\n# Do not re-check these in future batches.\n- spec/mailers/devise_mailer_spec.rb                                                          # batch-001 Category A: asset compilation failure\n- spec/models/ci/build_trace_chunks/fog_spec.rb                                              # batch-001 Category A: Fog storage not configured\n- spec/models/concerns/reactive_caching_spec.rb                                              # batch-001 Category A: before(:suite) hook error\n- spec/services/timelogs/delete_service_spec.rb                                              # batch-001 Category B1: reverse-order failure\n- spec/lib/gitlab/query_limiting/active_support_subscriber_spec.rb                          # batch-003 Category A: setup failure\n- spec/requests/api/graphql/mutations/ci/job_token_scope/remove_project_spec.rb             # batch-003 Category A: Vite not running\n- spec/requests/api/graphql/mutations/issues/set_escalation_status_spec.rb                  # batch-002 Category A: Vite not running\n- spec/requests/api/graphql/project/error_tracking/sentry_errors_request_spec.rb           # batch-003 Category A: Vite not running\n- spec/requests/api/graphql/project/recent_issue_boards_query_spec.rb                       # batch-002 Category A: Vite not running\n- spec/requests/users_controller_spec.rb                                                     # batch-002 Category A: Vite not running\n- spec/services/design_management/generate_image_versions_service_spec.rb                   # batch-002 Category A: setup failure\n```\n\n---\n\n## Failure categories\n\n### Category A — Setup failure\n\n**Definition:** The spec fails even when run in **defined order** (the very\nfirst phase of the check script). This is not an order-dependency problem —\nthe spec itself is broken or relies on missing environment setup.\n\nLook for these signs in the script output:\n- Failure occurs under `\"Running in defined order:\"`\n- Error is `LoadError`, missing constant, missing factory, wrong database state, etc.\n\n**Human fix:** Investigate and fix the spec or its environment prerequisites.\nThis is unrelated to random-order execution.\n\n---\n\n### Category B — Order-dependency failure\n\n**Definition:** The spec passes in defined order but fails in **reverse** or\n**random** order. This is a true order-dependency caused by shared mutable\nstate leaking between examples.\n\nTwo sub-cases:\n\n| Sub-case | Trigger phase | Seed available? |\n|---|---|---|\n| B1 — reverse | `\"Running in reverse order:\"` | No |\n| B2 — random | `\"Running in random order (N/M):\"` | Yes — `Randomized with seed NNNN` |\n\n**`scripts/rspec_check_order_dependence` already runs `rspec --bisect` automatically on failure.** The bisect output ends with a `Rerun with:` line — that is the minimal reproduction command.\n\n---\n\n## For AI agents\n\nWhen `scripts/rspec_check_order_dependence <path>` exits non-zero, capture the\n**full output**, then:\n\n1. **Determine the category** by finding the first failing phase header in the output:\n   - `\"Running in defined order:\"` → **Category A**\n   - `\"Running in reverse order:\"` → **Category B1**\n   - `\"Running in random order\"` → **Category B2** (note the seed on the line `Randomized with seed NNNN`)\n\n2. **For Category B**, extract the bisect result — the line starting with `bin/rspec` after `Bisect complete! Rerun with:`. This is the minimal reproduction command.\n\n3. **Post a comment** on this issue using the format below.\n\n4. **Update the `## Excluded specs` section** in this issue description by appending the new spec path (with batch and category as a comment) to the YAML list. This keeps the machine-readable exclusion set current for future agents.\n\n5. Continue to the next candidate. Do **not** attempt to fix the spec yourself.\n\n**Comment format — Category A (setup failure):**\n\n```markdown\n### `spec/path/to/failing_spec.rb` — Category A: Setup failure\n\n- **Batch:** rspec-order-todo-foss-batch-NNN\n- **Failing phase:** defined order\n- **Error summary:** (one line, e.g. \"NameError: uninitialized constant Foo\")\n- **Relevant output:**\n  ```\n  <first failing example + error>\n  ```\n```\n\n**Comment format — Category B (order-dependency):**\n\n```markdown\n### `spec/path/to/failing_spec.rb` — Category B: Order-dependent\n\n- **Batch:** rspec-order-todo-foss-batch-NNN\n- **Sub-case:** B1 (reverse) | B2 (random, seed NNNN)\n- **Reproduction command:**\n  ```shell\n  bin/rspec --bisect [--seed NNNN] spec/path/to/failing_spec.rb\n  ```\n  > **Minimal repro (from bisect):**\n  > ```shell\n  > bin/rspec --seed NNNN spec/path/to/failing_spec.rb[1:X,1:Y]\n  > ```\n- **Likely cause:** (brief description, e.g. \"example [1:X] leaves a mutable `let!` object behind\")\n- **Suggested fix:** (see Suggested fixes section below)\n```\n\n---\n\n## Suggested fixes (for the next agent picking up a Category B item)\n\nUse the minimal bisect repro to identify the **polluting example** (the one\nthat runs before the failing one in the bad order). Then apply the appropriate fix:\n\n| Symptom | Fix |\n|---|---|\n| `let!` or `before` creates a record that is not cleaned up | Wrap in `let` (lazy) or ensure `DatabaseCleaner` strategy covers it |\n| Instance variable or class variable mutated in `before(:all)` | Convert to `before(:each)` or use `around` to reset |\n| Global config changed (e.g. `Gitlab.config`, `Feature` flags, `ENV`) | Use `stub_env` / `stub_feature_flags` / `allow_any_instance_of` scoped to the example |\n| `described_class` or module constant mutated | Freeze or restore with `around { |e| orig = …; e.run; … = orig }` |\n| Shared `subject` or `let` referencing mutable AR object | Add `freeze: false` if using `let_it_be`, or switch to `let` |\n\nAfter applying the fix, verify with:\n\n```shell\nRANDOM_ORDER_RUNS=10 scripts/rspec_check_order_dependence spec/path/to/fixed_spec.rb\n```\n\nIf it passes, the script removes the file from `rspec_order_todo.yml` automatically.\nCommit only `rspec_order_todo.yml` + the fixed spec, and open an MR referencing\nboth this issue and https://gitlab.com/gitlab-org/gitlab/-/issues/601848.\n\n---\n\n## For humans\n\nSame process as for agents — use the bisect repro command from the comment,\nfind the polluting example, apply one of the fixes above. The bisect output\nalready tells you which example indices to look at.\n\nContributes to https://gitlab.com/gitlab-org/gitlab/-/issues/601848",
+  "discussion_locked": null,
+  "downvotes": 0,
+  "due_date": null,
+  "epic": {
+    "group_id": 9970,
+    "human_readable_end_date": "Oct 12, 2025",
+    "human_readable_timestamp": "<strong>Past due</strong>",
+    "id": 3790944,
+    "iid": 19585,
+    "title": "Run new backend specs in random order",
+    "url": "/groups/gitlab-org/-/epics/19585"
+  },
+  "epic_iid": 19585,
+  "has_tasks": true,
+  "health_status": null,
+  "id": 191592577,
+  "iid": 601849,
+  "imported": false,
+  "imported_from": "none",
+  "issue_type": "issue",
+  "iteration": null,
+  "labels": [
+    "backend",
+    "devops::developer experience",
+    "group::development tooling",
+    "maintenance::test-gap",
+    "section::developer experience",
+    "test",
+    "type::maintenance",
+    "workflow::ready for development"
+  ],
+  "merge_requests_count": 0,
+  "milestone": null,
+  "moved_to_id": null,
+  "project_id": 278964,
+  "references": {
+    "full": "gitlab-org/gitlab#601849",
+    "relative": "#601849",
+    "short": "#601849"
+  },
+  "service_desk_reply_to": null,
+  "severity": "UNKNOWN",
+  "start_date": null,
+  "state": "opened",
+  "subscribed": false,
+  "task_completion_status": {
+    "completed_count": 0,
+    "count": 0
+  },
+  "task_status": "0 of 0 checklist items completed",
+  "time_stats": {
+    "human_time_estimate": null,
+    "human_total_time_spent": null,
+    "time_estimate": 0,
+    "total_time_spent": 0
+  },
+  "title": "Order-dependent FOSS specs needing attention (rspec_order_todo)",
+  "type": "ISSUE",
+  "updated_at": "2026-06-17T09:06:02.711Z",
+  "upvotes": 0,
+  "user_notes_count": 5,
+  "web_url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/601849",
+  "weight": null
+}

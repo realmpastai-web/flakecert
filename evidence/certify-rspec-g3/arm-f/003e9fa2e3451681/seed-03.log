@@ -1,0 +1,29 @@
+W, [2026-10-20T07:41:09.828827 #147107]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Randomized with seed 3
+
+Gitlab::Database::PostgresqlAdapter::DumpSchemaVersionsMixin
+  # order random
+  calls SchemaMigrations touch_all and skips original implementation
+  does not call touch_all in production
+
+Finished in 0.01469 seconds (files took 3.07 seconds to load)
+2 examples, 0 failures
+
+Randomized with seed 3
+
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.3389020000000001
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:125:in `run'
+
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 1.0: 1.2368190000000001
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:126:in `run'
+
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.23211500000000018
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:127:in `run'
+

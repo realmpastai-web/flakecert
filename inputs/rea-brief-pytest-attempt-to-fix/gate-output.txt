@@ -1,0 +1,38 @@
+PASS	rea.sha pytest_rerunfailures-16.7.tar.gz	6956ddfb65ca1d07
+PASS	rea.pypi_json_sdist_digest pytest_rerunfailures-16.7.tar.gz	
+PASS	rea.sha pytest_randomly-5.0.0.tar.gz	e9c575a5873ef168
+PASS	rea.pypi_json_sdist_digest pytest_randomly-5.0.0.tar.gz	
+PASS	rea.rerunfailures.pkg_info	
+PASS	rea.randomly.pkg_info	
+PASS	rea.rerunfailures.rerun_condition	reruns only after a failed phase
+PASS	rea.rerunfailures.same_item_same_process_loop	while loop re-runs runtestprotocol on the same item, same nextitem
+PASS	rea.rerunfailures.no_seed_random_shuffle	0 hits
+PASS	rea.rerunfailures.no_cert_replay_sha256	0 hits
+PASS	rea.rerunfailures.hashlib_only_xdist_crash_key	2 lines: import + StatusDB crash-item key
+PASS	rea.randomly.reseed_random_seed	
+PASS	rea.randomly.per_phase_crc32_nodeid	setup/call/teardown offsets
+PASS	rea.randomly.order_key_crc32_seed_nodeid	
+PASS	rea.randomly.header_seed_only	
+PASS	rea.randomly.session_seed_cached	one seed per session, cached for --randomly-seed=last
+PASS	rea.randomly.no_cert_replay_hash	0 hits
+PASS	rea.reach_snapshot_2026_10_18	downloads, not user counts
+PASS	pin.pins/requirements.lock	3e92ee06a3243bc1
+PASS	pin.pins/Dockerfile	ebc28c1bc5aa9903
+PASS	pin.expected/predicted-sweep.json	e08709e94843d176
+PASS	fix.sha prefix	871e2e4b2792376d
+PASS	fix.sha wrong_fix	89a1f5dc0e3b8ee6
+PASS	fix.sha real_fix	469147e64fdbe2f8
+PASS	fix.prefix_is_frozen_sample	
+PASS	sample.sha256	5 other files
+PASS	fix.wrong_fix_insertions_only	1 lines inserted
+PASS	fix.real_fix_insertions_only	8 lines inserted
+PASS	fix.test_names_unchanged	
+PASS	fix.app_untouched_by_patches	
+PASS	pin.lock_excludes_reversed_packages	iniconfig==2.1.0 packaging==25.0 pluggy==1.6.0 pygments==2.19.2 pytest==8.4.2
+PASS	pin.dockerfile_base	
+PASS	pred.sweep_recomputed	53/100 polluter-first seeds
+PASS	pred.both_outcomes_present	
+PASS	stats.20_of_20_exact_one_sided_upper_95	0.1391
+PASS	dd.attempt_to_fix_is_20_retries	
+PASS	scope.no_capability_denials_in_brief	0 hits
+GATE PASS

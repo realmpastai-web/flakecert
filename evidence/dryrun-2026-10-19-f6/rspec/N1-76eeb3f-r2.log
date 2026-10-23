@@ -1,0 +1,40 @@
+===== N1-76eeb3f-r2 2026-10-19T06:43:20Z =====
++ timeout 420 docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-f6-1019/src/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -w /src flakecert-dryrun-fastlane:ruby31 bash -lc 'ruby -v; bundle -v; bundle exec rspec --format documentation --no-color --seed 48174 ./spaceship/spec/two_step_or_factor_client_spec.rb:76:94; ec=$?; echo RSPEC_EXIT:$ec; exit $ec'
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:locations=>{"./spaceship/spec/two_step_or_factor_client_spec.rb"=>[76, 94]}}
+
+Randomized with seed 48174
+
+Spaceship::Client
+  handle_two_factor
+    when running interactive
+      does not raise an error
+    when running non-interactive
+      raises an error (FAILED - 1)
+
+Failures:
+
+  1) Spaceship::Client handle_two_factor when running non-interactive raises an error
+     Failure/Error: subject.handle_two_step_or_factor("response")
+
+     RuntimeError:
+       2FA can only be performed in interactive mode
+     # ./spaceship/lib/spaceship/two_step_or_factor_client.rb:7:in `handle_two_step_or_factor'
+     # ./spaceship/spec/two_step_or_factor_client_spec.rb:80:in `block (4 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.16321 seconds (files took 1.72 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+RSPEC_EXIT:1
+docker_exit=1

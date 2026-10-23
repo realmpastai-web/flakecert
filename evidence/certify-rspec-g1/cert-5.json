@@ -1,0 +1,866 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "43798e9482273e1c4deab048b925c9cde68ebc85-dirty"
+  },
+  "repo": "fastlane/fastlane",
+  "base": {
+    "commit": "76eeb3f9352a657fd979ae00e89e49a388729e30",
+    "tarball_sha256": "078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa"
+  },
+  "head": {
+    "commit": "148c1c9b4c041b1659ea633f2632dd47eef8cb04",
+    "tarball_sha256": "db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5"
+  },
+  "image_id": "sha256:1f3248c0b71fb38ce02d05bc3cee8da5257792360158a660b83518c8cb827e63",
+  "ruby": "ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]",
+  "bundler": "Bundler version 2.6.9",
+  "rspec_core": "3.12.2",
+  "gemfile_lock_sha256": {
+    "base": "26645914f0dfa289ce50992aebfa8e750dadd987007de63d9cc27c8621d10053",
+    "head": "26645914f0dfa289ce50992aebfa8e750dadd987007de63d9cc27c8621d10053"
+  },
+  "seed": 48174,
+  "victim_id": "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+  "victim_location": "./spaceship/spec/portal/certificate_spec.rb:111",
+  "polluter_ids": [
+    "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+  ],
+  "minimal_reproduction_command": "rspec './spaceship/spec/portal/certificate_spec.rb[1:5:3]' './spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]' --no-color --seed 48174",
+  "commands": {
+    "A": "rspec --seed 48174 './spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]' './spaceship/spec/portal/certificate_spec.rb[1:5:3]'",
+    "B": "rspec './spaceship/spec/portal/certificate_spec.rb[1:5:3]'",
+    "C": "rspec --order defined './spaceship/spec/portal/certificate_spec.rb[1:5:3]' './spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]'"
+  },
+  "runs": {
+    "base": {
+      "A": [
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "WebMock::NetConnectNotAllowedError",
+          "first_error_message_line": "Real HTTP connections are disabled. Unregistered request: POST https://developer.apple.com/services-account/QH65B2/account/ios/certificate/submitCertificateRequest.action with body 'appIdId=44V62UZ8L7&csrContent=-----BEGIN+CERTIFICATE+REQUEST-----%0AMIICUzCCATsCAQAwDjEMMAoGA1UEAwwDUEVNMIIBIjANBgkqhkiG9w0BAQEFAAOC%0AAQ8AMIIBCgKCAQEApXTdav5iiJsszEV1LGTLMX0wiiIqbr6%2Fzwc5TNt7FPZb6Csa%0Ab0az%2B8lFICm1c9daiSfOmzafbTSE76%2BDWSqVEkhPoRREZ89ktlPo2Fp7x%2BL5bmxD%0A6Kt0T0HONmHn%2BjxGFLXS11CVMmTRQLaOvM%2FAzmVwU%2Bm1IlZk5Y2BS1tYpgNO7R36%0AcheKrnFrcrfFqUeVpboMRdX%2FmIY7DC1U6CCXVsFyKyyATOPAXGun3vc8JnbEk524%0AL5vsrkfQLu%2B6u5xeaNTdF835CoU%2BZYDfffVwMIXEmup4rTEZiU5rwbQL40Tm9U4B%0ASw0KA3Dg5Z9kLmbpklHfeex%2BDc0tBxri2UGmwQIDAQABoAAwDQYJKoZIhvcNAQEL%0ABQADggEBAH0yEr5vUj1SWhQdYAerxq3h1%2BDuw7b20AQ%2F%2BkA534bbWIGDI5u34Nq0%0ANpbZ0A%2BcDrjIQztlMSLlNG3aMohEjFCVurKVYX%2BkzVlS294GoygCQ3cPgcTy%2BzWc%0AeqfXuHDy80ik%2BFjzEK0atZhEaU73qGh2ynTzrBCevOQ3dBPaZgFFDO5pN4ZdniKI%0AepVBiOLNb8cwcO9NX813fCR4IiI3D0k20Z69x%2BcWc0770DzTJrlK9eDU2VpR6wsr%0AfbHu45CFvvwxjWO53cAKZbqG0p6rD%2FyMn07khvPUBfNr3SkjziUdxMonOgbM4Syc%0AiHRrk1rNlyeXNwRgS5O6W%2Ba1zhtVNc0%3D%0A-----END+CERTIFICATE+REQUEST-----%0A&specialIdentifierDisplayId=44V62UZ8L7&teamId=XXXXXXXXXX&type=3T2ZP62QW8' with headers {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/x-www-form-urlencoded', 'User-Agent'=>'Spaceship 2.239.0'}",
+          "failed_ids": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "order": [
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "8a16fd713d55d2acc13ffc18a297f32dbcadf02f02b693db7fc686a110a79d74",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r1.log",
+          "elapsed_s": 2.844,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "WebMock::NetConnectNotAllowedError",
+          "first_error_message_line": "Real HTTP connections are disabled. Unregistered request: POST https://developer.apple.com/services-account/QH65B2/account/ios/certificate/submitCertificateRequest.action with body 'appIdId=44V62UZ8L7&csrContent=-----BEGIN+CERTIFICATE+REQUEST-----%0AMIICUzCCATsCAQAwDjEMMAoGA1UEAwwDUEVNMIIBIjANBgkqhkiG9w0BAQEFAAOC%0AAQ8AMIIBCgKCAQEAxEaULxobIYFvisPHH0ukwfFigZ%2BhK6bjigG83ibIjM2qXWui%0ATODHVuUjZQnv1z9ITUDG60g9e%2Fbc1CNo4c0enw6xRSq6UVaLS8ZNv7aKP90GN1pn%0AOnPMDReAF3Mr0fMMoFeo%2FRnVqnRBm3vchOZX%2BdVpRVcW6kXqxODPCLHLgJLJg7Q3%0ASZxzoB4fgwXrsdTL0N9dyd%2Fy%2BWhfQRraoZSaXePhYhZ5ne58v88FRoFClktF2nFi%0A%2F1Z3VTDHLEuTlhZjyl%2FBSudOKWbBwtsGS%2ByRgh7DnrHErVLQRW1doXFXPVt2JZS3%0AQJ9CZ0xtsmX1FzVlmyu0B4oRdSvroPP4A2369wIDAQABoAAwDQYJKoZIhvcNAQEL%0ABQADggEBALGU%2BuJFErurSPe0WHudYQivg9tmXSUzCpfAUCeOyoPT6E4tH2ZBKzrl%0AK1abF%2Baszn4C42L5FRaZT2Qtr4ntOTj8F2r7s%2B9rGmDs%2BdOcFUz84hSUji1%2BdRs%2F%0AAYLMep2Yzjal43IZ3ZeHAFyNvuL6jL43WNi7Twi8sWztZ73RZw2hstbrarrVWLk8%0A%2Fs3jmxFkTCdhvXpThFL0UJypNEZ%2BWC8Yu%2BHz%2BT54d8th6PjhhQTdkds8PYknAsC1%0AFUPs%2FtLQ4NkWyC0xthdcICL7xNKoinrMjIDPXnr0YCHs7DfcCMP7HlpTPIiuPLEU%0APQqcLYzq9f4%2Bni0xxa%2BbrKTd1nD4ZjU%3D%0A-----END+CERTIFICATE+REQUEST-----%0A&specialIdentifierDisplayId=44V62UZ8L7&teamId=XXXXXXXXXX&type=3T2ZP62QW8' with headers {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/x-www-form-urlencoded', 'User-Agent'=>'Spaceship 2.239.0'}",
+          "failed_ids": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "order": [
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "4815158015656854ee8ffed775ffe8544293e2e42cfd50f145456ff48afcd33d",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r2.log",
+          "elapsed_s": 2.689,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "WebMock::NetConnectNotAllowedError",
+          "first_error_message_line": "Real HTTP connections are disabled. Unregistered request: POST https://developer.apple.com/services-account/QH65B2/account/ios/certificate/submitCertificateRequest.action with body 'appIdId=44V62UZ8L7&csrContent=-----BEGIN+CERTIFICATE+REQUEST-----%0AMIICUzCCATsCAQAwDjEMMAoGA1UEAwwDUEVNMIIBIjANBgkqhkiG9w0BAQEFAAOC%0AAQ8AMIIBCgKCAQEAlg76M%2BV6nBriVJkOUckE%2B%2B8%2F%2BbA0kq0XFA3XWK2hC6%2BgGONS%0AKH3B%2Bdp1LUL27F85ERjR6FBw9Fy1rm16gxrpan7s6N8Wl73NSNZabmRK3TxHt1Wi%0AFoFHZSL8X5i5MRiV19y9NpDAPipwOYAaalUOZ2gjSn%2FglJOTrp9BjlwWsj2udv5a%0AHE0dBkn%2FXRnm8vAN026Vf%2Bd0Y5RN1qCKRAuWuhGwZSKs0%2FxlZu81jCDogli8I9HU%0AllHQy%2BqEyH%2BGkTanGzyoAvhBgvLf%2FNEIBlWQ6Wl2dPqKFLrSshyQdMF%2FgtXv4u4%2B%0AOGpcuSEn9Pnp5oQ%2Bn1%2F%2FHSsugIGeKCyVxufmjQIDAQABoAAwDQYJKoZIhvcNAQEL%0ABQADggEBAHwQ7fgJ1ntG6cWlv7QwYxMUtC%2FnJPt1HqUiUL%2FG%2Fyp%2BMbYP612xroO%2B%0AK2wGp8cdkNiyBCh58l5ejw7NgGX2SNM8jOW4MJhTeOQ6DOo9xF4RI%2FVvXr4B5AM1%0AtREQWOeMg8SyPJSHRZTqdFpaJr5NUZFG3gSU943vu1riNJlBqM%2FWiHLLyhoTLPKL%0A4LMWym6FcrLNWumXWevM3aIMe4Nk5mGJ%2FedVbNDrtqnq40CaezRMSPWkL0gwKxbe%0Asz3d6POSbvUNnbwQLWwDDX7zR1jYZRQuNLzJf%2Fjrbh7g7OW3VZLC8ZySjdis99%2Fk%0AqczVVc51KhRzQzzrx9zIaNrlxYdcLvA%3D%0A-----END+CERTIFICATE+REQUEST-----%0A&specialIdentifierDisplayId=44V62UZ8L7&teamId=XXXXXXXXXX&type=3T2ZP62QW8' with headers {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/x-www-form-urlencoded', 'User-Agent'=>'Spaceship 2.239.0'}",
+          "failed_ids": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "order": [
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "401a014d73ab64cf6ab871604d22612ad8da83b238c16f012515310bd0886547",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r3.log",
+          "elapsed_s": 3.065,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r3.json",
+          "tree_side": "base"
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "bc6c7d0b8987488f03c49f7189151012e83e6b30c6597f5489c58bce68941960",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r1.log",
+          "elapsed_s": 2.841,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "2a5c1099af287482b7e67418b06526f766d1ec864898e2cb95c2e32e488e960c",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r2.log",
+          "elapsed_s": 2.666,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "dc0294231bd5382888cbb954185b7ca89ac3c991295e557b38c9df5cc3c2acf6",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r3.log",
+          "elapsed_s": 2.985,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r3.json",
+          "tree_side": "base"
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "299dd185763018fd636fcaf3f9004728fa38dfc125e774ea47d4598a604c5ea7",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r1.log",
+          "elapsed_s": 3.005,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "3c87df1bb6d0e22e187f3d046c092d494a167fd941f004ca358a3bd8f9ce7a3f",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r2.log",
+          "elapsed_s": 2.726,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "439fe77adc8da120d1e2cb96d760bb37285af4005c1c91218cb3098429cb4c6c",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r3.log",
+          "elapsed_s": 2.996,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r3.json",
+          "tree_side": "base"
+        }
+      ]
+    },
+    "head": {
+      "A": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "206af599b3c186eecdbf108d6b29793ed1023becdfa5713a63fc6244fdaf519f",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r1.log",
+          "elapsed_s": 3.088,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "5611b614e76a1dd801e3f029e82fcecdf7e975dcc286eab4f1bc0619fe104aa5",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r2.log",
+          "elapsed_s": 2.909,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "02865a4cbde49dc5670f1729972143531b82567ca4225c081df6b028a1af471c",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r3.log",
+          "elapsed_s": 2.823,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r3.json",
+          "tree_side": "head"
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "3719e964d4d95d4911a14a6643e7a163baf6135329e6a5fd2f83d2d9e0922d4f",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r1.log",
+          "elapsed_s": 3.013,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "47c4b8f627f48979ec43f6f0c08ed6946ae3f5f47683766b7930b2c08d7a5c4d",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r2.log",
+          "elapsed_s": 2.688,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "1be4065533ccac42d7b5985e8ce5f9959d38e4a8f5493f073cd4375681818693",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r3.log",
+          "elapsed_s": 3.495,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r3.json",
+          "tree_side": "head"
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "c9f095cdafd8d155a55fb407de3bdd480a684b436e51176725cf374a574a62d2",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r1.log",
+          "elapsed_s": 2.839,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "fb8e5ac3b8eea0b621dadea850a99e35d8ef9e324aed7689ca78bdab5ff36cb7",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r2.log",
+          "elapsed_s": 2.767,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "9e87c2a9a6c26d96a0498302039303faf8c9d89409ee673e47ab49ef875bc357",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r3.log",
+          "elapsed_s": 2.836,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r3.json",
+          "tree_side": "head"
+        }
+      ]
+    }
+  },
+  "verdicts": {
+    "base": "NOT_FIXED",
+    "head": "FIXED"
+  },
+  "plain_retry_verdict": {
+    "base": "FIXED",
+    "head": "FIXED"
+  },
+  "rep_disagreement": false,
+  "c_passes": true,
+  "label": "CERTIFIED",
+  "execution": {
+    "mode": "docker",
+    "image": "flakecert-dryrun-fastlane:ruby31",
+    "trees": {
+      "base": "/tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30",
+      "head": "/tmp/flakecert-g1-1019/work/extract-head/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04"
+    },
+    "timeout_s": 240,
+    "exec_argv": {
+      "base": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-76eeb3f-C-r3.json"
+          ]
+        ]
+      },
+      "head": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+            "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_portal_certificate_spec.rb-111-148c1c9-C-r3.json"
+          ]
+        ]
+      }
+    }
+  }
+}

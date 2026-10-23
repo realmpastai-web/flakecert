@@ -1,0 +1,73 @@
+{
+  "id": "F06",
+  "project": "https://github.com/prancer-io/cloud-validation-framework",
+  "sha": "94522590d9881a5125d81da701a65f7f63383c0d",
+  "pytest_id": "tests/processor/helper/config/test_config_utils.py::test_framework_dir",
+  "node_id": "tests/processor/helper/config/test_config_utils.py::test_framework_dir",
+  "image_digest": "sha256:415eab8e335d0701485f61ee90288d1b79d9d93db9f5343ae557743fa3cd869d",
+  "image_tag": "flakecert:F06",
+  "pip_freeze_sha": "37afcee83be6af5758933593752bf1121ac6ef950e7a3611cd63a91369c87d02",
+  "flakecert_version": "0.2.0",
+  "python": "3.9.25",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 4,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "tests/processor/helper/config/test_config_utils.py::test_get_test_json_dir",
+        "tests/processor/helper/config/test_config_utils.py::test_config_value",
+        "tests/processor/helper/config/test_config_utils.py::test_get_config_data",
+        "tests/processor/helper/config/test_config_utils.py::test_get_solution_dir",
+        "tests/processor/helper/config/test_config_utils.py::test_rundata_dir",
+        "tests/processor/helper/config/test_config_utils.py::test_framework_config",
+        "tests/processor/helper/config/test_config_utils.py::test_framework_dir"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": ""
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "AssertionError",
+    "sig": "6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 4,
+    "empirical_rate": "1/4",
+    "compare": "empirical>=lower"
+  }
+}

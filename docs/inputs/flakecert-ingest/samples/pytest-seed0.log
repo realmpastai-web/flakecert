@@ -1,0 +1,18 @@
+.F.s                                                                     [100%]buildkite-test-collector - WARNING - No BUILDKITE_ANALYTICS_TOKEN environment variable present
+
+=================================== FAILURES ===================================
+___________________________ test_fail_deterministic ____________________________
+
+    def test_fail_deterministic():
+>       assert {"a": 1} == {"a": 2}
+E       AssertionError: assert {'a': 1} == {'a': 2}
+E         
+E         Differing items:
+E         {'a': 1} != {'a': 2}
+E         Use -v to get more diff
+
+test_sample.py:5: AssertionError
+--------- generated xml file: /tmp/ing/proj/out/pytest-junit-seed0.xml ---------
+=========================== short test summary info ============================
+FAILED test_sample.py::test_fail_deterministic - AssertionError: assert {'a':...
+1 failed, 2 passed, 1 skipped in 0.02s

@@ -1,0 +1,340 @@
++ logical=rspec --bisect=verbose --seed 48174 './spaceship/spec/spaceauth_spec.rb[1:4:2]' './spaceship/spec/spaceauth_spec.rb[1:3:3]' './spaceship/spec/portal/key_spec.rb[1:3:1]' './spaceship/spec/portal/key_spec.rb[1:2:1]' './spaceship/spec/portal/key_spec.rb[1:4:3]' './spaceship/spec/portal/key_spec.rb[1:4:2]' './spaceship/spec/portal/key_spec.rb[1:4:1]' './spaceship/spec/portal/key_spec.rb[1:4:5:1]' './spaceship/spec/portal/key_spec.rb[1:4:4:1]' './spaceship/spec/portal/key_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:4]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:3]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:5:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:5:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:4:3]' './spaceship/spec/connect_api/api_client_spec.rb[1:4:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:4:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:9]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:3]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:4]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:5]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:6]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:7]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:8]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:3:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:3:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:3:3]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:3:4]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:1:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:2:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:2:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:5]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:3]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:4]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:1:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:4]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:3]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:6]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:5]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:3:1]' './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]' './spaceship/spec/portal/persons_spec.rb[1:3]' './spaceship/spec/portal/persons_spec.rb[1:1]' './spaceship/spec/portal/persons_spec.rb[1:2]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:2]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:3]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:2]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:3]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:2]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:3]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:2]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:3]' './spaceship/spec/test_flight/test_info_spec.rb[1:2]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]'
++ rspec_argv_len=4111
++ rspec_argv_n=80
++ docker_argv_len=4352
++ docker_argv_n=95
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --no-color --bisect=verbose --seed 48174 './spaceship/spec/spaceauth_spec.rb[1:4:2]' './spaceship/spec/spaceauth_spec.rb[1:3:3]' './spaceship/spec/portal/key_spec.rb[1:3:1]' './spaceship/spec/portal/key_spec.rb[1:2:1]' './spaceship/spec/portal/key_spec.rb[1:4:3]' './spaceship/spec/portal/key_spec.rb[1:4:2]' './spaceship/spec/portal/key_spec.rb[1:4:1]' './spaceship/spec/portal/key_spec.rb[1:4:5:1]' './spaceship/spec/portal/key_spec.rb[1:4:4:1]' './spaceship/spec/portal/key_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:4]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:3]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:5:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:2:5:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:4:3]' './spaceship/spec/connect_api/api_client_spec.rb[1:4:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:4:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:9]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:3]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:4]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:5]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:6]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:7]' './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:8]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:3:2]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:3:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:3:3]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:3:4]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:1:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:2:1]' './spaceship/spec/connect_api/api_client_spec.rb[1:3:2:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:5]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:3]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:4]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:1:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:4]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:3]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:2]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:6]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:5]' './spaceship/spec/tunes/iap_detail_spec.rb[1:2:1]' './spaceship/spec/tunes/iap_detail_spec.rb[1:3:1]' './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]' './spaceship/spec/portal/persons_spec.rb[1:3]' './spaceship/spec/portal/persons_spec.rb[1:1]' './spaceship/spec/portal/persons_spec.rb[1:2]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:2]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:3]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:2]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:3]' './spaceship/spec/connect_api/model ... truncated total_chars=4504
+elapsed_s=20.942
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Bisect started using options: "--no-color --seed 48174 ./spaceship/spec/spaceauth_spec.rb[1:4:2] ./spaceship/spec/spaceauth_spec.rb[1:3:3] ./spaceship/spec/portal/key_spec.rb[1:3:1] ./spaceship/spec/portal/key_spec.rb[1:2:1] ./spaceship/spec/portal/key_spec.rb[1:4:3] ./spaceship/spec/portal/key_spec.rb[1:4:2] ./spaceship/spec/portal/key_spec.rb[1:4:1] ./spaceship/spec/portal/key_spec.rb[1:4:5:1] ./spaceship/spec/portal/key_spec.rb[1:4:4:1] ./spaceship/spec/portal/key_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:5:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:5:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:9] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:5] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:6] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:7] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:8] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:2:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:5] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:3] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:4] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:1:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:4] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:3] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:6] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:5] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:3:1] ./spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1] ./spaceship/spec/portal/persons_spec.rb[1:3] ./spaceship/spec/portal/persons_spec.rb[1:1] ./spaceship/spec/portal/persons_spec.rb[1:2] ./spaceship/spec/portal/persons_spec.rb[1:4] ./spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1] ./spaceship/spec/tunes/login_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:2] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:3] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:2] ./spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:3] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:3] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1] ./spaceship/spec/test_flight/test_info_spec.rb[1:1] ./spaceship/spec/test_flight/test_info_spec.rb[1:3] ./spaceship/spec/test_flight/test_info_spec.rb[1:2] ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]" and bisect runner: :fork
+Running suite to find failures...Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Bisect started using options: "--no-color --seed 48174 ./spaceship/spec/spaceauth_spec.rb[1:4:2] ./spaceship/spec/spaceauth_spec.rb[1:3:3] ./spaceship/spec/portal/key_spec.rb[1:3:1] ./spaceship/spec/portal/key_spec.rb[1:2:1] ./spaceship/spec/portal/key_spec.rb[1:4:3] ./spaceship/spec/portal/key_spec.rb[1:4:2] ./spaceship/spec/portal/key_spec.rb[1:4:1] ./spaceship/spec/portal/key_spec.rb[1:4:5:1] ./spaceship/spec/portal/key_spec.rb[1:4:4:1] ./spaceship/spec/portal/key_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:5:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:5:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:9] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:5] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:6] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:7] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:8] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:2:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:5] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:3] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:4] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:1:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:4] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:3] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:6] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:5] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:3:1] ./spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1] ./spaceship/spec/portal/persons_spec.rb[1:3] ./spaceship/spec/portal/persons_spec.rb[1:1] ./spaceship/spec/portal/persons_spec.rb[1:2] ./spaceship/spec/portal/persons_spec.rb[1:4] ./spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1] ./spaceship/spec/tunes/login_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:2] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:3] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:2] ./spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:3] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:3] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1] ./spaceship/spec/test_flight/test_info_spec.rb[1:1] ./spaceship/spec/test_flight/test_info_spec.rb[1:3] ./spaceship/spec/test_flight/test_info_spec.rb[1:2] ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]" and bisect runner: :fork
+Running suite to find failures... (7.47 seconds)
+ - Failing examples (1):
+    - './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]'
+ - Non-failing examples (75):
+    - './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1,1:1:1:2,1:1:1:3,1:1:1:4,1:1:1:5,1:1:1:6,1:1:1:7,1:1:1:8,1:1:1:9,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5:1,1:2:5:2,1:3:1:1,1:3:2:1,1:3:2:2,1:3:3:1,1:3:3:2,1:3:3:3,1:3:3:4,1:4:1,1:4:2,1:4:3]'
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/key_spec.rb[1:1:1,1:2:1,1:3:1,1:4:1,1:4:2,1:4:3,1:4:4:1,1:4:5:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3,1:4]'
+    - './spaceship/spec/spaceauth_spec.rb[1:3:3,1:4:2]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:3,1:1:4,1:1:5,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Checking that failure(s) are order-dependent..
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' --no-color --seed 48174Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Bisect started using options: "--no-color --seed 48174 ./spaceship/spec/spaceauth_spec.rb[1:4:2] ./spaceship/spec/spaceauth_spec.rb[1:3:3] ./spaceship/spec/portal/key_spec.rb[1:3:1] ./spaceship/spec/portal/key_spec.rb[1:2:1] ./spaceship/spec/portal/key_spec.rb[1:4:3] ./spaceship/spec/portal/key_spec.rb[1:4:2] ./spaceship/spec/portal/key_spec.rb[1:4:1] ./spaceship/spec/portal/key_spec.rb[1:4:5:1] ./spaceship/spec/portal/key_spec.rb[1:4:4:1] ./spaceship/spec/portal/key_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:5:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:5:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:9] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:5] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:6] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:7] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:8] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:2:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:5] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:3] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:4] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:1:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:4] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:3] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:6] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:5] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:3:1] ./spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1] ./spaceship/spec/portal/persons_spec.rb[1:3] ./spaceship/spec/portal/persons_spec.rb[1:1] ./spaceship/spec/portal/persons_spec.rb[1:2] ./spaceship/spec/portal/persons_spec.rb[1:4] ./spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1] ./spaceship/spec/tunes/login_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:2] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:3] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:2] ./spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:3] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:3] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1] ./spaceship/spec/test_flight/test_info_spec.rb[1:1] ./spaceship/spec/test_flight/test_info_spec.rb[1:3] ./spaceship/spec/test_flight/test_info_spec.rb[1:2] ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]" and bisect runner: :fork
+Running suite to find failures... (7.47 seconds)
+ - Failing examples (1):
+    - './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]'
+ - Non-failing examples (75):
+    - './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1,1:1:1:2,1:1:1:3,1:1:1:4,1:1:1:5,1:1:1:6,1:1:1:7,1:1:1:8,1:1:1:9,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5:1,1:2:5:2,1:3:1:1,1:3:2:1,1:3:2:2,1:3:3:1,1:3:3:2,1:3:3:3,1:3:3:4,1:4:1,1:4:2,1:4:3]'
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/key_spec.rb[1:1:1,1:2:1,1:3:1,1:4:1,1:4:2,1:4:3,1:4:4:1,1:4:5:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3,1:4]'
+    - './spaceship/spec/spaceauth_spec.rb[1:3:3,1:4:2]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:3,1:1:4,1:1:5,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Checking that failure(s) are order-dependent..
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' --no-color --seed 48174 (0.23175 seconds)
+ - Failure appears to be order-dependent
+Round 1: bisecting over non-failing examples 1-75
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3,1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174 (7.43 seconds)
+ - Examples we can safely ignore (38):
+    - './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1,1:1:1:2,1:1:1:3,1:1:1:4,1:1:1:5,1:1:1:6,1:1:1:7,1:1:1:8,1:1:1:9,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5:1,1:2:5:2,1:3:1:1,1:3:2:1,1:3:2:2,1:3:3:1,1:3:3:2,1:3:3:3,1:3:3:4,1:4:1,1:4:2,1:4:3]'
+    - './spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/key_spec.rb[1:1:1,1:2:1,1:3:1,1:4:1,1:4:2,1:4:3,1:4:4:1,1:4:5:1]'
+    - './spaceship/spec/spaceauth_spec.rb[1:3:3,1:4:2]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:3,1:1:5]'
+ - Remaining non-failing examples (37):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3,1:4]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Round 2: bisecting over non-failing examples 39-75Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Bisect started using options: "--no-color --seed 48174 ./spaceship/spec/spaceauth_spec.rb[1:4:2] ./spaceship/spec/spaceauth_spec.rb[1:3:3] ./spaceship/spec/portal/key_spec.rb[1:3:1] ./spaceship/spec/portal/key_spec.rb[1:2:1] ./spaceship/spec/portal/key_spec.rb[1:4:3] ./spaceship/spec/portal/key_spec.rb[1:4:2] ./spaceship/spec/portal/key_spec.rb[1:4:1] ./spaceship/spec/portal/key_spec.rb[1:4:5:1] ./spaceship/spec/portal/key_spec.rb[1:4:4:1] ./spaceship/spec/portal/key_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:5:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:2:5:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:4:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:9] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:5] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:6] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:7] ./spaceship/spec/connect_api/api_client_spec.rb[1:1:1:8] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:2] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:3] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:3:4] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:1:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:2:1] ./spaceship/spec/connect_api/api_client_spec.rb[1:3:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:5] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:3] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:4] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:1:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:3:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:1:6:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:4] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:3] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:2] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:6] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:5] ./spaceship/spec/tunes/iap_detail_spec.rb[1:2:1] ./spaceship/spec/tunes/iap_detail_spec.rb[1:3:1] ./spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1] ./spaceship/spec/portal/persons_spec.rb[1:3] ./spaceship/spec/portal/persons_spec.rb[1:1] ./spaceship/spec/portal/persons_spec.rb[1:2] ./spaceship/spec/portal/persons_spec.rb[1:4] ./spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1] ./spaceship/spec/tunes/login_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:2] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:2:3] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:2] ./spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:3] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:3] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2] ./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1] ./spaceship/spec/test_flight/test_info_spec.rb[1:1] ./spaceship/spec/test_flight/test_info_spec.rb[1:3] ./spaceship/spec/test_flight/test_info_spec.rb[1:2] ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]" and bisect runner: :fork
+Running suite to find failures... (7.47 seconds)
+ - Failing examples (1):
+    - './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]'
+ - Non-failing examples (75):
+    - './spaceship/spec/connect_api/api_client_spec.rb[1:1:1:1,1:1:1:2,1:1:1:3,1:1:1:4,1:1:1:5,1:1:1:6,1:1:1:7,1:1:1:8,1:1:1:9,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5:1,1:2:5:2,1:3:1:1,1:3:2:1,1:3:2:2,1:3:3:1,1:3:3:2,1:3:3:3,1:3:3:4,1:4:1,1:4:2,1:4:3]'
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/beta_tester_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/key_spec.rb[1:1:1,1:2:1,1:3:1,1:4:1,1:4:2,1:4:3,1:4:4:1,1:4:5:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3,1:4]'
+    - './spaceship/spec/spaceauth_spec.rb[1:3:3,1:4:2]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:3,1:1:4,1:1:5,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Checking that failure(s) are order-dependent..
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' --no-color --seed 48174 (0.23175 seconds)
+ - Failure appears to be order-dependent
+Round 1: bisecting over non-failing examples 1-75
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3,1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174 (1.19 seconds)
+ - Examples we can safely ignore (19):
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+ - Remaining non-failing examples (18):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Round 3: bisecting over non-failing examples 58-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174 (1.19 seconds)
+ - Examples we can safely ignore (19):
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+ - Remaining non-failing examples (18):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Round 3: bisecting over non-failing examples 58-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.60459 seconds)
+ - Examples we can safely ignore (9):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+ - Remaining non-failing examples (9):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 4: bisecting over non-failing examples 67-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174 (1.19 seconds)
+ - Examples we can safely ignore (19):
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+ - Remaining non-failing examples (18):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Round 3: bisecting over non-failing examples 58-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.60459 seconds)
+ - Examples we can safely ignore (9):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+ - Remaining non-failing examples (9):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 4: bisecting over non-failing examples 67-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.32073 seconds)
+ - Examples we can safely ignore (5):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+ - Remaining non-failing examples (4):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 5: bisecting over non-failing examples 72-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:2,1:3]' --no-color --seed 48174
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174 (1.19 seconds)
+ - Examples we can safely ignore (19):
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+ - Remaining non-failing examples (18):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Round 3: bisecting over non-failing examples 58-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.60459 seconds)
+ - Examples we can safely ignore (9):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+ - Remaining non-failing examples (9):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 4: bisecting over non-failing examples 67-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.32073 seconds)
+ - Examples we can safely ignore (5):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+ - Remaining non-failing examples (4):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 5: bisecting over non-failing examples 72-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:2,1:3]' --no-color --seed 48174 (0.27367 seconds)
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1]' --no-color --seed 48174
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174 (1.19 seconds)
+ - Examples we can safely ignore (19):
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+ - Remaining non-failing examples (18):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Round 3: bisecting over non-failing examples 58-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.60459 seconds)
+ - Examples we can safely ignore (9):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+ - Remaining non-failing examples (9):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 4: bisecting over non-failing examples 67-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.32073 seconds)
+ - Examples we can safely ignore (5):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+ - Remaining non-failing examples (4):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 5: bisecting over non-failing examples 72-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:2,1:3]' --no-color --seed 48174 (0.27367 seconds)
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1]' --no-color --seed 48174 (0.29475 seconds)
+ - Examples we can safely ignore (2):
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:2,1:3]'
+ - Remaining non-failing examples (2):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1]'
+Round 6: bisecting over non-failing examples 72-73
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1]' --no-color --seed 48174
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174 (1.19 seconds)
+ - Examples we can safely ignore (19):
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+ - Remaining non-failing examples (18):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Round 3: bisecting over non-failing examples 58-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.60459 seconds)
+ - Examples we can safely ignore (9):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+ - Remaining non-failing examples (9):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 4: bisecting over non-failing examples 67-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.32073 seconds)
+ - Examples we can safely ignore (5):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+ - Remaining non-failing examples (4):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 5: bisecting over non-failing examples 72-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:2,1:3]' --no-color --seed 48174 (0.27367 seconds)
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1]' --no-color --seed 48174 (0.29475 seconds)
+ - Examples we can safely ignore (2):
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:2,1:3]'
+ - Remaining non-failing examples (2):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1]'
+Round 6: bisecting over non-failing examples 72-73
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1]' --no-color --seed 48174 (0.25002 seconds)
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' --no-color --seed 48174 (0.30025 seconds)
+ - Examples we can safely ignore (1):
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1]'
+ - Remaining non-failing examples (1):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+Bisect complete! Reduced necessary non-failing examples from 75 to 1 in 10.89 seconds.
+
+The minimal reproduction command is:
+  rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' --no-color --seed 48174
+
+
+ - Running: rspec './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/portal/persons_spec.rb[1:4]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' './spaceship/spec/tunes/login_spec.rb[1:1:1]' --no-color --seed 48174 (1.19 seconds)
+ - Examples we can safely ignore (19):
+    - './spaceship/spec/connect_api/models/build_upload_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/iap_detail_spec.rb[1:1:1,1:1:2,1:1:4,1:1:6:1:1,1:1:6:2:1,1:1:6:2:2,1:1:6:3:1,1:1:6:3:2,1:2:1,1:2:2,1:2:3,1:2:4,1:2:5,1:2:6,1:3:1]'
+ - Remaining non-failing examples (18):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+Round 3: bisecting over non-failing examples 58-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.60459 seconds)
+ - Examples we can safely ignore (9):
+    - './spaceship/spec/connect_api/models/beta_app_review_detail_spec.rb[1:1:1]'
+    - './spaceship/spec/connect_api/models/beta_group_spec.rb[1:1:1,1:1:2,1:2:1,1:2:2,1:2:3]'
+    - './spaceship/spec/connect_api/models/bundle_id_spec.rb[1:1:1]'
+    - './spaceship/spec/portal/persons_spec.rb[1:4]'
+    - './spaceship/spec/tunes/login_spec.rb[1:1:1]'
+ - Remaining non-failing examples (9):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1,1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 4: bisecting over non-failing examples 67-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]' --no-color --seed 48174 (0.32073 seconds)
+ - Examples we can safely ignore (5):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:2,1:1:2,1:1:3,1:2,1:3]'
+ - Remaining non-failing examples (4):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1,1:2,1:3]'
+Round 5: bisecting over non-failing examples 72-75
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:2,1:3]' --no-color --seed 48174 (0.27367 seconds)
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1]' --no-color --seed 48174 (0.29475 seconds)
+ - Examples we can safely ignore (2):
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:2,1:3]'
+ - Remaining non-failing examples (2):
+    - './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
+    - './spaceship/spec/test_flight/test_info_spec.rb[1:1]'
+Round 6: bisecting over non-failing examples 72-73
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/test_flight/test_info_spec.rb[1:1]' --no-color --seed 48174 (0.25002 seconds)
+ - Running: rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' --no-color --seed 48174
+docker_exit=0

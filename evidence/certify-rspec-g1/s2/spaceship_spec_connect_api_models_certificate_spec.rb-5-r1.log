@@ -1,0 +1,36 @@
++ logical=rspec './spaceship/spec/connect_api/models/certificate_spec.rb[1:1:1]'
++ rspec_argv_len=185
++ rspec_argv_n=8
++ docker_argv_len=473
++ docker_argv_n=25
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -v /tmp/flakecert-g1-1019/work/rspec-json:/out -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --format documentation --no-color './spaceship/spec/connect_api/models/certificate_spec.rb[1:1:1]' --format json --out /out/spaceship_spec_connect_api_models_certificate_spec.rb-5-r1.json
+elapsed_s=2.684
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:ids=>{"./spaceship/spec/connect_api/models/certificate_spec.rb"=>["1:1:1"]}}
+
+Spaceship::ConnectAPI::Certificate
+  #client
+    #get_certificates (FAILED - 1)
+
+Failures:
+
+  1) Spaceship::ConnectAPI::Certificate#client #get_certificates
+     Failure/Error: response = Spaceship::ConnectAPI.get_certificates
+
+     TypeError:
+       You need to instantiate this module with provisioning_request_client
+     # ./spaceship/lib/spaceship/connect_api/provisioning/provisioning.rb:17:in `provisioning_request_client'
+     # ./spaceship/lib/spaceship/connect_api/provisioning/provisioning.rb:136:in `get_certificates'
+     # ./spaceship/spec/connect_api/models/certificate_spec.rb:6:in `block (3 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.25912 seconds (files took 1.64 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:5 # Spaceship::ConnectAPI::Certificate#client #get_certificates
+
+docker_exit=1

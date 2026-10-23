@@ -1,0 +1,389 @@
+junit_files=38
+FILE A0-aec7800-r1.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A0-aec7800-r1.xml ('passed', '', '')
+E2E_SETUP_ERRORS A0-aec7800-r1.xml 0
+FILE A0-aec7800-r2.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A0-aec7800-r2.xml ('passed', '', '')
+E2E_SETUP_ERRORS A0-aec7800-r2.xml 0
+FILE A0-aec7800-r3.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A0-aec7800-r3.xml ('passed', '', '')
+E2E_SETUP_ERRORS A0-aec7800-r3.xml 0
+FILE A0-eb925fa-r1.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A0-eb925fa-r1.xml ('passed', '', '')
+E2E_SETUP_ERRORS A0-eb925fa-r1.xml 0
+FILE A0-eb925fa-r2.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A0-eb925fa-r2.xml ('passed', '', '')
+E2E_SETUP_ERRORS A0-eb925fa-r2.xml 0
+FILE A0-eb925fa-r3.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A0-eb925fa-r3.xml ('passed', '', '')
+E2E_SETUP_ERRORS A0-eb925fa-r3.xml 0
+FILE A1-aec7800-r1.xml
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': '36aea207-24c3-4edc-bf52-316b38a2b5e8', 'exit_code': 128, 'duration_sec': 0.002, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A1-aec7800-r1.xml ('passed', '', '')
+E2E_SETUP_ERRORS A1-aec7800-r1.xml 0
+FILE A1-aec7800-r2.xml
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': 'c01bc6a5-a1a8-42f1-94b7-5eaf2fd27c04', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A1-aec7800-r2.xml ('passed', '', '')
+E2E_SETUP_ERRORS A1-aec7800-r2.xml 0
+FILE A1-aec7800-r3.xml
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': '1ee5b559-d8cf-4151-ada7-9ddd59ad371a', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A1-aec7800-r3.xml ('passed', '', '')
+E2E_SETUP_ERRORS A1-aec7800-r3.xml 0
+FILE A1-eb925fa-r1.xml
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': '7595f67a-e130-406d-9215-f9f1888704c6', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A1-eb925fa-r1.xml ('passed', '', '')
+E2E_SETUP_ERRORS A1-eb925fa-r1.xml 0
+FILE A1-eb925fa-r2.xml
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': 'bc623093-524b-4585-a726-130677dbfbda', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A1-eb925fa-r2.xml ('passed', '', '')
+E2E_SETUP_ERRORS A1-eb925fa-r2.xml 0
+FILE A1-eb925fa-r3.xml
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': '04e92246-8e04-412c-a4fb-0556a2fd1349', 'exit_code': 128, 'duration_sec': 0.002, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM A1-eb925fa-r3.xml ('passed', '', '')
+E2E_SETUP_ERRORS A1-eb925fa-r3.xml 0
+FILE A2-aec7800-r1.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': '804e87b0-8aa0-4008-bc67-a40ad1d60d6e', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+VICTIM A2-aec7800-r1.xml ('passed', '', '')
+E2E_SETUP_ERRORS A2-aec7800-r1.xml 0
+FILE A2-aec7800-r2.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': 'a4a250b2-0481-4a4e-b6d0-31e9f684660a', 'exit_code': 128, 'duration_sec': 0.004, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+VICTIM A2-aec7800-r2.xml ('passed', '', '')
+E2E_SETUP_ERRORS A2-aec7800-r2.xml 0
+FILE A2-aec7800-r3.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': '6e3273d6-2563-4bcc-8474-b2b9086d3c72', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+VICTIM A2-aec7800-r3.xml ('passed', '', '')
+E2E_SETUP_ERRORS A2-aec7800-r3.xml 0
+FILE A2-eb925fa-r1.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': 'd5f3b9a4-90f3-441a-b439-03432ce333ef', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+VICTIM A2-eb925fa-r1.xml ('passed', '', '')
+E2E_SETUP_ERRORS A2-eb925fa-r1.xml 0
+FILE A2-eb925fa-r2.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': 'dd9aa1a4-04e9-4df9-bbc0-b1fa7b7a2570', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+VICTIM A2-eb925fa-r2.xml ('passed', '', '')
+E2E_SETUP_ERRORS A2-eb925fa-r2.xml 0
+FILE A2-eb925fa-r3.xml
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+  passed	tests.e2e.test_bridge_live::test_health_endpoint_is_public_and_reports_version		
+  passed	tests.e2e.test_bridge_live::test_v1_version_reports_running_interpreter		
+  passed	tests.e2e.test_bridge_live::test_v1_version_hides_the_interpreter_from_anonymous_callers		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_missing_token		
+  passed	tests.e2e.test_bridge_live::test_mcp_requires_auth_wrong_token		
+  passed	tests.e2e.test_bridge_live::test_v1_info_requires_auth		
+  passed	tests.e2e.test_bridge_live::test_mcp_full_handshake_and_tool_surface		
+  passed	tests.e2e.test_bridge_live::test_fs_write_read_roundtrip_through_tool_executor		
+  passed	tests.e2e.test_bridge_live::test_fs_jail_blocks_paths_outside_home		
+  passed	tests.e2e.test_bridge_live::test_malformed_json_gets_parse_error_and_server_survives		
+  passed	tests.e2e.test_bridge_live::test_unknown_rpc_method_returns_jsonrpc_error		
+  passed	tests.e2e.test_bridge_live::test_tool_call_unknown_tool_fails_closed		
+  passed	tests.e2e.test_bridge_live::test_unknown_route_is_404_not_crash		
+  passed	tests.e2e.test_bridge_live::test_sse_stream_opens_with_endpoint_event		
+  passed	tests.e2e.test_bridge_live::test_token_regeneration_rotates_the_live_bearer_and_writes_the_file		
+  passed	tests.e2e.test_bridge_live::test_shell_control_characters_are_refused_on_every_http_exec_surface		
+  failed	tests.e2e.test_bridge_live::test_shell_allowlist_keeps_legitimate_commands_working	tests/e2e/test_bridge_live.py:454	AssertionError: ('git status --short', {'ok': False, 'request_id': '312bbb90-8de2-4a25-9c0c-ba9adabbee35', 'exit_code': 128, 'duration_sec': 0.003, ...})
+  passed	tests.e2e.test_bridge_live::test_allowlisted_interpreters_cannot_run_inline_code		
+VICTIM A2-eb925fa-r3.xml ('passed', '', '')
+E2E_SETUP_ERRORS A2-eb925fa-r3.xml 0
+FILE S1-eb925fa-r01.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r01.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r01.xml 0
+FILE S1-eb925fa-r02.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r02.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r02.xml 0
+FILE S1-eb925fa-r03.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  failed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path	tests/test_mcp_client_parity_v4_169_39.py:169	AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+VICTIM S1-eb925fa-r03.xml ('failed', 'tests/test_mcp_client_parity_v4_169_39.py:169', "AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']")
+E2E_SETUP_ERRORS S1-eb925fa-r03.xml 0
+FILE S1-eb925fa-r04.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  failed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path	tests/test_mcp_client_parity_v4_169_39.py:169	AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+VICTIM S1-eb925fa-r04.xml ('failed', 'tests/test_mcp_client_parity_v4_169_39.py:169', "AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']")
+E2E_SETUP_ERRORS S1-eb925fa-r04.xml 0
+FILE S1-eb925fa-r05.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r05.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r05.xml 0
+FILE S1-eb925fa-r06.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r06.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r06.xml 0
+FILE S1-eb925fa-r07.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  failed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path	tests/test_mcp_client_parity_v4_169_39.py:169	AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+VICTIM S1-eb925fa-r07.xml ('failed', 'tests/test_mcp_client_parity_v4_169_39.py:169', "AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']")
+E2E_SETUP_ERRORS S1-eb925fa-r07.xml 0
+FILE S1-eb925fa-r08.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r08.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r08.xml 0
+FILE S1-eb925fa-r09.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  failed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path	tests/test_mcp_client_parity_v4_169_39.py:169	AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+VICTIM S1-eb925fa-r09.xml ('failed', 'tests/test_mcp_client_parity_v4_169_39.py:169', "AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']")
+E2E_SETUP_ERRORS S1-eb925fa-r09.xml 0
+FILE S1-eb925fa-r10.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r10.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r10.xml 0
+FILE S1-eb925fa-r11.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r11.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r11.xml 0
+FILE S1-eb925fa-r12.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r12.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r12.xml 0
+FILE S1-eb925fa-r13.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r13.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r13.xml 0
+FILE S1-eb925fa-r14.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  failed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path	tests/test_mcp_client_parity_v4_169_39.py:169	AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+VICTIM S1-eb925fa-r14.xml ('failed', 'tests/test_mcp_client_parity_v4_169_39.py:169', "AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']")
+E2E_SETUP_ERRORS S1-eb925fa-r14.xml 0
+FILE S1-eb925fa-r15.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r15.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r15.xml 0
+FILE S1-eb925fa-r16.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r16.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r16.xml 0
+FILE S1-eb925fa-r17.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r17.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r17.xml 0
+FILE S1-eb925fa-r18.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r18.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r18.xml 0
+FILE S1-eb925fa-r19.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r19.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r19.xml 0
+FILE S1-eb925fa-r20.xml
+  passed	tests.test_000_sabotage_popen_thread::test_sabotage_leaves_popen_thread_running		
+  passed	tests.test_mcp_client_parity_v4_169_39::test_client_start_happy_path		
+VICTIM S1-eb925fa-r20.xml ('passed', '', '')
+E2E_SETUP_ERRORS S1-eb925fa-r20.xml 0

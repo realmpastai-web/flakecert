@@ -1,0 +1,1620 @@
+===== F2-148c1c9-r2 2026-10-19T05:38:37Z =====
++ ruby -v; bundle -v
++ bundle exec rspec spaceship/spec --seed 48174
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+
+Randomized with seed 48174
+
+Spaceship::SpaceauthRunner
+  uses all required cookies for fastlane session
+  #session_string
+    should return the session when called after run
+    should throw when called before run
+  check_session option
+    when passed a known user, it should return a message saying the session is logged in with an exit code of 0
+    when using the default user, it should return a message saying the session is logged in with an exit code of 0
+    when passed an unknown user, it should return a message saying no valid session found with an exit code of 1
+
+Spaceship::Portal::Key
+  .create
+    creates a key with the client
+  .find
+    uses the client to get a single key
+  instance methods
+    should have a way of getting the service configurations
+    should have all of the services
+    should map attributes to methods
+    #revoke!
+      revokes the key with the client
+    #download
+      returns the p8 file
+  .all
+    uses the client to fetch all keys
+
+Spaceship
+  App Group
+  Device
+  App
+  Certificate
+  #select_team
+  ProvisioningProfile
+  should initialize with a client
+  Spaceship::Launcher
+    returns a scoped model class
+    has a client
+    passes the client to the models
+
+Spaceship::ConnectAPI::BetaTester
+  #Spaceship::ConnectAPI
+    #get_beta_testers
+
+Spaceship::ConnectAPI::APIClient
+  #request
+    raise on 403
+    raise on 401
+    raise on 403 with program license agreement updated
+    not raise on 200
+    with_retry
+      sleeps on 429
+      sleeps until limit is reached on 429
+  #hostname
+    points to Enterprise Program API when in_house is true
+    points to App Store Connect API when in_house is not set
+    points to App Store Connect API when in_house is false
+  #build_params
+    build_params
+      builds params with nil filter
+      builds params with one filter, includes, fields, limit, and sort
+      builds params with one filter
+      builds params with nothing
+      builds params with two filters
+      builds params with includes
+      builds params with fields
+      builds params with limit
+      builds params with sort
+  #handle_error
+    status of 403
+      raises AccessForbiddenError with no errors in body
+      raises ProgramLicenseAgreementUpdated with no errors in body FORBIDDEN.REQUIRED_AGREEMENTS_MISSING_OR_EXPIRED
+      raises AccessForbiddenError when body is string
+      raises AccessForbiddenError with errors in body
+    status of 200
+      does not raise
+    status of 401
+      raises UnauthorizedAccessError with no errors in body
+      raises UnauthorizedAccessError when body is string
+
+Spaceship::Tunes::IAPDetail
+  Details of an IAP
+    read pricing_intervals
+    humanizes status
+    humanizes type
+    Loads full details of a single iap
+    Read language versions
+    pricing_info
+      when iap is not cleared for sale yet
+        returns an empty array
+      when iap is a subscription product with territorial pricing
+        returns pricing infos for each country
+        returns the matching entries from the subscription price tier matrix
+      when iap is a non-subscription product
+        returns all pricing infos of the specified tier
+        returns the matching entries from the price tier matrix
+  modification
+    saved with changed pricing detail
+    saved with subscription pricing goal
+    saved and changed screenshot
+    saved with changed versions
+    saved with changed pricing detail for recurring product
+    saved
+  Deletion
+    delete
+
+Spaceship::ConnectAPI::BuildUpload
+  #Spaceship::ConnectAPI
+    #get_build_uploads
+
+Spaceship::Portal::Persons
+  should find a specific person
+  should load all persons
+  should load all invites
+  should invite a new one
+
+Spaceship::ConnectAPI::BetaAppReviewDetail
+  #Spaceship::ConnectAPI
+    #get_beta_app_review_detail
+
+Spaceship::Tunes
+  .login
+    works with valid data
+
+Spaceship::ConnectAPI::BetaGroup
+  #matches_identifiers?
+    matches by id
+    matches by name
+    does not match unrelated identifiers
+  #Spaceship::ConnectAPI
+    #get_beta_groups
+    #delete!
+
+Spaceship::ConnectAPI::BundleId
+  #client
+    #get_bundle_ids
+
+Spaceship::ConnectAPI::Webhook
+  .create
+  .all
+  #client
+    #delete_webhook
+    #post_webhook
+    #get_webhooks
+      deserializes second webhook correctly
+      returns all webhooks for an app
+
+Spaceship::TestFlight::TestInfo
+  gets the value from the first locale
+  copies its contents
+  sets values to all locales
+
+Spaceship::ConnectAPI::BuildBetaDetail
+  #Spaceship::ConnectAPI
+    #get_build_beta_details
+
+Spaceship::Hashcash
+  makes hashcash with 11 bits
+  finds hashcash with 12 bits
+
+Spaceship::Tunes::Territory
+  supported_territories
+    correctly parses the territories
+    inspect works
+    correctly creates all territories
+
+Spaceship::Portal::ProvisioningProfile
+  Development tvOS Profiles
+    Create a new Development tvOS Profile
+      does not allow tvos as a subplatform
+      uses the correct type for the create request
+
+Spaceship::ConnectAPI::BetaBuildMetric
+  #Spaceship::ConnectAPI
+    #get_beta_build_metrics
+
+Spaceship::Tunes::SandboxTester
+  Sandbox testers
+    deletion
+      deletes all users
+      deletes a user
+    listing
+      loads sandbox testers correctly
+    creation
+      creates sandbox testers correctly
+
+Spaceship::Client
+  #pbkdf2
+    produces different results for s2k vs s2k_fo
+    calculates pbkdf2 for s2k_fo protocol
+    raises SIRPAuthenticationError for unsupported protocol
+    calculates pbkdf2 for s2k protocol
+  #to_byte
+    converts hex back to string
+    converts hex back to binary data
+  #to_hex
+    converts binary data to hex
+    converts string to hex
+
+Spaceship::ConnectAPI::Capabilities
+  #client
+    #get_available_bundle_id_capabilities
+
+Spaceship::Tunes::Availability
+  correctly parses b2b organizations
+  update_availability!
+    inspect works
+    correctly unincludes all future territories
+    update_b2b_users
+      throws exception if b2b app not enabled
+      does not do anything for same b2b_user_list
+      adds and removes appropriate users
+      adds new user
+      removes existing user
+    enable_b2b_app!
+      throws exception if b2b cannot be enabled
+      works correctly
+    with countries as strings
+      correctly sets preorder with app available date
+      correctly sets preorder with no app available date
+      correctly removes a country
+      correctly adds a country
+    add_b2b_users
+      throws exception if b2b app not enabled
+      works correctly
+    with countries as Territories
+      correctly adds a country
+      correctly removes a country
+  availability
+    correctly parses b2b app enabled
+    correctly parses b2b app flag enabled
+    correctly parses include_future_territories
+    correctly parses b2b users
+    inspect works
+    correctly parses the territories
+
+Spaceship::Tunes::IAPFamilies
+  Subscription Families
+    Creates a new IAP Subscription Family
+    Loads IAP Families List
+
+Spaceship::ConnectAPI::AppStoreVersionReleaseRequest
+  #Spaceship::ConnectAPI
+    #post_app_store_version_release_request
+
+Spaceship::ConnectAPI
+  #client
+    with implicit client
+      returns client with using existing Portal session
+      returns client with using existing Tunes session
+      returns client with using existing Tunes and Portal session
+      returns nil when no existing sessions
+    with explicit client
+      #auth
+      #login
+        with tunes_team_id
+        with both portal_team_id and tunes_team_id
+        with portal_team_id
+  #select_team
+    without client
+    with client
+      with both portal_team_id and tunes_team_id
+      with tunes_team_id
+      with portal_team_id
+
+Spaceship::Portal::Persons
+  should be OK if invite date format changes
+  should factor a new invite object
+
+Spaceship::Tunes::AppDetails
+  Modifying the app category
+    prefixes the category with MZGenre for all category types
+    prefixes the category with MZGenre.Apps for Stickers types
+    doesn't prefix if the prefix is already there
+  App Details are properly loaded
+    contains all the relevant information
+
+Spaceship::ConnectAPI::BundleIdCapability
+  #client
+    through #get_bundle_id
+
+Spaceship::ConnectAPI::PreReleaseVersion
+  #Spaceship::ConnectAPI
+    #get_pre_release_versions
+
+String
+  #to_itc_locale
+    redirects to the actual converter
+  #to_full_language
+    redirects to the actual converter
+  #to_language_code
+    redirects to the actual converter
+
+Spaceship::Portal::ProvisioningProfile
+  Enterprise Profiles
+    Create a new In House Profile
+      uses the correct type for the create request
+    List the code signing certificate as In House profiles
+      uses the correct class
+
+Spaceship::ConnectAPI::Users::Client
+  sends api request
+    user_invitations
+      delete_user_invitation
+        succeeds
+      get_user_invitation_visible_apps
+        succeeds
+      get_user_invitations
+        succeeds
+      post_user_invitation
+        succeeds
+    users
+      get_users
+        succeeds
+      patch_user
+        succeeds with list of apps
+        succeeds with all apps
+      patch_user_visible_apps
+        succeeds
+      post_user_visible_apps
+        succeeds
+      delete_user_visible_apps
+        succeeds
+      delete_user
+        succeeds
+      get_user_visible_apps
+        succeeds
+
+Spaceship::ConnectAPI::Profile
+  #client
+    #get_profiles
+
+Spaceship::Tunes::IAPList
+  IAPList
+    Loads Edit Version
+    Creates a Object
+    can delete
+    Loads Edit Version of Recurring IAP
+
+Spaceship::ConnectAPI::Provisioning::Client
+  sends api request
+    devices
+      get_devices
+        succeeds
+    bundleIds
+      get_bundle_ids
+        succeeds
+    profiles
+      get_profiles
+        succeeds
+    certificates
+      get_certificates
+        succeeds
+      get_certificates_for_profile
+        succeeds
+    bundleId Capability
+      patch_bundle_id_capability
+        should make a request to turn ICLOUD xcode5_compatible
+        should make a request to turn DATA_PROTECTION unless_open
+        should make a request to turn ACCESS_WIFI off
+        should make a request to turn DATA_PROTECTION until_first_auth
+        should make a request to turn ICLOUD xcode6_compatible
+        should make a request to turn DATA_PROTECTION complete
+        should make a request to turn DATA_PROTECTION off
+        should make a request to turn APP_ATTEST on
+        should make a request to turn ICLOUD off
+        should make a request to turn ACCESS_WIFI on
+        should make a request to turn APP_ATTEST off
+
+Spaceship::ConnectAPI::BuildDelivery
+  #Spaceship::ConnectAPI
+    #get_build_deliveries
+
+Spaceship::Tunes::Members
+  members
+    finds one member by email
+    should return a list with members
+    updates roles and apps for an existing member
+      role: admin, apps: all
+      role: appmanager, apps: 898536088
+      role: developer apps: all
+    creates a new member
+      role: admin, apps: all
+      role: developer apps: all
+      role: appmanager, apps: 898536088
+
+Spaceship::Client
+  UI
+    #select_team
+      uses the first team if there is only one
+      Multiple Teams
+        Raises an Error if shell is non interactive
+        Asks for the team if the name couldn't be found (pick first)
+        Uses the specific team (2/2) using environment variables
+        Strips out spaces before and after the team name
+        Uses the specific team (1/2) using environment variables
+        Asks for the team if the name couldn't be found (pick last)
+        Falls back to user selection if team wasn't found
+        Uses the specific team (1/2) using method parameters
+        Lets the user select the team if in multiple teams
+        Let's the user specify the team name using environment variables
+        Uses the specific team (2/2) using method parameters
+        Let's the user specify the team name using method parameters
+
+Spaceship::TestFlight::AppTestInfo
+  gets beta review info
+  gets the TestInfo
+  sets beta review info
+  sets the TestInfo
+  client interactions
+    find app test info on the server
+    updates app test info on the server
+
+Spaceship::ConnectAPI::Tunes::Client
+  sends api request
+    reviewSubmissionItems
+      get_review_submission_items
+        succeeds
+      post_review_submission_item
+        succeeds
+    routingAppCoverages
+      post_routing_app_coverage
+        succeeds
+      get_routing_app_coverage
+        succeeds
+      patch_routing_app_coverage
+        succeeds
+      delete_routing_app_coverage
+        succeeds
+    appAvailabilities
+      get_app_availabilities
+        succeeds
+    reviewSubmissions
+      post_review_submission
+        succeeds
+      get_review_submission
+        succeeds
+      patch_review_submission
+        succeeds
+      get_review_submissions
+        succeeds
+    appInfoLocalizations
+      delete_app_info_localization
+        succeeds
+      post_app_info_localization
+        uses the appInfo relationship
+    appStoreVersionReleaseRequests
+      post_app_store_version_release_request
+        succeeds
+
+Spaceship::Tunes::IAP
+  returns all purchases
+    returns as IAPList
+    Finds a specific product
+    Finds shared secret key
+    Generates new shared secret key
+    Finds families
+    Create new IAP
+      create auto renewable subscription with pricing
+      create auto renewable subscription with subscription price target
+      create consumable
+
+Spaceship::Base
+  Class Methods
+    will use a default client
+    can set a client
+    can set a client and return itself
+    can constantize subclasses by calling a method on the parent class
+    instantiation from an attribute hash
+      can create an attribute mapping
+      can map nested attributes
+      can inherit the attribute mapping
+      can overwrite an attribute and call super
+      helps troubleshoot json conversion issues
+
+Spaceship::Client
+  #login
+    sets the session cookies
+    raises an exception if authentication failed
+  authenticated
+    #apps
+      returns a list of apps
+    #create_app
+      should make a request create an explicit app id with push feature
+      should make a request create an explicit app id
+      should make a request create a wildcard app id
+      does not modify input when it already contains only valid characters
+    #certificates
+      returns a list of certificates hashes
+    #delete_app!
+      should make a request to delete the app
+    #app_groups
+      returns a list of apps
+    #valid_name_for
+      does not modify input when it already contains only valid characters
+      sanitizes invalid characters and appends md5 hash when input changed
+    #paging
+      default page size is correct
+      Properly pages if required with support for a custom page size
+    #provisioning_profiles_via_xcode_api
+      makes a call to the developer portal API
+    #create_provisioning_profile
+      works when subplatform is null and mac is false
+      works when template name is specified
+      works when the name is free
+      works when the name is already taken
+    #provisioning_profiles
+      makes a call to the developer portal API
+    #fetch_program_license_agreement_messages
+      makes a request to fetch all Program License Agreement warnings from Olympus
+    #devices
+      returns a list of device hashes
+    #revoke_certificate
+      makes a revoke request and returns the revoked certificate
+    #team_information
+      returns all available information
+    #in_house?
+      returns false for normal accounts
+      returns true for enterprise accounts
+    csrf_tokens
+      uses the stored token for all upcoming requests
+    #teams
+      returns the list of available teams
+    #team_name
+      returns the default team_name
+      return nil if no teams
+      returns team_name from selected team_id
+    #create_device
+      works as expected when the name is free
+    #delete_provisioning_profile!
+      makes a request to delete a provisioning profile
+    #team_id
+      shows a warning when user is in multiple teams and didn't call select_team
+      set custom Team ID
+      returns the default team_id
+    #create_app_group
+      should make a request create an app group
+    #create_certificate
+      makes a request to create a certificate
+    #delete_app_group
+      should make a request to delete the app group
+  keys api
+    #create_key!
+      creates a key with APNS service
+      creates a key
+      creates a key with DEVICE_CHECK service
+      creates a key with MUSIC_KIT service
+    #get_key
+      gets a key
+    #list_keys
+      lists keys
+    revoke_key!
+      revokes a key
+    #download_key
+      downloads a key
+  merchant api
+    #delete_merchant!
+      deletes a merchant
+    #create_merchant!
+      creates a merchant
+    #merchants
+      lists merchants
+
+Spaceship::ConnectAPI::BetaFeedback
+  deletes a feedback
+  #Spaceship::ConnectAPI
+    #get_beta_feedback
+
+Spaceship::ConnectAPI::BetaAppLocalization
+  #Spaceship::ConnectAPI
+    succeeds with object
+
+Spaceship::ConnectAPI::ReviewSubmission
+  #Spaceship::ConnectAPI
+    #patch_review_submission
+    #post_review_submission_item
+    #get_review_submission
+  ReviewSubmission object
+    adds an app store version to the submission items
+    submits the submission for review
+    cancels the submission for review
+    gets review submission
+
+Spaceship::Portal::ProvisioningProfile
+  distribution_method says `adhoc` for AdHoc profile
+  #all via xcode api
+    should use the Xcode api to get provisioning profiles and their appIds
+    should use the developer portal api to get provisioning profiles and their appIds
+  #valid?
+    Invalid profile with active status but expired date
+    Valid profile
+    Invalid profile with expired status
+  #all
+    should filter by the correct types
+    AppStore and AdHoc are not the same
+    should have an app
+    properly retrieves and filters the provisioning profiles
+    include managed by Xcode
+      filters Xcode managed profiles
+      includes Xcode managed profiles
+  #download
+    handles failed download request
+    downloads an existing provisioning profile
+  #class.type
+    Returns only valid profile types
+  #find_by_bundle_id
+    returns [] if there are no profiles
+    returns the profile in an array if matching for ios
+    returns the profile in an array if matching for tvos
+  #factory
+    accepted distribution methods
+      creates proper profile types
+    unrecognized distribution method
+      raises error
+  #repair
+    raises when no valid signing certificates are available
+    repairs an existing profile with no devices
+    handles nil certificates in the certificate list
+    update the certificate if the current one is invalid
+    repairs an existing profile with added devices
+    update the certificate if the current one doesn't exist
+    ignores nil entries when collecting certificate ids
+    Different Environments
+      Development
+    if the profile was created with a template
+      repairs an existing profile with template
+  #create!
+    creates a provisioning profile with only the required parameters and auto fills all available devices
+    creates a new appstore provisioning profile
+    creates a new development provisioning profile
+    raises an error if the user wants to create a profile for a non-existing app
+    creates a new appstore provisioning profile with template
+    modify devices to prevent having devices on profile types where it does not make sense
+      AppStore profile types have no devices
+      Development profile types have devices
+      Direct (Mac) profile types have no devices
+      AdHoc profile types have no devices
+  #delete
+    deletes an existing profile
+  #update!
+    updates an existing tvOS profile
+    updates an existing iOS profile
+    if the profile was created with a template
+      updates an existing profile with template
+
+Spaceship::Portal::App
+  #delete
+    deletes the app by a given bundle_id
+  Filter app based on app identifier
+    works with specific App IDs even with different case
+    returns nil app ID wasn't found
+    works with specific App IDs
+    works with wildcard App IDs
+  #update_name
+    updates the name of the app by given bundle_id
+  successfully loads and parses all apps
+    parses app details correctly
+    the number is correct
+    inspect works
+    allows modification of values and properly retrieving them
+    parses wildcard apps correctly
+    parses app correctly
+  #create
+    creates an app id with an explicit bundle_id and no push notifications
+    creates an app id with a wildcard bundle_id
+    creates an app id with an explicit bundle_id
+
+Spaceship::Tunes::AppAnalytics
+  App Analytics Grabbed Properly
+    accesses non-live analytics details
+    accesses live analytics details
+    grabs live analytics split by view_by
+
+Spaceship::TunesClient
+  exception if Apple ID & Privacy not acknowledged
+    has authType of hsa2
+    has authType of non-sa
+    has authType is sa
+    has authType of hsa
+  #login
+    raises an exception if authentication failed
+  client
+    exposes the session cookie
+  CI
+    crashes when running in non-interactive shell
+  Logged in
+    #hostname
+    stores the username
+    iOS app bundle methods
+      requests iOS app bundle details
+    in-app-purchase methods
+      submits an in-app-purchase for review
+    #handle_itc_response
+      raises an exception if something goes wrong
+      does nothing if everything works as expected and returns the original data
+      identifies try again later responses
+    associated to multiple teams
+      #team_id picks team indicated by the sessionToken if select_team not called
+      returns team_id from legitimate team_name parameter
+      returns team_id from environment variable
+
+Spaceship::Tunes::AppRatings
+  successfully loads reviews
+    contains the right information with upto_date
+    contains the right information
+    contains the right information with version id
+  successfully loads rating summary
+    contains the right information
+  successfully calculates the average
+    the average is correct
+  Manages Developer Response
+    Can Read Response
+
+Spaceship::Tunes::IAPSubscriptionPricingTier
+  parsing the first subscription pricing tier
+    correctly parses the pricing info
+    correctly parses the pricing tier information
+  In-App-Purchase Subscription Pricing Tier
+    correctly creates all 200 subscription pricing tiers
+    inspect works
+    Subscription Pricing Tier Info
+      correctly creates all 155 pricing infos for each country
+
+Spaceship::Portal
+  InsufficientPermissions
+    raises an appropriate Developer Portal error when user doesn't have enough permission to do something
+
+Spaceship::Tunes::AppSubmission
+  successfully creates a new app submission
+    raises an error when submitting an app that is already in review
+    generates a new app submission from App Store Connect response
+    raises an error when submitting an app that has validation errors
+    submits a valid app submission to App Store Connect
+
+Spaceship::Portal::Device
+  successfully loads and parses all devices
+  successfully loads and parses all Watches
+  inspect works
+  successfully loads and parses all devices including disabled ones
+  successfully loads and parses all iPods
+  successfully loads and parses all iPhones
+  successfully loads and parses all Apple TVs
+  #create
+    should fail to create a nil device name
+    should fail to create a nil device UDID
+    doesn't trigger an ITC call if the device ID is already registered
+    doesn't raise an exception if the device name is already registered
+    should create and return a new device
+    should fail to create a device name longer than 50 characters
+    should fail to create a device with an invalid UDID
+  #find
+    finds a device by its ID
+  #disable
+    finds a device by its ID and disables it
+    finds a device by its ID and enables it
+
+Spaceship::Portal::Certificate
+  Correctly filters the listed certificates
+  successfully loads and parses all certificates
+    inspect works
+    parses push certificates correctly
+    parses code signing identities correctly
+    the number is correct
+  #create
+    can create a WebsitePush certificate
+    raises an error if the user wants to create a certificate for a non-existing app
+    should create and return a new certificate
+    should create a new certificate using a CSR from a file
+  #download
+    handles failed download request
+    downloads the associated .cer file
+  #revoke
+    revokes certificate by the given cert id
+
+Spaceship::ConnectAPI::TestFlight::Client
+  sends api request
+    betaAppReviewDetails
+      patch_beta_app_review_detail
+        succeeds
+      get_beta_app_review_detail
+        succeeds with filter
+        succeeds
+    betaAppLocalizations
+      post_beta_app_localizations
+        succeeds
+      get_beta_app_localizations
+        succeeds
+        succeeds with filter
+      patch_beta_app_localizations
+        succeeds
+    preReleaseVersions
+      get_pre_release_versions
+        succeeds with filter
+        succeeds
+    betaAppReviewSubmissions
+      get_beta_app_review_submissions
+        succeeds
+        succeeds with filter
+      delete_beta_app_review_submission
+        succeeds
+      post_beta_app_review_submissions
+        succeeds
+    betaGroups
+      patch_beta_groups
+        succeeds
+      get_beta_groups
+        succeeds
+        succeeds with filter
+      add_beta_groups_to_build
+        succeeds
+      delete_beta_groups_from_build
+        succeeds
+    builds
+      get_build
+        succeeds
+      patch_builds
+        succeeds
+      get_builds
+        succeeds
+        succeeds with filter
+    buildDeliveries
+      get_build_deliveries
+        succeeds
+        succeeds with filter
+    betaFeedbacks
+      get_beta_feedbacks
+        succeeds with filter
+        succeeds
+    buildBetaDetails
+      patch_build_beta_details
+        succeeds
+      get_build_beta_details
+        succeeds
+        succeeds with filter
+    betaTesters
+      get_beta_testers
+        succeeds with filter
+        succeeds
+      add_beta_tester_to_group
+        succeeds
+      delete_beta_tester_from_apps
+        succeeds
+      delete_beta_testers_from_app
+        succeeds
+      add_beta_tester_to_builds
+        succeeds
+      delete_beta_tester_from_beta_groups
+        succeeds
+      add_beta_testers_to_build
+        succeeds
+      delete_beta_testers_from_build
+        succeeds
+      post_beta_tester_assignment
+        succeeds
+      post_bulk_beta_tester_assignments
+        succeeds
+    betaBuildLocalizations
+      patch_beta_build_localizations
+        succeeds
+      get_beta_build_localizations
+        succeeds
+        succeeds with filter
+      post_beta_build_localizations
+        succeeds
+    apps
+      get_apps
+        succeeds
+        succeeds with filter
+      get_app
+        succeeds
+
+Spaceship::TestFlight::Client
+  #get_builds_for_train
+    retries requests
+    executes the request
+  #get_build_trains
+    executes the request
+  #create_app_level_tester
+    executes the request
+  #expire_build
+    executes the request
+  #assert_required_params
+    requires named parameters to be passed
+  #post_tester_to_group
+    executes the request
+  #delete_group_for_app
+    executes the request
+  #handle_response
+    raises an exception on an API error
+    handles successful responses with no data
+    handles successful responses with json
+    raises an InternalServerError exception on a HTTP 500 error
+    raises an exception on a HTTP error
+  #testers_for_app
+    executes the request
+  #delete_tester_from_app
+    executes the request
+  #get_groups
+    executes the request
+  #remove_testers_from_testflight
+    executes the request
+  #search_for_tester_in_app
+    executes the request
+  #internal_users_for_app
+    executes the request
+  #get_app_test_info
+    executes the request
+  #delete_tester_from_group
+    executes the request
+  #put_app_test_info
+    executes the request
+  #builds_for_group
+    executes the request
+  #get_build
+    executes the request
+  #create_group_for_app
+    executes the request
+  #add_group_to_build
+    executes the request
+  #put_build
+    executes the request
+
+Spaceship::ConnectAPI::User
+  #Spaceship::ConnectAPI
+    #get_users
+
+Spaceship::ConnectAPI::BuildBundleFileSizes
+  #Spaceship::ConnectAPI
+    #get_build_bundles_build_bundle_file_sizes
+
+Spaceship::Tunes::B2bOrganization
+  b2b_organization
+    parses the data correctly
+  from_id_info
+    creates correct object
+  ==
+    works correctly
+
+Spaceship::Tunes::AppVersion
+  Modifying the app version
+    doesn't allow modification of localized properties without the language
+    allows modifications of localized values
+    Upload screenshots
+      Add, Replace, Remove screenshots
+        auto-sets the 'scaled' parameter when the user provides a screenshot
+        auto-sets the 'scaled' parameter when the user provides an iMessage screenshot
+        can add a new iMessage screenshot to the list
+        can remove existing screenshot
+        fails with error if the screenshot to remove doesn't exist
+        can add a new screenshot to the list
+        can replace an existing screenshot with existing sort_order
+      Parameter checks
+        prevents from using sort_order 0
+        prevent from using invalid device
+        prevent from using invalid language
+        prevent from using invalid language
+        prevents from using too large sort_order
+        prevents from using negative sort_order
+    Pushing the changes back to the server
+      raises an exception if there was an error
+      overwrites release_upon_approval if auto_release_date is set
+      works with valid update data
+    Modifying the app large and watch icon
+      stores extra information in the raw_data
+      deletes the watch app data
+      deletes the large app data
+    update_app_version! retry mechanism
+      retries when ITC is temporarily unable to save changes
+      retries a maximum number of times when ITC is not responding properly
+      retries when ITC throws an error and it might be a server issue
+      retries a maximum number of times when ITC is temporarily unable to save changes
+    Rejecting
+      rejects
+      raises exception when not rejectable
+    Reading and modifying the geojson file
+      deletes the geojson
+      modifies the geojson file data after update
+      default geojson data is nil when value field is missing
+    Accessing different languages
+      raises an exception if language is not available
+  Modifying the app live version
+    Generate promo codes
+      fetches remaining promocodes
+  Validate attachment file
+    successfully loads and parses the app version and attachment
+      contains the right information
+  successfully loads and parses the app version
+    parses the localized values correctly
+    parses the basic version details correctly
+    parses the review information correctly
+    inspect works
+    #url
+      edit version
+      live version
+    App Status
+      parses readyForSale
+      parses pendingDeveloperRelease
+      parses prepareForUpload
+      parses rejected
+      parses removedFromSale
+      parses metadataRejected
+    supports setting of the app rating
+      infrequent_mild
+      infrequent_mild
+      boolean false
+      boolean true
+      none
+    #candidate_builds
+      properly fetches and parses all builds ready to be deployed
+      allows choosing of the build for the version to submit
+    Screenshots
+      properly parses all the screenshots
+    release an app version
+      allows release the edit version
+    release an app version in phased release to all users
+      allows releasing the live version to all users
+
+Spaceship::Client
+  #log_response
+    handles ASCII-8BIT to UTF-8 encoding gracefully
+  retry
+    raises BadGatewayError when response contains 'Bad Gateway'
+    retries when Spaceship::BadGatewayError error raised
+    retries when Faraday::ConnectionFailed error raised
+    re-raises when retry limit reached throwing Spaceship::GatewayTimeoutError
+    retries when Faraday::TimeoutError error raised
+    retries when Spaceship::AccessForbiddenError error raised
+    raises AppleTimeoutError when response contains '302 Found'
+    re-raises when retry limit reached throwing Spaceship::InternalServerError
+    re-raises when retry limit reached throwing Faraday::TimeoutError
+    re-raises when retry limit reached throwing Spaceship::AccessForbiddenError
+    re-raises when retry limit reached throwing Faraday::ConnectionFailed
+    re-raises when retry limit reached throwing Faraday::ParsingError
+    retries when Faraday::ParsingError error raised
+    retries when Spaceship::InternalServerError error raised
+    re-raises when retry limit reached throwing Spaceship::BadGatewayError
+    retries when Spaceship::GatewayTimeoutError error raised
+  detect_most_common_errors_and_raise_exceptions
+    raises Spaceship::AccessForbiddenError
+    raises Spaceship::AppleTimeoutError for 503
+    raises Spaceship::InsufficientPermissions for insufficient privileges
+    raises Spaceship::GatewayTimeoutError for 504
+    raises Spaceship::InsufficientPermissions for InsufficentPermissions
+    raises Spaceship::ProgramLicenseAgreementUpdated
+    raises Spaceship::TooManyRequestsError
+    raises Spaceship::AppleTimeoutError for 503 HTML content
+    raises Spaceship::ProgramLicenseAgreementUpdated
+    raises Spaceship::BadGatewayError for 502
+    raises Spaceship::InsufficientPermissions for Forbidden
+    raises Spaceship::InternalServerError
+  retry
+    retries when Spaceship::AccessForbiddenError error raised
+    retries when Spaceship::InternalServerError error raised
+    re-raises when retry limit reached throwing Faraday::ParsingError
+    re-raises when retry limit reached throwing Spaceship::BadGatewayError
+    retries when Faraday::TimeoutError error raised
+    raises AppleTimeoutError when response contains '302 Found'
+    retries when Faraday::ParsingError error raised
+    re-raises when retry limit reached throwing Faraday::TimeoutError
+    re-raises when retry limit reached throwing Spaceship::InternalServerError
+    retries when Spaceship::GatewayTimeoutError error raised
+    raises BadGatewayError when response contains 'Bad Gateway'
+    re-raises when retry limit reached throwing Spaceship::GatewayTimeoutError
+    re-raises when retry limit reached throwing Spaceship::AccessForbiddenError
+    retries when Faraday::ConnectionFailed error raised
+    re-raises when retry limit reached throwing Faraday::ConnectionFailed
+    successfully retries request after logging in again when UnauthorizedAccess Error raised
+    retries when Spaceship::BadGatewayError error raised
+    fails to retry request if login fails in retry block when UnauthorizedAccess Error raised
+    retry when user and password not fetched from CredentialManager
+      is able to retry and login successfully
+  #persistent_cookie_path
+    falls back to Dir.tmpdir as last resort
+    uses $SPACESHIP_COOKIE_PATH when set
+    uses /var/tmp if home not available
+    supports legacy .spaceship path
+    uses home dir by default
+  #do_sirp
+    raises Spaceship::UnexpectedResponse when body is not valid JSON, but HTTP 200
+    raises Spaceship::UnexpectedResponse when body contains serviceErrors
+
+Spaceship::Tunes::IAPFamilyList
+  IAP FamilyList
+    Creates a Object
+    Loads Edit Version
+
+Spaceship::ConnectAPI::Client
+  create instance
+    #initialize
+    #auth
+      with key
+      with filepath
+    #login
+      no team_id or team_name
+      with tunes_team_id
+      with team_name
+      with portal_team_id
+      with environment variables
+        with FASTLANE_TEAM_NAME
+        with FASTLANE_ITC_TEAM_ID
+        with FASTLANE_TEAM_ID
+        with FASTLANE_ITC_TEAM_NAME
+    #in_house?
+      raise error with no session
+      with portal client
+      with token
+        raise error without in_house set
+        with in_house set
+
+Spaceship::TestFlight::Group
+  attr_mapping
+    has them
+  collections
+    .find
+      returns nil if no group matches
+      returns a Group by group_name
+    .default_external_group
+      returns the default external group
+    .delete!
+      removes a group for correct parameters
+    .filter_groups
+      applies block and returns filtered groups
+    .create!
+      returns an existing group with the same name
+      creates the group for correct parameters
+    .all
+      returns all of the groups
+  instances
+    #remove_tester!
+      removes a tester via client
+    #builds
+      gets the builds for this group via client
+    #default_external_group?
+      returns default_external_group
+    #add_tester!
+      adds a tester via client
+
+Spaceship::ConnectAPI::AgeRatingDeclaration
+  Helpers
+    #map_key_from_itc
+    #map_value_from_itc
+    #map_deprecation_if_possible
+      successful migration of gamblingAndContests
+      unsuccessful migration of gamblingAndContests
+
+Spaceship::Portal::Passbook
+  successfully loads and parses all passbooks
+    parses passbook correctly
+    the number is correct
+    inspect works
+    allows modification of values and properly retrieving them
+  #delete
+    deletes the passbook by a given passbook_id
+  Filter passbook based on group identifier
+    returns nil passbook ID wasn't found
+    works with specific Passbook IDs
+  #create
+    creates a passbook
+
+Spaceship::Tunes
+  InsufficientPermissions
+    raises an appropriate App Store Connect error when user doesn't have enough permission to do something
+
+Spaceship::ConnectAPI::Certificate
+  #client
+    #get_certificates
+    #get_certificates with unsupported certificate types
+    #get_certificates with a supported certificate type
+  #valid?
+    when expiration_date is nil
+      should be invalid
+    with past expiration_date
+      should be invalid
+    when expiration_date is an empty string
+      should be invalid
+    with a future expiration_date
+      should be valid
+
+Spaceship::Portal::WebsitePush
+  #delete
+    deletes the website push by a given website_id
+  Filter website pushes based on group identifier
+    works with specific Website Push IDs
+    returns nil website push ID wasn't found
+  #create
+    creates a website push
+  successfully loads and parses all website pushes
+    parses website pushes correctly
+    inspect works
+    allows modification of values and properly retrieving them
+    the number is correct
+
+Spaceship::ConnectAPI::Device
+  #client
+    #disable an existing disabled udid
+    #enable an existing disabled udid
+    #find_by_udid with missing udid because it is a disabled udid
+    #find_by_udid with an existing enabled udid
+    #find_by_udid with non-existing udid
+    #find_by_udid with an existing disabled udid with include_disabled parameter set to true
+    #get_devices
+    #rename an existing disabled udid
+
+Spaceship::ConnectAPI::Token
+  #from_json_file
+    successfully creates token with in_house
+    raises error with missing all keys
+    successfully creates token with base64 encoded key
+    successfully creates token
+    successfully creates token with extra fields
+    raises error with invalid JSON without leaking the file contents
+    raises error with missing key
+  #from
+    hash
+      with symbols keys
+      with string keys
+  init
+    generates proper individual token
+    generates proper team token
+    audience field for JWT payload
+      uses enterprise when in_house is true
+      uses appstoreconnect when in_house is false
+  #create
+    with arguments
+      with key
+      with filepath
+      without issuer_id
+    with environment variables
+      with key
+      with filepath
+
+Spaceship::Portal::Merchant
+  .delete
+    deletes the merchant by a given merchant_id
+  .all
+    fetches all merchants
+  .create
+    creates a merchant
+  .find
+    returns nil when merchant ID wasn't found
+    works with specific Merchant IDs
+
+Spaceship
+  Spaceship::Launcher
+    may have different teams
+    DeviceDisabled
+    #select_team
+    App
+    Certificate
+    should have 2 separate spaceships
+    ProvisioningProfile
+    Device
+    With an uninitialized environment
+      shouldn't fail if trying to create new apns_certificate before app is invoked
+      shouldn't fail if provisioning_profile is invoked before app and device
+
+Spaceship::Tunes::Members
+  Member Object
+    checks if invitation is accepted
+    parses selected apps
+    deletes a member
+    resends invitation
+    parses roles
+    parses currency
+    finds one member by email
+    creates a new member
+      role: developer apps: all
+      role: admin, apps: all
+      role: appmanager, apps: 12344444
+
+Spaceship::Tunes::LanguageItem
+  language code inspection
+    localCode is also used for language keys
+    ensure test data is setup as expected
+    prints out all languages with their values
+    localCode is also used for get_lang method
+    localCode is also used for inspect method
+
+Spaceship::Portal::ProvisioningProfileTemplate
+  should factor a new provisioning profile template
+
+Spaceship::Base
+  doesn't blow up if it was initialized with a nil data hash
+  allows modification of values and properly retrieving them
+  #inspect
+    displays a placeholder value in inspect/to_s
+    prints out references
+    doesn't leak state when throwing exceptions while inspecting objects
+    handles circular references
+    contains the relevant data
+
+Spaceship::Portal::Persons
+  should change role
+  should be OK if person date format changes to timestamp
+  should be OK if person date format is unparsable
+  should remove a member
+  should factor a new person object
+
+Spaceship::Portal::AppGroup
+  #delete
+    deletes the app group by a given app_group_id
+  #create
+    creates an app group
+  Filter app group based on group identifier
+    returns nil app group ID wasn't found
+    works with specific App Group IDs
+  successfully loads and parses all app groups
+    the number is correct
+    inspect works
+    parses app group correctly
+    allows modification of values and properly retrieving them
+
+Spaceship::ConnectAPI::AppStoreVersion
+  AppStoreVersion object
+    reverse maps attributes
+      maps attributes names to API names
+
+Spaceship::ConnectAPI::ReviewSubmissionItem
+  #Spaceship::ConnectAPI
+    #get_review_submission_items
+  ReviewSubmissionItem object
+    gets all items for a review submission
+
+Spaceship::Tunes::DeviceType
+  type identifiers
+    should return an array of string device types
+    should be checkable using singleton functions
+    should contain all old identifiers
+
+Spaceship::Tunes::Application
+  successfully loads and parses all apps
+    #url
+    the number is correct
+    parses application correctly
+    inspect works
+    #builds
+      returns a standard array
+      supports block parameter
+    Promo codes
+      fetches remaining promocodes
+      fetches promocodes history
+    #update_price_tier
+      inspect works
+    #create!
+      raises an error if something is wrong
+      works with valid data and defaults to English
+      raises an error if bundle is wildcard and bundle_id_suffix has not specified
+    #availability
+      inspect works
+    #resolution_center
+      when the app was not rejected
+      when the app was rejected
+    #update_availability
+      inspect works
+    #available_bundle_ids
+      returns the list of bundle ids
+    #find
+      find using Apple ID
+        supports int parameters too
+        returns the application if available
+      find using bundle identifier
+        returns the application if available ignoring case
+        returns the application if available
+        returns nil if not available
+    #create! first app (company name required)
+      raises an error if something is wrong
+      works with valid data and defaults to English
+    Create new version
+      raises an exception if there already is a new version
+    Version history
+      Parses history
+    Access app_versions
+      #edit_version
+        returns the edit version if there is an edit version
+      #live_version weirdities
+        no live version if app isn't yet uploaded
+      #latest_version
+        returns the edit_version if available
+      #live_version
+        there is always a live version
+
+Spaceship::DUClient
+  mapping migrations
+    matches the picture_type_map prior to using DisplayFamily
+    matches the device_resolution_map prior to using DisplayFamily
+    matches the messages_picture_type_map prior to using DisplayFamily
+  #upload_geojson
+    handles failed upload request
+    handles successful upload request
+  #upload_large_icon and #upload_watch_icon
+    handles failed upload request using #upload_watch_icon
+    handles successful upload request using #upload_large_icon
+
+Spaceship::ConnectAPI::Model
+  #to_json
+
+Spaceship::Client
+  handle_two_factor
+    when running non-interactive and force 2FA to be interactive only
+      raises an error
+    when running interactive
+      does not raise an error
+    when running non-interactive
+      raises an error (FAILED - 1)
+    when interactive mode is not set
+      does not raise an error
+    when SPACESHIP_2FA_SMS_DEFAULT_PHONE_NUMBER is not set
+      with trusted devices
+        works with input sms
+        does not request sms code, and submits code correctly
+      with no trusted devices
+        with at least two phone numbers
+          prompts user to choose number
+          requests sms code, and submits code correctly
+        with exactly one phone number
+          does not request sms code, and sends the correct request with voice
+          does not request sms code, and sends the correct request
+    when SPACESHIP_2FA_SMS_DEFAULT_PHONE_NUMBER is set
+      providing a known phone number returns true (and sends the correct requests)
+      providing an unknown phone number throws an exception
+      with trusted devices
+        requests sms code, and submits code correctly
+      with no trusted devices
+        with exactly one phone number
+          does not request sms code, and sends the correct request
+        with at least two phone numbers
+          does not prompt user to choose number
+          requests sms code, and submits code correctly
+      and pushMode is voice
+        requests voice code
+  phone_id_from_number
+    selects correct phone id 2 for provided phone number +4912341234581
+    selects correct phone id 7 for provided phone number +4900000000011
+    selects correct phone id 5 for provided phone number +353123456743
+    selects correct phone id 6 for provided phone number +375 00 000-00-59
+    raises an error with unknown phone number
+    selects correct phone id 4 for provided phone number +39 123 456 7871
+    selects correct phone id 1 for provided phone number +49 123 4567885
+    selects correct phone id 3 for provided phone number +1-123-456-7866
+
+Spaceship::Tunes::B2bUser
+  b2b_user
+    parses the data correctly
+  from_username
+    creates correct object to add
+    creates correct object to add with explicit input
+    creates correct object to remove
+
+Spaceship::Tunes::IAPFamilyList
+  IAP FamilyDetail
+    can change versions
+    can save version
+    Creates a Object
+
+Spaceship::ConnectAPI::BetaAppReviewSubmission
+  #Spaceship::ConnectAPI
+    #get_beta_app_review_submissions
+
+Spaceship::ConnectAPI::BetaBuildLocalization
+  #Spaceship::ConnectAPI
+    #get_beta_build_localizations
+
+Spaceship::Utilities
+  #content_type
+    recognizes the .mp4 extension
+    recognizes the .mov extension
+    recognizes the .jpg extension
+    recognizes the .geojson extension
+    raises an exception for unknown extensions
+    recognizes the .jpeg extension
+    recognizes the .png extension
+    recognizes the .m4v extension
+
+Spaceship::ConnectAPI::BetaTesterMetric
+  #Spaceship::ConnectAPI
+    #get_beta_tester_metrics
+
+Spaceship::TestFlight::BuildTrains
+  .all
+    returns versions and builds
+
+Spaceship::ConnectAPI::Build
+  #Spaceship::ConnectAPI
+    #get_builds
+
+Spaceship::TestFlight::Build
+  instances
+    reloads a build
+    lazy loading attribute
+      loads TestInfo
+      loads BetaReviewInfo
+      loads ExportCompliance
+    submission state
+      is processed on active
+      is processed on review rejected
+      is has missing export compliance
+      access build details and dSYM URL
+      is processed on export compliance missing
+      is ready to submit
+      is active
+      is ready to test
+      is processing
+      is processed on ready to submit
+    #update_build_information!
+      does nothing if nothing is passed
+      updates whats_new
+      updates description
+      updates feedback_email
+    #save!
+      saves via the client
+    #upload_date
+      parses the string value
+  collections
+    .builds_for_train
+      returns the builds for a given train version
+    .all_waiting_for_review
+      returns a collection of builds that are waiting for review
+    .all_processing_builds
+      returns a collection of builds that are processing
+    .all
+      contains all of the builds across all build trains
+    .latest
+      returns the latest build across all build trains
+  .find
+    finds a build by a build_id
+    returns raises when the build cannot be found
+
+Spaceship::TestFlight::Tester
+  attr_mapping
+    has them
+  invites
+    .resend_invite
+      succeeds
+  instances
+    .remove_from_app!
+      removes a tester from the app
+    .remove_from_testflight!
+      removes a tester from TestFlight
+  collections
+    .find
+      returns a Tester by email address
+      returns nil if no Tester matches
+    .all
+      returns all of the testers
+    .search
+      returns empty array if no Tester matches
+      returns a Tester by email address
+      returns a Tester by email address if exact match case-insensitive
+      returns two testers if two testers match full-text search
+
+Spaceship::ConnectAPI::App
+  #get_app_availabilities
+    gets app availabilities when app is removed from sale
+    gets app availabilities when app is ready for distribution
+  #Spaceship::ConnectAPI
+    #get_review_submissions
+    gets by app id
+    #get_apps
+    #post_review_submission
+  App object
+    #get_review_submissions
+    creates beta group
+    fetches live app info
+    finds app by bundle id
+    #create_review_submission
+    fetches edit app info
+
+Spaceship::StatsMiddleware
+  #log
+    with api.appstoreconnect.apple.com
+    with bad env url
+    with empty env
+    with nil env
+
+Spaceship::Tunes::LanguageConverter
+  from value to readable
+    returns nil when element doesn't exist
+    works with valid inputs
+  #from_itc_to_standard
+    returns nil when element can't be found
+    works with valid inputs
+  #from_standard_to_itc
+    works with alternative values too
+    works with valid inputs
+    returns nil when element can't be found
+  from readable to value
+    works with valid inputs
+    returns nil when element doesn't exist
+
+Failures:
+
+  1) Spaceship::Client handle_two_factor when running non-interactive raises an error
+     Failure/Error: subject.handle_two_step_or_factor("response")
+
+     RuntimeError:
+       2FA can only be performed in interactive mode
+     # ./spaceship/lib/spaceship/two_step_or_factor_client.rb:7:in `handle_two_step_or_factor'
+     # ./spaceship/spec/two_step_or_factor_client_spec.rb:80:in `block (4 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 1 minute 6.4 seconds (files took 1.78 seconds to load)
+913 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+rspec_exit=1

@@ -1,0 +1,238 @@
+[TEST PROF INFO] Spring detected
+Running via Spring preloader in process 99945
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+W, [2026-10-19T16:59:23.767210 #99945]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Randomized with seed 52652
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+
+Test environment set up in 0.3573064010051894 seconds
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+......FF...FFFFFFFFF
+An error occurred in an `after(:context)` hook.
+Failure/Error: super(convert_key(key), *extras)
+
+KeyError:
+  Trait not registered: "class" referenced within "license" definition
+# ./ee/spec/support/test_license.rb:7:in `init'
+# ./ee/spec/spec_helper.rb:62:in `block (2 levels) in <top (required)>'
+# -e:1:in `<main>'
+# ------------------
+# --- Caused by: ---
+# KeyError:
+#   key not found: "class"
+#   ./ee/spec/support/test_license.rb:7:in `init'
+
+
+Failures:
+
+  1) Board validations validates name length is at most 255 characters when name is changed
+     Failure/Error: let(:board) { build(:board, project: project) }
+
+     KeyError:
+       Trait not registered: "class" referenced within "board" definition
+     # ./spec/models/board_spec.rb:21:in `block (3 levels) in <main>'
+     # ./spec/models/board_spec.rb:27:in `block (3 levels) in <main>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <main>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <main>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <main>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <main>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <main>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <main>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <main>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <main>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <main>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:21:in `block (3 levels) in <main>'
+
+  2) Board validations allows names up to 255 characters
+     Failure/Error: let(:board) { build(:board, project: project) }
+
+     KeyError:
+       Trait not registered: "class" referenced within "board" definition
+     # ./spec/models/board_spec.rb:21:in `block (3 levels) in <main>'
+     # ./spec/models/board_spec.rb:33:in `block (3 levels) in <main>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <main>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <main>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <main>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <main>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <main>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <main>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <main>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <main>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <main>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:21:in `block (3 levels) in <main>'
+
+  3) Board#order_by_name_asc returns in case-insensitive alphabetical order and then by ascending id
+     Failure/Error: let_it_be(:board_B) { create(:board, project: project, name: 'B') }
+
+     KeyError:
+       Trait not registered: "class" referenced within "board" definition
+     # ./spec/models/board_spec.rb:59:in `block (3 levels) in <main>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:59:in `block (3 levels) in <main>'
+
+  4) Board#first_board return the first case-insensitive alphabetical board as a relation
+     Failure/Error: let_it_be(:board_B) { create(:board, project: project, name: 'B') }
+
+     KeyError:
+       Trait not registered: "class" referenced within "board" definition
+     # ./spec/models/board_spec.rb:72:in `block (3 levels) in <main>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:72:in `block (3 levels) in <main>'
+
+  5) Board#first_board raises an error when find is done on a non-existent record
+     Failure/Error: let_it_be(:board_B) { create(:board, project: project, name: 'B') }
+
+     KeyError:
+       Trait not registered: "class" referenced within "board" definition
+     # ./spec/models/board_spec.rb:72:in `block (3 levels) in <main>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:72:in `block (3 levels) in <main>'
+
+  6) Board#disabled_for? for group board behaves like board disabled_for? when current user cannot create non backlog issues 
+     Failure/Error: let_it_be(:group) { create(:group) }
+
+     KeyError:
+       Trait not registered: "class" referenced within "group" definition
+     Shared Example Group: "board disabled_for?" called from ./spec/models/board_spec.rb:120
+     # ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+
+  7) Board#disabled_for? for group board behaves like board disabled_for? when user can create backlog issues 
+     Failure/Error: let_it_be(:group) { create(:group) }
+
+     KeyError:
+       Trait not registered: "class" referenced within "group" definition
+     Shared Example Group: "board disabled_for?" called from ./spec/models/board_spec.rb:120
+     # ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+
+  8) Board#disabled_for? for group board behaves like board disabled_for? when user can create backlog issues when block_issue_repositioning is enabled 
+     Failure/Error: let_it_be(:group) { create(:group) }
+
+     KeyError:
+       Trait not registered: "class" referenced within "group" definition
+     Shared Example Group: "board disabled_for?" called from ./spec/models/board_spec.rb:120
+     # ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+
+  9) Board#disabled_for? for project board behaves like board disabled_for? when current user cannot create non backlog issues 
+     Failure/Error: let_it_be(:group) { create(:group) }
+
+     KeyError:
+       Trait not registered: "class" referenced within "group" definition
+     Shared Example Group: "board disabled_for?" called from ./spec/models/board_spec.rb:126
+     # ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+     # -e:1:in `<main>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "class"
+     #   ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+
+  10) Board#disabled_for? for project board behaves like board disabled_for? when user can create backlog issues 
+      Failure/Error: let_it_be(:group) { create(:group) }
+
+      KeyError:
+        Trait not registered: "class" referenced within "group" definition
+      Shared Example Group: "board disabled_for?" called from ./spec/models/board_spec.rb:126
+      # ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+      # -e:1:in `<main>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "class"
+      #   ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+
+  11) Board#disabled_for? for project board behaves like board disabled_for? when user can create backlog issues when block_issue_repositioning is enabled 
+      Failure/Error: let_it_be(:group) { create(:group) }
+
+      KeyError:
+        Trait not registered: "class" referenced within "group" definition
+      Shared Example Group: "board disabled_for?" called from ./spec/models/board_spec.rb:126
+      # ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+      # -e:1:in `<main>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "class"
+      #   ./spec/models/board_spec.rb:89:in `block (3 levels) in <main>'
+
+Finished in 16.42 seconds (files took 17.68 seconds to load)
+20 examples, 11 failures, 1 error occurred outside of examples
+
+Failed examples:
+
+rspec ./spec/models/board_spec.rb:26 # Board validations validates name length is at most 255 characters when name is changed
+rspec ./spec/models/board_spec.rb:32 # Board validations allows names up to 255 characters
+rspec ./spec/models/board_spec.rb:65 # Board#order_by_name_asc returns in case-insensitive alphabetical order and then by ascending id
+rspec ./spec/models/board_spec.rb:78 # Board#first_board return the first case-insensitive alphabetical board as a relation
+rspec ./spec/models/board_spec.rb:83 # Board#first_board raises an error when find is done on a non-existent record
+rspec './spec/models/board_spec.rb[1:7:1:1:1:1]' # Board#disabled_for? for group board behaves like board disabled_for? when current user cannot create non backlog issues 
+rspec './spec/models/board_spec.rb[1:7:1:1:2:1]' # Board#disabled_for? for group board behaves like board disabled_for? when user can create backlog issues 
+rspec './spec/models/board_spec.rb[1:7:1:1:2:2:1]' # Board#disabled_for? for group board behaves like board disabled_for? when user can create backlog issues when block_issue_repositioning is enabled 
+rspec './spec/models/board_spec.rb[1:7:2:1:1:1]' # Board#disabled_for? for project board behaves like board disabled_for? when current user cannot create non backlog issues 
+rspec './spec/models/board_spec.rb[1:7:2:1:2:1]' # Board#disabled_for? for project board behaves like board disabled_for? when user can create backlog issues 
+rspec './spec/models/board_spec.rb[1:7:2:1:2:2:1]' # Board#disabled_for? for project board behaves like board disabled_for? when user can create backlog issues when block_issue_repositioning is enabled 
+
+Randomized with seed 52652
+
+[TEST PROF INFO] Time spent in factories: 00:05.526 (17.86% of total time)
+Stopped processing SimpleCov as a previous error not related to SimpleCov has been detected

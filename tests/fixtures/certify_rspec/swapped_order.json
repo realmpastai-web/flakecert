@@ -1,0 +1,6 @@
+{
+  "examples": [
+    {"id": "./spec/p.rb[1:1]", "status": "passed"},
+    {"id": "./spec/v.rb[1:1]", "status": "failed"}
+  ]
+}

@@ -1,0 +1,60 @@
+===== flakecert H1-pair-r2 2026-10-21T07:01:09Z =====
++ sha256sum /tmp/flakecert-f6-1019/tarballs/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30.tar.gz
+078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa  /tmp/flakecert-f6-1019/tarballs/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30.tar.gz
++ docker run bash /evidence/cmd/f6-H1-pair-r2.sh
+----- script -----
+#!/bin/bash
+ruby -v
+bundle -v
+printf "TARBALL_SHA256:%s\n" "$TARBALL_SHA256"
+printf "COMMIT:%s\n" "$COMMIT"
+'bundle' 'exec' 'rspec' '--format' 'documentation' '--no-color' '--order' 'defined' './spaceship/spec/connect_api/models/webhook_spec.rb' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5'
+ec=$?
+echo "RSPEC_EXIT:$ec"
+exit $ec
+----- output -----
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+TARBALL_SHA256:078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa
+COMMIT:76eeb3f9352a657fd979ae00e89e49a388729e30
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:locations=>{"./spaceship/spec/connect_api/models/build_beta_detail_spec.rb"=>[5]}}
+
+Spaceship::ConnectAPI::Webhook
+  .all
+  .create
+  #client
+    #post_webhook
+    #delete_webhook
+    #get_webhooks
+      returns all webhooks for an app
+      deserializes second webhook correctly
+
+Spaceship::ConnectAPI::BuildBetaDetail
+  #Spaceship::ConnectAPI
+    #get_build_beta_details (FAILED - 1)
+
+Failures:
+
+  1) Spaceship::ConnectAPI::BuildBetaDetail#Spaceship::ConnectAPI #get_build_beta_details
+     Failure/Error: response = Spaceship::ConnectAPI.get_build_beta_details
+
+     TypeError:
+       You need to instantiate this module with test_flight_request_client
+     # ./spaceship/lib/spaceship/connect_api/testflight/testflight.rb:17:in `test_flight_request_client'
+     # ./spaceship/lib/spaceship/connect_api/testflight/testflight.rb:472:in `get_build_beta_details'
+     # ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:6:in `block (3 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.51763 seconds (files took 1.4 seconds to load)
+7 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5 # Spaceship::ConnectAPI::BuildBetaDetail#Spaceship::ConnectAPI #get_build_beta_details
+
+RSPEC_EXIT:1
+
+docker_exit=1

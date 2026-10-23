@@ -1,0 +1,12 @@
++ phase=probe
++ seed=8
++ round=2
++ confirm=0
++ ids_n=199
++ ids_sha256=76a9dffca7ecd47dcf54e29b6af9d6c0a5a3fa03486d6e3e69c5821cc489d39c
++ ids_file=evidence/certify-rspec-g2-2/s8/by-hash/10275a0f9fafdb45dc09c9272cfd04e196c263c0ba3f37793932075e8fde946b/ids.txt
++ attempt=1
+elapsed_s=2.865
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: already initialized constant #<Class:0x00007ffb7d62d538>::Axns::Foo
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: previous definition of Foo was here
+docker_exit=1

@@ -1,0 +1,17 @@
+rung files requirements.txt
+rung test_file butter/mas/tests/clients/client_http_test.py
+rung python=3.11 start
+#9 0.265 FLAKECERT_INSTALL python 3.11.17
+#9 0.266 FLAKECERT_INSTALL files requirements.txt
+#9 0.266 FLAKECERT_INSTALL pipenv no
+#9 0.266 FLAKECERT_INSTALL package yes
+#9 3.873 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 8.375 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#9 8.375 FLAKECERT_INSTALL package_begin
+#9 10.27 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#9 10.27 FLAKECERT_INSTALL pytest_pin none
+#9 10.31 FLAKECERT_INSTALL pytest_fallback
+#9 12.60 FLAKECERT_INSTALL pytest_version 7.4.4
+rung python=3.11 build_exit=0
+collect nodes=36 matched=butter/mas/tests/clients/client_http_test.py::TestHttpClientApiMethods::testGetAvailableMotorRegisters
+rung python=3.11 result=PASS

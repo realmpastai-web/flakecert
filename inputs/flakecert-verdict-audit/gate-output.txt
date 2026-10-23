@@ -1,0 +1,23 @@
+PASS	src.pin	
+PASS	src.atf_passed_true_false	
+PASS	src.retry_reason_atf	
+PASS	src.event_shape	
+PASS	docs.atf_20_and_passed_tag	
+PASS	docs.merge_moves_to_fixed	
+PASS	sample.events_92	
+PASS	oracle.matches_expected	
+PASS	math.upper_20	
+PASS	math.required_1pct	
+PASS	math.required_0.1pct	
+PASS	report.alpha	
+PASS	report.test_set	['auth.test.js::token refresh', 'cart.test.js::total rounds to cents', 'sync.test.js::drains queue']
+PASS	verdict auth.test.js::token refresh	not_fixed n=20 k=1
+PASS	verdict cart.test.js::total rounds to cents	fixed n=20 k=0
+PASS	upper_exact cart.test.js::total rounds to cents	0.139109
+PASS	required_min cart.test.js::total rounds to cents p*=0.01	299
+PASS	required_min cart.test.js::total rounds to cents p*=0.001	2995
+PASS	verdict sync.test.js::drains queue	fixed n=50 k=0
+PASS	upper_exact sync.test.js::drains queue	0.058156
+PASS	required_min sync.test.js::drains queue p*=0.01	299
+PASS	required_min sync.test.js::drains queue p*=0.001	2995
+GATE PASS

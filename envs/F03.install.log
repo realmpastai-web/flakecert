@@ -1,0 +1,18 @@
+rung files requirements.txt
+rung test_file tests/test_app.py
+rung python=3.11 start
+#9 0.450 FLAKECERT_INSTALL python 3.11.17
+#9 0.450 FLAKECERT_INSTALL files requirements.txt
+#9 0.450 FLAKECERT_INSTALL pipenv no
+#9 0.450 FLAKECERT_INSTALL package yes
+#9 4.780 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 11.32 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#9 11.32 FLAKECERT_INSTALL package_begin
+#9 13.64 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#9 14.14 FLAKECERT_INSTALL repair six
+#9 15.37 FLAKECERT_INSTALL pytest_pin none
+#9 15.38 FLAKECERT_INSTALL pytest_fallback
+#9 18.58 FLAKECERT_INSTALL pytest_version 7.4.4
+rung python=3.11 build_exit=0
+collect nodes=51 matched=tests/test_app.py::TestAppBasic::test_app_with_correct_credentials_but_wrong_id
+rung python=3.11 result=PASS

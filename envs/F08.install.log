@@ -1,0 +1,36 @@
+rung files requirements-dev.txt,requirements.txt
+rung test_file tests/functional_test.py
+rung python=3.11 start
+#10 0.383 FLAKECERT_INSTALL python 3.11.17
+#10 0.385 FLAKECERT_INSTALL files requirements-dev.txt,requirements.txt
+#10 0.385 FLAKECERT_INSTALL pipenv no
+#10 0.385 FLAKECERT_INSTALL package yes
+#10 4.947 FLAKECERT_INSTALL req /opt/pristine/requirements-dev.txt
+#10 5.863 FLAKECERT_INSTALL req_fail_full /opt/pristine/requirements-dev.txt
+#10 5.863 FLAKECERT_INSTALL include -r ./requirements.txt
+#10 11.09 FLAKECERT_INSTALL line_ok -r ./requirements.txt
+#10 12.47 FLAKECERT_INSTALL line_ok docutils<0.16,>=0.10
+#10 13.84 FLAKECERT_INSTALL line_ok flake8
+#10 15.59 FLAKECERT_INSTALL line_ok flake8-colors
+#10 17.26 FLAKECERT_INSTALL line_ok flake8-docstrings
+#10 18.40 FLAKECERT_INSTALL line_ok flake8-import-order>=0.9
+#10 19.83 FLAKECERT_INSTALL line_ok pep8-naming
+#10 21.50 FLAKECERT_INSTALL line_ok pexpect>=4.6.0
+#10 24.10 FLAKECERT_INSTALL line_ok pylint>=1.8.4
+#10 25.36 FLAKECERT_INSTALL line_ok pydocstyle==3.0.0
+#10 27.73 FLAKECERT_INSTALL line_ok pyroma
+#10 29.31 FLAKECERT_INSTALL line_ok pytest
+#10 30.91 FLAKECERT_INSTALL line_ok pytest-env
+#10 32.03 FLAKECERT_INSTALL line_ok pytest-mock
+#10 33.23 FLAKECERT_INSTALL line_ok pytest-ordering
+#10 34.33 FLAKECERT_INSTALL line_ok semver
+#10 37.00 FLAKECERT_INSTALL line_ok tox
+#10 37.01 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#10 38.01 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#10 38.01 FLAKECERT_INSTALL package_begin
+#10 40.18 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#10 40.76 FLAKECERT_INSTALL pytest_pin none
+#10 42.10 FLAKECERT_INSTALL pytest_version 9.1.1
+rung python=3.11 build_exit=0
+collect nodes=8 matched=tests/functional_test.py::test_version[runnable2]
+rung python=3.11 result=PASS

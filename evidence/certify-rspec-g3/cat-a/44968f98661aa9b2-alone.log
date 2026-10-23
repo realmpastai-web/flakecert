@@ -1,0 +1,150 @@
+W, [2026-10-20T05:54:22.864553 #129385]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Test environment set up in 0.45131738500640495 seconds
+
+ReactiveCaching
+  # order defined
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+  does not allow STI
+  #with_reactive_cache
+    when cache is empty
+      is expected to be nil
+      updates the cache lifespan
+      behaves like reactive worker call
+        performs caching with correct worker
+      behaves like reactive worker call
+        performs caching with correct worker
+      behaves like reactive worker call
+        performs caching with correct worker
+    when the cache is full
+      behaves like a cacheable value
+        is expected to eq 4
+        does not enqueue a background worker
+        updates the cache lifespan
+        and expired
+          is expected to be nil
+          behaves like reactive worker call
+            performs caching with correct worker
+          behaves like reactive worker call
+            performs caching with correct worker
+          behaves like reactive worker call
+            performs caching with correct worker
+    when the cache contains non-nil but blank value
+      behaves like a cacheable value
+        is expected to eq false
+        does not enqueue a background worker
+        updates the cache lifespan
+        and expired
+          is expected to be nil
+          behaves like reactive worker call
+            performs caching with correct worker
+          behaves like reactive worker call
+            performs caching with correct worker
+          behaves like reactive worker call
+            performs caching with correct worker
+    when the cache contains nil value
+      behaves like a cacheable value
+        is expected to eq nil
+        does not enqueue a background worker
+        updates the cache lifespan
+        and expired
+          is expected to be nil
+          behaves like reactive worker call
+            performs caching with correct worker
+          behaves like reactive worker call
+            performs caching with correct worker
+          behaves like reactive worker call
+            performs caching with correct worker
+  #with_reactive_cache_set
+    calls with_reactive_cache
+    data returned
+      saves keys in set
+      returns the data
+  .reactive_cache_worker_finder
+    with default reactive_cache_worker_finder
+      calls the activerecord find_by method
+    with custom reactive_cache_worker_finder
+      overrides the default reactive_cache_worker_finder
+  #clear_reactive_cache!
+    is expected to be nil
+    is expected to be falsy
+  #exclusively_update_reactive_cache!
+    when the lease is free and lifetime is not exceeded
+      takes and releases the lease
+      enqueues a repeat worker
+      calls a reactive_cache_updated only once if content did not change on subsequent update
+      does not delete the value key
+      behaves like successful cache
+        caches the result of #calculate_reactive_cache
+        does not raise the exception
+      when :external_dependency cache
+        enqueues a repeat worker
+      when reactive_cache_hard_limit is set
+        when cache size is over the overridden limit
+          raises ExceededReactiveCacheLimit exception and does not cache new data
+          when reactive_cache_limit_enabled? is overridden to return false
+            behaves like successful cache
+              caches the result of #calculate_reactive_cache
+              does not raise the exception
+        when cache size is within the overridden limit
+          behaves like successful cache
+            caches the result of #calculate_reactive_cache
+            does not raise the exception
+      and #calculate_reactive_cache raises an exception
+        leaves the cache untouched
+        does not enqueue a repeat worker
+    when cache refresh is scheduled
+      with no dependency cache class
+        enqueues refresh with low urgency worker
+        with low urgency cache class
+          enqueues refresh with low urgency worker
+      with external dependency cache class
+        enqueues refresh with configured external dependency worker
+    when lifetime is exceeded
+      skips the calculation
+      deletes the value key
+    when the lease is already taken
+      skips the calculation
+  default options
+    is expected to be a kind of ActiveSupport::Duration
+    is expected to be a kind of ActiveSupport::Duration
+    is expected to be a kind of ActiveSupport::Duration
+    is expected to respond to #call
+    is expected to be nil
+    is expected to respond to #call
+  classes including this concern
+    sets reactive_cache_work_type
+
+Finished in 32.6 seconds (files took 57.55 seconds to load)
+61 examples, 0 failures
+
+[TEST PROF INFO] Time spent in factories: 00:00.035 (0.08% of total time)
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+/gitlab/app/controllers/registrations_controller.rb:207: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/models/concerns/integrations/base/integration.rb:67: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/models/work_items/widgets/start_and_due_date.rb:47: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/services/ci/create_pipeline_service.rb:184: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/services/ci/job_artifacts/destroy_batch_service.rb:66: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/config/initializers/7_redis.rb:8: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/models/geo/container_repository_registry.rb:16: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/policies/work_items/types_framework/custom/type_policy.rb:14: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/services/security/security_orchestration_policies/limit_service.rb:67: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/services/vulnerabilities/base_auto_state_transition_service.rb:168: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/lib/code_suggestions/prompts/code_generation/ai_gateway_messages.rb:146: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/lib/gitlab/auth/smartcard/certificate.rb:64: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/api/import_github_oauth_webhooks.rb:12: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/checks/file_size_limit_check.rb:15: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/config.rb:97: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/pipeline/chain/evaluate_workflow_rules.rb:72: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/pipeline/chain/pipeline_execution_policies/apply_policies.rb:10: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/pipeline/chain/pipeline_execution_policies/evaluate_policies.rb:10: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/project_config/compliance.rb:8: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/project_config/security_policy_default.rb:17: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/cleanup/personal_access_tokens.rb:98: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/cycle_analytics/summary/defaults.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/seeder.rb:178: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/webpack/dev_server_middleware.rb:6: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/work_items/instrumentation/event_actions.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.

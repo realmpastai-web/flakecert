@@ -1,0 +1,249 @@
+command:
+python3 -c 'import hashlib,tarfile; p="inputs/rea-brief-pytest-attempt-to-fix/rea/pytest_rerunfailures-16.7.tar.gz"; print(hashlib.sha256(open(p,"rb").read()).hexdigest()); tf=tarfile.open(p,"r:gz"); print("\n".join(tf.getnames()))'
+Read only with tarfile.extractfile. The sdist was not installed and pytest_rerunfailures was not executed.
+
+sdist: inputs/rea-brief-pytest-attempt-to-fix/rea/pytest_rerunfailures-16.7.tar.gz
+sha256: 6956ddfb65ca1d07e7e3d99e2c5359d82300f4cb062e6049563bd2c106f72d5c
+SHA256SUMS: 6956ddfb65ca1d07e7e3d99e2c5359d82300f4cb062e6049563bd2c106f72d5c  rea/pytest_rerunfailures-16.7.tar.gz
+
+How a failure qualifies for rerun
+---------------------------------
+--only-rerun / --rerun-except are regex lists. The match text is the current attempt's exception, formatted as "TypeName: " plus str(exception), walked along __cause__ (and __context__ for --only-rerun). It is not the traceback.
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:82-90
+82: ONLY_RERUN_DESC = (
+83:     "If passed, only rerun errors matching the regex provided. "
+84:     "Pass this flag multiple times (or list one regex per line in the ini "
+85:     "file) to accumulate a list of regexes to match"
+86: )
+87: RERUN_EXCEPT_DESC = (
+88:     "If passed, only rerun errors other than matching the regex provided. "
+89:     "Pass this flag multiple times (or list one regex per line in the ini "
+90:     "file) to accumulate a list of regexes to match"
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:108-142
+108:         "--only-rerun",
+109:         action="append",
+110:         dest="only_rerun",
+111:         type=str,
+112:         default=None,
+113:         help=ONLY_RERUN_DESC,
+114:     )
+115:     group._addoption(
+116:         "--reruns",
+117:         action="store",
+118:         dest="reruns",
+119:         type=int,
+120:         help=RERUNS_DESC,
+121:     )
+122:     group._addoption(
+123:         "--reruns-delay",
+124:         action="store",
+125:         dest="reruns_delay",
+126:         type=float,
+127:         help="add time (seconds) delay between reruns.",
+128:     )
+129:     group._addoption(
+130:         "--reruns-delay-backoff-factor",
+131:         action="store",
+132:         dest="reruns_delay_backoff_factor",
+133:         type=float,
+134:         help=RERUNS_DELAY_BACKOFF_FACTOR_DESC,
+135:     )
+136:     group._addoption(
+137:         "--rerun-except",
+138:         action="append",
+139:         dest="rerun_except",
+140:         type=str,
+141:         default=None,
+142:         help=RERUN_EXCEPT_DESC,
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:626-686
+626: def _matches_any_rerun_error(rerun_errors, excinfo):
+627:     return _try_match_error(rerun_errors, excinfo, follow_context=True)
+628: 
+629: 
+630: def _matches_any_rerun_except_error(rerun_except_errors, excinfo):
+631:     return _try_match_error(rerun_except_errors, excinfo, follow_context=False)
+632: 
+633: 
+634: def _iter_exception_chain(exc, *, follow_context=True):
+635:     seen = set()
+636:     while exc is not None and id(exc) not in seen:
+637:         seen.add(id(exc))
+638:         yield exc
+639:         if exc.__cause__ is not None:
+640:             exc = exc.__cause__
+641:         elif follow_context and not getattr(exc, "__suppress_context__", False):
+642:             exc = exc.__context__
+643:         else:
+644:             exc = None
+645: 
+646: 
+647: def _try_match_error(rerun_errors, excinfo, *, follow_context=True):
+648:     if not excinfo:
+649:         return False
+650:     for exc in _iter_exception_chain(excinfo.value, follow_context=follow_context):
+651:         err = f"{type(exc).__name__}: {exc}"
+652:         for rerun_error in rerun_errors:
+653:             if isinstance(rerun_error, type) and issubclass(rerun_error, BaseException):
+654:                 if isinstance(exc, rerun_error):
+655:                     return True
+656:             elif re.search(rerun_error, err):
+657:                 return True
+658:     return False
+659: 
+660: 
+661: def _should_hard_fail_on_error(item, report, excinfo):
+662:     if report.outcome != "failed":
+663:         return False
+664: 
+665:     rerun_errors = _get_rerun_filter_regex(item, "only_rerun")
+666:     rerun_except_errors = _get_rerun_filter_regex(item, "rerun_except")
+667: 
+668:     if (not rerun_errors) and (not rerun_except_errors):
+669:         # Using neither --only-rerun nor --rerun-except
+670:         return False
+671: 
+672:     elif rerun_errors and (not rerun_except_errors):
+673:         # Using --only-rerun but not --rerun-except
+674:         return not _matches_any_rerun_error(rerun_errors, excinfo)
+675: 
+676:     elif (not rerun_errors) and rerun_except_errors:
+677:         # Using --rerun-except but not --only-rerun
+678:         return _matches_any_rerun_except_error(rerun_except_errors, excinfo)
+679: 
+680:     else:
+681:         # Using both --only-rerun and --rerun-except
+682:         matches_rerun_only = _matches_any_rerun_error(rerun_errors, excinfo)
+683:         matches_rerun_except = _matches_any_rerun_except_error(
+684:             rerun_except_errors, excinfo
+685:         )
+686:         return (not matches_rerun_only) or matches_rerun_except
+
+A failed report is a terminal (not rerun) error when that match says so. _should_not_rerun then refuses a rerun on attempt count, a non-failure, xfail, a terminal error, or a false flaky condition. The condition receives the exception object for this attempt; the plugin does not read frame locations from it.
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:689-702
+689: def _should_not_rerun(item, report, reruns, condition):
+690:     xfail = hasattr(report, "wasxfail")
+691:     is_terminal_error = any(item._terminal_errors.values())
+692:     has_failed_subtests = report.when == "call" and _get_num_failed_subtests(item) > 0
+693: 
+694:     if (
+695:         item.execution_count > reruns
+696:         or (not report.failed and not has_failed_subtests)
+697:         or xfail
+698:         or is_terminal_error
+699:     ):
+700:         return True
+701: 
+702:     return not condition
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:366-393
+366: def evaluate_condition(item, mark, condition: object, excinfo=None) -> bool:
+367:     # copy from python3.8 _pytest.skipping.py
+368: 
+369:     error = excinfo.value if excinfo is not None else None
+370: 
+371:     # Callable condition.
+372:     if callable(condition):
+373:         try:
+374:             try:
+375:                 signature = inspect.signature(condition)
+376:             except (TypeError, ValueError):
+377:                 call_with_error = True
+378:             else:
+379:                 try:
+380:                     signature.bind(error)
+381:                 except TypeError:
+382:                     try:
+383:                         signature.bind()
+384:                     except TypeError:
+385:                         _warn_condition_error([
+386:                             f"Error evaluating {mark.name!r} condition as a callable",
+387:                             "Condition callable must accept zero or one argument",
+388:                         ])
+389:                         return False
+390:                     call_with_error = False
+391:                 else:
+392:                     call_with_error = True
+393:             return bool(condition(error) if call_with_error else condition())
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:1212-1214
+1212:     item._terminal_errors[result.when] = _should_hard_fail_on_error(
+1213:         item, result, call.excinfo
+1214:     )
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:1287-1322
+1287:             elif _should_not_rerun(item, report, reruns, condition):
+1288:                 # no rerun needed or one already triggered, log normally
+1289:                 item.ihook.pytest_runtest_logreport(report=report)
+1290:             else:
+1291:                 # failure detected and reruns not exhausted, since i < reruns
+1292:                 max_suite_reruns = item.session.config.option.max_suite_reruns
+1293:                 if max_suite_reruns is not None:
+1294:                     if not db.try_increment_suite_reruns(max_suite_reruns):
+1295:                         # Suite-wide limit exhausted -- log as final failure.
+1296:                         _restore_suspended_finalizers(item)
+1297:                         item.ihook.pytest_runtest_logreport(report=report)
+1298:                         continue
+1299: 
+1300:                 report.outcome = "rerun"
+1301:                 time.sleep(delay * delay_backoff_factor ** (item.execution_count - 1))
+1302: 
+1303:                 if not parallel or works_with_current_xdist():
+1304:                     # will rerun test, log intermediate result
+1305:                     item.ihook.pytest_runtest_logreport(report=report)
+1306: 
+1307:                 # cleanin item's cashed results from any level of setups
+1308:                 _remove_cached_results_from_failed_fixtures(item)
+1309:                 _remove_failed_setup_state_from_session(item)
+1310:                 _discard_test_class_instance(item)
+1311:                 _remove_failed_subtests_from_report(item, report)
+1312:                 _remove_failed_subtest_reports_from_stats(
+1313:                     item.config, item.session, item.nodeid
+1314:                 )
+1315: 
+1316:                 rerun_triggered = True
+1317: 
+1318:         # Do not retain ExceptionInfo tracebacks and their frame locals for the
+1319:         # lifetime of the collected item/session.
+1320:         item._rerun_condition_excinfos.clear()
+1321:         item._rerun_condition_results.clear()
+1322:         need_to_run = rerun_triggered
+
+Whether traceback location is compared between attempts
+-------------------------------------------------------
+No. A scan of pytest_rerunfailures-16.7/src/pytest_rerunfailures.py for tb_lineno, f_lineno, co_filename, __traceback__, and tb_frame found:
+(none)
+
+StatusDB counts failures under a sha1 of the test nodeid (the comment names the test id, not a traceback) and stores an integer. After each attempt the protocol clears the ExceptionInfo objects it held.
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:842-856
+842:     def _hash(self, crashitem: str) -> str:
+843:         if crashitem not in self.hmap:
+844:             self.hmap[crashitem] = hashlib.sha1(crashitem.encode()).hexdigest()[:10]  # noqa: S324
+845: 
+846:         return self.hmap[crashitem]
+847: 
+848:     def add_test_failure(self, crashitem):
+849:         hash = self._hash(crashitem)
+850:         failures = self._get(hash, "f")
+851:         failures += 1
+852:         self._set(hash, "f", failures)
+853: 
+854:     def get_test_failures(self, crashitem):
+855:         hash = self._hash(crashitem)
+856:         return self._get(hash, "f")
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:866-868
+866:     # i is a hash of the test name, t_f.py::test_t
+867:     # k is f for failures or r for reruns
+868:     # v is the number of failures or reruns (an int)
+
+pytest_rerunfailures-16.7/src/pytest_rerunfailures.py:1318-1320
+1318:         # Do not retain ExceptionInfo tracebacks and their frame locals for the
+1319:         # lifetime of the collected item/session.
+1320:         item._rerun_condition_excinfos.clear()
+
+pytest-rerunfailures 16.7 qualifies a failure for rerun by regex-searching the current attempt's "TypeName: message" string (or an exception-class isinstance check) and never compares traceback file or line locations between attempts, so it has no same_failure_modulo_line check that would accept a one-line shift of the same assertion only after masking `.py:<n>`.

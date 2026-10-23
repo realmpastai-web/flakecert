@@ -1,0 +1,44 @@
++ logical=rspec --seed 48174 './spaceship/spec/connect_api/models/capabilities_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb[1:1:1]'
++ rspec_argv_len=316
++ rspec_argv_n=11
++ docker_argv_len=604
++ docker_argv_n=28
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -v /tmp/flakecert-g1-1019/work/rspec-json:/out -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --format documentation --no-color --seed 48174 './spaceship/spec/connect_api/models/capabilities_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb[1:1:1]' --format json --out /out/spaceship_spec_connect_api_models_app_store_version_release_request_spec.rb-5-76eeb3f-A-r1.json
+elapsed_s=3.594
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:ids=>{"./spaceship/spec/connect_api/models/capabilities_spec.rb"=>["1:1:1"], "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb"=>["1:1:1"]}}
+
+Randomized with seed 48174
+
+Spaceship::ConnectAPI::Capabilities
+  #client
+    #get_available_bundle_id_capabilities
+
+Spaceship::ConnectAPI::AppStoreVersionReleaseRequest
+  #Spaceship::ConnectAPI
+    #post_app_store_version_release_request (FAILED - 1)
+
+Failures:
+
+  1) Spaceship::ConnectAPI::AppStoreVersionReleaseRequest#Spaceship::ConnectAPI #post_app_store_version_release_request
+     Failure/Error: response = Spaceship::ConnectAPI.post_app_store_version_release_request
+
+     TypeError:
+       You need to instantiate this module with tunes_request_client
+     # ./spaceship/lib/spaceship/connect_api/tunes/tunes.rb:19:in `tunes_request_client'
+     # ./spaceship/lib/spaceship/connect_api/tunes/tunes.rb:1117:in `post_app_store_version_release_request'
+     # ./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:6:in `block (3 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.30001 seconds (files took 2.09 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5 # Spaceship::ConnectAPI::AppStoreVersionReleaseRequest#Spaceship::ConnectAPI #post_app_store_version_release_request
+
+Randomized with seed 48174
+
+docker_exit=1

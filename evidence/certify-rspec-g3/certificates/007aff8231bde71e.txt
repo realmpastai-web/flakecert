@@ -1,0 +1,14 @@
+0 failures in 1 seeded runs -> failure rate <= 95.00% (one-sided 95%, Clopper-Pearson); seeds=1..1; commit=8004fe1c22e780c44d0db138293326037d847bf2
+INCOMPLETE
+{
+  "arm_g_log": "arm-g/007aff8231bde71e.log",
+  "arm_g_passed": true,
+  "commit": "8004fe1c22e780c44d0db138293326037d847bf2",
+  "failures": 0,
+  "finished_runs": 1,
+  "path": "./spec/lib/gitlab/throttle_spec.rb",
+  "seed_logs": [
+    "arm-f/007aff8231bde71e/seed-01.log"
+  ],
+  "verdict": "INCOMPLETE"
+}

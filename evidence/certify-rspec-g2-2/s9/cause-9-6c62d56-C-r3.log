@@ -1,0 +1,19 @@
++ logical=rspec --require /flakecert/ordering.rb './spec/axn/tools/registry_spec.rb[1:5:7]' './spec/axn/tools/registry_spec.rb[1:8:2]'
++ rspec_argv_len=199
++ rspec_argv_n=11
++ docker_argv_len=903
++ docker_argv_n=45
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e 'ids=./spec/axn/tools/registry_spec.rb[1:5:7] ./spec/axn/tools/registry_spec.rb[1:8:2]' -v /tmp/flakecert-g2-1019/probe/src/axn-6c62d568e27844bf7500be0a54425b7c9c65a8cc:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-2-1019/tools/certify_rspec:/flakecert:ro -v /workspace/hark-tasks/flakecert-g2-2-1019/evidence/certify-rspec-g2-2/s9:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --require /flakecert/ordering.rb './spec/axn/tools/registry_spec.rb[1:5:7]' './spec/axn/tools/registry_spec.rb[1:8:2]' --format json --out /out/cause-9-6c62d56-C-r3.json
+elapsed_s=1.016
+Run options: include {:ids=>{"./spec/axn/tools/registry_spec.rb"=>["1:5:7", "1:8:2"]}}
+
+Axn::Tools::Registry
+  .members (duplicate tool_name detection)
+    sorts members by the per-adapter name
+  .ensure_loaded! (non-Rails, isolates per-file load failures)
+    loads the good tool despite a sibling file raising LoadError at load time, warning about it too
+
+Finished in 0.02063 seconds (files took 0.49701 seconds to load)
+2 examples, 0 failures
+
+docker_exit=0

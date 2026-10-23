@@ -1,0 +1,27 @@
+# Shared base for the interpreter ladder. Per-test images FROM flakecert-base:<py>.
+ARG PY_IMAGE=python:3.11-slim-bookworm
+FROM ${PY_IMAGE}
+ARG DEBIAN_SUITE=bookworm
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_ROOT_USER_ACTION=ignore \
+    OMP_NUM_THREADS=1 \
+    OPENBLAS_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 \
+    NUMEXPR_NUM_THREADS=1
+RUN set -eux; \
+    if [ "$DEBIAN_SUITE" = "buster" ]; then \
+      rm -f /etc/apt/sources.list.d/*; \
+      printf 'deb https://archive.debian.org/debian buster main\ndeb https://archive.debian.org/debian-security buster/updates main\n' > /etc/apt/sources.list; \
+      printf 'Acquire::Check-Valid-Until "false";\n' > /etc/apt/apt.conf.d/99no-check-valid; \
+    fi; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+      iproute2 ca-certificates git build-essential \
+      libffi-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev \
+      libjpeg-dev libpng-dev libfreetype6-dev libpq-dev libsqlite3-dev \
+      pkg-config; \
+    rm -rf /var/lib/apt/lists/*
+RUN mkdir -p /opt/flakecert /opt/pristine /tmp/fc-run
+WORKDIR /

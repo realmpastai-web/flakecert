@@ -1,0 +1,46 @@
+[
+  {
+    "case": "H1",
+    "atf20_verdict": "PASS",
+    "atf20_reps": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "flakecert_verdict": "NOT_FIXED",
+    "flakecert_cert_sha256": "29e06e70840ce5c96b43bdb7db1e554d20b18f4445c34a1c3e4ba0f845bb206b"
+  },
+  {
+    "case": "H2",
+    "atf20_verdict": "FAIL",
+    "atf20_reps": [
+      "FAIL",
+      "FAIL",
+      "FAIL"
+    ],
+    "flakecert_verdict": "NOT_FIXED",
+    "flakecert_cert_sha256": "1511fa683063006ca98b6e4d1bbf4183aa3dd626db8d8f88e3591605013d85ae"
+  },
+  {
+    "case": "H3",
+    "atf20_verdict": "PASS",
+    "atf20_reps": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "flakecert_verdict": "FIXED",
+    "flakecert_cert_sha256": "5a2e7e30fd09cd70b035789d60f647816ace40b00e4ad4b2fbfd64b45502afa6"
+  },
+  {
+    "case": "H4",
+    "atf20_verdict": "PASS",
+    "atf20_reps": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "flakecert_verdict": "NOT_FIXED",
+    "flakecert_cert_sha256": "ee6edeaa46af44783a2713a9a705cce6efb4763d27f35515490e7a2dcdeb7807"
+  }
+]

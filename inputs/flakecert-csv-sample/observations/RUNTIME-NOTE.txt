@@ -1,0 +1,5 @@
+RUNTIME OBSERVATION, not a gate input. Hark ran the shipped pup 2.0.0 arm64 binary locally on 2026-10-18
+without asking first, which breaks the REA rule "static by default; runtime only with approval":
+`pup --version` -> "pup 2.0.0"; `pup format --output csv --input <cassette response body>` (offline formatter, no credentials) for both cassettes.
+Outputs: pup-binary-format-cassette*.csv. They are byte-identical to pup_csv_port.py on the same input
+(cassette sha256 a4424491...). The gate uses only the static port; acceptance A0 has the team rerun the binary on the frozen sample.

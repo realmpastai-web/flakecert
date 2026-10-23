@@ -1,0 +1,641 @@
++ logical=rspec --order defined './spec/axn/core/validations/on_subfields_spec.rb[1:3:6:4:1:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:3:6:4:2:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:3:6:4:3:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:3:6:4:4:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:1:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:2:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:2:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:3:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:4:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:5:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:6:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:6:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:7:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:7:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:7:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:7:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:8:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:9:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:9:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:9:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:9:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:10:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:10:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:10:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:5]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:6]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:7]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:8]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:9]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:12:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:12:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:12:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:13:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:13:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:13:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:13:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:14:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:15:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:16:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:17:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:17:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:18:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:18:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:18:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:19:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:19:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:19:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:19:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:20:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:21:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:22:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:22:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:22:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:23:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:24:1]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:2]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:3]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:4]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:5]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:6]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:1:1]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:1:2]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:1:3]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:1:4]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:1:5]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:1:6]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:1:7]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:7:1]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:7:2]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:7:3]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:7:4]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:1]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:2]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:3]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:4]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:5]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:6]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:7]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:8]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:9]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:10]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:11]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:12]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:13]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:14]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:15]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:16]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:17]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:18]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:19]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:20]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:21]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:22]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:23]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:24]' './spec/axn/core/validations/option_bag_keys_spec.rb[1:8:25]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:1:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:1:2]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:1:3]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:1:4]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:2:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:3:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:4:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:5:1:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:5:2:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:6:1:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:6:2:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:7:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:8:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:8:2]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:9:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:10:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:11:1:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:11:2:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:11:3:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:11:4:1]' './spec/axn/core/validations/outbound_validation_spec.rb[1:1:11:5:1]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:1:1]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:2:1]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:2:2]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:3:1]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:3:2]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:3:3]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:4:1]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:4:2]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:4:3]' './spec/axn/core/validations/preprocessing_spec.rb[1:1:4:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:1:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:2:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:2:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:10]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:5:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:5:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:5:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:6:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:6:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:6:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:6:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:11:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:11:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:11:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:11:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:11:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:10]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:11]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:12]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:13]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:14]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:15]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:16]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:17]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:18]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:19]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:20]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:21]' './spec/axn/core/validations/property_name_collision_spec.rb[1:3:12:22]' './spec/axn/core/validations/property_name_collision_spec.rb[1:4:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:5:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:5:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:5:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:5:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:5:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:5:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:6:5:10]' './spec/axn/core/validations/property_name_collision_spec.rb[1:7:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:7:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:7:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:7:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:7:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:7:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:1:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:1:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:1:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:1:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:2:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:2:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:3:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:3:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:3:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:3:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:3:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:3:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:4:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:4:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:4:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:4:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:4:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:5:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:5:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:5:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:5:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:5:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:5:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:6:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:6:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:6:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:7:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:8:7:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:9:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:9:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:9:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:9:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:10:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:10:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:10:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:10:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:10:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:11:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:11:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:11:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:11:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:11:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:12:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:12:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:12:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:12:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:13:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:13:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:13:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:14:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:14:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:14:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:15:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:15:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:15:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:15:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:10]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:6:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:6:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:6:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:6:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:6:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:10]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:11]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:12]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:13]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:14]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:15]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:16]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:17]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:18]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:19]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:20]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:21]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:23]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:24]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:25]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:26]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:27]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:28]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:29]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:30]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:31]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:36]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:37]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:38]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:40]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:41]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:42]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:43]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:44]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:45]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:47]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:22:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:22:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:22:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:32:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:32:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:32:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:32:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:32:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:32:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:10]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:33:11]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:34:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:34:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:35:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:35:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:35:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:35:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:35:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:39:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:39:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:39:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:39:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:46:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:46:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:46:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:46:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:16:11:46:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:10]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:11]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:12]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:13]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:14]' './spec/axn/core/validations/property_name_collision_spec.rb[1:17:15]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:1]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:2]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:3]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:4]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:5]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:6]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:7]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:8]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:9]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:10]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:11]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:12]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:13]' './spec/axn/core/validations/property_name_collision_spec.rb[1:18:14]' './spec/axn/core/validations/property_name_collision_spec.rb[1:19:1]' './spec/axn/core/validations/property_name_residues_spec.rb[1:1:1]' './spec/axn/core/validations/property_name_residues_spec.rb[1:1:2]' './spec/axn/core/validations/property_name_residues_spec.rb[1:1:3]' './spec/axn/core/validations/property_name_residues_spec.rb[1:2:1]' './spec/axn/core/validations/property_name_residues_spec.rb[1:2:2]' './spec/axn/core/validations/property_name_residues_spec.rb[1:2:3]' './spec/axn/core/validations/property_name_residues_spec.rb[1:3:1]' './spec/axn/core/validations/property_name_residues_spec.rb[1:3:2]' './spec/axn/core/validations/property_name_residues_spec.rb[1:3:3]' './spec/axn/core/validations/schema_collapse_invariant_spec.rb[1:1]' './spec/axn/core/validations/schema_collapse_invariant_spec.rb[1:2]' './spec/axn/core/validations/schema_collapse_invariant_spec.rb[1:3]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:1:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:1:2]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:1:3]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:1:4]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:1:5]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:2:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:2:2]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:2:3]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:3:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:3:2]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:3:3]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:3:4]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:3:5]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:2]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:4]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:6]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:3:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:3:2]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:3:3]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:3:4]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:3:5]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:3:6]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:3:7]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:5:1:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:5:1:2]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:5:2:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:4:5:2:2]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:2]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:3]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:4]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:5]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:6]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:7]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:8]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:9]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:10]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:11]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:12]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:13]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:5:14]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:6:1]' './spec/axn/core/validations/sensitive_shape_members_spec.rb[1:7:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:1:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:1:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:1:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:1:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:2:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:2:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:3:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:4:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:5:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:5:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:6:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:6:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:7:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:8:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:8:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:8:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:8:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:8:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:8:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:9:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]'
++ rspec_argv_len=31148
++ rspec_argv_n=477
++ docker_argv_len=31680
++ docker_argv_n=507
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s3:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --order defined './spec/axn/core/validations/on_subfields_spec.rb[1:3:6:4:1:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:3:6:4:2:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:3:6:4:3:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:3:6:4:4:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:1:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:2:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:2:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:3:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:4:4:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:5:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:6:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:6:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:7:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:7:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:7:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:7:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:8:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:9:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:9:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:9:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:9:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:10:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:10:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:10:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:5]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:6]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:7]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:8]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:11:9]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:12:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:12:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:12:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:13:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:13:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:13:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:13:4]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:14:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:15:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:16:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:17:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:17:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:18:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:18:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:18:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:19:1]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:19:2]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:19:3]' './spec/axn/core/validations/on_subfields_spec.rb[1:5:19:4]' './spec/axn/core/va ... truncated total_chars=32616
+elapsed_s=21.262
+Run options: include {:ids=>{"./spec/axn/core/validations/on_subfields_spec.rb"=>["1:3:6:4:1:1", "1:3:6:4:2:1", "1:3:6:4:3:1", "1:3:6:4:4:1", "1:4:1:1", "1:4:2:1", "1:4:2:2", "1:4:3:1", "1:4:4:1", "1:5:1", "1:5:2", "1:5:3", "1:5:4", "1:5:5:1", "1:5:6:1", "1:5:6:2", "1:5:7:1", "1:5:7:2", "1:5:7:3", "1:5:7:4", "1:5:8:1", "1:5:9:1", "1:5:9:2", "1:5:9:3", "1:5:9:4", "1:5:10:1", "1:5:10:2", "1:5:10:3", "1:5:11:1", "1:5:11:2", "1:5:11:3", "1:5:11:4", "1:5:11:5", "1:5:11:6", "1:5:11:7", "1:5:11:8", "1:5:11:9", "1:5:12:1", "1:5:12:2", "1:5:12:3", "1:5:13:1", "1:5:13:2", "1:5:13:3", "1:5:13:4", "1:5:14:1", "1:5:15:1", "1:5:16:1", "1:5:17:1", "1:5:17:2", "1:5:18:1", "1:5:18:2", "1:5:18:3", "1:5:19:1", "1:5:19:2", "1:5:19:3", "1:5:19:4", "1:5:20:1", "1:5:21:1", "1:5:22:1", "1:5:22:2", "1:5:22:3", "1:5:23:1", "1:5:24:1"], "./spec/axn/core/validations/option_bag_keys_spec.rb"=>["1:2", "1:3", "1:4", "1:5", "1:6", "1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5", "1:1:6", "1:1:7", "1:7:1", "1:7:2", "1:7:3", "1:7:4", "1:8:1", "1:8:2", "1:8:3", "1:8:4", "1:8:5", "1:8:6", "1:8:7", "1:8:8", "1:8:9", "1:8:10", "1:8:11", "1:8:12", "1:8:13", "1:8:14", "1:8:15", "1:8:16", "1:8:17", "1:8:18", "1:8:19", "1:8:20", "1:8:21", "1:8:22", "1:8:23", "1:8:24", "1:8:25"], "./spec/axn/core/validations/outbound_validation_spec.rb"=>["1:1:1:1", "1:1:1:2", "1:1:1:3", "1:1:1:4", "1:1:2:1", "1:1:3:1", "1:1:4:1", "1:1:5:1:1", "1:1:5:2:1", "1:1:6:1:1", "1:1:6:2:1", "1:1:7:1", "1:1:8:1", "1:1:8:2", "1:1:9:1", "1:1:10:1", "1:1:11:1:1", "1:1:11:2:1", "1:1:11:3:1", "1:1:11:4:1", "1:1:11:5:1"], "./spec/axn/core/validations/preprocessing_spec.rb"=>["1:1:1:1", "1:1:2:1", "1:1:2:2", "1:1:3:1", "1:1:3:2", "1:1:3:3", "1:1:4:1", "1:1:4:2", "1:1:4:3", "1:1:4:4"], "./spec/axn/core/validations/property_name_collision_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5", "1:1:6", "1:1:7", "1:1:8", "1:1:9", "1:2:1", "1:2:2", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:3:7", "1:3:8", "1:3:9", "1:3:10", "1:3:5:1", "1:3:5:2", "1:3:5:3", "1:3:6:1", "1:3:6:2", "1:3:6:3", "1:3:6:4", "1:3:11:1", "1:3:11:2", "1:3:11:3", "1:3:11:4", "1:3:11:5", "1:3:12:1", "1:3:12:2", "1:3:12:3", "1:3:12:4", "1:3:12:5", "1:3:12:6", "1:3:12:7", "1:3:12:8", "1:3:12:9", "1:3:12:10", "1:3:12:11", "1:3:12:12", "1:3:12:13", "1:3:12:14", "1:3:12:15", "1:3:12:16", "1:3:12:17", "1:3:12:18", "1:3:12:19", "1:3:12:20", "1:3:12:21", "1:3:12:22", "1:4:1", "1:5:1", "1:5:2", "1:5:3", "1:5:4", "1:5:5", "1:5:6", "1:6:1", "1:6:2", "1:6:3", "1:6:4", "1:6:5:1", "1:6:5:2", "1:6:5:3", "1:6:5:4", "1:6:5:5", "1:6:5:6", "1:6:5:7", "1:6:5:8", "1:6:5:9", "1:6:5:10", "1:7:1", "1:7:2", "1:7:3", "1:7:4", "1:7:5", "1:7:6", "1:8:1:1", "1:8:1:2", "1:8:1:3", "1:8:1:4", "1:8:2:1", "1:8:2:2", "1:8:3:1", "1:8:3:2", "1:8:3:3", "1:8:3:4", "1:8:3:5", "1:8:3:6", "1:8:4:1", "1:8:4:2", "1:8:4:3", "1:8:4:4", "1:8:4:5", "1:8:5:1", "1:8:5:2", "1:8:5:3", "1:8:5:4", "1:8:5:5", "1:8:5:6", "1:8:6:1", "1:8:6:2", "1:8:6:3", "1:8:7:1", "1:8:7:2", "1:9:1", "1:9:2", "1:9:3", "1:9:4", "1:10:1", "1:10:2", "1:10:3", "1:10:4", "1:10:5", "1:11:1", "1:11:2", "1:11:3", "1:11:4", "1:11:5", "1:12:1", "1:12:2", "1:12:3", "1:12:4", "1:13:1", "1:13:2", "1:13:3", "1:14:1", "1:14:2", "1:14:3", "1:15:1", "1:15:2", "1:15:3", "1:15:4", "1:16:1", "1:16:2", "1:16:3", "1:16:4", "1:16:5", "1:16:7", "1:16:8", "1:16:9", "1:16:10", "1:16:6:1", "1:16:6:2", "1:16:6:3", "1:16:6:4", "1:16:6:5", "1:16:11:1", "1:16:11:2", "1:16:11:3", "1:16:11:4", "1:16:11:5", "1:16:11:6", "1:16:11:7", "1:16:11:8", "1:16:11:9", "1:16:11:10", "1:16:11:11", "1:16:11:12", "1:16:11:13", "1:16:11:14", "1:16:11:15", "1:16:11:16", "1:16:11:17", "1:16:11:18", "1:16:11:19", "1:16:11:20", "1:16:11:21", "1:16:11:23", "1:16:11:24", "1:16:11:25", "1:16:11:26", "1:16:11:27", "1:16:11:28", "1:16:11:29", "1:16:11:30", "1:16:11:31", "1:16:11:36", "1:16:11:37", "1:16:11:38", "1:16:11:40", "1:16:11:41", "1:16:11:42", "1:16:11:43", "1:16:11:44", "1:16:11:45", "1:16:11:47", "1:16:11:22:1", "1:16:11:22:2", "1:16:11:22:3", "1:16:11:32:1", "1:16:11:32:2", "1:16:11:32:3", "1:16:11:32:4", "1:16:11:32:5", "1:16:11:32:6", "1:16:11:33:1", "1:16:11:33:2", "1:16:11:33:3", "1:16:11:33:4", "1:16:11:33:5", "1:16:11:33:6", "1:16:11:33:7", "1:16:11:33:8", "1:16:11:33:9", "1:16:11:33:10", "1:16:11:33:11", "1:16:11:34:1", "1:16:11:34:2", "1:16:11:35:1", "1:16:11:35:2", "1:16:11:35:3", "1:16:11:35:4", "1:16:11:35:5", "1:16:11:39:1", "1:16:11:39:2", "1:16:11:39:3", "1:16:11:39:4", "1:16:11:46:1", "1:16:11:46:2", "1:16:11:46:3", "1:16:11:46:4", "1:16:11:46:5", "1:17:1", "1:17:2", "1:17:3", "1:17:4", "1:17:5", "1:17:6", "1:17:7", "1:17:8", "1:17:9", "1:17:10", "1:17:11", "1:17:12", "1:17:13", "1:17:14", "1:17:15", "1:18:1", "1:18:2", "1:18:3", "1:18:4", "1:18:5", "1:18:6", "1:18:7", "1:18:8", "1:18:9", "1:18:10", "1:18:11", "1:18:12", "1:18:13", "1:18:14", "1:19:1"], "./spec/axn/core/validations/property_name_residues_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:2:1", "1:2:2", "1:2:3", "1:3:1", "1:3:2", "1:3:3"], "./spec/axn/core/validations/schema_collapse_invariant_spec.rb"=>["1:1", "1:2", "1:3"], "./spec/axn/core/validations/sensitive_shape_members_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5", "1:2:1", "1:2:2", "1:2:3", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:3:5", "1:4:1", "1:4:2", "1:4:4", "1:4:6", "1:4:3:1", "1:4:3:2", "1:4:3:3", "1:4:3:4", "1:4:3:5", "1:4:3:6", "1:4:3:7", "1:4:5:1:1", "1:4:5:1:2", "1:4:5:2:1", "1:4:5:2:2", "1:5:1", "1:5:2", "1:5:3", "1:5:4", "1:5:5", "1:5:6", "1:5:7", "1:5:8", "1:5:9", "1:5:10", "1:5:11", "1:5:12", "1:5:13", "1:5:14", "1:6:1", "1:7:1"], "./spec/axn/core/validations/shape_contracts_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:2:1", "1:2:2", "1:3:1", "1:4:1", "1:5:1", "1:5:2", "1:6:1", "1:6:2", "1:7:1", "1:8:1", "1:8:2", "1:8:3", "1:8:4", "1:8:5", "1:8:6", "1:9:1"], "./spec/axn/extras/strategies/client_spec.rb"=>["1:1:11:2"]}}
+
+Axn
+  subfield defaults
+    subfield defaults with blank values
+      with non-blank default and allow_blank: false
+        when subfield is missing
+          applies default and {:success=>true, :description=>"passes validation"}
+        when subfield is explicitly nil
+          applies default and {:success=>true, :description=>"passes validation"}
+        when subfield has blank string value
+          preserves existing blank value and {:success=>false, :description=>"fails validation"}
+        when subfield has non-blank value
+          preserves existing value and passes validation
+  contradiction rejections (PRO-2877)
+    model: subfield via a dotted on:
+      does not raise for a model: subfield reached via a dotted on:
+    verify-before-commit
+      does not commit the rejected subfields when the declaration error is rescued
+      does not leave an orphaned reader when the declaration error is rescued
+    model: TOP-LEVEL batch naming its own <field>_id companion (parity with the subfield guard)
+      raises at declaration, either order
+    model: subfield batch naming its own <field>_id companion
+      raises: model: applies to every field, so the explicit :<field>_id is a broken second model, either order
+  value-level default fallback (PRO-2889)
+    falls back to the default when the parent record's attribute is nil
+    falls back when the id-resolved record's attribute is nil
+    falls back when the model parent is omitted entirely
+    falls back when the present parent cannot answer the key
+    with a record-supplying default on a model subfield
+      resolves the defaulted record when the chain is refused
+    when the parent answers the key
+      prefers a present attribute over the default
+      falls back when the attribute is nil
+    with a REQUIRED defaulted subfield under a nil-tolerant model parent (value-level defaults)
+      succeeds on omission: the default satisfies validation and the parent stays nil
+      succeeds on explicit nil
+      still reads the record's value when id-resolved
+      rejects a BLANK default a presence validator rejects at declaration (the tolerance is dead)
+    with a defaulted subfield reached via a dotted on: under a refused chain
+      validates the fallback value
+    write-path behavior (PRO-2889)
+      never mutates a caller-supplied record with a default
+      evaluates a Proc default exactly once when the write chain is refused
+      resolves a Proc default exactly once per call (memoized across validators)
+      still materializes fully-object-shaped chains over an explicit nil (unchanged)
+    with a sibling <field>_id default reaching model subfield resolution (PRO-2889)
+      resolves the record via the sibling id default when the object-shaped chain omits the id
+      resolves the record via the sibling id's VALUE-LEVEL default when the write chain is refused
+      does NOT override a present raw id with the sibling default (a failed lookup stays nil)
+    with a transformed sibling <field>_id feeding a STRICT finder (present id, PRO-2910)
+      resolves the record from a coerced sibling id (string wire value → integer finder key)
+      resolves the record from a preprocessed sibling id
+      resolves via a coerced sibling id under coerce_input_types (no per-field coerce:)
+      prefers the id route declared BESIDE the model over a differently-transformed merged route
+      resolves nil when a present sibling id's preprocess maps it to nil (tolerant finder, never raw)
+      does not fall through to another merged route when the own route maps a PRESENT id to nil
+      does NOT rescue an absent id through an aliased route on another spelling
+      rescues an absent id through the route that OWNS the canonical <field>_id reader
+      prefers the model's OWN route over the canonically-named one
+    an ineligible id route supplies nothing at all (PRO-3068)
+      looks the record up by the caller's RAW token, not the ineligible route's transform
+      withdraws the declaration-time rescue credit, raising the dead-tolerance error
+      still credits the byte-identical shape whose id route owns the canonical reader name
+    with a model subfield reached via a dotted on: and a sibling id (PRO-2889)
+      resolves the record via the sibling id's VALUE-LEVEL default when the write chain is refused (C7)
+      resolves via the wire write-back when the object-shaped chain omits the id (regression)
+      skips the id default when the sibling record is already present (C8)
+      loads cleanly: the sibling id credits the required descendant's rescue (declaration side)
+    resolve_value cache is scoped to the settled pipeline (PRO-2889)
+      reads the settled wire value, not a value cached before preprocess/defaults settled
+    a merged nil-tolerant non-model route at a sibling-id-rescued node (PRO-2889)
+      runs after loading cleanly: the model route resolves via the sibling id, non-model nil tolerated
+    a leaf default must not clobber a model-routed wire key (PRO-2889)
+      resolves the record via the sibling id, not the non-model route's written default
+    an id-sibling default must not manufacture a model-consistency mismatch (PRO-2889)
+      honors a present sibling record over axn's own id default
+      still supplies the id default as a lookup token when the record is absent
+    subfield model-consistency compares against the TRANSFORMED sibling id (PRO-2910)
+      does NOT fabricate a conflict when a present record matches the id only after preprocess:
+      still raises when the present record disagrees with the transformed id
+      compares against the model's OWN-route id in a merged node (not declaration-order first)
+    a model whose sibling <field>_id opts into method_call: on a PORO/Data parent (PRO-2910)
+      resolves the record via the method_call sibling id (finder path)
+      compares a present record against the method_call sibling id (consistency path)
+      dispatches a method_call sibling id reader at most once (finder + reader share one read)
+      reads a method_call RECORD key at most once when deriving from the implicit id (no declared id)
+    a stateful sibling <field>_id transform runs at most once (model declared BEFORE its id, PRO-2910)
+      resolves the record and the reader from a SINGLE preprocess run (they agree)
+    the auto <field>_id companion agrees with the transformed lookup when the id is aliased (PRO-2910)
+      returns the transformed id from the subfield companion, matching the resolved record
+    subfield reader memos are cleared at the pipeline boundary (PRO-2889)
+      validates the settled parent value, not a value memoized before the parent was rewritten
+      re-resolves a model subfield record against the rewritten parent id
+      clears the raw-extract memo, so a PRE-pipeline read doesn't pin a stale subfield wire value (PRO-2910)
+    two defaults on one sibling-id wire node resolve through the model's own route (PRO-3068)
+      resolves a merged doubly-defaulted id through the model's own route
+    a descendant anchored on an aliased merged route resolves through THAT route (PRO-2926)
+      reads the leaf through the anchoring route's reader, honoring its default
+
+option bag keys
+  leaves an option's value the caller's own object
+  changes nothing for a bag that is already Symbol-keyed
+  still rejects an unrecognized key in the declaration itself
+  leaves an unrecognized key inside a bag as inert as its Symbol spelling
+  rejects a bag declaring one option under both spellings
+  a String-keyed bag validates exactly as the Symbol-keyed one does
+    type:
+    of:
+    inclusion:
+    validate:
+    model:
+    length:
+    the indifferent-access form a Rails author hands in
+  a shape member's own grammar
+    canonicalizes both levels of a String-keyed member
+    canonicalizes the indifferent-access form
+    canonicalizes a member's metadata too
+    rejects a member declaring one option under both spellings
+  a bag that answers missing keys from a Hash default
+    rejects `Hash.new(value)`, naming the bag
+    rejects a default_proc bag
+    rejects a bag carrying a real entry alongside the default
+    rejects a String-keyed defaulting bag
+    rejects a mixed-key defaulting bag
+    rejects a String-keyed default_proc bag
+    rejects a defaulting indifferent-access bag, whose keys are Strings whatever you write
+    does not let a String-keyed bag deny its own default
+    reports one option under both spellings ahead of the default
+    still canonicalizes a String-keyed bag whose default is nil
+    rejects a defaulting `of:` bag too
+    rejects a defaulting `inclusion:` bag too
+    rejects a defaulting `validate:` bag too
+    rejects a defaulting `model:` bag too
+    rejects a defaulting `presence:` bag too
+    rejects a defaulting `numericality:` bag too
+    rejects a raw `shape:` whose members come from the default
+    rejects a defaulting nested shape, naming the member it hangs from
+    rejects a String-keyed raw `shape:` whose members come from the default
+    rejects a String-keyed defaulting nested shape, naming the member it hangs from
+    rejects a String-keyed defaulting bag inside a shape member
+    rejects a member whose validations Hash defaults
+    rejects a member whose metadata Hash defaults
+    does not let a bag deny its own default
+    leaves a bag whose default is nil alone
+
+Axn
+  outbound validation
+    success
+      is expected to be ok
+      exposes existing context
+      exposes new values
+      prevents external access of non-exposed values
+    contract failure
+      fails
+    setting failure
+      fails
+    outbound defaults
+      are set correctly
+    support optional outbound exposures
+      when not set
+        is expected to be ok
+      when set
+        is expected to be ok
+    with multiple fields per exposes line
+      when valid
+        is expected to be ok
+      when invalid
+        fails
+    with multiple expectations on the same field
+      raises
+    exposed-only fields are not directly accessible on the action instance
+      raises NoMethodError when accessed bare inside call (use result.field instead)
+      result.foo still returns the default when no explicit expose call is made
+    with default that is a callable
+      has access to local helper methods
+    #expose
+      can expose
+    default call method
+      with methods matching exposed fields
+        automatically exposes declared exposures by calling matching methods
+      with multiple exposed fields
+        exposes all declared fields
+      with missing method and no default
+        fails with outbound validation error
+      with missing method but with default
+        allows default to be applied
+      with no exposed fields
+        does nothing
+
+Axn
+  preprocessing
+    when preprocessing is successful
+      modifies the context
+    when preprocessing fails
+      fails
+      sets the cause to the original exception
+    when fail! is called in preprocess block
+      fails with Axn::Failure
+      sets the error message
+      triggers on_failure handlers, not on_exception
+    when done! is called in preprocess block
+      returns a successful result
+      sets the success message
+      triggers on_success handlers
+      does not execute call method
+
+declaration-time property name collisions
+  when the rules run
+    declares a colliding contract cleanly, and the action still works
+    raises when input_schema is first demanded
+    raises again on a second demand rather than memoizing the failure
+    raises when output_schema is first demanded, for an outbound collision
+    raises when a Result is rendered, for an outbound collision
+    validates every projection it builds, not just the first
+    establishes render's outbound verdict once per class
+    re-validates after the contract grows
+    does not let a subclass inherit a verdict for a contract it then changes
+  the exact errors the two rules raise
+    reports a collision with its full message
+    reports an unrenderable name with its full message
+  a contract is fixed at declaration
+    does not let a class gain members appended after it was declared
+    copies a nested raw shape too
+    leaves the caller's own object unfrozen and reusable
+    still lets two axns share one shape Hash
+    copies a nested shape carried by a duck-typed member
+    does not let a mutated of: bag change a declared element type
+    does not let a mutated validate: bag change which validator runs
+    does not let a mutated inclusion: list widen a declared enum
+    reading a caller's members list
+      reads it exactly once per declaration, at every level of nesting
+      holds the answer that one read gave, when a later read would answer differently
+      raises at declaration when the list cannot be read at all
+    canonicalizing a caller's member name
+      converts it exactly once, and keys the member on the answer the guard judged
+      rejects the duplicate when that one answer is the colliding one
+      holds at every level of nesting
+      still declares a String subclass whose conversion is stable
+    a raw shape member's own options
+      does not let a mutated inclusion: list widen a member's enum
+      does not let a mutated option bag change what a member validates
+      keeps a subclass that adds no code of its own, whose copy is faithful
+      rejects a container that answers membership with its own code
+      rejects a container that defines a duplication hook
+    an option container that lies about itself
+      refuses one that denies its own class rather than storing it aliased
+      refuses one whose dup returns itself
+      detaches a bag whose transform_values hands back the receiver
+      rejects one that defines a duplication hook at all
+      rejects one whose duplication drops the state its membership is derived from
+      rejects one whose duplication drops an alias index no element-based probe can see
+      rejects one whose membership is derived from its own identity, with no duplication hook at all
+      accepts that same container frozen, and answers membership exactly as it declared
+      rejects a plain Array whose SINGLETON answers membership
+      rejects one whose membership comes from a module extended onto it
+      rejects one whose membership reads an instance variable the copy still shares
+      rejects a type: container that decides with its own any?
+      rejects an of: element-type container on the same terms
+      rejects an exclusion: container that answers with its own code, and accepts it frozen
+      accepts a frozen container that defines a duplication hook, and honors its membership
+      refuses one whose SINGLETON defines a duplication hook
+      stores a frozen plain Array without copying it
+      copies a subclass that adds no code of its own, and keeps its class
+      names an offending method whose bytes have no UTF-8 rendering, escaped
+      still copies a plain Array in a process where a module is prepended to Array
+      records the residue: a frozen container's ivar-derived membership is still the caller's to widen
+      records the residue: a Set membership container stays the caller's own object
+  the canonicalization this check shares with the renderer
+    is publicly callable and collapses two encodings of one property
+  two names that collapse onto one property
+    rejects them on exposes
+    rejects them on expects
+    rejects them across separate declarations, not just within one batch
+    names both spellings and the fix
+    rejects two subfield leaf names under one route
+    still allows one leaf spelling under two different routes
+  two routes that resolve to the same wire parent
+    rejects colliding leaf names reached by a dotted route and a subfield reader
+    rejects them when the second route is an as: alias of the parent
+    names both offenders with the route each was declared under
+    still allows one leaf spelling reached by a dotted route and a reader route
+    a route that renders differently on each read
+      anchors the subfield where the guard judged it, not where a later read points
+      rejects it as a duplicate when the judged route is the one already declared
+      stores an ordinary String route as the Symbol it names
+      canonicalizes a route whose own blank? calls it absent
+      still treats every blank spelling as no route at all
+      does not treat a lying blank? as an absent route
+      treats a blank route as absent even when its own present? claims otherwise
+      leaves a route whose bytes are invalid for its encoding to the name it converts to
+      raises ArgumentError naming the option and the offending class for a route that is not a name
+      reports axn's own ArgumentError rather than the route's exception
+  a model:-generated <field>_id
+    collides with an explicit _id declared in another encoding
+    names it as generated, so the author is not sent looking for a name they never wrote
+    collides for a subfield model: too
+    still allows an explicit _id declared in the same spelling, merging into one property
+    is unreachable for two model: fields, whose own names collide first
+    has no outbound counterpart, since exposes generates no _id property
+  every mechanism that can name a property at one node
+    a subfield leaf and a shape member of its parent
+      rejects them when their names collapse onto one property
+      names the shape member and the subfield as the two sources
+      still merges them into one property when the spelling matches
+      rejects them at depth, where the member is nested and the subfield is dotted
+    a shape member and a model:-generated <field>_id
+      rejects them when their names collapse onto one property
+      still merges them when the spelling matches
+    an implicit intermediate introduced by a dotted on:
+      collides with a shape member of the same parent
+      names itself as a nested key rather than as something the author declared
+      collides with a subfield declared at the same parent
+      collides with a model:-generated id at the same parent
+      collides with another implicit intermediate at the same parent
+      still merges with a subfield of the same spelling
+    the members of a Data type declared alongside a shape
+      rejects a shape member that collapses onto a Data member's property
+      names the Data type as the source
+      reports the collision even when the type's own to_s raises
+      reports the collision when the type's own constant holds non-UTF-8 bytes
+      still merges a shape member of the same spelling
+    a structured type whose properties the schema does not emit
+      does not reject an exposed Data type carrying a custom as_json
+      does not reject an exposed Data type carrying a custom to_h
+      still rejects an exposed plain Data type, whose properties ARE emitted
+      still rejects inbound, where serialization does not decide the schema
+      still rejects a custom to_h inbound too
+      does not reject colliding member names under a scalar of:
+    an of: element type's members, inside the array's items
+      rejects a shape member that collapses onto an element type's property
+      still merges an element type's property with a shape member of the same spelling
+      keeps each array's element properties in their own namespace
+    the outbound claim space
+      rejects a Data member colliding with an exposed shape member
+      does not compare an inbound name against an outbound one
+  a name with no UTF-8 rendering
+    is rejected on expects
+    is rejected on exposes
+    is rejected before the collision check, so two of them do not report a shared property
+    names the offending bytes escaped to ASCII and the fix
+  a dotted on: route segment with no UTF-8 rendering
+    is rejected at declaration rather than reaching JSON.generate
+    names the offending segment escaped to ASCII and the fix
+    reports a missing reader, not an encoding failure, in the root position
+    leaves a valid non-ASCII segment alone, emitting it as a property
+    leaves a plain ASCII dotted route alone
+  a structured type member name with no UTF-8 rendering
+    is rejected at declaration rather than reaching JSON.generate
+    is rejected on exposes too
+    does not fire for a Data used only as type:, which emits no member properties
+    still fires for the same Data once a shape overlays it
+    leaves a renderable non-ASCII member name alone
+  a non-class shape container:
+    is rejected at declaration rather than failing every call
+    names the fix
+    accepts a module as well as a class
+    leaves a valid container: validating as before
+  properties emitted inside anyOf branches
+    rejects a collision inside a branch
+    still declares the same name in two different branches
+    emits no property-bearing branch for a multi-class type:, so there is nothing to collide
+  a caller-supplied member list that answers filter_map differently from each
+    is walked identically by reflection, the guard, and runtime validation
+    still redacts a sensitive: member the list hides from flat_map
+    does not let such a list hide a collision from the guard
+  the identical-name duplicate this generalizes
+    keeps its existing message
+    names every offending occurrence, not just the first
+    reports a non-UTF-8-encoded name as a duplicate rather than an encoding failure
+    reports a batch mixing encodings without the join failing
+  shape member names
+    rejects two members that collapse onto one property
+    rejects a duplicate member name, which previously kept only the last in the schema
+    treats a symbol and a string spelling of one member name as one name
+    rejects a member name with no UTF-8 rendering
+    reports a collision in valid UTF-8 even when one spelling is not
+    reaches members nested inside a member's own block
+    reaches members supplied as a raw shape: kwarg, which never route through the builder
+    rejects them on an exposes shape too
+    leaves distinct member names alone
+    a member name with no UTF-8 rendering, combined with a member option
+      still raises the declaration error when the member declares model:
+      still raises the declaration error when an exposes member declares user_facing:
+      still raises the declaration error when the member declares as:
+      reports the option for a raw shape: member that also declares user_facing:, in valid UTF-8
+      still raises the declaration error when the member carries no options at all
+    a shape supplied raw, by objects that lie about themselves
+      reads a member whose respond_to_missing? raises, without consulting it
+      checks a shape Hash that denies being a Hash
+      still rejects a user_facing: member inside a shape Hash that denies being a Hash
+      checks a member that denies the field reader it defines
+      rejects a member that defines no field reader
+      rejects a member that answers to field but not validations
+      accepts a member implementing only field and validations, end to end
+      cannot store a hostile-== name on a ShapeConfig at all, and reports the duplicate
+      reports the duplicate for a duck-typed member whose name's own == raises
+      rejects a self-referential shape graph instead of overflowing the stack
+      rejects a self-referential shape graph on exposes too
+      checks a member whose field reader exists only through method_missing
+      still rejects a user_facing: member whose readers exist only through method_missing
+      propagates a NoMethodError raised inside a member's own field reader
+      rejects a shape graph that generates a fresh nested shape on every read
+      derives the container for a shape Hash that denies being a Hash
+      derives the container for a shape Hash whose key? claims it already has one
+      does not take the derived shape from the shape's own merge
+      derives the container for an explicit container: nil
+      raises the declaration error when a lying shape Hash has no structured type: to derive from
+      still allows one nested shape object reused by two sibling members
+      does not let a members list claiming to be nil hide itself from the walk
+      reports a container whose nil? raises as the declaration defect it is
+      does not dispatch == on a hostile NoMethodError#name
+      reports a cycle without re-reading the member's name
+      declares a nested shape shared between sibling members, without re-walking each route
+      rejects sharing deep enough that the path count is exponential
+      rejects one flat shape with more paths than the bound
+      does not charge members the schema never emits
+      still charges and still caps members the schema does emit
+      counts an of: element type's own members, which the schema does emit
+      counts every anyOf branch of a union of:
+      does not turn a member name shared by two branches into a collision
+      counts an array's items as a namespace rather than a property
+      counts an anyOf branch as a namespace rather than a property
+      counts it as a namespace for a shape overlay too
+      charges a String-named and a Symbol-named member of one property once
+      charges each implicit intermediate a dotted on: introduces
+      reaches that rejection quickly rather than walking the whole graph first
+      reads a NoMethodError's stored name through NameError, not through a subclass override
+      a shape whose [] hides the members its real entries carry
+        does not promote a colliding pair into the reflected schema
+        does not promote a user_facing: member the outbound guard never saw
+        does not promote a cyclic member into a graph reflection then walks
+      a config the emitter represents nowhere
+        charges nothing for an ambient-rooted config, and projects an empty object
+        charges nothing for an ambient-rooted shape either
+        charges nothing for a dropped deep subfield
+        charges nothing for a depth-1 subfield under a model: parent
+        charges nothing for a model: route's own type on input
+        still charges a model: route's type on output, where the field is emitted
+      a config whose emitted schema is built from a reduced view of it
+        charges nothing for a per-validator-gated type: on output, and emits none of its members
+        still charges an UNGATED type: of the same width on output
+        still charges a gated type: on INPUT, where the schema advertises it anyway
+        emits a gated type's members inbound, so charging them is right there
+        charges nothing for a gated of: on output
+        charges nothing for a gated shape: on output
+        still charges the same two shapes UNGATED
+        emits no member overlay for a gated shape: beside an ungated of:, and charges none
+        still charges the same overlay UNGATED
+        charges nothing for an of: whose array type is gated off on output
+        charges nothing for a gated type on a shape member
+      a second route to a wire path the emitter already built
+        charges nothing for the second route's of:, which is never emitted
+        still charges the route the property IS built from
+      an assigned top-level config the input schema treats differently
+        charges nothing for a config whose property a later one overwrites
+        still charges the config whose write survives
+        charges nothing for an OUTPUT config whose property a later one overwrites
+        charges nothing for a config the input schema excludes by name
+        charges nothing for a shape member the emitter names no property for
+      declarations that MERGE onto one emitted property
+        charges a merged pair once, so a contract inside the cap projects
+        still rejects the same shape past the cap
+        charges a shape member and a same-named subfield once
+        charges a model: route and an explicit <field>_id as the one property they emit
+      a member name that is neither String nor Symbol, whose inspect raises
+        cannot be constructed on a ShapeConfig at all
+        names the offender by class rather than dispatching its inspect
+        is rejected at declaration on a duck-typed member, which bypasses the constructor
+        reports a block-form option error naming the member by class
+        cannot reach the field path at all, which symbolizes every declared name
+  a declared name whose own methods run while it is being reported
+    reports the input collision rather than running the name's ==
+    reports the output collision rather than running the name's ==
+    still names the unrenderable emitted name rather than running its ==
+    reports a name whose bytes are neither UTF-8 nor a valid Symbol
+    refuses a lone name whose to_s raises without running it
+    refuses such a name ahead of the collision it would otherwise be reported as
+    refuses a name whose bytes have no UTF-8 rendering and whose to_s claims otherwise
+    reports a duplicate against an exotic assigned name, whatever its to_s says next
+    names the whole resolved path from one rendering of the ancestor
+    reports a duplicate against an assigned name rather than running its ==
+    reports a duplicate against an assigned name whose to_s raises, without running it
+    merges two plain strings onto one property
+    merges two symbols onto one property
+    merges two subclass instances onto one property
+    decides which config owns a shared wire key without asking the name
+  a declared name that decides its own rendering
+    no longer lets two names emit one JSON property through the encoder
+    refuses it on the render path, which builds no schema of its own
+    refuses a lone such name, with nothing for it to collide with
+    refuses one whose rendering happens to agree with its bytes
+    keeps `required` and `properties` naming one property for a plain String carrying a singleton to_s
+    refuses a name that is neither String nor Symbol, without asking it a second time
+    cannot be reached by a Symbol at all
+    has nothing to refuse in a subfield's name, which the emitter interns into its wire segment
+    leaves a String subclass that has not redefined to_s exactly as it was
+    still reports a subclass name that collides with a Symbol as the collision it is
+    does not reach a shape member's name, which is stored as the Symbol it was judged under
+    reads the method table rather than asking the name's own #method
+    refuses a String whose to_s has been undef'd
+    refuses a name that merely claims to be a String
+  the class a rescued declaration error leaves behind
+    carries no config and no reader for the rejected declaration
+
+the property-name rules' recorded residues
+  the size budget counts byte-equal String names separately
+    charges byte-equal assigned String names as one property each
+    emits the one property they name, so nothing below the cap is affected
+    cannot be reached by declaring the same name twice
+  a name whose eql? raises
+    still projects when there is nothing for the emitter to merge it against
+    surfaces from the emitter's merge once there is a second name
+    is not asked that question by the size budget, which runs first
+  a member name whose to_sym answers with a String
+    is refused rather than collapsed, even for byte-distinct names
+    reports the intermediate its to_sym returned rather than the name declared
+    stores the intermediate as the member's name, not the Symbol a further conversion would give
+
+a collision verdict and the schema it is about
+  is rejected exactly when the schema it would emit collapses
+  accepts each contract whose emitted schema names every property once
+  rejects each contract whose emitted schema would name one property twice
+
+sensitive: on shape members (PRO-2911)
+  static sensitive members
+    redacts a sensitive Array-element member in inputs_for_logging (every element)
+    redacts a sensitive Hash member in inputs_for_logging
+    redacts a sensitive member nested inside a nested shape (recursion)
+    redacts a sensitive member in execution_context inputs
+    includes the static sensitive member name in sensitive_fields (and not the plain sibling)
+  dynamic sensitive members
+    redacts a Proc member only when the predicate resolves truthy against the instance
+    redacts a Symbol member resolved against an instance method
+    reports dynamic sensitive members via _has_dynamic_sensitive_fields?
+  inspect (ContextFacadeInspector) redaction
+    redacts a sensitive Array-element member in internal_context.inspect (not just logs)
+    redacts a sensitive Hash member in internal_context.inspect
+    redacts a sensitive member nested inside a nested shape in inspect
+    redacts the whole value when the parent field is itself sensitive (not just the nested member)
+    redacts a sensitive member declared inside a subfield's shape block
+  duck-typed raw shape members (no #sensitive reader)
+    does not raise from sensitive_fields for a member lacking #sensitive
+    does not raise from inspect for a member lacking #sensitive
+    redacts a member that hides its #sensitive reader, in logs AND inspect
+    redacts a duck-typed sensitive member nested inside another shape, in logs and inspect
+    the sensitive: grammar on a raw member
+      rejects it on a ShapeConfig supplied directly
+      rejects it on a derived copy, before the copy can reach a contract
+      rejects it on a member of the caller's own Data class, at declaration
+      rejects it on a duck-typed member, at declaration
+      still accepts a duck-typed member with no #sensitive reader at all
+      accepts a derived copy whose sensitive: is in the grammar, and redacts it
+      reports a #sensitive reader that raises, at declaration
+    a member's sensitive: flipped after the class is declared
+      with the contract not yet read
+        leaves a member declared sensitive: false in the clear when it is flipped on
+        keeps a member declared sensitive: true redacted when it is flipped off
+      with the contract already read
+        leaves a member declared sensitive: false in the clear when it is flipped on
+        keeps a member declared sensitive: true redacted when it is flipped off
+  object-backed shapes (value isn't a Hash → wholesale masking)
+    masks a class-backed shape value wholesale in logs when it carries a sensitive member
+    masks a class-backed shape value wholesale in inspect
+    masks only a malformed (non-Hash) element, leaving valid Hash elements filtered per-member
+    masks an object-backed value under a class shape declared on a subfield
+    filters a Hash value per-member under a Hash shape declared on a subfield
+    masks an object-backed PARENT on a subfield-shape path (can't descend into it)
+    does not falsely mask a Hash parent when the sensitive subfield key is absent
+    masks a nested object member regardless of symbol/string key form on either side
+    masks a malformed Array supplied to a Hash shape wholesale (not element-mapped)
+    masks a malformed Hash supplied to an Array shape wholesale (not treated as one element)
+    masks a malformed Hash supplied to a class shape wholesale
+    preserves a nil shaped value (valid absent data) rather than masking it
+    preserves nil elements but masks malformed scalar/object elements (a scalar may BE the secret)
+    does NOT redact an object-backed shape whose members are all non-sensitive
+  a self-referential value on the path to a sensitive member
+    masks the cycle wholesale and still redacts the member it could reach
+  model: on a shape member
+    is rejected (reader-less members cannot resolve an id or expose an _id companion)
+
+shape contracts (block syntax for structured fields)
+  array element members
+    validates a declared member field on each array element
+    passes when every element's members are valid
+    validates member enum/inclusion per element, reporting the index
+    does not define a reader for shape members (no single value to bind)
+  default presence (parity with top-level expects)
+    requires a declared member by default — an absent key fails per element
+    opts out of default presence with optional: (an absent member passes)
+  single structured value (type: Hash)
+    validates the value's members directly, without an element index
+  of: Data.define element class
+    validates declared members against each element via reader access
+  nesting
+    recurses into a nested object member
+    recurses into a nested array-of-objects member
+  on exposes (outbound)
+    validates exposed array element members
+    passes when exposed element members are valid
+  whole-field nil handling
+    skips member validation when the field is nil and allow_nil is set
+  container mismatch — defers to TypeValidator, no resolver leak
+    defers a nil array value to the type/presence error (not a resolver error)
+    defers a scalar array value to the type error
+    preserves the element index when an element is a scalar (not extractable)
+    preserves the element index for a nil element
+    preserves the element index for an Array element (Array#dig can't take a name)
+    defers a non-Hash value on a Hash-shaped field to the type error
+  unsupported member options
+    raises when a member declares default:
+
+Axn::Extras::Strategies::Client
+  .configure
+    with error_handler
+      does not inject ErrorHandlerMiddleware when error_handler is nil (FAILED - 1)
+
+Failures:
+
+  1) Axn::Extras::Strategies::Client.configure with error_handler does not inject ErrorHandlerMiddleware when error_handler is nil
+     Failure/Error: expect(middleware_klasses(instance.client)).not_to include(Axn::Extras::Strategies::Client::ErrorHandlerMiddleware)
+
+     NameError:
+       uninitialized constant Axn::Extras::Strategies::Client::ErrorHandlerMiddleware
+     # ./spec/axn/extras/strategies/client_spec.rb:172:in `block (4 levels) in <top (required)>'
+
+Finished in 19.7 seconds (files took 0.77333 seconds to load)
+468 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/axn/extras/strategies/client_spec.rb:169 # Axn::Extras::Strategies::Client.configure with error_handler does not inject ErrorHandlerMiddleware when error_handler is nil
+
+docker_exit=1

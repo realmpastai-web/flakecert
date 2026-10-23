@@ -1,0 +1,3 @@
+$ jq -e '([range(20)|"passed"]) as $p | .variants.wrong_fix.plain_retry==$p and .variants.real_fix.plain_retry==$p' audit/pytest-attempt-to-fix.json
+true
+exit=0

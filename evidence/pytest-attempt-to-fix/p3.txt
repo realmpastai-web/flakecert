@@ -1,0 +1,47 @@
+$ python3 -B inputs/rea-brief-pytest-attempt-to-fix/gate_pytest_attempt_to_fix.py --results audit/pytest-attempt-to-fix.json
+PASS	res.pytest	
+PASS	res.python_3_11	3.11.17
+PASS	res.base_image	
+PASS	res.image_digest	
+PASS	res.pip_freeze_is_lock	5 pkgs
+PASS	res.reversed_packages_not_installed	
+PASS	cert.node_is_victim	
+PASS	cert.env_identity	image_digest, pip_freeze_sha, python
+PASS	cert.seed_fields_recorded	['order', 'pythonhashseed', 'seed', 'time_offset', 'tmpdir']
+PASS	cert.order_polluter_then_victim	test_total_with_discount > test_total_without_discount
+PASS	cert.exc	
+PASS	cert.sig	40c3f885b65917b2
+PASS	res.three_variants	['prefix', 'real_fix', 'wrong_fix']
+PASS	prefix.test_cart_sha	
+PASS	prefix.rest_of_sample_unchanged	5/5 files
+PASS	prefix.plain_retry_20_of_20_pass	20/20
+PASS	prefix.cert_replay_3_runs	['failed', 'failed', 'failed']
+PASS	prefix.cert_replay_polluter_passes	
+PASS	prefix.cert_replay_identical	
+PASS	prefix.failure_is_the_leak	assert 90 == 100  +  where 90 = total()  +    where total = 
+PASS	prefix.sig_equals_cert	40c3f885b65917b2
+PASS	prefix.sweep_0_99_victim_fail_seeds	53 failing, want 53
+PASS	prefix.sweep_polluter_always_passes	
+PASS	wrong_fix.test_cart_sha	
+PASS	wrong_fix.rest_of_sample_unchanged	5/5 files
+PASS	wrong_fix.plain_retry_20_of_20_pass	20/20
+PASS	wrong_fix.cert_replay_3_runs	['failed', 'failed', 'failed']
+PASS	wrong_fix.cert_replay_polluter_passes	
+PASS	wrong_fix.cert_replay_identical	
+PASS	wrong_fix.failure_is_the_leak	assert 90 == 100  +  where 90 = total()  +    where total = 
+FAIL	wrong_fix.sig_equals_cert	fe53cdfbd5506278
+PASS	wrong_fix.sweep_0_99_victim_fail_seeds	53 failing, want 53
+PASS	wrong_fix.sweep_polluter_always_passes	
+PASS	real_fix.test_cart_sha	
+PASS	real_fix.rest_of_sample_unchanged	5/5 files
+PASS	real_fix.plain_retry_20_of_20_pass	20/20
+PASS	real_fix.cert_replay_3_runs	['passed', 'passed', 'passed']
+PASS	real_fix.cert_replay_polluter_passes	
+PASS	real_fix.cert_replay_identical	
+PASS	real_fix.sweep_0_99_victim_fail_seeds	0 failing, want 0
+PASS	real_fix.sweep_polluter_always_passes	
+PASS	verdict.certified	{'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'}
+PASS	verdict.plain_retry_cannot_tell_wrong_from_real	{'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['wrong_fix.sig_equals_cert']
+exit=1

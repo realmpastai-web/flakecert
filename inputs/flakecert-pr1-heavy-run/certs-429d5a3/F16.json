@@ -1,0 +1,68 @@
+{
+  "id": "F16",
+  "project": "https://github.com/didix21/mdutils",
+  "sha": "2ef859ecc1e4f1a3e24f4150c96f61180bc57ceb",
+  "pytest_id": "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list",
+  "node_id": "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list",
+  "image_digest": "sha256:d3426f19c40e181468001805a99090ec2d4c7a958183b201b6060f300d33c312",
+  "image_tag": "flakecert:F16",
+  "pip_freeze_sha": "21c585a94a71b59a7ac397b43faa8f527ffe1d3663ee4eeedd53fa67f8ab2b43",
+  "flakecert_version": "0.2.0",
+  "python": "3.11.17",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 61,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "tests/test_fileutils/test_fileutils.py::TestMarkdownFile::test_append_end",
+        "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": ""
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "FileNotFoundError",
+    "sig": "98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 61,
+    "empirical_rate": "1/61",
+    "compare": "empirical<lower"
+  }
+}

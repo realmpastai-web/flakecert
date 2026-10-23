@@ -1,0 +1,13 @@
+F01	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+F03	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+F04	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+F06	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+F08	docker_image_id=DIFF	pip_freeze=DIFF	replay=NOT_RUN digest_mismatch
+F10	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+F12	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+F14	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+F15	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+F16	docker_image_id=DIFF	pip_freeze=SAME	replay=NOT_RUN digest_mismatch
+GATES {"frozen_hash": true, "effective_set": true, "swaps_logged": true, "offline_run": true, "certificates": false, "blind_comparator": false, "bounds": true, "baseline_denominator": true, "summary_traceable": true}
+make_verify_error1 True
+comparator_fail_lines 10

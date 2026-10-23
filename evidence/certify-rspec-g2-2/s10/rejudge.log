@@ -1,0 +1,13 @@
+prior evidence/certify-rspec-g2
+summary_exit_ok True
+cert-1.json stored=CERTIFIED summary=CERTIFIED recomputed=CERTIFIED
+cert-2.json stored=CERTIFIED summary=CERTIFIED recomputed=CERTIFIED
+cert-3.json stored=CERTIFIED summary=CERTIFIED recomputed=CERTIFIED
+cert-4.json stored=CERTIFIED summary=CERTIFIED recomputed=CERTIFIED
+cert-5.json stored=CERTIFIED summary=CERTIFIED recomputed=CERTIFIED
+cert-6.json stored=BRITTLE_CERTIFIED summary=BRITTLE_CERTIFIED recomputed=BRITTLE_CERTIFIED
+cert-7.json stored=CERTIFIED summary=CERTIFIED recomputed=CERTIFIED
+cert-8.json stored=BRITTLE_CERTIFIED summary=BRITTLE_CERTIFIED recomputed=BRITTLE_CERTIFIED
+unchanged True
+exit_ok True
+log_mismatches 0

@@ -1,0 +1,181 @@
+Running in defined order:
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.366218
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:125:in `run'
+
+W, [2026-10-20T07:40:23.863526 #146901]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 1.0: 1.034405
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:126:in `run'
+
+..
+
+Finished in 0.01633 seconds (files took 2.89 seconds to load)
+2 examples, 0 failures
+
+Running in reverse order:
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.4063060000000002
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:125:in `run'
+
+W, [2026-10-20T07:40:29.143340 #146916]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 1.0: 1.037588
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:126:in `run'
+
+..
+
+Finished in 0.01593 seconds (files took 2.89 seconds to load)
+2 examples, 0 failures
+
+Running in random order (1/5):
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.4161350000000001
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:125:in `run'
+
+W, [2026-10-20T07:40:34.388484 #146932]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 1.0: 1.061881
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:126:in `run'
+
+
+Randomized with seed 10602
+..
+
+Finished in 0.01557 seconds (files took 2.95 seconds to load)
+2 examples, 0 failures
+
+Randomized with seed 10602
+
+Running in random order (2/5):
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.35774600000000006
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:125:in `run'
+
+W, [2026-10-20T07:40:39.186588 #146947]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Randomized with seed 48162
+..
+
+Finished in 0.01576 seconds (files took 2.71 seconds to load)
+2 examples, 0 failures
+
+Randomized with seed 48162
+
+Running in random order (3/5):
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.3742109999999999
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:125:in `run'
+
+W, [2026-10-20T07:40:44.066162 #146962]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 1.0: 1.0005159999999997
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:126:in `run'
+
+
+Randomized with seed 63790
+..
+
+Finished in 0.0148 seconds (files took 2.81 seconds to load)
+2 examples, 0 failures
+
+Randomized with seed 63790
+
+Running in random order (4/5):
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.35119700000000004
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:125:in `run'
+
+W, [2026-10-20T07:40:49.110681 #146977]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 1.0: 1.061482
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:126:in `run'
+
+
+Randomized with seed 32266
+..
+
+Finished in 0.02083 seconds (files took 2.9 seconds to load)
+2 examples, 0 failures
+
+Randomized with seed 32266
+
+Running in random order (5/5):
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 0.2: 0.3655550000000001
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:125:in `run'
+
+W, [2026-10-20T07:40:54.315224 #146992]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+
+Warning: fast_spec_helper submodule took longer than max allowed execution time of 1.0: 1.014877
+Slow submodule invoked from: /gitlab/spec/fast_spec_helper.rb:126:in `run'
+
+
+Randomized with seed 45414
+..
+
+Finished in 0.01599 seconds (files took 2.85 seconds to load)
+2 examples, 0 failures
+
+Randomized with seed 45414
+
+[0;32m
+
+The files passed all checks!
+
+They are likely not order-dependent and can be run in random order and thus
+are being removed from 'spec/support/rspec_order_todo.yml':
+
+  * Removing 'spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb'
+[0m
++ export RSPEC_WARN_MISSING_FEATURE_CATEGORY=0
++ RSPEC_WARN_MISSING_FEATURE_CATEGORY=0
++ echo 'Running in defined order:'
++ rspec_run --order defined spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ bin/rspec --fail-fast --format progress --order defined spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ tee /tmp/rspec-check-order_dependence-3AzqhF
++ echo 'Running in reverse order:'
++ RSPEC_ORDER=reverse
++ rspec_run spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ bin/rspec --fail-fast --format progress spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ tee /tmp/rspec-check-order_dependence-3AzqhF
+++ seq 5
++ for try in $(seq "$RANDOM_ORDER_RUNS")
++ echo 'Running in random order (1/5):'
++ rspec_run --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ bin/rspec --fail-fast --format progress --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ tee /tmp/rspec-check-order_dependence-3AzqhF
++ for try in $(seq "$RANDOM_ORDER_RUNS")
++ echo 'Running in random order (2/5):'
++ rspec_run --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ bin/rspec --fail-fast --format progress --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ tee /tmp/rspec-check-order_dependence-3AzqhF
++ for try in $(seq "$RANDOM_ORDER_RUNS")
++ echo 'Running in random order (3/5):'
++ rspec_run --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ bin/rspec --fail-fast --format progress --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ tee /tmp/rspec-check-order_dependence-3AzqhF
++ for try in $(seq "$RANDOM_ORDER_RUNS")
++ echo 'Running in random order (4/5):'
++ rspec_run --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ bin/rspec --fail-fast --format progress --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ tee /tmp/rspec-check-order_dependence-3AzqhF
++ for try in $(seq "$RANDOM_ORDER_RUNS")
++ echo 'Running in random order (5/5):'
++ rspec_run --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ bin/rspec --fail-fast --format progress --order random spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb
++ tee /tmp/rspec-check-order_dependence-3AzqhF
++ set +xe

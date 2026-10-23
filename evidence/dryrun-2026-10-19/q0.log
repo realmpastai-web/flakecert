@@ -1,0 +1,170 @@
+===== q0 preflight 2026-10-19T04:58:39Z =====
++ uname -a
+Linux grok-bot-vm-403103238 6.12.94+ #1 SMP PREEMPT_DYNAMIC Fri Oct 16 00:53:04 UTC 2026 x86_64 GNU/Linux
++ docker version --format '{{.Server.Version}}'
+26.1.5+dfsg1
++ cd inputs/dryrun-2026-10-19 && sha256sum -c SHA256SUMS
+CURSOR_TASK.md: OK
+HOLDOUT.sha256: OK
+SKEPTIC.md: OK
+SPEC-arena-agent-206.md: OK
+SPEC-fastlane-30184.md: OK
+controls/test_000_sabotage_popen_thread.py: OK
+evidence/arena-agent-206/aec7800/TARBALL.sha256: OK
+evidence/arena-agent-206/aec7800/arena/mcp_client/client.py: OK
+evidence/arena-agent-206/aec7800/pyproject.toml: OK
+evidence/arena-agent-206/aec7800/requirements-ci.lock: OK
+evidence/arena-agent-206/aec7800/tests/conftest.py: OK
+evidence/arena-agent-206/aec7800/tests/e2e/conftest.py: OK
+evidence/arena-agent-206/aec7800/tests/e2e/test_bridge_live.py: OK
+evidence/arena-agent-206/aec7800/tests/test_mcp_client_parity_v4_169_39.py: OK
+evidence/arena-agent-206/eb925fa/TARBALL.sha256: OK
+evidence/arena-agent-206/eb925fa/arena/mcp_client/client.py: OK
+evidence/arena-agent-206/eb925fa/pyproject.toml: OK
+evidence/arena-agent-206/eb925fa/requirements-ci.lock: OK
+evidence/arena-agent-206/eb925fa/tests/e2e/conftest.py: OK
+evidence/arena-agent-206/eb925fa/tests/e2e/test_bridge_live.py: OK
+evidence/arena-agent-206/eb925fa/tests/test_mcp_client_parity_v4_169_39.py: OK
+evidence/arena-agent-206/issue-206.json: OK
+evidence/fastlane-30184/148c1c9/spaceship.rb: OK
+evidence/fastlane-30184/3a4fc36/spaceship.rb: OK
+evidence/fastlane-30184/comments-30184.json: OK
+evidence/fastlane-30184/issue-30184.json: OK
+evidence/fastlane-30184/pr-30192-files.json: OK
+evidence/fastlane-30184/pr-30192.json: OK
+sha256sum_exit=0
+
+===== arena tarball downloads =====
++ curl -fsSL --retry 2 -o /tmp/flakecert-dryrun-1019/tarballs/codeload\ arena-agent-eb925fa3f31eac8e70202debf565f1b32219e62d.tar.gz https://codeload.github.com/IvanSkainet/arena-agent/tar.gz/eb925fa3f31eac8e70202debf565f1b32219e62d
+curl_exit=0 bytes=4508103
++ curl -fsSL --retry 2 -o /tmp/flakecert-dryrun-1019/tarballs/codeload\ arena-agent-aec7800d34c43eb6add78b895729c833ae4f4e0a.tar.gz https://codeload.github.com/IvanSkainet/arena-agent/tar.gz/aec7800d34c43eb6add78b895729c833ae4f4e0a
+curl_exit=0 bytes=4954167
++ cd /tmp/flakecert-dryrun-1019/tarballs && sha256sum -c eb925fa/TARBALL.sha256
+codeload arena-agent-eb925fa3f31eac8e70202debf565f1b32219e62d.tar.gz: OK
+eb925fa_tarball_check_exit=0
++ sha256sum -c aec7800/TARBALL.sha256
+codeload arena-agent-aec7800d34c43eb6add78b895729c833ae4f4e0a.tar.gz: OK
+aec7800_tarball_check_exit=0
+
+===== fastlane tarball downloads (no frozen TARBALL.sha256; record sha256 only) =====
++ curl -fsSL --retry 2 -o /tmp/flakecert-dryrun-1019/tarballs/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30.tar.gz https://codeload.github.com/fastlane/fastlane/tar.gz/76eeb3f9352a657fd979ae00e89e49a388729e30
+curl_exit=0 bytes=44066585
++ curl -fsSL --retry 2 -o /tmp/flakecert-dryrun-1019/tarballs/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04.tar.gz https://codeload.github.com/fastlane/fastlane/tar.gz/148c1c9b4c041b1659ea633f2632dd47eef8cb04
+curl_exit=0 bytes=44071028
++ sha256sum fastlane tarballs
+db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5  /tmp/flakecert-dryrun-1019/tarballs/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04.tar.gz
+078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa  /tmp/flakecert-dryrun-1019/tarballs/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30.tar.gz
+
+===== q0 reverify 2026-10-19T05:28:51Z =====
++ uname -a
+Linux grok-bot-vm-403103238 6.12.94+ #1 SMP PREEMPT_DYNAMIC Fri Oct 16 00:53:04 UTC 2026 x86_64 GNU/Linux
++ docker version --format '{{.Server.Version}}'
+26.1.5+dfsg1
++ cd inputs/dryrun-2026-10-19 && sha256sum -c SHA256SUMS
+CURSOR_TASK.md: OK
+HOLDOUT.sha256: OK
+SKEPTIC.md: OK
+SPEC-arena-agent-206.md: OK
+SPEC-fastlane-30184.md: OK
+controls/test_000_sabotage_popen_thread.py: OK
+evidence/arena-agent-206/aec7800/TARBALL.sha256: OK
+evidence/arena-agent-206/aec7800/arena/mcp_client/client.py: OK
+evidence/arena-agent-206/aec7800/pyproject.toml: OK
+evidence/arena-agent-206/aec7800/requirements-ci.lock: OK
+evidence/arena-agent-206/aec7800/tests/conftest.py: OK
+evidence/arena-agent-206/aec7800/tests/e2e/conftest.py: OK
+evidence/arena-agent-206/aec7800/tests/e2e/test_bridge_live.py: OK
+evidence/arena-agent-206/aec7800/tests/test_mcp_client_parity_v4_169_39.py: OK
+evidence/arena-agent-206/eb925fa/TARBALL.sha256: OK
+evidence/arena-agent-206/eb925fa/arena/mcp_client/client.py: OK
+evidence/arena-agent-206/eb925fa/pyproject.toml: OK
+evidence/arena-agent-206/eb925fa/requirements-ci.lock: OK
+evidence/arena-agent-206/eb925fa/tests/e2e/conftest.py: OK
+evidence/arena-agent-206/eb925fa/tests/e2e/test_bridge_live.py: OK
+evidence/arena-agent-206/eb925fa/tests/test_mcp_client_parity_v4_169_39.py: OK
+evidence/arena-agent-206/issue-206.json: OK
+evidence/fastlane-30184/148c1c9/spaceship.rb: OK
+evidence/fastlane-30184/3a4fc36/spaceship.rb: OK
+evidence/fastlane-30184/comments-30184.json: OK
+evidence/fastlane-30184/issue-30184.json: OK
+evidence/fastlane-30184/pr-30192-files.json: OK
+evidence/fastlane-30184/pr-30192.json: OK
+sha256sum_exit=0
++ sha256sum -c arena TARBALL.sha256
+codeload arena-agent-eb925fa3f31eac8e70202debf565f1b32219e62d.tar.gz: OK
+eb925fa_tarball_check_exit=0
+codeload arena-agent-aec7800d34c43eb6add78b895729c833ae4f4e0a.tar.gz: OK
+aec7800_tarball_check_exit=0
++ sha256sum fastlane tarballs (no frozen TARBALL.sha256 in inputs)
+078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa  fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30.tar.gz
+db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5  fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04.tar.gz
++ cmp pinned sources
+IDENTICAL eb vs ae tests/test_mcp_client_parity_v4_169_39.py
+IDENTICAL tarball vs evidence tests/test_mcp_client_parity_v4_169_39.py
+IDENTICAL eb vs ae arena/mcp_client/client.py
+IDENTICAL tarball vs evidence arena/mcp_client/client.py
+IDENTICAL eb vs ae tests/e2e/test_bridge_live.py
+IDENTICAL tarball vs evidence tests/e2e/test_bridge_live.py
+IDENTICAL eb vs ae tests/e2e/conftest.py
+IDENTICAL tarball vs evidence tests/e2e/conftest.py
+eb tests/conftest.py ABSENT
+793 /tmp/flakecert-dryrun-1019/src/arena-agent-aec7800d34c43eb6add78b895729c833ae4f4e0a/tests/conftest.py
+IDENTICAL spaceship.rb 76eeb3f vs 148c1c9
+IDENTICAL spaceship.rb 76eeb3f vs evidence 3a4fc36
+IDENTICAL spaceship.rb 148c1c9 vs evidence
+IDENTICAL evidence spaceship.rb 3a4fc36 vs 148c1c9
+
+===== q0 python:3.11 subprocess.run and ruby:3.1 2026-10-19T05:29:42Z =====
++ docker run --rm python:3.11 python -V
+Python 3.11.17
++ docker image inspect python:3.11 --format '{{.Id}} {{index .RepoDigests 0}}'
+sha256:855c886888c435587b6c0884eef92acbd5e28fd78c265dcdc0122af214cc0821 python@sha256:50cfccc707e8721201ee018bfd7f6a85d8eacf49c4f9f75833a2aba09a10411f
++ sed -n 506,548p subprocess.py
+def run(*popenargs,
+        input=None, capture_output=False, timeout=None, check=False, **kwargs):
+    """Run command with arguments and return a CompletedProcess instance.
+
+    The returned instance will have attributes args, returncode, stdout and
+    stderr. By default, stdout and stderr are not captured, and those attributes
+    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+    or pass capture_output=True to capture both.
+
+    If check is True and the exit code was non-zero, it raises a
+    CalledProcessError. The CalledProcessError object will have the return code
+    in the returncode attribute, and output & stderr attributes if those streams
+    were captured.
+
+    If timeout is given, and the process takes too long, a TimeoutExpired
+    exception will be raised.
+
+    There is an optional argument "input", allowing you to
+    pass bytes or a string to the subprocess's stdin.  If you use this argument
+    you may not also use the Popen constructor's "stdin" argument, as
+    it will be used internally.
+
+    By default, all communication is in bytes, and therefore any "input" should
+    be bytes, and the stdout and stderr will be bytes. If in text mode, any
+    "input" should be a string, and stdout and stderr will be strings decoded
+    according to locale encoding, or by "encoding" if set. Text mode is
+    triggered by setting any of text, encoding, errors or universal_newlines.
+
+    The other arguments are the same as for the Popen constructor.
+    """
+    if input is not None:
+        if kwargs.get('stdin') is not None:
+            raise ValueError('stdin and input arguments may not both be used.')
+        kwargs['stdin'] = PIPE
+
+    if capture_output:
+        if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+            raise ValueError('stdout and stderr arguments may not be used '
+                             'with capture_output.')
+        kwargs['stdout'] = PIPE
+        kwargs['stderr'] = PIPE
+
+    with Popen(*popenargs, **kwargs) as process:
++ docker run --rm ruby:3.1 ruby -v; bundle -v; os-release
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.3.27
+Debian GNU/Linux 12 (bookworm)
+sha256:9981df1d883b246c27c62f8ccb9b57d3e07d14cee8092299e102b4a69c35ea61 ruby@sha256:91627f55e8969006aab67d15c92fb930500ff73948803da1330b8a853fecebb5

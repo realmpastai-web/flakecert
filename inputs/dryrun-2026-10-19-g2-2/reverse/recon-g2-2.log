@@ -1,0 +1,62 @@
+## sha256
+6581bf769cd86df9def188b23834d5a2cd9c2d7d2deac5f7fcb84c5d65ee5165  fc.tgz
+63119f8a743e6681677668d5f9ba274b978e224c88d7044e72077bec7411823c  base.tgz
+## R1 merged evidence integrity
+0
+## R2 victim-first seeds where the victim still failed (from crosscheck)
+seed 16 status=failed head_status=passed victim_index=5402 polluter_index=5411 source=s0/base-seed-16.json
+seed 24 status=failed head_status=passed victim_index=2964 polluter_index=2966 source=s0/base-seed-24.json
+seed 26 status=failed head_status=passed victim_index=1020 polluter_index=1023 source=s0/base-seed-26.json
+seed 27 status=failed head_status=passed victim_index=3351 polluter_index=3354 source=s0/base-seed-27.json
+## R3 victim failure message in those seeds
+seed 16 failed Axn::DuplicateStrategyError: Strategy custom already registered
+seed 24 failed Axn::DuplicateStrategyError: Strategy custom already registered
+seed 26 failed Axn::DuplicateStrategyError: Strategy custom already registered
+seed 27 failed Axn::DuplicateStrategyError: Strategy custom already registered
+## R4 base spec writers of Axn::Strategies outside shared examples (static grep)
+b/spec/downstream_contracts/slack_sender_interface_spec.rb:11:# - Strategy registration (Axn::Strategies.register / find)
+b/spec/downstream_contracts/slack_sender_interface_spec.rb:50:      Axn::Strategies.clear!
+b/spec/downstream_contracts/slack_sender_interface_spec.rb:53:    it "registers a strategy with Axn::Strategies.register" do
+b/spec/downstream_contracts/slack_sender_interface_spec.rb:54:      Axn::Strategies.register(:test_notify, test_strategy)
+b/spec/downstream_contracts/slack_sender_interface_spec.rb:63:      Axn::Strategies.register(:test_notify, test_strategy)
+b/spec/downstream_contracts/slack_sender_interface_spec.rb:81:      Axn::Strategies.register(:test_notify, test_strategy)
+b/spec/axn/strategies_spec.rb:37:      described_class.register(:custom, custom_strategy)
+b/spec/axn/factory_spec.rb:370:      Axn::Strategies.register(:test_strategy, test_strategy)
+b/spec/axn/factory_spec.rb:375:      Axn::Strategies.clear!
+b/spec/axn/extras/strategies/vernier_spec.rb:5:    Axn::Strategies.clear!
+b/spec/axn/extras/strategies/vernier_spec.rb:6:    Axn::Strategies.register(:vernier, described_class)
+b/spec/axn/extras/strategies/client_spec.rb:14:    Axn::Strategies.clear!
+b/spec/axn/extras/strategies/client_spec.rb:15:    Axn::Strategies.register(:client, described_class)
+b/spec/axn/core/use_strategy_spec.rb:15:    Axn::Strategies.clear!
+b/spec/axn/core/use_strategy_spec.rb:16:    Axn::Strategies.register(:custom, custom_strategy)
+b/spec/axn/core/use_strategy_spec.rb:66:        Axn::Strategies.register(:setup_strategy, setup_strategy)
+## R5 use_strategy_spec before hook registers :custom, no after
+  before do
+    Axn::Strategies.clear!
+    Axn::Strategies.register(:custom, custom_strategy)
+  end
+0
+## R6 strategies_spec.rb:35 registers :custom, no cleanup at base
+    it "allows custom strategies to be used" do
+      described_class.clear!
+      described_class.register(:custom, custom_strategy)
+      expect { test_action.use(:custom) }.to output("Custom strategy included!\n").to_stdout
+      expect(test_action.included_modules).to include(custom_strategy)
+    end
+## R7 contingency over 30 base seeds: victim status vs whether [1:3:1] (strategies_spec:35) and the named polluter ran before it
+     10 victim=failed s35_before=false named_before=true
+      4 victim=failed s35_before=true named_before=false
+      6 victim=failed s35_before=true named_before=true
+      7 victim=passed s35_before=false named_before=false
+      1 victim=passed s35_before=false named_before=true
+      2 victim=passed s35_before=true named_before=true
+## R8 in the 4 seeds: index of [1:3:1], victim, and Strategies-touching files run between them
+seed 16 s35=5395 victim=5402 between=["./spec/axn/strategies_spec.rb[1:1:4:1]","./spec/axn/strategies_spec.rb[1:1:4:2]","./spec/axn/strategies_spec.rb[1:1:4:3]","./spec/axn/strategies_spec.rb[1:1:4:4]","./spec/axn/strategies_spec.rb[1:1:4:5]"]
+seed 24 s35=2958 victim=2964 between=["./spec/axn/strategies_spec.rb[1:1:4:1]","./spec/axn/strategies_spec.rb[1:1:4:2]","./spec/axn/strategies_spec.rb[1:1:4:3]","./spec/axn/strategies_spec.rb[1:1:4:4]","./spec/axn/strategies_spec.rb[1:1:4:5]"]
+seed 26 s35=1014 victim=1020 between=["./spec/axn/strategies_spec.rb[1:1:4:1]","./spec/axn/strategies_spec.rb[1:1:4:2]","./spec/axn/strategies_spec.rb[1:1:4:3]","./spec/axn/strategies_spec.rb[1:1:4:4]","./spec/axn/strategies_spec.rb[1:1:4:5]"]
+seed 27 s35=3350 victim=3351 between=[]
+## R9 use_strategy_spec examples before the victim in the 4 seeds (count)
+seed 16 use_strategy_before=10
+seed 24 use_strategy_before=0
+seed 26 use_strategy_before=10
+seed 27 use_strategy_before=0

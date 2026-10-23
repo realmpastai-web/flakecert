@@ -1,0 +1,142 @@
+{
+  "case": "H4",
+  "commit": "148c1c9b4c041b1659ea633f2632dd47eef8cb04",
+  "tarball_sha256": "db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5",
+  "args": [
+    "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+  ],
+  "n": 20,
+  "executions": [
+    {
+      "i": 1,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 2,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 3,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 4,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 5,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 6,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 7,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 8,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 9,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 10,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 11,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 12,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 13,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 14,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 15,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 16,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 17,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 18,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 19,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    },
+    {
+      "i": 20,
+      "status": "passed",
+      "exception_class": null,
+      "first_line": null
+    }
+  ],
+  "verdict": "PASS",
+  "readings": [
+    {
+      "n": 20,
+      "verdict": "PASS"
+    },
+    {
+      "n": 21,
+      "verdict": "UNOBSERVED"
+    }
+  ]
+}

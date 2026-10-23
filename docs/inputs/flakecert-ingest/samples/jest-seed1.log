@@ -1,0 +1,49 @@
+FAIL ./sample.test.js
+  ✓ pass (2 ms)
+  ✕ fail deterministic (3 ms)
+  ✕ flaky seeded (1 ms)
+  ○ skipped skip
+
+  ● fail deterministic
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+    -   "a": 2,
+    +   "a": 1,
+      }
+
+      1 | function rng(seed){ let x = seed >>> 0 || 1; return () => { x ^= x << 13; x ^= x >>> 17; x ^= x << 5; return ((x >>> 0) % 1000) / 1000; }; }
+      2 | test('pass', () => { expect(1 + 1).toBe(2); });
+    > 3 | test('fail deterministic', () => { expect({a: 1}).toEqual({a: 2}); });
+        |                                                   ^
+      4 | test('flaky seeded', () => { const r = rng(parseInt(process.env.SEED || '0', 10))(); expect(r).toBeGreaterThanOrEqual(0.5); });
+      5 | test.skip('skip', () => {});
+      6 |
+
+      at Object.toEqual (sample.test.js:3:51)
+
+  ● flaky seeded
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 0.5
+    Received:    0.369
+
+      2 | test('pass', () => { expect(1 + 1).toBe(2); });
+      3 | test('fail deterministic', () => { expect({a: 1}).toEqual({a: 2}); });
+    > 4 | test('flaky seeded', () => { const r = rng(parseInt(process.env.SEED || '0', 10))(); expect(r).toBeGreaterThanOrEqual(0.5); });
+        |                                                                                                ^
+      5 | test.skip('skip', () => {});
+      6 |
+
+      at Object.toBeGreaterThanOrEqual (sample.test.js:4:96)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 skipped, 1 passed, 4 total
+Snapshots:   0 total
+Time:        0.287 s
+Ran all test suites.

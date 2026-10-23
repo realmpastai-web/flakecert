@@ -1,0 +1,1633 @@
+{
+  "id": "F07",
+  "role": "main",
+  "repo": "ljvmiranda921/pyswarms",
+  "sha": "08756526f39699eef28e515cac2ead17cef55710",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".all-contributorsrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "380b4c91493e22315fbb25bc0f81197d846d3403",
+      "size": 8982,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/380b4c91493e22315fbb25bc0f81197d846d3403"
+    },
+    {
+      "path": ".coveragerc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cecfe93a3319b486ed652a619b5ebbab2fe9d760",
+      "size": 89,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/cecfe93a3319b486ed652a619b5ebbab2fe9d760"
+    },
+    {
+      "path": ".editorconfig",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4a2c4405ec2e962c521a13af91bf5f7098a62a8",
+      "size": 292,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d4a2c4405ec2e962c521a13af91bf5f7098a62a8"
+    },
+    {
+      "path": ".flake8",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9ad0b409d73935b1b989feecabc1bf3fd54e279",
+      "size": 119,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d9ad0b409d73935b1b989feecabc1bf3fd54e279"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b9e46e3863f189022db39485925e8bf3c1548882",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/b9e46e3863f189022db39485925e8bf3c1548882"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e124f1db29d75308672faeb25c5f8545c5f553a",
+      "size": 319,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/0e124f1db29d75308672faeb25c5f8545c5f553a"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4124f46b8d988668fc97d59ef8e148229b78cc1",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/b4124f46b8d988668fc97d59ef8e148229b78cc1"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a25cebae604d1c1a060fe44f28f64133479eb4f4",
+      "size": 530,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/a25cebae604d1c1a060fe44f28f64133479eb4f4"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "066b2d920a28db73b4ba3a0b35e6905eeeef5772",
+      "size": 560,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/066b2d920a28db73b4ba3a0b35e6905eeeef5772"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52edb2acc3f94d0c73a28e69fba0c2da09f15706",
+      "size": 1629,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/52edb2acc3f94d0c73a28e69fba0c2da09f15706"
+    },
+    {
+      "path": ".github/stale.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00c1ef0146683d447d989d4714c3440db7ae6df3",
+      "size": 102,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/00c1ef0146683d447d989d4714c3440db7ae6df3"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d96a4a7bed9f53a7f044fd59d152822d16e5d6ef",
+      "size": 898,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d96a4a7bed9f53a7f044fd59d152822d16e5d6ef"
+    },
+    {
+      "path": ".isort.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5b2d0d855fb7d28e0a0304eb76a742e9cc7e0e5",
+      "size": 167,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/a5b2d0d855fb7d28e0a0304eb76a742e9cc7e0e5"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bdcc6fcea3e08680dfd1129d0edfdc7ab813985",
+      "size": 225,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/4bdcc6fcea3e08680dfd1129d0edfdc7ab813985"
+    },
+    {
+      "path": ".pyup.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cd4ab273c7ccbc5d2d2ed9fa4fd007e4f56a4f9",
+      "size": 61,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/2cd4ab273c7ccbc5d2d2ed9fa4fd007e4f56a4f9"
+    },
+    {
+      "path": ".readthedocs.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f067c67847985832d258c2008f99d1c284b33573",
+      "size": 371,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/f067c67847985832d258c2008f99d1c284b33573"
+    },
+    {
+      "path": "AUTHORS.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cf73d1d161d85c2623e35018b805d5aa90809dd",
+      "size": 1341,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/9cf73d1d161d85c2623e35018b805d5aa90809dd"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "748afd3ebd8a658685a3666dac91e64b44a5e817",
+      "size": 3217,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/748afd3ebd8a658685a3666dac91e64b44a5e817"
+    },
+    {
+      "path": "CONTRIBUTING.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c171d577013773c95d3539cca22eca2f3673ccd7",
+      "size": 3966,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/c171d577013773c95d3539cca22eca2f3673ccd7"
+    },
+    {
+      "path": "HISTORY.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dd6e30221a4d4b85a5a7e6ce69a24064641dc22",
+      "size": 12510,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/5dd6e30221a4d4b85a5a7e6ce69a24064641dc22"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ffba9ccd306ae7357b2014248a6ed515338ccc3",
+      "size": 1083,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/6ffba9ccd306ae7357b2014248a6ed515338ccc3"
+    },
+    {
+      "path": "MANIFEST.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3d5431c441d4aa737f8356fe10b523e80d36533",
+      "size": 339,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e3d5431c441d4aa737f8356fe10b523e80d36533"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae2212fbaa0933859f6f9d53aee526f218b6f0c8",
+      "size": 2723,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/ae2212fbaa0933859f6f9d53aee526f218b6f0c8"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cded521f106acd8baaab7945234588c8b6bd2e34",
+      "size": 26362,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/cded521f106acd8baaab7945234588c8b6bd2e34"
+    },
+    {
+      "path": "Vagrantfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bee6752f2725e03ef937ae2559d83713a25af9bd",
+      "size": 228,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/bee6752f2725e03ef937ae2559d83713a25af9bd"
+    },
+    {
+      "path": "azure-pipelines.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e134eae99206c9258e48801a7825206811ea264b",
+      "size": 1324,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e134eae99206c9258e48801a7825206811ea264b"
+    },
+    {
+      "path": "config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdadbdcc948f4da60ae50d5ee75b635dd4bb8735",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/cdadbdcc948f4da60ae50d5ee75b635dd4bb8735"
+    },
+    {
+      "path": "config/logging.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d6db9172773c5b3209bdaa0481dcb77b2daf2de",
+      "size": 932,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1d6db9172773c5b3209bdaa0481dcb77b2daf2de"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9dfe4252fadf87908c6706fbadb7568c7de26dcc",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/9dfe4252fadf87908c6706fbadb7568c7de26dcc"
+    },
+    {
+      "path": "docs/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2d7dd88b77b1903176a7e5ba3f835e15b59d795",
+      "size": 350,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e2d7dd88b77b1903176a7e5ba3f835e15b59d795"
+    },
+    {
+      "path": "docs/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab84c8e0890372125819bceba9e1df38674ce5bc",
+      "size": 6770,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/ab84c8e0890372125819bceba9e1df38674ce5bc"
+    },
+    {
+      "path": "docs/_static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acd783c2dbaf62835d8b5e8b41978e5eaf7c49ff",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/acd783c2dbaf62835d8b5e8b41978e5eaf7c49ff"
+    },
+    {
+      "path": "docs/_static/theme_overrides.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e4da362febaf9c4a73f54b46b6e82137cb53bf9",
+      "size": 256,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/0e4da362febaf9c4a73f54b46b6e82137cb53bf9"
+    },
+    {
+      "path": "docs/api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2fe554636525b1cddaa82ecbe094ed1ce2a0f31a",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/2fe554636525b1cddaa82ecbe094ed1ce2a0f31a"
+    },
+    {
+      "path": "docs/api/_pyswarms.backend.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8ac4e25c7cd8203325a1e11aba011002901fec2",
+      "size": 403,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e8ac4e25c7cd8203325a1e11aba011002901fec2"
+    },
+    {
+      "path": "docs/api/_pyswarms.base.classes.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9119c80980288181af4f9a08ef6642470e21be1",
+      "size": 217,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/f9119c80980288181af4f9a08ef6642470e21be1"
+    },
+    {
+      "path": "docs/api/_pyswarms.optimizers.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "708c6162df2391667c2fa54a7b2f8c355dd514d2",
+      "size": 235,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/708c6162df2391667c2fa54a7b2f8c355dd514d2"
+    },
+    {
+      "path": "docs/api/_pyswarms.utils.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70bf7da825ed18ec7d8407864e904cd0d2c1c5b6",
+      "size": 339,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/70bf7da825ed18ec7d8407864e904cd0d2c1c5b6"
+    },
+    {
+      "path": "docs/api/pyswarms.backend.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2432743cb3b1422e3161caec875bedf220992959",
+      "size": 725,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/2432743cb3b1422e3161caec875bedf220992959"
+    },
+    {
+      "path": "docs/api/pyswarms.base.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5112cf88c71141947bc20d7938f961ae43c807bc",
+      "size": 415,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/5112cf88c71141947bc20d7938f961ae43c807bc"
+    },
+    {
+      "path": "docs/api/pyswarms.discrete.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9df3bd3fc83ae8b4166824d2dee56f2aa92bac8",
+      "size": 278,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/c9df3bd3fc83ae8b4166824d2dee56f2aa92bac8"
+    },
+    {
+      "path": "docs/api/pyswarms.handlers.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e896109edbf895217fb3908ecab5e3c6638fe12",
+      "size": 555,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/8e896109edbf895217fb3908ecab5e3c6638fe12"
+    },
+    {
+      "path": "docs/api/pyswarms.single.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae8a17b086fbdc40de41fe651ee961063b86b990",
+      "size": 732,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/ae8a17b086fbdc40de41fe651ee961063b86b990"
+    },
+    {
+      "path": "docs/api/pyswarms.swarms.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "441d876c84cc1e2a4db5fc83af4c29f2ffa3a35c",
+      "size": 416,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/441d876c84cc1e2a4db5fc83af4c29f2ffa3a35c"
+    },
+    {
+      "path": "docs/api/pyswarms.topology.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa8cf608c6e908d7f90a088c12564edb0f2b33a0",
+      "size": 1654,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/fa8cf608c6e908d7f90a088c12564edb0f2b33a0"
+    },
+    {
+      "path": "docs/api/pyswarms.utils.decorators.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01a5a2957ebfc28df2151b37c7f8c8f766a8b4fd",
+      "size": 168,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/01a5a2957ebfc28df2151b37c7f8c8f766a8b4fd"
+    },
+    {
+      "path": "docs/api/pyswarms.utils.functions.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55cb43cb30ba27f558cf3ea8a466d3ef458fa24b",
+      "size": 377,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/55cb43cb30ba27f558cf3ea8a466d3ef458fa24b"
+    },
+    {
+      "path": "docs/api/pyswarms.utils.plotters.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a95795d325d189cdf61141f9a87d084e9f50fbad",
+      "size": 483,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/a95795d325d189cdf61141f9a87d084e9f50fbad"
+    },
+    {
+      "path": "docs/api/pyswarms.utils.reporter.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba18e082d315d66424ccbe5bffaece7bef171424",
+      "size": 221,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/ba18e082d315d66424ccbe5bffaece7bef171424"
+    },
+    {
+      "path": "docs/api/pyswarms.utils.search.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51bca59141738b27a0ef42aa6da216b0cfe22b4b",
+      "size": 738,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/51bca59141738b27a0ef42aa6da216b0cfe22b4b"
+    },
+    {
+      "path": "docs/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "396c3d41158dae8cbedb50877f1e3d403c12fa38",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/396c3d41158dae8cbedb50877f1e3d403c12fa38"
+    },
+    {
+      "path": "docs/assets/inheritance.aux",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c14129aff29539f67750143620b116117462c7a",
+      "size": 37,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7c14129aff29539f67750143620b116117462c7a"
+    },
+    {
+      "path": "docs/assets/inheritance.fdb_latexmk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b01ed13b1618b013228985e42ad44d3ec9a33ed",
+      "size": 19175,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1b01ed13b1618b013228985e42ad44d3ec9a33ed"
+    },
+    {
+      "path": "docs/assets/inheritance.fls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e82d2d4f157c3b5582c209bb99386af11ab8dd5",
+      "size": 18845,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/8e82d2d4f157c3b5582c209bb99386af11ab8dd5"
+    },
+    {
+      "path": "docs/assets/inheritance.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50bba5f956290926dd70a3ad23e3fa86cc7876cc",
+      "size": 30944,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/50bba5f956290926dd70a3ad23e3fa86cc7876cc"
+    },
+    {
+      "path": "docs/assets/inheritance.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2eed2983d6af71cc87730fb88d4d9201a800753d",
+      "size": 2092,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/2eed2983d6af71cc87730fb88d4d9201a800753d"
+    },
+    {
+      "path": "docs/assets/optimization_loop.aux",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c14129aff29539f67750143620b116117462c7a",
+      "size": 37,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7c14129aff29539f67750143620b116117462c7a"
+    },
+    {
+      "path": "docs/assets/optimization_loop.fdb_latexmk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77e1eb7d480f769dde696db6c53c1aa3d53d304e",
+      "size": 19402,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/77e1eb7d480f769dde696db6c53c1aa3d53d304e"
+    },
+    {
+      "path": "docs/assets/optimization_loop.fls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f8c18ecb05122d7ed5330fa6019e56fe92a457a",
+      "size": 18965,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/6f8c18ecb05122d7ed5330fa6019e56fe92a457a"
+    },
+    {
+      "path": "docs/assets/optimization_loop.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fd3a1cd34ffd4e2de4d8cdf7ca46c5b493980a3",
+      "size": 40957,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/4fd3a1cd34ffd4e2de4d8cdf7ca46c5b493980a3"
+    },
+    {
+      "path": "docs/assets/optimization_loop.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbdbd0a2e7b83109e32b00a0cb6e60c0bec21ee5",
+      "size": 3644,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/bbdbd0a2e7b83109e32b00a0cb6e60c0bec21ee5"
+    },
+    {
+      "path": "docs/assets/pyswarms_api.aux",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c14129aff29539f67750143620b116117462c7a",
+      "size": 37,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7c14129aff29539f67750143620b116117462c7a"
+    },
+    {
+      "path": "docs/assets/pyswarms_api.fdb_latexmk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "447b804c56bb385bd1ce4095699781aa805e120e",
+      "size": 15987,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/447b804c56bb385bd1ce4095699781aa805e120e"
+    },
+    {
+      "path": "docs/assets/pyswarms_api.fls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b96c0822f902418e242dc0ffb8ac09d83327990",
+      "size": 16004,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/8b96c0822f902418e242dc0ffb8ac09d83327990"
+    },
+    {
+      "path": "docs/assets/pyswarms_api.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63b109c29dfc0578dd0aa55157c0c31258bfb88",
+      "size": 66193,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d63b109c29dfc0578dd0aa55157c0c31258bfb88"
+    },
+    {
+      "path": "docs/assets/pyswarms_api.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "722d787637ecabf6580170491aea719b0c1e43a4",
+      "size": 3224,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/722d787637ecabf6580170491aea719b0c1e43a4"
+    },
+    {
+      "path": "docs/assets/tikz-uml.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eacab58d6dd4ad1bf636858aa6da3ece1bd021ce",
+      "size": 302703,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/eacab58d6dd4ad1bf636858aa6da3ece1bd021ce"
+    },
+    {
+      "path": "docs/authors.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e122f914a87b277e565fc9567af1a7545ec9872b",
+      "size": 28,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e122f914a87b277e565fc9567af1a7545ec9872b"
+    },
+    {
+      "path": "docs/conf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb04e0d18828c7d0aa7a8fdc1d9c76c29433b442",
+      "size": 9480,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/eb04e0d18828c7d0aa7a8fdc1d9c76c29433b442"
+    },
+    {
+      "path": "docs/contributing.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e582053ea018c369be05aae96cf730744f1dc616",
+      "size": 33,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e582053ea018c369be05aae96cf730744f1dc616"
+    },
+    {
+      "path": "docs/dev.api.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d725bf7b1e91adb3fea02f8d6041553c8e9c8ecf",
+      "size": 1695,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d725bf7b1e91adb3fea02f8d6041553c8e9c8ecf"
+    },
+    {
+      "path": "docs/dev.loop.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a488a0987ebf49125be18fe566470e8ba8aaa8b",
+      "size": 3254,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/3a488a0987ebf49125be18fe566470e8ba8aaa8b"
+    },
+    {
+      "path": "docs/dev.optimizer.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47365c593d074b1338650092e5e8db8384d2f226",
+      "size": 4205,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/47365c593d074b1338650092e5e8db8384d2f226"
+    },
+    {
+      "path": "docs/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7747dd0fe601bccc9cbe084a06b641a48c7672d1",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/7747dd0fe601bccc9cbe084a06b641a48c7672d1"
+    },
+    {
+      "path": "docs/examples/tutorials",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e83e971ac40100168051f5a6e5f4ad38c5c99df6",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/e83e971ac40100168051f5a6e5f4ad38c5c99df6"
+    },
+    {
+      "path": "docs/examples/tutorials/basic_optimization.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f08b12c05ecc6d3dd88cfa8fb999e33a3cd2aa4",
+      "size": 12642,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/3f08b12c05ecc6d3dd88cfa8fb999e33a3cd2aa4"
+    },
+    {
+      "path": "docs/examples/tutorials/custom_optimization_loop.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b1ae6e0f988e09fa0474776c0b5aebe94ff538",
+      "size": 8049,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/51b1ae6e0f988e09fa0474776c0b5aebe94ff538"
+    },
+    {
+      "path": "docs/examples/tutorials/optimization_loop.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fd3a1cd34ffd4e2de4d8cdf7ca46c5b493980a3",
+      "size": 40957,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/4fd3a1cd34ffd4e2de4d8cdf7ca46c5b493980a3"
+    },
+    {
+      "path": "docs/examples/tutorials/plot0.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c525b5dc77113a8021a963f63db8829a8c95df1",
+      "size": 7828248,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/2c525b5dc77113a8021a963f63db8829a8c95df1"
+    },
+    {
+      "path": "docs/examples/tutorials/plot1.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "425320f15ce1c3422c87191ea7c9d3bcb8c87a37",
+      "size": 9629540,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/425320f15ce1c3422c87191ea7c9d3bcb8c87a37"
+    },
+    {
+      "path": "docs/examples/tutorials/tolerance.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd8cc058b5fd8e75c4e810ab33af7a08c63e96f5",
+      "size": 9818,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/dd8cc058b5fd8e75c4e810ab33af7a08c63e96f5"
+    },
+    {
+      "path": "docs/examples/tutorials/visualization.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc714c8e0168883fabff3af77e6c072c8bc5d71c",
+      "size": 25672,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/fc714c8e0168883fabff3af77e6c072c8bc5d71c"
+    },
+    {
+      "path": "docs/examples/usecases",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b88e8e0083e70dfb287b148f7879a9a016f70b31",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/b88e8e0083e70dfb287b148f7879a9a016f70b31"
+    },
+    {
+      "path": "docs/examples/usecases/circuit.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "428c6b3adc3ac8feb49a1beabb49cad8202e2b02",
+      "size": 28549,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/428c6b3adc3ac8feb49a1beabb49cad8202e2b02"
+    },
+    {
+      "path": "docs/examples/usecases/circuit.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e6d8ee5ff220defad03e60eaeb5693a3aea3cf",
+      "size": 369,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/93e6d8ee5ff220defad03e60eaeb5693a3aea3cf"
+    },
+    {
+      "path": "docs/examples/usecases/electric_circuit_problem.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c0fce1ad3ab28b707ed6b289defcde3a17d14d4",
+      "size": 23266,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/6c0fce1ad3ab28b707ed6b289defcde3a17d14d4"
+    },
+    {
+      "path": "docs/examples/usecases/feature_subset_selection.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a240162f09bffb2b1ebb4e5680d10c6c211113ec",
+      "size": 523824,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/a240162f09bffb2b1ebb4e5680d10c6c211113ec"
+    },
+    {
+      "path": "docs/examples/usecases/inverse_kinematics.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc9b5ef616b69bbb2b8b2bb9a4ca52283395dcce",
+      "size": 13796,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/fc9b5ef616b69bbb2b8b2bb9a4ca52283395dcce"
+    },
+    {
+      "path": "docs/examples/usecases/train_neural_network.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3ff2abe2196141d6f1fa3713ba87792f291d4df",
+      "size": 11007,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/f3ff2abe2196141d6f1fa3713ba87792f291d4df"
+    },
+    {
+      "path": "docs/features.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e78afe2dc165f2ff064d130500eade46b817be86",
+      "size": 2687,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e78afe2dc165f2ff064d130500eade46b817be86"
+    },
+    {
+      "path": "docs/history.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "250649964bbc36f4bec2942f69238aa6f7c02c1a",
+      "size": 28,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/250649964bbc36f4bec2942f69238aa6f7c02c1a"
+    },
+    {
+      "path": "docs/index.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5dff6c864a5bbca3d709db0a3758def77d6490d",
+      "size": 3448,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d5dff6c864a5bbca3d709db0a3758def77d6490d"
+    },
+    {
+      "path": "docs/installation.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e0d7e4d13c375db754e6051a9194a8890cf7ede",
+      "size": 1143,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/2e0d7e4d13c375db754e6051a9194a8890cf7ede"
+    },
+    {
+      "path": "docs/intro.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3d60e2fce86aa128776341a33c5dc71ebfbb8a7",
+      "size": 3781,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e3d60e2fce86aa128776341a33c5dc71ebfbb8a7"
+    },
+    {
+      "path": "docs/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d193df3bfc1dfa089006cee1e7e40799ca8a3a7",
+      "size": 6463,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/4d193df3bfc1dfa089006cee1e7e40799ca8a3a7"
+    },
+    {
+      "path": "docs/pyswarms-header.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ab577e5099bbc3492dd469d26deac940b768d32",
+      "size": 60547,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7ab577e5099bbc3492dd469d26deac940b768d32"
+    },
+    {
+      "path": "docs/tutorials.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5de49bfd6e43e6e466ca73cb3507ccfe2d203f0",
+      "size": 249,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/f5de49bfd6e43e6e466ca73cb3507ccfe2d203f0"
+    },
+    {
+      "path": "docs/usecases.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5db17f83ebc7062cc69654e3857166d6b20c1295",
+      "size": 305,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/5db17f83ebc7062cc69654e3857166d6b20c1295"
+    },
+    {
+      "path": "paper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e05328ccb9080fbe5ff3daaa6898ad6d5c89a66",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/6e05328ccb9080fbe5ff3daaa6898ad6d5c89a66"
+    },
+    {
+      "path": "paper/paper.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e3962eb03609bdeac33c7f83f1765119ef9ddf0",
+      "size": 2557,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/2e3962eb03609bdeac33c7f83f1765119ef9ddf0"
+    },
+    {
+      "path": "paper/paper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1182a413848a0e7b81c21fdf9d9335ff0885dc1a",
+      "size": 4519,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1182a413848a0e7b81c21fdf9d9335ff0885dc1a"
+    },
+    {
+      "path": "provisioner.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f49c0abd2c11801fff7cf757d8b8f55359f32ccb",
+      "size": 705,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/f49c0abd2c11801fff7cf757d8b8f55359f32ccb"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfab0250e61c4c1df56104981b81255588db5b12",
+      "size": 174,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/dfab0250e61c4c1df56104981b81255588db5b12"
+    },
+    {
+      "path": "pyswarms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d235d798afe31512eb703dcebc012f1e0189d643",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/d235d798afe31512eb703dcebc012f1e0189d643"
+    },
+    {
+      "path": "pyswarms/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f2ce37d7598b4c821fd4832a480d6e0a6a85572",
+      "size": 774,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/2f2ce37d7598b4c821fd4832a480d6e0a6a85572"
+    },
+    {
+      "path": "pyswarms/backend",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8183fbca1136c29a6853082dd39581044ff317c",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/d8183fbca1136c29a6853082dd39581044ff317c"
+    },
+    {
+      "path": "pyswarms/backend/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "928113323d510dadcc533816f29d3d46b7fbc57b",
+      "size": 384,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/928113323d510dadcc533816f29d3d46b7fbc57b"
+    },
+    {
+      "path": "pyswarms/backend/generators.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a8ab1149d053fd65a6eee9760ac6174b6cf822d",
+      "size": 7994,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/4a8ab1149d053fd65a6eee9760ac6174b6cf822d"
+    },
+    {
+      "path": "pyswarms/backend/handlers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19ccd9a1cbb03d4a70bc0b9a41726fc1e73998d2",
+      "size": 20683,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/19ccd9a1cbb03d4a70bc0b9a41726fc1e73998d2"
+    },
+    {
+      "path": "pyswarms/backend/operators.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71041e0fb048976ec84c196a697d65467091fd32",
+      "size": 7729,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/71041e0fb048976ec84c196a697d65467091fd32"
+    },
+    {
+      "path": "pyswarms/backend/swarms.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3817cb35af7b6ba131861ee5844a67c5b864f2e",
+      "size": 4509,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/f3817cb35af7b6ba131861ee5844a67c5b864f2e"
+    },
+    {
+      "path": "pyswarms/backend/topology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f63e0bb369a2a32eb3b0368feb6b559b00627ec",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/6f63e0bb369a2a32eb3b0368feb6b559b00627ec"
+    },
+    {
+      "path": "pyswarms/backend/topology/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5c96039e8c6e669eb26b0a5ab795167a9760cab",
+      "size": 643,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/c5c96039e8c6e669eb26b0a5ab795167a9760cab"
+    },
+    {
+      "path": "pyswarms/backend/topology/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1b6a5a0c0766ea178c2b0a5f5d08094d76f5cc5",
+      "size": 1627,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d1b6a5a0c0766ea178c2b0a5f5d08094d76f5cc5"
+    },
+    {
+      "path": "pyswarms/backend/topology/pyramid.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3d5b2a32fd296734d487d4e885da350a1a226eb",
+      "size": 6936,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d3d5b2a32fd296734d487d4e885da350a1a226eb"
+    },
+    {
+      "path": "pyswarms/backend/topology/random.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7835448169354bb1f69c861c42c7316b1e9daf20",
+      "size": 8978,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7835448169354bb1f69c861c42c7316b1e9daf20"
+    },
+    {
+      "path": "pyswarms/backend/topology/ring.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f1ca9011b6c90c3c3742621a826b5e059acbb2c",
+      "size": 5969,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/0f1ca9011b6c90c3c3742621a826b5e059acbb2c"
+    },
+    {
+      "path": "pyswarms/backend/topology/star.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a166b477a0f59f595e29805fd513fc330b5f2e2",
+      "size": 5428,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/0a166b477a0f59f595e29805fd513fc330b5f2e2"
+    },
+    {
+      "path": "pyswarms/backend/topology/von_neumann.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8765b41df52081d56c5ddf0bfa17608a4eafef3",
+      "size": 2400,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d8765b41df52081d56c5ddf0bfa17608a4eafef3"
+    },
+    {
+      "path": "pyswarms/base",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13abcc11ea550be86a174347c59eb8da0d861fbb",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/13abcc11ea550be86a174347c59eb8da0d861fbb"
+    },
+    {
+      "path": "pyswarms/base/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c0d4b799621b2653875f74fcd40263f6b031146",
+      "size": 270,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/6c0d4b799621b2653875f74fcd40263f6b031146"
+    },
+    {
+      "path": "pyswarms/base/base_discrete.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7436ffc552660b2a23c81846b01f3c310da5ea34",
+      "size": 7241,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7436ffc552660b2a23c81846b01f3c310da5ea34"
+    },
+    {
+      "path": "pyswarms/base/base_single.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad6d27dc34f4a20e730121b7b3a222971cac720a",
+      "size": 7186,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/ad6d27dc34f4a20e730121b7b3a222971cac720a"
+    },
+    {
+      "path": "pyswarms/discrete",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b7a767aad29b908bd5e60515e4643e0485b33b8",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/7b7a767aad29b908bd5e60515e4643e0485b33b8"
+    },
+    {
+      "path": "pyswarms/discrete/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7120805de9b384bd9a0461d81dbe1a1f9a46453",
+      "size": 225,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/a7120805de9b384bd9a0461d81dbe1a1f9a46453"
+    },
+    {
+      "path": "pyswarms/discrete/binary.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed20b8f36bbb58337567627b2f0c3655be8d3d72",
+      "size": 10322,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/ed20b8f36bbb58337567627b2f0c3655be8d3d72"
+    },
+    {
+      "path": "pyswarms/single",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cb10fd12100a7089bda03a57c756dee3d40f065",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/9cb10fd12100a7089bda03a57c756dee3d40f065"
+    },
+    {
+      "path": "pyswarms/single/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8666dcca0c5134c383f11c84307ce92e73314a12",
+      "size": 758,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/8666dcca0c5134c383f11c84307ce92e73314a12"
+    },
+    {
+      "path": "pyswarms/single/general_optimizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35f60a46735ea2a7b389eab552780a9d8e8ece9f",
+      "size": 11542,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/35f60a46735ea2a7b389eab552780a9d8e8ece9f"
+    },
+    {
+      "path": "pyswarms/single/global_best.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4d5565b8b73251e6d0e9d7016b61ae4fd07308c",
+      "size": 9305,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/b4d5565b8b73251e6d0e9d7016b61ae4fd07308c"
+    },
+    {
+      "path": "pyswarms/single/local_best.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98cc18ac9add25c5b9e26cb60d65ac0be260b6f4",
+      "size": 10672,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/98cc18ac9add25c5b9e26cb60d65ac0be260b6f4"
+    },
+    {
+      "path": "pyswarms/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1dc4422fecf3ccb4e7dcae3eb48661ef83e6da1",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/e1dc4422fecf3ccb4e7dcae3eb48661ef83e6da1"
+    },
+    {
+      "path": "pyswarms/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea80fdaf72bf74f2c42020b8ef1fe5db9173389f",
+      "size": 103,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/ea80fdaf72bf74f2c42020b8ef1fe5db9173389f"
+    },
+    {
+      "path": "pyswarms/utils/decorators",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e04d13893f23cc322cd78c7844d486158ebf194a",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/e04d13893f23cc322cd78c7844d486158ebf194a"
+    },
+    {
+      "path": "pyswarms/utils/decorators/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ef5c8b34c32ae403d67e2bf2c49116350430f40",
+      "size": 280,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/4ef5c8b34c32ae403d67e2bf2c49116350430f40"
+    },
+    {
+      "path": "pyswarms/utils/decorators/decorators.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcb2aec2630c86fbd80e3d387606b25c9782f7e6",
+      "size": 1806,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/dcb2aec2630c86fbd80e3d387606b25c9782f7e6"
+    },
+    {
+      "path": "pyswarms/utils/functions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7bae824f80980f0f0adad32f6645ab9a5fd95f3d",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/7bae824f80980f0f0adad32f6645ab9a5fd95f3d"
+    },
+    {
+      "path": "pyswarms/utils/functions/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11e88fb764d12fe3d929e00f5dd44d587bc48926",
+      "size": 102,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/11e88fb764d12fe3d929e00f5dd44d587bc48926"
+    },
+    {
+      "path": "pyswarms/utils/functions/single_obj.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa34a2ca94dc5b93686ec9cb9a41ddf7442793aa",
+      "size": 19401,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/aa34a2ca94dc5b93686ec9cb9a41ddf7442793aa"
+    },
+    {
+      "path": "pyswarms/utils/plotters",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6cc83510ec4b84172464758b108f1dc2f323759a",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/6cc83510ec4b84172464758b108f1dc2f323759a"
+    },
+    {
+      "path": "pyswarms/utils/plotters/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b961aa10e3c4423c5952175307e051f1736ef511",
+      "size": 310,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/b961aa10e3c4423c5952175307e051f1736ef511"
+    },
+    {
+      "path": "pyswarms/utils/plotters/formatters.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8962a538abcf085c22aff0a78aa1abda23e07fb9",
+      "size": 6365,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/8962a538abcf085c22aff0a78aa1abda23e07fb9"
+    },
+    {
+      "path": "pyswarms/utils/plotters/plotters.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7afa07331a67f85572aeb51c667923781131af0c",
+      "size": 13889,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7afa07331a67f85572aeb51c667923781131af0c"
+    },
+    {
+      "path": "pyswarms/utils/reporter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3866a20edfb0d609218645fc02707110e751020e",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/3866a20edfb0d609218645fc02707110e751020e"
+    },
+    {
+      "path": "pyswarms/utils/reporter/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1539007631083a9e67435a87e3dd5180acc5e16f",
+      "size": 78,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1539007631083a9e67435a87e3dd5180acc5e16f"
+    },
+    {
+      "path": "pyswarms/utils/reporter/reporter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7c6a132e97127ce5c0d26f3117cb5ca897e4c18",
+      "size": 7563,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/b7c6a132e97127ce5c0d26f3117cb5ca897e4c18"
+    },
+    {
+      "path": "pyswarms/utils/search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b86321ea8e2133addd632d199f4bb4ed48fecea6",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/b86321ea8e2133addd632d199f4bb4ed48fecea6"
+    },
+    {
+      "path": "pyswarms/utils/search/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7eee30bb582ba5ab6b61fd5ba6e6d77feca738b4",
+      "size": 235,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7eee30bb582ba5ab6b61fd5ba6e6d77feca738b4"
+    },
+    {
+      "path": "pyswarms/utils/search/base_search.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66347112911ae26c097eb5ea182547e29cb1ac80",
+      "size": 4550,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/66347112911ae26c097eb5ea182547e29cb1ac80"
+    },
+    {
+      "path": "pyswarms/utils/search/grid_search.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62fe47ee7582220bb3461f1957855d11497afc3b",
+      "size": 2668,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/62fe47ee7582220bb3461f1957855d11497afc3b"
+    },
+    {
+      "path": "pyswarms/utils/search/random_search.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "879ece7afb2cb4d76f30b273fb71736f2027f11f",
+      "size": 4163,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/879ece7afb2cb4d76f30b273fb71736f2027f11f"
+    },
+    {
+      "path": "requirements-dev.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "110b3c4f66dedc4c51f3cfd351ded6d7b2801791",
+      "size": 295,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/110b3c4f66dedc4c51f3cfd351ded6d7b2801791"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cdbc3d3390ed946d2779b704ebb6965d7e564ca",
+      "size": 1366,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/8cdbc3d3390ed946d2779b704ebb6965d7e564ca"
+    },
+    {
+      "path": "requirements.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "080943548215c074904c5b4bc3ac1891586779a9",
+      "size": 48,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/080943548215c074904c5b4bc3ac1891586779a9"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0db998d6dc2599b2d895c2701c4e9c53c0b56f59",
+      "size": 186,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/0db998d6dc2599b2d895c2701c4e9c53c0b56f59"
+    },
+    {
+      "path": "setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "022af548264327c5dab5ac235185923a8b52fe44",
+      "size": 354,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/022af548264327c5dab5ac235185923a8b52fe44"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15681d26a1c9886cb1ee23751a1403eb0ea2a9f2",
+      "size": 1508,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/15681d26a1c9886cb1ee23751a1403eb0ea2a9f2"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "395da7b508986d56dcf2d3f3031ad0079db25c49",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/395da7b508986d56dcf2d3f3031ad0079db25c49"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e27738ae39e31906b6fa7aaf02d3592465fd35b",
+      "size": 63,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/5e27738ae39e31906b6fa7aaf02d3592465fd35b"
+    },
+    {
+      "path": "tests/backend",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be04a9177233a1e4a9808c7d57835df69e85d57f",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/be04a9177233a1e4a9808c7d57835df69e85d57f"
+    },
+    {
+      "path": "tests/backend/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/backend/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d4baf564081d8b14c86b994e454186ce0ee7d42",
+      "size": 2223,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/2d4baf564081d8b14c86b994e454186ce0ee7d42"
+    },
+    {
+      "path": "tests/backend/test_generators.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89586604c35dcc56db89cb3dd970e149af0a2426",
+      "size": 4396,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/89586604c35dcc56db89cb3dd970e149af0a2426"
+    },
+    {
+      "path": "tests/backend/test_handlers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33852efa281a3e013ab905b3205c44c8ea3c0e24",
+      "size": 5133,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/33852efa281a3e013ab905b3205c44c8ea3c0e24"
+    },
+    {
+      "path": "tests/backend/test_operators.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94e6dd6b391d9353b36a6f893447d8fdc2a17b5c",
+      "size": 3356,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/94e6dd6b391d9353b36a6f893447d8fdc2a17b5c"
+    },
+    {
+      "path": "tests/backend/topology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a019618822ccbe6140eb1586ea831290fa4281f7",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/a019618822ccbe6140eb1586ea831290fa4281f7"
+    },
+    {
+      "path": "tests/backend/topology/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/backend/topology/abc_test_topology.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f91c57011a61c16583b3dfb18b6970016703e558",
+      "size": 2545,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/f91c57011a61c16583b3dfb18b6970016703e558"
+    },
+    {
+      "path": "tests/backend/topology/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ddcdeb9b16f0515250c9620304527226d113532",
+      "size": 3378,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1ddcdeb9b16f0515250c9620304527226d113532"
+    },
+    {
+      "path": "tests/backend/topology/test_pyramid.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb3e0b16a0f20b6c55312c2abf6a0a19a1b2c0d6",
+      "size": 976,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/eb3e0b16a0f20b6c55312c2abf6a0a19a1b2c0d6"
+    },
+    {
+      "path": "tests/backend/topology/test_random.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ef3235e82c1819f395df0e86197aa5834efc3a",
+      "size": 2966,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/50ef3235e82c1819f395df0e86197aa5834efc3a"
+    },
+    {
+      "path": "tests/backend/topology/test_ring.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03fa8948e6ba5d080a0f3896e67015bee6b23a33",
+      "size": 1302,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/03fa8948e6ba5d080a0f3896e67015bee6b23a33"
+    },
+    {
+      "path": "tests/backend/topology/test_star.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f8f5a6751ebd7642f2a79121cb27035141a14a6",
+      "size": 884,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/3f8f5a6751ebd7642f2a79121cb27035141a14a6"
+    },
+    {
+      "path": "tests/backend/topology/test_von_neumann.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e3eed53c2f0026884544b96ddb9a5600d1e77d6",
+      "size": 1447,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7e3eed53c2f0026884544b96ddb9a5600d1e77d6"
+    },
+    {
+      "path": "tests/optimizers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ade95628daf31e9a080a0733c33e357d1053453",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/7ade95628daf31e9a080a0733c33e357d1053453"
+    },
+    {
+      "path": "tests/optimizers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "458719c6d63fe64d11fd0165096f00f100417e70",
+      "size": 65,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/458719c6d63fe64d11fd0165096f00f100417e70"
+    },
+    {
+      "path": "tests/optimizers/abc_test_discrete_optimizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e498ea17207abdc29c052a412971b1a4742affa",
+      "size": 2152,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/5e498ea17207abdc29c052a412971b1a4742affa"
+    },
+    {
+      "path": "tests/optimizers/abc_test_optimizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54d546e28ba2430d4c544e652eddcd9216f56966",
+      "size": 5068,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/54d546e28ba2430d4c544e652eddcd9216f56966"
+    },
+    {
+      "path": "tests/optimizers/test_binary.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a2f5a2f6232c3818de62460bd3e7eeb3c2b2be9",
+      "size": 1251,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/8a2f5a2f6232c3818de62460bd3e7eeb3c2b2be9"
+    },
+    {
+      "path": "tests/optimizers/test_general_optimizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "523e3e3d89c8ca7bb2c6149ec4e1050e04d8d049",
+      "size": 4429,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/523e3e3d89c8ca7bb2c6149ec4e1050e04d8d049"
+    },
+    {
+      "path": "tests/optimizers/test_global_best.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f32fc671fb2f714b17932c804977645dfac5b37",
+      "size": 1266,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1f32fc671fb2f714b17932c804977645dfac5b37"
+    },
+    {
+      "path": "tests/optimizers/test_local_best.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3650e697043142c7947316bd43be0f8db892f57c",
+      "size": 1242,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/3650e697043142c7947316bd43be0f8db892f57c"
+    },
+    {
+      "path": "tests/optimizers/test_tolerance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de18465c71851b47313831a99ceb0c2b9cf178dc",
+      "size": 3651,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/de18465c71851b47313831a99ceb0c2b9cf178dc"
+    },
+    {
+      "path": "tests/optimizers/test_verbose.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33a799045384ee32a0282f73dd4f33d432bc7432",
+      "size": 1465,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/33a799045384ee32a0282f73dd4f33d432bc7432"
+    },
+    {
+      "path": "tests/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41888d1bc6d231add3d29cb674f22d692f10ac77",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/41888d1bc6d231add3d29cb674f22d692f10ac77"
+    },
+    {
+      "path": "tests/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e27738ae39e31906b6fa7aaf02d3592465fd35b",
+      "size": 63,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/5e27738ae39e31906b6fa7aaf02d3592465fd35b"
+    },
+    {
+      "path": "tests/utils/decorators",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a195329774c0d6ac24522ed38d328d7f629d87bc",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/a195329774c0d6ac24522ed38d328d7f629d87bc"
+    },
+    {
+      "path": "tests/utils/decorators/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/utils/decorators/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40981b6e3179cb14a7360c3a99c646b77a683ee6",
+      "size": 245,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/40981b6e3179cb14a7360c3a99c646b77a683ee6"
+    },
+    {
+      "path": "tests/utils/decorators/test_decorators.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67e4131e27e40a7f8343ff7e999e6da5e1ea6848",
+      "size": 1373,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/67e4131e27e40a7f8343ff7e999e6da5e1ea6848"
+    },
+    {
+      "path": "tests/utils/functions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c27efbc6b275d4902c78e926274ab2bbc7754fe9",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/c27efbc6b275d4902c78e926274ab2bbc7754fe9"
+    },
+    {
+      "path": "tests/utils/functions/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e27738ae39e31906b6fa7aaf02d3592465fd35b",
+      "size": 63,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/5e27738ae39e31906b6fa7aaf02d3592465fd35b"
+    },
+    {
+      "path": "tests/utils/functions/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8988ef3073f7bcf217ccbe6ae870bba588f41f2",
+      "size": 1165,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e8988ef3073f7bcf217ccbe6ae870bba588f41f2"
+    },
+    {
+      "path": "tests/utils/functions/test_singleobj_bounds.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1418153eb5acafb19ec29715f5cad8d68e0c9ee3",
+      "size": 4351,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1418153eb5acafb19ec29715f5cad8d68e0c9ee3"
+    },
+    {
+      "path": "tests/utils/functions/test_singleobj_dims.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d25259bbf2f655945c3307c8db306581eeaccf09",
+      "size": 2079,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/d25259bbf2f655945c3307c8db306581eeaccf09"
+    },
+    {
+      "path": "tests/utils/functions/test_singleobj_return.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7a1e705cfc96a4949965fd2856963ef8a1769db",
+      "size": 3909,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/a7a1e705cfc96a4949965fd2856963ef8a1769db"
+    },
+    {
+      "path": "tests/utils/functions/test_singleobj_returndims.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1704d4c4135c720217b264a7f08e6593e60aaec6",
+      "size": 2730,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1704d4c4135c720217b264a7f08e6593e60aaec6"
+    },
+    {
+      "path": "tests/utils/plotters",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0bfba4277fd89dbcf484ee18c6bb9fb6df624f7",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/d0bfba4277fd89dbcf484ee18c6bb9fb6df624f7"
+    },
+    {
+      "path": "tests/utils/plotters/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/utils/plotters/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b528984858f586511ba8d51d2c729de7d7d96b14",
+      "size": 1018,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/b528984858f586511ba8d51d2c729de7d7d96b14"
+    },
+    {
+      "path": "tests/utils/plotters/test_plotters.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cde9249e324fbac564f7f141773f86c13c4fea34",
+      "size": 2097,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/cde9249e324fbac564f7f141773f86c13c4fea34"
+    },
+    {
+      "path": "tests/utils/search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4699e2d0982a46dcb072b4f057912c9b1b982a3a",
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/trees/4699e2d0982a46dcb072b4f057912c9b1b982a3a"
+    },
+    {
+      "path": "tests/utils/search/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/utils/search/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "478a4aa2042b92ce02a5b651bf04ddadd9ae9b00",
+      "size": 2114,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/478a4aa2042b92ce02a5b651bf04ddadd9ae9b00"
+    },
+    {
+      "path": "tests/utils/search/test_gridsearch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a9936f2bd937d56e8ae0956226f5513673730ab",
+      "size": 606,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/8a9936f2bd937d56e8ae0956226f5513673730ab"
+    },
+    {
+      "path": "tests/utils/search/test_randomsearch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ac99045caebc680dc79fca388db15b7159b27b1",
+      "size": 1083,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/7ac99045caebc680dc79fca388db15b7159b27b1"
+    },
+    {
+      "path": "tox.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d5bcc5da5aa8cf9c9122fc1b5886733f2aa8894",
+      "size": 484,
+      "url": "https://api.github.com/repos/ljvmiranda921/pyswarms/git/blobs/1d5bcc5da5aa8cf9c9122fc1b5886733f2aa8894"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+NOTE: The first p0 attempt used the wrong command:
+  python3 -B inputs/rea-brief-pytest-attempt-to-fix/precheck/precheck.py
+precheck.py needs a brief directory and a python path. That no-argument
+command was the coordinator's mistake. This file is the corrected run.
+The coordinator already reported Python 3.13.5, pytest 9.1.1, 57s, empty diff, exit=0.
+
+$ python3 -V
+Python 3.13.5
+
+$ python3 -m pytest --version
+pytest 9.1.1
+
+$ d=inputs/rea-brief-pytest-attempt-to-fix; python3 -B $d/precheck/precheck.py $d python3 > /tmp/p0.txt; tail -n 3 $d/precheck/precheck-output.txt | diff - /tmp/p0.txt; echo exit=$?
+exit=0
+
+diff output:
+(empty)
+
+/tmp/p0.txt:
+prefix (['passed', 'passed', 'passed'], ['failed', 'failed', 'failed'], True, 53, True)
+wrong_fix (['passed', 'passed', 'passed'], ['failed', 'failed', 'failed'], True, 53, True)
+real_fix (['passed', 'passed', 'passed'], ['passed', 'passed', 'passed'], True, 0, True)

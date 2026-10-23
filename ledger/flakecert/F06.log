@@ -1,0 +1,76 @@
+# flakecert-log-version: 1
+# id: F06
+# method: flakecert
+# category: NOD
+# project: https://github.com/prancer-io/cloud-validation-framework
+# sha: 94522590d9881a5125d81da701a65f7f63383c0d
+# python: 3.9.25
+# image: sha256:415eab8e335d0701485f61ee90288d1b79d9d93db9f5343ae557743fa3cd869d
+# image_tag: flakecert:F06
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/processor/helper/config/test_config_utils.py::test_framework_dir
+# node_id: tests/processor/helper/config/test_config_utils.py::test_framework_dir
+# test_file: tests/processor/helper/config/test_config_utils.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 133
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/processor/helper/config/test_config_utils.py::test_framework_dir"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=1.021 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+SCHEDULE run=2 {"order": ["tests/processor/helper/config/test_config_utils.py::test_framework_dir", "tests/processor/helper/config/test_config_utils.py::test_framework_dir"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=0.897 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+SCHEDULE run=3 {"order": ["tests/processor/helper/config/test_config_utils.py::test_framework_dir", "tests/processor/helper/config/test_config_utils.py::test_framework_config", "tests/processor/helper/config/test_config_utils.py::test_rundata_dir", "tests/processor/helper/config/test_config_utils.py::test_get_solution_dir", "tests/processor/helper/config/test_config_utils.py::test_get_config_data", "tests/processor/helper/config/test_config_utils.py::test_config_value", "tests/processor/helper/config/test_config_utils.py::test_get_test_json_dir"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=0.864 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+SCHEDULE run=4 {"order": ["tests/processor/helper/config/test_config_utils.py::test_get_test_json_dir", "tests/processor/helper/config/test_config_utils.py::test_config_value", "tests/processor/helper/config/test_config_utils.py::test_get_config_data", "tests/processor/helper/config/test_config_utils.py::test_get_solution_dir", "tests/processor/helper/config/test_config_utils.py::test_rundata_dir", "tests/processor/helper/config/test_config_utils.py::test_framework_config", "tests/processor/helper/config/test_config_utils.py::test_framework_dir"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=failed exc=AssertionError sig=6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0 duration_s=0.902 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+TRACEBACK run=4
+______________________________ test_framework_dir ______________________________
+tests/processor/helper/config/test_config_utils.py:27: in test_framework_dir
+    assert tests_curdir == prod_curdir
+E   AssertionError: assert '/work' == 'realm/validation'
+E     - /work
+E     + realm/validation
+ENDTRACEBACK run=4
+SCHEDULE run=5 {"order": ["tests/processor/helper/config/test_config_utils.py::test_framework_dir"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=passed exc=- sig=- duration_s=0.874 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+ABLATE source=order necessary=yes
+SCHEDULE run=6 {"order": ["tests/processor/helper/config/test_config_utils.py::test_get_test_json_dir", "tests/processor/helper/config/test_config_utils.py::test_config_value", "tests/processor/helper/config/test_config_utils.py::test_get_config_data", "tests/processor/helper/config/test_config_utils.py::test_get_solution_dir", "tests/processor/helper/config/test_config_utils.py::test_rundata_dir", "tests/processor/helper/config/test_config_utils.py::test_framework_config", "tests/processor/helper/config/test_config_utils.py::test_framework_dir"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=6 outcome=failed exc=AssertionError sig=6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0 duration_s=0.922 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+TRACEBACK run=6
+______________________________ test_framework_dir ______________________________
+tests/processor/helper/config/test_config_utils.py:27: in test_framework_dir
+    assert tests_curdir == prod_curdir
+E   AssertionError: assert '/work' == 'realm/validation'
+E     - /work
+E     + realm/validation
+ENDTRACEBACK run=6
+SCHEDULE run=7 {"order": ["tests/processor/helper/config/test_config_utils.py::test_get_test_json_dir", "tests/processor/helper/config/test_config_utils.py::test_config_value", "tests/processor/helper/config/test_config_utils.py::test_get_config_data", "tests/processor/helper/config/test_config_utils.py::test_get_solution_dir", "tests/processor/helper/config/test_config_utils.py::test_rundata_dir", "tests/processor/helper/config/test_config_utils.py::test_framework_config", "tests/processor/helper/config/test_config_utils.py::test_framework_dir"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=7 outcome=failed exc=AssertionError sig=6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0 duration_s=0.961 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+TRACEBACK run=7
+______________________________ test_framework_dir ______________________________
+tests/processor/helper/config/test_config_utils.py:27: in test_framework_dir
+    assert tests_curdir == prod_curdir
+E   AssertionError: assert '/work' == 'realm/validation'
+E     - /work
+E     + realm/validation
+ENDTRACEBACK run=7
+SCHEDULE run=8 {"order": ["tests/processor/helper/config/test_config_utils.py::test_get_test_json_dir", "tests/processor/helper/config/test_config_utils.py::test_config_value", "tests/processor/helper/config/test_config_utils.py::test_get_config_data", "tests/processor/helper/config/test_config_utils.py::test_get_solution_dir", "tests/processor/helper/config/test_config_utils.py::test_rundata_dir", "tests/processor/helper/config/test_config_utils.py::test_framework_config", "tests/processor/helper/config/test_config_utils.py::test_framework_dir"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=8 outcome=failed exc=AssertionError sig=6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0 duration_s=1.057 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+TRACEBACK run=8
+______________________________ test_framework_dir ______________________________
+tests/processor/helper/config/test_config_utils.py:27: in test_framework_dir
+    assert tests_curdir == prod_curdir
+E   AssertionError: assert '/work' == 'realm/validation'
+E     - /work
+E     + realm/validation
+ENDTRACEBACK run=8
+REPLAY id=F06 matched=3/3 sig=6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0
+CERT id=F06 certified=yes d=1 m=5 k=4 per_run_lower=1/5 runs_to_failure=4 sig=6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0
+SEARCH_STOP reason=certified index=8
+FLAKECERT_SUMMARY id=F06 runs=8 failures=4

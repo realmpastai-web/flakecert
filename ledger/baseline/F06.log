@@ -1,0 +1,128 @@
+# flakecert-log-version: 1
+# id: F06
+# method: baseline
+# category: NOD
+# project: https://github.com/prancer-io/cloud-validation-framework
+# sha: 94522590d9881a5125d81da701a65f7f63383c0d
+# python: 3.9.25
+# image: sha256:415eab8e335d0701485f61ee90288d1b79d9d93db9f5343ae557743fa3cd869d
+# image_tag: flakecert:F06
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/processor/helper/config/test_config_utils.py::test_framework_dir
+# node_id: tests/processor/helper/config/test_config_utils.py::test_framework_dir
+# test_file: tests/processor/helper/config/test_config_utils.py
+# order_scope: test_directory
+# cmd: docker run --network none --cap-add NET_ADMIN
+# netns_cmd: ip link set lo up
+NETNS
+
+lo_set=0
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+1: lo    inet6 ::1/128 scope host \       valid_lft forever preferred_lft forever
+FLAKECERT_ROUTE_BEGIN
+FLAKECERT_ROUTE_END
+ENDNETNS
+RUN method=baseline run=1 outcome=passed exc=- sig=- duration_s=0.868 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=2 outcome=passed exc=- sig=- duration_s=0.890 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=3 outcome=passed exc=- sig=- duration_s=0.897 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=4 outcome=passed exc=- sig=- duration_s=0.916 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=5 outcome=passed exc=- sig=- duration_s=0.846 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=6 outcome=passed exc=- sig=- duration_s=0.852 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=7 outcome=passed exc=- sig=- duration_s=0.849 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=8 outcome=passed exc=- sig=- duration_s=0.874 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=9 outcome=passed exc=- sig=- duration_s=0.859 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=10 outcome=passed exc=- sig=- duration_s=0.881 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=11 outcome=passed exc=- sig=- duration_s=0.859 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=12 outcome=passed exc=- sig=- duration_s=0.850 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=13 outcome=passed exc=- sig=- duration_s=0.830 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=14 outcome=passed exc=- sig=- duration_s=0.943 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=15 outcome=passed exc=- sig=- duration_s=0.910 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=16 outcome=passed exc=- sig=- duration_s=0.960 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=17 outcome=passed exc=- sig=- duration_s=0.986 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=18 outcome=passed exc=- sig=- duration_s=0.859 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=19 outcome=passed exc=- sig=- duration_s=0.911 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=20 outcome=passed exc=- sig=- duration_s=0.905 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=21 outcome=passed exc=- sig=- duration_s=0.897 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=22 outcome=passed exc=- sig=- duration_s=0.835 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=23 outcome=passed exc=- sig=- duration_s=0.823 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=24 outcome=passed exc=- sig=- duration_s=0.841 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=25 outcome=passed exc=- sig=- duration_s=0.852 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=26 outcome=passed exc=- sig=- duration_s=0.854 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=27 outcome=passed exc=- sig=- duration_s=0.807 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=28 outcome=passed exc=- sig=- duration_s=0.842 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=29 outcome=passed exc=- sig=- duration_s=0.853 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=30 outcome=passed exc=- sig=- duration_s=0.804 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=31 outcome=passed exc=- sig=- duration_s=0.850 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=32 outcome=passed exc=- sig=- duration_s=0.831 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=33 outcome=passed exc=- sig=- duration_s=1.062 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=34 outcome=passed exc=- sig=- duration_s=0.841 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=35 outcome=passed exc=- sig=- duration_s=0.829 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=36 outcome=passed exc=- sig=- duration_s=0.836 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=37 outcome=passed exc=- sig=- duration_s=0.855 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=38 outcome=passed exc=- sig=- duration_s=0.860 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=39 outcome=passed exc=- sig=- duration_s=1.087 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=40 outcome=passed exc=- sig=- duration_s=0.840 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=41 outcome=passed exc=- sig=- duration_s=0.818 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=42 outcome=passed exc=- sig=- duration_s=0.805 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=43 outcome=passed exc=- sig=- duration_s=0.838 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=44 outcome=passed exc=- sig=- duration_s=0.821 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=45 outcome=passed exc=- sig=- duration_s=0.847 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=46 outcome=passed exc=- sig=- duration_s=0.893 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=47 outcome=passed exc=- sig=- duration_s=1.023 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=48 outcome=passed exc=- sig=- duration_s=0.840 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=49 outcome=passed exc=- sig=- duration_s=0.880 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=50 outcome=passed exc=- sig=- duration_s=0.887 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=51 outcome=passed exc=- sig=- duration_s=0.872 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=52 outcome=passed exc=- sig=- duration_s=0.873 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=53 outcome=passed exc=- sig=- duration_s=0.903 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=54 outcome=passed exc=- sig=- duration_s=0.848 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=55 outcome=passed exc=- sig=- duration_s=0.854 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=56 outcome=passed exc=- sig=- duration_s=0.857 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=57 outcome=passed exc=- sig=- duration_s=0.891 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=58 outcome=passed exc=- sig=- duration_s=0.816 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=59 outcome=passed exc=- sig=- duration_s=0.859 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=60 outcome=passed exc=- sig=- duration_s=0.807 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=61 outcome=passed exc=- sig=- duration_s=0.929 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=62 outcome=passed exc=- sig=- duration_s=1.007 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=63 outcome=passed exc=- sig=- duration_s=0.957 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=64 outcome=passed exc=- sig=- duration_s=0.848 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=65 outcome=passed exc=- sig=- duration_s=1.282 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=66 outcome=passed exc=- sig=- duration_s=1.054 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=67 outcome=passed exc=- sig=- duration_s=0.857 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=68 outcome=passed exc=- sig=- duration_s=0.843 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=69 outcome=passed exc=- sig=- duration_s=0.838 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=70 outcome=passed exc=- sig=- duration_s=0.824 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=71 outcome=passed exc=- sig=- duration_s=0.870 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=72 outcome=passed exc=- sig=- duration_s=0.908 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=73 outcome=passed exc=- sig=- duration_s=0.837 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=74 outcome=passed exc=- sig=- duration_s=0.859 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=75 outcome=passed exc=- sig=- duration_s=0.848 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=76 outcome=passed exc=- sig=- duration_s=0.844 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=77 outcome=passed exc=- sig=- duration_s=0.931 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=78 outcome=passed exc=- sig=- duration_s=1.028 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=79 outcome=passed exc=- sig=- duration_s=0.847 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=80 outcome=passed exc=- sig=- duration_s=0.910 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=81 outcome=passed exc=- sig=- duration_s=0.892 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=82 outcome=passed exc=- sig=- duration_s=0.936 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=83 outcome=passed exc=- sig=- duration_s=0.994 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=84 outcome=passed exc=- sig=- duration_s=0.867 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=85 outcome=passed exc=- sig=- duration_s=0.832 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=86 outcome=passed exc=- sig=- duration_s=0.832 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=87 outcome=passed exc=- sig=- duration_s=0.815 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=88 outcome=passed exc=- sig=- duration_s=0.873 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=89 outcome=passed exc=- sig=- duration_s=0.835 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=90 outcome=passed exc=- sig=- duration_s=0.827 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=91 outcome=passed exc=- sig=- duration_s=0.828 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=92 outcome=passed exc=- sig=- duration_s=0.840 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=93 outcome=passed exc=- sig=- duration_s=0.805 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=94 outcome=passed exc=- sig=- duration_s=0.815 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=95 outcome=passed exc=- sig=- duration_s=0.829 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=96 outcome=passed exc=- sig=- duration_s=0.932 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=97 outcome=passed exc=- sig=- duration_s=0.937 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=98 outcome=passed exc=- sig=- duration_s=0.954 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=99 outcome=passed exc=- sig=- duration_s=0.852 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+RUN method=baseline run=100 outcome=passed exc=- sig=- duration_s=0.891 node=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+BASELINE_SUMMARY id=F06 runs=100 failures=0 passes=100 errors=0 skipped=0 timeouts=0 rate=0/100
+OFFLINE_RUN id=F06 install=true run=true

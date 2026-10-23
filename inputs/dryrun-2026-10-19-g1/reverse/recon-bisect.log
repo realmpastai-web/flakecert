@@ -1,0 +1,268 @@
+## sha256
+155b54480f28e2b2813185077fe435c2d663031616360ed3b179a9d6a55d2551  rspec-core-3.12.2.gem
+078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa  fl-76eeb3f.tgz
+## B1 CLI: --seed = rand:SEED; --bisect[=verbose] swaps in the Bisect invocation (option_parser.rb)
+     1	        parser.on('--seed SEED', Integer, 'Equivalent of --order rand:SEED.') do |seed|
+     2	          options[:order] = "rand:#{seed}"
+     3	        end
+     4	
+     5	        parser.on('--bisect[=verbose]', 'Repeatedly runs the suite in order to isolate the failures to the ',
+     6	                  '  smallest reproducible case.') do |argument|
+     7	          options[:bisect] = argument || true
+     8	          options[:runner] = RSpec::Core::Invocations::Bisect.new
+## B2 coordinator: minimize, then publish repro command; failure -> bisect_failed
+          repro = start_bisect_runner do |runner|
+            minimizer = ExampleMinimizer.new(@shell_command, runner, @notifier)
+
+            gracefully_abort_on_sigint(minimizer)
+            minimizer.find_minimal_repro
+            minimizer.repro_command_for_currently_needed_ids
+          end
+
+          @notifier.publish(:bisect_repro_command, :repro => repro)
+
+          true
+        rescue BisectFailedError => e
+          @notifier.publish(:bisect_failed, :failure_explanation => e.message)
+          false
+        ensure
+          @notifier.publish(:close)
+        end
+
+      private
+## B3 minimizer: candidates = all - failed; a subset 'reproduces' iff ALL original failures fail (line 150)
+19:        def find_minimal_repro
+20:          prep
+21:
+22:          _, duration = track_duration do
+23:            bisect(non_failing_example_ids)
+24:          end
+25:
+26:          notify(:bisect_complete, :duration => duration,
+27:                                   :original_non_failing_count => non_failing_example_ids.size,
+28:                                   :remaining_count => remaining_ids.size)
+29:
+30:          remaining_ids + failed_example_ids
+31:        end
+32:
+33:        def bisect(candidate_ids)
+34:          notify(:bisect_dependency_check_started)
+35:          if get_expected_failures_for?([])
+36:            notify(:bisect_dependency_check_failed)
+37:            self.remaining_ids = []
+38:            return
+39:          end
+40:          notify(:bisect_dependency_check_passed)
+41:
+42:          bisect_over(candidate_ids)
+43:        end
+44:
+45:        def bisect_over(candidate_ids)
+46:          return if candidate_ids.one?
+47:
+48:          notify(
+49:            :bisect_round_started,
+50:            :candidate_range => example_range(candidate_ids),
+51:            :candidates_count => candidate_ids.size
+52:          )
+53:
+54:          slice_size = (candidate_ids.length / 2.0).ceil
+55:          lhs, rhs = candidate_ids.each_slice(slice_size).to_a
+56:
+57:          ids_to_ignore, duration = track_duration do
+58:            [lhs, rhs].find do |ids|
+59:              get_expected_failures_for?(remaining_ids - ids)
+60:            end
+61:          end
+62:
+63:          if ids_to_ignore
+64:            self.remaining_ids -= ids_to_ignore
+65:            notify(
+66:              :bisect_round_ignoring_ids,
+67:              :ids_to_ignore => ids_to_ignore,
+68:              :ignore_range => example_range(ids_to_ignore),
+69:              :remaining_ids => remaining_ids,
+70:              :duration => duration
+71:            )
+72:            bisect_over(candidate_ids - ids_to_ignore)
+73:          else
+74:            notify(
+75:              :bisect_round_detected_multiple_culprits,
+76:              :duration => duration
+77:            )
+78:            bisect_over(lhs)
+79:            bisect_over(rhs)
+80:          end
+81:        end
+113:        def prep
+114:          notify(:bisect_starting, :original_cli_args => shell_command.original_cli_args,
+115:                                   :bisect_runner => runner.class.name)
+116:
+117:          _, duration = track_duration do
+118:            original_results    = runner.original_results
+119:            @all_example_ids    = original_results.all_example_ids
+120:            @failed_example_ids = original_results.failed_example_ids
+121:            @remaining_ids      = non_failing_example_ids
+122:          end
+123:
+124:          if @failed_example_ids.empty?
+125:            raise BisectFailedError, "\n\nNo failures found. Bisect only works " \
+126:                  "in the presence of one or more failing examples."
+127:          else
+128:            notify(:bisect_original_run_complete, :failed_example_ids => failed_example_ids,
+129:                                                  :non_failing_example_ids => non_failing_example_ids,
+130:                                                  :duration => duration)
+131:          end
+132:        end
+133:
+134:        def non_failing_example_ids
+135:          @non_failing_example_ids ||= all_example_ids - failed_example_ids
+136:        end
+137:
+138:        def get_expected_failures_for?(ids)
+139:          ids_to_run = ids + failed_example_ids
+140:          notify(
+141:            :bisect_individual_run_start,
+142:            :command => shell_command.repro_command_from(ids_to_run),
+143:            :ids_to_run => ids_to_run
+144:          )
+145:
+146:          results, duration = track_duration { runner.run(ids_to_run) }
+147:          notify(:bisect_individual_run_complete, :duration => duration, :results => results)
+148:
+149:          abort_if_ordering_inconsistent(results)
+150:          (failed_example_ids & results.failed_example_ids) == failed_example_ids
+151:        end
+152:
+153:        def track_duration
+154:          start = ::RSpec::Core::Time.now
+155:          [yield, ::RSpec::Core::Time.now - start]
+156:        end
+157:
+158:        def abort_if_ordering_inconsistent(results)
+159:          expected_order = all_example_ids & results.all_example_ids
+160:          return if expected_order == results.all_example_ids
+161:
+162:          raise BisectFailedError, "\n\nThe example ordering is inconsistent. " \
+163:                "`--bisect` relies upon consistent ordering (e.g. by passing " \
+164:                "`--seed` if you're using random ordering) to work properly."
+165:        end
+## B4 repro command keeps original non-location args (incl. --seed); --bisect stripped
+13:        def initialize(original_cli_args)
+14:          @original_cli_args = original_cli_args.reject { |arg| arg.start_with?("--bisect") }
+15:        end
+32:        def repro_command_from(locations)
+33:          parts = []
+34:
+35:          parts.concat environment_repro_parts
+36:          parts << "rspec"
+37:          parts.concat Formatters::Helpers.organize_ids(locations)
+38:          parts.concat original_cli_args_without_locations
+39:
+40:          parts.join(" ")
+41:        end
+99:        def original_cli_args_without_locations
+100:          @original_cli_args_without_locations ||= begin
+101:            files_or_dirs = parsed_original_cli_options.fetch(:files_or_directories_to_run)
+102:            @original_cli_args - files_or_dirs
+103:          end
+104:        end
+## B5 runner default: fork if supported; :shell only via config.bisect_runner in a --require file
+481:      def bisect_runner=(value)
+482:        if @bisect_runner_class && value != @bisect_runner
+483:          raise "`config.bisect_runner = #{value.inspect}` can no longer take " \
+484:            "effect as the #{@bisect_runner.inspect} bisect runnner is already " \
+485:            "in use. This config setting must be set in a file loaded by a " \
+486:            "`--require` option (passed at the CLI or in a `.rspec` file) for " \
+487:            "it to have any effect."
+488:        end
+489:
+490:        @bisect_runner = value
+491:      end
+518:        @bisect_runner = RSpec::Support::RubyFeatures.fork_supported? ? :fork : :shell
+2098:      def bisect_runner_class
+2099:        @bisect_runner_class ||= begin
+2100:          case bisect_runner
+2101:          when :fork
+2102:            RSpec::Support.require_rspec_core 'bisect/fork_runner'
+2103:            Bisect::ForkRunner
+2104:          when :shell
+2105:            RSpec::Support.require_rspec_core 'bisect/shell_runner'
+2106:            Bisect::ShellRunner
+2107:          else
+2108:            raise "Unsupported value for `bisect_runner` (#{bisect_runner.inspect}). " \
+2109:                  "Only `:fork` and `:shell` are supported."
+2110:          end
+2111:        end
+## B6 fork runner: parent boots once (incl. --require files), each subset runs in a fork that load_spec_files
+51:        end
+52:
+53:        def run(locations)
+54:          run_descriptor = ExampleSetDescriptor.new(locations, original_results.failed_example_ids)
+55:          dispatch_run(run_descriptor)
+56:        end
+57:
+58:        def original_results
+59:          @original_results ||= dispatch_run(ExampleSetDescriptor.new(
+60:            @shell_command.original_locations, []))
+61:        end
+62:
+63:        def shutdown
+64:          @channel.close
+65:        end
+66:
+80:          def initialize(runner, channel)
+81:            @runner = runner
+82:            @channel = channel
+83:
+84:            @spec_output = StringIO.new
+85:
+86:            runner.configuration.tap do |c|
+87:              c.reset_reporter
+88:              c.output_stream = @spec_output
+89:              c.error_stream = @spec_output
+90:            end
+91:          end
+92:
+93:          def dispatch_specs(run_descriptor)
+94:            pid = fork { run_specs(run_descriptor) }
+95:            # We don't use Process.waitpid here as it was causing bisects to
+96:            # block due to the file descriptor limit on OSX / Linux. We need
+97:            # to detach the process to avoid having zombie processes
+98:            # consuming slots in the kernel process table during bisect runs.
+99:            Process.detach(pid)
+100:          end
+101:
+102:        private
+103:
+104:          def run_specs(run_descriptor)
+105:            $stdout = $stderr = @spec_output
+106:            formatter = CaptureFormatter.new(run_descriptor.failed_example_ids)
+107:
+108:            @runner.configuration.tap do |c|
+109:              c.files_or_directories_to_run = run_descriptor.all_example_ids
+110:              c.formatter = formatter
+111:              c.load_spec_files
+112:            end
+113:
+114:            # `announce_filters` has the side effect of implementing the logic
+115:            # that honors `config.run_all_when_everything_filtered` so we need
+## B7 random order is per-sibling sort_by jenkins(seed+id) (filter independent)
+        def order(items)
+          @used = true
+
+          seed = @configuration.seed.to_s
+          items.sort_by { |item| jenkins_hash_digest(seed + item.id) }
+        end
+## B8 fastlane .rspec at 76eeb3f (spec_helper is a --require, so fork runner loads it once)
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec)
+
+--default-path ./
+--exclude-pattern 'vendor/**/*_spec.rb'
+--require ./spec_helper
+--color
+--format d
+## B9 lockfile pin
+314:    rspec-core (3.12.2)

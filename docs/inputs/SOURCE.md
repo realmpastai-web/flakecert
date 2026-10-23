@@ -1,0 +1,1 @@
+Inputs copied byte for byte from realmpastai-web/clawscore-fleet branch hark-inputs-2026-10-17 @ ac59b5ede3cb7879000d66ff17d549e0c1cb705c, inputs/flakecert/ (Hark, 2026-10-17). docs/inputs/SHA256SUMS is Hark's original manifest; file locations here follow the spec layout (baseline/, ledger/, evidence/flakecert/).

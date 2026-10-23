@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="9.102" timestamp="2026-10-19T05:34:17.787072+00:00" hostname="5fffbbea0c5e"><testcase classname="tests.test_000_sabotage_popen_thread" name="test_sabotage_leaves_popen_thread_running" time="0.001" /><testcase classname="tests.test_mcp_client_parity_v4_169_39" name="test_client_start_happy_path" time="0.017"><failure message="AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']&#10;  &#10;  At index 0 diff: '/usr/local/bin/python' != 'node'&#10;  Use -v to get more diff">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7efce1296750&gt;
+
+    def test_client_start_happy_path(monkeypatch):
+        init_resp = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {"protocolVersion": "2025-03-26", "serverInfo": {"name": "test-server", "version": "0.1"}},
+        }
+        mock_proc = _MockPopen()
+        captured_popen = {}
+    
+        def _fake_popen(args, **kwargs):
+            captured_popen["args"] = args
+            captured_popen["kwargs"] = kwargs
+            return mock_proc
+    
+        monkeypatch.setattr(mcp_mod.subprocess, "Popen", _fake_popen)
+        client = mcp_mod.McpStdioClient("node", ["server.js"], cwd="/app")
+    
+        # Push matching response into queue
+        client._stdout_q.put_nowait(json.dumps(init_resp) + "\n")
+    
+        info = client.start(timeout=10)
+        assert info == init_resp["result"]
+        assert client.server_info == init_resp["result"]
+        assert client.alive() is True
+    
+        # Check Popen kwargs
+&gt;       assert captured_popen["args"] == ["node", "server.js"]
+E       AssertionError: assert ['/usr/local/..., '--version'] == ['node', 'server.js']
+E         
+E         At index 0 diff: '/usr/local/bin/python' != 'node'
+E         Use -v to get more diff
+
+tests/test_mcp_client_parity_v4_169_39.py:169: AssertionError</failure></testcase></testsuite></testsuites>

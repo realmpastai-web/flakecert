@@ -1,0 +1,304 @@
+# flakecert-log-version: 1
+# id: F20
+# method: flakecert
+# category: NIO
+# project: https://github.com/bpepple/metron-tagger
+# sha: 2be176293218fa101dd84c95c72b8ae646b2731a
+# python: 3.8.20
+# image: sha256:d0a6054c639fbcc2e1d48d71a570084889e9eef3f8b06f6189d80dad1c572acb
+# image_tag: flakecert:F20
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/test_taggerlib_filesorter.py::test_sort_comic
+# node_id: tests/test_taggerlib_filesorter.py::test_sort_comic
+# test_file: tests/test_taggerlib_filesorter.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 139
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=0.930 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=2 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=0.749 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=3 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=0.767 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=4 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=passed exc=- sig=- duration_s=0.839 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=5 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata", "tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=passed exc=- sig=- duration_s=0.796 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=6 {"order": ["tests/test_metron_tagger.py::test_get_issue_metadata", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=6 outcome=passed exc=- sig=- duration_s=0.784 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=7 {"order": ["tests/test_metron_tagger.py::test_create_metron_talker", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=7 outcome=passed exc=- sig=- duration_s=0.723 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=8 {"order": ["tests/test_taggerlib_filerenamer.py::test_determine_name", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=8 outcome=passed exc=- sig=- duration_s=1.080 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=9 {"order": ["tests/test_taggerlib_metrontalker.py::test_map_resp_to_metadata", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=9 outcome=passed exc=- sig=- duration_s=0.803 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=10 {"order": ["tests/test_taggerlib_metrontalker.py::test_map_resp_to_metadata_with_no_story_name", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=10 outcome=passed exc=- sig=- duration_s=0.746 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=11 {"order": ["tests/test_taggerlib_metrontalker.py::test_fetch_issue_by_id", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=11 outcome=passed exc=- sig=- duration_s=1.137 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=12 {"order": ["tests/test_taggerlib_metrontalker.py::test_search_for_issue", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=12 outcome=passed exc=- sig=- duration_s=0.954 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=13 {"order": ["tests/test_taggerlib_options.py::test_creditial_options", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=13 outcome=passed exc=- sig=- duration_s=0.773 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=14 {"order": ["tests/test_taggerlib_options.py::test_online_option", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=14 outcome=passed exc=- sig=- duration_s=1.160 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=15 {"order": ["tests/test_taggerlib_options.py::test_id_option", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=15 outcome=passed exc=- sig=- duration_s=0.757 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=16 {"order": ["tests/test_taggerlib_options.py::test_delete_option", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=16 outcome=passed exc=- sig=- duration_s=1.125 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=17 {"order": ["tests/test_taggerlib_options.py::test_missing_option", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=17 outcome=passed exc=- sig=- duration_s=0.930 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=18 {"order": ["tests/test_taggerlib_options.py::test_rename_option", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=18 outcome=passed exc=- sig=- duration_s=0.759 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=19 {"order": ["tests/test_taggerlib_options.py::test_ignore_option", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=19 outcome=passed exc=- sig=- duration_s=0.826 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=20 {"order": ["tests/test_taggerlib_settings.py::test_settings", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=20 outcome=passed exc=- sig=- duration_s=0.709 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=21 {"order": ["tests/test_taggerlib_utils.py::test_dict", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=21 outcome=passed exc=- sig=- duration_s=0.737 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=22 {"order": ["tests/test_taggerlib_utils.py::test_query_dict_without_issue_number", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=22 outcome=passed exc=- sig=- duration_s=0.761 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=23 {"order": ["tests/test_taggerlib_utils.py::test_cleanup_colon_space", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=23 outcome=passed exc=- sig=- duration_s=0.714 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=24 {"order": ["tests/test_taggerlib_utils.py::test_cleanup_space_colon", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=24 outcome=passed exc=- sig=- duration_s=0.748 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=25 {"order": ["tests/test_taggerlib_utils.py::test_cleanup_colon", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=25 outcome=passed exc=- sig=- duration_s=0.769 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=26 {"order": ["tests/test_taggerlib_utils.py::test_cleanup_backslash", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=26 outcome=passed exc=- sig=- duration_s=0.740 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=27 {"order": ["tests/test_taggerlib_utils.py::test_cleanup_questionmark", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=27 outcome=passed exc=- sig=- duration_s=1.167 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=28 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "0", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=28 outcome=passed exc=- sig=- duration_s=0.772 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=29 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "1", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=29 outcome=passed exc=- sig=- duration_s=0.724 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=30 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "42", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=30 outcome=passed exc=- sig=- duration_s=0.723 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=31 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "20261017", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=31 outcome=passed exc=- sig=- duration_s=0.753 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=32 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "0", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=32 outcome=passed exc=- sig=- duration_s=0.790 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=33 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "1", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=33 outcome=passed exc=- sig=- duration_s=0.732 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=34 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "42", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=34 outcome=passed exc=- sig=- duration_s=0.716 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=35 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "20261017", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=35 outcome=passed exc=- sig=- duration_s=0.754 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=36 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "0", "tmpdir": ""}
+RUN method=flakecert run=36 outcome=passed exc=- sig=- duration_s=0.830 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=37 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "86400", "tmpdir": ""}
+RUN method=flakecert run=37 outcome=passed exc=- sig=- duration_s=0.769 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=38 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "-86400", "tmpdir": ""}
+RUN method=flakecert run=38 outcome=passed exc=- sig=- duration_s=0.886 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=39 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "3600", "tmpdir": ""}
+RUN method=flakecert run=39 outcome=passed exc=- sig=- duration_s=0.730 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=40 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-a"}
+RUN method=flakecert run=40 outcome=passed exc=- sig=- duration_s=0.830 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=41 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-b"}
+RUN method=flakecert run=41 outcome=passed exc=- sig=- duration_s=0.780 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=42 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-c"}
+RUN method=flakecert run=42 outcome=passed exc=- sig=- duration_s=1.133 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=43 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-d"}
+RUN method=flakecert run=43 outcome=passed exc=- sig=- duration_s=0.690 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=44 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "0", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=44 outcome=passed exc=- sig=- duration_s=0.919 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=45 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "1", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=45 outcome=passed exc=- sig=- duration_s=0.766 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=46 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "42", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=46 outcome=passed exc=- sig=- duration_s=0.712 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=47 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "20261017", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=47 outcome=passed exc=- sig=- duration_s=0.740 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=48 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "0", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=48 outcome=passed exc=- sig=- duration_s=0.727 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=49 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "1", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=49 outcome=passed exc=- sig=- duration_s=0.749 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=50 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "42", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=50 outcome=passed exc=- sig=- duration_s=0.700 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=51 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "20261017", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=51 outcome=passed exc=- sig=- duration_s=0.778 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=52 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "0", "tmpdir": ""}
+RUN method=flakecert run=52 outcome=passed exc=- sig=- duration_s=1.052 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=53 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "86400", "tmpdir": ""}
+RUN method=flakecert run=53 outcome=passed exc=- sig=- duration_s=0.699 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=54 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "-86400", "tmpdir": ""}
+RUN method=flakecert run=54 outcome=passed exc=- sig=- duration_s=0.670 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=55 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "3600", "tmpdir": ""}
+RUN method=flakecert run=55 outcome=passed exc=- sig=- duration_s=0.705 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=56 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-a"}
+RUN method=flakecert run=56 outcome=passed exc=- sig=- duration_s=0.774 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=57 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-b"}
+RUN method=flakecert run=57 outcome=passed exc=- sig=- duration_s=0.723 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=58 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-c"}
+RUN method=flakecert run=58 outcome=passed exc=- sig=- duration_s=0.662 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=59 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-d"}
+RUN method=flakecert run=59 outcome=passed exc=- sig=- duration_s=0.688 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=60 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "0", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=60 outcome=passed exc=- sig=- duration_s=0.707 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=61 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "1", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=61 outcome=passed exc=- sig=- duration_s=0.948 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=62 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "42", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=62 outcome=passed exc=- sig=- duration_s=0.915 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=63 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "20261017", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=63 outcome=passed exc=- sig=- duration_s=0.722 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=64 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "0", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=64 outcome=passed exc=- sig=- duration_s=0.724 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=65 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "1", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=65 outcome=passed exc=- sig=- duration_s=0.806 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=66 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "42", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=66 outcome=passed exc=- sig=- duration_s=0.931 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=67 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "20261017", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=67 outcome=passed exc=- sig=- duration_s=0.785 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=68 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "0", "tmpdir": ""}
+RUN method=flakecert run=68 outcome=passed exc=- sig=- duration_s=0.781 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=69 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "86400", "tmpdir": ""}
+RUN method=flakecert run=69 outcome=passed exc=- sig=- duration_s=0.734 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=70 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "-86400", "tmpdir": ""}
+RUN method=flakecert run=70 outcome=passed exc=- sig=- duration_s=0.995 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=71 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "3600", "tmpdir": ""}
+RUN method=flakecert run=71 outcome=passed exc=- sig=- duration_s=0.906 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=72 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-a"}
+RUN method=flakecert run=72 outcome=passed exc=- sig=- duration_s=0.834 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=73 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-b"}
+RUN method=flakecert run=73 outcome=passed exc=- sig=- duration_s=0.767 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=74 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-c"}
+RUN method=flakecert run=74 outcome=passed exc=- sig=- duration_s=0.734 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=75 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic", "tests/test_taggerlib_filesorter.py::test_sort_files_without_metadata"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-d"}
+RUN method=flakecert run=75 outcome=passed exc=- sig=- duration_s=0.734 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=76 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "385709", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=76 outcome=passed exc=- sig=- duration_s=0.729 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=77 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "972483", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=77 outcome=passed exc=- sig=- duration_s=0.713 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=78 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "940287", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=78 outcome=passed exc=- sig=- duration_s=0.804 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=79 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "576005", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=79 outcome=passed exc=- sig=- duration_s=0.746 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=80 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "201753", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=80 outcome=passed exc=- sig=- duration_s=0.769 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=81 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "52666", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=81 outcome=passed exc=- sig=- duration_s=0.728 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=82 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "246039", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=82 outcome=passed exc=- sig=- duration_s=0.783 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=83 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "290820", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=83 outcome=passed exc=- sig=- duration_s=0.701 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=84 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "341413", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=84 outcome=passed exc=- sig=- duration_s=0.722 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=85 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "175942", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=85 outcome=passed exc=- sig=- duration_s=0.792 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=86 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "193031", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=86 outcome=passed exc=- sig=- duration_s=0.784 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=87 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "732645", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=87 outcome=passed exc=- sig=- duration_s=0.750 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=88 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "921381", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=88 outcome=passed exc=- sig=- duration_s=0.718 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=89 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "731678", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=89 outcome=passed exc=- sig=- duration_s=0.838 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=90 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "598058", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=90 outcome=passed exc=- sig=- duration_s=0.803 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=91 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "227521", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=91 outcome=passed exc=- sig=- duration_s=0.724 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=92 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "979116", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=92 outcome=passed exc=- sig=- duration_s=0.755 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=93 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "770275", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=93 outcome=passed exc=- sig=- duration_s=0.736 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=94 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "435814", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=94 outcome=passed exc=- sig=- duration_s=0.744 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=95 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "88926", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=95 outcome=passed exc=- sig=- duration_s=0.848 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=96 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "69305", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=96 outcome=passed exc=- sig=- duration_s=0.794 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=97 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "607184", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=97 outcome=passed exc=- sig=- duration_s=0.776 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=98 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "101344", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=98 outcome=passed exc=- sig=- duration_s=0.775 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=99 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "699063", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=99 outcome=passed exc=- sig=- duration_s=0.714 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=100 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "534701", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=100 outcome=passed exc=- sig=- duration_s=0.773 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=101 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "878677", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=101 outcome=passed exc=- sig=- duration_s=0.806 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=102 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "188879", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=102 outcome=passed exc=- sig=- duration_s=0.737 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=103 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "428091", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=103 outcome=passed exc=- sig=- duration_s=0.723 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=104 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "948646", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=104 outcome=passed exc=- sig=- duration_s=0.839 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=105 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "888160", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=105 outcome=passed exc=- sig=- duration_s=0.874 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=106 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "257578", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=106 outcome=passed exc=- sig=- duration_s=0.790 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=107 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "578259", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=107 outcome=passed exc=- sig=- duration_s=0.730 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=108 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "17490", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=108 outcome=passed exc=- sig=- duration_s=0.755 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=109 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "902688", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=109 outcome=passed exc=- sig=- duration_s=0.766 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=110 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "395116", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=110 outcome=passed exc=- sig=- duration_s=0.771 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=111 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "107968", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=111 outcome=passed exc=- sig=- duration_s=0.737 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=112 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "785317", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=112 outcome=passed exc=- sig=- duration_s=0.745 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=113 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "206321", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=113 outcome=passed exc=- sig=- duration_s=0.979 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=114 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "670359", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=114 outcome=passed exc=- sig=- duration_s=0.814 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=115 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "999212", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=115 outcome=passed exc=- sig=- duration_s=0.762 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=116 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "667211", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=116 outcome=passed exc=- sig=- duration_s=0.765 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=117 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "324442", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=117 outcome=passed exc=- sig=- duration_s=0.802 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=118 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "406970", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=118 outcome=passed exc=- sig=- duration_s=0.777 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=119 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "350881", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=119 outcome=passed exc=- sig=- duration_s=0.757 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=120 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "186062", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=120 outcome=passed exc=- sig=- duration_s=0.735 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=121 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "664592", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=121 outcome=passed exc=- sig=- duration_s=0.710 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=122 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "607768", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=122 outcome=passed exc=- sig=- duration_s=0.756 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=123 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "428908", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=123 outcome=passed exc=- sig=- duration_s=0.948 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=124 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "520845", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=124 outcome=passed exc=- sig=- duration_s=0.818 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=125 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "944979", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=125 outcome=passed exc=- sig=- duration_s=0.710 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=126 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "625719", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=126 outcome=passed exc=- sig=- duration_s=0.758 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=127 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "660252", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=127 outcome=passed exc=- sig=- duration_s=0.720 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=128 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "31870", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=128 outcome=passed exc=- sig=- duration_s=0.761 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=129 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "688224", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=129 outcome=passed exc=- sig=- duration_s=0.837 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=130 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "408201", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=130 outcome=passed exc=- sig=- duration_s=0.704 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=131 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "138316", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=131 outcome=passed exc=- sig=- duration_s=0.836 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=132 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "857439", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=132 outcome=passed exc=- sig=- duration_s=0.769 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=133 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "190743", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=133 outcome=passed exc=- sig=- duration_s=0.831 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=134 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "229866", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=134 outcome=passed exc=- sig=- duration_s=0.795 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=135 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "730607", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=135 outcome=passed exc=- sig=- duration_s=0.768 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=136 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "360971", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=136 outcome=passed exc=- sig=- duration_s=0.780 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=137 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "997197", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=137 outcome=passed exc=- sig=- duration_s=0.681 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=138 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "871072", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=138 outcome=passed exc=- sig=- duration_s=0.757 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SCHEDULE run=139 {"order": ["tests/test_taggerlib_filesorter.py::test_sort_comic"], "pythonhashseed": "", "seed": "92489", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=139 outcome=passed exc=- sig=- duration_s=0.769 node=tests/test_taggerlib_filesorter.py::test_sort_comic
+SEARCH_STOP reason=no_failure index=139
+CERT id=F20 certified=no reason=no_failure
+FLAKECERT_SUMMARY id=F20 runs=139 failures=0

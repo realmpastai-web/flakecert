@@ -1,0 +1,60 @@
+rea@6.5.0 — Reverse engineer anything from your terminal or agent.
+
+Usage: rea <command>
+
+Commands:
+  address-to-file-offset                  Resolve an analysis address to its original file byte offset
+  analyze                                 Get an overview of an app
+  analyze-javascript-application          Statically reconstruct a local JavaScript/Electron application
+  analyze-web-bundle                      Capture and statically analyze a page bundle, defaulting to the selected target origin
+  annotate-native-function                Edit function annotations and return refreshed analysis
+  build-reconstruction-obligation-ledger  Generate a deterministic Evidence-backed reconstruction obligation ledger page
+  capabilities                            List provider capabilities and side effects
+  capture-adb-screen                      Capture one screen frame as a digested PNG
+  capture-browser-scenario                Run one bounded Playwright browser scenario and return Evidence
+  capture-electron-scenario               Run one owned Electron scenario with cancellable actions
+  capture-native-ui-scenario              Run declarative AX actions or waits in one exact native application window
+  capture-process                         Capture one caller-selected process scenario
+  capture-web-screenshot                  Capture one visible page viewport within the supplied origin scope
+  collect-adb-bugreport                   Collect and digest one device-generated bugreport archive
+  compare                                 Compare two canonical Evidence bundles
+  compare-application-versions            Compare two authenticated JavaScript Application Graph versions
+  compare-javascript-export-shapes        Compare exact static JavaScript export return shapes without execution
+  compare-managed-members                 Compare managed PE/CLI member inventories by exact declared type, name, and signature; names alone never form a match
+  compare-process-captures                Compare two process capture Evidence JSON files
+  compare-source-to-bundle                Compare committed historical source with authenticated application Evidence
+  compare-wasm-interfaces                 Compare core WASM interfaces from two exact inspection Evidence records
+  compare-web-captures                    Compare two normalized passive captures or recorded browser scenarios
+  compare-web-screenshots                 Compare two self-verifying PNG artifact JSON values
+  cutter-command                          Execute one Rizin command in a selected live Cutter instance
+  debug-with-gdb                          Run one unrestricted GDB console command in an ephemeral MI session; provide an inferior TTY so a live target can be safely detached
+  debug-with-rizin                        Run one unrestricted Rizin debugger command in an ephemeral session
+  decode-android-resources                Decode one APK's manifest, metadata, and string resources with apktool
+  decode-interface-builder                Decode compiled storyboard and nib archives from an app bundle
+  decode-signal-recording                 Decode an existing signal recording with caller-supplied sigrok
+  decompile                               Read one part of an app as code
+  decompile-jeb-item                      Decompile one JEB type or method to engine pseudo-code
+  demangle-swift                          Demangle Swift symbols without Hopper
+  discover-webmcp-tools                   Passively discover page-declared WebMCP tools
+  doctor                                  Check whether REA is ready
+  evaluate-reconstruction-coverage        Evaluate inline fail-closed reconstruction coverage
+  evidence-export                         Validate and atomically export canonical Evidence JSON
+  evidence-import                         Validate and import a bounded local Evidence bundle
+  execute-rizin-command                   Execute one Rizin command against a local artifact
+  export-web-scripts                      Export retained website scripts into an absent directory for static JavaScript analysis
+  extract-artifact                        Extract all regular artifact contents safely
+  extract-firmware                        Extract selected firmware bytes and return verified files and provenance
+  function                                Analyze one complete function with evidence
+  identify-flutter-build                  Identify a Flutter build's Dart snapshot hash and engine facts by pure APK parsing
+  import-managed-reconstruction           Import decompiler-produced managed reconstruction against exact static member evidence
+  import-reference-source                 Import a source tree as historical reference only
+  inspect                                 Inspect an app overview with evidence
+  inspect-adb-client                      Inspect the caller-selected adb client without contacting devices
+  inspect-adb-device                      Inspect one device's build identity through a fixed getprop whitelist
+  inspect-adb-display                     Report the display's declared size and density
+  inspect-adb-package                     Inspect one installed package's version, installer, and flags through dumpsys
+  inspect-adb-window                      Report the window manager's current focus declarations
+  inspect-analysis-view                   Project a selected view of completed binary-layout, JavaScript application, native function, artifact-inventory, WASM, Mach-O, Interface Builder, EVM, managed, Android package, Dart AOT, web network capture or pcap Evidence JSON
+  inspect-android-class                   Inspect one exact APK class's member inventory
+  inspect-android-method                  Decompile one APK method with explicit overload selection
+  inspect-android-package                 Inspect APK declarations and decoded manifest without executing it

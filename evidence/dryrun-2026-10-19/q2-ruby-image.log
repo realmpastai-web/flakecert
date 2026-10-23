@@ -1,0 +1,113 @@
+===== q2 docker build ruby:3.1 + bundler 2.6.9 2026-10-19T05:30:14Z =====
++ docker build -t flakecert-dryrun-fastlane:ruby31 /tmp/flakecert-dryrun-1019/docker/ruby
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 315B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ruby:3.1
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/ruby:3.1
+#4 DONE 0.0s
+
+#5 [2/4] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential libffi-dev libyaml-dev zlib1g-dev libssl-dev       shared-mime-info git ca-certificates     && rm -rf /var/lib/apt/lists/*
+#5 30.49 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#5 30.50 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#5 30.51 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#5 30.56 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+#5 30.61 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#5 30.65 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [354 kB]
+#5 31.42 Fetched 9393 kB in 31s (301 kB/s)
+#5 31.42 Reading package lists...
+#5 31.89 Reading package lists...
+#5 32.33 Building dependency tree...
+#5 32.43 Reading state information...
+#5 32.55 libffi-dev is already the newest version (3.4.4-1).
+#5 32.55 libyaml-dev is already the newest version (0.2.5-1).
+#5 32.55 zlib1g-dev is already the newest version (1:1.2.13.dfsg-1).
+#5 32.55 shared-mime-info is already the newest version (2.2-1).
+#5 32.55 shared-mime-info set to manually installed.
+#5 32.55 The following additional packages will be installed:
+#5 32.55   git-man libssl3 openssl
+#5 32.55 Suggested packages:
+#5 32.55   gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+#5 32.55   gitk gitweb git-cvs git-mediawiki git-svn libssl-doc
+#5 32.55 Recommended packages:
+#5 32.55   less
+#5 32.58 The following NEW packages will be installed:
+#5 32.58   build-essential
+#5 32.58 The following packages will be upgraded:
+#5 32.58   ca-certificates git git-man libssl-dev libssl3 openssl
+#5 62.89 6 upgraded, 1 newly installed, 0 to remove and 159 not upgraded.
+#5 62.89 Need to get 15.4 MB of archives.
+#5 62.89 After this operation, 84.0 kB disk space will be freed.
+#5 62.89 Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl-dev amd64 3.0.22-1~deb12u1 [2450 kB]
+#5 62.90 Get:2 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl3 amd64 3.0.22-1~deb12u1 [2039 kB]
+#5 62.92 Get:3 http://deb.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.22-1~deb12u1 [1442 kB]
+#5 62.93 Get:4 http://deb.debian.org/debian-security bookworm-security/main amd64 ca-certificates all 20250419~deb12u1 [162 kB]
+#5 62.94 Get:5 http://deb.debian.org/debian bookworm/main amd64 build-essential amd64 12.9 [7704 B]
+#5 62.95 Get:6 http://deb.debian.org/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u3 [2053 kB]
+#5 62.96 Get:7 http://deb.debian.org/debian bookworm/main amd64 git amd64 1:2.39.5-0+deb12u3 [7264 kB]
+#5 63.13 debconf: delaying package configuration, since apt-utils is not installed
+#5 63.16 Fetched 15.4 MB in 30s (507 kB/s)
+#5 63.17 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23250 files and directories currently installed.)
+#5 63.19 Preparing to unpack .../0-libssl-dev_3.0.22-1~deb12u1_amd64.deb ...
+#5 63.20 Unpacking libssl-dev:amd64 (3.0.22-1~deb12u1) over (3.0.15-1~deb12u1) ...
+#5 63.38 Preparing to unpack .../1-libssl3_3.0.22-1~deb12u1_amd64.deb ...
+#5 63.38 Unpacking libssl3:amd64 (3.0.22-1~deb12u1) over (3.0.15-1~deb12u1) ...
+#5 63.51 Preparing to unpack .../2-openssl_3.0.22-1~deb12u1_amd64.deb ...
+#5 63.51 Unpacking openssl (3.0.22-1~deb12u1) over (3.0.15-1~deb12u1) ...
+#5 63.64 Preparing to unpack .../3-ca-certificates_20250419~deb12u1_all.deb ...
+#5 63.64 Unpacking ca-certificates (20250419~deb12u1) over (20230311) ...
+#5 63.70 Selecting previously unselected package build-essential.
+#5 63.70 Preparing to unpack .../4-build-essential_12.9_amd64.deb ...
+#5 63.70 Unpacking build-essential (12.9) ...
+#5 63.72 Preparing to unpack .../5-git-man_1%3a2.39.5-0+deb12u3_all.deb ...
+#5 63.72 Unpacking git-man (1:2.39.5-0+deb12u3) over (1:2.39.5-0+deb12u2) ...
+#5 63.81 Preparing to unpack .../6-git_1%3a2.39.5-0+deb12u3_amd64.deb ...
+#5 63.83 Unpacking git (1:2.39.5-0+deb12u3) over (1:2.39.5-0+deb12u2) ...
+#5 64.42 Setting up libssl3:amd64 (3.0.22-1~deb12u1) ...
+#5 64.43 Setting up libssl-dev:amd64 (3.0.22-1~deb12u1) ...
+#5 64.43 Setting up build-essential (12.9) ...
+#5 64.43 Setting up git-man (1:2.39.5-0+deb12u3) ...
+#5 64.43 Setting up openssl (3.0.22-1~deb12u1) ...
+#5 64.43 Setting up ca-certificates (20250419~deb12u1) ...
+#5 64.49 debconf: unable to initialize frontend: Dialog
+#5 64.49 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#5 64.49 debconf: falling back to frontend: Readline
+#5 64.50 debconf: unable to initialize frontend: Readline
+#5 64.50 debconf: (This frontend requires a controlling tty.)
+#5 64.50 debconf: falling back to frontend: Teletype
+#5 65.74 Updating certificates in /etc/ssl/certs...
+#5 66.52 rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+#5 66.53 23 added, 13 removed; done.
+#5 66.54 Setting up git (1:2.39.5-0+deb12u3) ...
+#5 66.55 Processing triggers for libc-bin (2.36-9+deb12u10) ...
+#5 66.57 Processing triggers for ca-certificates (20250419~deb12u1) ...
+#5 66.58 Updating certificates in /etc/ssl/certs...
+#5 67.06 0 added, 0 removed; done.
+#5 67.06 Running hooks in /etc/ca-certificates/update.d...
+#5 67.06 done.
+#5 DONE 67.1s
+
+#6 [3/4] RUN gem install bundler -v 2.6.9
+#6 0.669 Successfully installed bundler-2.6.9
+#6 0.669 1 gem installed
+#6 DONE 0.7s
+
+#7 [4/4] WORKDIR /src
+#7 DONE 0.0s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:1a9f5251d78b846341bad2d4b1992d89f71e97d3d7416146b45d2dbecbd75481 done
+#8 naming to docker.io/library/flakecert-dryrun-fastlane:ruby31 done
+#8 DONE 0.2s
+ruby_image_build_exit=0

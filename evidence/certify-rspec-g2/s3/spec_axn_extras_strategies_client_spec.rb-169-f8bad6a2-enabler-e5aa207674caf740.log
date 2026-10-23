@@ -1,0 +1,351 @@
++ logical=rspec --order defined './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:7]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:8]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:5:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:2]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:3]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:4:2:1]' './spec/axn/core/versioning_spec.rb[1:1:1]' './spec/axn/core/versioning_spec.rb[1:2:1]' './spec/axn/core/versioning_spec.rb[1:3:1]' './spec/axn/core/versioning_spec.rb[1:3:2]' './spec/axn/core/versioning_spec.rb[1:3:3]' './spec/axn/core/versioning_spec.rb[1:3:4]' './spec/axn/core/versioning_spec.rb[1:4:1]' './spec/axn/core/versioning_spec.rb[1:4:2]' './spec/axn/core/versioning_spec.rb[1:4:3]' './spec/axn/core/versioning_spec.rb[1:4:4]' './spec/axn/core/versioning_spec.rb[1:5:1]' './spec/axn/core/versioning_spec.rb[1:6:1]' './spec/axn/core/versioning_spec.rb[1:6:2]' './spec/axn/core/versioning_spec.rb[1:6:3]' './spec/axn/core/versioning_spec.rb[1:6:4]' './spec/axn/emit_metrics_spec.rb[1:1:1:1]' './spec/axn/emit_metrics_spec.rb[1:1:2:1]' './spec/axn/emit_metrics_spec.rb[1:1:2:2]' './spec/axn/emit_metrics_spec.rb[1:1:3:1]' './spec/axn/emit_metrics_spec.rb[1:1:3:2]' './spec/axn/emit_metrics_spec.rb[1:1:4:1]' './spec/axn/emit_metrics_spec.rb[1:1:5:1]' './spec/axn/error_policy_spec.rb[1:1]' './spec/axn/error_policy_spec.rb[1:2]' './spec/axn/error_policy_spec.rb[1:3]' './spec/axn/error_policy_spec.rb[1:4]' './spec/axn/error_policy_spec.rb[1:5]' './spec/axn/error_policy_spec.rb[1:6]' './spec/axn/error_spec.rb[1:1]' './spec/axn/error_spec.rb[1:2]' './spec/axn/error_spec.rb[1:3]' './spec/axn/error_spec.rb[1:4]' './spec/axn/error_spec.rb[1:5]' './spec/axn/error_spec.rb[1:6]' './spec/axn/error_spec.rb[1:7]' './spec/axn/error_spec.rb[1:8]' './spec/axn/error_spec.rb[1:9:1]' './spec/axn/error_spec.rb[1:9:2]' './spec/axn/error_spec.rb[1:9:3]' './spec/axn/exceptions_field_errors_spec.rb[1:1]' './spec/axn/exceptions_field_errors_spec.rb[1:2]' './spec/axn/exceptions_field_errors_spec.rb[1:3]' './spec/axn/executor_spec.rb[1:1:1]' './spec/axn/executor_spec.rb[1:1:2]' './spec/axn/executor_spec.rb[1:1:3]' './spec/axn/executor_spec.rb[1:1:4]' './spec/axn/executor_spec.rb[1:1:5]' './spec/axn/executor_spec.rb[1:1:6]' './spec/axn/executor_spec.rb[1:2:1]' './spec/axn/extension_config_spec.rb[1:1:1]' './spec/axn/extension_config_spec.rb[1:1:2]' './spec/axn/extension_config_spec.rb[1:2:1]' './spec/axn/extension_config_spec.rb[1:2:2]' './spec/axn/extension_config_spec.rb[1:3:1]' './spec/axn/extension_config_spec.rb[1:3:2]' './spec/axn/extension_config_spec.rb[1:3:3]' './spec/axn/extension_config_spec.rb[1:3:4]' './spec/axn/extension_config_spec.rb[1:3:5]' './spec/axn/extension_config_spec.rb[1:4:1]' './spec/axn/extension_config_spec.rb[1:4:2]' './spec/axn/extension_config_spec.rb[1:4:3]' './spec/axn/extension_config_spec.rb[1:4:4]' './spec/axn/extension_config_spec.rb[1:5:1]' './spec/axn/extension_config_spec.rb[1:5:2]' './spec/axn/extension_config_spec.rb[1:5:3]' './spec/axn/extension_config_spec.rb[1:5:4]' './spec/axn/extension_config_spec.rb[1:5:5]' './spec/axn/extension_config_spec.rb[1:5:6]' './spec/axn/extension_config_spec.rb[1:5:7]' './spec/axn/extension_config_spec.rb[1:5:8]' './spec/axn/extension_config_spec.rb[2:1]' './spec/axn/extension_config_spec.rb[2:2]' './spec/axn/extensions/serialization_spec.rb[1:1:1]' './spec/axn/extensions/serialization_spec.rb[1:1:2]' './spec/axn/extensions/serialization_spec.rb[1:1:3]' './spec/axn/extensions/serialization_spec.rb[1:1:4]' './spec/axn/extensions/serialization_spec.rb[1:1:5]' './spec/axn/extensions_spec.rb[1:1:1]' './spec/axn/extensions_spec.rb[1:1:2]' './spec/axn/extensions_spec.rb[1:2:1]' './spec/axn/extensions_spec.rb[1:2:2]' './spec/axn/extensions_spec.rb[1:2:3]' './spec/axn/extensions_spec.rb[1:2:4]' './spec/axn/extensions_spec.rb[1:2:5]' './spec/axn/extensions_spec.rb[1:2:6]' './spec/axn/extensions_spec.rb[1:3:1]' './spec/axn/extensions_spec.rb[1:3:2:1]' './spec/axn/extensions_spec.rb[1:3:3:1]' './spec/axn/extensions_spec.rb[1:3:4:1]' './spec/axn/extensions_spec.rb[1:3:5:1]' './spec/axn/extensions_spec.rb[1:3:5:2]' './spec/axn/extensions_spec.rb[1:3:5:3]' './spec/axn/extensions_spec.rb[1:3:6:1]' './spec/axn/extensions_spec.rb[1:3:6:2]' './spec/axn/extensions_spec.rb[1:3:6:3]' './spec/axn/extensions_spec.rb[1:3:6:4]' './spec/axn/extensions_spec.rb[1:3:7:1]' './spec/axn/extensions_spec.rb[1:3:7:2]' './spec/axn/extensions_spec.rb[1:3:7:3]' './spec/axn/extensions_spec.rb[1:3:8:1]' './spec/axn/extensions_spec.rb[1:3:9:1]' './spec/axn/extensions_spec.rb[1:3:9:2]' './spec/axn/extensions_spec.rb[1:3:9:3]' './spec/axn/extensions_spec.rb[1:3:10:5]' './spec/axn/extensions_spec.rb[1:3:10:6]' './spec/axn/extensions_spec.rb[1:3:10:7]' './spec/axn/extensions_spec.rb[1:3:10:8]' './spec/axn/extensions_spec.rb[1:3:10:9]' './spec/axn/extensions_spec.rb[1:3:10:1:1]' './spec/axn/extensions_spec.rb[1:3:10:1:2]' './spec/axn/extensions_spec.rb[1:3:10:1:3]' './spec/axn/extensions_spec.rb[1:3:10:1:4]' './spec/axn/extensions_spec.rb[1:3:10:1:5]' './spec/axn/extensions_spec.rb[1:3:10:1:6]' './spec/axn/extensions_spec.rb[1:3:10:1:7]' './spec/axn/extensions_spec.rb[1:3:10:1:8]' './spec/axn/extensions_spec.rb[1:3:10:1:9]' './spec/axn/extensions_spec.rb[1:3:10:1:10]' './spec/axn/extensions_spec.rb[1:3:10:1:11]' './spec/axn/extensions_spec.rb[1:3:10:1:12]' './spec/axn/extensions_spec.rb[1:3:10:1:13]' './spec/axn/extensions_spec.rb[1:3:10:2:1]' './spec/axn/extensions_spec.rb[1:3:10:2:2]' './spec/axn/extensions_spec.rb[1:3:10:2:3]' './spec/axn/extensions_spec.rb[1:3:10:2:4]' './spec/axn/extensions_spec.rb[1:3:10:2:5]' './spec/axn/extensions_spec.rb[1:3:10:2:6]' './spec/axn/extensions_spec.rb[1:3:10:2:7]' './spec/axn/extensions_spec.rb[1:3:10:2:8]' './spec/axn/extensions_spec.rb[1:3:10:2:9]' './spec/axn/extensions_spec.rb[1:3:10:2:10]' './spec/axn/extensions_spec.rb[1:3:10:2:11]' './spec/axn/extensions_spec.rb[1:3:10:2:12]' './spec/axn/extensions_spec.rb[1:3:10:2:13]' './spec/axn/extensions_spec.rb[1:3:10:3:1]' './spec/axn/extensions_spec.rb[1:3:10:3:2]' './spec/axn/extensions_spec.rb[1:3:10:3:3]' './spec/axn/extensions_spec.rb[1:3:10:3:4]' './spec/axn/extensions_spec.rb[1:3:10:3:5]' './spec/axn/extensions_spec.rb[1:3:10:3:6]' './spec/axn/extensions_spec.rb[1:3:10:3:7]' './spec/axn/extensions_spec.rb[1:3:10:3:8]' './spec/axn/extensions_spec.rb[1:3:10:3:9]' './spec/axn/extensions_spec.rb[1:3:10:3:10]' './spec/axn/extensions_spec.rb[1:3:10:3:11]' './spec/axn/extensions_spec.rb[1:3:10:3:12]' './spec/axn/extensions_spec.rb[1:3:10:3:13]' './spec/axn/extensions_spec.rb[1:3:10:4:1]' './spec/axn/extensions_spec.rb[1:3:10:4:2]' './spec/axn/extensions_spec.rb[1:3:10:4:3]' './spec/axn/extensions_spec.rb[1:3:10:4:4]' './spec/axn/extensions_spec.rb[1:3:10:4:5]' './spec/axn/extensions_spec.rb[1:3:10:4:6]' './spec/axn/extensions_spec.rb[1:3:10:4:7]' './spec/axn/extensions_spec.rb[1:3:10:4:8]' './spec/axn/extensions_spec.rb[1:3:10:4:9]' './spec/axn/extensions_spec.rb[1:3:10:4:10]' './spec/axn/extensions_spec.rb[1:3:10:4:11]' './spec/axn/extensions_spec.rb[1:3:10:4:12]' './spec/axn/extensions_spec.rb[1:3:10:4:13]' './spec/axn/extensions_spec.rb[1:3:10:4:14]' './spec/axn/extensions_spec.rb[1:3:10:4:15]' './spec/axn/extensions_spec.rb[1:3:10:10:1]' './spec/axn/extensions_spec.rb[1:3:10:10:2]' './spec/axn/extensions_spec.rb[1:3:10:10:3]' './spec/axn/extensions_spec.rb[1:3:10:10:4]' './spec/axn/extensions_spec.rb[1:3:10:10:5]' './spec/axn/extensions_spec.rb[1:3:10:10:6]' './spec/axn/extras/strategies/client_registration_spec.rb[1:1]' './spec/axn/extras/strategies/client_registration_spec.rb[1:2]' './spec/axn/extras/strategies/client_registration_spec.rb[1:4]' './spec/axn/extras/strategies/client_registration_spec.rb[1:3:1]' './spec/axn/extras/strategies/client_registration_spec.rb[1:3:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:1:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:1:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:3:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:4:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:6:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:7:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:8:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:9:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:10:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]'
++ rspec_argv_len=11508
++ rspec_argv_n=244
++ docker_argv_len=12040
++ docker_argv_n=274
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s3:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --order defined './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:7]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:8]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:5:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:2]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:3]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:4:1]' './spec/ ... truncated total_chars=12510
+elapsed_s=3.742
+Run options: include {:ids=>{"./spec/axn/core/validations/validators/type_validator_spec.rb"=>["1:1:3:1:3", "1:1:3:2:1", "1:1:3:2:2", "1:1:3:2:3", "1:2:1:1", "1:2:1:2", "1:2:1:3", "1:2:1:4", "1:2:1:5", "1:2:1:6", "1:2:2:1", "1:2:2:2", "1:2:2:3", "1:2:2:4", "1:2:2:5", "1:2:3:1", "1:2:3:2", "1:2:3:3", "1:2:3:4", "1:2:3:5", "1:2:4:1", "1:2:4:2", "1:2:4:3", "1:2:4:4", "1:2:4:5", "1:2:5:1", "1:2:5:2", "1:2:5:3", "1:2:5:4", "1:2:5:5", "1:2:5:6", "1:2:5:7", "1:2:5:8"], "./spec/axn/core/validations/validators/validate_validator_spec.rb"=>["1:1:1:1", "1:1:2:1", "1:1:3:1", "1:1:4:1", "1:1:5:1", "1:2:1:1", "1:2:2:1", "1:2:3:1", "1:2:4:1", "1:3:1", "1:3:2", "1:3:3", "1:4:1", "1:4:2:1"], "./spec/axn/core/versioning_spec.rb"=>["1:1:1", "1:2:1", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:4:1", "1:4:2", "1:4:3", "1:4:4", "1:5:1", "1:6:1", "1:6:2", "1:6:3", "1:6:4"], "./spec/axn/emit_metrics_spec.rb"=>["1:1:1:1", "1:1:2:1", "1:1:2:2", "1:1:3:1", "1:1:3:2", "1:1:4:1", "1:1:5:1"], "./spec/axn/error_policy_spec.rb"=>["1:1", "1:2", "1:3", "1:4", "1:5", "1:6"], "./spec/axn/error_spec.rb"=>["1:1", "1:2", "1:3", "1:4", "1:5", "1:6", "1:7", "1:8", "1:9:1", "1:9:2", "1:9:3"], "./spec/axn/exceptions_field_errors_spec.rb"=>["1:1", "1:2", "1:3"], "./spec/axn/executor_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5", "1:1:6", "1:2:1"], "./spec/axn/extension_config_spec.rb"=>["1:1:1", "1:1:2", "1:2:1", "1:2:2", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:3:5", "1:4:1", "1:4:2", "1:4:3", "1:4:4", "1:5:1", "1:5:2", "1:5:3", "1:5:4", "1:5:5", "1:5:6", "1:5:7", "1:5:8", "2:1", "2:2"], "./spec/axn/extensions/serialization_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5"], "./spec/axn/extensions_spec.rb"=>["1:1:1", "1:1:2", "1:2:1", "1:2:2", "1:2:3", "1:2:4", "1:2:5", "1:2:6", "1:3:1", "1:3:2:1", "1:3:3:1", "1:3:4:1", "1:3:5:1", "1:3:5:2", "1:3:5:3", "1:3:6:1", "1:3:6:2", "1:3:6:3", "1:3:6:4", "1:3:7:1", "1:3:7:2", "1:3:7:3", "1:3:8:1", "1:3:9:1", "1:3:9:2", "1:3:9:3", "1:3:10:5", "1:3:10:6", "1:3:10:7", "1:3:10:8", "1:3:10:9", "1:3:10:1:1", "1:3:10:1:2", "1:3:10:1:3", "1:3:10:1:4", "1:3:10:1:5", "1:3:10:1:6", "1:3:10:1:7", "1:3:10:1:8", "1:3:10:1:9", "1:3:10:1:10", "1:3:10:1:11", "1:3:10:1:12", "1:3:10:1:13", "1:3:10:2:1", "1:3:10:2:2", "1:3:10:2:3", "1:3:10:2:4", "1:3:10:2:5", "1:3:10:2:6", "1:3:10:2:7", "1:3:10:2:8", "1:3:10:2:9", "1:3:10:2:10", "1:3:10:2:11", "1:3:10:2:12", "1:3:10:2:13", "1:3:10:3:1", "1:3:10:3:2", "1:3:10:3:3", "1:3:10:3:4", "1:3:10:3:5", "1:3:10:3:6", "1:3:10:3:7", "1:3:10:3:8", "1:3:10:3:9", "1:3:10:3:10", "1:3:10:3:11", "1:3:10:3:12", "1:3:10:3:13", "1:3:10:4:1", "1:3:10:4:2", "1:3:10:4:3", "1:3:10:4:4", "1:3:10:4:5", "1:3:10:4:6", "1:3:10:4:7", "1:3:10:4:8", "1:3:10:4:9", "1:3:10:4:10", "1:3:10:4:11", "1:3:10:4:12", "1:3:10:4:13", "1:3:10:4:14", "1:3:10:4:15", "1:3:10:10:1", "1:3:10:10:2", "1:3:10:10:3", "1:3:10:10:4", "1:3:10:10:5", "1:3:10:10:6"], "./spec/axn/extras/strategies/client_registration_spec.rb"=>["1:1", "1:2", "1:4", "1:3:1", "1:3:2"], "./spec/axn/extras/strategies/client_spec.rb"=>["1:1:1:1", "1:1:1:2", "1:1:2:1", "1:1:2:2", "1:1:3:1", "1:1:4:1", "1:1:5:1", "1:1:5:2", "1:1:6:1", "1:1:7:1", "1:1:8:1", "1:1:9:1", "1:1:10:1", "1:1:11:1", "1:1:11:2"]}}
+
+Axn::Validators::TypeValidator
+  type validation
+    boolean defaults with explicit false values
+      default: false should not override explicit false
+        preserves explicit true values
+      default: true should not override explicit false
+        preserves explicit false values
+        applies default when not provided
+        preserves explicit true values
+  regression tests for corrected allow_blank logic
+    Hash type with allow_blank
+      validates empty hash as valid Hash type
+      validates non-empty hash as valid Hash type
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid Hash type (not nil)
+      validates false as invalid Hash type (not nil)
+      validates empty array as invalid Hash type (not nil)
+    String type with allow_blank
+      validates non-empty string as valid String type
+      skips validation for nil when allow_blank is true
+      validates empty string as valid String type (correct type, just blank)
+      validates false as invalid String type (not nil)
+      validates number as invalid String type (not nil)
+    Boolean type with allow_blank
+      validates true as valid boolean type
+      validates false as valid boolean type
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid boolean type (not nil)
+      validates number as invalid boolean type (not nil)
+    Array type with allow_blank
+      validates non-empty array as valid Array type
+      validates empty array as valid Array type (correct type, just blank)
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid Array type (not nil)
+      validates hash as invalid Array type (not nil)
+    Multiple types with allow_blank
+      validates string as valid type
+      validates hash as valid type
+      validates empty string as valid String type
+      validates empty hash as valid Hash type
+      skips validation for nil when allow_blank is true
+      validates false as invalid type (not nil)
+      validates array as invalid type (not nil)
+      validates whitespace strings as valid (they are valid Strings)
+
+Axn::Validators::ValidateValidator
+  custom validations
+    when valid
+      is expected to be ok
+    when invalid
+      fails
+    when validator raises
+      fails
+    and allow_blank
+      validates
+    and allow_nil
+      validates
+  custom validations hash format
+    when valid
+      is expected to be ok
+    when invalid
+      fails
+    with custom message
+      uses custom message
+    and allow_blank
+      validates
+  misuse: a Hash without :with (e.g. ActiveModel validator keys)
+    raises at declaration (not at call time) with an actionable message
+    still accepts the valid Hash form (with: present)
+    still accepts the bare-callable form
+  Axn::Extensions.best_effort integration
+    calls Axn::Extensions.best_effort when custom validation raises
+    when the validator raises a non-StandardError
+      still fails the field rather than settling as an exception outcome
+
+Axn::Core::Versioning
+  reader default
+    is 1 when never declared
+  setter
+    stores the declared version and reads it back
+  validation
+    rejects zero
+    rejects negatives
+    rejects non-Integers
+    rejects the removed default: option as an unknown keyword, not a bad version
+  _tool_version_suffix (single source for parsing the ::Vn constant segment)
+    returns the number for a vN-suffixed constant
+    handles multi-digit versions
+    is nil for a non-vN trailing segment
+    is nil for an anonymous class
+  declared-here vs inherited
+    marks the declaring class but not an inheriting subclass
+  ::Vn mismatch guard
+    raises when the constant segment number disagrees with the declared version
+    accepts a matching ::Vn segment
+    is skipped for an anonymous class (no constant name)
+    ignores a trailing segment that is not the exact vN pattern
+
+Action axn.call notification metrics
+  axn.call notification emission for metrics
+    when action succeeds
+      emits notification with success outcome and correct resource
+    when action fails with fail!
+      emits notification with failure outcome
+      emits notification with failure outcome when using call!
+    when action raises an exception
+      emits notification with exception outcome
+      emits notification with exception outcome when using call!
+    when call! succeeds
+      emits notification with success outcome
+    when call! raises an exception
+      emits notification with exception outcome
+
+Axn exception tagging
+  finds the exception classes at all (guards against a walk that silently matches nothing)
+  tags every exception class except the pinned exclusions
+  keeps every pinned exclusion reachable, so a rename cannot leave a stale entry here
+  nests DuplicateFieldError with its ContractViolation siblings
+  names the substitute for what happened, not for the exception it replaced
+  refuses to raise an internal base class for a registry that names no error classes
+
+Axn::Error
+  is a module, not a class, so a gem can keep its own superclass
+  catches a tagged exception rooted at StandardError
+  catches a tagged exception rooted at ArgumentError
+  leaves the tagged class's own ancestry intact
+  catches DuplicateFieldError through its ContractViolation superclass
+  catches ReraiseFailed, the substitute for an exception raise cannot hand back as itself
+  does not catch Axn::Failure
+  does not catch internal-only exceptions
+  registry errors
+    have no Axn::Internal constant in their ancestry
+    are all catchable as Axn::Error
+    still descend from StandardError
+
+Axn::InboundValidationError
+  maps each error to {field:, message:} using the full message
+  surfaces base-level errors with field == :base
+  is empty when there are no errors
+
+Axn::Core::Executor
+  #resolve_inbound_facets
+    resolves input-derived tags and dimensions (one map per source)
+    filters by requested sources
+    resolves against raw inputs — does not run preprocess or apply defaults
+    excludes result-phase facets (from: :result), keeping input-phase ones
+    keeps a name declared as both a tag and a dimension in separate maps
+    omits a facet whose resolver raises, keeping the rest
+  #prepare_inbound_for_facets!
+    coerces a wire string before a facet reads the field
+
+Axn::Extensions::Config
+  Axn::Extensions.config
+    returns a Config instance
+    returns the same instance on repeated calls
+  #registered_field_metadata_keys
+    includes :description by default
+    returns a Set
+  #register_field_metadata_key
+    adds a single key
+    adds multiple keys
+    converts strings to symbols
+    accumulates keys across multiple calls
+    handles duplicate keys gracefully (Set semantics)
+  the reserved core DSL option names
+    is a frozen Set
+    draws from every source it is derived from
+    covers the kwargs that are bound before the splat, not only the misroutable keys
+    does not reserve :description, the metadata key axn registers itself
+  #register_field_metadata_key refusing a core DSL option name
+    refuses every reserved name
+    refuses :on, the collision that motivated the reservation
+    refuses the String spelling exactly as the Symbol
+    names every colliding key in one raise, and only the colliding ones
+    names a colliding key once however many times it was passed
+    says how to fix it
+    registers nothing when any key in the call is reserved
+    still registers a name the core DSL does not own
+
+Axn::Extensions::Config semantic hints
+  seeds the core semantic-hint vocabulary
+  lets an adapter register additional vocabulary
+
+Axn::Extensions::Serialization
+  .render
+    serializes each declared field by wire key (string)
+    renders the declared exposures and nothing else
+    derives the configs from a mocked result
+    renders an ordinary field name as a frozen UTF-8 property
+    threads reject_opaque: to the values it serializes
+
+Axn::Extensions
+  .swallowable?
+    answers from the class hierarchy, not from the instance
+    still answers true for the allowlist and its subclasses
+  .owned_failure?
+    is true for an Axn::Failure
+    is true for a user-facing validation error
+    is false for a validation error that is not user-facing
+    is false for a foreign exception
+    answers from the class hierarchy, not from the instance
+    does not let the exception's own is_a? replace the answer
+  .best_effort
+    returns the block's value on success
+    in production
+      logs a concise warning and returns nil
+    in non-production
+      logs a verbose warning and returns nil
+    with a custom action warn-target
+      warns on the action instead of the config logger
+    with best_effort_raises_in_dev enabled
+      re-raises in development
+      logs (does not raise) in test
+      re-raises a swallowable non-StandardError in development too
+    the non-StandardError allowlist
+      swallows every class on the allowlist by default
+      propagates every non-StandardError that is not on the allowlist
+      swallows the whole ScriptError family, which are faults in the code being run
+      keeps an enclosing Timeout.timeout working
+    when emitting the warning itself fails
+      swallows rather than escaping when the configured logger cannot write
+      gives the configured logger an independent attempt when an action's warn is the broken one
+      still swallows when both targets are broken
+    an exception carrying no usable backtrace
+      still warns and swallows rather than raising out of the warn path
+    standard_errors_only: true
+      still swallows StandardError
+      returns the block's value on success
+      propagates everything outside StandardError, allowlist included
+    the guarantee that reporting cannot replace the block's exception
+      keeps a valid multibyte message verbatim in the warning
+      renders a Latin-1 message as its text rather than as escapes
+      escapes a message with no UTF-8 rendering rather than losing the line
+      tolerates a desc that is not a String
+      renders a String desc whose bytes have no UTF-8 rendering
+      in production
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      in development
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      in test
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      with best_effort_raises_in_dev enabled
+        re-raises an ordinary exception itself, never a reporting failure
+        re-raises a message that raises itself, never a reporting failure
+        re-raises a message holding bytes with no UTF-8 rendering itself, never a reporting failure
+        re-raises a message that is not a String and whose to_s raises itself, never a reporting failure
+        re-raises a class whose name raises itself, never a reporting failure
+        re-raises a backtrace override answering a non-Array itself, never a reporting failure
+        re-raises a backtrace override that raises itself, never a reporting failure
+        re-raises a backtrace override answering Thread::Backtrace::Location frames itself, never a reporting failure
+        re-raises a rebuilt backtrace holding a blank frame itself, never a reporting failure
+        re-raises a valid multibyte message itself, never a reporting failure
+        re-raises a Latin-1 message itself, never a reporting failure
+        raises an axn-owned error carrying an #exception answering a different object as its cause, not what the hijack produced
+        raises an axn-owned error carrying an #exception that raises as its cause, not what the hijack produced
+        raises an axn-owned error carrying the original OBJECT when its #exception undefines itself
+        raises an axn-owned error carrying the original OBJECT when it answers about the absent #exception
+      a reporting failure raised by the guard's own collaborators
+        swallows a StandardError from the environment seam
+        swallows an allowlisted non-StandardError from the environment seam
+        lets a signal through rather than absorbing it into a swallowed warning
+        swallows rather than raising when the dev-loud decision cannot read the environment
+        lets a signal through from the dev-loud decision too
+        swallows rather than raising when the dev-loud setting itself cannot be read
+
+Axn::Extras::Strategies::Client registration
+  registers the strategy in a process that has not loaded faraday
+  resolves `use :client` when axn was loaded before faraday
+  re-raises a LoadError that names a file other than faraday
+  when faraday cannot be loaded
+    raises at declaration, naming the gem to add
+    still registers the strategy, so the failure names the missing gem rather than the strategy
+
+Axn::Extras::Strategies::Client
+  .configure
+    with default configuration
+      creates a client method with default name
+      sets default headers
+    with custom name
+      creates a client method with custom name
+      uses custom name in user agent
+    with custom user_agent
+      uses provided user agent
+    with prepend_config
+      calls prepend_config before default middleware
+    with debug option
+      enables logger middleware when debug is true
+      does not enable logger middleware when debug is false
+    with configuration block
+      calls the block with the connection
+    with callable options
+      hydrates callable options
+    with Faraday connection options
+      passes options to Faraday.new
+    memoization
+      memoizes the client instance
+    error handling
+      raises error if client name is already taken
+    with error_handler
+      injects ErrorHandlerMiddleware when error_handler is provided
+      does not inject ErrorHandlerMiddleware when error_handler is nil
+
+Finished in 2.38 seconds (files took 0.70904 seconds to load)
+235 examples, 0 failures
+
+docker_exit=0

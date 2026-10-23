@@ -1,0 +1,31 @@
++ phase=probe
++ seed=20
++ round=2
++ confirm=0
++ ids_n=2691
++ ids_sha256=15db53c2325c8daaf378d724880ac6e8e99abc4a7a0ad0de98a7b536ef404364
++ ids_file=evidence/certify-rspec-g2-2/s8/by-hash/a45ed2844aa8e507de7317d9af98d6c6195b9a615fab577af2f5b009dc00ffe7/ids.txt
++ attempt=1
+elapsed_s=22.458
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: already initialized constant #<Class:0x00007f70d07b3160>::Axns::Foo
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: previous definition of Foo was here
+[] ⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE TEST !!
+
+	* Exception: StandardError
+	* Message: logger is misconfigured
+	* From: message_expectation.rb:188
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+docker_exit=0

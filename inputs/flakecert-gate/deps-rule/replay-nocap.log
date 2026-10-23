@@ -1,0 +1,4 @@
+DIFF F25 
+ exp F25 reserve sputt/qer manifests: ['requirements.txt', 'setup.py', 'setup.cfg'] req files: ['requirements.txt', 'test-requirements.txt', 'tests/source-packages/billiard-3.6.0.0/requirements/pkgutils.txt', 'tests/source-packages/billiard-3.6.0.0/requirements/test-ci.txt']  
+ got F25 reserve sputt/qer manifests: ['requirements.txt', 'setup.py', 'setup.cfg'] req files: ['requirements.txt', 'test-requirements.txt', 'tests/source-packages/billiard-3.6.0.0/requirements/pkgutils.txt', 'tests/source-packages/billiard-3.6.0.0/requirements/test-ci.txt', 'tests/source-packages/billiard-3.6.0.0/requirements/test.txt', 'tests/source-packages/newline-req-1.0/requirements.txt', 'tests/source-packages/svn-0.3.46/svn/resources/requirements.txt', 'tests/source-packages/tar-1.0.0/requirements.txt'] 
+match 31/32

@@ -1,0 +1,218 @@
+$ diff -u ../rea-brief-pytest-attempt-to-fix/run_controls.sh run_controls_v2.sh
+--- ../rea-brief-pytest-attempt-to-fix/run_controls.sh	2026-10-18 18:21:48.624000000 +0000
++++ run_controls_v2.sh	2026-10-18 18:23:18.532000000 +0000
+@@ -1,14 +1,17 @@
+ #!/bin/bash
+-# Works from any cwd. Expect: self-check 0, tampered sdist 1, synthetic-good 0, every results mutant 1.
++# Works from any cwd. Expect: self-check 0, tampered sdist 1, synthetic-good 0, every results mutant 1, real PR #7 results 1.
+ set -u
+ cd "$(dirname "$0")" || exit 2
+-r(){ python3 -B gate_pytest_attempt_to_fix.py "$@" > /tmp/patf.$$ ; e=$?; grep -E "^(FAIL|INFO|GATE)" /tmp/patf.$$ | cut -c1-170; echo "exit=$e"; return $e; }
++G=gate_pytest_attempt_to_fix_v2.py
++r(){ python3 -B $G "$@" > /tmp/patf2.$$ ; e=$?; grep -E "^(FAIL|INFO|GATE)" /tmp/patf2.$$ | cut -c1-170; echo "exit=$e"; return $e; }
+ echo "== S0 self-check: expect 0"; r; s0=$?
+-echo "== T1 tampered rerunfailures sdist (seed line added): expect 1"; r --rea-dir controls/rea-tampered; t1=$?
+-echo "== G1 synthetic-good (gate-logic fixture, not pytest): expect 0"; r --results controls/synthetic-good-results.json; g1=$?
++echo "== T1 tampered rerunfailures sdist (v1 control dir): expect 1"; r --rea-dir ../rea-brief-pytest-attempt-to-fix/controls/rea-tampered; t1=$?
++echo "== G1 synthetic-good (gate-logic fixture, not pytest; wrong_fix carries its own line-7 sig): expect 0"; r --results controls/synthetic-good-results.json; g1=$?
+ bad=0
+-for m in mutant-wrong-fix-accepted mutant-plain-retry-only mutant-schedule-drift mutant-real-fix-edits-app mutant-omitted-env-and-seed mutant-rerun-plugin-installed mutant-fabricated-sig; do
++for m in mutant-wrong-fix-accepted mutant-plain-retry-only mutant-schedule-drift mutant-real-fix-edits-app mutant-omitted-env-and-seed mutant-rerun-plugin-installed mutant-fabricated-sig \
++         v2-m1-tb-norm-not-hashing-to-sig v2-m2-wrong-fix-copies-cert-sig v2-m3a-line-moved-different-exception v2-m3b-line-moved-different-message \
++         v2-m4-non-test-frame-changed v2-m5-real-fix-still-fails v2-m6-line-shift-wrong-size pr7-3ec5eb8-results-no-tb-norm; do
+   echo "== $m: expect 1"; r --results controls/$m.json; [ $? -eq 1 ] || bad=1
+ done
+-rm -f /tmp/patf.$$
++rm -f /tmp/patf2.$$
+ [ $s0 -eq 0 ] && [ $t1 -eq 1 ] && [ $g1 -eq 0 ] && [ $bad -eq 0 ] && { echo "CONTROLS OK"; exit 0; }; echo "CONTROLS BROKEN"; exit 1
+$ diff -u ../rea-brief-pytest-attempt-to-fix/controls-output.txt controls-output-v2.txt
+--- ../rea-brief-pytest-attempt-to-fix/controls-output.txt	2026-10-18 18:21:48.620000000 +0000
++++ controls-output-v2.txt	2026-10-18 18:23:54.080000000 +0000
+@@ -1,13 +1,13 @@
+ == S0 self-check: expect 0
+ GATE PASS
+ exit=0
+-== T1 tampered rerunfailures sdist (seed line added): expect 1
++== T1 tampered rerunfailures sdist (v1 control dir): expect 1
+ FAIL	rea.sha pytest_rerunfailures-16.7.tar.gz	6956ddfb65ca1d07
+ FAIL	rea.rerunfailures.no_seed_random_shuffle	1 hits
+ FAIL	rea.rerunfailures.no_cert_replay_sha256	1 hits
+ GATE FAIL ['rea.sha pytest_rerunfailures-16.7.tar.gz', 'rea.rerunfailures.no_seed_random_shuffle', 'rea.rerunfailures.no_cert_replay_sha256']
+ exit=1
+-== G1 synthetic-good (gate-logic fixture, not pytest): expect 0
++== G1 synthetic-good (gate-logic fixture, not pytest; wrong_fix carries its own line-7 sig): expect 0
+ INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+ GATE PASS
+ exit=0
+@@ -23,6 +23,7 @@
+ FAIL	cert.order_polluter_then_victim	
+ FAIL	cert.exc	
+ FAIL	cert.sig	None
++FAIL	cert.tb_norm_hashes_to_sig	sha256(tb_norm) == expected_failure.sig
+ FAIL	prefix.cert_replay_3_runs	[]
+ FAIL	prefix.cert_replay_polluter_passes	
+ FAIL	prefix.cert_replay_identical	
+@@ -34,7 +35,7 @@
+ FAIL	real_fix.cert_replay_identical	
+ FAIL	verdict.certified	{'prefix': 'INCONSISTENT', 'wrong_fix': 'INCONSISTENT', 'real_fix': 'INCONSISTENT'}
+ INFO	certified={'prefix': 'INCONSISTENT', 'wrong_fix': 'INCONSISTENT', 'real_fix': 'INCONSISTENT'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXE
+-GATE FAIL ['cert.node_is_victim', 'cert.env_identity', 'cert.seed_fields_recorded', 'cert.order_polluter_then_victim', 'cert.exc', 'cert.sig', 'prefix.cert_replay_3_runs'
++GATE FAIL ['cert.node_is_victim', 'cert.env_identity', 'cert.seed_fields_recorded', 'cert.order_polluter_then_victim', 'cert.exc', 'cert.sig', 'cert.tb_norm_hashes_to_sig
+ exit=1
+ == mutant-schedule-drift: expect 1
+ FAIL	cert.order_polluter_then_victim	test_total_without_discount > test_total_with_discount
+@@ -59,8 +60,56 @@
+ GATE FAIL ['res.pip_freeze_is_lock', 'res.reversed_packages_not_installed']
+ exit=1
+ == mutant-fabricated-sig: expect 1
++FAIL	prefix.tb_norm_hashes_to_sig	bbbbbbbbbbbbbbbb
+ FAIL	prefix.sig_equals_cert	bbbbbbbbbbbbbbbb
+ INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+-GATE FAIL ['prefix.sig_equals_cert']
++GATE FAIL ['prefix.tb_norm_hashes_to_sig', 'prefix.sig_equals_cert']
++exit=1
++== v2-m1-tb-norm-not-hashing-to-sig: expect 1
++FAIL	wrong_fix.tb_norm_hashes_to_sig	d9d475ff7b6f339c
++FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert
++INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
++GATE FAIL ['wrong_fix.tb_norm_hashes_to_sig', 'wrong_fix.same_failure_modulo_line']
++exit=1
++== v2-m2-wrong-fix-copies-cert-sig: expect 1
++FAIL	wrong_fix.same_failure_modulo_line	failed: raw_sig_differs,line_shift_equals_insertions
++INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
++GATE FAIL ['wrong_fix.same_failure_modulo_line']
++exit=1
++== v2-m3a-line-moved-different-exception: expect 1
++FAIL	wrong_fix.failure_is_the_leak	TypeError: unsupported operand type(s) for -: 'int' and 'Non
++FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert,exc_equals_prefix,message_equals_prefix_mod_addr
++INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
++GATE FAIL ['wrong_fix.failure_is_the_leak', 'wrong_fix.same_failure_modulo_line']
++exit=1
++== v2-m3b-line-moved-different-message: expect 1
++FAIL	wrong_fix.failure_is_the_leak	assert 80 == 100  +  where 80 = total()  +    where total = 
++FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert,message_equals_prefix_mod_addr
++INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
++GATE FAIL ['wrong_fix.failure_is_the_leak', 'wrong_fix.same_failure_modulo_line']
++exit=1
++== v2-m4-non-test-frame-changed: expect 1
++FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert,only_test_cart_frames
++INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
++GATE FAIL ['wrong_fix.same_failure_modulo_line']
++exit=1
++== v2-m5-real-fix-still-fails: expect 1
++FAIL	real_fix.same_failure_modulo_line	failed: line_shift_equals_insertions
++FAIL	verdict.certified	{'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'NOT_FIXED'}
++INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'NOT_FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
++GATE FAIL ['real_fix.same_failure_modulo_line', 'verdict.certified']
++exit=1
++== v2-m6-line-shift-wrong-size: expect 1
++FAIL	wrong_fix.same_failure_modulo_line	failed: line_shift_equals_insertions
++INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
++GATE FAIL ['wrong_fix.same_failure_modulo_line']
++exit=1
++== pr7-3ec5eb8-results-no-tb-norm: expect 1
++FAIL	cert.tb_norm_hashes_to_sig	sha256(tb_norm) == expected_failure.sig
++FAIL	prefix.tb_norm_hashes_to_sig	40c3f885b65917b2
++FAIL	wrong_fix.tb_norm_hashes_to_sig	fe53cdfbd5506278
++FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert,line_shift_equals_insertions,only_test_cart_frames
++INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
++GATE FAIL ['cert.tb_norm_hashes_to_sig', 'prefix.tb_norm_hashes_to_sig', 'wrong_fix.tb_norm_hashes_to_sig', 'wrong_fix.same_failure_modulo_line']
+ exit=1
+ CONTROLS OK
+$ diff -u ../rea-brief-pytest-attempt-to-fix/gate_pytest_attempt_to_fix.py gate_pytest_attempt_to_fix_v2.py
+--- ../rea-brief-pytest-attempt-to-fix/gate_pytest_attempt_to_fix.py	2026-10-18 18:21:48.620000000 +0000
++++ gate_pytest_attempt_to_fix_v2.py	2026-10-18 18:22:38.924000000 +0000
+@@ -1,5 +1,18 @@
+ #!/usr/bin/env python3
+-"""pytest Attempt-to-Fix gate for FlakeCert, reverse-first (frozen by Hark 2026-10-18, internal).
++"""pytest Attempt-to-Fix gate v2 for FlakeCert (frozen by Hark 2026-10-18, internal).
++
++v2 = v1 (inputs/rea-brief-pytest-attempt-to-fix @ 2560b40, read in place and hash-checked, never edited) with ONE ruling
++applied after PR #7 (3ec5eb8) went NO-GO on wrong_fix.sig_equals_cert:
++  - flakecert.cert.failure_signature is unchanged (it hashes normalize_traceback output, line numbers included).
++  - prefix.sig_equals_cert stays exact.
++  - every failed replay row and cert.expected_failure carry tb_norm (the normalize_traceback text the sig hashes).
++  - wrong_fix.sig_equals_cert is replaced by wrong_fix.same_failure_modulo_line: tb_norm hashes to its own sig, equals the
++    cert tb_norm with every `.py:<n>` masked, the raw sig differs from the cert sig, every tests/test_cart.py line number
++    shifts by exactly the lines wrong_fix inserts above the victim, no frame outside tests/test_cart.py appears, and exc
++    plus 0x-masked message equal the prefix replay.
++v1 docstring follows.
++
++pytest Attempt-to-Fix gate for FlakeCert, reverse-first (frozen by Hark 2026-10-18, internal).
+ 
+   python3 -B gate_pytest_attempt_to_fix.py                     # self-check: REA static read of the two sdists, pins, fixes, predictions
+   python3 -B gate_pytest_attempt_to_fix.py --rea-dir DIR       # same self-check against another sdist dir (controls only)
+@@ -36,8 +49,9 @@
+ import argparse, difflib, hashlib, io, json, random, re, sys, tarfile
+ from pathlib import Path
+ 
+-H = Path(__file__).resolve().parent
+-R = H.parent  # inputs/
++HERE = Path(__file__).resolve().parent
++R = HERE.parent  # inputs/
++H = R / "rea-brief-pytest-attempt-to-fix"  # v1 inputs, read in place
+ V = "tests/test_cart.py::test_total_without_discount"
+ P = "tests/test_cart.py::test_total_with_discount"
+ BASE = "python@sha256:0a310eeecf4e1f5a0743f9a6520c90c88d089c903ca5fd283f501e3a805f5f89"
+@@ -137,6 +151,30 @@
+     bad = re.findall(r"(?i)(?:randomly|rerunfailures|datadog|trunk)[^.\n]{0,60}\b(?:cannot|can't|unable to|never)\b", brief)
+     chk("scope.no_capability_denials_in_brief", not bad, f"{len(bad)} hits")
+ 
++hsh = lambda t: hashlib.sha256(t.encode("utf-8")).hexdigest()
++MASK = lambda t: re.sub(r"(\.py):\d+", r"\1:LINE", t)
++ADDR = lambda t: re.sub(r"0x[0-9a-fA-F]+", "0xADDR", t or "")
++TC = lambda t: [int(n) for n in re.findall(r"^tests/test_cart\.py:(\d+)", t, re.M)]
++FRAMES = lambda t: sorted(set(re.findall(r"^([\w./-]+\.py):\d+", t, re.M)))
++
++def shift(v):
++    """Lines the variant inserts above the victim's def, from the frozen fix files."""
++    pre = (H / "fixes/test_cart.prefix.py").read_text().splitlines(); got = (H / f"fixes/test_cart.{v}.py").read_text().splitlines()
++    d = "def test_total_without_discount():"
++    return got.index(d) - pre.index(d)
++
++def same_failure_modulo_line(v, cr, ef, pcr):
++    t, c = cr[0].get("tb_norm") or "", ef.get("tb_norm") or ""
++    k = shift(v)
++    checks = {"masked_tb_equals_cert": bool(t) and MASK(t) == MASK(c),
++              "raw_sig_differs": cr[0].get("sig") != ef.get("sig"),
++              "line_shift_equals_insertions": bool(TC(c)) and TC(t) == [n + k for n in TC(c)],
++              "only_test_cart_frames": FRAMES(t) == FRAMES(c) == ["tests/test_cart.py"],
++              "exc_equals_prefix": bool(pcr) and all(e.get("exc") == pcr[0].get("exc") == ef.get("exc") for e in cr),
++              "message_equals_prefix_mod_addr": bool(pcr) and all(ADDR(e.get("message")) == ADDR(pcr[0].get("message")) for e in cr)}
++    bad = [n for n, ok in checks.items() if not ok]
++    return not bad, (f"shift={k} lines {TC(c)}->{TC(t)}" if not bad else "failed: " + ",".join(bad))
++
+ def judge(path):
+     r = json.loads(Path(path).read_text())
+     chk("res.pytest", r.get("pytest") == "8.4.2")
+@@ -156,6 +194,7 @@
+     ef = c.get("expected_failure") or {}
+     chk("cert.exc", ef.get("exc") == "AssertionError")
+     chk("cert.sig", re.fullmatch(r"[0-9a-f]{64}", str(ef.get("sig"))) is not None, str(ef.get("sig"))[:16])
++    chk("cert.tb_norm_hashes_to_sig", isinstance(ef.get("tb_norm"), str) and bool(ef.get("tb_norm")) and hsh(ef["tb_norm"]) == ef.get("sig"), "sha256(tb_norm) == expected_failure.sig")
+     vs = r.get("variants", {})
+     chk("res.three_variants", sorted(vs) == sorted(SPEC), str(sorted(vs)))
+     verdict = {}
+@@ -173,7 +212,12 @@
+         verdict[v] = "NOT_FIXED" if st == ["failed"] * 3 else "FIXED" if st == ["passed"] * 3 else "INCONSISTENT"
+         if st == ["failed"] * 3:
+             chk(f"{v}.failure_is_the_leak", all(e.get("exc") == "AssertionError" and re.search(r"assert 90 == 100", e.get("message") or "") for e in cr), (cr[0].get("message") or "")[:60].replace("\n", " "))
+-            chk(f"{v}.sig_equals_cert", cr[0].get("sig") == ef.get("sig"), (cr[0].get("sig") or "")[:16])
++            chk(f"{v}.tb_norm_hashes_to_sig", all(isinstance(e.get("tb_norm"), str) and e["tb_norm"] and hsh(e["tb_norm"]) == e.get("sig") for e in cr), (cr[0].get("sig") or "")[:16])
++            if v == "prefix":
++                chk(f"{v}.sig_equals_cert", cr[0].get("sig") == ef.get("sig"), (cr[0].get("sig") or "")[:16])
++            else:
++                ok, note = same_failure_modulo_line(v, cr, ef, vs.get("prefix", {}).get("cert_replay") or [])
++                chk(f"{v}.same_failure_modulo_line", ok, note)
+         sw = x.get("sweep") or {}
+         ok = sorted(sw, key=int) == [str(i) for i in range(100)]
+         got = sorted(int(k) for k, e in sw.items() if e.get("victim") == "failed")
+@@ -191,5 +235,8 @@
+ if a.results:
+     judge(a.results)
+ else:
++    v1 = {l.split("  ", 1)[1]: l.split("  ")[0] for l in (H / "SHA256SUMS").read_text().splitlines()}
++    chk("v1.frozen_inputs_sha256", len(v1) == 41 and all(sha(H / f) == h for f, h in v1.items()), f"{len(v1)} files of inputs/rea-brief-pytest-attempt-to-fix")
++    chk("v2.wrong_fix_shift_is_1", shift("wrong_fix") == 1, "cart.DEFAULT_DISCOUNT reset inserted above the victim")
+     rea(Path(a.rea_dir).resolve() if a.rea_dir else H / "rea"); fixes()
+ print("GATE PASS" if not fails else f"GATE FAIL {fails}"); sys.exit(1 if fails else 0)

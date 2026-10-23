@@ -1,0 +1,2755 @@
+{
+  "id": "F25",
+  "role": "reserve",
+  "repo": "sputt/qer",
+  "sha": "c77e6777967ee660447beb9522c867a7233ef78d",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0e58f095b85b93544f6627896f3777394212c40",
+      "size": 91,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e0e58f095b85b93544f6627896f3777394212c40"
+    },
+    {
+      "path": ".idea",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f077918ab6e7cbc36af7605893938b0a9bc8ffa",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/4f077918ab6e7cbc36af7605893938b0a9bc8ffa"
+    },
+    {
+      "path": ".idea/inspectionProfiles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d7adf64fee11fb7a3cfe830e85f64a06d30b5fd",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/7d7adf64fee11fb7a3cfe830e85f64a06d30b5fd"
+    },
+    {
+      "path": ".idea/inspectionProfiles/Project_Default.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "059295d1b528b6cf4508edd8e9730eaf228241ef",
+      "size": 562,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/059295d1b528b6cf4508edd8e9730eaf228241ef"
+    },
+    {
+      "path": ".idea/vcs.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94a25f7f4cb416c083d265558da75d457237d671",
+      "size": 180,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/94a25f7f4cb416c083d265558da75d457237d671"
+    },
+    {
+      "path": ".travis.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5afe2567daf6354a1f890fde855f943b3e5dec5",
+      "size": 1227,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c5afe2567daf6354a1f890fde855f943b3e5dec5"
+    },
+    {
+      "path": "LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4f0db46f2ffb698027ed4ae4bed33364131a76b",
+      "size": 1068,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d4f0db46f2ffb698027ed4ae4bed33364131a76b"
+    },
+    {
+      "path": "README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93360afea21410a692893b0fc8c27e88525589bf",
+      "size": 11401,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/93360afea21410a692893b0fc8c27e88525589bf"
+    },
+    {
+      "path": "example compilation.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de688c52cb8f81cee0913ff91b3086f0b682bbc5",
+      "size": 178,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/de688c52cb8f81cee0913ff91b3086f0b682bbc5"
+    },
+    {
+      "path": "pylintrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eb973db4196be95f82ddc3d2fa37058da14e7be",
+      "size": 232,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/1eb973db4196be95f82ddc3d2fa37058da14e7be"
+    },
+    {
+      "path": "req_compile",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d17cf829583ac39d807a0e867d63e26a2e11bafb",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/d17cf829583ac39d807a0e867d63e26a2e11bafb"
+    },
+    {
+      "path": "req_compile/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "req_compile/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07aef5e9b51de29206b9201fad17f713f20f4280",
+      "size": 189,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/07aef5e9b51de29206b9201fad17f713f20f4280"
+    },
+    {
+      "path": "req_compile/candidates.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c264715408fba21873b819e299347aef8b7319a2",
+      "size": 3384,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c264715408fba21873b819e299347aef8b7319a2"
+    },
+    {
+      "path": "req_compile/cmdline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "357010dd883888df047b95e2a54caa9e56e669a0",
+      "size": 22231,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/357010dd883888df047b95e2a54caa9e56e669a0"
+    },
+    {
+      "path": "req_compile/compile.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "add166e26e04e03aca145c2eef759c868f17a95a",
+      "size": 9689,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/add166e26e04e03aca145c2eef759c868f17a95a"
+    },
+    {
+      "path": "req_compile/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c6875b677889923dd07b70093ed8e5a47c859a9",
+      "size": 1071,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/5c6875b677889923dd07b70093ed8e5a47c859a9"
+    },
+    {
+      "path": "req_compile/dists.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c37d7d3b9e19bb40ee16f6add786174b18e75ddc",
+      "size": 12918,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c37d7d3b9e19bb40ee16f6add786174b18e75ddc"
+    },
+    {
+      "path": "req_compile/metadata",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ebf7de1ddbafeee1b67e569b69664713d4958cb",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/4ebf7de1ddbafeee1b67e569b69664713d4958cb"
+    },
+    {
+      "path": "req_compile/metadata/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee1b3faab17a813ed6ae5fc64d72b42f8572cc8b",
+      "size": 2183,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ee1b3faab17a813ed6ae5fc64d72b42f8572cc8b"
+    },
+    {
+      "path": "req_compile/metadata/dist_info.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0d0c0d7e9c734944fa92a49cb823127fd305b97",
+      "size": 2320,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d0d0c0d7e9c734944fa92a49cb823127fd305b97"
+    },
+    {
+      "path": "req_compile/metadata/errors.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31387e5dee3796cfe2f8a8cd073d13dafc65cdc9",
+      "size": 464,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/31387e5dee3796cfe2f8a8cd073d13dafc65cdc9"
+    },
+    {
+      "path": "req_compile/metadata/extractor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa878cffff20543c3ebdb3506ef40aeaf1ba4141",
+      "size": 8386,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/aa878cffff20543c3ebdb3506ef40aeaf1ba4141"
+    },
+    {
+      "path": "req_compile/metadata/patch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddcf4b59f4311ff3cd9fd5aa4233b3519856fca1",
+      "size": 1018,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ddcf4b59f4311ff3cd9fd5aa4233b3519856fca1"
+    },
+    {
+      "path": "req_compile/metadata/pyproject.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fe9154c9e45704fac300db906cdc2d378948d9b",
+      "size": 2816,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/9fe9154c9e45704fac300db906cdc2d378948d9b"
+    },
+    {
+      "path": "req_compile/metadata/source.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b3feccb462d1870ccc60823ef3153a223a5e8b1",
+      "size": 27683,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/8b3feccb462d1870ccc60823ef3153a223a5e8b1"
+    },
+    {
+      "path": "req_compile/repos",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c77cff50e35a27b779e05ebbc1affb12efb142c7",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/c77cff50e35a27b779e05ebbc1affb12efb142c7"
+    },
+    {
+      "path": "req_compile/repos/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc5cd5e33c2f70b79697e5db0f8c5c440a66062d",
+      "size": 66,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/fc5cd5e33c2f70b79697e5db0f8c5c440a66062d"
+    },
+    {
+      "path": "req_compile/repos/findlinks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ca5ed28762dfdcfca4c001dd414f6ee99c541dd",
+      "size": 2055,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/2ca5ed28762dfdcfca4c001dd414f6ee99c541dd"
+    },
+    {
+      "path": "req_compile/repos/multi.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f4e96a4149a530cecc4cd1bc4fdea1071c11578",
+      "size": 1208,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4f4e96a4149a530cecc4cd1bc4fdea1071c11578"
+    },
+    {
+      "path": "req_compile/repos/pypi.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83f2bf2759e9b31cf46493cac8a089e68c16f06b",
+      "size": 8622,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/83f2bf2759e9b31cf46493cac8a089e68c16f06b"
+    },
+    {
+      "path": "req_compile/repos/repository.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25a08750cbc49f5ab997d5a9897cadd8268345da",
+      "size": 17373,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/25a08750cbc49f5ab997d5a9897cadd8268345da"
+    },
+    {
+      "path": "req_compile/repos/solution.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65f62b357ad52fc9d7116cbe466f051643e035f0",
+      "size": 5913,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/65f62b357ad52fc9d7116cbe466f051643e035f0"
+    },
+    {
+      "path": "req_compile/repos/source.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b4429cbc4dc0b0f10bb9daaf39debe94ed0f185",
+      "size": 6059,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/0b4429cbc4dc0b0f10bb9daaf39debe94ed0f185"
+    },
+    {
+      "path": "req_compile/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52f4de833b86b68dd51e973bb2fceadc002e25ca",
+      "size": 6832,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/52f4de833b86b68dd51e973bb2fceadc002e25ca"
+    },
+    {
+      "path": "req_compile/versions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16bb95adad3c839338117a507ef55ad963436bb2",
+      "size": 2254,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/16bb95adad3c839338117a507ef55ad963436bb2"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe40fe85acca104c227d65a224f2b933580453b5",
+      "size": 127,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/fe40fe85acca104c227d65a224f2b933580453b5"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e3f5d31e457d065d6b8a385874ef9998f627d5d",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/5e3f5d31e457d065d6b8a385874ef9998f627d5d"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "scripts/compare_with_pip_compile.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39ce8041936360ec4b9cb566e23cf95927a669b4",
+      "size": 5472,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/39ce8041936360ec4b9cb566e23cf95927a669b4"
+    },
+    {
+      "path": "scripts/compile-repl.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd6d0da4ba87586b40b1b77aa8cf059d2e4cd200",
+      "size": 322,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/dd6d0da4ba87586b40b1b77aa8cf059d2e4cd200"
+    },
+    {
+      "path": "scripts/performance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c0df1726faafb9e69184b868f7c5bb5f28d3e4b",
+      "size": 537,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/2c0df1726faafb9e69184b868f7c5bb5f28d3e4b"
+    },
+    {
+      "path": "scripts/pypi_compare.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6432cda1576e433fee2da72cbadb5b1c8ca2759b",
+      "size": 7496,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/6432cda1576e433fee2da72cbadb5b1c8ca2759b"
+    },
+    {
+      "path": "scripts/run_dists.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eafb3acb052da2289d9676ed0a5e72080f5e6620",
+      "size": 987,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/eafb3acb052da2289d9676ed0a5e72080f5e6620"
+    },
+    {
+      "path": "scripts/run_with_importhook.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d68a504fe0f83e175878d040acda96a2053df15d",
+      "size": 354,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d68a504fe0f83e175878d040acda96a2053df15d"
+    },
+    {
+      "path": "scripts/strip.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49846595d9dc6dafeaf3145ab21d9b12dbdf3506",
+      "size": 82,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/49846595d9dc6dafeaf3145ab21d9b12dbdf3506"
+    },
+    {
+      "path": "setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c2b2874c477c0a0d7ee2245b5d776da35f61de1",
+      "size": 27,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/7c2b2874c477c0a0d7ee2245b5d776da35f61de1"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bee86a20f44b84631757ff09ecef016e6a1924da",
+      "size": 1273,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/bee86a20f44b84631757ff09ecef016e6a1924da"
+    },
+    {
+      "path": "test-requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81f01cfbe675ee5fc8a0cc836a4d7cc4c0185da",
+      "size": 41,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c81f01cfbe675ee5fc8a0cc836a4d7cc4c0185da"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "987a46bd63a0e27ed74ecdf1ab14d5d42788172b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/987a46bd63a0e27ed74ecdf1ab14d5d42788172b"
+    },
+    {
+      "path": "tests/METADATA-bizarre-extra",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d394f2ceec6a5196bd749293038d3ac71a7942cd",
+      "size": 1379,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d394f2ceec6a5196bd749293038d3ac71a7942cd"
+    },
+    {
+      "path": "tests/METADATA-extra-space",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "351970eb3161df7c7caa88177424beeef1a81454",
+      "size": 666,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/351970eb3161df7c7caa88177424beeef1a81454"
+    },
+    {
+      "path": "tests/METADATA-implementation-marker",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bfdabda317df81b0e87e98f641b0435a9a178e7",
+      "size": 287,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/8bfdabda317df81b0e87e98f641b0435a9a178e7"
+    },
+    {
+      "path": "tests/METADATA-two-names",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04838283854da2c7aaa81393c228523ba43e9925",
+      "size": 816,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/04838283854da2c7aaa81393c228523ba43e9925"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/bad_solutionfile.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4da24098886aa698d69f34576a7481063749a52a",
+      "size": 426,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4da24098886aa698d69f34576a7481063749a52a"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51fb8087d2c4240ebc1c09edf44547e233a61fcc",
+      "size": 6177,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/51fb8087d2c4240ebc1c09edf44547e233a61fcc"
+    },
+    {
+      "path": "tests/early-violated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70cc47383ad6420e88a59a32478ace522d2ece44",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/70cc47383ad6420e88a59a32478ace522d2ece44"
+    },
+    {
+      "path": "tests/early-violated/a-5.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efa9003fe96a11c712d0f23917bbdf2ad0b1c7f8",
+      "size": 205,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/efa9003fe96a11c712d0f23917bbdf2ad0b1c7f8"
+    },
+    {
+      "path": "tests/early-violated/x-0.9.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1edfab1274f83b1a5e33259ac63c2aebaeffefbe",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/1edfab1274f83b1a5e33259ac63c2aebaeffefbe"
+    },
+    {
+      "path": "tests/early-violated/x-1.1.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b3f1fd479bb680d736b260d93b1cd7abc51aa24",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/5b3f1fd479bb680d736b260d93b1cd7abc51aa24"
+    },
+    {
+      "path": "tests/early-violated/y-4.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2937845585735590d604f81f5b22702e07e1321a",
+      "size": 224,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/2937845585735590d604f81f5b22702e07e1321a"
+    },
+    {
+      "path": "tests/early-violated/z-1.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd0da4b1a8a07363e5549da7742fc193e0aa6263",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/fd0da4b1a8a07363e5549da7742fc193e0aa6263"
+    },
+    {
+      "path": "tests/extra-violated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf8c5ad7cf69d409ed8c6b45874a69aeb1e347f3",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/cf8c5ad7cf69d409ed8c6b45874a69aeb1e347f3"
+    },
+    {
+      "path": "tests/extra-violated/a-5.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0f0c361c2c2b5c99c2cf7dc710b4284dbd8a036",
+      "size": 228,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a0f0c361c2c2b5c99c2cf7dc710b4284dbd8a036"
+    },
+    {
+      "path": "tests/extra-violated/b-4.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6897073ab0e1248bb2b0f694c3db6c79668e1fad",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/6897073ab0e1248bb2b0f694c3db6c79668e1fad"
+    },
+    {
+      "path": "tests/extra-violated/x-0.9.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e12621158b1ee617a40f64da7b3d47cfb37ff99",
+      "size": 209,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4e12621158b1ee617a40f64da7b3d47cfb37ff99"
+    },
+    {
+      "path": "tests/extra-violated/x-1.1.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce7e398dfe5a3af8e2ea729b1ba7fc9b6823933d",
+      "size": 243,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ce7e398dfe5a3af8e2ea729b1ba7fc9b6823933d"
+    },
+    {
+      "path": "tests/extra-violated/y-4.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cc33225094d0cd903fdfb10406c53930e86acd2",
+      "size": 230,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/7cc33225094d0cd903fdfb10406c53930e86acd2"
+    },
+    {
+      "path": "tests/extra-violated/z-1.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0512755c43d2a7688823fe4d59f66815b8b87d27",
+      "size": 210,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/0512755c43d2a7688823fe4d59f66815b8b87d27"
+    },
+    {
+      "path": "tests/local-tree",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8822dcb427b00f58b09bf8d69780150d629de487",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/8822dcb427b00f58b09bf8d69780150d629de487"
+    },
+    {
+      "path": "tests/local-tree/framework",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b4341b5515be8ab684095b8979484bb652aea22",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/1b4341b5515be8ab684095b8979484bb652aea22"
+    },
+    {
+      "path": "tests/local-tree/framework/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3953c9e8e2719f0acefaf2420bbd5c087390257",
+      "size": 78,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a3953c9e8e2719f0acefaf2420bbd5c087390257"
+    },
+    {
+      "path": "tests/local-tree/user1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91758f7555c8e8a9c8bfce48d046560c08a6eb10",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/91758f7555c8e8a9c8bfce48d046560c08a6eb10"
+    },
+    {
+      "path": "tests/local-tree/user1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5ea5b78bad1eebc819c15c5a0ff4c9ba717add6",
+      "size": 99,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d5ea5b78bad1eebc819c15c5a0ff4c9ba717add6"
+    },
+    {
+      "path": "tests/local-tree/user2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58712fafe66aa2d19fcf98716fea7c438e60a6b0",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/58712fafe66aa2d19fcf98716fea7c438e60a6b0"
+    },
+    {
+      "path": "tests/local-tree/user2/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a506ca133e9e4498ef273349d28244526798c7a",
+      "size": 108,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/2a506ca133e9e4498ef273349d28244526798c7a"
+    },
+    {
+      "path": "tests/local-tree/util",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b91abb08d311697f5dbce84cbf6afd262cf7424",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/0b91abb08d311697f5dbce84cbf6afd262cf7424"
+    },
+    {
+      "path": "tests/local-tree/util/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69143728f5d20576f88232d6195ce50f08a10394",
+      "size": 73,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/69143728f5d20576f88232d6195ce50f08a10394"
+    },
+    {
+      "path": "tests/metadata",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eeea28241fc5ff72d5327477113ea979fbc1f38d",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/eeea28241fc5ff72d5327477113ea979fbc1f38d"
+    },
+    {
+      "path": "tests/metadata/pex-listing.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0121295ee38cdbb662b8e661d8ce1329a6a3a8fb",
+      "size": 30732,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/0121295ee38cdbb662b8e661d8ce1329a6a3a8fb"
+    },
+    {
+      "path": "tests/metadata/test_dist_info.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1354fdbbd1e7efdeaa6b5a009d465cf64c03e5f9",
+      "size": 1244,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/1354fdbbd1e7efdeaa6b5a009d465cf64c03e5f9"
+    },
+    {
+      "path": "tests/multi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c45b2784918f75b3c9d2c2d0fd8dbea54008855",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/0c45b2784918f75b3c9d2c2d0fd8dbea54008855"
+    },
+    {
+      "path": "tests/multi/x-0.9.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1edfab1274f83b1a5e33259ac63c2aebaeffefbe",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/1edfab1274f83b1a5e33259ac63c2aebaeffefbe"
+    },
+    {
+      "path": "tests/multi/x-1.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0858786afba718b249b6cc4448d1cff44211868",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/f0858786afba718b249b6cc4448d1cff44211868"
+    },
+    {
+      "path": "tests/multi/y-4.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e99b1d750c9bd7fc44149d7e47a4771ef2b260cb",
+      "size": 207,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e99b1d750c9bd7fc44149d7e47a4771ef2b260cb"
+    },
+    {
+      "path": "tests/multi/y-5.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bed75ea900a4c6048780f1a3c1d8afe2243e808f",
+      "size": 205,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/bed75ea900a4c6048780f1a3c1d8afe2243e808f"
+    },
+    {
+      "path": "tests/multi/z-1.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5f409b192bfd51f97d3a2c78318a0797a6307e8",
+      "size": 89,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a5f409b192bfd51f97d3a2c78318a0797a6307e8"
+    },
+    {
+      "path": "tests/normal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63444f280bce36b09af0c63fe13695d220b404ec",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/63444f280bce36b09af0c63fe13695d220b404ec"
+    },
+    {
+      "path": "tests/normal/a.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d911b840d32a0ab65b30a5001449b418bc28540",
+      "size": 346,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/9d911b840d32a0ab65b30a5001449b418bc28540"
+    },
+    {
+      "path": "tests/normal/b.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9e6f3d2d23a45fbc4e75d7ef13c074b91293137",
+      "size": 205,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c9e6f3d2d23a45fbc4e75d7ef13c074b91293137"
+    },
+    {
+      "path": "tests/normal/c.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ddd33ceb1828d50c492c743a44259961a02f466",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/2ddd33ceb1828d50c492c743a44259961a02f466"
+    },
+    {
+      "path": "tests/normal/d.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fe32f019c4538dd58fa5ab34dcc2b30b3426d58",
+      "size": 209,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4fe32f019c4538dd58fa5ab34dcc2b30b3426d58"
+    },
+    {
+      "path": "tests/normal/e.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f24a085e45ce99c99a931a894cbe3bbc5fe9b088",
+      "size": 212,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/f24a085e45ce99c99a931a894cbe3bbc5fe9b088"
+    },
+    {
+      "path": "tests/normal/f.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "625f774f3aa544ed219301b38616c589c8245b23",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/625f774f3aa544ed219301b38616c589c8245b23"
+    },
+    {
+      "path": "tests/normal/test.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25349f5127cf069ae77ae8a9d1a6e83774a3962e",
+      "size": 191,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/25349f5127cf069ae77ae8a9d1a6e83774a3962e"
+    },
+    {
+      "path": "tests/real",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "952851e4cf2cdc4dd37ebf540f284189c5fdc692",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/952851e4cf2cdc4dd37ebf540f284189c5fdc692"
+    },
+    {
+      "path": "tests/real/pylint-1.9.4.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a343799227233d07004636148e008d39459d5942",
+      "size": 1513,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a343799227233d07004636148e008d39459d5942"
+    },
+    {
+      "path": "tests/repeat-violated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcb11e8ad8f3dcde2ac49a32abc1da6556fd70f2",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/dcb11e8ad8f3dcde2ac49a32abc1da6556fd70f2"
+    },
+    {
+      "path": "tests/repeat-violated/a-5.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efa9003fe96a11c712d0f23917bbdf2ad0b1c7f8",
+      "size": 205,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/efa9003fe96a11c712d0f23917bbdf2ad0b1c7f8"
+    },
+    {
+      "path": "tests/repeat-violated/x-0.9.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1edfab1274f83b1a5e33259ac63c2aebaeffefbe",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/1edfab1274f83b1a5e33259ac63c2aebaeffefbe"
+    },
+    {
+      "path": "tests/repeat-violated/x-1.1.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b3f1fd479bb680d736b260d93b1cd7abc51aa24",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/5b3f1fd479bb680d736b260d93b1cd7abc51aa24"
+    },
+    {
+      "path": "tests/repeat-violated/x-1.2.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22a101abd80b7d39d5a619ab58deea90cee24023",
+      "size": 188,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/22a101abd80b7d39d5a619ab58deea90cee24023"
+    },
+    {
+      "path": "tests/repeat-violated/y-4.0.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e99b1d750c9bd7fc44149d7e47a4771ef2b260cb",
+      "size": 207,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e99b1d750c9bd7fc44149d7e47a4771ef2b260cb"
+    },
+    {
+      "path": "tests/repos",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f92a325aa7f1d1033e7c4f02c7f9ad6ea2e51dd",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/2f92a325aa7f1d1033e7c4f02c7f9ad6ea2e51dd"
+    },
+    {
+      "path": "tests/repos/extra_only_solution.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6d1547210db401b9f5597e536b84107327e3676",
+      "size": 112,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/b6d1547210db401b9f5597e536b84107327e3676"
+    },
+    {
+      "path": "tests/repos/garbage.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec707d897823c7171bd1f1d48b066402a694af34",
+      "size": 66,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ec707d897823c7171bd1f1d48b066402a694af34"
+    },
+    {
+      "path": "tests/repos/monorepo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ca67f59d5a51f5f1c98ab0a08e59847f61ff004",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/1ca67f59d5a51f5f1c98ab0a08e59847f61ff004"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0b0bd66dc1500f504737e8afad656c5f62ad186",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/e0b0bd66dc1500f504737e8afad656c5f62ad186"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "186609ce65f5ac19f8abaedb38f1afdc3a962a58",
+      "size": 123,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/186609ce65f5ac19f8abaedb38f1afdc3a962a58"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "629322d71ee3cfe06373c5b702c47c0475713738",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/629322d71ee3cfe06373c5b702c47c0475713738"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg2/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b60758da53015f98b6d5614102c8a0cc7046dc48",
+      "size": 127,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/b60758da53015f98b6d5614102c8a0cc7046dc48"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "157c6249e75a64c70ecc478b57fc20f4b2d7b329",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/157c6249e75a64c70ecc478b57fc20f4b2d7b329"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg4/.special_dir",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4039bf87f95684a5b63d40de54df03ee50c3784",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/b4039bf87f95684a5b63d40de54df03ee50c3784"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg4/.special_dir/keep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg4/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d77bec0bfb36a501bc0ce622becc268b1d569bf",
+      "size": 72,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/9d77bec0bfb36a501bc0ce622becc268b1d569bf"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg5",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7de90cb22b62870a4351347de67023c918603ae",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/a7de90cb22b62870a4351347de67023c918603ae"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg5/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/repos/monorepo/pkg5/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6db2603a8c5b3aa4f912a78953d99c6a7c53ebe4",
+      "size": 55,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/6db2603a8c5b3aa4f912a78953d99c6a7c53ebe4"
+    },
+    {
+      "path": "tests/repos/monorepo/subdir",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5f073d06e10c70fb12c700cf787ea3ffd82d10c",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/b5f073d06e10c70fb12c700cf787ea3ffd82d10c"
+    },
+    {
+      "path": "tests/repos/monorepo/subdir/pkg3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3eea72300123d43384ea1b8910ea3440c64ca39",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/d3eea72300123d43384ea1b8910ea3440c64ca39"
+    },
+    {
+      "path": "tests/repos/monorepo/subdir/pkg3/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13d326b2f9169efd199f508e679e0cd7ffab5440",
+      "size": 106,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/13d326b2f9169efd199f508e679e0cd7ffab5440"
+    },
+    {
+      "path": "tests/repos/numpy.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "567f142def24416eddf560454f3e85c1d1c09fb9",
+      "size": 221460,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/567f142def24416eddf560454f3e85c1d1c09fb9"
+    },
+    {
+      "path": "tests/repos/numpy.whl-contents",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc2c617ced9cd8836cc6618cbddf92985f7d6a93",
+      "size": 15,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/cc2c617ced9cd8836cc6618cbddf92985f7d6a93"
+    },
+    {
+      "path": "tests/repos/requests_security_solution.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41e1f2c2020ca5904ae34dccebf94a49acbfb445",
+      "size": 122,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/41e1f2c2020ca5904ae34dccebf94a49acbfb445"
+    },
+    {
+      "path": "tests/repos/test_findlinks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03f8f8e7eac0905c3c7c50c2112c03dd2f320f2f",
+      "size": 640,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/03f8f8e7eac0905c3c7c50c2112c03dd2f320f2f"
+    },
+    {
+      "path": "tests/repos/test_multi.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c7e20485ba6a4d39dc8f157666d5dfc9c38ba95",
+      "size": 2648,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4c7e20485ba6a4d39dc8f157666d5dfc9c38ba95"
+    },
+    {
+      "path": "tests/repos/test_pypi.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "874aa41a58acf3ca26a3b857597024b14bc688b2",
+      "size": 7740,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/874aa41a58acf3ca26a3b857597024b14bc688b2"
+    },
+    {
+      "path": "tests/repos/test_solution.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70406048687350d84fe0ae37fe92da5508bdf1f3",
+      "size": 4866,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/70406048687350d84fe0ae37fe92da5508bdf1f3"
+    },
+    {
+      "path": "tests/repos/test_source.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1a70456d24ab15e391bd4b82f82cc7c9cd4ad1a",
+      "size": 2286,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/b1a70456d24ab15e391bd4b82f82cc7c9cd4ad1a"
+    },
+    {
+      "path": "tests/solutionfile.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5e74c838ceaf2d1342d3abc4e3257bdd9a5ad88",
+      "size": 535,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/b5e74c838ceaf2d1342d3abc4e3257bdd9a5ad88"
+    },
+    {
+      "path": "tests/solutionfile_extras.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a4f149ede9bf2ec623e32ab0f7f3673141a5869",
+      "size": 134,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/8a4f149ede9bf2ec623e32ab0f7f3673141a5869"
+    },
+    {
+      "path": "tests/solutionfile_fuzzywuzzy_extras.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "073d2ae72e6e745fa2879675567997fb941f3ab7",
+      "size": 135,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/073d2ae72e6e745fa2879675567997fb941f3ab7"
+    },
+    {
+      "path": "tests/source-packages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "236db8c26d9e4caa37d86978d2a5d9667acde37d",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/236db8c26d9e4caa37d86978d2a5d9667acde37d"
+    },
+    {
+      "path": "tests/source-packages/PyYAML-5.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30b5e6d874cb6292854ecc18158b55357f3a4ab8",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/30b5e6d874cb6292854ecc18158b55357f3a4ab8"
+    },
+    {
+      "path": "tests/source-packages/PyYAML-5.1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5abd1f0b08153fa264e9e3ec3ee34c072532fccc",
+      "size": 3475,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/5abd1f0b08153fa264e9e3ec3ee34c072532fccc"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "375fb761e9e378baf5a0b4ce486de02f688596d9",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/375fb761e9e378baf5a0b4ce486de02f688596d9"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d42fa002d4c2602241cf1a4be040c194e9dd009d",
+      "size": 2353,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d42fa002d4c2602241cf1a4be040c194e9dd009d"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0/billiard",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "260fc387e1589b0606e5a9b57a4e46c3949a897c",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/260fc387e1589b0606e5a9b57a4e46c3949a897c"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0/billiard/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4464866c5277ad81ef5b71d28ba05512a970852c",
+      "size": 1597,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4464866c5277ad81ef5b71d28ba05512a970852c"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0/requirements",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5532a3e940297aec632c8684e92e2e56105ea3b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/a5532a3e940297aec632c8684e92e2e56105ea3b"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0/requirements/pkgutils.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff0c55b301bcddd62272f84fd59e7a70c29cc80d",
+      "size": 73,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ff0c55b301bcddd62272f84fd59e7a70c29cc80d"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0/requirements/test-ci.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c75c448bbd0f8d9076d528dd2b203fa21d35b19e",
+      "size": 11,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c75c448bbd0f8d9076d528dd2b203fa21d35b19e"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0/requirements/test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5841444ece6917219e2378379c9b2bc637a0c06f",
+      "size": 31,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/5841444ece6917219e2378379c9b2bc637a0c06f"
+    },
+    {
+      "path": "tests/source-packages/billiard-3.6.0.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a222a6277b72b5e909aded2d8f4bf3068a591c2",
+      "size": 8333,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/0a222a6277b72b5e909aded2d8f4bf3068a591c2"
+    },
+    {
+      "path": "tests/source-packages/capital-s-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a31e98c5b3bd8c42b853e8af988f34909aa12fc9",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/a31e98c5b3bd8c42b853e8af988f34909aa12fc9"
+    },
+    {
+      "path": "tests/source-packages/capital-s-1.0/Setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aeacc6b4b59ec8f49fb2be346af400774d2a3808",
+      "size": 80,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/aeacc6b4b59ec8f49fb2be346af400774d2a3808"
+    },
+    {
+      "path": "tests/source-packages/comtypes-1.1.7",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48b7c2a5f5c548371dd1a25a26dd6f6a32da3c18",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/48b7c2a5f5c548371dd1a25a26dd6f6a32da3c18"
+    },
+    {
+      "path": "tests/source-packages/comtypes-1.1.7/README",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a6f24b71ddcd453e9a483c1a5b4a7dabdf0f993",
+      "size": 15,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3a6f24b71ddcd453e9a483c1a5b4a7dabdf0f993"
+    },
+    {
+      "path": "tests/source-packages/comtypes-1.1.7/comtypes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3746e3f93d5fbc499ddc9c3173820f6648021344",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/3746e3f93d5fbc499ddc9c3173820f6648021344"
+    },
+    {
+      "path": "tests/source-packages/comtypes-1.1.7/comtypes/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf7882637e0144de0bc0695fc1be538afadf537f",
+      "size": 22,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/bf7882637e0144de0bc0695fc1be538afadf537f"
+    },
+    {
+      "path": "tests/source-packages/comtypes-1.1.7/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f29eea0a56b101175d8ec20ecb0701e948b98ac1",
+      "size": 6294,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/f29eea0a56b101175d8ec20ecb0701e948b98ac1"
+    },
+    {
+      "path": "tests/source-packages/comtypes-1.1.7/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d2d054525d43365d4185e5408a97a86b0fc4b7c",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/5d2d054525d43365d4185e5408a97a86b0fc4b7c"
+    },
+    {
+      "path": "tests/source-packages/comtypes-1.1.7/test/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ba3e299f1039274b87445e97716851616780d13",
+      "size": 164,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/5ba3e299f1039274b87445e97716851616780d13"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ddf4c8b3b94f95041b54f1956ede165ed956d862",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/ddf4c8b3b94f95041b54f1956ede165ed956d862"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/cython_check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c68de8473c676998c20b2b71d8da2accd8820892",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/c68de8473c676998c20b2b71d8da2accd8820892"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/cython_check/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/cython_check/bindings",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e939a4a06bb7f5e2e366bfac89ae6b7fdef6652b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/e939a4a06bb7f5e2e366bfac89ae6b7fdef6652b"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/cython_check/bindings/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/cython_check/bindings/libcythoncheck.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9226773d625bbdaf3c850c30382a9b7c805588b",
+      "size": 2083,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c9226773d625bbdaf3c850c30382a9b7c805588b"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99870d37b7345e3c0fcf7a233c6b5155616ff3c8",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/99870d37b7345e3c0fcf7a233c6b5155616ff3c8"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/tools/cython-modules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3731fefe1e1f60b3a131d2f481fc6d40f62cc5d",
+      "size": 36,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/b3731fefe1e1f60b3a131d2f481fc6d40f62cc5d"
+    },
+    {
+      "path": "tests/source-packages/cython-check-1.0/tools/install-requires",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60540ac0f64a2c48be5938f4dc8ffa3735ebfd97",
+      "size": 10,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/60540ac0f64a2c48be5938f4dc8ffa3735ebfd97"
+    },
+    {
+      "path": "tests/source-packages/d2to1-user-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "309608759508be8343cee1f1b7163482b1ec8079",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/309608759508be8343cee1f1b7163482b1ec8079"
+    },
+    {
+      "path": "tests/source-packages/d2to1-user-1.0/setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e55c72a912dcc844f181a5d386a2a1eb3b10c600",
+      "size": 88,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e55c72a912dcc844f181a5d386a2a1eb3b10c600"
+    },
+    {
+      "path": "tests/source-packages/d2to1-user-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0076017fc5c5569203bcd45a4f57aa7ea010f649",
+      "size": 136,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/0076017fc5c5569203bcd45a4f57aa7ea010f649"
+    },
+    {
+      "path": "tests/source-packages/dill-0.3.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5429082b14e04c2b2c53b14cf55cc1764837e65b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/5429082b14e04c2b2c53b14cf55cc1764837e65b"
+    },
+    {
+      "path": "tests/source-packages/dill-0.3.0/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/dill-0.3.0/README",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/dill-0.3.0/dill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c280907776266fbcf20e1ac3862ceb7e8533c1f0",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/c280907776266fbcf20e1ac3862ceb7e8533c1f0"
+    },
+    {
+      "path": "tests/source-packages/dill-0.3.0/dill/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e36c2ec26563625c87989cfe8ec0d6341657b062",
+      "size": 3634,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e36c2ec26563625c87989cfe8ec0d6341657b062"
+    },
+    {
+      "path": "tests/source-packages/dill-0.3.0/dill/info.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4b51881ad43d2ce3a3a61d382bf6af91cb2598a",
+      "size": 7444,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a4b51881ad43d2ce3a3a61d382bf6af91cb2598a"
+    },
+    {
+      "path": "tests/source-packages/dill-0.3.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa948d60440fab2a492cdf255959ce6fa1b91b46",
+      "size": 3738,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/aa948d60440fab2a492cdf255959ce6fa1b91b46"
+    },
+    {
+      "path": "tests/source-packages/dir-changer-0.1.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33ab7457ae641db88f8bfe9ca6840a7c0faaa37b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/33ab7457ae641db88f8bfe9ca6840a7c0faaa37b"
+    },
+    {
+      "path": "tests/source-packages/dir-changer-0.1.1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/dir-changer-0.1.1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1a1552905e0cc6b0839f543ecabd495e1d294c6",
+      "size": 363,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e1a1552905e0cc6b0839f543ecabd495e1d294c6"
+    },
+    {
+      "path": "tests/source-packages/dir-exists-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46d1879f990ab4ef0584fdd884c62f9e9ac92b83",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/46d1879f990ab4ef0584fdd884c62f9e9ac92b83"
+    },
+    {
+      "path": "tests/source-packages/dir-exists-1.0/dir_exists",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4039bf87f95684a5b63d40de54df03ee50c3784",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/b4039bf87f95684a5b63d40de54df03ee50c3784"
+    },
+    {
+      "path": "tests/source-packages/dir-exists-1.0/dir_exists/keep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/dir-exists-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da8d9857abdce9450585367e65a0a84e3af78579",
+      "size": 8842,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/da8d9857abdce9450585367e65a0a84e3af78579"
+    },
+    {
+      "path": "tests/source-packages/dirsep-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31909e83cf70f435cf08b51e0ca3e6bffd70a80c",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/31909e83cf70f435cf08b51e0ca3e6bffd70a80c"
+    },
+    {
+      "path": "tests/source-packages/dirsep-1.0/dirsep",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90991387f937721b0fd372adf419dc996d62e486",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/90991387f937721b0fd372adf419dc996d62e486"
+    },
+    {
+      "path": "tests/source-packages/dirsep-1.0/dirsep/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5923c999787d9d991651ca805d1d586679d730b6",
+      "size": 40,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/5923c999787d9d991651ca805d1d586679d730b6"
+    },
+    {
+      "path": "tests/source-packages/dirsep-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ea28ac12c61f85951b6a87a827c440b6e997d02",
+      "size": 284,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/1ea28ac12c61f85951b6a87a827c440b6e997d02"
+    },
+    {
+      "path": "tests/source-packages/dot-slash-dir-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4cb9406c739225bc047abb30991230fb1b87e7b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/f4cb9406c739225bc047abb30991230fb1b87e7b"
+    },
+    {
+      "path": "tests/source-packages/dot-slash-dir-1.0/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f68fefbf32846472d30a8a92a0b7222fae342ea",
+      "size": 16,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/9f68fefbf32846472d30a8a92a0b7222fae342ea"
+    },
+    {
+      "path": "tests/source-packages/dot-slash-dir-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8f8bd54f54a8432c02dfa0bb223f1f619126aa5",
+      "size": 253,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a8f8bd54f54a8432c02dfa0bb223f1f619126aa5"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "892f5315d5b84e76748ca964db9128c4fd021c14",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/892f5315d5b84e76748ca964db9128c4fd021c14"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb6d92a7a644a60932a5a89466ab4a05213d710a",
+      "size": 334,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/bb6d92a7a644a60932a5a89466ab4a05213d710a"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "007f3f35cac95b8dfa05b86bfc8f4e33b9855bc4",
+      "size": 1333,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/007f3f35cac95b8dfa05b86bfc8f4e33b9855bc4"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26451ee84b1a7821cca61cd0b03d612992a64fad",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/26451ee84b1a7821cca61cd0b03d612992a64fad"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/src/benchmark",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77dd939f89d64fef4bf4945245793b8bb230b611",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/77dd939f89d64fef4bf4945245793b8bb230b611"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/src/benchmark/bench.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/src/ed25519",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea9bb850ff41f4544ed9f82141071088c1db1c2e",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/ea9bb850ff41f4544ed9f82141071088c1db1c2e"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/src/ed25519/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/src/ed25519/_version.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d4ac7087a857e4f22a7bf19676cb9610b86f6ab",
+      "size": 469,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/9d4ac7087a857e4f22a7bf19676cb9610b86f6ab"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/src/ref",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d1930f22ee06ecd0ed6514c7f9a70d9a14256dc",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/6d1930f22ee06ecd0ed6514c7f9a70d9a14256dc"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/src/ref/file.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/ed-1.4/versioneer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c010f63e3ead851cb35e4d4cc8bc958b8be76ab0",
+      "size": 62474,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c010f63e3ead851cb35e4d4cc8bc958b8be76ab0"
+    },
+    {
+      "path": "tests/source-packages/et_xmlfile-1.0.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6078821dae2b31fbfb305f3ff1b977e9d78b8acf",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/6078821dae2b31fbfb305f3ff1b977e9d78b8acf"
+    },
+    {
+      "path": "tests/source-packages/et_xmlfile-1.0.1/et_xmlfile",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff0d9cd593c46a5beac8048d897d27ff5555c66b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/ff0d9cd593c46a5beac8048d897d27ff5555c66b"
+    },
+    {
+      "path": "tests/source-packages/et_xmlfile-1.0.1/et_xmlfile/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b6a052b4f4a70671e608179daa87e93270b5e2f",
+      "size": 266,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3b6a052b4f4a70671e608179daa87e93270b5e2f"
+    },
+    {
+      "path": "tests/source-packages/et_xmlfile-1.0.1/et_xmlfile/xmlfile.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09ec55554ff89d18891562d435bb29013d03beba",
+      "size": 3204,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/09ec55554ff89d18891562d435bb29013d03beba"
+    },
+    {
+      "path": "tests/source-packages/et_xmlfile-1.0.1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6622bf814d275ae85bfe8afc0994cdaf8dc131d5",
+      "size": 2062,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/6622bf814d275ae85bfe8afc0994cdaf8dc131d5"
+    },
+    {
+      "path": "tests/source-packages/extern-importer-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ae4bc6db929ab7a29bf5c1d4bbe9a70dc0b6175",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/6ae4bc6db929ab7a29bf5c1d4bbe9a70dc0b6175"
+    },
+    {
+      "path": "tests/source-packages/extern-importer-1.0/localfile.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/extern-importer-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "485d06262e7183ef51b72bf20239961b0df0cd35",
+      "size": 132,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/485d06262e7183ef51b72bf20239961b0df0cd35"
+    },
+    {
+      "path": "tests/source-packages/ez-setup-test-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a37cc4c7723350900509cf2dd5efe68c862fb715",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/a37cc4c7723350900509cf2dd5efe68c862fb715"
+    },
+    {
+      "path": "tests/source-packages/ez-setup-test-1.0/ez_setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "800c31ef6b05fc23c82a1edef77edafcd399114d",
+      "size": 12537,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/800c31ef6b05fc23c82a1edef77edafcd399114d"
+    },
+    {
+      "path": "tests/source-packages/ez-setup-test-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92f8c29aa138988ac56e2fa276ea53b75edfaf57",
+      "size": 404,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/92f8c29aa138988ac56e2fa276ea53b75edfaf57"
+    },
+    {
+      "path": "tests/source-packages/ez-setup-test-1.0/version.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "141f20e5d2887d3f2a419da9a39453669d51cb13",
+      "size": 2834,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/141f20e5d2887d3f2a419da9a39453669d51cb13"
+    },
+    {
+      "path": "tests/source-packages/file-input-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a24f6dcfcd4cd5ea3d54b8011a10ea52baa6ea3",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/7a24f6dcfcd4cd5ea3d54b8011a10ea52baa6ea3"
+    },
+    {
+      "path": "tests/source-packages/file-input-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae76bd1ba010a73beb49bac623f3dfbbe021b793",
+      "size": 416,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ae76bd1ba010a73beb49bac623f3dfbbe021b793"
+    },
+    {
+      "path": "tests/source-packages/file-input-1.0/versions.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/file-iter-7.2.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b8322dfeb80bb0fdd401e03508bf62c1b3f7975",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/7b8322dfeb80bb0fdd401e03508bf62c1b3f7975"
+    },
+    {
+      "path": "tests/source-packages/file-iter-7.2.0/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/file-iter-7.2.0/docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "370aa4ce027d15884904b00e56db99a8f7616731",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/370aa4ce027d15884904b00e56db99a8f7616731"
+    },
+    {
+      "path": "tests/source-packages/file-iter-7.2.0/docs/versions.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70a5e86cf6002f98abfa2fc2d483d05ca648fd68",
+      "size": 11942,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/70a5e86cf6002f98abfa2fc2d483d05ca648fd68"
+    },
+    {
+      "path": "tests/source-packages/file-iter-7.2.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f414f048c01e27570696457add042b4ae2f2ff38",
+      "size": 693,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/f414f048c01e27570696457add042b4ae2f2ff38"
+    },
+    {
+      "path": "tests/source-packages/gdal-3.0.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e58624cc76411464ac9a26698d75741464fb2d50",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/e58624cc76411464ac9a26698d75741464fb2d50"
+    },
+    {
+      "path": "tests/source-packages/gdal-3.0.1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "574fa32909798870dd59673885282edda1675e72",
+      "size": 1616,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/574fa32909798870dd59673885282edda1675e72"
+    },
+    {
+      "path": "tests/source-packages/invalid-extra-2.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc7e1c470908cadceb698bf00a7fe4222ff04b1b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/cc7e1c470908cadceb698bf00a7fe4222ff04b1b"
+    },
+    {
+      "path": "tests/source-packages/invalid-extra-2.1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e4ceadc18760e24a6e50833fb97d77d1a5c1f8e",
+      "size": 317,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3e4ceadc18760e24a6e50833fb97d77d1a5c1f8e"
+    },
+    {
+      "path": "tests/source-packages/mtt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1a0e9aa2524bd41c7409a1777a433697db7b7b6",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/f1a0e9aa2524bd41c7409a1777a433697db7b7b6"
+    },
+    {
+      "path": "tests/source-packages/mtt/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/mtt/docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1659145f08fa02f8ad62a39aee9ae1253aeeb50",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/b1659145f08fa02f8ad62a39aee9ae1253aeeb50"
+    },
+    {
+      "path": "tests/source-packages/mtt/docs/versions.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "957a3b43fc7f178baeb3064c1e975b41923bcc08",
+      "size": 11298,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/957a3b43fc7f178baeb3064c1e975b41923bcc08"
+    },
+    {
+      "path": "tests/source-packages/mtt/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "591ce20897b507388fdd22007e1b77895ba19c66",
+      "size": 1207,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/591ce20897b507388fdd22007e1b77895ba19c66"
+    },
+    {
+      "path": "tests/source-packages/newline-req-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f361bb1137d3d246d57334512625421f46ddcd12",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/f361bb1137d3d246d57334512625421f46ddcd12"
+    },
+    {
+      "path": "tests/source-packages/newline-req-1.0/newline_req",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67df32cdcb3123da0d68cb0984f52301446d319c",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/67df32cdcb3123da0d68cb0984f52301446d319c"
+    },
+    {
+      "path": "tests/source-packages/newline-req-1.0/newline_req/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e49527e38679ff3246c3a8bb979693f338ef7fb",
+      "size": 20,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/7e49527e38679ff3246c3a8bb979693f338ef7fb"
+    },
+    {
+      "path": "tests/source-packages/newline-req-1.0/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a7848a51cb7f0d3ecabce01cf0bcc27603f5a52",
+      "size": 115,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/9a7848a51cb7f0d3ecabce01cf0bcc27603f5a52"
+    },
+    {
+      "path": "tests/source-packages/newline-req-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70fa0a92c5a56cf816a425d4d144e7d26768d50c",
+      "size": 902,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/70fa0a92c5a56cf816a425d4d144e7d26768d50c"
+    },
+    {
+      "path": "tests/source-packages/path-exists-2.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ae3a6ffad1cf87607c1f2c7ba8db3a15cd5eed8",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/9ae3a6ffad1cf87607c1f2c7ba8db3a15cd5eed8"
+    },
+    {
+      "path": "tests/source-packages/path-exists-2.0/path-exists",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53c4e8e4f7b2d955e0d46b0518d89714cd933ad1",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/53c4e8e4f7b2d955e0d46b0518d89714cd933ad1"
+    },
+    {
+      "path": "tests/source-packages/path-exists-2.0/path-exists/package_metadata.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2059a46b515b80dd8c49a9ad4c3bf21097f4800",
+      "size": 23,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d2059a46b515b80dd8c49a9ad4c3bf21097f4800"
+    },
+    {
+      "path": "tests/source-packages/path-exists-2.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15e284e1c9245dc9019b4ea547459750f2dc975c",
+      "size": 303,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/15e284e1c9245dc9019b4ea547459750f2dc975c"
+    },
+    {
+      "path": "tests/source-packages/pint-0.6",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80d2018e41eec8414348e2696a7028e14dbdb762",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/80d2018e41eec8414348e2696a7028e14dbdb762"
+    },
+    {
+      "path": "tests/source-packages/pint-0.6/AUTHORS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cc58df83752123644fef39faab2393af643b1d2",
+      "size": 2,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3cc58df83752123644fef39faab2393af643b1d2"
+    },
+    {
+      "path": "tests/source-packages/pint-0.6/CHANGES",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "223b7836fb19fdf64ba2d3cd6173c6a283141f78",
+      "size": 2,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/223b7836fb19fdf64ba2d3cd6173c6a283141f78"
+    },
+    {
+      "path": "tests/source-packages/pint-0.6/README",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f70f10e4db19068f79bc43844b49f3eece45c4e8",
+      "size": 2,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/f70f10e4db19068f79bc43844b49f3eece45c4e8"
+    },
+    {
+      "path": "tests/source-packages/pint-0.6/pint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d1dcfdaf1a6857c5f83dc27019c7600e1ffaff8",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/9d1dcfdaf1a6857c5f83dc27019c7600e1ffaff8"
+    },
+    {
+      "path": "tests/source-packages/pint-0.6/pint/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/pint-0.6/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fdbec2e856cf762e0aaa5aac0c1af4e105cd3a8",
+      "size": 668,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/2fdbec2e856cf762e0aaa5aac0c1af4e105cd3a8"
+    },
+    {
+      "path": "tests/source-packages/pkg-with-cython-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef29ad63f300c171e3e2e383f97e519c83b594a5",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/ef29ad63f300c171e3e2e383f97e519c83b594a5"
+    },
+    {
+      "path": "tests/source-packages/pkg-with-cython-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "721af33a1f152d6117d4b8bae14dc7276a4e0f7c",
+      "size": 375,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/721af33a1f152d6117d4b8bae14dc7276a4e0f7c"
+    },
+    {
+      "path": "tests/source-packages/post-3.2.1-1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e80962c8df9cd3542878c969993437c2df026eb0",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/e80962c8df9cd3542878c969993437c2df026eb0"
+    },
+    {
+      "path": "tests/source-packages/post-3.2.1-1/PKG-INFO",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c60ee8c3fc7413102617f84f031e6f2f3e77bee9",
+      "size": 198,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c60ee8c3fc7413102617f84f031e6f2f3e77bee9"
+    },
+    {
+      "path": "tests/source-packages/post-3.2.1-1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3027b5541352cbd74954291d4612f99d49cca2cc",
+      "size": 322,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3027b5541352cbd74954291d4612f99d49cca2cc"
+    },
+    {
+      "path": "tests/source-packages/print-1.1.0b8",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e0bd626967c8367ee248f4b4b96e873d784d182",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/6e0bd626967c8367ee248f4b4b96e873d784d182"
+    },
+    {
+      "path": "tests/source-packages/print-1.1.0b8/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c62f682443a5325064b86238e1c1ab722bf69aac",
+      "size": 112,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c62f682443a5325064b86238e1c1ab722bf69aac"
+    },
+    {
+      "path": "tests/source-packages/psutil-5.6.2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a44017f46f5f118279d1d6475686a0822cfbf80",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/6a44017f46f5f118279d1d6475686a0822cfbf80"
+    },
+    {
+      "path": "tests/source-packages/psutil-5.6.2/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/psutil-5.6.2/psutil",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "422fc0001c8ab33f4c46d4becf0c06e7e1d60482",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/422fc0001c8ab33f4c46d4becf0c06e7e1d60482"
+    },
+    {
+      "path": "tests/source-packages/psutil-5.6.2/psutil/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2f6cb83766244131c7c7386be51240f2eb192c6",
+      "size": 333,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a2f6cb83766244131c7c7386be51240f2eb192c6"
+    },
+    {
+      "path": "tests/source-packages/psutil-5.6.2/psutil/_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b45417ae483d6527e91f0403415c6ca0a73115",
+      "size": 19624,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e3b45417ae483d6527e91f0403415c6ca0a73115"
+    },
+    {
+      "path": "tests/source-packages/psutil-5.6.2/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c77f17d99ef25d3bb25c6461e4c575b859874b4",
+      "size": 11430,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3c77f17d99ef25d3bb25c6461e4c575b859874b4"
+    },
+    {
+      "path": "tests/source-packages/pt-2.0.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7075782339b1dfae4788c0aab56e0e72327b3d81",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/7075782339b1dfae4788c0aab56e0e72327b3d81"
+    },
+    {
+      "path": "tests/source-packages/pt-2.0.0/README",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/pt-2.0.0/pathtools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52f6d3cfcf73176de41f156062f6800fa29ad274",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/52f6d3cfcf73176de41f156062f6800fa29ad274"
+    },
+    {
+      "path": "tests/source-packages/pt-2.0.0/pathtools/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/pt-2.0.0/pathtools/version.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93b91d3d4dbeebf71518139493c5df6df1aa37d1",
+      "size": 25,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/93b91d3d4dbeebf71518139493c5df6df1aa37d1"
+    },
+    {
+      "path": "tests/source-packages/pt-2.0.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d32524eabfc5432c5098ace078a94e64d8b7e818",
+      "size": 1749,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d32524eabfc5432c5098ace078a94e64d8b7e818"
+    },
+    {
+      "path": "tests/source-packages/ptl-2015.11.4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5992e64a76a959bb751fc3be1fb839c40ad6bed2",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/5992e64a76a959bb751fc3be1fb839c40ad6bed2"
+    },
+    {
+      "path": "tests/source-packages/ptl-2015.11.4/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/ptl-2015.11.4/ptl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a31ff8a2aae3c56623c09b0291ad3f68c4dd7c6",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/1a31ff8a2aae3c56623c09b0291ad3f68c4dd7c6"
+    },
+    {
+      "path": "tests/source-packages/ptl-2015.11.4/ptl/version.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e6a1e8a8ab649f73800b4865af05ed4d4c09df4",
+      "size": 182,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4e6a1e8a8ab649f73800b4865af05ed4d4c09df4"
+    },
+    {
+      "path": "tests/source-packages/ptl-2015.11.4/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6a6b0add9a50caeb9118db239e3d172716f63dd",
+      "size": 1294,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/f6a6b0add9a50caeb9118db239e3d172716f63dd"
+    },
+    {
+      "path": "tests/source-packages/pymc-2.3.6",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e802cade59f15ee1724af79afcdcfde42f9d7c55",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/e802cade59f15ee1724af79afcdcfde42f9d7c55"
+    },
+    {
+      "path": "tests/source-packages/pymc-2.3.6/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f73bf2b8c509843e9fbb77aac6b72740d6ef2ca",
+      "size": 3413,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/7f73bf2b8c509843e9fbb77aac6b72740d6ef2ca"
+    },
+    {
+      "path": "tests/source-packages/pyreadline-2.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "129e192a93b1b2d9d3d8bd92487f4d03f7352ebb",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/129e192a93b1b2d9d3d8bd92487f4d03f7352ebb"
+    },
+    {
+      "path": "tests/source-packages/pyreadline-2.1/pyreadline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5fb2f1cfa47d7ed45805d9f06affb9d6a62c99d",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/d5fb2f1cfa47d7ed45805d9f06affb9d6a62c99d"
+    },
+    {
+      "path": "tests/source-packages/pyreadline-2.1/pyreadline/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/pyreadline-2.1/pyreadline/release.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a251a8bea2e148282e1a95adc70eb7edd072b27a",
+      "size": 632,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a251a8bea2e148282e1a95adc70eb7edd072b27a"
+    },
+    {
+      "path": "tests/source-packages/pyreadline-2.1/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4396103b473d034a063177fea6e7feab554f8da",
+      "size": 1246,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c4396103b473d034a063177fea6e7feab554f8da"
+    },
+    {
+      "path": "tests/source-packages/relative-import-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "772c377592d4f935ff0e74766103603eefa8359b",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/772c377592d4f935ff0e74766103603eefa8359b"
+    },
+    {
+      "path": "tests/source-packages/relative-import-1.0/relative_import",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9be3fe7291eade3c707afd873c3033a3e0f6140d",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/9be3fe7291eade3c707afd873c3033a3e0f6140d"
+    },
+    {
+      "path": "tests/source-packages/relative-import-1.0/relative_import/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8e117fecf6276af5d558407b98ef0937b97a476",
+      "size": 29,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c8e117fecf6276af5d558407b98ef0937b97a476"
+    },
+    {
+      "path": "tests/source-packages/relative-import-1.0/relative_import/builder.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/relative-import-1.0/relative_import/requirer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e85fe2492322dac0b6eb24d200e83de7bccd0f88",
+      "size": 54,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e85fe2492322dac0b6eb24d200e83de7bccd0f88"
+    },
+    {
+      "path": "tests/source-packages/relative-import-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcd55c16cbd1bb8866618170380414faf84362ad",
+      "size": 127,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/dcd55c16cbd1bb8866618170380414faf84362ad"
+    },
+    {
+      "path": "tests/source-packages/reloader-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5387c8d6e85bc07f7c96e4047274c0858284ec25",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/5387c8d6e85bc07f7c96e4047274c0858284ec25"
+    },
+    {
+      "path": "tests/source-packages/reloader-1.0/reloader",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67df32cdcb3123da0d68cb0984f52301446d319c",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/67df32cdcb3123da0d68cb0984f52301446d319c"
+    },
+    {
+      "path": "tests/source-packages/reloader-1.0/reloader/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e49527e38679ff3246c3a8bb979693f338ef7fb",
+      "size": 20,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/7e49527e38679ff3246c3a8bb979693f338ef7fb"
+    },
+    {
+      "path": "tests/source-packages/reloader-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa22d9571732df3d2e639d4a0d642defabd9bf82",
+      "size": 233,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/fa22d9571732df3d2e639d4a0d642defabd9bf82"
+    },
+    {
+      "path": "tests/source-packages/scapy-2.4.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dffa986e8763d9d552f3eff7867fda681c3fed73",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/dffa986e8763d9d552f3eff7867fda681c3fed73"
+    },
+    {
+      "path": "tests/source-packages/scapy-2.4.0/scapy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d935b503bba3648fb3f99edc4e9fdd817d97d0bd",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/d935b503bba3648fb3f99edc4e9fdd817d97d0bd"
+    },
+    {
+      "path": "tests/source-packages/scapy-2.4.0/scapy/VERSION",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9183195ace754fcdd6f1c474b04618f222bf6f71",
+      "size": 5,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/9183195ace754fcdd6f1c474b04618f222bf6f71"
+    },
+    {
+      "path": "tests/source-packages/scapy-2.4.0/scapy/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f38578082867078af4a8a149a0e71b2abd9409f",
+      "size": 2972,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4f38578082867078af4a8a149a0e71b2abd9409f"
+    },
+    {
+      "path": "tests/source-packages/scapy-2.4.0/setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "609d6dfa9b03b8bde5e94b3201feb96f22579052",
+      "size": 85,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/609d6dfa9b03b8bde5e94b3201feb96f22579052"
+    },
+    {
+      "path": "tests/source-packages/scapy-2.4.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf4997e070381bbf5f87fab504be35d90eb6749f",
+      "size": 2953,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/cf4997e070381bbf5f87fab504be35d90eb6749f"
+    },
+    {
+      "path": "tests/source-packages/setup-cfg-0.2.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6eb87275ab1f7b7e36c0bbe3c300542713e6ecc2",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/6eb87275ab1f7b7e36c0bbe3c300542713e6ecc2"
+    },
+    {
+      "path": "tests/source-packages/setup-cfg-0.2.0/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/setup-cfg-0.2.0/setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a308cb5b48ed217fd4b593aa8038122ee07d89a6",
+      "size": 561,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a308cb5b48ed217fd4b593aa8038122ee07d89a6"
+    },
+    {
+      "path": "tests/source-packages/setup-cfg-0.2.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26008531ba65c5addac11ac518f298c329176c37",
+      "size": 108,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/26008531ba65c5addac11ac518f298c329176c37"
+    },
+    {
+      "path": "tests/source-packages/setup-with-flask-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "834f47912c1c3f91568e4e35e67cd6c1389712d9",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/834f47912c1c3f91568e4e35e67cd6c1389712d9"
+    },
+    {
+      "path": "tests/source-packages/setup-with-flask-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e0fa064585eed05d2ee571382d6d4c0d4bf5189",
+      "size": 99,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3e0fa064585eed05d2ee571382d6d4c0d4bf5189"
+    },
+    {
+      "path": "tests/source-packages/setup-with-tenacity-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "86f19f6813745c42f66b5b44183fb28d45ddd631",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/86f19f6813745c42f66b5b44183fb28d45ddd631"
+    },
+    {
+      "path": "tests/source-packages/setup-with-tenacity-1.0/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8816ea34387c2a7a43078e27c0e0a7cbd5ea66d8",
+      "size": 118,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/8816ea34387c2a7a43078e27c0e0a7cbd5ea66d8"
+    },
+    {
+      "path": "tests/source-packages/setup-with-tenacity-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76e4f4136c8c601347ce037681164509336ee6a4",
+      "size": 105,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/76e4f4136c8c601347ce037681164509336ee6a4"
+    },
+    {
+      "path": "tests/source-packages/setup-with-tenacity-tornado-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4d9ef1946a3c23e38c2629b9b55d2d8936a7f00",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/d4d9ef1946a3c23e38c2629b9b55d2d8936a7f00"
+    },
+    {
+      "path": "tests/source-packages/setup-with-tenacity-tornado-1.0/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86832c0233a0afd49b2d9f3d3c096df3fca70a57",
+      "size": 129,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/86832c0233a0afd49b2d9f3d3c096df3fca70a57"
+    },
+    {
+      "path": "tests/source-packages/setup-with-tenacity-tornado-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b786d671909ab0a19fa503199db182052442c78",
+      "size": 128,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4b786d671909ab0a19fa503199db182052442c78"
+    },
+    {
+      "path": "tests/source-packages/spec-loading-1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c58d02c6fb1800dff0d6a40ddf1c52270c55f356",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/c58d02c6fb1800dff0d6a40ddf1c52270c55f356"
+    },
+    {
+      "path": "tests/source-packages/spec-loading-1.0/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/spec-loading-1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72944b050da04996962c65f9a535bb92ebf3d63b",
+      "size": 913,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/72944b050da04996962c65f9a535bb92ebf3d63b"
+    },
+    {
+      "path": "tests/source-packages/spec-loading-1.0/spec",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54f8b20d5d260bb9ca57b706e10004c10aef1e75",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/54f8b20d5d260bb9ca57b706e10004c10aef1e75"
+    },
+    {
+      "path": "tests/source-packages/spec-loading-1.0/spec/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11b1ed7d31af08b32040f78bdf287b4b76b1e17c",
+      "size": 271,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/11b1ed7d31af08b32040f78bdf287b4b76b1e17c"
+    },
+    {
+      "path": "tests/source-packages/spec-loading-1.0/spec/_constants.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d841a5f94be47720bddaf0a7a03b0ce582cfae0",
+      "size": 177,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3d841a5f94be47720bddaf0a7a03b0ce582cfae0"
+    },
+    {
+      "path": "tests/source-packages/svn-0.3.46",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a44230fc99207ad401ca5925c86cf62fdb51af8c",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/a44230fc99207ad401ca5925c86cf62fdb51af8c"
+    },
+    {
+      "path": "tests/source-packages/svn-0.3.46/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec66c1f44e98b9acfc8a8ae42a1f286a02c9b6ea",
+      "size": 817,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ec66c1f44e98b9acfc8a8ae42a1f286a02c9b6ea"
+    },
+    {
+      "path": "tests/source-packages/svn-0.3.46/svn",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "882b740661088675dfc4bf9e07edba7efd4ba996",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/882b740661088675dfc4bf9e07edba7efd4ba996"
+    },
+    {
+      "path": "tests/source-packages/svn-0.3.46/svn/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f63465bab6b676742a23125088b15796c24ab718",
+      "size": 23,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/f63465bab6b676742a23125088b15796c24ab718"
+    },
+    {
+      "path": "tests/source-packages/svn-0.3.46/svn/resources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f41411db57f3442220c8e3b2d23ad325477d594",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/8f41411db57f3442220c8e3b2d23ad325477d594"
+    },
+    {
+      "path": "tests/source-packages/svn-0.3.46/svn/resources/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/svn-0.3.46/svn/resources/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd887a7742526be871b40cc22f6c24ed03023dc1",
+      "size": 26,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/cd887a7742526be871b40cc22f6c24ed03023dc1"
+    },
+    {
+      "path": "tests/source-packages/svn-0.3.46/svn/resources/unicode_test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ee5ab7267fa3408c4930d035bc428cac8a4ef3a",
+      "size": 328,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/3ee5ab7267fa3408c4930d035bc428cac8a4ef3a"
+    },
+    {
+      "path": "tests/source-packages/tar-1.0.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ae29b4630b4fdfec6851a1a233e90a89a818deb",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/9ae29b4630b4fdfec6851a1a233e90a89a818deb"
+    },
+    {
+      "path": "tests/source-packages/tar-1.0.0/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "640e3d44a607d98dd8355cfc73c20ec6b88e255f",
+      "size": 13,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/640e3d44a607d98dd8355cfc73c20ec6b88e255f"
+    },
+    {
+      "path": "tests/source-packages/tar-1.0.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d64cfbe69c7e93d2cd3ce264ba6308ed92b535aa",
+      "size": 134,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d64cfbe69c7e93d2cd3ce264ba6308ed92b535aa"
+    },
+    {
+      "path": "tests/source-packages/tar-1.0.0/tar",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec31374c2a1532af565b54464f0c3df3b7741213",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/ec31374c2a1532af565b54464f0c3df3b7741213"
+    },
+    {
+      "path": "tests/source-packages/tar-1.0.0/tar/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3bb74bd979363674d754c67f350f8b8ea96da41",
+      "size": 22,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d3bb74bd979363674d754c67f350f8b8ea96da41"
+    },
+    {
+      "path": "tests/source-packages/tar-utf8-1.1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c3b612ef05beb250c1ac6781e0adddf3a396083",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/6c3b612ef05beb250c1ac6781e0adddf3a396083"
+    },
+    {
+      "path": "tests/source-packages/tar-utf8-1.1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "452c82a782e083dc32d25bc1aa362bee07fc720d",
+      "size": 148,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/452c82a782e083dc32d25bc1aa362bee07fc720d"
+    },
+    {
+      "path": "tests/source-packages/tar-utf8-1.1.0/tar-utf8",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2eebdd76abe63e7db76937a0c88ca767ea530ec0",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/2eebdd76abe63e7db76937a0c88ca767ea530ec0"
+    },
+    {
+      "path": "tests/source-packages/tar-utf8-1.1.0/tar-utf8/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dece74735a8016cb03715c0237eff996b189b0c6",
+      "size": 22,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/dece74735a8016cb03715c0237eff996b189b0c6"
+    },
+    {
+      "path": "tests/source-packages/termcolor-1.1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74963de408b76cd6d8ea14ed5993222c81a700f1",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/74963de408b76cd6d8ea14ed5993222c81a700f1"
+    },
+    {
+      "path": "tests/source-packages/termcolor-1.1.0/CHANGES.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/termcolor-1.1.0/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/termcolor-1.1.0/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bd3983ce3f4c3efed2316316c1c87bad74fd532",
+      "size": 629,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4bd3983ce3f4c3efed2316316c1c87bad74fd532"
+    },
+    {
+      "path": "tests/source-packages/termcolor-1.1.0/termcolor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fc95aa5e9f38ede95b6aa1bc8e8c84335ab694e",
+      "size": 69,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/8fc95aa5e9f38ede95b6aa1bc8e8c84335ab694e"
+    },
+    {
+      "path": "tests/source-packages/tinyrpc-1.0.4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c11e25467d8e14531904464ca7553d9a6d321db",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/0c11e25467d8e14531904464ca7553d9a6d321db"
+    },
+    {
+      "path": "tests/source-packages/tinyrpc-1.0.4/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "519d31222419c5a48f39dd605ae15346adb9a000",
+      "size": 204,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/519d31222419c5a48f39dd605ae15346adb9a000"
+    },
+    {
+      "path": "tests/source-packages/version-writer-1.2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33fd3e7557897163d0343c4bbded9502883aed1c",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/33fd3e7557897163d0343c4bbded9502883aed1c"
+    },
+    {
+      "path": "tests/source-packages/version-writer-1.2/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4860b59ccaea35cc6a694f20db1f64237d92051b",
+      "size": 458,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/4860b59ccaea35cc6a694f20db1f64237d92051b"
+    },
+    {
+      "path": "tests/source-packages/version-writer-1.2/version_writer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "615dc78f5c860524e9788874cee9204a345cdbfd",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/615dc78f5c860524e9788874cee9204a345cdbfd"
+    },
+    {
+      "path": "tests/source-packages/version-writer-1.2/version_writer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/version-writer-1.2/version_writer/version.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64477cf29211637d0eddbb4f4004ba5a337aab48",
+      "size": 20,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/64477cf29211637d0eddbb4f4004ba5a337aab48"
+    },
+    {
+      "path": "tests/source-packages/wuc-0.5",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "406b8eafcc3e16fc18c90af8f161bc2642989746",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/406b8eafcc3e16fc18c90af8f161bc2642989746"
+    },
+    {
+      "path": "tests/source-packages/wuc-0.5/README.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/source-packages/wuc-0.5/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e44429dfe0d2a517bd461e05a619e9758d1dd139",
+      "size": 401,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e44429dfe0d2a517bd461e05a619e9758d1dd139"
+    },
+    {
+      "path": "tests/test_cmdline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d66dc138f3e02246cb6be06a020167e58c931669",
+      "size": 3876,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d66dc138f3e02246cb6be06a020167e58c931669"
+    },
+    {
+      "path": "tests/test_compile.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4144146ecc910976abe768ed2d2ddc047a8c992",
+      "size": 7604,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/d4144146ecc910976abe768ed2d2ddc047a8c992"
+    },
+    {
+      "path": "tests/test_dists.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3d51dabbe6ff94291994a1432a36e168c0e8a17",
+      "size": 5138,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/c3d51dabbe6ff94291994a1432a36e168c0e8a17"
+    },
+    {
+      "path": "tests/test_extractor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba749a8683a293d8c45ea9de63b6ad9a048d0dad",
+      "size": 1851,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ba749a8683a293d8c45ea9de63b6ad9a048d0dad"
+    },
+    {
+      "path": "tests/test_merge_requirements.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d6e1251916e0384b08e52eed45010beadc504d5",
+      "size": 2809,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/1d6e1251916e0384b08e52eed45010beadc504d5"
+    },
+    {
+      "path": "tests/test_metadata.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1ed0ba7069feed566a29ac8694b3c0a36166abe",
+      "size": 9528,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a1ed0ba7069feed566a29ac8694b3c0a36166abe"
+    },
+    {
+      "path": "tests/test_repositories.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18fc91cdfcbf2415abb43e75d580bb8c47affb69",
+      "size": 1774,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/18fc91cdfcbf2415abb43e75d580bb8c47affb69"
+    },
+    {
+      "path": "tests/test_versions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84712fddbdd1383adf682afc947ef1fa3494b256",
+      "size": 1665,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/84712fddbdd1383adf682afc947ef1fa3494b256"
+    },
+    {
+      "path": "tests/two-ref-violated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e024e4f51aad0874559406e4d31479df2b7c015a",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/e024e4f51aad0874559406e4d31479df2b7c015a"
+    },
+    {
+      "path": "tests/two-ref-violated/pytest-4.4.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/walk-back",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3065d2cb744bc6818c9da9e0d90f6da10a37c066",
+      "url": "https://api.github.com/repos/periareon/req-compile/git/trees/3065d2cb744bc6818c9da9e0d90f6da10a37c066"
+    },
+    {
+      "path": "tests/walk-back/a-3.6.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecb80235700a5a6615aeee68e3fcc2fac2f9abda",
+      "size": 186,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/ecb80235700a5a6615aeee68e3fcc2fac2f9abda"
+    },
+    {
+      "path": "tests/walk-back/a-4.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a88bc7caccab9d445e139eee89149467627269a3",
+      "size": 186,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/a88bc7caccab9d445e139eee89149467627269a3"
+    },
+    {
+      "path": "tests/walk-back/b-1.0.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcbd85ef90d444bf35dbfadc8419fdbce90c8157",
+      "size": 208,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/fcbd85ef90d444bf35dbfadc8419fdbce90c8157"
+    },
+    {
+      "path": "tests/walk-back/b-1.1.METADATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fa56863158b6b16bda2a29e8f337c8dfcd8da2a",
+      "size": 208,
+      "url": "https://api.github.com/repos/periareon/req-compile/git/blobs/7fa56863158b6b16bda2a29e8f337c8dfcd8da2a"
+    }
+  ]
+}

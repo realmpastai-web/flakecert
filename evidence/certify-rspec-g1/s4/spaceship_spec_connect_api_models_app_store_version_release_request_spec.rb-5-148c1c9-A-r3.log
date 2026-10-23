@@ -1,0 +1,28 @@
++ logical=rspec --seed 48174 './spaceship/spec/connect_api/models/capabilities_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb[1:1:1]'
++ rspec_argv_len=316
++ rspec_argv_n=11
++ docker_argv_len=604
++ docker_argv_n=28
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-head/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04:/src -v /tmp/flakecert-g1-1019/work/rspec-json:/out -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --format documentation --no-color --seed 48174 './spaceship/spec/connect_api/models/capabilities_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb[1:1:1]' --format json --out /out/spaceship_spec_connect_api_models_app_store_version_release_request_spec.rb-5-148c1c9-A-r3.json
+elapsed_s=3.092
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:ids=>{"./spaceship/spec/connect_api/models/capabilities_spec.rb"=>["1:1:1"], "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb"=>["1:1:1"]}}
+
+Randomized with seed 48174
+
+Spaceship::ConnectAPI::Capabilities
+  #client
+    #get_available_bundle_id_capabilities
+
+Spaceship::ConnectAPI::AppStoreVersionReleaseRequest
+  #Spaceship::ConnectAPI
+    #post_app_store_version_release_request
+
+Finished in 0.30997 seconds (files took 1.66 seconds to load)
+2 examples, 0 failures
+
+Randomized with seed 48174
+
+docker_exit=0

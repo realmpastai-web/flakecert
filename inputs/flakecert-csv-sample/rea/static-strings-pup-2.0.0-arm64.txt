@@ -1,0 +1,9 @@
+pup sha256 3bff9a3d76e4aabe782032bb188159e7044be515a3e81e892078bc55dfa68b0d bytes 89645880
+'Search CI test events' FOUND at 51151406
+'failed to search test events' FOUND at 50663445
+'Maximum results' FOUND at 51125930
+'-timestamp' FOUND at 50677332
+'/api/v2/ci/tests/events/search' FOUND at 50634174
+'Render JSON through pup' FOUND at 51074273
+'echo \'[{"id":1}]\' | pup format --output csv' FOUND at 51074740
+'datadog-api-client' FOUND at 50615431

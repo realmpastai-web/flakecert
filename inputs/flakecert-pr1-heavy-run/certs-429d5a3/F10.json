@@ -1,0 +1,68 @@
+{
+  "id": "F10",
+  "project": "https://github.com/stfc/fparser",
+  "sha": "4be91d2e1078fa5588e84a3299131f297afba675",
+  "pytest_id": "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf",
+  "node_id": "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf",
+  "image_digest": "sha256:41246081a7c7235f9b21bc4eb467dc09fb5d7cb500850cd8b11b0d0b4a71ac11",
+  "image_tag": "flakecert:F10",
+  "pip_freeze_sha": "677d34269b7441582bb830e901cddd3c00a7f26d768954adc41b36a97073f4c6",
+  "flakecert_version": "0.2.0",
+  "python": "3.11.17",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 3,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf",
+        "src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": ""
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "AssertionError",
+    "sig": "976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 1,
+    "empirical_rate": "1",
+    "compare": "empirical>=lower"
+  }
+}

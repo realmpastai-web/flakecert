@@ -1,0 +1,233 @@
+# DataDog/pup v2.0.0 (tag commit 5c4d24534ab3123c782ba9ad2742b36f53308412, Apache-2.0) excerpts
+
+## src/output.rs lines 1485-1505
+  1485	fn flatten_deep(
+  1486	    value: &serde_json::Value,
+  1487	    prefix: &str,
+  1488	    out: &mut serde_json::Map<String, serde_json::Value>,
+  1489	) {
+  1490	    match value {
+  1491	        serde_json::Value::Object(map) => {
+  1492	            for (k, v) in map {
+  1493	                let key = if prefix.is_empty() {
+  1494	                    k.clone()
+  1495	                } else {
+  1496	                    format!("{prefix}.{k}")
+  1497	                };
+  1498	                flatten_deep(v, &key, out);
+  1499	            }
+  1500	        }
+  1501	        _ => {
+  1502	            out.insert(prefix.to_string(), value.clone());
+  1503	        }
+  1504	    }
+  1505	}
+
+## src/output.rs lines 1507-1526
+  1507	/// Escape a single CSV field: wrap in quotes if it contains commas, quotes, or newlines.
+  1508	/// Double any embedded double-quote characters.
+  1509	fn csv_escape(s: &str) -> String {
+  1510	    if s.contains(',') || s.contains('"') || s.contains('\n') || s.contains('\r') {
+  1511	        format!("\"{}\"", s.replace('"', "\"\""))
+  1512	    } else {
+  1513	        s.to_string()
+  1514	    }
+  1515	}
+  1516	
+  1517	/// Render a JSON value as a plain string for CSV output (no truncation).
+  1518	fn csv_cell(value: Option<&serde_json::Value>) -> String {
+  1519	    match value {
+  1520	        None | Some(serde_json::Value::Null) => String::new(),
+  1521	        Some(serde_json::Value::String(s)) => s.clone(),
+  1522	        Some(serde_json::Value::Number(n)) => n.to_string(),
+  1523	        Some(serde_json::Value::Bool(b)) => b.to_string(),
+  1524	        Some(other) => other.to_string(),
+  1525	    }
+  1526	}
+
+## src/output.rs lines 1556-1653
+  1556	/// Rows for CSV/TSV, chosen exactly like the table: the command's `rows_at` /
+  1557	/// `row_at` hints, the JSON:API `data` array for generic output, and the
+  1558	/// `--jq` result as-is.
+  1559	fn delimited_rows<'a>(
+  1560	    data: &'a serde_json::Value,
+  1561	    table_input: TableInput<'_>,
+  1562	) -> Result<Vec<&'a serde_json::Value>> {
+  1563	    let selected = select_table_data(data, table_input)?;
+  1564	    let rows = match selected {
+  1565	        serde_json::Value::Array(arr) => arr.iter().collect(),
+  1566	        serde_json::Value::Object(_) => vec![selected],
+  1567	        _ => vec![],
+  1568	    };
+  1569	    select_table_rows(rows, table_input)
+  1570	}
+  1571	
+  1572	/// Render rows as CSV or TSV. Without column hints every field is flattened to
+  1573	/// a dot-notation column; with the command's columns (as for the table) only
+  1574	/// those columns are printed, in that order.
+  1575	fn format_delimited(
+  1576	    data: &serde_json::Value,
+  1577	    output_order: OutputOrder,
+  1578	    table_input: TableInput<'_>,
+  1579	    kind: Delimited,
+  1580	) -> Result<String> {
+  1581	    let raw_rows = delimited_rows(data, table_input)?;
+  1582	    if raw_rows.is_empty() {
+  1583	        return Ok(String::new());
+  1584	    }
+  1585	
+  1586	    let requested = table_input
+  1587	        .options()
+  1588	        .map(|options| options.columns)
+  1589	        .unwrap_or_default();
+  1590	    let (headers, cells): (Vec<String>, Vec<Vec<String>>) = if requested.is_empty() {
+  1591	        let flat_rows: Vec<serde_json::Map<String, serde_json::Value>> = raw_rows
+  1592	            .iter()
+  1593	            .map(|r| {
+  1594	                let mut out = serde_json::Map::new();
+  1595	                flatten_deep(r, "", &mut out);
+  1596	                out
+  1597	            })
+  1598	            .collect();
+  1599	        let mut header_set = std::collections::HashSet::new();
+  1600	        let mut headers: Vec<String> = Vec::new();
+  1601	        for row in &flat_rows {
+  1602	            for key in row.keys() {
+  1603	                if header_set.insert(key.clone()) {
+  1604	                    headers.push(key.clone());
+  1605	                }
+  1606	            }
+  1607	        }
+  1608	        if output_order == OutputOrder::Default {
+  1609	            headers.sort();
+  1610	        }
+  1611	        let cells = flat_rows
+  1612	            .iter()
+  1613	            .map(|row| {
+  1614	                headers
+  1615	                    .iter()
+  1616	                    .map(|h| csv_cell(row.get(h.as_str())))
+  1617	                    .collect()
+  1618	            })
+  1619	            .collect();
+  1620	        (headers, cells)
+  1621	    } else {
+  1622	        let headers = select_requested_headers(&raw_rows, requested)?;
+  1623	        let cells = raw_rows
+  1624	            .iter()
+  1625	            .map(|row| {
+  1626	                headers
+  1627	                    .iter()
+  1628	                    .map(|h| csv_cell(flattened_value(row, h)))
+  1629	                    .collect()
+  1630	            })
+  1631	            .collect();
+  1632	        (headers, cells)
+  1633	    };
+  1634	
+  1635	    let join = |fields: Vec<String>| {
+  1636	        fields
+  1637	            .iter()
+  1638	            .map(|f| kind.escape(f))
+  1639	            .collect::<Vec<_>>()
+  1640	            .join(kind.separator())
+  1641	    };
+  1642	    let mut lines = vec![join(headers)];
+  1643	    lines.extend(cells.into_iter().map(join));
+  1644	    Ok(lines.join("\n"))
+  1645	}
+  1646	
+  1647	fn print_csv(data: &serde_json::Value, table_input: TableInput<'_>) -> Result<()> {
+  1648	    let rendered = format_delimited(data, OutputOrder::Default, table_input, Delimited::Csv)?;
+  1649	    if !rendered.is_empty() {
+  1650	        println!("{rendered}");
+  1651	    }
+  1652	    Ok(())
+  1653	}
+
+## src/output.rs lines 1663-1668
+  1663	fn unwrap_data(value: &serde_json::Value) -> &serde_json::Value {
+  1664	    match value {
+  1665	        serde_json::Value::Object(map) => map.get("data").map(unwrap_data).unwrap_or(value),
+  1666	        _ => value,
+  1667	    }
+  1668	}
+
+## src/output.rs lines 437-452
+   437	pub fn unwrap_envelope(value: &serde_json::Value) -> Option<(serde_json::Value, Metadata)> {
+   438	    let obj = value.as_object()?;
+   439	    if obj.get("status")?.as_str()? != "success" || !obj.contains_key("data") {
+   440	        return None;
+   441	    }
+   442	    let metadata = obj.get("metadata")?;
+   443	    metadata.get("truncated")?.as_bool()?;
+   444	    let meta: Metadata = serde_json::from_value(metadata.clone()).ok()?;
+   445	    let mut rest = obj.clone();
+   446	    rest.remove("status");
+   447	    rest.remove("metadata");
+   448	    let body = if rest.len() == 1 {
+   449	        rest.remove("data").unwrap_or_default()
+   450	    } else {
+   451	        serde_json::Value::Object(rest)
+   452	    };
+
+## src/commands/cicd.rs lines 180-208
+   180	
+   181	pub async fn tests_search(
+   182	    cfg: &Config,
+   183	    query: String,
+   184	    from: String,
+   185	    to: String,
+   186	    limit: i32,
+   187	) -> Result<()> {
+   188	    let api = crate::make_api!(CIVisibilityTestsAPI, cfg);
+   189	
+   190	    let from_str = util_ext::parse_time_to_datetime(&from)?.to_rfc3339();
+   191	    let to_str = util_ext::parse_time_to_datetime(&to)?.to_rfc3339();
+   192	
+   193	    let filter = CIAppTestsQueryFilter::new()
+   194	        .from(from_str)
+   195	        .to(to_str)
+   196	        .query(query);
+   197	
+   198	    let body = CIAppTestEventsRequest::new()
+   199	        .filter(filter)
+   200	        .page(CIAppQueryPageOptions::new().limit(limit))
+   201	        .sort(CIAppSort::TIMESTAMP_DESCENDING);
+   202	
+   203	    let params = SearchCIAppTestEventsOptionalParams::default().body(body);
+   204	    let resp = api
+   205	        .search_ci_app_test_events(params)
+   206	        .await
+   207	        .map_err(|e| anyhow::anyhow!("failed to search test events: {e:?}"))?;
+   208	    formatter::output(cfg, &resp)
+
+## src/main.rs lines 7833-7843
+  7833	    /// Search CI test events
+  7834	    Search {
+  7835	        #[arg(long, help = "Search query (required)")]
+  7836	        query: String,
+  7837	        #[arg(long, default_value = "1h", help = "Start time")]
+  7838	        from: String,
+  7839	        #[arg(long, default_value = "now", help = "End time")]
+  7840	        to: String,
+  7841	        #[arg(long, default_value_t = 50, help = "Maximum results")]
+  7842	        limit: i32,
+  7843	    },
+
+## src/main.rs lines 1562-1573
+  1562	    /// Render JSON through pup's formatter
+  1563	    ///
+  1564	    /// Reads a JSON document from stdin (or --input FILE) and prints it using the
+  1565	    /// configured output format (--output, or $DD_OUTPUT / $PUP_OUTPUT). Lets an
+  1566	    /// extension in any language reuse pup's table/yaml/csv/tsv rendering instead
+  1567	    /// of reimplementing it.
+  1568	    ///
+  1569	    /// EXAMPLES:
+  1570	    ///   pup api v2/monitors | pup format --output table
+  1571	    ///   pup api v1/monitor/search | pup format --rows-at /monitors --columns id,name,status
+  1572	    ///   echo '[{"id":1}]' | pup format --output csv
+  1573	    #[cfg(not(target_arch = "wasm32"))]
+
+## Cargo.toml lines 84-84
+    84	serde_json = { version = "1", features = ["preserve_order", "unbounded_depth"] }

@@ -1,0 +1,260 @@
+W, [2026-10-20T06:21:35.154009 #135295]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Test environment set up in 0.35883868699602317 seconds
+
+CiJobTokenScopeRemoveProject
+  # order defined
+  when unauthorized
+    when not a maintainer
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+      has graphql errors
+  when authorized
+    removes the target project from the job token scope
+    behaves like authorizing granular token permissions for GraphQL
+      when authenticating with a legacy personal access token
+        behaves like granting access
+          grants access
+        when namespace enforces granular tokens
+          behaves like denying access
+            denies access (PENDING: namespace has no top-level group)
+      when authenticating with a granular personal access token
+        behaves like granting access
+          grants access
+        when the `granular_personal_access_tokens` feature flag is disabled
+          behaves like denying access
+            denies access
+        when an authorizing granular scope is missing
+          behaves like denying access
+            denies access
+    when invalid target project is provided
+      has mutation errors
+    when user has no access to target project
+      removes the project from the allowlist
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) CiJobTokenScopeRemoveProject when authorized behaves like authorizing granular token permissions for GraphQL when authenticating with a legacy personal access token when namespace enforces granular tokens behaves like denying access denies access
+     # namespace has no top-level group
+     # ./spec/support/shared_examples/authz/granular_token_permissions_shared_examples.rb:35
+
+Finished in 21.14 seconds (files took 1 minute 5.6 seconds to load)
+9 examples, 0 failures, 1 pending
+
+[TEST PROF INFO] Time spent in factories: 00:07.395 (18.52% of total time)
+LABKIT_LOGGING_OFFENSE: {"callsite":"Labkit::Context","lineno":0,"deprecated_field":"meta.user","standard_field":"gl_user_name","logger_class":"*"}
+LABKIT_LOGGING_OFFENSE: {"callsite":"lib/gitlab/graphql/tracers/instrumentation_tracer.rb","lineno":121,"deprecated_field":"graphql_errors","standard_field":"error_message","logger_class":"Gitlab::GraphqlLogger"}
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+DEPRECATION WARNING: The asset "no_avatar.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from default_avatar_url at /gitlab/lib/gitlab/gon_helper.rb:205)
+DEPRECATION WARNING: The asset "gitlab_logo.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from add_gon_variables at /gitlab/lib/gitlab/gon_helper.rb:44)
+DEPRECATION WARNING: The asset "icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_icon_path at /gitlab/app/helpers/icons_helper.rb:34)
+DEPRECATION WARNING: The asset "file_icons/file_icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_file_icons_path at /gitlab/app/helpers/icons_helper.rb:42)
+DEPRECATION WARNING: The asset "illustrations.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from illustrations_path at /gitlab/app/helpers/icons_helper.rb:50)
+DEPRECATION WARNING: The asset "emoji_sprites.css" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from universal_path_to_stylesheet at /gitlab/app/helpers/vite_helper.rb:53)
+DEPRECATION WARNING: The asset "no_avatar.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from default_avatar_url at /gitlab/lib/gitlab/gon_helper.rb:205)
+DEPRECATION WARNING: The asset "gitlab_logo.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from add_gon_variables at /gitlab/lib/gitlab/gon_helper.rb:44)
+DEPRECATION WARNING: The asset "file_icons/file_icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_file_icons_path at /gitlab/app/helpers/icons_helper.rb:42)
+DEPRECATION WARNING: The asset "emoji_sprites.css" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from universal_path_to_stylesheet at /gitlab/app/helpers/vite_helper.rb:53)
+DEPRECATION WARNING: The asset "no_avatar.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from default_avatar_url at /gitlab/lib/gitlab/gon_helper.rb:205)
+DEPRECATION WARNING: The asset "gitlab_logo.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from add_gon_variables at /gitlab/lib/gitlab/gon_helper.rb:44)
+DEPRECATION WARNING: The asset "file_icons/file_icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_file_icons_path at /gitlab/app/helpers/icons_helper.rb:42)
+DEPRECATION WARNING: The asset "emoji_sprites.css" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from universal_path_to_stylesheet at /gitlab/app/helpers/vite_helper.rb:53)
+DEPRECATION WARNING: The asset "no_avatar.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from default_avatar_url at /gitlab/lib/gitlab/gon_helper.rb:205)
+DEPRECATION WARNING: The asset "gitlab_logo.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from add_gon_variables at /gitlab/lib/gitlab/gon_helper.rb:44)
+DEPRECATION WARNING: The asset "file_icons/file_icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_file_icons_path at /gitlab/app/helpers/icons_helper.rb:42)
+DEPRECATION WARNING: The asset "emoji_sprites.css" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from universal_path_to_stylesheet at /gitlab/app/helpers/vite_helper.rb:53)
+DEPRECATION WARNING: The asset "no_avatar.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from default_avatar_url at /gitlab/lib/gitlab/gon_helper.rb:205)
+DEPRECATION WARNING: The asset "gitlab_logo.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from add_gon_variables at /gitlab/lib/gitlab/gon_helper.rb:44)
+DEPRECATION WARNING: The asset "file_icons/file_icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_file_icons_path at /gitlab/app/helpers/icons_helper.rb:42)
+DEPRECATION WARNING: The asset "emoji_sprites.css" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from universal_path_to_stylesheet at /gitlab/app/helpers/vite_helper.rb:53)
+DEPRECATION WARNING: The asset "no_avatar.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from default_avatar_url at /gitlab/lib/gitlab/gon_helper.rb:205)
+DEPRECATION WARNING: The asset "gitlab_logo.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from add_gon_variables at /gitlab/lib/gitlab/gon_helper.rb:44)
+DEPRECATION WARNING: The asset "file_icons/file_icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_file_icons_path at /gitlab/app/helpers/icons_helper.rb:42)
+DEPRECATION WARNING: The asset "emoji_sprites.css" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from universal_path_to_stylesheet at /gitlab/app/helpers/vite_helper.rb:53)
+DEPRECATION WARNING: The asset "no_avatar.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from default_avatar_url at /gitlab/lib/gitlab/gon_helper.rb:205)
+DEPRECATION WARNING: The asset "gitlab_logo.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from add_gon_variables at /gitlab/lib/gitlab/gon_helper.rb:44)
+DEPRECATION WARNING: The asset "file_icons/file_icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_file_icons_path at /gitlab/app/helpers/icons_helper.rb:42)
+DEPRECATION WARNING: The asset "emoji_sprites.css" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from universal_path_to_stylesheet at /gitlab/app/helpers/vite_helper.rb:53)
+DEPRECATION WARNING: The asset "no_avatar.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from default_avatar_url at /gitlab/lib/gitlab/gon_helper.rb:205)
+DEPRECATION WARNING: The asset "gitlab_logo.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from add_gon_variables at /gitlab/lib/gitlab/gon_helper.rb:44)
+DEPRECATION WARNING: The asset "file_icons/file_icons.svg" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from sprite_file_icons_path at /gitlab/app/helpers/icons_helper.rb:42)
+DEPRECATION WARNING: The asset "emoji_sprites.css" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from universal_path_to_stylesheet at /gitlab/app/helpers/vite_helper.rb:53)
+/gitlab/app/models/concerns/integrations/base/integration.rb:67: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/models/work_items/widgets/start_and_due_date.rb:47: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/config/initializers/7_redis.rb:8: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/models/geo/container_repository_registry.rb:16: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/api/import_github_oauth_webhooks.rb:12: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/config.rb:97: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/cycle_analytics/summary/defaults.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.

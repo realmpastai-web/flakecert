@@ -1,0 +1,72 @@
+# flakecert-log-version: 1
+# id: F15
+# method: flakecert
+# category: OD-Vic
+# project: https://github.com/OpenDataServices/lib-cove
+# sha: 74ba874ec6882969894797ee0dbc5c70a16019e5
+# python: 3.11.17
+# image: sha256:c3e8efb0e7acd7206508445fb083d0ca6542b54660e46b3dc09157115dcd4a11
+# image_tag: flakecert:F15
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/lib/test_converters.py::test_convert_json_1
+# node_id: tests/lib/test_converters.py::test_convert_json_1
+# test_file: tests/lib/test_converters.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 134
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/lib/test_converters.py::test_convert_json_1"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=1.529 node=tests/lib/test_converters.py::test_convert_json_1
+SCHEDULE run=2 {"order": ["tests/lib/test_converters.py::test_convert_json_1", "tests/lib/test_converters.py::test_convert_json_1"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=1.233 node=tests/lib/test_converters.py::test_convert_json_1
+SCHEDULE run=3 {"order": ["tests/lib/test_converters.py::test_convert_json_1", "tests/lib/test_converters.py::test_convert_activity_xml_1", "tests/lib/test_converters.py::test_convert_org_xml_1", "tests/lib/test_converters.py::test_convert_json_root_is_list_1", "tests/lib/test_converters.py::test_convert_csv_1"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=1.175 node=tests/lib/test_converters.py::test_convert_json_1
+SCHEDULE run=4 {"order": ["tests/lib/test_converters.py::test_convert_csv_1", "tests/lib/test_converters.py::test_convert_json_root_is_list_1", "tests/lib/test_converters.py::test_convert_org_xml_1", "tests/lib/test_converters.py::test_convert_activity_xml_1", "tests/lib/test_converters.py::test_convert_json_1"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=failed exc=IndexError sig=f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584 duration_s=1.311 node=tests/lib/test_converters.py::test_convert_json_1
+TRACEBACK run=4
+_____________________________ test_convert_json_1 ______________________________
+tests/lib/test_converters.py:45: in test_convert_json_1
+    assert header[0] == "id"
+           ^^^^^^^^^
+E   IndexError: list index out of range
+ENDTRACEBACK run=4
+SCHEDULE run=5 {"order": ["tests/lib/test_converters.py::test_convert_json_1"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=passed exc=- sig=- duration_s=1.056 node=tests/lib/test_converters.py::test_convert_json_1
+ABLATE source=order necessary=yes
+SCHEDULE run=6 {"order": ["tests/lib/test_converters.py::test_convert_csv_1", "tests/lib/test_converters.py::test_convert_json_root_is_list_1", "tests/lib/test_converters.py::test_convert_org_xml_1", "tests/lib/test_converters.py::test_convert_activity_xml_1", "tests/lib/test_converters.py::test_convert_json_1"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=6 outcome=failed exc=IndexError sig=f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584 duration_s=1.220 node=tests/lib/test_converters.py::test_convert_json_1
+TRACEBACK run=6
+_____________________________ test_convert_json_1 ______________________________
+tests/lib/test_converters.py:45: in test_convert_json_1
+    assert header[0] == "id"
+           ^^^^^^^^^
+E   IndexError: list index out of range
+ENDTRACEBACK run=6
+SCHEDULE run=7 {"order": ["tests/lib/test_converters.py::test_convert_csv_1", "tests/lib/test_converters.py::test_convert_json_root_is_list_1", "tests/lib/test_converters.py::test_convert_org_xml_1", "tests/lib/test_converters.py::test_convert_activity_xml_1", "tests/lib/test_converters.py::test_convert_json_1"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=7 outcome=failed exc=IndexError sig=f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584 duration_s=1.098 node=tests/lib/test_converters.py::test_convert_json_1
+TRACEBACK run=7
+_____________________________ test_convert_json_1 ______________________________
+tests/lib/test_converters.py:45: in test_convert_json_1
+    assert header[0] == "id"
+           ^^^^^^^^^
+E   IndexError: list index out of range
+ENDTRACEBACK run=7
+SCHEDULE run=8 {"order": ["tests/lib/test_converters.py::test_convert_csv_1", "tests/lib/test_converters.py::test_convert_json_root_is_list_1", "tests/lib/test_converters.py::test_convert_org_xml_1", "tests/lib/test_converters.py::test_convert_activity_xml_1", "tests/lib/test_converters.py::test_convert_json_1"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=8 outcome=failed exc=IndexError sig=f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584 duration_s=1.248 node=tests/lib/test_converters.py::test_convert_json_1
+TRACEBACK run=8
+_____________________________ test_convert_json_1 ______________________________
+tests/lib/test_converters.py:45: in test_convert_json_1
+    assert header[0] == "id"
+           ^^^^^^^^^
+E   IndexError: list index out of range
+ENDTRACEBACK run=8
+REPLAY id=F15 matched=3/3 sig=f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584
+CERT id=F15 certified=yes d=1 m=5 k=4 per_run_lower=1/5 runs_to_failure=4 sig=f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584
+SEARCH_STOP reason=certified index=8
+FLAKECERT_SUMMARY id=F15 runs=8 failures=4

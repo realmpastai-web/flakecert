@@ -1,0 +1,19 @@
++ phase=probe
++ seed=4
++ round=2
++ confirm=0
++ ids_n=2662
++ ids_sha256=3b347538b7dcd487cb18458165c0751c89a075da5d4543138fe77151a73a57f4
++ ids_file=evidence/certify-rspec-g2-2/s8/by-hash/4a55bcc6c8f294b12f7ef0623b407b13df8d66b35c3bfe06842a71882adc52f5/ids.txt
++ attempt=1
+elapsed_s=36.809
+⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE LOGGING A RESET! COLLISION !!
+
+	* Exception: RuntimeError
+	* Message: logger exploded
+	* From: configurable_spec.rb:801
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+docker_exit=1

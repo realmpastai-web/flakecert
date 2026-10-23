@@ -1,0 +1,14 @@
+✖  . (2ms)
+
+=== Skipped
+=== SKIP: . TestSkip (0.00s)
+    sample_test.go:30: sample skip
+
+=== Failed
+=== FAIL: . TestFailDeterministic (0.00s)
+    sample_test.go:19: got 1 want 2
+
+=== FAIL: . TestFlakySeeded (0.00s)
+    sample_test.go:26: seeded draw 0.167 below threshold
+
+DONE 4 tests, 1 skipped, 2 failures in 0.002s

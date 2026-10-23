@@ -1,0 +1,20 @@
+./CURSOR_TASK.md: OK
+./README.md: OK
+./controls-output.txt: OK
+./controls/mutant-plain-retry-only.json: OK
+./controls/mutant-real-fix-edits-model.json: OK
+./controls/mutant-schedule-drift.json: OK
+./controls/mutant-wrong-fix-accepted.json: OK
+./controls/synthetic-good-results.json: OK
+./fixes/cart_spec.prefix.rb: OK
+./fixes/cart_spec.real_fix.rb: OK
+./fixes/cart_spec.wrong_fix.rb: OK
+./fixes/real_fix.patch: OK
+./fixes/wrong_fix.patch: OK
+./gate-output.txt: OK
+./gate_attempt_to_fix.py: OK
+./make_controls.py: OK
+./pins/rspec-cert-b9f2c9e.json: OK
+./pins/rspec-results-b9f2c9e.json: OK
+./run_controls.sh: OK
+exit=0

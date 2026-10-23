@@ -1,0 +1,6 @@
+Bisect started using options: "spec/services/timelogs/delete_service_spec.rb"
+Running suite to find failures...
+Bisect failed! 
+
+No failures found. Bisect only works in the presence of one or more failing examples.
+

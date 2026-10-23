@@ -1,0 +1,20 @@
+Run options: include {:locations=>{"./spec/victim_spec.rb"=>[1]}}
+
+Widget
+  does the thing (FAILED - 1)
+
+Failures:
+
+  1) Widget does the thing
+     Failure/Error: boom
+
+     TypeError:
+       need a client
+     # ./spec/victim_spec.rb:2:in `block`
+
+Finished in 0.01 seconds (files took 0.02 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/victim_spec.rb:1 # Widget does the thing

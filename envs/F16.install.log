@@ -1,0 +1,16 @@
+rung files none
+rung test_file tests/test_mdutils.py
+rung python=3.11 start
+#10 0.243 FLAKECERT_INSTALL python 3.11.17
+#10 0.246 FLAKECERT_INSTALL files none
+#10 0.247 FLAKECERT_INSTALL pipenv no
+#10 0.247 FLAKECERT_INSTALL package yes
+#10 3.575 FLAKECERT_INSTALL no_requirements
+#10 3.576 FLAKECERT_INSTALL package_begin
+#10 5.283 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#10 5.283 FLAKECERT_INSTALL pytest_pin none
+#10 5.295 FLAKECERT_INSTALL pytest_fallback
+#10 7.750 FLAKECERT_INSTALL pytest_version 7.4.4
+rung python=3.11 build_exit=0
+collect nodes=28 matched=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+rung python=3.11 result=PASS

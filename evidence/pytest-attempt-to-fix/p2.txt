@@ -1,0 +1,777 @@
+$ make pytest-attempt-to-fix
+python3.11 -m flakecert.runners.pytest_attempt_to_fix
+base_image python@sha256:0a310eeecf4e1f5a0743f9a6520c90c88d089c903ca5fd283f501e3a805f5f89
+docker build -f /workspace/hark-tasks/flakecert-pytest-atf/inputs/rea-brief-pytest-attempt-to-fix/pins/Dockerfile -t flakecert-pytest-atf:pins /workspace/hark-tasks/flakecert-pytest-atf/inputs/rea-brief-pytest-attempt-to-fix/pins
+image_digest sha256:4de5a6a3175b75666d0b84626b9b5aae0ed13556762f53a0d9e5844316acc8e5
+python -V Python 3.11.17
+python 3.11.17
+pip freeze
+iniconfig==2.1.0
+packaging==25.0
+pluggy==1.6.0
+Pygments==2.19.2
+pytest==8.4.2
+pytest 8.4.2
+docker build -f /workspace/hark-tasks/flakecert-pytest-atf/.cache/pytest-attempt-to-fix/search-context/Dockerfile -t flakecert-pytest-atf:search /workspace/hark-tasks/flakecert-pytest-atf/.cache/pytest-attempt-to-fix/search-context
+search sources ['order', 'seed', 'pythonhashseed', 'time_offset', 'tmpdir'] file_nodes ['tests/test_cart.py::test_total_without_discount', 'tests/test_cart.py::test_total_with_discount']
+P01 flakecert 1 passed -
+P01 flakecert 2 passed -
+P01 flakecert 3 passed -
+P01 flakecert 4 failed AssertionError
+P01 flakecert 5 passed -
+P01 flakecert-replay 6 failed AssertionError
+P01 flakecert-replay 7 failed AssertionError
+P01 flakecert-replay 8 failed AssertionError
+cert schedule {"order": ["tests/test_cart.py::test_total_with_discount", "tests/test_cart.py::test_total_without_discount"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+cert expected_failure {"exc": "AssertionError", "sig": "40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff"}
+variant prefix test_cart_sha256 871e2e4b2792376d419594f7a50eacb0c9fada4a8d5e0936a580727116dd671b
+variant wrong_fix test_cart_sha256 89a1f5dc0e3b8ee6613943377a204300669093f9d0a41c4cf6ba9c64d6d5e8c1
+variant real_fix test_cart_sha256 469147e64fdbe2f865d6cb10a9671122516c948d73ec630e691887a86378eee3
+docker run --rm --network none -v /workspace/hark-tasks/flakecert-pytest-atf/.cache/pytest-attempt-to-fix/variants:/variants:ro -v /workspace/hark-tasks/flakecert-pytest-atf/.cache/pytest-attempt-to-fix/out:/out -v /workspace/hark-tasks/flakecert-pytest-atf/.cache/pytest-attempt-to-fix/run.sh:/run.sh:ro flakecert-pytest-atf:pins bash /run.sh
+APPLY prefix
+done name=prefix-plain-3 rc=0
+done name=prefix-plain-7 rc=0
+done name=prefix-plain-5 rc=0
+done name=prefix-plain-6 rc=0
+done name=prefix-plain-1 rc=0
+done name=prefix-plain-4 rc=0
+done name=prefix-plain-8 rc=0
+done name=prefix-plain-2 rc=0
+done name=prefix-plain-9 rc=0
+done name=prefix-plain-12 rc=0
+done name=prefix-plain-10 rc=0
+done name=prefix-plain-15 rc=0
+done name=prefix-plain-14 rc=0
+done name=prefix-plain-11 rc=0
+done name=prefix-plain-13 rc=1
+done name=prefix-plain-17 rc=0
+done name=prefix-plain-16 rc=0
+done name=prefix-plain-19 rc=0
+done name=prefix-sweep-2 rc=0
+done name=prefix-sweep-1 rc=1
+done name=prefix-sweep-0 rc=1
+done name=prefix-plain-18 rc=0
+done name=prefix-plain-20 rc=0
+done name=prefix-sweep-4 rc=1
+done name=prefix-sweep-5 rc=1
+done name=prefix-sweep-6 rc=0
+done name=prefix-sweep-3 rc=1
+done name=prefix-sweep-7 rc=0
+done name=prefix-sweep-8 rc=1
+done name=prefix-sweep-10 rc=1
+done name=prefix-sweep-11 rc=1
+done name=prefix-sweep-12 rc=1
+done name=prefix-sweep-9 rc=1
+done name=prefix-sweep-13 rc=1
+done name=prefix-sweep-14 rc=0
+done name=prefix-sweep-15 rc=1
+done name=prefix-sweep-17 rc=1
+done name=prefix-sweep-16 rc=1
+done name=prefix-sweep-20 rc=1
+done name=prefix-sweep-19 rc=0
+done name=prefix-sweep-22 rc=1
+done name=prefix-sweep-21 rc=1
+done name=prefix-sweep-18 rc=1
+done name=prefix-sweep-23 rc=0
+done name=prefix-sweep-24 rc=0
+done name=prefix-sweep-25 rc=0
+done name=prefix-sweep-26 rc=1
+done name=prefix-sweep-28 rc=0
+done name=prefix-sweep-27 rc=1
+done name=prefix-sweep-30 rc=0
+done name=prefix-sweep-31 rc=0
+done name=prefix-sweep-29 rc=0
+done name=prefix-sweep-34 rc=0
+done name=prefix-sweep-32 rc=0
+done name=prefix-sweep-35 rc=0
+done name=prefix-sweep-36 rc=0
+done name=prefix-sweep-33 rc=1
+done name=prefix-sweep-37 rc=0
+done name=prefix-sweep-38 rc=1
+done name=prefix-sweep-39 rc=1
+done name=prefix-sweep-40 rc=0
+done name=prefix-sweep-41 rc=1
+done name=prefix-sweep-43 rc=0
+done name=prefix-sweep-45 rc=1
+done name=prefix-sweep-46 rc=0
+done name=prefix-sweep-44 rc=0
+done name=prefix-sweep-42 rc=0
+done name=prefix-sweep-49 rc=0
+done name=prefix-sweep-47 rc=0
+done name=prefix-sweep-50 rc=1
+done name=prefix-sweep-52 rc=0
+done name=prefix-sweep-51 rc=1
+done name=prefix-sweep-53 rc=1
+done name=prefix-sweep-54 rc=1
+done name=prefix-sweep-48 rc=0
+done name=prefix-sweep-55 rc=1
+done name=prefix-sweep-57 rc=0
+done name=prefix-sweep-56 rc=0
+done name=prefix-sweep-59 rc=1
+done name=prefix-sweep-58 rc=1
+done name=prefix-sweep-61 rc=0
+done name=prefix-sweep-60 rc=1
+done name=prefix-sweep-62 rc=1
+done name=prefix-sweep-64 rc=0
+done name=prefix-sweep-65 rc=1
+done name=prefix-sweep-63 rc=1
+done name=prefix-sweep-67 rc=0
+done name=prefix-sweep-69 rc=0
+done name=prefix-sweep-66 rc=0
+done name=prefix-sweep-68 rc=0
+done name=prefix-sweep-70 rc=0
+done name=prefix-sweep-71 rc=0
+done name=prefix-sweep-73 rc=0
+done name=prefix-sweep-72 rc=1
+done name=prefix-sweep-74 rc=0
+done name=prefix-sweep-75 rc=1
+done name=prefix-sweep-76 rc=1
+done name=prefix-sweep-80 rc=1
+done name=prefix-sweep-79 rc=1
+done name=prefix-sweep-78 rc=1
+done name=prefix-sweep-77 rc=1
+done name=prefix-sweep-82 rc=1
+done name=prefix-sweep-81 rc=1
+done name=prefix-sweep-83 rc=1
+done name=prefix-sweep-84 rc=0
+done name=prefix-sweep-85 rc=1
+done name=prefix-sweep-87 rc=1
+done name=prefix-sweep-86 rc=0
+done name=prefix-sweep-89 rc=0
+done name=prefix-sweep-92 rc=1
+done name=prefix-sweep-90 rc=1
+done name=prefix-sweep-88 rc=0
+done name=prefix-sweep-93 rc=1
+done name=prefix-sweep-91 rc=0
+done name=prefix-sweep-94 rc=1
+done name=prefix-sweep-95 rc=1
+done name=prefix-sweep-96 rc=1
+done name=prefix-sweep-97 rc=1
+done name=prefix-sweep-99 rc=1
+done name=prefix-sweep-98 rc=0
+APPLIED_DONE prefix
+APPLY wrong_fix
+done name=wrong_fix-plain-1 rc=1
+done name=wrong_fix-plain-4 rc=0
+done name=wrong_fix-plain-6 rc=0
+done name=wrong_fix-plain-3 rc=0
+done name=wrong_fix-plain-7 rc=0
+done name=wrong_fix-plain-5 rc=0
+done name=wrong_fix-plain-8 rc=0
+done name=wrong_fix-plain-2 rc=0
+done name=wrong_fix-plain-9 rc=0
+done name=wrong_fix-plain-15 rc=0
+done name=wrong_fix-plain-10 rc=0
+done name=wrong_fix-plain-11 rc=0
+done name=wrong_fix-plain-13 rc=0
+done name=wrong_fix-plain-12 rc=0
+done name=wrong_fix-plain-16 rc=0
+done name=wrong_fix-plain-14 rc=0
+done name=wrong_fix-plain-17 rc=0
+done name=wrong_fix-plain-18 rc=0
+done name=wrong_fix-plain-19 rc=0
+done name=wrong_fix-sweep-1 rc=1
+done name=wrong_fix-sweep-0 rc=1
+done name=wrong_fix-plain-20 rc=0
+done name=wrong_fix-sweep-5 rc=1
+done name=wrong_fix-sweep-2 rc=0
+done name=wrong_fix-sweep-6 rc=0
+done name=wrong_fix-sweep-3 rc=1
+done name=wrong_fix-sweep-4 rc=1
+done name=wrong_fix-sweep-8 rc=1
+done name=wrong_fix-sweep-9 rc=1
+done name=wrong_fix-sweep-7 rc=0
+done name=wrong_fix-sweep-12 rc=1
+done name=wrong_fix-sweep-10 rc=0
+done name=wrong_fix-sweep-14 rc=0
+done name=wrong_fix-sweep-11 rc=1
+done name=wrong_fix-sweep-15 rc=1
+done name=wrong_fix-sweep-16 rc=1
+done name=wrong_fix-sweep-13 rc=1
+done name=wrong_fix-sweep-17 rc=1
+done name=wrong_fix-sweep-18 rc=1
+done name=wrong_fix-sweep-20 rc=1
+done name=wrong_fix-sweep-19 rc=0
+done name=wrong_fix-sweep-21 rc=1
+done name=wrong_fix-sweep-22 rc=1
+done name=wrong_fix-sweep-23 rc=0
+done name=wrong_fix-sweep-25 rc=0
+done name=wrong_fix-sweep-26 rc=1
+done name=wrong_fix-sweep-27 rc=1
+done name=wrong_fix-sweep-24 rc=0
+done name=wrong_fix-sweep-29 rc=0
+done name=wrong_fix-sweep-28 rc=0
+done name=wrong_fix-sweep-30 rc=0
+done name=wrong_fix-sweep-31 rc=0
+done name=wrong_fix-sweep-32 rc=0
+done name=wrong_fix-sweep-34 rc=0
+done name=wrong_fix-sweep-35 rc=0
+done name=wrong_fix-sweep-37 rc=0
+done name=wrong_fix-sweep-33 rc=1
+done name=wrong_fix-sweep-36 rc=0
+done name=wrong_fix-sweep-38 rc=1
+done name=wrong_fix-sweep-40 rc=0
+done name=wrong_fix-sweep-39 rc=1
+done name=wrong_fix-sweep-41 rc=1
+done name=wrong_fix-sweep-42 rc=0
+done name=wrong_fix-sweep-45 rc=1
+done name=wrong_fix-sweep-44 rc=1
+done name=wrong_fix-sweep-46 rc=0
+done name=wrong_fix-sweep-43 rc=0
+done name=wrong_fix-sweep-47 rc=0
+done name=wrong_fix-sweep-49 rc=0
+done name=wrong_fix-sweep-48 rc=0
+done name=wrong_fix-sweep-50 rc=1
+done name=wrong_fix-sweep-52 rc=0
+done name=wrong_fix-sweep-53 rc=1
+done name=wrong_fix-sweep-56 rc=0
+done name=wrong_fix-sweep-55 rc=0
+done name=wrong_fix-sweep-54 rc=1
+done name=wrong_fix-sweep-51 rc=1
+done name=wrong_fix-sweep-57 rc=0
+done name=wrong_fix-sweep-58 rc=1
+done name=wrong_fix-sweep-59 rc=1
+done name=wrong_fix-sweep-60 rc=1
+done name=wrong_fix-sweep-61 rc=0
+done name=wrong_fix-sweep-64 rc=0
+done name=wrong_fix-sweep-62 rc=1
+done name=wrong_fix-sweep-65 rc=1
+done name=wrong_fix-sweep-67 rc=1
+done name=wrong_fix-sweep-63 rc=1
+done name=wrong_fix-sweep-66 rc=0
+done name=wrong_fix-sweep-69 rc=0
+done name=wrong_fix-sweep-71 rc=0
+done name=wrong_fix-sweep-70 rc=0
+done name=wrong_fix-sweep-68 rc=0
+done name=wrong_fix-sweep-72 rc=0
+done name=wrong_fix-sweep-73 rc=0
+done name=wrong_fix-sweep-74 rc=0
+done name=wrong_fix-sweep-76 rc=1
+done name=wrong_fix-sweep-77 rc=1
+done name=wrong_fix-sweep-75 rc=1
+done name=wrong_fix-sweep-78 rc=1
+done name=wrong_fix-sweep-80 rc=1
+done name=wrong_fix-sweep-81 rc=1
+done name=wrong_fix-sweep-79 rc=1
+done name=wrong_fix-sweep-82 rc=1
+done name=wrong_fix-sweep-83 rc=1
+done name=wrong_fix-sweep-84 rc=0
+done name=wrong_fix-sweep-87 rc=1
+done name=wrong_fix-sweep-86 rc=0
+done name=wrong_fix-sweep-88 rc=0
+done name=wrong_fix-sweep-85 rc=1
+done name=wrong_fix-sweep-89 rc=0
+done name=wrong_fix-sweep-91 rc=0
+done name=wrong_fix-sweep-94 rc=1
+done name=wrong_fix-sweep-95 rc=1
+done name=wrong_fix-sweep-90 rc=1
+done name=wrong_fix-sweep-93 rc=1
+done name=wrong_fix-sweep-96 rc=1
+done name=wrong_fix-sweep-97 rc=1
+done name=wrong_fix-sweep-92 rc=1
+done name=wrong_fix-sweep-98 rc=0
+done name=wrong_fix-sweep-99 rc=1
+APPLIED_DONE wrong_fix
+APPLY real_fix
+done name=real_fix-plain-4 rc=0
+done name=real_fix-plain-3 rc=0
+done name=real_fix-plain-7 rc=0
+done name=real_fix-plain-8 rc=0
+done name=real_fix-plain-5 rc=0
+done name=real_fix-plain-2 rc=0
+done name=real_fix-plain-1 rc=0
+done name=real_fix-plain-6 rc=0
+done name=real_fix-plain-12 rc=0
+done name=real_fix-plain-11 rc=0
+done name=real_fix-plain-14 rc=0
+done name=real_fix-plain-10 rc=0
+done name=real_fix-plain-13 rc=0
+done name=real_fix-plain-16 rc=0
+done name=real_fix-plain-9 rc=0
+done name=real_fix-plain-15 rc=0
+done name=real_fix-plain-18 rc=0
+done name=real_fix-plain-19 rc=0
+done name=real_fix-plain-17 rc=0
+done name=real_fix-plain-20 rc=0
+done name=real_fix-sweep-1 rc=0
+done name=real_fix-sweep-3 rc=0
+done name=real_fix-sweep-2 rc=0
+done name=real_fix-sweep-0 rc=0
+done name=real_fix-sweep-5 rc=0
+done name=real_fix-sweep-6 rc=0
+done name=real_fix-sweep-7 rc=0
+done name=real_fix-sweep-4 rc=0
+done name=real_fix-sweep-9 rc=0
+done name=real_fix-sweep-8 rc=0
+done name=real_fix-sweep-10 rc=0
+done name=real_fix-sweep-11 rc=0
+done name=real_fix-sweep-12 rc=0
+done name=real_fix-sweep-13 rc=0
+done name=real_fix-sweep-15 rc=0
+done name=real_fix-sweep-14 rc=0
+done name=real_fix-sweep-16 rc=1
+done name=real_fix-sweep-17 rc=0
+done name=real_fix-sweep-18 rc=0
+done name=real_fix-sweep-19 rc=0
+done name=real_fix-sweep-20 rc=0
+done name=real_fix-sweep-21 rc=1
+done name=real_fix-sweep-22 rc=0
+done name=real_fix-sweep-24 rc=0
+done name=real_fix-sweep-23 rc=0
+done name=real_fix-sweep-26 rc=0
+done name=real_fix-sweep-25 rc=0
+done name=real_fix-sweep-27 rc=0
+done name=real_fix-sweep-28 rc=0
+done name=real_fix-sweep-29 rc=0
+done name=real_fix-sweep-31 rc=0
+done name=real_fix-sweep-30 rc=1
+done name=real_fix-sweep-32 rc=0
+done name=real_fix-sweep-33 rc=0
+done name=real_fix-sweep-34 rc=0
+done name=real_fix-sweep-35 rc=0
+done name=real_fix-sweep-36 rc=0
+done name=real_fix-sweep-38 rc=1
+done name=real_fix-sweep-39 rc=0
+done name=real_fix-sweep-37 rc=0
+done name=real_fix-sweep-40 rc=0
+done name=real_fix-sweep-41 rc=0
+done name=real_fix-sweep-42 rc=0
+done name=real_fix-sweep-43 rc=0
+done name=real_fix-sweep-44 rc=0
+done name=real_fix-sweep-46 rc=0
+done name=real_fix-sweep-47 rc=0
+done name=real_fix-sweep-45 rc=0
+done name=real_fix-sweep-48 rc=0
+done name=real_fix-sweep-49 rc=0
+done name=real_fix-sweep-50 rc=0
+done name=real_fix-sweep-51 rc=0
+done name=real_fix-sweep-52 rc=0
+done name=real_fix-sweep-53 rc=0
+done name=real_fix-sweep-55 rc=0
+done name=real_fix-sweep-54 rc=0
+done name=real_fix-sweep-56 rc=0
+done name=real_fix-sweep-57 rc=0
+done name=real_fix-sweep-58 rc=0
+done name=real_fix-sweep-59 rc=0
+done name=real_fix-sweep-60 rc=0
+done name=real_fix-sweep-61 rc=1
+done name=real_fix-sweep-62 rc=0
+done name=real_fix-sweep-64 rc=0
+done name=real_fix-sweep-65 rc=0
+done name=real_fix-sweep-63 rc=0
+done name=real_fix-sweep-66 rc=0
+done name=real_fix-sweep-68 rc=0
+done name=real_fix-sweep-67 rc=0
+done name=real_fix-sweep-69 rc=0
+done name=real_fix-sweep-70 rc=0
+done name=real_fix-sweep-71 rc=0
+done name=real_fix-sweep-72 rc=0
+done name=real_fix-sweep-73 rc=0
+done name=real_fix-sweep-74 rc=0
+done name=real_fix-sweep-75 rc=0
+done name=real_fix-sweep-77 rc=0
+done name=real_fix-sweep-78 rc=0
+done name=real_fix-sweep-76 rc=0
+done name=real_fix-sweep-80 rc=0
+done name=real_fix-sweep-79 rc=1
+done name=real_fix-sweep-82 rc=0
+done name=real_fix-sweep-81 rc=0
+done name=real_fix-sweep-83 rc=1
+done name=real_fix-sweep-84 rc=0
+done name=real_fix-sweep-85 rc=0
+done name=real_fix-sweep-86 rc=0
+done name=real_fix-sweep-87 rc=0
+done name=real_fix-sweep-88 rc=0
+done name=real_fix-sweep-89 rc=0
+done name=real_fix-sweep-90 rc=0
+done name=real_fix-sweep-91 rc=0
+done name=real_fix-sweep-92 rc=0
+done name=real_fix-sweep-93 rc=0
+done name=real_fix-sweep-94 rc=1
+done name=real_fix-sweep-95 rc=0
+done name=real_fix-sweep-96 rc=0
+done name=real_fix-sweep-97 rc=0
+done name=real_fix-sweep-98 rc=0
+done name=real_fix-sweep-99 rc=0
+APPLIED_DONE real_fix
+ATTEMPT_OK
+REPLAY_LOC variant=prefix index=1 tests/test_cart.py:6: in test_total_without_discount
+RUN variant=prefix arm=cert_replay index=1 victim=failed polluter=passed exc=AssertionError sig=40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff
+REPLAY_LOC variant=prefix index=2 tests/test_cart.py:6: in test_total_without_discount
+RUN variant=prefix arm=cert_replay index=2 victim=failed polluter=passed exc=AssertionError sig=40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff
+REPLAY_LOC variant=prefix index=3 tests/test_cart.py:6: in test_total_without_discount
+RUN variant=prefix arm=cert_replay index=3 victim=failed polluter=passed exc=AssertionError sig=40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff
+REPLAY_LOC variant=wrong_fix index=1 tests/test_cart.py:7: in test_total_without_discount
+RUN variant=wrong_fix arm=cert_replay index=1 victim=failed polluter=passed exc=AssertionError sig=fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024
+REPLAY_LOC variant=wrong_fix index=2 tests/test_cart.py:7: in test_total_without_discount
+RUN variant=wrong_fix arm=cert_replay index=2 victim=failed polluter=passed exc=AssertionError sig=fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024
+REPLAY_LOC variant=wrong_fix index=3 tests/test_cart.py:7: in test_total_without_discount
+RUN variant=wrong_fix arm=cert_replay index=3 victim=failed polluter=passed exc=AssertionError sig=fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024
+RUN variant=real_fix arm=cert_replay index=1 victim=passed polluter=passed exc=None sig=None
+RUN variant=real_fix arm=cert_replay index=2 victim=passed polluter=passed exc=None sig=None
+RUN variant=real_fix arm=cert_replay index=3 victim=passed polluter=passed exc=None sig=None
+RUN variant=prefix arm=plain_retry index=1 victim=passed
+RUN variant=prefix arm=plain_retry index=2 victim=passed
+RUN variant=prefix arm=plain_retry index=3 victim=passed
+RUN variant=prefix arm=plain_retry index=4 victim=passed
+RUN variant=prefix arm=plain_retry index=5 victim=passed
+RUN variant=prefix arm=plain_retry index=6 victim=passed
+RUN variant=prefix arm=plain_retry index=7 victim=passed
+RUN variant=prefix arm=plain_retry index=8 victim=passed
+RUN variant=prefix arm=plain_retry index=9 victim=passed
+RUN variant=prefix arm=plain_retry index=10 victim=passed
+RUN variant=prefix arm=plain_retry index=11 victim=passed
+RUN variant=prefix arm=plain_retry index=12 victim=passed
+RUN variant=prefix arm=plain_retry index=13 victim=passed
+RUN variant=prefix arm=plain_retry index=14 victim=passed
+RUN variant=prefix arm=plain_retry index=15 victim=passed
+RUN variant=prefix arm=plain_retry index=16 victim=passed
+RUN variant=prefix arm=plain_retry index=17 victim=passed
+RUN variant=prefix arm=plain_retry index=18 victim=passed
+RUN variant=prefix arm=plain_retry index=19 victim=passed
+RUN variant=prefix arm=plain_retry index=20 victim=passed
+RUN variant=prefix arm=sweep seed=0 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=1 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=2 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=3 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=4 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=5 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=6 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=7 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=8 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=9 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=10 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=11 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=12 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=13 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=14 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=15 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=16 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=17 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=18 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=19 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=20 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=21 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=22 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=23 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=24 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=25 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=26 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=27 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=28 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=29 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=30 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=31 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=32 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=33 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=34 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=35 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=36 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=37 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=38 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=39 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=40 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=41 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=42 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=43 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=44 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=45 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=46 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=47 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=48 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=49 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=50 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=51 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=52 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=53 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=54 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=55 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=56 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=57 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=58 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=59 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=60 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=61 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=62 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=63 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=64 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=65 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=66 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=67 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=68 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=69 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=70 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=71 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=72 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=73 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=74 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=75 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=76 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=77 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=78 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=79 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=80 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=81 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=82 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=83 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=84 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=85 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=86 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=87 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=88 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=89 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=90 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=91 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=92 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=93 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=94 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=95 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=96 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=97 victim=failed polluter=passed
+RUN variant=prefix arm=sweep seed=98 victim=passed polluter=passed
+RUN variant=prefix arm=sweep seed=99 victim=failed polluter=passed
+RUN variant=wrong_fix arm=plain_retry index=1 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=2 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=3 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=4 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=5 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=6 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=7 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=8 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=9 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=10 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=11 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=12 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=13 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=14 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=15 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=16 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=17 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=18 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=19 victim=passed
+RUN variant=wrong_fix arm=plain_retry index=20 victim=passed
+RUN variant=wrong_fix arm=sweep seed=0 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=1 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=2 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=3 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=4 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=5 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=6 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=7 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=8 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=9 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=10 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=11 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=12 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=13 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=14 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=15 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=16 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=17 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=18 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=19 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=20 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=21 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=22 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=23 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=24 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=25 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=26 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=27 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=28 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=29 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=30 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=31 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=32 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=33 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=34 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=35 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=36 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=37 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=38 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=39 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=40 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=41 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=42 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=43 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=44 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=45 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=46 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=47 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=48 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=49 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=50 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=51 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=52 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=53 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=54 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=55 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=56 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=57 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=58 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=59 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=60 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=61 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=62 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=63 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=64 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=65 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=66 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=67 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=68 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=69 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=70 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=71 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=72 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=73 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=74 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=75 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=76 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=77 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=78 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=79 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=80 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=81 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=82 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=83 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=84 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=85 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=86 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=87 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=88 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=89 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=90 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=91 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=92 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=93 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=94 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=95 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=96 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=97 victim=failed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=98 victim=passed polluter=passed
+RUN variant=wrong_fix arm=sweep seed=99 victim=failed polluter=passed
+RUN variant=real_fix arm=plain_retry index=1 victim=passed
+RUN variant=real_fix arm=plain_retry index=2 victim=passed
+RUN variant=real_fix arm=plain_retry index=3 victim=passed
+RUN variant=real_fix arm=plain_retry index=4 victim=passed
+RUN variant=real_fix arm=plain_retry index=5 victim=passed
+RUN variant=real_fix arm=plain_retry index=6 victim=passed
+RUN variant=real_fix arm=plain_retry index=7 victim=passed
+RUN variant=real_fix arm=plain_retry index=8 victim=passed
+RUN variant=real_fix arm=plain_retry index=9 victim=passed
+RUN variant=real_fix arm=plain_retry index=10 victim=passed
+RUN variant=real_fix arm=plain_retry index=11 victim=passed
+RUN variant=real_fix arm=plain_retry index=12 victim=passed
+RUN variant=real_fix arm=plain_retry index=13 victim=passed
+RUN variant=real_fix arm=plain_retry index=14 victim=passed
+RUN variant=real_fix arm=plain_retry index=15 victim=passed
+RUN variant=real_fix arm=plain_retry index=16 victim=passed
+RUN variant=real_fix arm=plain_retry index=17 victim=passed
+RUN variant=real_fix arm=plain_retry index=18 victim=passed
+RUN variant=real_fix arm=plain_retry index=19 victim=passed
+RUN variant=real_fix arm=plain_retry index=20 victim=passed
+RUN variant=real_fix arm=sweep seed=0 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=1 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=2 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=3 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=4 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=5 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=6 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=7 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=8 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=9 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=10 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=11 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=12 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=13 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=14 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=15 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=16 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=17 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=18 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=19 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=20 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=21 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=22 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=23 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=24 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=25 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=26 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=27 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=28 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=29 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=30 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=31 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=32 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=33 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=34 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=35 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=36 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=37 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=38 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=39 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=40 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=41 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=42 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=43 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=44 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=45 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=46 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=47 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=48 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=49 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=50 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=51 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=52 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=53 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=54 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=55 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=56 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=57 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=58 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=59 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=60 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=61 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=62 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=63 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=64 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=65 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=66 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=67 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=68 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=69 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=70 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=71 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=72 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=73 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=74 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=75 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=76 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=77 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=78 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=79 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=80 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=81 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=82 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=83 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=84 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=85 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=86 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=87 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=88 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=89 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=90 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=91 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=92 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=93 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=94 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=95 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=96 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=97 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=98 victim=passed polluter=passed
+RUN variant=real_fix arm=sweep seed=99 victim=passed polluter=passed
+wrote /workspace/hark-tasks/flakecert-pytest-atf/audit/pytest-attempt-to-fix.json
+prefix cert_replay victims ['failed', 'failed', 'failed']
+wrong_fix cert_replay victims ['failed', 'failed', 'failed']
+real_fix cert_replay victims ['passed', 'passed', 'passed']
+exit=0

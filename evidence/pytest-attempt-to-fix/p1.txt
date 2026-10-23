@@ -1,0 +1,44 @@
+$ cd inputs/rea-brief-pytest-attempt-to-fix && sha256sum -c SHA256SUMS && python3 -B gate_pytest_attempt_to_fix.py | diff - gate-output.txt && cd - && bash inputs/rea-brief-pytest-attempt-to-fix/run_controls.sh | diff - inputs/rea-brief-pytest-attempt-to-fix/controls-output.txt
+BRIEF.md: OK
+CURSOR_TASK.md: OK
+controls-output.txt: OK
+controls/mutant-fabricated-sig.json: OK
+controls/mutant-omitted-env-and-seed.json: OK
+controls/mutant-plain-retry-only.json: OK
+controls/mutant-real-fix-edits-app.json: OK
+controls/mutant-rerun-plugin-installed.json: OK
+controls/mutant-schedule-drift.json: OK
+controls/mutant-wrong-fix-accepted.json: OK
+controls/rea-tampered/pytest_randomly-5.0.0.tar.gz: OK
+controls/rea-tampered/pytest_rerunfailures-16.7.tar.gz: OK
+controls/synthetic-good-results.json: OK
+expected/predicted-sweep.json: OK
+fixes/real_fix.patch: OK
+fixes/test_cart.prefix.py: OK
+fixes/test_cart.real_fix.py: OK
+fixes/test_cart.wrong_fix.py: OK
+fixes/wrong_fix.patch: OK
+gate-output.txt: OK
+gate_pytest_attempt_to_fix.py: OK
+make_controls.py: OK
+pins/Dockerfile: OK
+pins/requirements.lock: OK
+precheck/precheck-output.txt: OK
+precheck/precheck.py: OK
+rea/URLS.tsv: OK
+rea/pypi-pytest-randomly-5.0.0.json: OK
+rea/pypi-pytest-rerunfailures-16.7.json: OK
+rea/pypistats-pytest-randomly-recent.json: OK
+rea/pypistats-pytest-rerunfailures-recent.json: OK
+rea/pytest_randomly-5.0.0.tar.gz: OK
+rea/pytest_rerunfailures-16.7.tar.gz: OK
+run_controls.sh: OK
+sample.sha256: OK
+sample/app/__init__.py: OK
+sample/app/cart.py: OK
+sample/pytest.ini: OK
+sample/tests/test_cart.py: OK
+sample/tests/test_coupon.py: OK
+sample/tests/test_stable.py: OK
+/workspace/hark-tasks/flakecert-pytest-atf
+exit=0

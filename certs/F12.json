@@ -1,0 +1,68 @@
+{
+  "id": "F12",
+  "project": "https://github.com/PyFunceble/domain2idna",
+  "sha": "39a1c4e1ebb877ed511e53b618fbe437a685c970",
+  "pytest_id": "tests/test_converter.py::TestConverter::test_commented_line",
+  "node_id": "tests/test_converter.py::TestConverter::test_commented_line",
+  "image_digest": "sha256:db9dc561b1a26a25579a801c0b05204b028a50b9ad59f649d6f4be55380e2e12",
+  "image_tag": "flakecert:F12",
+  "pip_freeze_sha": "98e8dcf72d18916cda44be2b8605b0fd366fe29adc57e17e1af6b376587f5708",
+  "flakecert_version": "0.2.0",
+  "python": "3.11.17",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 15,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "tests/test_cli.py::TestCLI::test_domain_output",
+        "tests/test_converter.py::TestConverter::test_commented_line"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": ""
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "ValueError",
+    "sig": "df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 15,
+    "empirical_rate": "1/15",
+    "compare": "empirical<lower"
+  }
+}

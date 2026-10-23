@@ -1,0 +1,115 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "45bb0728c2e474fcf963bec5334f6425a9e4ee54"
+  },
+  "hook_sha256": "2ca968444dc06bf9a1f2e0f44216ad2b0cf5541e2ca0f52be8ca40489135bd64",
+  "case": "H2",
+  "commit": "76eeb3f9352a657fd979ae00e89e49a388729e30",
+  "tarball_sha256": "078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa",
+  "rules": "F6",
+  "victim_id": "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5",
+  "polluter_ids": [
+    "./spaceship/spec/connect_api/models/webhook_spec.rb"
+  ],
+  "verdict": "NOT_FIXED",
+  "pair_logs": [
+    "flakecert/H2-pair-r1.log",
+    "flakecert/H2-pair-r2.log",
+    "flakecert/H2-pair-r3.log"
+  ],
+  "reverse_logs": [
+    "flakecert/H2-reverse-r1.log",
+    "flakecert/H2-reverse-r2.log",
+    "flakecert/H2-reverse-r3.log"
+  ],
+  "pair_runs": [
+    {
+      "exit_code": 1,
+      "example_count": 7,
+      "failure_count": 1,
+      "first_error_class": "TypeError",
+      "first_error_message_line": "You need to instantiate this module with test_flight_request_client",
+      "failed_ids": [
+        "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5"
+      ],
+      "order": [
+        "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5"
+      ],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H2-pair-r1.log",
+      "log_sha256": "1f470437c2123c3b22f946379601f0a9822d0b56baf2b77af92c600a731c99b5"
+    },
+    {
+      "exit_code": 1,
+      "example_count": 7,
+      "failure_count": 1,
+      "first_error_class": "TypeError",
+      "first_error_message_line": "You need to instantiate this module with test_flight_request_client",
+      "failed_ids": [
+        "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5"
+      ],
+      "order": [
+        "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5"
+      ],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H2-pair-r2.log",
+      "log_sha256": "df94173c344f141448781fd93f95e6bccb02dcf9e0be71886851039aa33d4fa0"
+    },
+    {
+      "exit_code": 1,
+      "example_count": 7,
+      "failure_count": 1,
+      "first_error_class": "TypeError",
+      "first_error_message_line": "You need to instantiate this module with test_flight_request_client",
+      "failed_ids": [
+        "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5"
+      ],
+      "order": [
+        "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5"
+      ],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H2-pair-r3.log",
+      "log_sha256": "fea1a25d239115c30f4305a31707e5894fe7394b758c76e186a046cc13ea546a"
+    }
+  ],
+  "reverse_runs": [
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H2-reverse-r1.log",
+      "log_sha256": "72f653007afc2384df8e3802bb3bbbd0420c1b8d7c4464b306d7ab432f2864d2"
+    },
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H2-reverse-r2.log",
+      "log_sha256": "1019f18d0d1c7b536b5aef3f1368ef170f5c4db03a6b1a425e894cfcca29ed7b"
+    },
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H2-reverse-r3.log",
+      "log_sha256": "b8c155d662fd6f83f605cc3c34ffa14f890daeea156062229c1c8ea2a9ae2cea"
+    }
+  ]
+}

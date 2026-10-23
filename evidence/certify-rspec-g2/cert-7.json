@@ -1,0 +1,1079 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "560314276d82565fb1294346a4baceff12f46e95-dirty"
+  },
+  "repo": "teamshares/axn",
+  "base": {
+    "commit": "8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9",
+    "tarball_sha256": "63119f8a743e6681677668d5f9ba274b978e224c88d7044e72077bec7411823c"
+  },
+  "head": {
+    "commit": "6c62d568e27844bf7500be0a54425b7c9c65a8cc",
+    "tarball_sha256": "6b21ebd8606559104cfae3d2df20f2d55143a8f074a866378c980189303f46e0"
+  },
+  "image_id": "sha256:75d96121b9c7cad7a3f00037beaf3e80596aea21b14a34dff24a0e8760fef6e6",
+  "ruby": "ruby 3.3.12 (2026-07-16 revision 0581089df9) [x86_64-linux]",
+  "bundler": "Bundler version 2.5.6",
+  "rspec_core": "3.13.2",
+  "gemfile_lock_sha256": {
+    "base": "42ae032a7dfca943379c77d492fff5560f1338f36755f6e352b68ed4778c604a",
+    "head": "42ae032a7dfca943379c77d492fff5560f1338f36755f6e352b68ed4778c604a"
+  },
+  "seed": 3,
+  "victim_id": "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+  "victim_location": "./spec/support/shared_examples/registry_behavior.rb:100",
+  "polluter_ids": [
+    "./spec/axn/async/registry_spec.rb[1:1:2:1]"
+  ],
+  "minimal_reproduction_command": "rspec './spec/axn/async/registry_spec.rb[1:1:2:1,1:1:5:1]' --no-color --seed 3",
+  "commands": {
+    "A": "rspec --seed 3 './spec/axn/async/registry_spec.rb[1:1:2:1]' './spec/axn/async/registry_spec.rb[1:1:5:1]'",
+    "B": "rspec './spec/axn/async/registry_spec.rb[1:1:5:1]'",
+    "C": "rspec --require /flakecert/ordering.rb './spec/axn/async/registry_spec.rb[1:1:5:1]' './spec/axn/async/registry_spec.rb[1:1:2:1]'"
+  },
+  "runs": {
+    "base": {
+      "A": [
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "Axn::Async::DuplicateAdapterError",
+          "first_error_message_line": "Adapter custom already registered",
+          "failed_ids": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "facb17b44bc01e48a2672f77e14cf3c1fe427264551440061e2e48beb2c1028a",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r1.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r1.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r1.json",
+          "victim_status": "failed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "Axn::Async::DuplicateAdapterError",
+          "first_error_message_line": "Adapter custom already registered",
+          "failed_ids": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "c1e66a544c02c66b0c294e40d5b5d2b88a15fe6404c351752715329224895342",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r2.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r2.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r2.json",
+          "victim_status": "failed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "Axn::Async::DuplicateAdapterError",
+          "first_error_message_line": "Adapter custom already registered",
+          "failed_ids": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "a609fc701df543fc249714b68e1676d8d649467dfe02ea1a176f48c77e263a69",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r3.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r3.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r3.json",
+          "victim_status": "failed",
+          "order_status": "OK"
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "e094a5d600c81db0188cf7a10f25d5868d61cd69420ac6222052bf6354b49f66",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r1.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r1.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r1.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "45237636e7dd64f07c1d707cf807abe324ec09afc0a2cdee48db4114971cdcd1",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r2.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r2.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r2.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "ba70969774b222f44d55d3178656c73e568439a6963589ee5862a081f292073a",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r3.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r3.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r3.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "3554c3e70b56a24de6d9b2331564dc3d27e4bbf8822c08216bc7686422952416",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r1.log",
+          "elapsed_s": 1.092,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r1.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r1.json",
+          "victim_status": "passed",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/async/registry_spec.rb[1:1:5:1] ./spec/axn/async/registry_spec.rb[1:1:2:1]"
+            ]
+          ],
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "9d7a408f277da04ab25573fd61dcb2eaf552a6576c2eac14bf86928b0854fd6b",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r2.log",
+          "elapsed_s": 1.16,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r2.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r2.json",
+          "victim_status": "passed",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/async/registry_spec.rb[1:1:5:1] ./spec/axn/async/registry_spec.rb[1:1:2:1]"
+            ]
+          ],
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "71b7f7d51fc2c1f031ee233356330be92d38e386f4369eb5dc570c871be5ec59",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r3.log",
+          "elapsed_s": 1.117,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r3.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r3.json",
+          "victim_status": "passed",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/async/registry_spec.rb[1:1:5:1] ./spec/axn/async/registry_spec.rb[1:1:2:1]"
+            ]
+          ],
+          "order_status": "OK"
+        }
+      ]
+    },
+    "head": {
+      "A": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "c8450f431280f48c7420a3212e4055f740709d36a1e15e562d925845cf21027b",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r1.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r1.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r1.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "332cc7530c145c4ddc0ea795fd2ab49b4bbe30f207d862ce4a21be2b3dab2904",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r2.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r2.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r2.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "06cfa6a4c07d2eada9e102e5872e5bb3a786f324b349615e691d37babf352cc1",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r3.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r3.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r3.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "1eced22ffb485b659eaf143924d41cb7f9c1e4a99a771cef7bb009cfae49c779",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r1.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r1.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r1.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "c60d1982db350c8e5e975ee7b712f2e69c30a224a7459dc7afb98526070bab9b",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r2.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r2.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r2.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "dfea968259732b58a75ca3fc41bca47e60c0659625e546b1fc38bce7ecce04ef",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r3.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r3.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r3.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "9a400d60da5f88cb609c2832a40d32274cb02e4047f0848302a89e4db00edf24",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r1.log",
+          "elapsed_s": 1.188,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r1.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r1.json",
+          "victim_status": "passed",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/async/registry_spec.rb[1:1:5:1] ./spec/axn/async/registry_spec.rb[1:1:2:1]"
+            ]
+          ],
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "845deb92f5def29015a73dfe1a6c2f3e91dd30de958f50337b17f5d6086ea9c1",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r2.log",
+          "elapsed_s": 1.277,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r2.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r2.json",
+          "victim_status": "passed",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/async/registry_spec.rb[1:1:5:1] ./spec/axn/async/registry_spec.rb[1:1:2:1]"
+            ]
+          ],
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "48d78ef425f511e6c15ce41d507d326d41a00373b2e1cec2b4df4ece0d0a0ff4",
+          "log": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r3.log",
+          "elapsed_s": 1.083,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r3.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r3.json",
+          "victim_status": "passed",
+          "extra_env": [
+            [
+              "GEM_HOME",
+              "/gems"
+            ],
+            [
+              "PATH",
+              "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            [
+              "BUNDLE_PATH",
+              "/bundle"
+            ],
+            [
+              "BUNDLE_SILENCE_ROOT_WARNING",
+              "1"
+            ],
+            [
+              "ids",
+              "./spec/axn/async/registry_spec.rb[1:1:5:1] ./spec/axn/async/registry_spec.rb[1:1:2:1]"
+            ]
+          ],
+          "order_status": "OK"
+        }
+      ]
+    }
+  },
+  "verdicts": {
+    "base": "NOT_FIXED",
+    "head": "FIXED"
+  },
+  "plain_retry_verdict": {
+    "base": "FIXED",
+    "head": "FIXED"
+  },
+  "rep_disagreement": false,
+  "c_passes": true,
+  "label": "CERTIFIED",
+  "execution": {
+    "mode": "docker",
+    "image": "ruby:3.3",
+    "trees": {
+      "base": "/tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9",
+      "head": "/tmp/flakecert-g2-1019/probe/src/axn-6c62d568e27844bf7500be0a54425b7c9c65a8cc"
+    },
+    "timeout_s": 240,
+    "bundler": "2.5.6",
+    "extra_mounts": [
+      "-v",
+      "/tmp/flakecert-g2-1019/probe/bundle:/bundle",
+      "-v",
+      "/tmp/flakecert-g2-1019/probe/gems:/gems"
+    ],
+    "extra_env": [
+      [
+        "GEM_HOME",
+        "/gems"
+      ],
+      [
+        "PATH",
+        "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      ],
+      [
+        "BUNDLE_PATH",
+        "/bundle"
+      ],
+      [
+        "BUNDLE_SILENCE_ROOT_WARNING",
+        "1"
+      ]
+    ],
+    "clear_status": true,
+    "exec_argv": {
+      "base": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-C-r3.json"
+          ]
+        ]
+      },
+      "head": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "3",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--require",
+            "/flakecert/ordering.rb",
+            "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+            "./spec/axn/async/registry_spec.rb[1:1:2:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-6c62d56-C-r3.json"
+          ]
+        ]
+      }
+    }
+  },
+  "kind": "ORDER-DEPENDENT",
+  "seed_provenance": {
+    "seed": 3,
+    "seeds_failed": [
+      3,
+      5,
+      9,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      21,
+      27,
+      28
+    ],
+    "s0": {
+      "seed": 3,
+      "base_failing_ids": [
+        "./spec/axn/tools/registry_spec.rb[1:4:2]",
+        "./spec/axn/tools/registry_spec.rb[1:5:7]",
+        "./spec/axn/tools/registry_spec.rb[1:5:6]",
+        "./spec/axn/tools/registry_spec.rb[1:5:3]",
+        "./spec/axn/async/registry_spec.rb[1:1:5:1]",
+        "./spec/axn/extras/strategies/client_spec.rb[1:1:11:3]",
+        "./spec/axn/strategies_spec.rb[1:1:5:1]"
+      ],
+      "head_failing_ids": []
+    }
+  }
+}

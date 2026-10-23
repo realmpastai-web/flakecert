@@ -1,0 +1,8 @@
+pup release v2.0.0 https://github.com/DataDog/pup/releases/tag/v2.0.0 (published 2026-10-15), Apache-2.0
+  pup_2.0.0_Linux_arm64.tar.gz  sha256 411f8dcb59de9d4ead7d50db3d146ec2192d26a9b7163333ec1ce78983931829 (matches pup_2.0.0_checksums.txt and the GitHub asset digest)
+  pup (ELF arm64, from that tarball) sha256 3bff9a3d76e4aabe782032bb188159e7044be515a3e81e892078bc55dfa68b0d
+  pup_2.0.0_Linux_x86_64.tar.gz sha256 2f3eed56d39779424d61bcbb43113edcb891dfb87f683a19914de0681baf1f6e (checksums.txt match; not used further)
+pup source tag v2.0.0 = 5c4d24534ab3123c782ba9ad2742b36f53308412 (https://github.com/DataDog/pup)
+datadog-api-client-rust rev 0c6dbfbf73069fc670ca25083918606ecd6f58a2 (pup Cargo.lock), Apache-2.0
+  tests/scenarios/cassettes/v2/ci_visibility_tests/Search-tests-events-returns-OK-response.json (+ -with-pagination): recorded Datadog API responses
+A public engineering post describes a flaky-test CSV export. This folder pins the published CLI sample instead.

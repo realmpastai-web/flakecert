@@ -1,0 +1,30 @@
+rung files requirements_dev.txt
+rung test_file tests/test_gc.py
+rung python=3.11 start
+#10 0.171 FLAKECERT_INSTALL python 3.11.17
+#10 0.174 FLAKECERT_INSTALL files requirements_dev.txt
+#10 0.174 FLAKECERT_INSTALL pipenv no
+#10 0.174 FLAKECERT_INSTALL package yes
+#10 4.374 FLAKECERT_INSTALL req /opt/pristine/requirements_dev.txt
+#10 25.45 FLAKECERT_INSTALL req_ok /opt/pristine/requirements_dev.txt
+#10 25.45 FLAKECERT_INSTALL package_begin
+#10 30.66 FLAKECERT_INSTALL package_ok no-deps
+#10 30.94 FLAKECERT_INSTALL pytest_pin 3.2.1
+#10 32.92 FLAKECERT_INSTALL pytest_import_fail
+30.94 FLAKECERT_INSTALL pytest_pin 3.2.1
+32.92 FLAKECERT_INSTALL pytest_import_fail
+rung python=3.11 build_exit=1
+rung python=3.11 result=FAIL build
+rung python=3.9 start
+#10 0.169 FLAKECERT_INSTALL python 3.9.25
+#10 0.171 FLAKECERT_INSTALL files requirements_dev.txt
+#10 0.171 FLAKECERT_INSTALL pipenv no
+#10 0.171 FLAKECERT_INSTALL package yes
+#10 4.099 FLAKECERT_INSTALL req /opt/pristine/requirements_dev.txt
+#10 18.40 FLAKECERT_INSTALL req_ok /opt/pristine/requirements_dev.txt
+#10 18.40 FLAKECERT_INSTALL package_begin
+#10 20.49 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#10 21.23 FLAKECERT_INSTALL pytest_version 3.2.1
+rung python=3.9 build_exit=0
+collect nodes=3 matched=tests/test_gc.py::test_deco_timeout
+rung python=3.9 result=PASS

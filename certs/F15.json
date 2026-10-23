@@ -1,0 +1,71 @@
+{
+  "id": "F15",
+  "project": "https://github.com/OpenDataServices/lib-cove",
+  "sha": "74ba874ec6882969894797ee0dbc5c70a16019e5",
+  "pytest_id": "tests/lib/test_converters.py::test_convert_json_1",
+  "node_id": "tests/lib/test_converters.py::test_convert_json_1",
+  "image_digest": "sha256:c3e8efb0e7acd7206508445fb083d0ca6542b54660e46b3dc09157115dcd4a11",
+  "image_tag": "flakecert:F15",
+  "pip_freeze_sha": "35560a6e5ffb6ba81cf967dd137bfd10159916c8876ebab7a676c5b5258bdd08",
+  "flakecert_version": "0.2.0",
+  "python": "3.11.17",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 4,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "tests/lib/test_converters.py::test_convert_csv_1",
+        "tests/lib/test_converters.py::test_convert_json_root_is_list_1",
+        "tests/lib/test_converters.py::test_convert_org_xml_1",
+        "tests/lib/test_converters.py::test_convert_activity_xml_1",
+        "tests/lib/test_converters.py::test_convert_json_1"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": ""
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "IndexError",
+    "sig": "f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 4,
+    "empirical_rate": "1/4",
+    "compare": "empirical>=lower"
+  }
+}

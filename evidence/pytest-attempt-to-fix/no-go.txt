@@ -1,0 +1,21 @@
+NO-GO
+failing tag: wrong_fix.sig_equals_cert
+
+Real pytest 8.4.2 output in the pinned image. The certificate is the one
+flakecert.search wrote for tests/test_cart.py::test_total_without_discount
+on the prefix sample. Its expected failure signature is
+40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff
+from the traceback line tests/test_cart.py:6.
+
+wrong_fix inserts one line before the tests, so the same assertion is
+tests/test_cart.py:7. The three certificate replays fail with
+AssertionError and assert 90 == 100, and they share signature
+fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024.
+failure_signature hashes that location, so it does not equal the certificate.
+
+The gate, predictions, and controls were not edited. Other result checks
+passed: plain_retry 20/20 on every variant, cert replay 3/3 fail on prefix
+and wrong_fix and 3/3 pass on real_fix, sweep fail seeds 53/53/0.
+INFO certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'}
+plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['wrong_fix.sig_equals_cert']

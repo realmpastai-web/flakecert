@@ -1,0 +1,128 @@
+# flakecert-log-version: 1
+# id: F08
+# method: baseline
+# category: NOD
+# project: https://github.com/dowjones/tokendito
+# sha: f5d8e5171ddcca0c62925263ddb80535f51aded3
+# python: 3.11.17
+# image: sha256:36197d43da0617eba31b5e7fc29ee31aa3781737bcb9b17510a37b597f5e4094
+# image_tag: flakecert:F08
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/functional_test.py::test_version[runnable2]
+# node_id: tests/functional_test.py::test_version[runnable2]
+# test_file: tests/functional_test.py
+# order_scope: test_directory
+# cmd: docker run --network none --cap-add NET_ADMIN
+# netns_cmd: ip link set lo up
+NETNS
+
+lo_set=0
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+1: lo    inet6 ::1/128 scope host \       valid_lft forever preferred_lft forever
+FLAKECERT_ROUTE_BEGIN
+FLAKECERT_ROUTE_END
+ENDNETNS
+RUN method=baseline run=1 outcome=passed exc=- sig=- duration_s=10.601 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=2 outcome=passed exc=- sig=- duration_s=8.283 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=3 outcome=passed exc=- sig=- duration_s=7.360 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=4 outcome=passed exc=- sig=- duration_s=7.304 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=5 outcome=passed exc=- sig=- duration_s=7.469 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=6 outcome=passed exc=- sig=- duration_s=7.722 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=7 outcome=passed exc=- sig=- duration_s=7.460 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=8 outcome=passed exc=- sig=- duration_s=7.255 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=9 outcome=passed exc=- sig=- duration_s=6.992 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=10 outcome=passed exc=- sig=- duration_s=7.478 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=11 outcome=passed exc=- sig=- duration_s=7.250 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=12 outcome=passed exc=- sig=- duration_s=7.121 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=13 outcome=passed exc=- sig=- duration_s=7.345 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=14 outcome=passed exc=- sig=- duration_s=6.925 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=15 outcome=passed exc=- sig=- duration_s=7.099 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=16 outcome=passed exc=- sig=- duration_s=7.171 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=17 outcome=passed exc=- sig=- duration_s=7.046 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=18 outcome=passed exc=- sig=- duration_s=6.886 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=19 outcome=passed exc=- sig=- duration_s=7.136 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=20 outcome=passed exc=- sig=- duration_s=7.402 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=21 outcome=passed exc=- sig=- duration_s=7.879 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=22 outcome=passed exc=- sig=- duration_s=7.073 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=23 outcome=passed exc=- sig=- duration_s=7.066 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=24 outcome=passed exc=- sig=- duration_s=7.261 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=25 outcome=passed exc=- sig=- duration_s=7.389 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=26 outcome=passed exc=- sig=- duration_s=8.327 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=27 outcome=passed exc=- sig=- duration_s=7.871 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=28 outcome=passed exc=- sig=- duration_s=7.317 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=29 outcome=passed exc=- sig=- duration_s=7.146 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=30 outcome=passed exc=- sig=- duration_s=7.782 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=31 outcome=passed exc=- sig=- duration_s=7.289 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=32 outcome=passed exc=- sig=- duration_s=7.148 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=33 outcome=passed exc=- sig=- duration_s=7.611 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=34 outcome=passed exc=- sig=- duration_s=7.604 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=35 outcome=passed exc=- sig=- duration_s=7.811 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=36 outcome=passed exc=- sig=- duration_s=7.328 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=37 outcome=passed exc=- sig=- duration_s=7.630 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=38 outcome=passed exc=- sig=- duration_s=7.314 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=39 outcome=passed exc=- sig=- duration_s=7.183 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=40 outcome=passed exc=- sig=- duration_s=7.406 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=41 outcome=passed exc=- sig=- duration_s=7.277 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=42 outcome=passed exc=- sig=- duration_s=7.245 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=43 outcome=passed exc=- sig=- duration_s=7.114 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=44 outcome=passed exc=- sig=- duration_s=7.476 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=45 outcome=passed exc=- sig=- duration_s=7.437 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=46 outcome=passed exc=- sig=- duration_s=7.404 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=47 outcome=passed exc=- sig=- duration_s=7.328 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=48 outcome=passed exc=- sig=- duration_s=7.241 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=49 outcome=passed exc=- sig=- duration_s=7.229 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=50 outcome=passed exc=- sig=- duration_s=7.661 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=51 outcome=passed exc=- sig=- duration_s=8.424 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=52 outcome=passed exc=- sig=- duration_s=8.106 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=53 outcome=passed exc=- sig=- duration_s=7.191 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=54 outcome=passed exc=- sig=- duration_s=7.158 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=55 outcome=passed exc=- sig=- duration_s=7.655 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=56 outcome=passed exc=- sig=- duration_s=7.812 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=57 outcome=passed exc=- sig=- duration_s=8.198 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=58 outcome=passed exc=- sig=- duration_s=7.619 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=59 outcome=passed exc=- sig=- duration_s=7.626 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=60 outcome=passed exc=- sig=- duration_s=7.428 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=61 outcome=passed exc=- sig=- duration_s=7.664 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=62 outcome=passed exc=- sig=- duration_s=7.399 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=63 outcome=passed exc=- sig=- duration_s=7.275 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=64 outcome=passed exc=- sig=- duration_s=7.373 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=65 outcome=passed exc=- sig=- duration_s=7.279 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=66 outcome=passed exc=- sig=- duration_s=306.795 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=67 outcome=passed exc=- sig=- duration_s=7.861 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=68 outcome=passed exc=- sig=- duration_s=7.584 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=69 outcome=passed exc=- sig=- duration_s=7.794 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=70 outcome=passed exc=- sig=- duration_s=8.263 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=71 outcome=passed exc=- sig=- duration_s=7.864 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=72 outcome=passed exc=- sig=- duration_s=8.174 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=73 outcome=passed exc=- sig=- duration_s=7.525 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=74 outcome=passed exc=- sig=- duration_s=7.523 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=75 outcome=passed exc=- sig=- duration_s=7.788 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=76 outcome=passed exc=- sig=- duration_s=7.143 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=77 outcome=passed exc=- sig=- duration_s=7.857 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=78 outcome=passed exc=- sig=- duration_s=7.367 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=79 outcome=passed exc=- sig=- duration_s=7.706 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=80 outcome=passed exc=- sig=- duration_s=7.787 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=81 outcome=passed exc=- sig=- duration_s=7.196 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=82 outcome=passed exc=- sig=- duration_s=7.199 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=83 outcome=passed exc=- sig=- duration_s=7.223 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=84 outcome=passed exc=- sig=- duration_s=7.479 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=85 outcome=passed exc=- sig=- duration_s=6.914 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=86 outcome=passed exc=- sig=- duration_s=7.778 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=87 outcome=passed exc=- sig=- duration_s=7.740 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=88 outcome=passed exc=- sig=- duration_s=7.753 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=89 outcome=passed exc=- sig=- duration_s=7.300 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=90 outcome=passed exc=- sig=- duration_s=7.279 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=91 outcome=passed exc=- sig=- duration_s=6.939 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=92 outcome=passed exc=- sig=- duration_s=7.423 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=93 outcome=passed exc=- sig=- duration_s=7.643 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=94 outcome=passed exc=- sig=- duration_s=7.040 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=95 outcome=passed exc=- sig=- duration_s=6.992 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=96 outcome=passed exc=- sig=- duration_s=7.333 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=97 outcome=passed exc=- sig=- duration_s=7.223 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=98 outcome=passed exc=- sig=- duration_s=7.306 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=99 outcome=passed exc=- sig=- duration_s=7.038 node=tests/functional_test.py::test_version[runnable2]
+RUN method=baseline run=100 outcome=passed exc=- sig=- duration_s=7.147 node=tests/functional_test.py::test_version[runnable2]
+BASELINE_SUMMARY id=F08 runs=100 failures=0 passes=100 errors=0 skipped=0 timeouts=0 rate=0/100
+OFFLINE_RUN id=F08 install=true run=true

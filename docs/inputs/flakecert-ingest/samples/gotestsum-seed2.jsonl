@@ -1,0 +1,23 @@
+{"Time":"2026-10-18T06:20:43.385193353Z","Action":"start","Package":"example.com/flakecertsample"}
+{"Time":"2026-10-18T06:20:43.386722931Z","Action":"run","Package":"example.com/flakecertsample","Test":"TestPass"}
+{"Time":"2026-10-18T06:20:43.386772769Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestPass","Output":"=== RUN   TestPass\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.38679303Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestPass","Output":"--- PASS: TestPass (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.386797966Z","Action":"pass","Package":"example.com/flakecertsample","Test":"TestPass","Elapsed":0}
+{"Time":"2026-10-18T06:20:43.386804953Z","Action":"run","Package":"example.com/flakecertsample","Test":"TestFailDeterministic"}
+{"Time":"2026-10-18T06:20:43.386806622Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestFailDeterministic","Output":"=== RUN   TestFailDeterministic\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.386809803Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestFailDeterministic","Output":"    sample_test.go:19: got 1 want 2\n","OutputType":"error"}
+{"Time":"2026-10-18T06:20:43.386812934Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestFailDeterministic","Output":"--- FAIL: TestFailDeterministic (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.386814839Z","Action":"fail","Package":"example.com/flakecertsample","Test":"TestFailDeterministic","Elapsed":0}
+{"Time":"2026-10-18T06:20:43.386833119Z","Action":"run","Package":"example.com/flakecertsample","Test":"TestFlakySeeded"}
+{"Time":"2026-10-18T06:20:43.386834932Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestFlakySeeded","Output":"=== RUN   TestFlakySeeded\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.386838829Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestFlakySeeded","Output":"    sample_test.go:26: seeded draw 0.167 below threshold\n","OutputType":"error"}
+{"Time":"2026-10-18T06:20:43.386841725Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestFlakySeeded","Output":"--- FAIL: TestFlakySeeded (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.386844292Z","Action":"fail","Package":"example.com/flakecertsample","Test":"TestFlakySeeded","Elapsed":0}
+{"Time":"2026-10-18T06:20:43.38684637Z","Action":"run","Package":"example.com/flakecertsample","Test":"TestSkip"}
+{"Time":"2026-10-18T06:20:43.386849535Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestSkip","Output":"=== RUN   TestSkip\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.386851418Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestSkip","Output":"    sample_test.go:30: sample skip\n"}
+{"Time":"2026-10-18T06:20:43.386855673Z","Action":"output","Package":"example.com/flakecertsample","Test":"TestSkip","Output":"--- SKIP: TestSkip (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.386857364Z","Action":"skip","Package":"example.com/flakecertsample","Test":"TestSkip","Elapsed":0}
+{"Time":"2026-10-18T06:20:43.386859172Z","Action":"output","Package":"example.com/flakecertsample","Output":"FAIL\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.387144305Z","Action":"output","Package":"example.com/flakecertsample","Output":"FAIL\texample.com/flakecertsample\t0.001s\n","OutputType":"frame"}
+{"Time":"2026-10-18T06:20:43.38715449Z","Action":"fail","Package":"example.com/flakecertsample","Elapsed":0.002}

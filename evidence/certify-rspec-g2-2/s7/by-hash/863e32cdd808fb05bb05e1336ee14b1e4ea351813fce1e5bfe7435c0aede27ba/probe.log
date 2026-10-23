@@ -1,0 +1,34 @@
++ phase=probe
++ seed=15
++ round=1
++ confirm=0
++ ids_n=1988
++ ids_sha256=6ce4df13ccb6a1c27a0bf841f2d13e14b58cc8a6468c4e490e49e32f21b63e03
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/863e32cdd808fb05bb05e1336ee14b1e4ea351813fce1e5bfe7435c0aede27ba/ids.txt
++ attempt=1
+elapsed_s=31.544
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+call
+call
+call
+call
+call
+call
+call
+call
+call
+call
+call
+call
+call
+call
+docker_exit=1

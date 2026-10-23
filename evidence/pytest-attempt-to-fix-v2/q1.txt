@@ -1,0 +1,224 @@
+$ cd inputs/rea-brief-pytest-attempt-to-fix && sha256sum -c SHA256SUMS
+BRIEF.md: OK
+CURSOR_TASK.md: OK
+controls-output.txt: OK
+controls/mutant-fabricated-sig.json: OK
+controls/mutant-omitted-env-and-seed.json: OK
+controls/mutant-plain-retry-only.json: OK
+controls/mutant-real-fix-edits-app.json: OK
+controls/mutant-rerun-plugin-installed.json: OK
+controls/mutant-schedule-drift.json: OK
+controls/mutant-wrong-fix-accepted.json: OK
+controls/rea-tampered/pytest_randomly-5.0.0.tar.gz: OK
+controls/rea-tampered/pytest_rerunfailures-16.7.tar.gz: OK
+controls/synthetic-good-results.json: OK
+expected/predicted-sweep.json: OK
+fixes/real_fix.patch: OK
+fixes/test_cart.prefix.py: OK
+fixes/test_cart.real_fix.py: OK
+fixes/test_cart.wrong_fix.py: OK
+fixes/wrong_fix.patch: OK
+gate-output.txt: OK
+gate_pytest_attempt_to_fix.py: OK
+make_controls.py: OK
+pins/Dockerfile: OK
+pins/requirements.lock: OK
+precheck/precheck-output.txt: OK
+precheck/precheck.py: OK
+rea/URLS.tsv: OK
+rea/pypi-pytest-randomly-5.0.0.json: OK
+rea/pypi-pytest-rerunfailures-16.7.json: OK
+rea/pypistats-pytest-randomly-recent.json: OK
+rea/pypistats-pytest-rerunfailures-recent.json: OK
+rea/pytest_randomly-5.0.0.tar.gz: OK
+rea/pytest_rerunfailures-16.7.tar.gz: OK
+run_controls.sh: OK
+sample.sha256: OK
+sample/app/__init__.py: OK
+sample/app/cart.py: OK
+sample/pytest.ini: OK
+sample/tests/test_cart.py: OK
+sample/tests/test_coupon.py: OK
+sample/tests/test_stable.py: OK
+exit=0
+
+$ cd inputs/rea-brief-pytest-attempt-to-fix-v2 && sha256sum -c SHA256SUMS
+BRIEF.md: OK
+CURSOR_TASK_v2.md: OK
+controls-diff.txt: OK
+controls-output-v2.txt: OK
+controls/mutant-fabricated-sig.json: OK
+controls/mutant-omitted-env-and-seed.json: OK
+controls/mutant-plain-retry-only.json: OK
+controls/mutant-real-fix-edits-app.json: OK
+controls/mutant-rerun-plugin-installed.json: OK
+controls/mutant-schedule-drift.json: OK
+controls/mutant-wrong-fix-accepted.json: OK
+controls/pr7-3ec5eb8-results-no-tb-norm.json: OK
+controls/synthetic-good-results.json: OK
+controls/v2-m1-tb-norm-not-hashing-to-sig.json: OK
+controls/v2-m2-wrong-fix-copies-cert-sig.json: OK
+controls/v2-m3a-line-moved-different-exception.json: OK
+controls/v2-m3b-line-moved-different-message.json: OK
+controls/v2-m4-non-test-frame-changed.json: OK
+controls/v2-m5-real-fix-still-fails.json: OK
+controls/v2-m6-line-shift-wrong-size.json: OK
+gate-output-v2.txt: OK
+gate_pytest_attempt_to_fix_v2.py: OK
+make_controls_v2.py: OK
+run_controls_v2.sh: OK
+exit=0
+
+$ git diff --quiet 2560b40 HEAD -- inputs/rea-brief-pytest-attempt-to-fix
+exit=0
+
+$ git diff --quiet e2467f9ae200ecac9a52db2fe208c0f91320a47c -- inputs/rea-brief-pytest-attempt-to-fix-v2 inputs/rea-brief-pytest-attempt-to-fix
+exit=0
+
+$ make unit
+python3.11 -m unittest tests.test_unit tests.test_ingest tests.test_verdict_audit
+.....................................................readme_ingest tamper pass=False detail=README ingest block differs from make ingest readme=a20e3e939adb65921213d5936de312bfd37e3857d8bf01201702d1841a620e7e fresh=ae90c9d427a6aafb4c4a1e4b6f0a88b7d755e5c98e757312e5ec39a902d19ab2
+.readme_ingest real pass=True detail=README ingest block matches make ingest sha256=ae90c9d427a6aafb4c4a1e4b6f0a88b7d755e5c98e757312e5ec39a902d19ab2
+...............
+----------------------------------------------------------------------
+Ran 69 tests in 0.441s
+
+OK
+exit=0
+
+$ python3 -m pytest -q
+
+==================================== ERRORS ====================================
+_________ ERROR collecting evidence/flakecert/snap-F18-online_test.py __________
+ImportError while importing test module '/workspace/hark-tasks/flakecert-pytest-atf/evidence/flakecert/snap-F18-online_test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+evidence/flakecert/snap-F18-online_test.py:1: in <module>
+    from googleapiclient.errors import HttpError
+E   ModuleNotFoundError: No module named 'googleapiclient'
+_ ERROR collecting inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.prefix.py _
+ImportError while importing test module '/workspace/hark-tasks/flakecert-pytest-atf/inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.prefix.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'test_cart'
+_ ERROR collecting inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.real_fix.py _
+ImportError while importing test module '/workspace/hark-tasks/flakecert-pytest-atf/inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.real_fix.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'test_cart'
+_ ERROR collecting inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.wrong_fix.py _
+ImportError while importing test module '/workspace/hark-tasks/flakecert-pytest-atf/inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.wrong_fix.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'test_cart'
+_ ERROR collecting inputs/rea-brief-pytest-attempt-to-fix/sample/tests/test_cart.py _
+ImportError while importing test module '/workspace/hark-tasks/flakecert-pytest-atf/inputs/rea-brief-pytest-attempt-to-fix/sample/tests/test_cart.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+inputs/rea-brief-pytest-attempt-to-fix/sample/tests/test_cart.py:1: in <module>
+    from app import cart
+E   ModuleNotFoundError: No module named 'app'
+=============================== warnings summary ===============================
+evidence/flakecert/snap-F18-online_test.py:596
+  /workspace/hark-tasks/flakecert-pytest-atf/evidence/flakecert/snap-F18-online_test.py:596: SyntaxWarning: invalid escape sequence '\w'
+    cells = self.worksheet.find('\w+', searchByRegex=True)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR evidence/flakecert/snap-F18-online_test.py
+ERROR inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.prefix.py
+ERROR inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.real_fix.py
+ERROR inputs/rea-brief-pytest-attempt-to-fix/fixes/test_cart.wrong_fix.py
+ERROR inputs/rea-brief-pytest-attempt-to-fix/sample/tests/test_cart.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!!
+1 warning, 5 errors in 0.31s
+exit=2
+
+$ python3 -m pytest -q tests
+.....................................................................    [100%]
+69 passed in 0.58s
+exit=0
+
+$ make verify OFFLINE=1
+$ make verify OFFLINE=1'\nmake verify OFFLINE=1\necho \"exit=$?\""
+title: "Run pytest on tests and offline verify"
+status: succeeded
+started_at: 2026-10-18T18:38:34.932Z
+running_for_ms: 1006627  
+---
+$ python3 -m pytest -q tests
+.....................................................................    [100%]
+69 passed in 0.58s
+exit=0
+
+$ make verify OFFLINE=1
+python3.11 tools/verify.py --offline 
+SKIP resolve-check offline
+SKIP deps-preflight offline
+replay F01
+replay F01 3/3
+replay F03
+replay F03 3/3
+replay F04
+replay F04 3/3
+replay F06
+replay F06 3/3
+replay F08
+replay F08 3/3
+replay F10
+replay F10 3/3
+replay F12
+replay F12 3/3
+replay F14
+replay F14 3/3
+replay F15
+replay F15 3/3
+replay F16
+replay F16 3/3
+GATES {"frozen_hash": true, "effective_set": true, "swaps_logged": true, "offline_run": true, "certificates": true, "blind_comparator": true, "bounds": true, "baseline_denominator": true, "summary_traceable": true, "readme_ingest": true}
+wrote /workspace/hark-tasks/flakecert-pytest-atf/evidence/offline/verify-report.json
+kept committed online evidence; --offline wrote evidence/offline/
+exit=0
+
+$ python3 sig-compare (HEAD audit and certs/*.json versus working tree)
+failure_signature source sha256 5c39ba51df95b08abd0b8f22fe0c66a02192f2647dc4cd0ece3c57acbd6c078e
+normalize_traceback source sha256 db660eaeddeb4a1925c67f26f617ff505aeed26ead7f538b31d410842667a175
+BEFORE cert {'exc': 'AssertionError', 'sig': '40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff'}
+AFTER cert sig 40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff
+AFTER sha256(tb_norm) 40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff
+prefix sig before ['40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff', '40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff', '40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff']
+prefix sig after  ['40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff', '40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff', '40c3f885b65917b279bc6727d05a0bf29569b8f07875f8a4cbdbf322d9a2f8ff']
+prefix sig_equal True
+wrong_fix sig before ['fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024', 'fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024', 'fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024']
+wrong_fix sig after  ['fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024', 'fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024', 'fe53cdfbd550627899a2cf78e3d52bea3a37756f6d4a608b63427aec9fdd0024']
+wrong_fix sig_equal True
+real_fix sig before [None, None, None]
+real_fix sig after  [None, None, None]
+real_fix sig_equal True
+git diff --quiet -- certs exit 0
+HEAD certs sig lines
+    "sig": "92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c"
+    "sig": "7d8eca31335da8ef0bd48a8d2a49115e42b721bf96ea3e1dae6d205f8990c948"
+    "sig": "913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec"
+    "sig": "6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0"
+    "sig": "b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851"
+    "sig": "976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f"
+    "sig": "df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b"
+    "sig": "d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545"
+    "sig": "f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584"
+    "sig": "98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2"

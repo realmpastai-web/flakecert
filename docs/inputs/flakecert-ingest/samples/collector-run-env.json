@@ -1,0 +1,65 @@
+{
+ "buildkite": {
+  "input_env_keys": [
+   "BUILDKITE_BRANCH",
+   "BUILDKITE_BUILD_ID",
+   "BUILDKITE_BUILD_NUMBER",
+   "BUILDKITE_BUILD_URL",
+   "BUILDKITE_COMMIT",
+   "BUILDKITE_JOB_ID",
+   "BUILDKITE_MESSAGE"
+  ],
+  "run_env": {
+   "CI": "buildkite",
+   "branch": "main",
+   "collector": "python-buildkite-test-collector",
+   "commit_sha": "f711ef3b9426b92e2e73691439bf6d4dbaa6e341",
+   "job_id": "sample-job",
+   "key": "sample-build",
+   "language_version": "<python version>",
+   "message": "sample",
+   "number": "1",
+   "test_runner": "pytest",
+   "url": "https://example.invalid/b/1",
+   "version": "1.9.0"
+  }
+ },
+ "circleci": {
+  "input_env_keys": [
+   "CIRCLE_BRANCH",
+   "CIRCLE_BUILD_NUM",
+   "CIRCLE_BUILD_URL",
+   "CIRCLE_SHA1",
+   "CIRCLE_WORKFLOW_ID"
+  ],
+  "run_env": {
+   "CI": "circleci",
+   "branch": "main",
+   "collector": "python-buildkite-test-collector",
+   "commit_sha": "f711ef3b9426b92e2e73691439bf6d4dbaa6e341",
+   "key": "wf-sample-1",
+   "language_version": "<python version>",
+   "number": "1",
+   "test_runner": "pytest",
+   "url": "https://example.invalid/c/1",
+   "version": "1.9.0"
+  }
+ },
+ "gitlab": {
+  "input_env_keys": [
+   "CI_COMMIT_REF_NAME",
+   "CI_COMMIT_SHA",
+   "CI_JOB_ID",
+   "CI_PIPELINE_ID",
+   "GITLAB_CI"
+  ],
+  "run_env": {
+   "CI": "generic",
+   "collector": "python-buildkite-test-collector",
+   "key": "<uuid4, random per run>",
+   "language_version": "<python version>",
+   "test_runner": "pytest",
+   "version": "1.9.0"
+  }
+ }
+}

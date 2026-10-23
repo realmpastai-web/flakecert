@@ -1,0 +1,43 @@
+0 failures in 30 seeded runs -> failure rate <= 9.50% (one-sided 95%, Clopper-Pearson); seeds=1..30; commit=8004fe1c22e780c44d0db138293326037d847bf2
+BOUNDED_CLEAN
+{
+  "arm_g_log": "arm-g/001b5959e258723a.log",
+  "arm_g_passed": true,
+  "commit": "8004fe1c22e780c44d0db138293326037d847bf2",
+  "failures": 0,
+  "finished_runs": 30,
+  "path": "./spec/lib/gitlab/pagination/keyset/page_spec.rb",
+  "seed_logs": [
+    "arm-f/001b5959e258723a/seed-01.log",
+    "arm-f/001b5959e258723a/seed-02.log",
+    "arm-f/001b5959e258723a/seed-03.log",
+    "arm-f/001b5959e258723a/seed-04.log",
+    "arm-f/001b5959e258723a/seed-05.log",
+    "arm-f/001b5959e258723a/seed-06.log",
+    "arm-f/001b5959e258723a/seed-07.log",
+    "arm-f/001b5959e258723a/seed-08.log",
+    "arm-f/001b5959e258723a/seed-09.log",
+    "arm-f/001b5959e258723a/seed-10.log",
+    "arm-f/001b5959e258723a/seed-11.log",
+    "arm-f/001b5959e258723a/seed-12.log",
+    "arm-f/001b5959e258723a/seed-13.log",
+    "arm-f/001b5959e258723a/seed-14.log",
+    "arm-f/001b5959e258723a/seed-15.log",
+    "arm-f/001b5959e258723a/seed-16.log",
+    "arm-f/001b5959e258723a/seed-17.log",
+    "arm-f/001b5959e258723a/seed-18.log",
+    "arm-f/001b5959e258723a/seed-19.log",
+    "arm-f/001b5959e258723a/seed-20.log",
+    "arm-f/001b5959e258723a/seed-21.log",
+    "arm-f/001b5959e258723a/seed-22.log",
+    "arm-f/001b5959e258723a/seed-23.log",
+    "arm-f/001b5959e258723a/seed-24.log",
+    "arm-f/001b5959e258723a/seed-25.log",
+    "arm-f/001b5959e258723a/seed-26.log",
+    "arm-f/001b5959e258723a/seed-27.log",
+    "arm-f/001b5959e258723a/seed-28.log",
+    "arm-f/001b5959e258723a/seed-29.log",
+    "arm-f/001b5959e258723a/seed-30.log"
+  ],
+  "verdict": "BOUNDED_CLEAN"
+}

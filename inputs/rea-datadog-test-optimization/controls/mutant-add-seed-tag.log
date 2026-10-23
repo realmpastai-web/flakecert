@@ -1,0 +1,4 @@
+FAIL	tags.count_80	81 string tag constants
+FAIL	tags.no_repro_fields	0 tags for seed/order/image digest/dependency lock/schedule/bound
+CHECK FAIL ['tags.count_80', 'tags.no_repro_fields']
+exit=1

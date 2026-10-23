@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "reproduced": true,
+  "order_status": "OK",
+  "victim_status": "failed",
+  "victim_error_class": "RSpec::Expectations::ExpectationNotMetError",
+  "expected_error_class": "RSpec::Expectations::ExpectationNotMetError",
+  "log": "evidence/certify-rspec-g2-2/s8/by-hash/cc9844ff287f49e518c74c7f5a5980a2e5fbc8f6dde2c4f8066998d401af78af/probe.log",
+  "json": "evidence/certify-rspec-g2-2/s8/by-hash/cc9844ff287f49e518c74c7f5a5980a2e5fbc8f6dde2c4f8066998d401af78af/rspec.json",
+  "ids": "evidence/certify-rspec-g2-2/s8/by-hash/cc9844ff287f49e518c74c7f5a5980a2e5fbc8f6dde2c4f8066998d401af78af/ids.txt",
+  "ids_sha256": "4dc587050064d9e93f1d85e1d57a74df167e2987d70beada2cd8037871af74e6",
+  "n_ids": 208,
+  "elapsed_s": 2.631,
+  "exit_code": 1,
+  "phase": "probe",
+  "round": 2,
+  "seed": 3
+}

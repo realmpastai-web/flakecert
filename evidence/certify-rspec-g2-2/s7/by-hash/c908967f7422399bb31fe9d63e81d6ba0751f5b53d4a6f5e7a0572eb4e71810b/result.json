@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "reproduced": true,
+  "order_status": "OK",
+  "victim_status": "failed",
+  "victim_error_class": "Axn::DuplicateStrategyError",
+  "expected_error_class": "Axn::DuplicateStrategyError",
+  "log": "evidence/certify-rspec-g2-2/s7/by-hash/c908967f7422399bb31fe9d63e81d6ba0751f5b53d4a6f5e7a0572eb4e71810b/probe.log",
+  "json": "evidence/certify-rspec-g2-2/s7/by-hash/c908967f7422399bb31fe9d63e81d6ba0751f5b53d4a6f5e7a0572eb4e71810b/rspec.json",
+  "ids": "evidence/certify-rspec-g2-2/s7/by-hash/c908967f7422399bb31fe9d63e81d6ba0751f5b53d4a6f5e7a0572eb4e71810b/ids.txt",
+  "ids_sha256": "75bc6447c649f9fc1141e2f8854cd6eed0a956a520cdb9674ae3c2dae5c2d224",
+  "n_ids": 85,
+  "elapsed_s": 1.308,
+  "exit_code": 1,
+  "phase": "probe",
+  "round": 1,
+  "seed": 16
+}

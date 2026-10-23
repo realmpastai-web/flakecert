@@ -1,0 +1,326 @@
+# flakecert-log-version: 1
+# id: F01
+# method: flakecert
+# category: NOD
+# project: https://github.com/eth-cscs/reframe
+# sha: 576eb3f1dcc015d1e6d7a10602c748d4f810da68
+# python: 3.11.17
+# image: sha256:4a811a46308a2cd2d9276df5cefd7de6df9937f1e9d53a767f137403c0b93a97
+# image_tag: flakecert:F01
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+# node_id: unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+# test_file: unittests/test_policies.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 418
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=1.102 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=2 {"order": ["unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=1.048 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=3 {"order": ["unittests/test_policies.py::test_runall[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_system_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_system_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_prgenv_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_prgenv_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_strict_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_strict_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_force_local_execution[SerialExecutionPolicy]", "unittests/test_policies.py::test_force_local_execution[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_kbd_interrupt_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_kbd_interrupt_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_system_exit_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_system_exit_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_retries_bad_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_retries_bad_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_retries_good_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_retries_good_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_pass_in_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_pass_in_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_sigterm_handling[SerialExecutionPolicy]", "unittests/test_policies.py::test_sigterm_handling[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_dependencies[SerialExecutionPolicy]", "unittests/test_policies.py::test_dependencies[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_dependencies_with_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_dependencies_with_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_concurrency_unlimited", "unittests/test_policies.py::test_concurrency_limited", "unittests/test_policies.py::test_concurrency_none", "unittests/test_policies.py::test_kbd_interrupt_in_wait_with_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_wait_with_limited_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_limited_concurrency", "unittests/test_policies.py::test_poll_fails_main_loop", "unittests/test_policies.py::test_poll_fails_busy_loop", "unittests/test_policies.py::test_compile_fail_reschedule_main_loop", "unittests/test_policies.py::test_compile_fail_reschedule_busy_loop"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=190.159 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=4 {"order": ["unittests/test_policies.py::test_compile_fail_reschedule_busy_loop", "unittests/test_policies.py::test_compile_fail_reschedule_main_loop", "unittests/test_policies.py::test_poll_fails_busy_loop", "unittests/test_policies.py::test_poll_fails_main_loop", "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_limited_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_wait_with_limited_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_wait_with_concurrency", "unittests/test_policies.py::test_concurrency_none", "unittests/test_policies.py::test_concurrency_limited", "unittests/test_policies.py::test_concurrency_unlimited", "unittests/test_policies.py::test_dependencies_with_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_dependencies_with_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_dependencies[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_dependencies[SerialExecutionPolicy]", "unittests/test_policies.py::test_sigterm_handling[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_sigterm_handling[SerialExecutionPolicy]", "unittests/test_policies.py::test_pass_in_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_pass_in_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_retries_good_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_retries_good_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_retries_bad_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_retries_bad_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_system_exit_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_system_exit_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_kbd_interrupt_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_kbd_interrupt_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_force_local_execution[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_force_local_execution[SerialExecutionPolicy]", "unittests/test_policies.py::test_strict_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_strict_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_prgenv_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_prgenv_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_system_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_system_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=missing exc=- sig=- duration_s=190.208 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=5 {"order": ["unittests/test_policies.py::test_runall[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_system_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_system_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_prgenv_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_prgenv_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_strict_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_strict_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_force_local_execution[SerialExecutionPolicy]", "unittests/test_policies.py::test_force_local_execution[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_kbd_interrupt_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_kbd_interrupt_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_system_exit_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_system_exit_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_retries_bad_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_retries_bad_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_retries_good_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_retries_good_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_pass_in_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_pass_in_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_sigterm_handling[SerialExecutionPolicy]", "unittests/test_policies.py::test_sigterm_handling[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_dependencies[SerialExecutionPolicy]", "unittests/test_policies.py::test_dependencies[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_dependencies_with_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_dependencies_with_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_concurrency_unlimited", "unittests/test_policies.py::test_concurrency_limited", "unittests/test_policies.py::test_concurrency_none", "unittests/test_policies.py::test_kbd_interrupt_in_wait_with_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_wait_with_limited_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_limited_concurrency", "unittests/test_policies.py::test_poll_fails_main_loop", "unittests/test_policies.py::test_poll_fails_busy_loop", "unittests/test_policies.py::test_compile_fail_reschedule_main_loop", "unittests/test_policies.py::test_compile_fail_reschedule_busy_loop", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=missing exc=- sig=- duration_s=190.203 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=6 {"order": ["unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_system_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_system_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_prgenv_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_prgenv_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_strict_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_strict_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_force_local_execution[SerialExecutionPolicy]", "unittests/test_policies.py::test_force_local_execution[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_kbd_interrupt_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_kbd_interrupt_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_system_exit_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_system_exit_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_retries_bad_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_retries_bad_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_retries_good_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_retries_good_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_pass_in_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_pass_in_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_sigterm_handling[SerialExecutionPolicy]", "unittests/test_policies.py::test_sigterm_handling[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_dependencies[SerialExecutionPolicy]", "unittests/test_policies.py::test_dependencies[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_dependencies_with_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_dependencies_with_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_concurrency_unlimited", "unittests/test_policies.py::test_concurrency_limited", "unittests/test_policies.py::test_concurrency_none", "unittests/test_policies.py::test_kbd_interrupt_in_wait_with_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_wait_with_limited_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency", "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_limited_concurrency", "unittests/test_policies.py::test_poll_fails_main_loop", "unittests/test_policies.py::test_poll_fails_busy_loop", "unittests/test_policies.py::test_compile_fail_reschedule_main_loop", "unittests/test_policies.py::test_compile_fail_reschedule_busy_loop"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=6 outcome=passed exc=- sig=- duration_s=310.624 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=7 {"order": ["unittests/test_policies.py::test_runall[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=7 outcome=passed exc=- sig=- duration_s=2.038 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=8 {"order": ["unittests/test_policies.py::test_runall[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=8 outcome=passed exc=- sig=- duration_s=1.445 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=9 {"order": ["unittests/test_policies.py::test_runall[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=9 outcome=passed exc=- sig=- duration_s=1.430 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=10 {"order": ["unittests/test_policies.py::test_runall[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=10 outcome=passed exc=- sig=- duration_s=1.638 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=11 {"order": ["unittests/test_policies.py::test_runall_skip_system_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=11 outcome=passed exc=- sig=- duration_s=1.680 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=12 {"order": ["unittests/test_policies.py::test_runall_skip_system_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=12 outcome=passed exc=- sig=- duration_s=1.628 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=13 {"order": ["unittests/test_policies.py::test_runall_skip_system_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=13 outcome=passed exc=- sig=- duration_s=1.785 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=14 {"order": ["unittests/test_policies.py::test_runall_skip_system_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=14 outcome=passed exc=- sig=- duration_s=1.879 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=15 {"order": ["unittests/test_policies.py::test_runall_skip_prgenv_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=15 outcome=passed exc=- sig=- duration_s=1.542 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=16 {"order": ["unittests/test_policies.py::test_runall_skip_prgenv_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=16 outcome=passed exc=- sig=- duration_s=1.576 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=17 {"order": ["unittests/test_policies.py::test_runall_skip_prgenv_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=17 outcome=passed exc=- sig=- duration_s=1.428 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=18 {"order": ["unittests/test_policies.py::test_runall_skip_prgenv_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=18 outcome=passed exc=- sig=- duration_s=1.477 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=19 {"order": ["unittests/test_policies.py::test_runall_skip_sanity_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=19 outcome=passed exc=- sig=- duration_s=1.585 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=20 {"order": ["unittests/test_policies.py::test_runall_skip_sanity_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=20 outcome=passed exc=- sig=- duration_s=1.425 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=21 {"order": ["unittests/test_policies.py::test_runall_skip_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=21 outcome=passed exc=- sig=- duration_s=1.727 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=22 {"order": ["unittests/test_policies.py::test_runall_skip_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=22 outcome=passed exc=- sig=- duration_s=1.296 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=23 {"order": ["unittests/test_policies.py::test_runall_skip_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=23 outcome=passed exc=- sig=- duration_s=1.329 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=24 {"order": ["unittests/test_policies.py::test_runall_skip_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=24 outcome=passed exc=- sig=- duration_s=1.183 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=25 {"order": ["unittests/test_policies.py::test_strict_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=25 outcome=passed exc=- sig=- duration_s=1.201 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=26 {"order": ["unittests/test_policies.py::test_strict_performance_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=26 outcome=passed exc=- sig=- duration_s=1.729 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=27 {"order": ["unittests/test_policies.py::test_strict_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=27 outcome=passed exc=- sig=- duration_s=1.278 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=28 {"order": ["unittests/test_policies.py::test_strict_performance_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=28 outcome=passed exc=- sig=- duration_s=1.365 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=29 {"order": ["unittests/test_policies.py::test_force_local_execution[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=29 outcome=passed exc=- sig=- duration_s=1.203 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=30 {"order": ["unittests/test_policies.py::test_force_local_execution[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=30 outcome=passed exc=- sig=- duration_s=1.248 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=31 {"order": ["unittests/test_policies.py::test_force_local_execution[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=31 outcome=passed exc=- sig=- duration_s=1.112 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=32 {"order": ["unittests/test_policies.py::test_force_local_execution[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=32 outcome=passed exc=- sig=- duration_s=1.095 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=33 {"order": ["unittests/test_policies.py::test_kbd_interrupt_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=33 outcome=passed exc=- sig=- duration_s=1.098 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=34 {"order": ["unittests/test_policies.py::test_kbd_interrupt_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=34 outcome=passed exc=- sig=- duration_s=180.464 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=35 {"order": ["unittests/test_policies.py::test_kbd_interrupt_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=35 outcome=passed exc=- sig=- duration_s=2.060 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=36 {"order": ["unittests/test_policies.py::test_kbd_interrupt_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=36 outcome=passed exc=- sig=- duration_s=2.016 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=37 {"order": ["unittests/test_policies.py::test_system_exit_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=37 outcome=passed exc=- sig=- duration_s=1.011 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=38 {"order": ["unittests/test_policies.py::test_system_exit_within_test[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=38 outcome=passed exc=- sig=- duration_s=0.948 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=39 {"order": ["unittests/test_policies.py::test_system_exit_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=39 outcome=passed exc=- sig=- duration_s=0.991 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=40 {"order": ["unittests/test_policies.py::test_system_exit_within_test[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=40 outcome=passed exc=- sig=- duration_s=0.991 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=41 {"order": ["unittests/test_policies.py::test_retries_bad_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=41 outcome=passed exc=- sig=- duration_s=1.107 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=42 {"order": ["unittests/test_policies.py::test_retries_bad_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=42 outcome=passed exc=- sig=- duration_s=1.110 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=43 {"order": ["unittests/test_policies.py::test_retries_bad_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=43 outcome=passed exc=- sig=- duration_s=1.523 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=44 {"order": ["unittests/test_policies.py::test_retries_bad_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=44 outcome=passed exc=- sig=- duration_s=1.410 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=45 {"order": ["unittests/test_policies.py::test_retries_good_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=45 outcome=passed exc=- sig=- duration_s=1.322 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=46 {"order": ["unittests/test_policies.py::test_retries_good_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=46 outcome=passed exc=- sig=- duration_s=1.026 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=47 {"order": ["unittests/test_policies.py::test_retries_good_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=47 outcome=passed exc=- sig=- duration_s=1.050 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=48 {"order": ["unittests/test_policies.py::test_retries_good_check[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=48 outcome=passed exc=- sig=- duration_s=1.119 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=49 {"order": ["unittests/test_policies.py::test_pass_in_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=49 outcome=passed exc=- sig=- duration_s=1.019 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=50 {"order": ["unittests/test_policies.py::test_pass_in_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=50 outcome=passed exc=- sig=- duration_s=1.095 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=51 {"order": ["unittests/test_policies.py::test_pass_in_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=51 outcome=passed exc=- sig=- duration_s=1.071 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=52 {"order": ["unittests/test_policies.py::test_pass_in_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=52 outcome=passed exc=- sig=- duration_s=1.436 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=53 {"order": ["unittests/test_policies.py::test_sigterm_handling[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=53 outcome=passed exc=- sig=- duration_s=1.520 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=54 {"order": ["unittests/test_policies.py::test_sigterm_handling[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=54 outcome=passed exc=- sig=- duration_s=1.544 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=55 {"order": ["unittests/test_policies.py::test_sigterm_handling[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=55 outcome=passed exc=- sig=- duration_s=1.599 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=56 {"order": ["unittests/test_policies.py::test_sigterm_handling[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=56 outcome=passed exc=- sig=- duration_s=1.694 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=57 {"order": ["unittests/test_policies.py::test_dependencies[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=57 outcome=passed exc=- sig=- duration_s=1.103 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=58 {"order": ["unittests/test_policies.py::test_dependencies[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=58 outcome=passed exc=- sig=- duration_s=1.243 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=59 {"order": ["unittests/test_policies.py::test_dependencies[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=59 outcome=passed exc=- sig=- duration_s=1.070 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=60 {"order": ["unittests/test_policies.py::test_dependencies[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=60 outcome=passed exc=- sig=- duration_s=1.447 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=61 {"order": ["unittests/test_policies.py::test_dependencies_with_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=61 outcome=passed exc=- sig=- duration_s=1.270 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=62 {"order": ["unittests/test_policies.py::test_dependencies_with_retries[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=62 outcome=passed exc=- sig=- duration_s=1.074 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=63 {"order": ["unittests/test_policies.py::test_dependencies_with_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=63 outcome=passed exc=- sig=- duration_s=1.040 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=64 {"order": ["unittests/test_policies.py::test_dependencies_with_retries[AsynchronousExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=64 outcome=passed exc=- sig=- duration_s=1.158 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=65 {"order": ["unittests/test_policies.py::test_concurrency_unlimited", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=65 outcome=passed exc=- sig=- duration_s=1.614 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=66 {"order": ["unittests/test_policies.py::test_concurrency_unlimited", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=66 outcome=passed exc=- sig=- duration_s=1.645 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=67 {"order": ["unittests/test_policies.py::test_concurrency_limited", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=67 outcome=passed exc=- sig=- duration_s=2.408 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=68 {"order": ["unittests/test_policies.py::test_concurrency_limited", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=68 outcome=passed exc=- sig=- duration_s=2.333 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=69 {"order": ["unittests/test_policies.py::test_concurrency_none", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=69 outcome=passed exc=- sig=- duration_s=2.824 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=70 {"order": ["unittests/test_policies.py::test_concurrency_none", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=70 outcome=passed exc=- sig=- duration_s=2.778 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=71 {"order": ["unittests/test_policies.py::test_kbd_interrupt_in_wait_with_concurrency", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=71 outcome=passed exc=- sig=- duration_s=180.410 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=72 {"order": ["unittests/test_policies.py::test_kbd_interrupt_in_wait_with_concurrency", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=72 outcome=passed exc=- sig=- duration_s=180.490 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=73 {"order": ["unittests/test_policies.py::test_kbd_interrupt_in_wait_with_limited_concurrency", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=73 outcome=passed exc=- sig=- duration_s=180.453 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=74 {"order": ["unittests/test_policies.py::test_kbd_interrupt_in_wait_with_limited_concurrency", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=74 outcome=passed exc=- sig=- duration_s=180.386 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+SCHEDULE run=75 {"order": ["unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=75 outcome=failed exc=ReframeFatalError sig=92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c duration_s=180.289 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+TRACEBACK run=75
+_____________ test_runall_skip_sanity_check[SerialExecutionPolicy] _____________
+unittests/test_policies.py:192: in test_runall_skip_sanity_check
+    runner.runall(make_cases())
+                  ^^^^^^^^^^^^
+unittests/test_policies.py:79: in _make_cases
+    checks = make_loader(['unittests/resources/checks']).load_all()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:159: in load_all
+    checks.extend(self.load_from_dir(d, self._recurse))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:146: in load_from_dir
+    checks.extend(self.load_from_file(entry.path))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:131: in load_from_file
+    return self.load_from_module(util.import_module_from_file(filename))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:101: in load_from_module
+    candidates = module._rfm_gettests()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+reframe/core/decorators.py:49: in _instantiate_all
+    ret.append(_instantiate(cls, args))
+               ^^^^^^^^^^^^^^^^^^^^^^^
+reframe/core/decorators.py:36: in _instantiate
+    return cls()
+           ^^^^^
+reframe/core/pipeline.py:707: in __new__
+    obj._rfm_init(name, prefix)
+reframe/core/pipeline.py:805: in _rfm_init
+    if rt.runtime().get_option('general/0/non_default_craype'):
+       ^^^^^^^^^^^^
+reframe/core/runtime.py:187: in runtime
+    raise ReframeFatalError('no runtime context is configured')
+E   reframe.core.exceptions.ReframeFatalError: no runtime context is configured
+ENDTRACEBACK run=75
+SCHEDULE run=76 {"order": ["unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=76 outcome=passed exc=- sig=- duration_s=0.998 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+ABLATE source=order necessary=yes
+SCHEDULE run=77 {"order": ["unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=77 outcome=failed exc=ReframeFatalError sig=92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c duration_s=301.252 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+TRACEBACK run=77
+_____________ test_runall_skip_sanity_check[SerialExecutionPolicy] _____________
+unittests/test_policies.py:192: in test_runall_skip_sanity_check
+    runner.runall(make_cases())
+                  ^^^^^^^^^^^^
+unittests/test_policies.py:79: in _make_cases
+    checks = make_loader(['unittests/resources/checks']).load_all()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:159: in load_all
+    checks.extend(self.load_from_dir(d, self._recurse))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:146: in load_from_dir
+    checks.extend(self.load_from_file(entry.path))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:131: in load_from_file
+    return self.load_from_module(util.import_module_from_file(filename))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:101: in load_from_module
+    candidates = module._rfm_gettests()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+reframe/core/decorators.py:49: in _instantiate_all
+    ret.append(_instantiate(cls, args))
+               ^^^^^^^^^^^^^^^^^^^^^^^
+reframe/core/decorators.py:36: in _instantiate
+    return cls()
+           ^^^^^
+reframe/core/pipeline.py:707: in __new__
+    obj._rfm_init(name, prefix)
+reframe/core/pipeline.py:805: in _rfm_init
+    if rt.runtime().get_option('general/0/non_default_craype'):
+       ^^^^^^^^^^^^
+reframe/core/runtime.py:187: in runtime
+    raise ReframeFatalError('no runtime context is configured')
+E   reframe.core.exceptions.ReframeFatalError: no runtime context is configured
+ENDTRACEBACK run=77
+SCHEDULE run=78 {"order": ["unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=78 outcome=failed exc=ReframeFatalError sig=92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c duration_s=180.474 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+TRACEBACK run=78
+_____________ test_runall_skip_sanity_check[SerialExecutionPolicy] _____________
+unittests/test_policies.py:192: in test_runall_skip_sanity_check
+    runner.runall(make_cases())
+                  ^^^^^^^^^^^^
+unittests/test_policies.py:79: in _make_cases
+    checks = make_loader(['unittests/resources/checks']).load_all()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:159: in load_all
+    checks.extend(self.load_from_dir(d, self._recurse))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:146: in load_from_dir
+    checks.extend(self.load_from_file(entry.path))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:131: in load_from_file
+    return self.load_from_module(util.import_module_from_file(filename))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:101: in load_from_module
+    candidates = module._rfm_gettests()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+reframe/core/decorators.py:49: in _instantiate_all
+    ret.append(_instantiate(cls, args))
+               ^^^^^^^^^^^^^^^^^^^^^^^
+reframe/core/decorators.py:36: in _instantiate
+    return cls()
+           ^^^^^
+reframe/core/pipeline.py:707: in __new__
+    obj._rfm_init(name, prefix)
+reframe/core/pipeline.py:805: in _rfm_init
+    if rt.runtime().get_option('general/0/non_default_craype'):
+       ^^^^^^^^^^^^
+reframe/core/runtime.py:187: in runtime
+    raise ReframeFatalError('no runtime context is configured')
+E   reframe.core.exceptions.ReframeFatalError: no runtime context is configured
+ENDTRACEBACK run=78
+SCHEDULE run=79 {"order": ["unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency", "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=79 outcome=failed exc=ReframeFatalError sig=92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c duration_s=180.357 node=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+TRACEBACK run=79
+_____________ test_runall_skip_sanity_check[SerialExecutionPolicy] _____________
+unittests/test_policies.py:192: in test_runall_skip_sanity_check
+    runner.runall(make_cases())
+                  ^^^^^^^^^^^^
+unittests/test_policies.py:79: in _make_cases
+    checks = make_loader(['unittests/resources/checks']).load_all()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:159: in load_all
+    checks.extend(self.load_from_dir(d, self._recurse))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:146: in load_from_dir
+    checks.extend(self.load_from_file(entry.path))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:131: in load_from_file
+    return self.load_from_module(util.import_module_from_file(filename))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+reframe/frontend/loader.py:101: in load_from_module
+    candidates = module._rfm_gettests()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+reframe/core/decorators.py:49: in _instantiate_all
+    ret.append(_instantiate(cls, args))
+               ^^^^^^^^^^^^^^^^^^^^^^^
+reframe/core/decorators.py:36: in _instantiate
+    return cls()
+           ^^^^^
+reframe/core/pipeline.py:707: in __new__
+    obj._rfm_init(name, prefix)
+reframe/core/pipeline.py:805: in _rfm_init
+    if rt.runtime().get_option('general/0/non_default_craype'):
+       ^^^^^^^^^^^^
+reframe/core/runtime.py:187: in runtime
+    raise ReframeFatalError('no runtime context is configured')
+E   reframe.core.exceptions.ReframeFatalError: no runtime context is configured
+ENDTRACEBACK run=79
+REPLAY id=F01 matched=3/3 sig=92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c
+CERT id=F01 certified=yes d=1 m=5 k=75 per_run_lower=1/5 runs_to_failure=75 sig=92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c
+SEARCH_STOP reason=certified index=79
+FLAKECERT_SUMMARY id=F01 runs=79 failures=4

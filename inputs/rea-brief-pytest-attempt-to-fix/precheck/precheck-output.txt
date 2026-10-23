@@ -1,0 +1,18 @@
+# Hark sandbox precheck 2026-10-18, NOT the gate's evidence: Python 3.12.15 (pin is 3.11 image), pytest 8.4.2, lock installed --require-hashes; no randomly/rerunfailures installed
+$ pip freeze
+iniconfig==2.1.0
+packaging==25.0
+pluggy==1.6.0
+Pygments==2.19.2
+pytest==8.4.2
+$ python -m pytest -p no:cacheprovider tests/test_cart.py::test_total_with_discount tests/test_cart.py::test_total_without_discount  (prefix, polluter first)
+E       assert 90 == 100
+E        +  where 90 = total()
+E        +    where total = <app.cart.Cart object at 0xffff94d540b0>.total
+E        +      where <app.cart.Cart object at 0xffff94d540b0> = Cart([60, 40])
+========================= 1 failed, 1 passed in 0.01s ==========================
+exit=1
+$ python precheck/precheck.py . <py>   # per variant: (plain x3, replay [P,V] x3, sweep fail seeds == prediction, n failing, polluter passes)
+prefix (['passed', 'passed', 'passed'], ['failed', 'failed', 'failed'], True, 53, True)
+wrong_fix (['passed', 'passed', 'passed'], ['failed', 'failed', 'failed'], True, 53, True)
+real_fix (['passed', 'passed', 'passed'], ['passed', 'passed', 'passed'], True, 0, True)

@@ -1,0 +1,449 @@
+===== pins =====
+$ sha256sum activesupport-8.1.4.gem minitest-6.0.6.gem railties-8.1.4.gem rails-926edf5.tar.gz rails-8082369.tar.gz ruby-v3_3_8.tar.gz BASE.txt
+891dd3fe43c4fc8391934b237b1189bb1f661c932a84a840043db9d46a4e80df  activesupport-8.1.4.gem
+153ea36d1d987a62942382b61075745042a2b3123b1cd48f4c3675af9cc7d6f1  minitest-6.0.6.gem
+b5e7a8e8984e33114d68af62227971960aae1e6c02bd7c9d826ffad97fff583c  railties-8.1.4.gem
+e40f1a951c3ce7e76876248207cfcdbf77fcc3a781d325976a0642740aadf4d8  rails-926edf5.tar.gz
+fbae926556d89f853f2bb8d5170367db14a2e55815e1bb0f36089146d2c5f56b  rails-8082369.tar.gz
+62847a96f708f7bb34bb682570b902034416f7a3e6ec94fd4ab86af5d997fea0  ruby-v3_3_8.tar.gz
+51d5f881ae7c4f78fefdb648019a2d728a0f8b57a1b8283326950176264248dc  BASE.txt
+EXIT:0
+
+$ cat parent.sha api-activesupport-8.1.4.sha ruby-tag-object.txt
+8082369f155e30dee70c7bf4dfa078affb1b90c4
+891dd3fe43c4fc8391934b237b1189bb1f661c932a84a840043db9d46a4e80df
+b200bad6cd40d08e9f33b93e1a85c270b337867c
+commit
+EXIT:0
+
+===== Hark pattern on first three =====
+$ grep -n -E srand|seed|File.write|File.open|log cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb
+EXIT:1
+
+===== each token on five 8.1.4 files =====
+--- token srand ---
+$ grep -n -F srand cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb
+EXIT:1
+
+--- token seed ---
+$ grep -n -F seed cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb
+EXIT:1
+
+--- token File.write ---
+$ grep -n -F File.write cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb
+EXIT:1
+
+--- token File.open ---
+$ grep -n -F File.open cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb
+EXIT:1
+
+--- token log ---
+$ grep -n -F log cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb
+cited/activesupport-8.1.4/lib/active_support/test_case.rb:4:require "active_support/testing/tagged_logging"
+EXIT:0
+
+--- token Tempfile ---
+$ grep -n -F Tempfile cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb
+EXIT:1
+
+--- token dump ---
+$ grep -n -F dump cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb
+cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb:12:        include DRb::DRbUndumped
+EXIT:0
+
+===== word-boundary srand seed log dump on five =====
+$ grep -n -E -w srand|seed|log|dump cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb
+EXIT:1
+
+===== srand in whole activesupport gem rb =====
+srand_hit_count 0
+EXIT:0
+
+===== 8.2 T2 persistence tokens =====
+--- T2 token srand ---
+$ grep -n -F srand cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb
+EXIT:1
+
+--- T2 token File.write ---
+$ grep -n -F File.write cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb
+EXIT:1
+
+--- T2 token File.open ---
+$ grep -n -F File.open cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb
+EXIT:1
+
+--- T2 token Tempfile ---
+$ grep -n -F Tempfile cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb
+EXIT:1
+
+--- T2 token Marshal.dump ---
+$ grep -n -F Marshal.dump cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb
+EXIT:1
+
+--- T2 token Marshal.dump ---
+$ grep -n -F Marshal.dump cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb
+EXIT:1
+
+--- T2 seed word ---
+$ grep -n -E -w seed cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb
+cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb:69:      # Tests arrive already shuffled by Minitest based on the seed. Since the arrival
+cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb:70:      # order is deterministic for a given seed, round-robin assignment produces
+cited/rails-926edf5/lib/active_support/test_case.rb:100:      # round-robin order, so given the same seed value and worker count, the
+EXIT:0
+
+--- T2 dump ---
+$ grep -n -F dump cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb
+cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb:12:        include DRb::DRbUndumped
+EXIT:0
+
+===== T3 vs T2 diff names =====
+$ diff -u cited/rails-8082369/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb
+--- cited/rails-8082369/lib/active_support/testing/parallelization/server.rb	2026-10-20 13:07:43.053376107 +0530
++++ cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb	2026-10-20 13:07:42.721376107 +0530
+@@ -10,9 +10,8 @@
+ 
+       class Server
+         include DRb::DRbUndumped
+-
+-        def initialize
+-          @queue = Queue.new
++        def initialize(distributor:)
++          @distributor = distributor
+           @active_workers = Concurrent::Map.new
+           @worker_pids = Concurrent::Map.new
+           @in_flight = Concurrent::Map.new
+@@ -31,14 +30,15 @@
+ 
+         def <<(o)
+           o[2] = DRbObject.new(o[2]) if o
+-          @queue << o
++          @distributor.add_test(o)
+         end
+ 
+-        def pop
+-          if test = @queue.pop
++        def pop(worker_id)
++          if test = @distributor.take(worker_id: worker_id)
+             @in_flight[[test[0].to_s, test[1]]] = test
+-            test
+           end
++
++          test
+         end
+ 
+         def start_worker(worker_id, worker_pid)
+@@ -53,8 +53,7 @@
+ 
+         def remove_dead_workers(dead_pids)
+           dead_pids.each do |dead_pid|
+-            worker_id = @worker_pids.key(dead_pid)
+-            if worker_id
++            if worker_id = @worker_pids.key(dead_pid)
+               @active_workers.delete(worker_id)
+               @worker_pids.delete(worker_id)
+             end
+@@ -66,16 +65,16 @@
+         end
+ 
+         def interrupt
+-          @queue.clear
++          @distributor.interrupt
+         end
+ 
+         def shutdown
+           # Wait for initial queue to drain
+-          while @queue.length != 0
++          while @distributor.pending?
+             sleep 0.1
+           end
+ 
+-          @queue.close
++          @distributor.close
+ 
+           wait_for_active_workers
+ 
+@@ -91,7 +90,7 @@
+         rescue Interrupt
+           warn "Interrupted. Exiting..."
+ 
+-          @queue.close
++          @distributor.close
+ 
+           wait_for_active_workers
+         end
+EXIT:1
+
+$ diff -u cited/rails-8082369/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb
+--- cited/rails-8082369/lib/active_support/testing/parallelization/worker.rb	2026-10-20 13:07:43.053376107 +0530
++++ cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb	2026-10-20 13:07:42.721376107 +0530
+@@ -36,7 +36,7 @@
+         end
+ 
+         def work_from_queue
+-          while job = @queue.pop
++          while job = @queue.pop(@number)
+             perform_job(job)
+           end
+         end
+EXIT:1
+
+$ diff -u cited/rails-8082369/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelization.rb
+--- cited/rails-8082369/lib/active_support/testing/parallelization.rb	2026-10-20 13:07:43.053376107 +0530
++++ cited/rails-926edf5/lib/active_support/testing/parallelization.rb	2026-10-20 13:07:42.721376107 +0530
+@@ -3,6 +3,8 @@
+ require "drb"
+ require "drb/unix" unless Gem.win_platform?
+ require "active_support/core_ext/module/attribute_accessors"
++require "active_support/testing/parallelization/test_distributor"
++require "active_support/testing/parallelization/thread_pool_executor"
+ require "active_support/testing/parallelization/server"
+ require "active_support/testing/parallelization/worker"
+ 
+@@ -33,9 +35,13 @@
+ 
+       cattr_reader :run_cleanup_hooks
+ 
+-      def initialize(worker_count)
++      def initialize(worker_count, work_stealing: false)
+         @worker_count = worker_count
+-        @queue_server = Server.new
++
++        distributor = (work_stealing ? RoundRobinWorkStealingDistributor : RoundRobinDistributor).new \
++          worker_count: worker_count
++
++        @queue_server = Server.new(distributor: distributor)
+         @worker_pool = []
+         @url = DRb.start_service("drbunix:", @queue_server).uri
+       end
+EXIT:1
+
+$ diff -u cited/rails-8082369/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb
+--- cited/rails-8082369/lib/active_support/testing/parallelize_executor.rb	2026-10-20 13:07:43.053376107 +0530
++++ cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb	2026-10-20 13:07:42.721376107 +0530
+@@ -3,12 +3,13 @@
+ module ActiveSupport
+   module Testing
+     class ParallelizeExecutor # :nodoc:
+-      attr_reader :size, :parallelize_with, :threshold
++      attr_reader :size, :parallelize_with, :threshold, :work_stealing
+ 
+-      def initialize(size:, with:, threshold: ActiveSupport.test_parallelization_threshold)
++      def initialize(size:, with:, threshold: ActiveSupport.test_parallelization_threshold, work_stealing: false)
+         @size = size
+         @parallelize_with = with
+         @threshold = threshold
++        @work_stealing = work_stealing
+         @parallelized = false
+       end
+ 
+@@ -35,10 +36,13 @@
+         def build_parallel_executor
+           case parallelize_with
+           when :processes
+-            Testing::Parallelization.new(size)
++            Testing::Parallelization.new(size, work_stealing: work_stealing)
+           when :threads
+             ActiveSupport::TestCase.lock_threads = false if defined?(ActiveSupport::TestCase.lock_threads)
+-            Minitest::Parallel::Executor.new(size)
++            distributor = (work_stealing ? Testing::Parallelization::RoundRobinWorkStealingDistributor : Testing::Parallelization::RoundRobinDistributor).new \
++              worker_count: size
++
++            Testing::Parallelization::ThreadPoolExecutor.new(size: size, distributor: distributor)
+           else
+             raise ArgumentError, "#{parallelize_with} is not a supported parallelization executor."
+           end
+EXIT:1
+
+$ diff -u cited/rails-8082369/lib/active_support/test_case.rb cited/rails-926edf5/lib/active_support/test_case.rb
+--- cited/rails-8082369/lib/active_support/test_case.rb	2026-10-20 13:07:43.053376107 +0530
++++ cited/rails-926edf5/lib/active_support/test_case.rb	2026-10-20 13:07:42.721376107 +0530
+@@ -96,6 +96,19 @@
+       # number of tests to run is above the +threshold+ param. The default value is
+       # 50, and it's configurable via +config.active_support.test_parallelization_threshold+.
+       #
++      # Parallelization shuffles tests and distributes them to workers in
++      # round-robin order, so given the same seed value and worker count, the
++      # same sequence of tests will run on each worker. This makes flaky tests
++      # caused by parallel test interdependence somewhat easier to reproduce,
++      # though it is not a guarantee of deterministic test execution.
++      #
++      # This can make test runtime slower and spikier when one worker gets most
++      # of the slow tests. Enable +work_stealing+ to allow idle workers to steal
++      # tests from busy workers, smoothing out runtime at the cost of less
++      # reproducible flaky-test failures:
++      #
++      #   parallelize(workers: :number_of_processors, work_stealing: true)
++      #
+       # If you want to skip Rails default creation of one database per process in favor of
+       # writing your own implementation, you can set +parallelize_databases+, or configure it
+       # via +config.active_support.parallelize_test_databases+.
+@@ -104,7 +117,7 @@
+       #
+       # Note that your test suite may deadlock if you attempt to use only one database
+       # with multiple processes.
+-      def parallelize(workers: :number_of_processors, with: :processes, threshold: ActiveSupport.test_parallelization_threshold, parallelize_databases: ActiveSupport.parallelize_test_databases)
++      def parallelize(workers: :number_of_processors, with: :processes, threshold: ActiveSupport.test_parallelization_threshold, parallelize_databases: ActiveSupport.parallelize_test_databases, work_stealing: false)
+         case
+         when ENV["PARALLEL_WORKERS"]
+           workers = ENV["PARALLEL_WORKERS"].to_i
+@@ -116,7 +129,7 @@
+           ActiveSupport.parallelize_test_databases = parallelize_databases
+         end
+ 
+-        Minitest.parallel_executor = ActiveSupport::Testing::ParallelizeExecutor.new(size: workers, with: with, threshold: threshold)
++        Minitest.parallel_executor = ActiveSupport::Testing::ParallelizeExecutor.new(size: workers, with: with, threshold: threshold, work_stealing: work_stealing)
+       end
+ 
+       # Before fork hook for parallel testing. This can be used to run anything
+EXIT:1
+
+===== ruby fork reseed greps =====
+$ grep -n rb_reset_random_seed cited/ruby-v3_3_8/random.c cited/ruby-v3_3_8/thread.c cited/ruby-v3_3_8/process.c
+cited/ruby-v3_3_8/random.c:1782:rb_reset_random_seed(void)
+cited/ruby-v3_3_8/thread.c:4718:    rb_reset_random_seed();
+EXIT:0
+
+$ grep -n after_fork_ruby cited/ruby-v3_3_8/process.c
+1683:after_fork_ruby(rb_pid_t pid)
+4235:        after_fork_ruby(pid);
+6997:    after_fork_ruby(0);
+EXIT:0
+
+$ grep -n rb_thread_atfork cited/ruby-v3_3_8/process.c cited/ruby-v3_3_8/thread.c
+cited/ruby-v3_3_8/process.c:1688:        rb_thread_atfork();
+cited/ruby-v3_3_8/thread.c:4655:rb_thread_atfork_internal(rb_thread_t *th, void (*atfork)(rb_thread_t *, const rb_thread_t *))
+cited/ruby-v3_3_8/thread.c:4709:rb_thread_atfork(void)
+cited/ruby-v3_3_8/thread.c:4713:    rb_thread_atfork_internal(th, terminate_atfork_i);
+cited/ruby-v3_3_8/thread.c:4730:rb_thread_atfork_before_exec(void)
+cited/ruby-v3_3_8/thread.c:4733:    rb_thread_atfork_internal(th, terminate_atfork_before_exec_i);
+cited/ruby-v3_3_8/thread.c:4737:rb_thread_atfork(void)
+cited/ruby-v3_3_8/thread.c:4742:rb_thread_atfork_before_exec(void)
+EXIT:0
+
+$ grep -n rb_f_fork cited/ruby-v3_3_8/process.c
+4375:rb_f_fork(VALUE obj)
+4394:#define rb_f_fork rb_f_notimplement
+9121:    rb_define_global_function("fork", rb_f_fork, 0);
+9147:    rb_define_singleton_method(rb_mProcess, "fork", rb_f_fork, 0);
+EXIT:0
+
+$ grep -n rand_mt_start cited/ruby-v3_3_8/random.c
+144:rand_mt_start(rb_random_mt_t *r)
+155:    return &rand_mt_start(r)->base;
+194:    return rand_mt_start(default_rand());
+957:    rb_random_mt_t *r = rand_mt_start(default_rand());
+1341:    rb_random_mt_t *rnd = rand_mt_start(default_rand());
+EXIT:0
+
+===== minitest seed greps =====
+$ grep -n -E seed|shuffle|parallel_executor|runnable_methods cited/minitest-6.0.6/lib/minitest.rb cited/minitest-6.0.6/lib/minitest/test.rb cited/minitest-6.0.6/lib/minitest/parallel.rb
+cited/minitest-6.0.6/lib/minitest.rb:24:  # The random seed used for this run. This is used to srand at the
+cited/minitest-6.0.6/lib/minitest.rb:29:  cattr_accessor :seed
+cited/minitest-6.0.6/lib/minitest.rb:34:  cattr_accessor :parallel_executor
+cited/minitest-6.0.6/lib/minitest.rb:38:  self.parallel_executor = Parallel::Executor.new n_threads if n_threads > 1
+cited/minitest-6.0.6/lib/minitest.rb:180:      desc = "Sets random seed. Also via env, eg: SEED=42"
+cited/minitest-6.0.6/lib/minitest.rb:181:      opts.on "-s", "--seed SEED", Integer, desc do |m|
+cited/minitest-6.0.6/lib/minitest.rb:182:        options[:seed] = m
+cited/minitest-6.0.6/lib/minitest.rb:266:    unless options[:seed] then
+cited/minitest-6.0.6/lib/minitest.rb:268:      options[:seed] = (ENV["SEED"] || srand).to_i % 0xFFFF
+cited/minitest-6.0.6/lib/minitest.rb:269:      orig_args << "--seed" << options[:seed].to_s
+cited/minitest-6.0.6/lib/minitest.rb:294:  #             filtered_methods = runnable_klass.filter_runnable_methods options
+cited/minitest-6.0.6/lib/minitest.rb:302:    Minitest.seed = options[:seed]
+cited/minitest-6.0.6/lib/minitest.rb:303:    srand Minitest.seed
+cited/minitest-6.0.6/lib/minitest.rb:313:    self.parallel_executor.start if parallel_executor.respond_to? :start
+cited/minitest-6.0.6/lib/minitest.rb:321:    self.parallel_executor.shutdown if parallel_executor.respond_to? :shutdown
+cited/minitest-6.0.6/lib/minitest.rb:340:    ms = Runnable.runnables.flat_map(&:runnable_methods)
+cited/minitest-6.0.6/lib/minitest.rb:353:    suites = Runnable.runnables.shuffle
+cited/minitest-6.0.6/lib/minitest.rb:430:    # Returns an array of filtered +runnable_methods+. Uses
+cited/minitest-6.0.6/lib/minitest.rb:434:    def self.filter_runnable_methods options={}
+cited/minitest-6.0.6/lib/minitest.rb:442:      self.runnable_methods
+cited/minitest-6.0.6/lib/minitest.rb:453:      filtered_methods = filter_runnable_methods options
+cited/minitest-6.0.6/lib/minitest.rb:520:    def self.runnable_methods
+cited/minitest-6.0.6/lib/minitest/test.rb:57:      return unless Minitest.parallel_executor
+cited/minitest-6.0.6/lib/minitest/test.rb:67:    def self.runnable_methods
+cited/minitest-6.0.6/lib/minitest/test.rb:72:        srand Minitest.seed
+cited/minitest-6.0.6/lib/minitest/test.rb:73:        methods.sort.shuffle
+cited/minitest-6.0.6/lib/minitest/parallel.rb:63:          Minitest.parallel_executor << [klass, method_name, reporter]
+EXIT:0
+
+===== threshold =====
+$ grep -n test_parallelization_threshold cited/activesupport-8.1.4/../rea-lib/lib/active_support.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb
+cited/activesupport-8.1.4/../rea-lib/lib/active_support.rb:105:  cattr_accessor :test_parallelization_threshold, default: 50 # :nodoc:
+cited/activesupport-8.1.4/lib/active_support/test_case.rb:103:      # 50, and it's configurable via +config.active_support.test_parallelization_threshold+.
+cited/activesupport-8.1.4/lib/active_support/test_case.rb:113:      def parallelize(workers: :number_of_processors, with: :processes, threshold: ActiveSupport.test_parallelization_threshold, parallelize_databases: ActiveSupport.parallelize_test_databases)
+cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb:8:      def initialize(size:, with:, threshold: ActiveSupport.test_parallelization_threshold)
+EXIT:0
+
+===== cited file sha256 =====
+$ sha256sum cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb cited/activesupport-8.1.4/lib/active_support/test_case.rb cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb cited/rails-926edf5/lib/active_support/testing/parallelization.rb cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb cited/rails-926edf5/lib/active_support/test_case.rb cited/rails-8082369/lib/active_support/testing/parallelization/server.rb cited/rails-8082369/lib/active_support/testing/parallelization/worker.rb cited/minitest-6.0.6/lib/minitest.rb cited/minitest-6.0.6/lib/minitest/test.rb cited/minitest-6.0.6/lib/minitest/parallel.rb cited/ruby-v3_3_8/random.c cited/ruby-v3_3_8/process.c cited/ruby-v3_3_8/thread.c
+cd7b20e9dc014e6aed6cd661f0bb995ddd57b808dbbde0d724be195107a8e6d9  cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb
+fce9c09eab4c7674972c3a3613d97b6fbde3c0a60e5e0fc4fb5486e037b788a6  cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb
+9bc36c2444df188e81faf5060ecf700ee65353d09942c02333bdcdb22b4c56e9  cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb
+30d4f6eba1c2e467440b7fb90fd020f5b5856b3dc2044cf3dac4db1a48964838  cited/activesupport-8.1.4/lib/active_support/testing/parallelize_executor.rb
+e24a23f05e9297f7fdc229097ef09c2dab0928b8a796f5e88a85c27372e616eb  cited/activesupport-8.1.4/lib/active_support/test_case.rb
+31b866ac397aac713f2b0f436355137dc1fc8cef6ee4cd81dee29e104417c980  cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb
+c16e2b138e60454ba14750624bd5d9959582f01d11241568d96772eb5f26b88a  cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb
+9e1ef497e469620672059772b77d5fc635b5591742de4486c0f15d4d870bd551  cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb
+e3e8f9d542f850b85ace0cd680d81dc8cafc985a44f707b08e56e99eebf0f657  cited/rails-926edf5/lib/active_support/testing/parallelization.rb
+6044b91c3245cb50f195085f2d162b86ba542eea498237946f3534fa001a98cf  cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb
+9990a2b00c16255ed728f03e1b88ae8129560c014878eef14121215f97383046  cited/rails-926edf5/lib/active_support/test_case.rb
+4298aac2ad3156d1763f1e9672dadf023abdb924cef5f912419fe747f94cbb89  cited/rails-8082369/lib/active_support/testing/parallelization/server.rb
+bd3da183999774f419d2288a8912a3009120ec4615d4c52380dc5e659e31f341  cited/rails-8082369/lib/active_support/testing/parallelization/worker.rb
+89d437bcbbca0cea62d052a0a3534258f5152e8a267ec5df672b8137598c0d42  cited/minitest-6.0.6/lib/minitest.rb
+a088236bd9af55eecc8d928488be684b5a3c88447b04e8833a06f42ae151e93b  cited/minitest-6.0.6/lib/minitest/test.rb
+4ca9f1c69a41faaab507d2cdbd74192ec93b224000bb070950b865d8b5ebd299  cited/minitest-6.0.6/lib/minitest/parallel.rb
+62cb239aa6d4f7bf28b0bc97ed0f63a711ed209c4e72436ce9401e95608d7b3e  cited/ruby-v3_3_8/random.c
+899d71d4dce96d14f9fd28af82a4cf3f991423071479258e425996402d17313b  cited/ruby-v3_3_8/process.c
+a9170e641120eff578d355ff1e2cfa7e9273193154d9de85b6afec226e7c1fc8  cited/ruby-v3_3_8/thread.c
+EXIT:0
+
+
+===== quoted Hark grep via argv (no shell) =====
+ARGV ['grep', '-n', '-E', 'srand|seed|File.write|File.open|log', '/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/activesupport-8.1.4/lib/active_support/testing/parallelization.rb', '/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/activesupport-8.1.4/lib/active_support/testing/parallelization/server.rb', '/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/activesupport-8.1.4/lib/active_support/testing/parallelization/worker.rb']
+STDOUT_REPR ''
+EXIT 1
+
+===== A.1 i18n 1.14.8 pin and gem bytes =====
+Rails v8.1.4 Gemfile.lock via api.github.com contents?ref=v8.1.4
+69:      i18n (>= 1.6, < 2)
+273:    i18n (1.14.8)
+activesupport-8.1.4.gem metadata.gz dependency name i18n requirement >= 1.6 and < 2
+RubyGems API /api/v1/versions/i18n.json number 1.14.8 sha 285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
+285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5  /var/tmp/qtr-work/inputs/rea-brief-rails-parallel/i18n-1.14.8.gem
+===== grep locale= config thread_variable enforce from extracted gem bytes =====
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:57:    def config
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:58:      Thread.current.thread_variable_get(:i18n_config) ||
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:59:        Thread.current.thread_variable_set(:i18n_config, I18n::Config.new)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:63:    def config=(value)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:64:      Thread.current.thread_variable_set(:i18n_config, value)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:69:      exception_handler load_path enforce_available_locales).each do |method|
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:215:      enforce_available_locales!(locale)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:328:      enforce_available_locales!(locale)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:339:      enforce_available_locales!(locale)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:381:    def enforce_available_locales!(locale)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n.rb:382:      if locale != false && config.enforce_available_locales
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n/config.rb:14:    def locale=(locale)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n/config.rb:15:      I18n.enforce_available_locales!(locale)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n/config.rb:36:      I18n.enforce_available_locales!(locale)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n/config.rb:140:    @@enforce_available_locales = true
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n/config.rb:141:    def enforce_available_locales
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n/config.rb:142:      @@enforce_available_locales
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n/config.rb:145:    def enforce_available_locales=(enforce_available_locales)
+/var/tmp/qtr-work/inputs/rea-brief-rails-parallel/cited/i18n-1.14.8/lib/i18n/config.rb:146:      @@enforce_available_locales = enforce_available_locales
+GREP_I18N_EXIT:0
+===== i18n_railtie from activesupport-8.1.4.gem =====
+11:    config.i18n = ActiveSupport::OrderedOptions.new
+12:    config.i18n.railties_load_path = []
+13:    config.i18n.load_path = []
+14:    config.i18n.fallbacks = ActiveSupport::OrderedOptions.new
+39:      fallbacks = app.config.i18n.delete(:fallbacks)
+43:      enforce_available_locales = app.config.i18n.delete(:enforce_available_locales)
+44:      enforce_available_locales = I18n.enforce_available_locales if enforce_available_locales.nil?
+45:      I18n.enforce_available_locales = false
+48:      app.config.i18n.each do |setting, value|
+52:          app.config.i18n.load_path.unshift(*value.flat_map(&:existent))
+66:      I18n.enforce_available_locales = enforce_available_locales
+86:        ActionView::Helpers::TranslationHelper.raise_on_missing_translations = app.config.i18n.raise_on_missing_translations
+90:        ActiveModel::Translation.raise_on_missing_translations = app.config.i18n.raise_on_missing_translations if strict
+93:      if app.config.i18n.raise_on_missing_translations &&
+GREP_RAILTIE_EXIT:0

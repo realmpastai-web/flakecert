@@ -1,0 +1,9 @@
+--- a/tests/test_cart.py
++++ b/tests/test_cart.py
+@@ -1,5 +1,6 @@
+ from app import cart
+ from app.cart import Cart
++cart.DEFAULT_DISCOUNT = None  # reset once, at import
+ 
+ 
+ def test_total_without_discount():

@@ -1,0 +1,29 @@
+{
+  "case": "H2",
+  "commit": "76eeb3f9352a657fd979ae00e89e49a388729e30",
+  "tarball_sha256": "078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa",
+  "args": [
+    "./spaceship/spec/connect_api/models/webhook_spec.rb",
+    "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5"
+  ],
+  "n": 20,
+  "executions": [
+    {
+      "i": 1,
+      "status": "failed",
+      "exception_class": "TypeError",
+      "first_line": "You need to instantiate this module with test_flight_request_client"
+    }
+  ],
+  "verdict": "FAIL",
+  "readings": [
+    {
+      "n": 20,
+      "verdict": "FAIL"
+    },
+    {
+      "n": 21,
+      "verdict": "FAIL"
+    }
+  ]
+}

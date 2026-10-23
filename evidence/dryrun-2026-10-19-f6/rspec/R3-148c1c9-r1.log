@@ -1,0 +1,22 @@
+===== R3-148c1c9-r1 2026-10-19T06:42:49Z =====
++ timeout 420 docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-f6-1019/src/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04:/src -w /src flakecert-dryrun-fastlane:ruby31 bash -lc 'ruby -v; bundle -v; bundle exec rspec --format documentation --no-color --order defined ./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5 ./spaceship/spec/connect_api/models/capabilities_spec.rb; ec=$?; echo RSPEC_EXIT:$ec; exit $ec'
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:locations=>{"./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb"=>[5]}}
+
+Spaceship::ConnectAPI::AppStoreVersionReleaseRequest
+  #Spaceship::ConnectAPI
+    #post_app_store_version_release_request
+
+Spaceship::ConnectAPI::Capabilities
+  #client
+    #get_available_bundle_id_capabilities
+
+Finished in 0.4651 seconds (files took 2.4 seconds to load)
+2 examples, 0 failures
+
+RSPEC_EXIT:0
+docker_exit=0

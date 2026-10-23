@@ -1,0 +1,4 @@
+FAIL	upper_exact cart.test.js::total rounds to cents	0.161125
+FAIL	required_min cart.test.js::total rounds to cents p*=0.01	298
+GATE FAIL ['upper_exact cart.test.js::total rounds to cents', 'required_min cart.test.js::total rounds to cents p*=0.01']
+exit=1

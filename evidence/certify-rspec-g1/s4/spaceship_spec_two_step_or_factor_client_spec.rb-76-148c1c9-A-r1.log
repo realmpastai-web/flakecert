@@ -1,0 +1,42 @@
++ logical=rspec --seed 48174 './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]' './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]'
++ rspec_argv_len=261
++ rspec_argv_n=11
++ docker_argv_len=549
++ docker_argv_n=28
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-head/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04:/src -v /tmp/flakecert-g1-1019/work/rspec-json:/out -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --format documentation --no-color --seed 48174 './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]' './spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]' --format json --out /out/spaceship_spec_two_step_or_factor_client_spec.rb-76-148c1c9-A-r1.json
+elapsed_s=2.717
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:ids=>{"./spaceship/spec/two_step_or_factor_client_spec.rb"=>["1:2:3:1", "1:2:1:1"]}}
+
+Randomized with seed 48174
+
+Spaceship::Client
+  handle_two_factor
+    when running interactive
+      does not raise an error
+    when running non-interactive
+      raises an error (FAILED - 1)
+
+Failures:
+
+  1) Spaceship::Client handle_two_factor when running non-interactive raises an error
+     Failure/Error: subject.handle_two_step_or_factor("response")
+
+     RuntimeError:
+       2FA can only be performed in interactive mode
+     # ./spaceship/lib/spaceship/two_step_or_factor_client.rb:7:in `handle_two_step_or_factor'
+     # ./spaceship/spec/two_step_or_factor_client_spec.rb:80:in `block (4 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.20145 seconds (files took 1.74 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+docker_exit=1

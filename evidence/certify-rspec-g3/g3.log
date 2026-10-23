@@ -1,0 +1,57 @@
+ci_image=registry.gitlab.com/gitlab-org/gitlab-build-images/ci/debian-trixie-slim-ruby-3.3.12-golang-1.26-node-22.23-python-3.12-postgresql-17:rubygems-3.6-git-2.51-lfs-3.7-chrome-151-yarn-1.22-graphicsmagick-1.3.36-poetry-2.2
+ci_digest=registry.gitlab.com/gitlab-org/gitlab-build-images/ci/debian-trixie-slim-ruby-3.3.12-golang-1.26-node-22.23-python-3.12-postgresql-17@sha256:a5f300ea0462ad491fbe96daa5522c596109d0ae6ac95e9e8357e869fd75c295
+postgres_image=registry.gitlab.com/gitlab-org/gitlab-build-images:postgres-17
+postgres_digest=registry.gitlab.com/gitlab-org/gitlab-build-images@sha256:8ffbbb3f64b90c5423cc693ddcd281cd74f54b4f07772c569257766ee13e17ba
+redis_image=redis:7.2-alpine
+redis_digest=redis@sha256:29e8589c3f9ba699b5f7aa4b3c7733c58852a3626439e619aa0ee78de08c6ca0
+redis_cluster_image=registry.gitlab.com/gitlab-org/gitlab-build-images:redis-cluster-7.0.11
+redis_cluster_digest=registry.gitlab.com/gitlab-org/gitlab-build-images@sha256:fefdb7593970cd5f306cd1b341488a2a97a6e4da17d87037b4b7aa7398ea6648
+GDK_FALLBACK=false
+S20_COUNT=20 source=s20.txt
+ARM path=./spec/models/board_spec.rb G=PASS G_LOG=arm-g/00031d8665bd69bb.log F=BOUNDED_CLEAN F_FAILURES=0/30 F_CERT=certificates/00031d8665bd69bb.txt
+ARM path=./spec/models/concerns/from_intersect_spec.rb G=PASS G_LOG=arm-g/000823af86f945f3.log F=BOUNDED_CLEAN F_FAILURES=0/30 F_CERT=certificates/000823af86f945f3.txt
+ARM path=./spec/lib/gitlab/git/blame_spec.rb G=PASS G_LOG=arm-g/001a329edc1a9ae1.log F=BOUNDED_CLEAN F_FAILURES=0/30 F_CERT=certificates/001a329edc1a9ae1.txt
+ARM path=./spec/lib/gitlab/pagination/keyset/page_spec.rb G=PASS G_LOG=arm-g/001b5959e258723a.log F=BOUNDED_CLEAN F_FAILURES=0/30 F_CERT=certificates/001b5959e258723a.txt
+ARM path=./spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb G=PASS G_LOG=arm-g/003e9fa2e3451681.log F=BOUNDED_CLEAN F_FAILURES=0/30 F_CERT=certificates/003e9fa2e3451681.txt
+ARM path=./spec/lib/gitlab/throttle_spec.rb G=PASS G_LOG=arm-g/007aff8231bde71e.log F=INCOMPLETE F_FAILURES=0/1 F_CERT=certificates/007aff8231bde71e.txt
+ARM path=./spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb G=FAIL G_LOG=arm-g/00a05162a528756d.log F=INCOMPLETE F_FAILURES=0/0 F_CERT=
+ARM path=./spec/models/concerns/limitable_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/auth/atlassian/user_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/memory/reports/jemalloc_stats_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/github_import_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/api_authentication/token_resolver_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/models/review_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/markdown_cache/redis/store_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/ci/matching/build_matcher_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/ci/reports/terraform_reports_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/models/integrations/chat_message/issue_message_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/database/schema_cache_with_renamed_table_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/ci/build/artifacts/metadata/entry_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARM path=./spec/lib/gitlab/diff/position_tracer/image_strategy_spec.rb G=FAIL G_LOG= F=NOT_RUN F_FAILURES=0/0 F_CERT=
+ARMG_PASS_ARMF_FAIL=none
+CAT_A path=spec/mailers/devise_mailer_spec.rb label=UNRESOLVED alone_log=cat-a/4920aeb197e8c272-alone.log siblings_log=cat-a/4920aeb197e8c272-siblings.log
+CAT_A path=spec/models/ci/build_trace_chunks/fog_spec.rb label=PASSES_ALONE alone_log=cat-a/3b8d4a2618e4d3b0-alone.log siblings_log=cat-a/3b8d4a2618e4d3b0-siblings.log
+CAT_A path=spec/models/concerns/reactive_caching_spec.rb label=PASSES_ALONE alone_log=cat-a/44968f98661aa9b2-alone.log siblings_log=cat-a/44968f98661aa9b2-siblings.log
+CAT_A path=spec/lib/gitlab/query_limiting/active_support_subscriber_spec.rb label=PASSES_ALONE alone_log=cat-a/0b26e1c3f997c549-alone.log siblings_log=cat-a/0b26e1c3f997c549-siblings.log
+CAT_A path=spec/requests/api/graphql/mutations/ci/job_token_scope/remove_project_spec.rb label=PASSES_ALONE alone_log=cat-a/22a8c2cf06015b64-alone.log siblings_log=cat-a/22a8c2cf06015b64-siblings.log
+CAT_A path=spec/requests/api/graphql/mutations/issues/set_escalation_status_spec.rb label=PASSES_ALONE alone_log=cat-a/ac7023540d80b3f3-alone.log siblings_log=cat-a/ac7023540d80b3f3-siblings.log
+CAT_A path=spec/requests/api/graphql/project/error_tracking/sentry_errors_request_spec.rb label=PASSES_ALONE alone_log=cat-a/9ba4cff6870f3776-alone.log siblings_log=cat-a/9ba4cff6870f3776-siblings.log
+CAT_A path=spec/requests/api/graphql/project/recent_issue_boards_query_spec.rb label=PASSES_ALONE alone_log=cat-a/9a4670a41e91cf6b-alone.log siblings_log=cat-a/9a4670a41e91cf6b-siblings.log
+CAT_A path=spec/requests/users_controller_spec.rb label=UNRESOLVED alone_log=cat-a/fb59d6ac7d0fdc52-alone.log siblings_log=cat-a/fb59d6ac7d0fdc52-siblings.log
+CAT_A path=spec/services/design_management/generate_image_versions_service_spec.rb label=PASSES_ALONE alone_log=cat-a/504c938610b95fb9-alone.log siblings_log=cat-a/504c938610b95fb9-siblings.log
+B1 path=spec/services/timelogs/delete_service_spec.rb label=PASSES_ALONE set=[] same_file=False replay_twice=True defined_log=b1/defined.log reverse_log=b1/reverse.log bisect_log=b1/bisect.log ddmin_log=b1/ddmin.log
+WALL_CLOCK=10736.3
+resume=true
+setup_failures=2
+seed_timeout_rule=max(300, ceil(3 * arm_g_elapsed_s))
+SEED_TIMEOUT path=./spec/models/board_spec.rb seconds=1785
+SEED_TIMEOUT path=./spec/models/concerns/from_intersect_spec.rb seconds=1585
+SEED_TIMEOUT path=./spec/lib/gitlab/git/blame_spec.rb seconds=2165
+SEED_TIMEOUT path=./spec/lib/gitlab/pagination/keyset/page_spec.rb seconds=300
+SEED_TIMEOUT path=./spec/lib/gitlab/database/postgresql_adapter/dump_schema_versions_mixin_spec.rb seconds=300
+SEED_TIMEOUT path=./spec/lib/gitlab/throttle_spec.rb seconds=1593
+SEED_TIMEOUT path=./spec/lib/gitlab/background_migration/update_jira_tracker_data_deployment_type_based_on_url_spec.rb seconds=300
+exit_ok=false
+reason=ENV_SETUP
+stop_reserve_s=1080
+acceptance_grep_exit=1

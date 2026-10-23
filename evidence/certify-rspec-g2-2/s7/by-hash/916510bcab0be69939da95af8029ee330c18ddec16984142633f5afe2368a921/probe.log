@@ -1,0 +1,28 @@
++ phase=probe
++ seed=15
++ round=1
++ confirm=0
++ ids_n=994
++ ids_sha256=2f03b113b674c3e3335ab696353376269f4c602ffa7b2c8c2e229adf3f59728b
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/916510bcab0be69939da95af8029ee330c18ddec16984142633f5afe2368a921/ids.txt
++ attempt=1
+elapsed_s=8.594
+[] ⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE TEST !!
+
+	* Exception: StandardError
+	* Message: logger is misconfigured
+	* From: message_expectation.rb:188
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE LOGGING A RESET! COLLISION !!
+
+	* Exception: RuntimeError
+	* Message: logger exploded
+	* From: configurable_spec.rb:801
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+docker_exit=0

@@ -1,0 +1,37 @@
+== S0 self-check: expect 0
+GATE PASS
+exit=0
+== G1 synthetic-good (gate-logic fixture, not Ruby): expect 0
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE PASS
+exit=0
+== mutant-wrong-fix-accepted: expect 1
+FAIL	verdict.certified	{'prefix': 'NOT_FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['verdict.certified']
+exit=1
+== mutant-plain-retry-only: expect 1
+FAIL	prefix.cert_replay_3_runs	[]
+FAIL	prefix.cert_replay_polluter_passes	
+FAIL	prefix.cert_replay_identical	
+FAIL	wrong_fix.cert_replay_3_runs	[]
+FAIL	wrong_fix.cert_replay_polluter_passes	
+FAIL	wrong_fix.cert_replay_identical	
+FAIL	real_fix.cert_replay_3_runs	[]
+FAIL	real_fix.cert_replay_polluter_passes	
+FAIL	real_fix.cert_replay_identical	
+FAIL	verdict.certified	{'prefix': 'INCONSISTENT', 'wrong_fix': 'INCONSISTENT', 'real_fix': 'INCONSISTENT'}
+INFO	certified={'prefix': 'INCONSISTENT', 'wrong_fix': 'INCONSISTENT', 'real_fix': 'INCONSISTENT'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXE
+GATE FAIL ['prefix.cert_replay_3_runs', 'prefix.cert_replay_polluter_passes', 'prefix.cert_replay_identical', 'wrong_fix.cert_replay_3_runs', 'wrong_fix.cert_replay_pollu
+exit=1
+== mutant-schedule-drift: expect 1
+FAIL	res.schedule_is_cert	{'order_seed': 1, 'srand_seed': 0}
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['res.schedule_is_cert']
+exit=1
+== mutant-real-fix-edits-model: expect 1
+FAIL	real_fix.rest_of_sample_unchanged	7/7 files
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['real_fix.rest_of_sample_unchanged']
+exit=1
+CONTROLS OK

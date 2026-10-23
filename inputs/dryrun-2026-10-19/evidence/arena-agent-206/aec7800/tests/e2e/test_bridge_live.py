@@ -1,0 +1,476 @@
+"""Live end-to-end tests: spawn the REAL bridge server process and talk to
+it over real HTTP/TCP.
+
+Doctrine reminder (see AGENTS.md): green unit tests prove the parts work in
+isolation; they do NOT prove the shipped server actually starts, binds,
+authenticates and serves the MCP protocol. These tests verify the observable
+behaviour of a running process — the closest CI approximation to "a user just
+started the bridge and pointed a client at it".
+
+Two execution modes, selected by environment (same test code):
+
+* source-tree mode (default, runs in the main test job): spawns
+  ``sys.executable unified_bridge.py serve`` from the repo checkout.
+* installed-artifact mode (the ``e2e-installed`` CI job): the job builds the
+  wheel, installs it into a fresh venv and sets ``ARENA_E2E_SERVER_CMD`` to a
+  JSON argv like ``["/path/to/venv/bin/python", "-m", "unified_bridge"]`` so
+  the tests exercise the *shipped artifact*, not the source tree. Expected
+  version stays the repo one, which cross-checks that the wheel's VERSION
+  matches the tag being built.
+
+No third-party HTTP client is used on purpose: stdlib http.client keeps the
+artifact job free of the CI lock (the installed venv only has the bridge's
+own runtime dependencies).
+"""
+from __future__ import annotations
+
+import http.client
+import json
+import os
+import secrets
+import socket
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+import pytest
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+STARTUP_TIMEOUT_S = 40.0
+REQUEST_TIMEOUT_S = 10.0
+
+
+def _expected_version() -> str:
+    override = os.environ.get("ARENA_E2E_EXPECT_VERSION")
+    if override:
+        return override
+    sys.path.insert(0, str(REPO_ROOT))
+    from arena.constants import VERSION  # noqa: PLC0415
+
+    return VERSION
+
+
+def _server_argv() -> list[str]:
+    override = os.environ.get("ARENA_E2E_SERVER_CMD")
+    if override:
+        argv = json.loads(override)
+        assert isinstance(argv, list) and all(isinstance(x, str) for x in argv)
+        return argv
+    return [sys.executable, str(REPO_ROOT / "unified_bridge.py")]
+
+
+def _free_port() -> int:
+    with socket.socket() as s:
+        s.bind(("127.0.0.1", 0))
+        return s.getsockname()[1]
+
+
+class BridgeClient:
+    """Minimal stdlib HTTP client with the bridge auth header baked in."""
+
+    def __init__(self, port: int, token: str | None):
+        self.port = port
+        self.token = token
+
+    def request(self, method: str, path: str, body: object = None,
+                extra_headers: dict[str, str] | None = None,
+                token: str | None = "__default__") -> tuple[int, dict, bytes,
+                                                            dict[str, str]]:
+        headers: dict[str, str] = {"Connection": "close"}
+        eff = self.token if token == "__default__" else token
+        if eff:
+            headers["Authorization"] = f"Bearer {eff}"
+        if extra_headers:
+            headers.update(extra_headers)
+        payload = None
+        if body is not None:
+            payload = json.dumps(body).encode()
+            headers["Content-Type"] = "application/json"
+        conn = http.client.HTTPConnection("127.0.0.1", self.port,
+                                          timeout=REQUEST_TIMEOUT_S)
+        try:
+            conn.request(method, path, body=payload, headers=headers)
+            resp = conn.getresponse()
+            raw = resp.read()
+            resp_headers = {k.lower(): v for k, v in resp.getheaders()}
+            try:
+                parsed = json.loads(raw) if raw else {}
+            except json.JSONDecodeError:
+                parsed = {}
+            return resp.status, parsed, raw, resp_headers
+        finally:
+            conn.close()
+
+    def get(self, path: str, **kw):
+        return self.request("GET", path, **kw)
+
+    def post_json(self, path: str, payload: object, **kw):
+        return self.request("POST", path, body=payload, **kw)
+
+
+@pytest.fixture(scope="module")
+def bridge(tmp_path_factory):
+    """One live server process per module (pytest-randomly safe)."""
+    port = _free_port()
+    # Prefix matters: token_urlsafe may emit a LEADING '-' (its alphabet
+    # includes -_), and argparse then eats the value as an unknown option
+    # ("argument --token: expected one argument") -> flaky rc=2 startups.
+    token = "e2e-" + secrets.token_urlsafe(24)
+    argv = _server_argv() + [
+        "serve", "--bind", "127.0.0.1", "--port", str(port),
+        "--token", token, "--root", str(REPO_ROOT),
+    ]
+    proc = subprocess.Popen(
+        argv, cwd=str(tmp_path_factory.mktemp("bridge-cwd")),
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True,
+    )
+    client = BridgeClient(port, token)
+    deadline = time.monotonic() + STARTUP_TIMEOUT_S
+    last_err: Exception | None = None
+    while time.monotonic() < deadline:
+        if proc.poll() is not None:
+            out = proc.stdout.read() if proc.stdout else ""
+            pytest.fail(f"bridge exited during startup rc={proc.returncode}:\n{out[-3000:]}")
+        try:
+            status, body, _, _ = client.get("/health")
+            if status == 200 and body.get("ok"):
+                break
+        except (OSError, http.client.HTTPException) as e:
+            last_err = e
+        time.sleep(0.25)
+    else:
+        proc.kill()
+        pytest.fail(f"bridge did not become healthy in {STARTUP_TIMEOUT_S}s "
+                    f"(last error: {last_err})")
+    yield client
+    proc.terminate()
+    try:
+        # aiohttp lets in-flight handlers finish; the SSE keepalive loop can
+        # hold shutdown for up to its sleep cycle, so give SIGTERM real time
+        # before escalating. On Windows terminate() is TerminateProcess —
+        # no graceful-shutdown signal exists and the return code is the
+        # forced exit status (observed 1), so only POSIX asserts signal
+        # semantics; on Windows the contract is just "the process died".
+        proc.wait(timeout=30)
+        if os.name != "nt":
+            assert proc.returncode in (0, -15, 15), \
+                f"graceful shutdown expected, got rc={proc.returncode}"
+        else:
+            assert proc.returncode is not None
+    except subprocess.TimeoutExpired:
+        proc.kill()
+        proc.wait(timeout=5)
+        pytest.fail("bridge ignored SIGTERM for 30s and had to be SIGKILLed "
+                    f"(rc={proc.returncode})")
+
+
+# ---------------------------------------------------------------- bootstrap
+
+def test_health_endpoint_is_public_and_reports_version(bridge):
+    status, body, _, _ = bridge.get("/health", token=None)
+    assert status == 200
+    assert body["ok"] is True
+    assert body["service"] == "arena-unified-bridge"
+    assert body["version"] == _expected_version()
+    assert body["uptime_seconds"] >= 0
+
+
+def test_v1_version_reports_running_interpreter(bridge):
+    """With a token, the diagnostic fields are still served."""
+    status, body, _, _ = bridge.get("/v1/version")
+    assert status == 200
+    assert body["ok"] is True
+    assert body["version"] == _expected_version()
+    assert "python" in body and "platform" in body
+
+
+def test_v1_version_hides_the_interpreter_from_anonymous_callers(bridge):
+    """#63, against a real server: no token, no host fingerprint.
+
+    The unit tests drive the handler directly; this one proves the wiring
+    that composes the live app actually supplies the auth probe. Without
+    it the handler treats everyone as anonymous, or -- worse, if the gate
+    were wired backwards -- everyone as authenticated.
+    """
+    status, body, raw, _ = bridge.get("/v1/version", token=None)
+
+    assert status == 200, "the route must stay public (#54: Android polls it)"
+    assert body["ok"] is True
+    assert body["version"] == _expected_version(), "version stays public"
+    assert "python" not in body
+    assert "platform" not in body
+    assert sys.version.split()[0].encode() not in raw
+
+
+# ------------------------------------------------------------------- auth
+
+def test_mcp_requires_auth_missing_token(bridge):
+    status, body, _, _ = bridge.post_json(
+        "/mcp", {"jsonrpc": "2.0", "id": 1, "method": "initialize"},
+        token=None)
+    assert status == 401
+    assert body.get("ok") is False or "error" in body
+
+
+def test_mcp_requires_auth_wrong_token(bridge):
+    status, body, _, _ = bridge.post_json(
+        "/mcp", {"jsonrpc": "2.0", "id": 1, "method": "initialize"},
+        token=secrets.token_urlsafe(24))
+    assert status == 401
+
+
+def test_v1_info_requires_auth(bridge):
+    status, _, _, _ = bridge.get("/v1/info", token=None)
+    assert status == 401
+
+
+# -------------------------------------------------------------- MCP flow
+
+def test_mcp_full_handshake_and_tool_surface(bridge):
+    # initialize
+    status, body, _, headers = bridge.post_json("/mcp", {
+        "jsonrpc": "2.0", "id": 1, "method": "initialize",
+        "params": {"protocolVersion": "2024-11-05",
+                   "capabilities": {},
+                   "clientInfo": {"name": "e2e", "version": "0"}},
+    })
+    assert status == 200
+    assert body.get("jsonrpc") == "2.0" and body.get("id") == 1
+    result = body.get("result") or {}
+    assert result.get("serverInfo", {}).get("name"), \
+        f"initialize result missing serverInfo: {body}"
+    assert headers.get("mcp-session-id"), "missing Mcp-Session-Id header"
+
+    # tools/list — the shipped tool surface must be non-empty and include
+    # the canary exec.ping tool.
+    status, body, _, _ = bridge.post_json(
+        "/mcp", {"jsonrpc": "2.0", "id": 2, "method": "tools/list"})
+    assert status == 200
+    tools = (body.get("result") or {}).get("tools") or []
+    names = {t.get("name") for t in tools}
+    assert len(names) > 100, f"tool surface implausibly small: {len(names)}"
+    assert "exec.ping" in names
+
+    # tools/call a pure read-only tool through the real executor path.
+    status, body, _, _ = bridge.post_json("/mcp", {
+        "jsonrpc": "2.0", "id": 3, "method": "tools/call",
+        "params": {"name": "exec.ping", "arguments": {}}})
+    assert status == 200
+    result = body.get("result") or {}
+    content = result.get("content") or []
+    assert content and content[0].get("type") == "text"
+    assert "pong" in content[0].get("text", "").lower()
+
+
+# -------------------------------------------------- real work round-trip
+
+def test_fs_write_read_roundtrip_through_tool_executor(bridge):
+    """Real observable work, not a mock: the server process writes a file
+    to disk and reads it back through the same MCP transport."""
+    probe = Path.home() / f"arena-e2e-probe-{secrets.token_hex(4)}.txt"
+    payload = f"arena-e2e-{secrets.token_hex(8)}"
+    try:
+        status, body, _, _ = bridge.post_json("/mcp", {
+            "jsonrpc": "2.0", "id": 20, "method": "tools/call",
+            "params": {"name": "fs.write",
+                       "arguments": {"path": str(probe), "content": payload}}})
+        assert status == 200
+        result = body.get("result") or {}
+        assert not result.get("isError"), body
+
+        status, body, _, _ = bridge.post_json("/mcp", {
+            "jsonrpc": "2.0", "id": 21, "method": "tools/call",
+            "params": {"name": "fs.read",
+                       "arguments": {"path": str(probe)}}})
+        assert status == 200
+        content = (body.get("result") or {}).get("content") or []
+        assert content[0].get("text") == payload
+
+        # Ground truth on the client side too (same machine, same user).
+        assert probe.read_text(encoding="utf-8") == payload
+    finally:
+        probe.unlink(missing_ok=True)
+
+
+def test_fs_jail_blocks_paths_outside_home(bridge):
+    """Security fail-closed gate: the file jail must refuse paths outside
+    the operator's home directory even when --root points elsewhere."""
+    status, body, _, _ = bridge.post_json("/mcp", {
+        "jsonrpc": "2.0", "id": 22, "method": "tools/call",
+        "params": {"name": "fs.write",
+                   "arguments": {"path": "/etc/arena-e2e-must-not-exist",
+                                 "content": "x"}}})
+    assert status == 200  # tool-level refusal lives in the result envelope
+    result = body.get("result") or {}
+    assert result.get("isError") is True
+    assert "BLOCKED" in (result.get("content") or [{}])[0].get("text", "")
+    assert not Path("/etc/arena-e2e-must-not-exist").exists()
+
+
+# ------------------------------------------------------ negative / abuse
+
+def test_malformed_json_gets_parse_error_and_server_survives(bridge):
+    conn = http.client.HTTPConnection("127.0.0.1", bridge.port,
+                                      timeout=REQUEST_TIMEOUT_S)
+    try:
+        conn.request("POST", "/mcp", body=b"{not json",
+                     headers={"Content-Type": "application/json",
+                              "Authorization": f"Bearer {bridge.token}"})
+        resp = conn.getresponse()
+        raw = resp.read()
+        body = json.loads(raw)
+        assert resp.status == 400
+        assert body["error"]["code"] == -32700
+    finally:
+        conn.close()
+    status, body, _, _ = bridge.get("/health", token=None)
+    assert status == 200 and body["ok"] is True
+
+
+def test_unknown_rpc_method_returns_jsonrpc_error(bridge):
+    status, body, _, _ = bridge.post_json(
+        "/mcp", {"jsonrpc": "2.0", "id": 9, "method": "no.such.method"})
+    assert status in (200, 400)
+    assert "error" in body or body.get("result") is None, body
+
+
+def test_tool_call_unknown_tool_fails_closed(bridge):
+    status, body, _, _ = bridge.post_json("/mcp", {
+        "jsonrpc": "2.0", "id": 10, "method": "tools/call",
+        "params": {"name": "no.such.tool", "arguments": {}}})
+    assert status == 200
+    result = body.get("result") or {}
+    # MCP convention: tool-level failure is result.isError=True, not HTTP 500.
+    assert result.get("isError") is True or "error" in body, body
+
+
+def test_unknown_route_is_404_not_crash(bridge):
+    status, _, _, _ = bridge.get("/definitely-not-a-route")
+    assert status == 404
+
+
+def test_sse_stream_opens_with_endpoint_event(bridge):
+    conn = http.client.HTTPConnection("127.0.0.1", bridge.port,
+                                      timeout=REQUEST_TIMEOUT_S)
+    try:
+        conn.request("GET", "/sse",
+                     headers={"Authorization": f"Bearer {bridge.token}"})
+        resp = conn.getresponse()
+        assert resp.status == 200
+        assert resp.getheader("Content-Type", "").startswith("text/event-stream")
+        chunk = resp.read1(512) if hasattr(resp, "read1") else resp.read(512)
+        assert b"event: endpoint" in chunk
+    finally:
+        conn.close()
+
+
+# ----------------------------------------------------- shell allow-list gate
+
+def test_token_regeneration_rotates_the_live_bearer_and_writes_the_file(bridge):
+    """Drive the admin token rotation through the real HTTP server.
+
+    The route intentionally changes the in-memory token, so update the shared
+    client after a successful rotation; later tests in this module then use
+    the new credential just like a real operator would after clicking
+    "Restart Bridge".
+    """
+    token_file = REPO_ROOT / "token.txt"
+    previous = token_file.read_bytes() if token_file.exists() else None
+    previous_mode = token_file.stat().st_mode & 0o777 if token_file.exists() else None
+    old_token = bridge.token
+    try:
+        status, body, _, _ = bridge.post_json("/v1/token/regenerate", {})
+        assert status == 200, body
+        assert body.get("ok") is True, body
+        new_token = body.get("token", "")
+        assert isinstance(new_token, str) and len(new_token) == 43
+        assert token_file.read_text(encoding="utf-8") == new_token
+        if os.name != "nt":
+            assert token_file.stat().st_mode & 0o777 == 0o600
+
+        old_status, _, _, _ = bridge.get("/v1/info", token=old_token)
+        new_status, new_body, _, _ = bridge.get("/v1/info", token=new_token)
+        assert old_status == 401
+        assert new_status == 200
+        assert new_body.get("ok") is True
+        bridge.token = new_token
+    finally:
+        if previous is None:
+            token_file.unlink(missing_ok=True)
+        else:
+            token_file.write_bytes(previous)
+            if previous_mode is not None and os.name != "nt":
+                token_file.chmod(previous_mode)
+
+
+def test_shell_control_characters_are_refused_on_every_http_exec_surface(bridge):
+    """The first-word allow-list must not authorize a second shell command.
+
+    These are separate handlers and historically each had its own copy of the
+    fail-open check. Drive the real server so a green unit test cannot hide a
+    missing route wiring or a profile that is ignored by MCP.
+    """
+    cmd = "echo first; echo second"
+    surfaces = (
+        ("/v1/exec", {"cmd": cmd, "timeout": 5}),
+        ("/v1/exec/stream", {"cmd": cmd, "timeout": 5}),
+        ("/v2/exec", {"cmd": cmd, "timeout": 5, "sandbox": True}),
+        ("/v1/sandbox", {"action": "run", "cmd": cmd, "timeout": 5}),
+    )
+    for path, payload in surfaces:
+        status, body, _, _ = bridge.post_json(path, payload)
+        assert status == 403, (path, status, body)
+        assert body.get("ok") is False, (path, body)
+        assert "shell control" in body.get("error", ""), (path, body)
+        if path == "/v2/exec":
+            assert body.get("api_version") == "2", body
+            assert body.get("allowed"), body
+
+    status, body, _, _ = bridge.post_json("/mcp", {
+        "jsonrpc": "2.0", "id": 40, "method": "tools/call",
+        "params": {"name": "exec.exec", "arguments": {"cmd": cmd}},
+    })
+    assert status == 200
+    result = body.get("result") or {}
+    text = ((result.get("content") or [{}])[0]).get("text", "")
+    assert result.get("isError") is True, body
+    assert "shell control" in text
+
+
+def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+    """Running scripts and tools stays possible on the cautious profile.
+
+    v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+    a full interpreter -- allow-listing it allow-lists reading any file,
+    opening any socket and exec'ing anything -- so it moved to the refusal
+    test below. Running a SCRIPT is the legitimate shape and stays here.
+    """
+    for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+        status, body, _, _ = bridge.post_json(
+            "/v1/exec", {"cmd": cmd, "timeout": 5}
+        )
+        assert status == 200, (cmd, status, body)
+        assert body.get("ok") is True, (cmd, body)
+
+
+def test_allowlisted_interpreters_cannot_run_inline_code(bridge):
+    """An interpreter in the list must not make the list decorative.
+
+    Against the live bridge, not a unit stub: each of these was accepted
+    before the fix (no shell metacharacter, first word on the list) and
+    each one is arbitrary execution. The refusal has to name the escape
+    hatch, because an operator who genuinely wants a shell is entitled to
+    one -- explicitly, via `--profile owner-shell`.
+    """
+    for cmd in (
+        "python3 -c 'print(1)'",
+        "bash -c 'echo pwned'",
+        "sh -c 'echo pwned'",
+        "env echo pwned",
+    ):
+        status, body, _, _ = bridge.post_json(
+            "/v1/exec", {"cmd": cmd, "timeout": 5}
+        )
+        assert status == 403, (cmd, status, body)
+        assert "owner-shell" in str(body.get("error", "")), (cmd, body)

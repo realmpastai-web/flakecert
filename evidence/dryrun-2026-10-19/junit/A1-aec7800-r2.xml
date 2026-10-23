@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="19" time="5.734" timestamp="2026-10-19T05:33:40.487104+00:00" hostname="0c8e756c7371"><testcase classname="tests.e2e.test_bridge_live" name="test_health_endpoint_is_public_and_reports_version" time="0.509" /><testcase classname="tests.e2e.test_bridge_live" name="test_v1_version_reports_running_interpreter" time="0.004" /><testcase classname="tests.e2e.test_bridge_live" name="test_v1_version_hides_the_interpreter_from_anonymous_callers" time="0.002" /><testcase classname="tests.e2e.test_bridge_live" name="test_mcp_requires_auth_missing_token" time="0.001" /><testcase classname="tests.e2e.test_bridge_live" name="test_mcp_requires_auth_wrong_token" time="0.001" /><testcase classname="tests.e2e.test_bridge_live" name="test_v1_info_requires_auth" time="0.001" /><testcase classname="tests.e2e.test_bridge_live" name="test_mcp_full_handshake_and_tool_surface" time="0.007" /><testcase classname="tests.e2e.test_bridge_live" name="test_fs_write_read_roundtrip_through_tool_executor" time="0.004" /><testcase classname="tests.e2e.test_bridge_live" name="test_fs_jail_blocks_paths_outside_home" time="0.002" /><testcase classname="tests.e2e.test_bridge_live" name="test_malformed_json_gets_parse_error_and_server_survives" time="0.002" /><testcase classname="tests.e2e.test_bridge_live" name="test_unknown_rpc_method_returns_jsonrpc_error" time="0.001" /><testcase classname="tests.e2e.test_bridge_live" name="test_tool_call_unknown_tool_fails_closed" time="0.002" /><testcase classname="tests.e2e.test_bridge_live" name="test_unknown_route_is_404_not_crash" time="0.002" /><testcase classname="tests.e2e.test_bridge_live" name="test_sse_stream_opens_with_endpoint_event" time="0.001" /><testcase classname="tests.e2e.test_bridge_live" name="test_token_regeneration_rotates_the_live_bearer_and_writes_the_file" time="0.006" /><testcase classname="tests.e2e.test_bridge_live" name="test_shell_control_characters_are_refused_on_every_http_exec_surface" time="0.009" /><testcase classname="tests.e2e.test_bridge_live" name="test_shell_allowlist_keeps_legitimate_commands_working" time="0.005"><failure message="AssertionError: ('git status --short', {'ok': False, 'request_id': 'c01bc6a5-a1a8-42f1-94b7-5eaf2fd27c04', 'exit_code': 128, 'duration_sec': 0.003, ...})&#10;assert False is True&#10; +  where False = &lt;built-in method get of dict object at 0x7f6a1010d740&gt;('ok')&#10; +    where &lt;built-in method get of dict object at 0x7f6a1010d740&gt; = {'ok': False, 'request_id': 'c01bc6a5-a1a8-42f1-94b7-5eaf2fd27c04', 'exit_code': 128, 'duration_sec': 0.003, ...}.get">bridge = &lt;test_bridge_live.BridgeClient object at 0x7f6a10e4dd10&gt;
+
+    def test_shell_allowlist_keeps_legitimate_commands_working(bridge):
+        """Running scripts and tools stays possible on the cautious profile.
+    
+        v4.165.0 (bug #65): `python3 -c '...'` used to be in this list. It is
+        a full interpreter -- allow-listing it allow-lists reading any file,
+        opening any socket and exec'ing anything -- so it moved to the refusal
+        test below. Running a SCRIPT is the legitimate shape and stays here.
+        """
+        for cmd in ("git status --short", "python3 --version", "echo allowlisted"):
+            status, body, _, _ = bridge.post_json(
+                "/v1/exec", {"cmd": cmd, "timeout": 5}
+            )
+            assert status == 200, (cmd, status, body)
+&gt;           assert body.get("ok") is True, (cmd, body)
+E           AssertionError: ('git status --short', {'ok': False, 'request_id': 'c01bc6a5-a1a8-42f1-94b7-5eaf2fd27c04', 'exit_code': 128, 'duration_sec': 0.003, ...})
+E           assert False is True
+E            +  where False = &lt;built-in method get of dict object at 0x7f6a1010d740&gt;('ok')
+E            +    where &lt;built-in method get of dict object at 0x7f6a1010d740&gt; = {'ok': False, 'request_id': 'c01bc6a5-a1a8-42f1-94b7-5eaf2fd27c04', 'exit_code': 128, 'duration_sec': 0.003, ...}.get
+
+tests/e2e/test_bridge_live.py:454: AssertionError</failure></testcase><testcase classname="tests.e2e.test_bridge_live" name="test_allowlisted_interpreters_cannot_run_inline_code" time="5.038" /><testcase classname="tests.test_mcp_client_parity_v4_169_39" name="test_client_start_happy_path" time="0.001" /></testsuite></testsuites>

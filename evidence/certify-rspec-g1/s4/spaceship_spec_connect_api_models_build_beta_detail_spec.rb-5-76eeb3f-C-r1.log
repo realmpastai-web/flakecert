@@ -1,0 +1,25 @@
++ logical=rspec --order defined './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'
++ rspec_argv_len=284
++ rspec_argv_n=11
++ docker_argv_len=572
++ docker_argv_n=28
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -v /tmp/flakecert-g1-1019/work/rspec-json:/out -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --format documentation --no-color --order defined './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' --format json --out /out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r1.json
+elapsed_s=2.870
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:ids=>{"./spaceship/spec/connect_api/models/build_beta_detail_spec.rb"=>["1:1:1"], "./spaceship/spec/connect_api/models/webhook_spec.rb"=>["1:1:1:1"]}}
+
+Spaceship::ConnectAPI::BuildBetaDetail
+  #Spaceship::ConnectAPI
+    #get_build_beta_details
+
+Spaceship::ConnectAPI::Webhook
+  #client
+    #get_webhooks
+      returns all webhooks for an app
+
+Finished in 0.43335 seconds (files took 1.51 seconds to load)
+2 examples, 0 failures
+
+docker_exit=0

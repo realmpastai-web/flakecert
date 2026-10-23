@@ -1,0 +1,80 @@
+rung files requirements.txt
+rung test_file tests/contrib/quizzes/test_question.py
+rung python=3.11 start
+#10 0.346 FLAKECERT_INSTALL python 3.11.17
+#10 0.348 FLAKECERT_INSTALL files requirements.txt
+#10 0.348 FLAKECERT_INSTALL pipenv no
+#10 0.348 FLAKECERT_INSTALL package yes
+#10 4.981 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#10 11.57 FLAKECERT_INSTALL req_fail_full /opt/pristine/requirements.txt
+#10 13.28 FLAKECERT_INSTALL line_ok Babel==2.5.0
+#10 17.78 FLAKECERT_INSTALL line_ok bcrypt==3.1.3
+#10 18.79 FLAKECERT_INSTALL line_ok certifi==2017.7.27.1
+#10 24.11 FLAKECERT_INSTALL line_fail cffi==1.10.0
+#10 25.26 FLAKECERT_INSTALL line_ok chardet==3.0.4
+#10 26.06 FLAKECERT_INSTALL line_fail codecov==2.0.9
+#10 31.48 FLAKECERT_INSTALL line_ok coverage==4.4.1
+#10 33.03 FLAKECERT_INSTALL line_ok docutils==0.14
+#10 34.51 FLAKECERT_INSTALL line_ok idna==2.6
+#10 35.67 FLAKECERT_INSTALL line_ok imagesize==0.7.1
+#10 37.32 FLAKECERT_INSTALL line_ok Jinja2==2.9.6
+#10 40.27 FLAKECERT_INSTALL line_fail MarkupSafe==1.0
+#10 41.73 FLAKECERT_INSTALL line_ok py==1.4.34
+#10 46.30 FLAKECERT_INSTALL line_ok pycparser==2.18
+#10 47.72 FLAKECERT_INSTALL line_ok Pygments==2.2.0
+#10 48.90 FLAKECERT_INSTALL line_ok pytest==3.1.3
+#10 50.29 FLAKECERT_INSTALL line_ok pytest-cov==2.5.1
+#10 51.66 FLAKECERT_INSTALL line_ok pytz==2017.2
+#10 52.76 FLAKECERT_INSTALL line_ok requests==2.18.4
+#10 53.55 FLAKECERT_INSTALL line_ok six==1.10.0
+#10 54.65 FLAKECERT_INSTALL line_ok snowballstemmer==1.2.1
+#10 56.28 FLAKECERT_INSTALL line_ok Sphinx==1.6.3
+#10 57.67 FLAKECERT_INSTALL line_ok sphinx-rtd-theme==0.2.4
+#10 58.61 FLAKECERT_INSTALL line_ok sphinxcontrib-websupport==1.0.1
+#10 59.40 FLAKECERT_INSTALL line_ok urllib3==1.22
+#10 59.40 FLAKECERT_INSTALL package_begin
+#10 61.18 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#10 61.77 FLAKECERT_INSTALL pytest_pin 3.1.3
+#10 63.56 FLAKECERT_INSTALL pytest_import_fail
+61.77 FLAKECERT_INSTALL pytest_pin 3.1.3
+63.56 FLAKECERT_INSTALL pytest_import_fail
+rung python=3.11 build_exit=1
+rung python=3.11 result=FAIL build
+rung python=3.9 start
+#9 0.220 FLAKECERT_INSTALL python 3.9.25
+#9 0.223 FLAKECERT_INSTALL files requirements.txt
+#9 0.223 FLAKECERT_INSTALL pipenv no
+#9 0.223 FLAKECERT_INSTALL package yes
+#9 4.275 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 7.259 FLAKECERT_INSTALL req_fail_full /opt/pristine/requirements.txt
+#9 8.936 FLAKECERT_INSTALL line_ok Babel==2.5.0
+#9 14.93 FLAKECERT_INSTALL line_ok bcrypt==3.1.3
+#9 15.99 FLAKECERT_INSTALL line_ok certifi==2017.7.27.1
+#9 19.00 FLAKECERT_INSTALL line_fail cffi==1.10.0
+#9 20.26 FLAKECERT_INSTALL line_ok chardet==3.0.4
+#9 21.24 FLAKECERT_INSTALL line_fail codecov==2.0.9
+#9 24.84 FLAKECERT_INSTALL line_ok coverage==4.4.1
+#9 26.19 FLAKECERT_INSTALL line_ok docutils==0.14
+#9 27.30 FLAKECERT_INSTALL line_ok idna==2.6
+#9 28.40 FLAKECERT_INSTALL line_ok imagesize==0.7.1
+#9 29.68 FLAKECERT_INSTALL line_ok Jinja2==2.9.6
+#9 31.16 FLAKECERT_INSTALL line_fail MarkupSafe==1.0
+#9 32.31 FLAKECERT_INSTALL line_ok py==1.4.34
+#9 35.06 FLAKECERT_INSTALL line_ok pycparser==2.18
+#9 36.51 FLAKECERT_INSTALL line_ok Pygments==2.2.0
+#9 37.96 FLAKECERT_INSTALL line_ok pytest==3.1.3
+#9 39.22 FLAKECERT_INSTALL line_ok pytest-cov==2.5.1
+#9 40.55 FLAKECERT_INSTALL line_ok pytz==2017.2
+#9 41.95 FLAKECERT_INSTALL line_ok requests==2.18.4
+#9 43.02 FLAKECERT_INSTALL line_ok six==1.10.0
+#9 44.19 FLAKECERT_INSTALL line_ok snowballstemmer==1.2.1
+#9 46.06 FLAKECERT_INSTALL line_ok Sphinx==1.6.3
+#9 47.13 FLAKECERT_INSTALL line_ok sphinx-rtd-theme==0.2.4
+#9 48.19 FLAKECERT_INSTALL line_ok sphinxcontrib-websupport==1.0.1
+#9 49.01 FLAKECERT_INSTALL line_ok urllib3==1.22
+#9 49.01 FLAKECERT_INSTALL package_begin
+#9 50.85 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#9 52.19 FLAKECERT_INSTALL pytest_version 3.1.3
+rung python=3.9 build_exit=0
+collect nodes=36 matched=tests/contrib/quizzes/test_question.py::TestQuestion::()::test_add_choices
+rung python=3.9 result=PASS

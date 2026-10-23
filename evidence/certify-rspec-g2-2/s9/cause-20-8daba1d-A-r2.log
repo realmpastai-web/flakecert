@@ -1,0 +1,42 @@
++ logical=rspec --require /flakecert/ordering.rb './spec/axn/tools/registry_spec.rb[1:11:1]' './spec/axn/tools/registry_spec.rb[1:4:2]'
++ rspec_argv_len=201
++ rspec_argv_n=11
++ docker_argv_len=906
++ docker_argv_n=45
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e 'ids=./spec/axn/tools/registry_spec.rb[1:11:1] ./spec/axn/tools/registry_spec.rb[1:4:2]' -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-2-1019/tools/certify_rspec:/flakecert:ro -v /workspace/hark-tasks/flakecert-g2-2-1019/evidence/certify-rspec-g2-2/s9:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --require /flakecert/ordering.rb './spec/axn/tools/registry_spec.rb[1:11:1]' './spec/axn/tools/registry_spec.rb[1:4:2]' --format json --out /out/cause-20-8daba1d-A-r2.json
+elapsed_s=1.878
+Run options: include {:ids=>{"./spec/axn/tools/registry_spec.rb"=>["1:11:1", "1:4:2"]}}
+
+Axn::Tools::Registry
+  .ensure_loaded! (non-Rails, isolates a SyntaxError in one tool file from valid siblings)
+    loads a valid sibling despite a SyntaxError file, warning about the bad one and not raising
+  .members
+    returns members sorted by tool_name (deterministic regardless of registration order) (FAILED - 1)
+
+Failures:
+
+  1) Axn::Tools::Registry.members returns members sorted by tool_name (deterministic regardless of registration order)
+     Failure/Error: expect(members).to eq([alpha, bravo, charlie])
+
+       expected: [ToolsForSpec::Alpha, ToolsForSpec::Bravo, ToolsForSpec::Charlie]
+            got: [ToolsForSpec::Alpha, ToolsForSpec::Bravo, ToolsForSpec::Charlie, SyntaxIsoFixture::Ok]
+
+       (compared using ==)
+
+       Diff:
+       @@ -1,4 +1,7 @@
+       -[ToolsForSpec::Alpha, ToolsForSpec::Bravo, ToolsForSpec::Charlie]
+       +[ToolsForSpec::Alpha,
+       + ToolsForSpec::Bravo,
+       + ToolsForSpec::Charlie,
+       + SyntaxIsoFixture::Ok]
+     # ./spec/axn/tools/registry_spec.rb:187:in `block (3 levels) in <top (required)>'
+
+Finished in 0.05269 seconds (files took 0.87464 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/axn/tools/registry_spec.rb:171 # Axn::Tools::Registry.members returns members sorted by tool_name (deterministic regardless of registration order)
+
+docker_exit=1

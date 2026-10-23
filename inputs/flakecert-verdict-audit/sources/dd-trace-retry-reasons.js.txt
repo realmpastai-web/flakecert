@@ -1,0 +1,16 @@
+  GIT_PULL_REQUEST_BASE_BRANCH,
+  GIT_PULL_REQUEST_BASE_BRANCH_HEAD_SHA,
+  GIT_PULL_REQUEST_BASE_BRANCH_SHA,
+  GIT_REPOSITORY_URL,
+  GIT_TAG,
+]
+const TEST_RETRY_REASON_TYPES = {
+  efd: 'early_flake_detection',
+  atr: 'auto_test_retry',
+  atf: 'attempt_to_fix',
+  ext: 'external',
+}
+
+const DD_TEST_IS_USER_PROVIDED_SERVICE = '_dd.test.is_user_provided_service'
+
+// Dynamic instrumentation - Test optimization integration tags

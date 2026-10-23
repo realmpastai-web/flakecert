@@ -1,0 +1,18 @@
+rung files requirements-dev.txt,requirements.txt
+rung test_file tests/test_user_input.py
+rung python=3.11 start
+#9 0.166 FLAKECERT_INSTALL python 3.11.17
+#9 0.168 FLAKECERT_INSTALL files requirements-dev.txt,requirements.txt
+#9 0.168 FLAKECERT_INSTALL pipenv no
+#9 0.168 FLAKECERT_INSTALL package yes
+#9 3.850 FLAKECERT_INSTALL req /opt/pristine/requirements-dev.txt
+#9 10.07 FLAKECERT_INSTALL req_ok /opt/pristine/requirements-dev.txt
+#9 10.07 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 11.60 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#9 11.61 FLAKECERT_INSTALL package_begin
+#9 13.66 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#9 13.66 FLAKECERT_INSTALL pytest_pin none
+#9 14.89 FLAKECERT_INSTALL pytest_version 9.1.1
+rung python=3.11 build_exit=0
+collect nodes=2 matched=tests/test_user_input.py::test_user_input_password_not_found
+rung python=3.11 result=PASS

@@ -1,0 +1,17 @@
++ logical=rspec './spec/axn/tools/registry_spec.rb[1:5:6]'
++ rspec_argv_len=162
++ rspec_argv_n=8
++ docker_argv_len=694
++ docker_argv_n=38
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-6c62d568e27844bf7500be0a54425b7c9c65a8cc:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s4:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color './spec/axn/tools/registry_spec.rb[1:5:6]' --format json --out /out/spec_axn_tools_registry_spec.rb-283-743d44da-6c62d56-B-r3.json
+elapsed_s=1.342
+Run options: include {:ids=>{"./spec/axn/tools/registry_spec.rb"=>["1:5:6"]}}
+
+Axn::Tools::Registry
+  .members (duplicate tool_name detection)
+    does not collide when the shared derived names differ but only one adapter is overridden
+
+Finished in 0.01064 seconds (files took 0.69829 seconds to load)
+1 example, 0 failures
+
+docker_exit=0

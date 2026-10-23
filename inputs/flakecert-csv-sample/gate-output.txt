@@ -1,0 +1,8 @@
+PASS	C1.response_reproduces	
+PASS	C2.csv_reproduces	
+PASS	C3.real_csv_reproduces	
+PASS	C4.rows_newest_first	n=92
+PASS	C5.csv_carries_json_sample_exactly	92 vs 92 events
+PASS	C6.quoted_json_array_cell	{'["service:sample","env:ci"]'}
+PASS	C7.real_rows_no_atf_column	rows=3
+GATE PASS

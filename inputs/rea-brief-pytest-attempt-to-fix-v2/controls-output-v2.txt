@@ -1,0 +1,115 @@
+== S0 self-check: expect 0
+GATE PASS
+exit=0
+== T1 tampered rerunfailures sdist (v1 control dir): expect 1
+FAIL	rea.sha pytest_rerunfailures-16.7.tar.gz	6956ddfb65ca1d07
+FAIL	rea.rerunfailures.no_seed_random_shuffle	1 hits
+FAIL	rea.rerunfailures.no_cert_replay_sha256	1 hits
+GATE FAIL ['rea.sha pytest_rerunfailures-16.7.tar.gz', 'rea.rerunfailures.no_seed_random_shuffle', 'rea.rerunfailures.no_cert_replay_sha256']
+exit=1
+== G1 synthetic-good (gate-logic fixture, not pytest; wrong_fix carries its own line-7 sig): expect 0
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE PASS
+exit=0
+== mutant-wrong-fix-accepted: expect 1
+FAIL	verdict.certified	{'prefix': 'NOT_FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['verdict.certified']
+exit=1
+== mutant-plain-retry-only: expect 1
+FAIL	cert.node_is_victim	
+FAIL	cert.env_identity	image_digest, pip_freeze_sha, python
+FAIL	cert.seed_fields_recorded	[]
+FAIL	cert.order_polluter_then_victim	
+FAIL	cert.exc	
+FAIL	cert.sig	None
+FAIL	cert.tb_norm_hashes_to_sig	sha256(tb_norm) == expected_failure.sig
+FAIL	prefix.cert_replay_3_runs	[]
+FAIL	prefix.cert_replay_polluter_passes	
+FAIL	prefix.cert_replay_identical	
+FAIL	wrong_fix.cert_replay_3_runs	[]
+FAIL	wrong_fix.cert_replay_polluter_passes	
+FAIL	wrong_fix.cert_replay_identical	
+FAIL	real_fix.cert_replay_3_runs	[]
+FAIL	real_fix.cert_replay_polluter_passes	
+FAIL	real_fix.cert_replay_identical	
+FAIL	verdict.certified	{'prefix': 'INCONSISTENT', 'wrong_fix': 'INCONSISTENT', 'real_fix': 'INCONSISTENT'}
+INFO	certified={'prefix': 'INCONSISTENT', 'wrong_fix': 'INCONSISTENT', 'real_fix': 'INCONSISTENT'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXE
+GATE FAIL ['cert.node_is_victim', 'cert.env_identity', 'cert.seed_fields_recorded', 'cert.order_polluter_then_victim', 'cert.exc', 'cert.sig', 'cert.tb_norm_hashes_to_sig
+exit=1
+== mutant-schedule-drift: expect 1
+FAIL	cert.order_polluter_then_victim	test_total_without_discount > test_total_with_discount
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['cert.order_polluter_then_victim']
+exit=1
+== mutant-real-fix-edits-app: expect 1
+FAIL	real_fix.rest_of_sample_unchanged	5/5 files
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['real_fix.rest_of_sample_unchanged']
+exit=1
+== mutant-omitted-env-and-seed: expect 1
+FAIL	cert.env_identity	image_digest, pip_freeze_sha, python
+FAIL	cert.seed_fields_recorded	['order']
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['cert.env_identity', 'cert.seed_fields_recorded']
+exit=1
+== mutant-rerun-plugin-installed: expect 1
+FAIL	res.pip_freeze_is_lock	6 pkgs
+FAIL	res.reversed_packages_not_installed	
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['res.pip_freeze_is_lock', 'res.reversed_packages_not_installed']
+exit=1
+== mutant-fabricated-sig: expect 1
+FAIL	prefix.tb_norm_hashes_to_sig	bbbbbbbbbbbbbbbb
+FAIL	prefix.sig_equals_cert	bbbbbbbbbbbbbbbb
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['prefix.tb_norm_hashes_to_sig', 'prefix.sig_equals_cert']
+exit=1
+== v2-m1-tb-norm-not-hashing-to-sig: expect 1
+FAIL	wrong_fix.tb_norm_hashes_to_sig	d9d475ff7b6f339c
+FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['wrong_fix.tb_norm_hashes_to_sig', 'wrong_fix.same_failure_modulo_line']
+exit=1
+== v2-m2-wrong-fix-copies-cert-sig: expect 1
+FAIL	wrong_fix.same_failure_modulo_line	failed: raw_sig_differs,line_shift_equals_insertions
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['wrong_fix.same_failure_modulo_line']
+exit=1
+== v2-m3a-line-moved-different-exception: expect 1
+FAIL	wrong_fix.failure_is_the_leak	TypeError: unsupported operand type(s) for -: 'int' and 'Non
+FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert,exc_equals_prefix,message_equals_prefix_mod_addr
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['wrong_fix.failure_is_the_leak', 'wrong_fix.same_failure_modulo_line']
+exit=1
+== v2-m3b-line-moved-different-message: expect 1
+FAIL	wrong_fix.failure_is_the_leak	assert 80 == 100  +  where 80 = total()  +    where total = 
+FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert,message_equals_prefix_mod_addr
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['wrong_fix.failure_is_the_leak', 'wrong_fix.same_failure_modulo_line']
+exit=1
+== v2-m4-non-test-frame-changed: expect 1
+FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert,only_test_cart_frames
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['wrong_fix.same_failure_modulo_line']
+exit=1
+== v2-m5-real-fix-still-fails: expect 1
+FAIL	real_fix.same_failure_modulo_line	failed: line_shift_equals_insertions
+FAIL	verdict.certified	{'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'NOT_FIXED'}
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'NOT_FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['real_fix.same_failure_modulo_line', 'verdict.certified']
+exit=1
+== v2-m6-line-shift-wrong-size: expect 1
+FAIL	wrong_fix.same_failure_modulo_line	failed: line_shift_equals_insertions
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['wrong_fix.same_failure_modulo_line']
+exit=1
+== pr7-3ec5eb8-results-no-tb-norm: expect 1
+FAIL	cert.tb_norm_hashes_to_sig	sha256(tb_norm) == expected_failure.sig
+FAIL	prefix.tb_norm_hashes_to_sig	40c3f885b65917b2
+FAIL	wrong_fix.tb_norm_hashes_to_sig	fe53cdfbd5506278
+FAIL	wrong_fix.same_failure_modulo_line	failed: masked_tb_equals_cert,line_shift_equals_insertions,only_test_cart_frames
+INFO	certified={'prefix': 'NOT_FIXED', 'wrong_fix': 'NOT_FIXED', 'real_fix': 'FIXED'} plain_retry={'prefix': 'FIXED', 'wrong_fix': 'FIXED', 'real_fix': 'FIXED'}
+GATE FAIL ['cert.tb_norm_hashes_to_sig', 'prefix.tb_norm_hashes_to_sig', 'wrong_fix.tb_norm_hashes_to_sig', 'wrong_fix.same_failure_modulo_line']
+exit=1
+CONTROLS OK

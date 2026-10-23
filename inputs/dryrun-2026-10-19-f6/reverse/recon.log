@@ -1,0 +1,192 @@
+## sha256
+078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa  fl-76eeb3f.tgz
+db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5  fl-148c1c9.tgz
+155b54480f28e2b2813185077fe435c2d663031616360ed3b179a9d6a55d2551  rspec-core-3.12.2.gem
+## lockfile rspec pins @76eeb3f
+314:    rspec-core (3.12.2)
+319:    rspec-mocks (3.12.6)
+## files changed 76eeb3f..148c1c9 (whole tree)
+Files p/spaceship/spec/client_spec.rb and f/spaceship/spec/client_spec.rb differ
+Files p/spaceship/spec/connect_api/spaceship_spec.rb and f/spaceship/spec/connect_api/spaceship_spec.rb differ
+Files p/spaceship/spec/spaceauth_spec.rb and f/spaceship/spec/spaceauth_spec.rb differ
+Files p/spaceship/spec/spec_helper.rb and f/spaceship/spec/spec_helper.rb differ
+Files p/spaceship/spec/tunes/tunes_client_spec.rb and f/spaceship/spec/tunes/tunes_client_spec.rb differ
+Files p/spec_helper.rb and f/spec_helper.rb differ
+## M1 webhook after-hook (polluter, unchanged by fix)
+7:  after do
+8-    Spaceship::ConnectAPI.token = nil
+9-  end
+webhook_spec SAME
+## M2 token= builds a bare client; client returns a stale @client first
+      def client
+        # Always look for a client set explicitly by the client first
+        return @client if @client
+
+        # A client may not always be explicitly set (specially when running tools like match, sigh, pilot, etc)
+        # In that case, create a new client based on existing sessions
+        # Note: This does not perform logins on the user. It is only reusing the cookies and selected teams
+        return nil if Spaceship::Tunes.client.nil? && Spaceship::Portal.client.nil?
+
+        implicit_client = ConnectAPI::Client.new(tunes_client: Spaceship::Tunes.client, portal_client: Spaceship::Portal.client)
+        return implicit_client
+      end
+
+      def token=(token)
+        @client = ConnectAPI::Client.new(token: token)
+      end
+
+## M3 Client.new(token: nil) wires no test_flight/tunes client
+      def initialize(cookie: nil, current_team_id: nil, token: nil, tunes_client: nil, portal_client: nil)
+        @token = token
+
+        # If using web session...
+        # Spaceship::Tunes is needed for TestFlight::API, Tunes::API, and Users::API
+        # Spaceship::Portal is needed for Provisioning::API
+        @tunes_client = tunes_client
+        @portal_client = portal_client
+
+        # Extending this instance to add API endpoints from these modules
+        # Each of these modules adds a new setter method for an instance
+        # of an ConnectAPI::APIClient
+        # These get set in set_individual_clients
+        self.extend(Spaceship::ConnectAPI::TestFlight::API)
+        self.extend(Spaceship::ConnectAPI::Tunes::API)
+        self.extend(Spaceship::ConnectAPI::Provisioning::API)
+        self.extend(Spaceship::ConnectAPI::Users::API)
+
+        set_individual_clients(
+          cookie: cookie,
+          current_team_id: current_team_id,
+          token: token,
+          tunes_client: @tunes_client,
+          portal_client: @portal_client
+        )
+      end
+
+      def set_individual_clients(cookie: nil, current_team_id: nil, token: nil, tunes_client: nil, portal_client: nil)
+        # This was added by Spaceship::ConnectAPI::TestFlight::API and is required
+        # to be set for API methods to have a client to send request on
+        if cookie || token || tunes_client
+          self.test_flight_request_client = Spaceship::ConnectAPI::TestFlight::Client.new(
+            cookie: cookie,
+            current_team_id: current_team_id,
+            token: token,
+            another_client: tunes_client
+          )
+        end
+
+        # This was added by Spaceship::ConnectAPI::Tunes::API and is required
+        # to be set for API methods to have a client to send request on
+        if cookie || token || tunes_client
+          self.tunes_request_client = Spaceship::ConnectAPI::Tunes::Client.new(
+            cookie: cookie,
+            current_team_id: current_team_id,
+            token: token,
+            another_client: tunes_client
+          )
+        end
+## M4 raise site
+
+        def test_flight_request_client
+          return @test_flight_request_client if @test_flight_request_client
+          raise TypeError, "You need to instantiate this module with test_flight_request_client"
+        end
+19:          raise TypeError, "You need to instantiate this module with tunes_request_client"
+## M5 portal-only logins (polluters for :252 and :380)
+p/spaceship/spec/connect_api/models/bundle_id_capability_spec.rb:11:    Spaceship::ConnectAPI.login(username, password, use_portal: true, use_tunes: false)
+p/spaceship/spec/connect_api/models/bundle_id_spec.rb:11:    Spaceship::ConnectAPI.login(username, password, use_portal: true, use_tunes: false)
+p/spaceship/spec/connect_api/models/capabilities_spec.rb:11:    Spaceship::ConnectAPI.login(username, password, use_portal: true, use_tunes: false)
+p/spaceship/spec/connect_api/models/profile_spec.rb:11:    Spaceship::ConnectAPI.login(username, password, use_portal: true, use_tunes: false)
+p/spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb:8:    Spaceship::ConnectAPI.login(username, password, use_portal: true, use_tunes: false)
+## M6 every spec writer of ConnectAPI @client
+p/spaceship/spec/connect_api/models/app_spec.rb
+p/spaceship/spec/connect_api/models/bundle_id_capability_spec.rb
+p/spaceship/spec/connect_api/models/bundle_id_spec.rb
+p/spaceship/spec/connect_api/models/capabilities_spec.rb
+p/spaceship/spec/connect_api/models/pre_release_version_spec.rb
+p/spaceship/spec/connect_api/models/profile_spec.rb
+p/spaceship/spec/connect_api/models/review_submission_item_spec.rb
+p/spaceship/spec/connect_api/models/review_submission_spec.rb
+p/spaceship/spec/connect_api/models/user_spec.rb
+p/spaceship/spec/connect_api/models/webhook_spec.rb
+p/spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb
+p/spaceship/spec/connect_api/spaceship_spec.rb
+p/spaceship/spec/connect_api/testflight/testflight_client_spec.rb
+p/spaceship/spec/connect_api/tunes/tunes_client_spec.rb
+p/spaceship/spec/connect_api/users/user_client_spec.rb
+lib writers:
+none
+## M7 victims use the shared login only
+describe Spaceship::ConnectAPI::BuildBetaDetail do
+  include_examples "common spaceship login"
+describe Spaceship::ConnectAPI::BetaBuildMetric do
+  include_examples "common spaceship login"
+describe Spaceship::ConnectAPI::AppStoreVersionReleaseRequest do
+  include_examples "common spaceship login"
+describe Spaceship::ConnectAPI::BuildDelivery do
+  include_examples "common spaceship login"
+## M8 the fix: shared example clears ConnectAPI.client and logs into Portal
+ RSpec.shared_examples("common spaceship login") do |skip_tunes_login|
+-  require 'fastlane-sirp'
+   let(:authentication_data) {
+     '8f30ce83b660f03abb0f8570c235e0e1e1d3860a222304acf18e989bdc065dc922a141e6da4563f0' \
+       '5586605b0e10535d875ca7e0fae7fe100cfe533374f29aaa803cdfb2c6194f458485e87f76988f6' \
+@@ -130,9 +166,16 @@
+   let(:password) { 'so_secret' }
+ 
+   before {
+-    allow_any_instance_of(SIRP::Client).to receive(:start_authentication).and_return(authentication_data)
+-    allow_any_instance_of(SIRP::Client).to receive(:process_challenge).and_return("1234")
++    unless skip_tunes_login
++      Spaceship::Tunes.login
+ 
+-    Spaceship::Tunes.login unless skip_tunes_login
++      # Spaceship::ConnectAPI.client returns a globally held @client when one has
++      # been set, so a client built in an earlier example decides what this one
++      # talks to. Clear it, and log into the portal as well: the implicit client
++      # built in its place only wires up provisioning_request_client when a
++      # cookie, a token or a portal client is present.
++      Spaceship::ConnectAPI.client = nil
++      Spaceship::Portal.login
++    end
+   }
+ end
+## M9 lib unchanged
+spaceship/lib SAME
+## N1 control: ENV leak inside two_step spec, unchanged by fix
+75:    context 'when running non-interactive' do
+76:      it 'raises an error' do
+84:    context 'when running non-interactive and force 2FA to be interactive only' do
+85:      it 'raises an error' do
+87:        ENV["SPACESHIP_ONLY_ALLOW_INTERACTIVE_2FA"] = "true"
+89:        ENV.delete('SPACESHIP_ONLY_ALLOW_INTERACTIVE_2FA')
+93:    context 'when running interactive' do
+94:      it 'does not raise an error' do
+96:        ENV["SPACESHIP_ONLY_ALLOW_INTERACTIVE_2FA"] = "true"
+103:    context 'when interactive mode is not set' do
+104:      it 'does not raise an error' do
+106:        ENV["SPACESHIP_ONLY_ALLOW_INTERACTIVE_2FA"] = "false"
+113:    context 'when SPACESHIP_2FA_SMS_DEFAULT_PHONE_NUMBER is not set' do
+7:      raise "2FA can only be performed in interactive mode" if ENV["SPACESHIP_ONLY_ALLOW_INTERACTIVE_2FA"] == "true" && ENV["FASTLANE_IS_INTERACTIVE"] == "false"
+two_step spec SAME
+## R1 rspec-core 3.12.2: explicit files keep CLI order; only directories are sorted
+2170:      def get_files_to_run(paths)
+2171-        files = FlatMap.flat_map(paths_to_check(paths)) do |path|
+2172-          path = path.gsub(File::ALT_SEPARATOR, File::SEPARATOR) if File::ALT_SEPARATOR
+2173-          File.directory?(path) ? gather_directories(path) : extract_location(path)
+2174-        end.uniq
+2175-
+2197:      def get_matching_files(path, pattern)
+2198-        raw_files = Dir[file_glob_from(path, pattern)]
+2199-        raw_files.map { |file| File.expand_path(file) }.sort
+2200-      end
+## R2 random order = sort by jenkins(seed + id) per sibling set (filter-independent)
+        def order(items)
+          @used = true
+
+          seed = @configuration.seed.to_s
+          items.sort_by { |item| jenkins_hash_digest(seed + item.id) }
+        end
+rc/lib/rspec/core/example_group.rb:608:          results_for_descendants = ordering_strategy.order(children).map { |child| child.run(reporter) }.all?
+rc/lib/rspec/core/example_group.rb:642:        ordering_strategy.order(filtered_examples).map do |example|
+rc/lib/rspec/core/world.rb:54:        ordering_strategy.order(@example_groups)

@@ -1,0 +1,47 @@
+W, [2026-10-20T05:03:17.120135 #121748]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Randomized with seed 11
+
+Test environment set up in 0.30765264500223566 seconds
+
+Gitlab::Git::Blame
+  # order random
+  blaming a file
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+    has the right number of lines
+    has the right commit span
+    ISO-8859 encoding
+      converts to UTF-8
+    when path is missing
+      returns an empty array
+    blaming a range
+      only returns the range
+      when range is outside of the file content range
+        returns an empty array
+    when repository has SHA256 format
+      correctly blames file
+    unknown encoding
+      converts to UTF-8
+    with ignore_revisions_blob
+      requests raw blame with ignore_revisions_blob
+    renamed file
+      includes the previous path
+
+Finished in 18.07 seconds (files took 55.1 seconds to load)
+10 examples, 0 failures
+
+Randomized with seed 11
+
+[TEST PROF INFO] Time spent in factories: 00:07.935 (25.35% of total time)
+LABKIT_LOGGING_OFFENSE: {"callsite":"lib/gitlab/repositories/rebuildable_set_cache.rb","lineno":630,"deprecated_field":"class","standard_field":"class_name","logger_class":"Gitlab::AppJsonLogger"}
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+/gitlab/app/models/concerns/integrations/base/integration.rb:67: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/models/work_items/widgets/start_and_due_date.rb:47: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/config/initializers/7_redis.rb:8: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/models/geo/container_repository_registry.rb:16: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/api/import_github_oauth_webhooks.rb:12: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/config.rb:97: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/cycle_analytics/summary/defaults.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.

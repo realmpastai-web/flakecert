@@ -1,0 +1,205 @@
+W, [2026-10-20T07:32:16.258047 #142745]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Test environment set up in 0.303045069995278 seconds
+
+DesignManagement::DeleteDesignsService
+  # order defined
+  #execute
+    when the feature is not available
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+      does not create any events in the activity stream
+      behaves like a service error
+        returns an error
+    when the feature is available
+      is able to delete designs
+      no designs were passed
+        behaves like a top-level error
+          raises an en expected error
+      one design is passed
+        removes that design
+        creates an event in the activity stream
+        informs the new-version-worker
+        creates a new version
+        returns the new version
+        removes the design from the current design list
+        marks the design as deleted
+        schedules deleting todos for that design
+        behaves like a success
+          returns successfully
+          saves the user as the author
+      more than one design is passed
+        makes the correct changes
+        schedules deleting todos for that design
+        behaves like a success
+          returns successfully
+          saves the user as the author
+        after executing the service
+          removes the removed designs from the current design list
+          does not make the designs impossible to find
+          associates the new version with all the designs
+          marks all deleted designs as deleted
+          marks all deleted designs with the same deletion version
+      scalability
+        makes the same number of DB requests for one design as for several
+      instrumentation tracking
+        when deleting a single design
+          behaves like tracks work item event
+            calls the instrumentation service with 'work_item_design_destroy' event
+        when deleting multiple designs
+          tracks event for each design deleted
+
+DesignManagement::DesignUserNotesCountService
+  # order defined
+  behaves like a counter caching service
+    #count
+      caches the count
+    #refresh_cache
+      refreshes the cache
+    #delete_cache
+      removes the cache
+    #uncached_count
+      does not cache the count
+  #count
+    returns the count of notes
+  #cache_key
+    contains the `VERSION` and `design.id`
+  cache invalidation
+    changes when a new note is created
+    changes when a note is destroyed
+
+DesignManagement::GenerateImageVersionsService
+  # order defined
+  #execute
+    generates the image
+    skips generating image versions if the mime type is not allowlisted
+    skips generating image versions if the design file size is too large
+    returns the status
+    returns the version
+    logs if the raw image cannot be found
+    when an error is encountered when generating the image versions
+      CarrierWave::IntegrityError
+        logs the exception
+        logs the error
+      CarrierWave::UploadError
+        logs the error
+        tracks the error
+
+DesignManagement::MoveDesignsService
+  # order defined
+  #execute
+    the user cannot move designs
+      raises cannot_move
+    the designs are not distinct
+      raises not_distinct
+    the designs are not on the same issue
+      raises not_same_issue
+    no focus is passed
+      raises no_focus
+    no neighbours are passed
+      raises no_neighbors
+    moving a design with neighbours
+      repositions existing designs and correctly places the given design
+
+DesignManagement::SaveDesignsService
+  # order defined
+  #execute
+    when the feature is not available
+      does not create an event in the activity stream
+      behaves like a service error
+        returns an error
+    when the feature is available
+      creates a commit, an event in the activity stream and updates the creation count
+      can run the same command in parallel (PENDING: In quarantine : https://gitlab.com/gitlab-org/quality/test-failure-issues/-/issues/18760)
+      repository existence
+        is ensured when the service runs
+      when the design collection is in the process of being copied
+        behaves like a service error
+          returns an error
+      when the design collection has a copy error
+        resets the copy state
+      the response
+        includes designs with the expected properties
+      saving the file to LFS
+        saves the design to LFS and saves the repository_type of the LfsObjectsProject as design
+      when HEAD branch is main
+        does not raise an exception during update
+      when a design is being updated
+        creates a new version for the existing design and updates the file
+        records the correct events
+        when uploading a new design
+          does not link the new version to the existing design
+        when detecting content type
+          detects content type when feature flag is enabled
+          skips content type detection when feature flag is disabled
+      when a design has not changed since its previous version
+        does not create a new version, and returns the design in `skipped_designs`
+      when doing a mixture of updates and creations
+        has the correct side-effects
+      when uploading multiple files
+        returns information about both designs in the response
+        has the correct side-effects
+        when uploading too many files
+          returns the correct error
+        when uploading duplicate files
+          returns the correct error
+      when the user is not allowed to upload designs
+        behaves like a service error
+          returns an error
+      failure modes
+        when creating the commit fails
+          behaves like an execution error
+            returns an error
+        when creating the versions fails
+          behaves like a service error
+            returns an error
+      when a design already existed in the repo but we didn't know about it in the database
+        creates the design and a new version for it
+      scalability
+        runs the same queries for all requests, regardless of number of files (PENDING: See: https://gitlab.com/gitlab-org/gitlab/-/issues/213169)
+      with work item tracking
+        when by_action is nil
+          does not raise an error
+        when action type is not tracked
+          skips tracking for unknown actions
+        when creating a design
+          behaves like tracks work item event
+            calls the instrumentation service with 'work_item_design_create' event
+        when creating multiple designs
+          tracks event for each design
+        when updating a design
+          behaves like tracks work item event
+            calls the instrumentation service with 'work_item_design_update' event
+        when mixing creates and updates
+          tracks both create and update events
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) DesignManagement::SaveDesignsService#execute when the feature is available can run the same command in parallel
+     # In quarantine : https://gitlab.com/gitlab-org/quality/test-failure-issues/-/issues/18760
+     # ./spec/services/design_management/save_designs_service_spec.rb:119
+
+  2) DesignManagement::SaveDesignsService#execute when the feature is available scalability runs the same queries for all requests, regardless of number of files
+     # See: https://gitlab.com/gitlab-org/gitlab/-/issues/213169
+     # ./spec/services/design_management/save_designs_service_spec.rb:385
+
+Finished in 58.16 seconds (files took 57.44 seconds to load)
+82 examples, 0 failures, 2 pending
+
+[TEST PROF INFO] Time spent in factories: 00:21.421 (28.77% of total time)
+LABKIT_LOGGING_OFFENSE: {"callsite":"lib/gitlab/repositories/rebuildable_set_cache.rb","lineno":630,"deprecated_field":"class","standard_field":"class_name","logger_class":"Gitlab::AppJsonLogger"}
+LABKIT_LOGGING_OFFENSE: {"callsite":"lib/gitlab/error_tracking.rb","lineno":147,"deprecated_field":"exception.class","standard_field":"class_name","logger_class":"Gitlab::ErrorTracking::Logger"}
+LABKIT_LOGGING_OFFENSE: {"callsite":"lib/gitlab/error_tracking.rb","lineno":147,"deprecated_field":"exception.message","standard_field":"error_message","logger_class":"Gitlab::ErrorTracking::Logger"}
+LABKIT_LOGGING_OFFENSE: {"callsite":"lib/gitlab/error_tracking.rb","lineno":147,"deprecated_field":"tags.correlation_id","standard_field":"correlation_id","logger_class":"Gitlab::ErrorTracking::Logger"}
+LABKIT_LOGGING_OFFENSE: {"callsite":"lib/gitlab/error_tracking.rb","lineno":147,"deprecated_field":"extra.project_id","standard_field":"gl_project_id","logger_class":"Gitlab::ErrorTracking::Logger"}
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+/gitlab/app/models/concerns/integrations/base/integration.rb:67: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/models/work_items/widgets/start_and_due_date.rb:47: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/config/initializers/7_redis.rb:8: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/models/geo/container_repository_registry.rb:16: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/api/import_github_oauth_webhooks.rb:12: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/config.rb:97: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/cycle_analytics/summary/defaults.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/work_items/instrumentation/event_actions.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.

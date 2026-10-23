@@ -1,0 +1,17 @@
+rung files requirements.txt
+rung test_file tests/test_converter.py
+rung python=3.11 start
+#9 0.173 FLAKECERT_INSTALL python 3.11.17
+#9 0.175 FLAKECERT_INSTALL files requirements.txt
+#9 0.175 FLAKECERT_INSTALL pipenv no
+#9 0.175 FLAKECERT_INSTALL package yes
+#9 3.778 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 5.334 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#9 5.334 FLAKECERT_INSTALL package_begin
+#9 7.428 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#9 7.428 FLAKECERT_INSTALL pytest_pin none
+#9 7.440 FLAKECERT_INSTALL pytest_fallback
+#9 9.466 FLAKECERT_INSTALL pytest_version 7.4.4
+rung python=3.11 build_exit=0
+collect nodes=5 matched=tests/test_converter.py::TestConverter::test_commented_line
+rung python=3.11 result=PASS

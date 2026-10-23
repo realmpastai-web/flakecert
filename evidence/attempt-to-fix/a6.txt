@@ -1,0 +1,35 @@
+python3.11 -m unittest tests.test_unit tests.test_ingest tests.test_verdict_audit
+.....................................................readme_ingest tamper pass=False detail=README ingest block differs from make ingest readme=a20e3e939adb65921213d5936de312bfd37e3857d8bf01201702d1841a620e7e fresh=ae90c9d427a6aafb4c4a1e4b6f0a88b7d755e5c98e757312e5ec39a902d19ab2
+.readme_ingest real pass=True detail=README ingest block matches make ingest sha256=ae90c9d427a6aafb4c4a1e4b6f0a88b7d755e5c98e757312e5ec39a902d19ab2
+...............
+----------------------------------------------------------------------
+Ran 69 tests in 0.488s
+
+OK
+python3.11 tools/verify.py --offline 
+SKIP resolve-check offline
+SKIP deps-preflight offline
+replay F01
+replay F01 3/3
+replay F03
+replay F03 3/3
+replay F04
+replay F04 3/3
+replay F06
+replay F06 3/3
+replay F08
+replay F08 3/3
+replay F10
+replay F10 3/3
+replay F12
+replay F12 3/3
+replay F14
+replay F14 3/3
+replay F15
+replay F15 3/3
+replay F16
+replay F16 3/3
+GATES {"frozen_hash": true, "effective_set": true, "swaps_logged": true, "offline_run": true, "certificates": true, "blind_comparator": true, "bounds": true, "baseline_denominator": true, "summary_traceable": true, "readme_ingest": true}
+wrote /workspace/hark-tasks/flakecert-attempt-to-fix-build/evidence/offline/verify-report.json
+kept committed online evidence; --offline wrote evidence/offline/
+exit=0

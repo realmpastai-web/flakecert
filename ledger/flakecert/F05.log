@@ -1,0 +1,446 @@
+# flakecert-log-version: 1
+# id: F05
+# method: flakecert
+# category: NOD
+# project: https://github.com/django-beam/django-beam
+# sha: 43b2111f5c65937aa1e2cc9704b59796e982a805
+# python: 3.9.25
+# image: sha256:8bf1d175e8520268fc533d4edcc912f264616def709a15e93d908e4650b74fa6
+# image_tag: flakecert:F05
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/test_views.py::test_detail
+# node_id: tests/test_views.py::test_detail
+# test_file: tests/test_views.py
+# order_scope: configured_suite
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 210
+# order_scope: configured_suite
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=1.823 node=tests/test_views.py::test_detail
+SCHEDULE run=2 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=1.471 node=tests/test_views.py::test_detail
+SCHEDULE run=3 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=3.018 node=tests/test_views.py::test_detail
+SCHEDULE run=4 {"order": ["tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_detail", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=passed exc=- sig=- duration_s=2.997 node=tests/test_views.py::test_detail
+SCHEDULE run=5 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=passed exc=- sig=- duration_s=2.915 node=tests/test_views.py::test_detail
+SCHEDULE run=6 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=6 outcome=passed exc=- sig=- duration_s=2.910 node=tests/test_views.py::test_detail
+SCHEDULE run=7 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=7 outcome=passed exc=- sig=- duration_s=1.731 node=tests/test_views.py::test_detail
+SCHEDULE run=8 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=8 outcome=passed exc=- sig=- duration_s=1.546 node=tests/test_views.py::test_detail
+SCHEDULE run=9 {"order": ["tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=9 outcome=passed exc=- sig=- duration_s=1.725 node=tests/test_views.py::test_detail
+SCHEDULE run=10 {"order": ["tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=10 outcome=passed exc=- sig=- duration_s=1.636 node=tests/test_views.py::test_detail
+SCHEDULE run=11 {"order": ["tests/test_views.py::test_list_search", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=11 outcome=passed exc=- sig=- duration_s=1.727 node=tests/test_views.py::test_detail
+SCHEDULE run=12 {"order": ["tests/test_views.py::test_list_search", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=12 outcome=passed exc=- sig=- duration_s=1.623 node=tests/test_views.py::test_detail
+SCHEDULE run=13 {"order": ["tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=13 outcome=passed exc=- sig=- duration_s=1.595 node=tests/test_views.py::test_detail
+SCHEDULE run=14 {"order": ["tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=14 outcome=passed exc=- sig=- duration_s=2.093 node=tests/test_views.py::test_detail
+SCHEDULE run=15 {"order": ["tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=15 outcome=passed exc=- sig=- duration_s=1.645 node=tests/test_views.py::test_detail
+SCHEDULE run=16 {"order": ["tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=16 outcome=passed exc=- sig=- duration_s=1.785 node=tests/test_views.py::test_detail
+SCHEDULE run=17 {"order": ["tests/test_views.py::test_update", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=17 outcome=passed exc=- sig=- duration_s=1.695 node=tests/test_views.py::test_detail
+SCHEDULE run=18 {"order": ["tests/test_views.py::test_update", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=18 outcome=passed exc=- sig=- duration_s=1.673 node=tests/test_views.py::test_detail
+SCHEDULE run=19 {"order": ["tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=19 outcome=passed exc=- sig=- duration_s=1.525 node=tests/test_views.py::test_detail
+SCHEDULE run=20 {"order": ["tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=20 outcome=passed exc=- sig=- duration_s=1.536 node=tests/test_views.py::test_detail
+SCHEDULE run=21 {"order": ["tests/test_views.py::test_delete", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=21 outcome=passed exc=- sig=- duration_s=1.821 node=tests/test_views.py::test_detail
+SCHEDULE run=22 {"order": ["tests/test_views.py::test_delete", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=22 outcome=passed exc=- sig=- duration_s=1.629 node=tests/test_views.py::test_detail
+SCHEDULE run=23 {"order": ["tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=23 outcome=passed exc=- sig=- duration_s=1.553 node=tests/test_views.py::test_detail
+SCHEDULE run=24 {"order": ["tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=24 outcome=passed exc=- sig=- duration_s=1.541 node=tests/test_views.py::test_detail
+SCHEDULE run=25 {"order": ["tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=25 outcome=passed exc=- sig=- duration_s=1.672 node=tests/test_views.py::test_detail
+SCHEDULE run=26 {"order": ["tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=26 outcome=passed exc=- sig=- duration_s=1.507 node=tests/test_views.py::test_detail
+SCHEDULE run=27 {"order": ["tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=27 outcome=passed exc=- sig=- duration_s=1.537 node=tests/test_views.py::test_detail
+SCHEDULE run=28 {"order": ["tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=28 outcome=passed exc=- sig=- duration_s=1.478 node=tests/test_views.py::test_detail
+SCHEDULE run=29 {"order": ["tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=29 outcome=passed exc=- sig=- duration_s=1.861 node=tests/test_views.py::test_detail
+SCHEDULE run=30 {"order": ["tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=30 outcome=passed exc=- sig=- duration_s=1.616 node=tests/test_views.py::test_detail
+SCHEDULE run=31 {"order": ["tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=31 outcome=passed exc=- sig=- duration_s=1.772 node=tests/test_views.py::test_detail
+SCHEDULE run=32 {"order": ["tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=32 outcome=passed exc=- sig=- duration_s=1.549 node=tests/test_views.py::test_detail
+SCHEDULE run=33 {"order": ["tests/test_contrib_autocomplete.py::test_autocomplete", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=33 outcome=passed exc=- sig=- duration_s=2.196 node=tests/test_views.py::test_detail
+SCHEDULE run=34 {"order": ["tests/test_contrib_autocomplete.py::test_autocomplete_search", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=34 outcome=passed exc=- sig=- duration_s=1.564 node=tests/test_views.py::test_detail
+SCHEDULE run=35 {"order": ["tests/test_contrib_autocomplete.py::test_autocomplete_requires_permission", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=35 outcome=passed exc=- sig=- duration_s=1.536 node=tests/test_views.py::test_detail
+SCHEDULE run=36 {"order": ["tests/test_contrib_reversion.py::test_using_create_view_creates_a_revision", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=36 outcome=passed exc=- sig=- duration_s=1.721 node=tests/test_views.py::test_detail
+SCHEDULE run=37 {"order": ["tests/test_contrib_reversion.py::test_using_update_view_creates_a_revision", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=37 outcome=passed exc=- sig=- duration_s=1.648 node=tests/test_views.py::test_detail
+SCHEDULE run=38 {"order": ["tests/test_contrib_reversion.py::test_revision_is_visible_in_list", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=38 outcome=passed exc=- sig=- duration_s=1.663 node=tests/test_views.py::test_detail
+SCHEDULE run=39 {"order": ["tests/test_contrib_reversion.py::test_version_list_requires_view_permission", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=39 outcome=passed exc=- sig=- duration_s=1.634 node=tests/test_views.py::test_detail
+SCHEDULE run=40 {"order": ["tests/test_contrib_reversion.py::test_show_detail_from_previous_version", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=40 outcome=passed exc=- sig=- duration_s=1.627 node=tests/test_views.py::test_detail
+SCHEDULE run=41 {"order": ["tests/test_contrib_reversion.py::test_version_detail_requires_view_perm", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=41 outcome=passed exc=- sig=- duration_s=2.481 node=tests/test_views.py::test_detail
+SCHEDULE run=42 {"order": ["tests/test_contrib_reversion.py::test_revert_to_previous_version", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=42 outcome=passed exc=- sig=- duration_s=1.665 node=tests/test_views.py::test_detail
+SCHEDULE run=43 {"order": ["tests/test_contrib_reversion.py::test_revert_to_previous_version_requires_change_perm", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=43 outcome=passed exc=- sig=- duration_s=1.570 node=tests/test_views.py::test_detail
+SCHEDULE run=44 {"order": ["tests/test_components.py::test_component_with_queryset_guesses_model", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=44 outcome=passed exc=- sig=- duration_s=1.517 node=tests/test_views.py::test_detail
+SCHEDULE run=45 {"order": ["tests/test_components.py::test_component_with_queryset_copies_queryset", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=45 outcome=passed exc=- sig=- duration_s=1.516 node=tests/test_views.py::test_detail
+SCHEDULE run=46 {"order": ["tests/test_components.py::test_component_with_model_guesses_queryset", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=46 outcome=passed exc=- sig=- duration_s=1.564 node=tests/test_views.py::test_detail
+SCHEDULE run=47 {"order": ["tests/test_components.py::test_component_without_verbose_name_guesses_name", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=47 outcome=passed exc=- sig=- duration_s=1.556 node=tests/test_views.py::test_detail
+SCHEDULE run=48 {"order": ["tests/test_components.py::test_base_component_requires_a_name", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=48 outcome=passed exc=- sig=- duration_s=1.538 node=tests/test_views.py::test_detail
+SCHEDULE run=49 {"order": ["tests/test_components.py::test_component_requires_one_of_model_or_queryset", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=49 outcome=passed exc=- sig=- duration_s=1.527 node=tests/test_views.py::test_detail
+SCHEDULE run=50 {"order": ["tests/test_components.py::test_component_requires_a_view_class", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=50 outcome=passed exc=- sig=- duration_s=1.554 node=tests/test_views.py::test_detail
+SCHEDULE run=51 {"order": ["tests/test_components.py::test_arguments_are_collected", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=51 outcome=passed exc=- sig=- duration_s=1.628 node=tests/test_views.py::test_detail
+SCHEDULE run=52 {"order": ["tests/test_contrib_reversion.py::test_versioned_view_set_models_are_registered", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=52 outcome=passed exc=- sig=- duration_s=1.485 node=tests/test_views.py::test_detail
+SCHEDULE run=53 {"order": ["tests/test_contrib_reversion.py::test_inlines_of_versioned_view_set_models_are_registered", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=53 outcome=passed exc=- sig=- duration_s=1.624 node=tests/test_views.py::test_detail
+SCHEDULE run=54 {"order": ["tests/test_contrib_reversion.py::test_unrelated_models_are_not_registered", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=54 outcome=passed exc=- sig=- duration_s=1.562 node=tests/test_views.py::test_detail
+SCHEDULE run=55 {"order": ["tests/test_inlines.py::test_inline_formset_is_generated", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=55 outcome=passed exc=- sig=- duration_s=1.489 node=tests/test_views.py::test_detail
+SCHEDULE run=56 {"order": ["tests/test_inlines.py::test_inlines_prefix_works_without_formset", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=56 outcome=passed exc=- sig=- duration_s=1.526 node=tests/test_views.py::test_detail
+SCHEDULE run=57 {"order": ["tests/test_registry.py::test_registry_contains_viewset", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=57 outcome=passed exc=- sig=- duration_s=1.441 node=tests/test_views.py::test_detail
+SCHEDULE run=58 {"order": ["tests/test_registry.py::test_duplicate_registration_warns", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=58 outcome=passed exc=- sig=- duration_s=1.467 node=tests/test_views.py::test_detail
+SCHEDULE run=59 {"order": ["tests/test_registry.py::test_duplicate_registration_after_unregister_is_okay", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=59 outcome=passed exc=- sig=- duration_s=1.465 node=tests/test_views.py::test_detail
+SCHEDULE run=60 {"order": ["tests/test_registry.py::test_unregister_removes_app_and_model", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=60 outcome=passed exc=- sig=- duration_s=1.496 node=tests/test_views.py::test_detail
+SCHEDULE run=61 {"order": ["tests/test_registry.py::test_register_with_custom_registry", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=61 outcome=passed exc=- sig=- duration_s=1.486 node=tests/test_views.py::test_detail
+SCHEDULE run=62 {"order": ["tests/test_tags.py::test_preserve_query_string_preserves_query_string", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=62 outcome=passed exc=- sig=- duration_s=1.554 node=tests/test_views.py::test_detail
+SCHEDULE run=63 {"order": ["tests/test_tags.py::test_preserve_query_string_works_with_mulitple_arguments", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=63 outcome=passed exc=- sig=- duration_s=1.470 node=tests/test_views.py::test_detail
+SCHEDULE run=64 {"order": ["tests/test_tags.py::test_add_url_params_works", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=64 outcome=passed exc=- sig=- duration_s=1.444 node=tests/test_views.py::test_detail
+SCHEDULE run=65 {"order": ["tests/test_tags.py::test_add_url_params_preserves_existing", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=65 outcome=passed exc=- sig=- duration_s=1.514 node=tests/test_views.py::test_detail
+SCHEDULE run=66 {"order": ["tests/test_tags.py::test_add_url_params_prefers_existing", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=66 outcome=passed exc=- sig=- duration_s=1.528 node=tests/test_views.py::test_detail
+SCHEDULE run=67 {"order": ["tests/test_urls.py::test_get_urls_produces_urls", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=67 outcome=passed exc=- sig=- duration_s=1.540 node=tests/test_views.py::test_detail
+SCHEDULE run=68 {"order": ["tests/test_urls.py::test_get_links_contains_all_view_types[list]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=68 outcome=passed exc=- sig=- duration_s=1.446 node=tests/test_views.py::test_detail
+SCHEDULE run=69 {"order": ["tests/test_urls.py::test_get_links_contains_all_view_types[detail]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=69 outcome=passed exc=- sig=- duration_s=1.546 node=tests/test_views.py::test_detail
+SCHEDULE run=70 {"order": ["tests/test_urls.py::test_get_links_contains_all_view_types[update]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=70 outcome=passed exc=- sig=- duration_s=1.499 node=tests/test_views.py::test_detail
+SCHEDULE run=71 {"order": ["tests/test_urls.py::test_get_links_contains_all_view_types[create]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=71 outcome=passed exc=- sig=- duration_s=1.540 node=tests/test_views.py::test_detail
+SCHEDULE run=72 {"order": ["tests/test_urls.py::test_get_links_contains_all_view_types[delete]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=72 outcome=passed exc=- sig=- duration_s=1.511 node=tests/test_views.py::test_detail
+SCHEDULE run=73 {"order": ["tests/test_urls.py::test_list_url[url0]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=73 outcome=passed exc=- sig=- duration_s=1.444 node=tests/test_views.py::test_detail
+SCHEDULE run=74 {"order": ["tests/test_urls.py::test_list_url[url1]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=74 outcome=passed exc=- sig=- duration_s=1.545 node=tests/test_views.py::test_detail
+SCHEDULE run=75 {"order": ["tests/test_urls.py::test_list_url[url2]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=75 outcome=passed exc=- sig=- duration_s=1.511 node=tests/test_views.py::test_detail
+SCHEDULE run=76 {"order": ["tests/test_urls.py::test_list_url[url3]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=76 outcome=passed exc=- sig=- duration_s=1.928 node=tests/test_views.py::test_detail
+SCHEDULE run=77 {"order": ["tests/test_urls.py::test_get_link_urls_that_require_object_without_object[create-/dragonfly/create/]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=77 outcome=passed exc=- sig=- duration_s=1.807 node=tests/test_views.py::test_detail
+SCHEDULE run=78 {"order": ["tests/test_urls.py::test_get_link_urls_that_require_object_without_object[list-/dragonfly/]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=78 outcome=passed exc=- sig=- duration_s=1.639 node=tests/test_views.py::test_detail
+SCHEDULE run=79 {"order": ["tests/test_urls.py::test_get_link_urls_with_missing_object[update]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=79 outcome=passed exc=- sig=- duration_s=1.605 node=tests/test_views.py::test_detail
+SCHEDULE run=80 {"order": ["tests/test_urls.py::test_get_link_urls_with_missing_object[detail]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=80 outcome=passed exc=- sig=- duration_s=1.482 node=tests/test_views.py::test_detail
+SCHEDULE run=81 {"order": ["tests/test_urls.py::test_get_link_urls_with_missing_object[delete]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=81 outcome=passed exc=- sig=- duration_s=1.486 node=tests/test_views.py::test_detail
+SCHEDULE run=82 {"order": ["tests/test_urls.py::test_get_link_urls_that_require_object_with_object[update-/dragonfly/123/update/]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=82 outcome=passed exc=- sig=- duration_s=1.501 node=tests/test_views.py::test_detail
+SCHEDULE run=83 {"order": ["tests/test_urls.py::test_get_link_urls_that_require_object_with_object[detail-/dragonfly/123/]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=83 outcome=passed exc=- sig=- duration_s=1.536 node=tests/test_views.py::test_detail
+SCHEDULE run=84 {"order": ["tests/test_urls.py::test_get_link_urls_that_require_object_with_object[delete-/dragonfly/123/delete/]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=84 outcome=passed exc=- sig=- duration_s=1.489 node=tests/test_views.py::test_detail
+SCHEDULE run=85 {"order": ["tests/test_urls.py::test_get_link_urls_that_require_object[create-/dragonfly/create/]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=85 outcome=passed exc=- sig=- duration_s=1.461 node=tests/test_views.py::test_detail
+SCHEDULE run=86 {"order": ["tests/test_urls.py::test_get_link_urls_that_require_object[list-/dragonfly/]", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=86 outcome=passed exc=- sig=- duration_s=1.545 node=tests/test_views.py::test_detail
+SCHEDULE run=87 {"order": ["tests/test_urls.py::test_component_url_with_extra_context", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=87 outcome=passed exc=- sig=- duration_s=1.514 node=tests/test_views.py::test_detail
+SCHEDULE run=88 {"order": ["tests/test_viewsets.py::test_get_components", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=88 outcome=passed exc=- sig=- duration_s=1.649 node=tests/test_views.py::test_detail
+SCHEDULE run=89 {"order": ["tests/test_viewsets.py::test_links", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=89 outcome=passed exc=- sig=- duration_s=1.546 node=tests/test_views.py::test_detail
+SCHEDULE run=90 {"order": ["tests/test_viewsets.py::test_get_urls", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=90 outcome=passed exc=- sig=- duration_s=1.564 node=tests/test_views.py::test_detail
+SCHEDULE run=91 {"order": ["tests/test_viewsets.py::test_get_view", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=91 outcome=passed exc=- sig=- duration_s=1.661 node=tests/test_views.py::test_detail
+SCHEDULE run=92 {"order": ["tests/test_viewsets.py::test_resolve_component_kwargs", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=92 outcome=passed exc=- sig=- duration_s=2.313 node=tests/test_views.py::test_detail
+SCHEDULE run=93 {"order": ["tests/test_viewsets.py::test_resolve_component_kwargs_does_not_return_unspecified_value", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=93 outcome=passed exc=- sig=- duration_s=1.594 node=tests/test_views.py::test_detail
+SCHEDULE run=94 {"order": ["tests/test_viewsets.py::test_resolve_component_kwargs_does_not_return_sentinel_value", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=94 outcome=passed exc=- sig=- duration_s=1.807 node=tests/test_views.py::test_detail
+SCHEDULE run=95 {"order": ["tests/test_viewsets.py::test_resolve_component_kwargs_does_return_falsy_values", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=95 outcome=passed exc=- sig=- duration_s=1.546 node=tests/test_views.py::test_detail
+SCHEDULE run=96 {"order": ["tests/test_viewsets.py::test_resolve_component_kwargs_prefers_specific", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=96 outcome=passed exc=- sig=- duration_s=1.567 node=tests/test_views.py::test_detail
+SCHEDULE run=97 {"order": ["tests/test_viewsets.py::test_resolve_component_kwargs_does_not_return_specific_undefined", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=97 outcome=passed exc=- sig=- duration_s=1.757 node=tests/test_views.py::test_detail
+SCHEDULE run=98 {"order": ["tests/test_viewsets.py::test_resolve_component_kwargs_prefers_specific_falsy", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=98 outcome=passed exc=- sig=- duration_s=1.999 node=tests/test_views.py::test_detail
+SCHEDULE run=99 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "0", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=99 outcome=passed exc=- sig=- duration_s=1.538 node=tests/test_views.py::test_detail
+SCHEDULE run=100 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "1", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=100 outcome=passed exc=- sig=- duration_s=1.461 node=tests/test_views.py::test_detail
+SCHEDULE run=101 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "42", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=101 outcome=passed exc=- sig=- duration_s=1.424 node=tests/test_views.py::test_detail
+SCHEDULE run=102 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "20261017", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=102 outcome=passed exc=- sig=- duration_s=1.600 node=tests/test_views.py::test_detail
+SCHEDULE run=103 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "0", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=103 outcome=passed exc=- sig=- duration_s=1.813 node=tests/test_views.py::test_detail
+SCHEDULE run=104 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "1", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=104 outcome=passed exc=- sig=- duration_s=1.464 node=tests/test_views.py::test_detail
+SCHEDULE run=105 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "42", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=105 outcome=passed exc=- sig=- duration_s=1.493 node=tests/test_views.py::test_detail
+SCHEDULE run=106 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "20261017", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=106 outcome=passed exc=- sig=- duration_s=1.514 node=tests/test_views.py::test_detail
+SCHEDULE run=107 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "0", "tmpdir": ""}
+RUN method=flakecert run=107 outcome=passed exc=- sig=- duration_s=1.578 node=tests/test_views.py::test_detail
+SCHEDULE run=108 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "86400", "tmpdir": ""}
+RUN method=flakecert run=108 outcome=passed exc=- sig=- duration_s=1.410 node=tests/test_views.py::test_detail
+SCHEDULE run=109 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "-86400", "tmpdir": ""}
+RUN method=flakecert run=109 outcome=passed exc=- sig=- duration_s=1.540 node=tests/test_views.py::test_detail
+SCHEDULE run=110 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "3600", "tmpdir": ""}
+RUN method=flakecert run=110 outcome=passed exc=- sig=- duration_s=1.586 node=tests/test_views.py::test_detail
+SCHEDULE run=111 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-a"}
+RUN method=flakecert run=111 outcome=passed exc=- sig=- duration_s=1.516 node=tests/test_views.py::test_detail
+SCHEDULE run=112 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-b"}
+RUN method=flakecert run=112 outcome=passed exc=- sig=- duration_s=1.542 node=tests/test_views.py::test_detail
+SCHEDULE run=113 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-c"}
+RUN method=flakecert run=113 outcome=passed exc=- sig=- duration_s=1.579 node=tests/test_views.py::test_detail
+SCHEDULE run=114 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-d"}
+RUN method=flakecert run=114 outcome=passed exc=- sig=- duration_s=1.526 node=tests/test_views.py::test_detail
+SCHEDULE run=115 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "0", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=115 outcome=passed exc=- sig=- duration_s=1.490 node=tests/test_views.py::test_detail
+SCHEDULE run=116 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "1", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=116 outcome=passed exc=- sig=- duration_s=1.418 node=tests/test_views.py::test_detail
+SCHEDULE run=117 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "42", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=117 outcome=passed exc=- sig=- duration_s=1.502 node=tests/test_views.py::test_detail
+SCHEDULE run=118 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "20261017", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=118 outcome=passed exc=- sig=- duration_s=1.686 node=tests/test_views.py::test_detail
+SCHEDULE run=119 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "0", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=119 outcome=passed exc=- sig=- duration_s=1.549 node=tests/test_views.py::test_detail
+SCHEDULE run=120 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "1", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=120 outcome=passed exc=- sig=- duration_s=1.745 node=tests/test_views.py::test_detail
+SCHEDULE run=121 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "42", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=121 outcome=passed exc=- sig=- duration_s=1.500 node=tests/test_views.py::test_detail
+SCHEDULE run=122 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "20261017", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=122 outcome=passed exc=- sig=- duration_s=1.502 node=tests/test_views.py::test_detail
+SCHEDULE run=123 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "0", "tmpdir": ""}
+RUN method=flakecert run=123 outcome=passed exc=- sig=- duration_s=1.568 node=tests/test_views.py::test_detail
+SCHEDULE run=124 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "86400", "tmpdir": ""}
+RUN method=flakecert run=124 outcome=passed exc=- sig=- duration_s=1.552 node=tests/test_views.py::test_detail
+SCHEDULE run=125 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "-86400", "tmpdir": ""}
+RUN method=flakecert run=125 outcome=passed exc=- sig=- duration_s=1.695 node=tests/test_views.py::test_detail
+SCHEDULE run=126 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "3600", "tmpdir": ""}
+RUN method=flakecert run=126 outcome=passed exc=- sig=- duration_s=2.247 node=tests/test_views.py::test_detail
+SCHEDULE run=127 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-a"}
+RUN method=flakecert run=127 outcome=passed exc=- sig=- duration_s=1.789 node=tests/test_views.py::test_detail
+SCHEDULE run=128 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-b"}
+RUN method=flakecert run=128 outcome=passed exc=- sig=- duration_s=1.502 node=tests/test_views.py::test_detail
+SCHEDULE run=129 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-c"}
+RUN method=flakecert run=129 outcome=passed exc=- sig=- duration_s=1.532 node=tests/test_views.py::test_detail
+SCHEDULE run=130 {"order": ["tests/test_views.py::test_detail", "tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-d"}
+RUN method=flakecert run=130 outcome=passed exc=- sig=- duration_s=1.661 node=tests/test_views.py::test_detail
+SCHEDULE run=131 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "0", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=131 outcome=passed exc=- sig=- duration_s=2.955 node=tests/test_views.py::test_detail
+SCHEDULE run=132 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "1", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=132 outcome=passed exc=- sig=- duration_s=3.146 node=tests/test_views.py::test_detail
+SCHEDULE run=133 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "42", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=133 outcome=passed exc=- sig=- duration_s=2.939 node=tests/test_views.py::test_detail
+SCHEDULE run=134 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "20261017", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=134 outcome=passed exc=- sig=- duration_s=3.243 node=tests/test_views.py::test_detail
+SCHEDULE run=135 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "0", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=135 outcome=passed exc=- sig=- duration_s=2.963 node=tests/test_views.py::test_detail
+SCHEDULE run=136 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "1", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=136 outcome=passed exc=- sig=- duration_s=2.937 node=tests/test_views.py::test_detail
+SCHEDULE run=137 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "42", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=137 outcome=passed exc=- sig=- duration_s=2.953 node=tests/test_views.py::test_detail
+SCHEDULE run=138 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "20261017", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=138 outcome=passed exc=- sig=- duration_s=2.868 node=tests/test_views.py::test_detail
+SCHEDULE run=139 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "0", "tmpdir": ""}
+RUN method=flakecert run=139 outcome=passed exc=- sig=- duration_s=2.945 node=tests/test_views.py::test_detail
+SCHEDULE run=140 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "86400", "tmpdir": ""}
+RUN method=flakecert run=140 outcome=passed exc=- sig=- duration_s=2.956 node=tests/test_views.py::test_detail
+SCHEDULE run=141 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "-86400", "tmpdir": ""}
+RUN method=flakecert run=141 outcome=passed exc=- sig=- duration_s=3.050 node=tests/test_views.py::test_detail
+SCHEDULE run=142 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "3600", "tmpdir": ""}
+RUN method=flakecert run=142 outcome=passed exc=- sig=- duration_s=2.914 node=tests/test_views.py::test_detail
+SCHEDULE run=143 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-a"}
+RUN method=flakecert run=143 outcome=passed exc=- sig=- duration_s=3.127 node=tests/test_views.py::test_detail
+SCHEDULE run=144 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-b"}
+RUN method=flakecert run=144 outcome=passed exc=- sig=- duration_s=2.903 node=tests/test_views.py::test_detail
+SCHEDULE run=145 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-c"}
+RUN method=flakecert run=145 outcome=passed exc=- sig=- duration_s=3.407 node=tests/test_views.py::test_detail
+SCHEDULE run=146 {"order": ["tests/test_views.py::test_list", "tests/test_views.py::test_list_requires_permission", "tests/test_views.py::test_list_search", "tests/test_views.py::test_list_sort", "tests/test_views.py::test_detail", "tests/test_views.py::test_detail_requires_permission", "tests/test_views.py::test_update", "tests/test_views.py::test_update_requires_permission", "tests/test_views.py::test_delete", "tests/test_views.py::test_delete_shows_related", "tests/test_views.py::test_delete_protected_not_allowed", "tests/test_views.py::test_delete_requires_permission", "tests/test_views.py::test_create_with_inlines", "tests/test_views.py::test_only_popup_param_is_preserved_in_detail_links"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": "fc-d"}
+RUN method=flakecert run=146 outcome=passed exc=- sig=- duration_s=3.262 node=tests/test_views.py::test_detail
+SCHEDULE run=147 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "623418", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=147 outcome=passed exc=- sig=- duration_s=1.428 node=tests/test_views.py::test_detail
+SCHEDULE run=148 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "667662", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=148 outcome=passed exc=- sig=- duration_s=1.465 node=tests/test_views.py::test_detail
+SCHEDULE run=149 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "175132", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=149 outcome=passed exc=- sig=- duration_s=1.527 node=tests/test_views.py::test_detail
+SCHEDULE run=150 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "900214", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=150 outcome=passed exc=- sig=- duration_s=1.498 node=tests/test_views.py::test_detail
+SCHEDULE run=151 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "908137", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=151 outcome=passed exc=- sig=- duration_s=1.440 node=tests/test_views.py::test_detail
+SCHEDULE run=152 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "363136", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=152 outcome=passed exc=- sig=- duration_s=1.506 node=tests/test_views.py::test_detail
+SCHEDULE run=153 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "942900", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=153 outcome=passed exc=- sig=- duration_s=1.477 node=tests/test_views.py::test_detail
+SCHEDULE run=154 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "582241", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=154 outcome=passed exc=- sig=- duration_s=2.229 node=tests/test_views.py::test_detail
+SCHEDULE run=155 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "283046", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=155 outcome=passed exc=- sig=- duration_s=1.422 node=tests/test_views.py::test_detail
+SCHEDULE run=156 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "957125", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=156 outcome=passed exc=- sig=- duration_s=1.458 node=tests/test_views.py::test_detail
+SCHEDULE run=157 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "887273", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=157 outcome=passed exc=- sig=- duration_s=1.578 node=tests/test_views.py::test_detail
+SCHEDULE run=158 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "959677", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=158 outcome=passed exc=- sig=- duration_s=1.466 node=tests/test_views.py::test_detail
+SCHEDULE run=159 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "24666", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=159 outcome=passed exc=- sig=- duration_s=1.687 node=tests/test_views.py::test_detail
+SCHEDULE run=160 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "445651", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=160 outcome=passed exc=- sig=- duration_s=1.521 node=tests/test_views.py::test_detail
+SCHEDULE run=161 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "18222", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=161 outcome=passed exc=- sig=- duration_s=1.671 node=tests/test_views.py::test_detail
+SCHEDULE run=162 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "641680", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=162 outcome=passed exc=- sig=- duration_s=1.527 node=tests/test_views.py::test_detail
+SCHEDULE run=163 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "156109", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=163 outcome=passed exc=- sig=- duration_s=2.228 node=tests/test_views.py::test_detail
+SCHEDULE run=164 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "888636", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=164 outcome=passed exc=- sig=- duration_s=1.573 node=tests/test_views.py::test_detail
+SCHEDULE run=165 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "953370", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=165 outcome=passed exc=- sig=- duration_s=2.229 node=tests/test_views.py::test_detail
+SCHEDULE run=166 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "395582", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=166 outcome=passed exc=- sig=- duration_s=2.226 node=tests/test_views.py::test_detail
+SCHEDULE run=167 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "505358", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=167 outcome=passed exc=- sig=- duration_s=1.482 node=tests/test_views.py::test_detail
+SCHEDULE run=168 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "745419", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=168 outcome=passed exc=- sig=- duration_s=1.411 node=tests/test_views.py::test_detail
+SCHEDULE run=169 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "603270", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=169 outcome=passed exc=- sig=- duration_s=1.446 node=tests/test_views.py::test_detail
+SCHEDULE run=170 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "193542", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=170 outcome=passed exc=- sig=- duration_s=1.659 node=tests/test_views.py::test_detail
+SCHEDULE run=171 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "114518", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=171 outcome=passed exc=- sig=- duration_s=1.554 node=tests/test_views.py::test_detail
+SCHEDULE run=172 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "833161", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=172 outcome=passed exc=- sig=- duration_s=1.453 node=tests/test_views.py::test_detail
+SCHEDULE run=173 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "940019", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=173 outcome=passed exc=- sig=- duration_s=1.501 node=tests/test_views.py::test_detail
+SCHEDULE run=174 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "985026", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=174 outcome=passed exc=- sig=- duration_s=1.431 node=tests/test_views.py::test_detail
+SCHEDULE run=175 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "316949", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=175 outcome=passed exc=- sig=- duration_s=1.454 node=tests/test_views.py::test_detail
+SCHEDULE run=176 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "332997", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=176 outcome=passed exc=- sig=- duration_s=1.725 node=tests/test_views.py::test_detail
+SCHEDULE run=177 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "282176", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=177 outcome=passed exc=- sig=- duration_s=1.579 node=tests/test_views.py::test_detail
+SCHEDULE run=178 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "688127", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=178 outcome=passed exc=- sig=- duration_s=1.599 node=tests/test_views.py::test_detail
+SCHEDULE run=179 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "936319", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=179 outcome=passed exc=- sig=- duration_s=1.442 node=tests/test_views.py::test_detail
+SCHEDULE run=180 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "596650", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=180 outcome=passed exc=- sig=- duration_s=1.444 node=tests/test_views.py::test_detail
+SCHEDULE run=181 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "335805", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=181 outcome=passed exc=- sig=- duration_s=1.449 node=tests/test_views.py::test_detail
+SCHEDULE run=182 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "443701", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=182 outcome=passed exc=- sig=- duration_s=1.417 node=tests/test_views.py::test_detail
+SCHEDULE run=183 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "618785", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=183 outcome=passed exc=- sig=- duration_s=1.542 node=tests/test_views.py::test_detail
+SCHEDULE run=184 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "375930", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=184 outcome=passed exc=- sig=- duration_s=1.566 node=tests/test_views.py::test_detail
+SCHEDULE run=185 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "846099", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=185 outcome=passed exc=- sig=- duration_s=2.052 node=tests/test_views.py::test_detail
+SCHEDULE run=186 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "546598", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=186 outcome=passed exc=- sig=- duration_s=1.453 node=tests/test_views.py::test_detail
+SCHEDULE run=187 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "444754", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=187 outcome=passed exc=- sig=- duration_s=1.532 node=tests/test_views.py::test_detail
+SCHEDULE run=188 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "297390", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=188 outcome=passed exc=- sig=- duration_s=1.540 node=tests/test_views.py::test_detail
+SCHEDULE run=189 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "469324", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=189 outcome=passed exc=- sig=- duration_s=1.563 node=tests/test_views.py::test_detail
+SCHEDULE run=190 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "294195", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=190 outcome=passed exc=- sig=- duration_s=1.545 node=tests/test_views.py::test_detail
+SCHEDULE run=191 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "866895", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=191 outcome=passed exc=- sig=- duration_s=1.579 node=tests/test_views.py::test_detail
+SCHEDULE run=192 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "677960", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=192 outcome=passed exc=- sig=- duration_s=1.517 node=tests/test_views.py::test_detail
+SCHEDULE run=193 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "964061", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=193 outcome=passed exc=- sig=- duration_s=1.484 node=tests/test_views.py::test_detail
+SCHEDULE run=194 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "348605", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=194 outcome=passed exc=- sig=- duration_s=1.450 node=tests/test_views.py::test_detail
+SCHEDULE run=195 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "596411", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=195 outcome=passed exc=- sig=- duration_s=1.631 node=tests/test_views.py::test_detail
+SCHEDULE run=196 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "992053", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=196 outcome=passed exc=- sig=- duration_s=1.931 node=tests/test_views.py::test_detail
+SCHEDULE run=197 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "68459", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=197 outcome=passed exc=- sig=- duration_s=1.502 node=tests/test_views.py::test_detail
+SCHEDULE run=198 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "940548", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=198 outcome=passed exc=- sig=- duration_s=1.460 node=tests/test_views.py::test_detail
+SCHEDULE run=199 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "455802", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=199 outcome=passed exc=- sig=- duration_s=1.971 node=tests/test_views.py::test_detail
+SCHEDULE run=200 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "634360", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=200 outcome=passed exc=- sig=- duration_s=1.475 node=tests/test_views.py::test_detail
+SCHEDULE run=201 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "630356", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=201 outcome=passed exc=- sig=- duration_s=1.558 node=tests/test_views.py::test_detail
+SCHEDULE run=202 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "125640", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=202 outcome=passed exc=- sig=- duration_s=2.035 node=tests/test_views.py::test_detail
+SCHEDULE run=203 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "312185", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=203 outcome=passed exc=- sig=- duration_s=1.531 node=tests/test_views.py::test_detail
+SCHEDULE run=204 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "238679", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=204 outcome=passed exc=- sig=- duration_s=1.666 node=tests/test_views.py::test_detail
+SCHEDULE run=205 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "697197", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=205 outcome=passed exc=- sig=- duration_s=1.543 node=tests/test_views.py::test_detail
+SCHEDULE run=206 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "315716", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=206 outcome=passed exc=- sig=- duration_s=1.617 node=tests/test_views.py::test_detail
+SCHEDULE run=207 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "373967", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=207 outcome=passed exc=- sig=- duration_s=1.523 node=tests/test_views.py::test_detail
+SCHEDULE run=208 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "17255", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=208 outcome=passed exc=- sig=- duration_s=1.470 node=tests/test_views.py::test_detail
+SCHEDULE run=209 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "339012", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=209 outcome=passed exc=- sig=- duration_s=1.513 node=tests/test_views.py::test_detail
+SCHEDULE run=210 {"order": ["tests/test_views.py::test_detail"], "pythonhashseed": "", "seed": "715683", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=210 outcome=passed exc=- sig=- duration_s=1.494 node=tests/test_views.py::test_detail
+SEARCH_STOP reason=no_failure index=210
+CERT id=F05 certified=no reason=no_failure
+FLAKECERT_SUMMARY id=F05 runs=210 failures=0

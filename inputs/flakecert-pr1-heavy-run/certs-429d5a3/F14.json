@@ -1,0 +1,68 @@
+{
+  "id": "F14",
+  "project": "https://github.com/microsoft/knack",
+  "sha": "dc7b7d857ce3c11b2a3155b81f2470b3b579e7c9",
+  "pytest_id": "tests/test_help.py::TestHelp::test_help_extra_params",
+  "node_id": "tests/test_help.py::TestHelp::test_help_extra_params",
+  "image_digest": "sha256:7eabf58851e166a1dc08aad67b9cb4e4d1b9c716d04cf747c4584f5f627b66e9",
+  "image_tag": "flakecert:F14",
+  "pip_freeze_sha": "adb2a481321ebe7c8b37baf0f0f9cf596cca2ad2085310e1093adf4fe7850001",
+  "flakecert_version": "0.2.0",
+  "python": "3.9.25",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 174,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "tests/test_parser.py::TestParser::test_nargs_parameter",
+        "tests/test_help.py::TestHelp::test_help_extra_params"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": ""
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "AssertionError",
+    "sig": "d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 174,
+    "empirical_rate": "1/174",
+    "compare": "empirical<lower"
+  }
+}

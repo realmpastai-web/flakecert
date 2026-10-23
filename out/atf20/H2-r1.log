@@ -1,0 +1,72 @@
+===== atf20 H2-r1 2026-10-21T07:01:23Z =====
++ sha256sum /tmp/flakecert-f6-1019/tarballs/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30.tar.gz
+078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa  /tmp/flakecert-f6-1019/tarballs/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30.tar.gz
++ docker run bash /evidence/cmd/atf20-H2-r1.sh
+----- script -----
+#!/bin/bash
+ruby -v
+bundle -v
+printf "TARBALL_SHA256:%s\n" "$ATF_TARBALL_SHA256"
+printf "COMMIT:%s\n" "$ATF_COMMIT"
+'bundle' 'exec' 'rspec' '--format' 'documentation' '--no-color' '--require' './atf20/atf20_hook.rb' '--atf-n' '20' '--atf-case' 'H2' '--atf-commit' '76eeb3f9352a657fd979ae00e89e49a388729e30' '--atf-tarball' '078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa' '--atf-target' 'build_beta_detail_spec.rb:5' '--atf-out' '/evidence/atf20/H2-r1.json' '--atf-audit' '/evidence/atf20/H2-r1.audit.json' '--atf-args' '["./spaceship/spec/connect_api/models/webhook_spec.rb", "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5"]' '--order' 'defined' './spaceship/spec/connect_api/models/webhook_spec.rb' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5'
+ec=$?
+chmod a+r '/evidence/atf20/H2-r1.json' '/evidence/atf20/H2-r1.audit.json' || true
+echo "RSPEC_EXIT:$ec"
+exit $ec
+----- output -----
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+TARBALL_SHA256:078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa
+COMMIT:76eeb3f9352a657fd979ae00e89e49a388729e30
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:locations=>{"./spaceship/spec/connect_api/models/build_beta_detail_spec.rb"=>[5]}}
+
+Spaceship::ConnectAPI::Webhook
+  .all
+  .create
+  #client
+    #post_webhook
+    #delete_webhook
+    #get_webhooks
+      returns all webhooks for an app
+      deserializes second webhook correctly
+
+Spaceship::ConnectAPI::BuildBetaDetail
+  #Spaceship::ConnectAPI
+    #get_build_beta_details (FAILED - 1)
+
+Failures:
+
+  1) Spaceship::ConnectAPI::BuildBetaDetail#Spaceship::ConnectAPI #get_build_beta_details
+     Failure/Error: response = Spaceship::ConnectAPI.get_build_beta_details
+
+     TypeError:
+       You need to instantiate this module with test_flight_request_client
+     # ./spaceship/lib/spaceship/connect_api/testflight/testflight.rb:17:in `test_flight_request_client'
+     # ./spaceship/lib/spaceship/connect_api/testflight/testflight.rb:472:in `get_build_beta_details'
+     # ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:6:in `block (3 levels) in <top (required)>'
+     # ./atf20/atf20_hook.rb:75:in `run_once'
+     # ./atf20/atf20_hook.rb:126:in `block in retry_target'
+     # ./atf20/atf20_hook.rb:25:in `block in executions'
+     # ./atf20/atf20_hook.rb:24:in `times'
+     # ./atf20/atf20_hook.rb:24:in `executions'
+     # ./atf20/atf20_hook.rb:125:in `retry_target'
+     # ./atf20/atf20_hook.rb:198:in `block (2 levels) in install!'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.44951 seconds (files took 1.38 seconds to load)
+7 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5 # Spaceship::ConnectAPI::BuildBetaDetail#Spaceship::ConnectAPI #get_build_beta_details
+
+RSPEC_EXIT:1
+atf20 i=1 status=failed
+atf20 verdict=FAIL
+reading_n=20 verdict=FAIL
+reading_n=21 verdict=FAIL
+
+docker_exit=1

@@ -1,0 +1,5 @@
+REA rea-agents@6.5.0: inspect-rust-binary on pup 2.0.0 arm64 (sha256 3bff9a3d...) -> exit 0,
+Evidence ID ev_eb2e37a839cdef2a05e46d5f8ee96572262f26d3da15a9603e0475b7f2409188, authority shipped-artifact,
+auditable_metadata null (no cargo-auditable section; dependency pin is taken from the v2.0.0 Cargo.lock instead).
+static-strings-pup-2.0.0-arm64.txt: byte search of the shipped binary finds the strings the source excerpts rely on
+("Search CI test events", "Maximum results", "-timestamp", "/api/v2/ci/tests/events/search", the `pup format --output csv` help text).

@@ -1,0 +1,34 @@
+source existing s0 json only; no new runs
+a seed is listed when the victim index is lower than the polluter index in the base json
+status is the victim status in that base json; head_status is the same seed at head
+
+victim ./spec/axn/strategies_spec.rb[1:1:5:1]
+polluter ./spec/axn/strategies_spec.rb[1:1:2:3]
+seed 4 status=passed head_status=passed victim_index=1502 polluter_index=1513 source=s0/base-seed-04.json
+seed 6 status=passed head_status=passed victim_index=1 polluter_index=12 source=s0/base-seed-06.json
+seed 10 status=passed head_status=passed victim_index=3454 polluter_index=3461 source=s0/base-seed-10.json
+seed 11 status=passed head_status=passed victim_index=3003 polluter_index=3007 source=s0/base-seed-11.json
+seed 16 status=failed head_status=passed victim_index=5402 polluter_index=5411 source=s0/base-seed-16.json
+seed 18 status=passed head_status=passed victim_index=2283 polluter_index=2287 source=s0/base-seed-18.json
+seed 19 status=passed head_status=passed victim_index=1477 polluter_index=1481 source=s0/base-seed-19.json
+seed 24 status=failed head_status=passed victim_index=2964 polluter_index=2966 source=s0/base-seed-24.json
+seed 26 status=failed head_status=passed victim_index=1020 polluter_index=1023 source=s0/base-seed-26.json
+seed 27 status=failed head_status=passed victim_index=3351 polluter_index=3354 source=s0/base-seed-27.json
+seed 29 status=passed head_status=passed victim_index=5396 polluter_index=5410 source=s0/base-seed-29.json
+
+victim ./spec/axn/async/registry_spec.rb[1:1:5:1]
+polluter ./spec/axn/async/registry_spec.rb[1:1:2:1]
+seed 1 status=passed head_status=passed victim_index=1119 polluter_index=1128 source=s0/base-seed-01.json
+seed 2 status=passed head_status=passed victim_index=4062 polluter_index=4063 source=s0/base-seed-02.json
+seed 4 status=passed head_status=passed victim_index=4820 polluter_index=4828 source=s0/base-seed-04.json
+seed 6 status=passed head_status=passed victim_index=3397 polluter_index=3402 source=s0/base-seed-06.json
+seed 7 status=passed head_status=passed victim_index=3671 polluter_index=3678 source=s0/base-seed-07.json
+seed 10 status=passed head_status=passed victim_index=2834 polluter_index=2835 source=s0/base-seed-10.json
+seed 11 status=passed head_status=passed victim_index=128 polluter_index=139 source=s0/base-seed-11.json
+seed 19 status=passed head_status=passed victim_index=1928 polluter_index=1935 source=s0/base-seed-19.json
+seed 20 status=passed head_status=passed victim_index=2356 polluter_index=2363 source=s0/base-seed-20.json
+seed 23 status=passed head_status=passed victim_index=752 polluter_index=755 source=s0/base-seed-23.json
+seed 24 status=passed head_status=passed victim_index=2381 polluter_index=2382 source=s0/base-seed-24.json
+seed 26 status=passed head_status=passed victim_index=2732 polluter_index=2739 source=s0/base-seed-26.json
+seed 29 status=passed head_status=passed victim_index=1567 polluter_index=1570 source=s0/base-seed-29.json
+seed 30 status=passed head_status=passed victim_index=3339 polluter_index=3350 source=s0/base-seed-30.json

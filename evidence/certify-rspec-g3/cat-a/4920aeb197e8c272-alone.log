@@ -1,0 +1,1622 @@
+W, [2026-10-20T05:36:01.889862 #128027]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Test environment set up in 0.29395862199453404 seconds
+
+DeviseMailer
+  # order defined
+  #confirmation_instructions
+    behaves like it validates recipients
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+      raises an error when delivering now
+    when confirming a new account
+      shows the expected text (FAILED - 1)
+    when confirming the unconfirmed_email
+      shows the expected text (FAILED - 2)
+    when re-confirming the primary email after a security issue
+      shows the expected text (FAILED - 3)
+    for secondary email
+      has the correct subject and body (FAILED - 4)
+      behaves like it validates recipients
+        raises an error when delivering now
+  #password_change_by_admin
+    is sent to the user (FAILED - 5)
+    has the correct subject (FAILED - 6)
+    includes the correct content (FAILED - 7)
+    includes a link to GitLab (FAILED - 8)
+    behaves like an email sent from GitLab
+      has the characteristics of an email sent from GitLab (FAILED - 9)
+    behaves like it should not have Gmail Actions links
+      is expected not to have body including "<script type=\"application/ld+json\">" (FAILED - 10)
+    behaves like a user cannot unsubscribe through footer link
+      does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link (FAILED - 11)
+    behaves like it validates recipients
+      raises an error when delivering now
+  #user_admin_approval
+    is sent to the user (FAILED - 12)
+    has the correct subject (FAILED - 13)
+    greets the user (FAILED - 14)
+    includes the correct content (FAILED - 15)
+    includes a link to GitLab (FAILED - 16)
+    behaves like an email sent from GitLab
+      has the characteristics of an email sent from GitLab (FAILED - 17)
+    behaves like it should not have Gmail Actions links
+      is expected not to have body including "<script type=\"application/ld+json\">" (FAILED - 18)
+    behaves like a user cannot unsubscribe through footer link
+      does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link (FAILED - 19)
+    behaves like it validates recipients
+      raises an error when delivering now
+  #reset_password_instructions
+    is sent to the user (FAILED - 20)
+    has the correct subject (FAILED - 21)
+    greets the user (FAILED - 22)
+    includes the correct content (FAILED - 23)
+    includes a link to reset the password (FAILED - 24)
+    has the mailgun suppression bypass header (FAILED - 25)
+    behaves like an email sent from GitLab
+      has the characteristics of an email sent from GitLab (FAILED - 26)
+    behaves like it should not have Gmail Actions links
+      is expected not to have body including "<script type=\"application/ld+json\">" (FAILED - 27)
+    behaves like a user cannot unsubscribe through footer link
+      does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link (FAILED - 28)
+    behaves like it validates recipients
+      raises an error when delivering now
+    with email in opts
+      is sent to the specified email (FAILED - 29)
+  #email_changed
+    is sent to the user (FAILED - 30)
+    has the correct subject (FAILED - 31)
+    greets the user (FAILED - 32)
+    behaves like an email sent from GitLab
+      has the characteristics of an email sent from GitLab (FAILED - 33)
+    behaves like it validates recipients
+      raises an error when delivering now
+    when self-managed
+      has the expected content of self managed instance (FAILED - 34)
+    when saas
+      has the expected content of saas instance (FAILED - 35)
+    email contains updated id
+      includes changed email id (FAILED - 36)
+  #unlock_instructions
+    is sent to the user (FAILED - 37)
+    has the correct subject (FAILED - 38)
+    greets the user (FAILED - 39)
+    includes explanatory text (FAILED - 40)
+    includes link to unlock (FAILED - 41)
+    behaves like an email sent from GitLab
+      has the characteristics of an email sent from GitLab (FAILED - 42)
+    behaves like it validates recipients
+      raises an error when delivering now
+
+Failures:
+
+  1) DeviseMailer#confirmation_instructions when confirming a new account shows the expected text
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./spec/mailers/devise_mailer_spec.rb:34:in `block (4 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  2) DeviseMailer#confirmation_instructions when confirming the unconfirmed_email shows the expected text
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./spec/mailers/devise_mailer_spec.rb:48:in `block (4 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  3) DeviseMailer#confirmation_instructions when re-confirming the primary email after a security issue shows the expected text
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./spec/mailers/devise_mailer_spec.rb:58:in `block (4 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  4) DeviseMailer#confirmation_instructions for secondary email has the correct subject and body
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./spec/mailers/devise_mailer_spec.rb:71:in `block (4 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  5) DeviseMailer#password_change_by_admin is sent to the user
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./app/mailers/devise_mailer.rb:22:in `password_change_by_admin'
+     # ./spec/mailers/devise_mailer_spec.rb:110:in `block (3 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  6) DeviseMailer#password_change_by_admin has the correct subject
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./app/mailers/devise_mailer.rb:22:in `password_change_by_admin'
+     # ./spec/mailers/devise_mailer_spec.rb:114:in `block (3 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  7) DeviseMailer#password_change_by_admin includes the correct content
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./app/mailers/devise_mailer.rb:22:in `password_change_by_admin'
+     # ./spec/mailers/devise_mailer_spec.rb:118:in `block (3 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  8) DeviseMailer#password_change_by_admin includes a link to GitLab
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./app/mailers/devise_mailer.rb:22:in `password_change_by_admin'
+     # ./spec/mailers/devise_mailer_spec.rb:122:in `block (3 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  9) DeviseMailer#password_change_by_admin behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+     Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+     ActionView::Template::Error:
+       no implicit conversion of nil into String
+     Shared Example Group: "an email sent from GitLab" called from ./spec/mailers/devise_mailer_spec.rb:104
+     # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+     # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+     # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+     # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+     # ./app/mailers/devise_mailer.rb:22:in `password_change_by_admin'
+     # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:11:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+     # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+     # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+     # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+     # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+     # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+     # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+     # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+     # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+     # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # TypeError:
+     #   no implicit conversion of nil into String
+     #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  10) DeviseMailer#password_change_by_admin behaves like it should not have Gmail Actions links is expected not to have body including "<script type=\"application/ld+json\">"
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "it should not have Gmail Actions links" called from ./spec/mailers/devise_mailer_spec.rb:105
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:22:in `password_change_by_admin'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:195:in `block (3 levels) in <top (required)>'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:194:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  11) DeviseMailer#password_change_by_admin behaves like a user cannot unsubscribe through footer link does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "a user cannot unsubscribe through footer link" called from ./spec/mailers/devise_mailer_spec.rb:106
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:22:in `password_change_by_admin'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:277:in `block (3 levels) in <top (required)>'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:276:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  12) DeviseMailer#user_admin_approval is sent to the user
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:26:in `user_admin_approval'
+      # ./spec/mailers/devise_mailer_spec.rb:135:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  13) DeviseMailer#user_admin_approval has the correct subject
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:26:in `user_admin_approval'
+      # ./spec/mailers/devise_mailer_spec.rb:139:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  14) DeviseMailer#user_admin_approval greets the user
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:26:in `user_admin_approval'
+      # ./spec/mailers/devise_mailer_spec.rb:143:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  15) DeviseMailer#user_admin_approval includes the correct content
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:26:in `user_admin_approval'
+      # ./spec/mailers/devise_mailer_spec.rb:147:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  16) DeviseMailer#user_admin_approval includes a link to GitLab
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:26:in `user_admin_approval'
+      # ./spec/mailers/devise_mailer_spec.rb:151:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  17) DeviseMailer#user_admin_approval behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "an email sent from GitLab" called from ./spec/mailers/devise_mailer_spec.rb:129
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:26:in `user_admin_approval'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:11:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  18) DeviseMailer#user_admin_approval behaves like it should not have Gmail Actions links is expected not to have body including "<script type=\"application/ld+json\">"
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "it should not have Gmail Actions links" called from ./spec/mailers/devise_mailer_spec.rb:130
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:26:in `user_admin_approval'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:195:in `block (3 levels) in <top (required)>'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:194:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  19) DeviseMailer#user_admin_approval behaves like a user cannot unsubscribe through footer link does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "a user cannot unsubscribe through footer link" called from ./spec/mailers/devise_mailer_spec.rb:131
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:26:in `user_admin_approval'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:277:in `block (3 levels) in <top (required)>'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:276:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  20) DeviseMailer#reset_password_instructions is sent to the user
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/mailers/devise_mailer_spec.rb:166:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  21) DeviseMailer#reset_password_instructions has the correct subject
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/mailers/devise_mailer_spec.rb:170:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  22) DeviseMailer#reset_password_instructions greets the user
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/mailers/devise_mailer_spec.rb:174:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  23) DeviseMailer#reset_password_instructions includes the correct content
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/mailers/devise_mailer_spec.rb:178:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  24) DeviseMailer#reset_password_instructions includes a link to reset the password
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/mailers/devise_mailer_spec.rb:184:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  25) DeviseMailer#reset_password_instructions has the mailgun suppression bypass header
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/mailers/devise_mailer_spec.rb:188:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  26) DeviseMailer#reset_password_instructions behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "an email sent from GitLab" called from ./spec/mailers/devise_mailer_spec.rb:160
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:11:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  27) DeviseMailer#reset_password_instructions behaves like it should not have Gmail Actions links is expected not to have body including "<script type=\"application/ld+json\">"
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "it should not have Gmail Actions links" called from ./spec/mailers/devise_mailer_spec.rb:161
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:195:in `block (3 levels) in <top (required)>'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:194:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  28) DeviseMailer#reset_password_instructions behaves like a user cannot unsubscribe through footer link does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "a user cannot unsubscribe through footer link" called from ./spec/mailers/devise_mailer_spec.rb:162
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:277:in `block (3 levels) in <top (required)>'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:276:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  29) DeviseMailer#reset_password_instructions with email in opts is sent to the specified email
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:31:in `reset_password_instructions'
+      # ./spec/mailers/devise_mailer_spec.rb:196:in `block (4 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  30) DeviseMailer#email_changed is sent to the user
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:38:in `email_changed'
+      # ./spec/mailers/devise_mailer_spec.rb:211:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  31) DeviseMailer#email_changed has the correct subject
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:38:in `email_changed'
+      # ./spec/mailers/devise_mailer_spec.rb:215:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  32) DeviseMailer#email_changed greets the user
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:38:in `email_changed'
+      # ./spec/mailers/devise_mailer_spec.rb:219:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  33) DeviseMailer#email_changed behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "an email sent from GitLab" called from ./spec/mailers/devise_mailer_spec.rb:207
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:38:in `email_changed'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:11:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  34) DeviseMailer#email_changed when self-managed has the expected content of self managed instance
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:38:in `email_changed'
+      # ./spec/mailers/devise_mailer_spec.rb:224:in `block (4 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  35) DeviseMailer#email_changed when saas has the expected content of saas instance
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:36:in `email_changed'
+      # ./spec/mailers/devise_mailer_spec.rb:230:in `block (4 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  36) DeviseMailer#email_changed email contains updated id includes changed email id
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./app/mailers/devise_mailer.rb:38:in `email_changed'
+      # ./spec/mailers/devise_mailer_spec.rb:240:in `block (4 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  37) DeviseMailer#unlock_instructions is sent to the user
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./spec/mailers/devise_mailer_spec.rb:261:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  38) DeviseMailer#unlock_instructions has the correct subject
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./spec/mailers/devise_mailer_spec.rb:265:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  39) DeviseMailer#unlock_instructions greets the user
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./spec/mailers/devise_mailer_spec.rb:269:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  40) DeviseMailer#unlock_instructions includes explanatory text
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./spec/mailers/devise_mailer_spec.rb:273:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  41) DeviseMailer#unlock_instructions includes link to unlock
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./spec/mailers/devise_mailer_spec.rb:277:in `block (3 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+  42) DeviseMailer#unlock_instructions behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+      Failure/Error: controller.view_context.render(file: Rails.root.join('public/assets', app.assets_manifest.assets[name]).to_s)
+
+      ActionView::Template::Error:
+        no implicit conversion of nil into String
+      Shared Example Group: "an email sent from GitLab" called from ./spec/mailers/devise_mailer_spec.rb:257
+      # ./app/helpers/application_helper.rb:497:in `asset_to_string'
+      # ./app/views/layouts/_mailer.html.haml:19:in `_app_views_layouts__mailer_html_haml___3174951959756510820_533960'
+      # ./app/views/layouts/mailer/devise.html.haml:18:in `_app_views_layouts_mailer_devise_html_haml__2995066122753272704_533940'
+      # ./app/mailers/devise_mailer.rb:18:in `devise_mail'
+      # ./spec/support/shared_examples/mailers/notify_shared_examples.rb:11:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:594:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:483:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/sidekiq_sharding/validator.rb:42:in `enabled'
+      # ./spec/spec_helper.rb:482:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:477:in `block (3 levels) in <top (required)>'
+      # ./spec/support/sidekiq_middleware.rb:9:in `with_sidekiq_server_middleware'
+      # ./spec/spec_helper.rb:466:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:462:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/application_context.rb:123:in `with_raw_context'
+      # ./spec/spec_helper.rb:462:in `block (2 levels) in <top (required)>'
+      # ./spec/spec_helper.rb:427:in `block (3 levels) in <top (required)>'
+      # ./lib/gitlab/ci/config/feature_flags.rb:38:in `ensure_correct_usage'
+      # ./spec/spec_helper.rb:426:in `block (2 levels) in <top (required)>'
+      # ./spec/support/system_exit_detected.rb:7:in `block (2 levels) in <top (required)>'
+      # ./spec/support/fast_quarantine.rb:22:in `block (2 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (3 levels) in <top (required)>'
+      # ./spec/support/database/prevent_cross_joins.rb:61:in `with_cross_joins_prevented'
+      # ./spec/support/database/prevent_cross_joins.rb:107:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # TypeError:
+      #   no implicit conversion of nil into String
+      #   ./app/helpers/application_helper.rb:497:in `asset_to_string'
+
+Finished in 11.29 seconds (files took 55.27 seconds to load)
+49 examples, 42 failures
+
+Failed examples:
+
+rspec ./spec/mailers/devise_mailer_spec.rb:33 # DeviseMailer#confirmation_instructions when confirming a new account shows the expected text
+rspec ./spec/mailers/devise_mailer_spec.rb:47 # DeviseMailer#confirmation_instructions when confirming the unconfirmed_email shows the expected text
+rspec ./spec/mailers/devise_mailer_spec.rb:57 # DeviseMailer#confirmation_instructions when re-confirming the primary email after a security issue shows the expected text
+rspec ./spec/mailers/devise_mailer_spec.rb:70 # DeviseMailer#confirmation_instructions for secondary email has the correct subject and body
+rspec ./spec/mailers/devise_mailer_spec.rb:109 # DeviseMailer#password_change_by_admin is sent to the user
+rspec ./spec/mailers/devise_mailer_spec.rb:113 # DeviseMailer#password_change_by_admin has the correct subject
+rspec ./spec/mailers/devise_mailer_spec.rb:117 # DeviseMailer#password_change_by_admin includes the correct content
+rspec ./spec/mailers/devise_mailer_spec.rb:121 # DeviseMailer#password_change_by_admin includes a link to GitLab
+rspec ./spec/mailers/devise_mailer_spec.rb:104 # DeviseMailer#password_change_by_admin behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+rspec ./spec/mailers/devise_mailer_spec.rb:105 # DeviseMailer#password_change_by_admin behaves like it should not have Gmail Actions links is expected not to have body including "<script type=\"application/ld+json\">"
+rspec ./spec/mailers/devise_mailer_spec.rb:106 # DeviseMailer#password_change_by_admin behaves like a user cannot unsubscribe through footer link does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link
+rspec ./spec/mailers/devise_mailer_spec.rb:134 # DeviseMailer#user_admin_approval is sent to the user
+rspec ./spec/mailers/devise_mailer_spec.rb:138 # DeviseMailer#user_admin_approval has the correct subject
+rspec ./spec/mailers/devise_mailer_spec.rb:142 # DeviseMailer#user_admin_approval greets the user
+rspec ./spec/mailers/devise_mailer_spec.rb:146 # DeviseMailer#user_admin_approval includes the correct content
+rspec ./spec/mailers/devise_mailer_spec.rb:150 # DeviseMailer#user_admin_approval includes a link to GitLab
+rspec ./spec/mailers/devise_mailer_spec.rb:129 # DeviseMailer#user_admin_approval behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+rspec ./spec/mailers/devise_mailer_spec.rb:130 # DeviseMailer#user_admin_approval behaves like it should not have Gmail Actions links is expected not to have body including "<script type=\"application/ld+json\">"
+rspec ./spec/mailers/devise_mailer_spec.rb:131 # DeviseMailer#user_admin_approval behaves like a user cannot unsubscribe through footer link does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link
+rspec ./spec/mailers/devise_mailer_spec.rb:165 # DeviseMailer#reset_password_instructions is sent to the user
+rspec ./spec/mailers/devise_mailer_spec.rb:169 # DeviseMailer#reset_password_instructions has the correct subject
+rspec ./spec/mailers/devise_mailer_spec.rb:173 # DeviseMailer#reset_password_instructions greets the user
+rspec ./spec/mailers/devise_mailer_spec.rb:177 # DeviseMailer#reset_password_instructions includes the correct content
+rspec ./spec/mailers/devise_mailer_spec.rb:183 # DeviseMailer#reset_password_instructions includes a link to reset the password
+rspec ./spec/mailers/devise_mailer_spec.rb:187 # DeviseMailer#reset_password_instructions has the mailgun suppression bypass header
+rspec ./spec/mailers/devise_mailer_spec.rb:160 # DeviseMailer#reset_password_instructions behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+rspec ./spec/mailers/devise_mailer_spec.rb:161 # DeviseMailer#reset_password_instructions behaves like it should not have Gmail Actions links is expected not to have body including "<script type=\"application/ld+json\">"
+rspec ./spec/mailers/devise_mailer_spec.rb:162 # DeviseMailer#reset_password_instructions behaves like a user cannot unsubscribe through footer link does not have a List-Unsubscribe header, List-Unsubscribe-Post header or a body link
+rspec ./spec/mailers/devise_mailer_spec.rb:195 # DeviseMailer#reset_password_instructions with email in opts is sent to the specified email
+rspec ./spec/mailers/devise_mailer_spec.rb:210 # DeviseMailer#email_changed is sent to the user
+rspec ./spec/mailers/devise_mailer_spec.rb:214 # DeviseMailer#email_changed has the correct subject
+rspec ./spec/mailers/devise_mailer_spec.rb:218 # DeviseMailer#email_changed greets the user
+rspec ./spec/mailers/devise_mailer_spec.rb:207 # DeviseMailer#email_changed behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+rspec ./spec/mailers/devise_mailer_spec.rb:223 # DeviseMailer#email_changed when self-managed has the expected content of self managed instance
+rspec ./spec/mailers/devise_mailer_spec.rb:229 # DeviseMailer#email_changed when saas has the expected content of saas instance
+rspec ./spec/mailers/devise_mailer_spec.rb:239 # DeviseMailer#email_changed email contains updated id includes changed email id
+rspec ./spec/mailers/devise_mailer_spec.rb:260 # DeviseMailer#unlock_instructions is sent to the user
+rspec ./spec/mailers/devise_mailer_spec.rb:264 # DeviseMailer#unlock_instructions has the correct subject
+rspec ./spec/mailers/devise_mailer_spec.rb:268 # DeviseMailer#unlock_instructions greets the user
+rspec ./spec/mailers/devise_mailer_spec.rb:272 # DeviseMailer#unlock_instructions includes explanatory text
+rspec ./spec/mailers/devise_mailer_spec.rb:276 # DeviseMailer#unlock_instructions includes link to unlock
+rspec ./spec/mailers/devise_mailer_spec.rb:257 # DeviseMailer#unlock_instructions behaves like an email sent from GitLab has the characteristics of an email sent from GitLab
+
+[TEST PROF INFO] Time spent in factories: 00:02.888 (11.66% of total time)
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+Stopped processing SimpleCov as a previous error not related to SimpleCov has been detected

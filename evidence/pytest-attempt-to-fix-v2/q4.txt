@@ -1,0 +1,69 @@
+B4: commit q0-rea.txt q1.txt q2.txt q3.txt q4.txt with the tb_norm code, frozen gate v2 inputs, and audit/pytest-attempt-to-fix.json.
+GO. Gate v2 ended GATE PASS. wrong_fix.same_failure_modulo_line shift=1 lines [6]->[7].
+
+$ git diff --stat
+ audit/pytest-attempt-to-fix.json           | 42 ++++++++++++++++++------------
+ flakecert/cert.py                          |  3 ++-
+ flakecert/runners/pytest_attempt_to_fix.py |  4 ++-
+ flakecert/search.py                        |  1 +
+ 4 files changed, 32 insertions(+), 18 deletions(-)
+
+$ git diff --cached --stat
+ inputs/rea-brief-pytest-attempt-to-fix-v2/BRIEF.md |   16 +
+ .../CURSOR_TASK_v2.md                              |   29 +
+ .../rea-brief-pytest-attempt-to-fix-v2/SHA256SUMS  |   24 +
+ .../controls-diff.txt                              |  218 +++
+ .../controls-output-v2.txt                         |  115 ++
+ .../controls/mutant-fabricated-sig.json            | 1421 +++++++++++++++++++
+ .../controls/mutant-omitted-env-and-seed.json      | 1411 +++++++++++++++++++
+ .../controls/mutant-plain-retry-only.json          | 1319 ++++++++++++++++++
+ .../controls/mutant-real-fix-edits-app.json        | 1421 +++++++++++++++++++
+ .../controls/mutant-rerun-plugin-installed.json    | 1422 +++++++++++++++++++
+ .../controls/mutant-schedule-drift.json            | 1421 +++++++++++++++++++
+ .../controls/mutant-wrong-fix-accepted.json        | 1418 +++++++++++++++++++
+ .../controls/pr7-3ec5eb8-results-no-tb-norm.json   | 1452 ++++++++++++++++++++
+ .../controls/synthetic-good-results.json           | 1421 +++++++++++++++++++
+ .../controls/v2-m1-tb-norm-not-hashing-to-sig.json | 1421 +++++++++++++++++++
+ .../controls/v2-m2-wrong-fix-copies-cert-sig.json  | 1421 +++++++++++++++++++
+ .../v2-m3a-line-moved-different-exception.json     | 1421 +++++++++++++++++++
+ .../v2-m3b-line-moved-different-message.json       | 1421 +++++++++++++++++++
+ .../controls/v2-m4-non-test-frame-changed.json     | 1421 +++++++++++++++++++
+ .../controls/v2-m5-real-fix-still-fails.json       | 1424 +++++++++++++++++++
+ .../controls/v2-m6-line-shift-wrong-size.json      | 1421 +++++++++++++++++++
+ .../gate-output-v2.txt                             |   40 +
+ .../gate_pytest_attempt_to_fix_v2.py               |  242 ++++
+ .../make_controls_v2.py                            |   55 +
+ .../run_controls_v2.sh                             |   17 +
+ 25 files changed, 23412 insertions(+)
+
+$ git status --short
+ M audit/pytest-attempt-to-fix.json
+ M flakecert/cert.py
+ M flakecert/runners/pytest_attempt_to_fix.py
+ M flakecert/search.py
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/BRIEF.md
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/CURSOR_TASK_v2.md
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/SHA256SUMS
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls-diff.txt
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls-output-v2.txt
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/mutant-fabricated-sig.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/mutant-omitted-env-and-seed.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/mutant-plain-retry-only.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/mutant-real-fix-edits-app.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/mutant-rerun-plugin-installed.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/mutant-schedule-drift.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/mutant-wrong-fix-accepted.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/pr7-3ec5eb8-results-no-tb-norm.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/synthetic-good-results.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/v2-m1-tb-norm-not-hashing-to-sig.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/v2-m2-wrong-fix-copies-cert-sig.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/v2-m3a-line-moved-different-exception.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/v2-m3b-line-moved-different-message.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/v2-m4-non-test-frame-changed.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/v2-m5-real-fix-still-fails.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/controls/v2-m6-line-shift-wrong-size.json
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/gate-output-v2.txt
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/gate_pytest_attempt_to_fix_v2.py
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/make_controls_v2.py
+A  inputs/rea-brief-pytest-attempt-to-fix-v2/run_controls_v2.sh
+?? evidence/pytest-attempt-to-fix-v2/

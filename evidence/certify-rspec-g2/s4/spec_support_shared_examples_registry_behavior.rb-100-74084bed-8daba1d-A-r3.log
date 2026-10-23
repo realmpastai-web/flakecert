@@ -1,0 +1,39 @@
++ logical=rspec --seed 3 './spec/axn/async/registry_spec.rb[1:1:2:1]' './spec/axn/async/registry_spec.rb[1:1:5:1]'
++ rspec_argv_len=234
++ rspec_argv_n=11
++ docker_argv_len=766
++ docker_argv_n=41
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s4:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --seed 3 './spec/axn/async/registry_spec.rb[1:1:2:1]' './spec/axn/async/registry_spec.rb[1:1:5:1]' --format json --out /out/spec_support_shared_examples_registry_behavior.rb-100-74084bed-8daba1d-A-r3.json
+elapsed_s=1.172
+Run options: include {:ids=>{"./spec/axn/async/registry_spec.rb"=>["1:1:2:1", "1:1:5:1"]}}
+
+Randomized with seed 3
+
+Axn::Async::Adapters
+  behaves like a registry
+    .register
+      adds an item to the list
+    .clear!
+      resets to built-in items only (FAILED - 1)
+
+Failures:
+
+  1) Axn::Async::Adapters behaves like a registry .clear! resets to built-in items only
+     Failure/Error: raise duplicate_error_class, "#{item_type} #{name} already registered" if items.key?(key)
+
+     Axn::Async::DuplicateAdapterError:
+       Adapter custom already registered
+     Shared Example Group: "a registry" called from ./spec/axn/async/registry_spec.rb:7
+     # ./lib/axn/internal/registry.rb:37:in `register'
+     # ./spec/support/shared_examples/registry_behavior.rb:101:in `block (3 levels) in <top (required)>'
+
+Finished in 0.00144 seconds (files took 0.56903 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec './spec/axn/async/registry_spec.rb[1:1:5:1]' # Axn::Async::Adapters behaves like a registry .clear! resets to built-in items only
+
+Randomized with seed 3
+
+docker_exit=1

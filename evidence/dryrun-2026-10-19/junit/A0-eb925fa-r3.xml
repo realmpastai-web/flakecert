@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.098" timestamp="2026-10-19T05:32:53.579563+00:00" hostname="6939d2de71bc"><testcase classname="tests.test_mcp_client_parity_v4_169_39" name="test_client_start_happy_path" time="0.001" /></testsuite></testsuites>

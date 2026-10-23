@@ -1,0 +1,1 @@
+python3 -m tools.certify_rspec.pipeline_g3 --input-dir inputs/dryrun-2026-10-19-g3 --gitlab-dir /var/tmp/g3-work/gitlab --evidence-dir evidence/certify-rspec-g3 --container g3runner --postgres g3pg --workers 2 --setup-log /var/tmp/g3-work/prepare-db2.log --resume

@@ -1,0 +1,68 @@
+{
+  "id": "F08",
+  "project": "https://github.com/dowjones/tokendito",
+  "sha": "f5d8e5171ddcca0c62925263ddb80535f51aded3",
+  "pytest_id": "tests/functional_test.py::test_version[runnable2]",
+  "node_id": "tests/functional_test.py::test_version[runnable2]",
+  "image_digest": "sha256:36197d43da0617eba31b5e7fc29ee31aa3781737bcb9b17510a37b597f5e4094",
+  "image_tag": "flakecert:F08",
+  "pip_freeze_sha": "11a0f02c7c56c9859ed531918bbc543a870dfe5360bde8b9bad8ac620acb71b7",
+  "flakecert_version": "0.2.0",
+  "python": "3.11.17",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 7,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "tests/functional_test.py::test_package_uninstall",
+        "tests/functional_test.py::test_version[runnable2]"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": ""
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "FileNotFoundError",
+    "sig": "b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 7,
+    "empirical_rate": "1/7",
+    "compare": "empirical<lower"
+  }
+}

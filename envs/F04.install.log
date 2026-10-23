@@ -1,0 +1,127 @@
+rung files requirements.txt
+rung test_file tests/test_geometry.py
+rung python=3.11 start
+#10 0.266 FLAKECERT_INSTALL python 3.11.17
+#10 0.266 FLAKECERT_INSTALL files requirements.txt
+#10 0.266 FLAKECERT_INSTALL pipenv no
+#10 0.266 FLAKECERT_INSTALL package yes
+#10 3.867 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#10 5.403 FLAKECERT_INSTALL req_fail_full /opt/pristine/requirements.txt
+#10 7.197 FLAKECERT_INSTALL line_ok pytest==5.4.3
+#10 8.630 FLAKECERT_INSTALL line_ok hypothesis==5.20.2
+#10 10.35 FLAKECERT_INSTALL line_ok cryptography==2.9.2
+#10 11.12 FLAKECERT_INSTALL line_fail pandas==1.0.5
+#10 12.16 FLAKECERT_INSTALL line_fail matplotlib==3.3.0
+#10 13.58 FLAKECERT_INSTALL line_ok palettable==3.3.0
+#10 15.52 FLAKECERT_INSTALL line_ok networkx==2.4
+#10 16.76 FLAKECERT_INSTALL line_ok setuptools==49.2.0
+#10 17.76 FLAKECERT_INSTALL line_fail numpy==1.19.0
+#10 21.82 FLAKECERT_INSTALL line_ok PyYAML==5.3.1
+#10 26.95 FLAKECERT_INSTALL line_ok sphinxcontrib-fulltoc==1.2.0
+#10 42.65 FLAKECERT_INSTALL line_ok seaborn==0.10.1
+#10 43.64 FLAKECERT_INSTALL line_ok more-itertools==8.4.0
+#10 43.64 FLAKECERT_INSTALL package_begin
+#10 45.77 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#10 46.93 FLAKECERT_INSTALL pytest_version 5.4.3
+rung python=3.11 build_exit=0
+collect nodes=0 matched=none
+rung python=3.11 result=FAIL collect
+  File "/usr/local/lib/python3.11/site-packages/_pytest/config/__init__.py", line 992, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints("pytest11")
+  File "/usr/local/lib/python3.11/site-packages/pluggy/manager.py", line 299, in load_setuptools_entrypoints
+    plugin = ep.load()
+             ^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/metadata/__init__.py", line 202, in load
+    module = import_module(match.group('module'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "/usr/local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py", line 143, in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py", line 330, in _rewrite_test
+    co = compile(tree, fn, "exec", dont_inherit=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: required field "lineno" missing from alias
+rung python=3.9 start
+#9 0.217 FLAKECERT_INSTALL python 3.9.25
+#9 0.221 FLAKECERT_INSTALL files requirements.txt
+#9 0.221 FLAKECERT_INSTALL pipenv no
+#9 0.221 FLAKECERT_INSTALL package yes
+#9 4.017 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 6.754 FLAKECERT_INSTALL req_fail_full /opt/pristine/requirements.txt
+#9 8.927 FLAKECERT_INSTALL line_ok pytest==5.4.3
+#9 11.08 FLAKECERT_INSTALL line_ok hypothesis==5.20.2
+#9 13.14 FLAKECERT_INSTALL line_ok cryptography==2.9.2
+#9 14.32 FLAKECERT_INSTALL line_fail pandas==1.0.5
+#9 15.79 FLAKECERT_INSTALL line_fail matplotlib==3.3.0
+#9 17.12 FLAKECERT_INSTALL line_ok palettable==3.3.0
+#9 19.60 FLAKECERT_INSTALL line_ok networkx==2.4
+#9 21.27 FLAKECERT_INSTALL line_ok setuptools==49.2.0
+#9 22.87 FLAKECERT_INSTALL line_fail numpy==1.19.0
+#9 25.85 FLAKECERT_INSTALL line_ok PyYAML==5.3.1
+#9 30.12 FLAKECERT_INSTALL line_ok sphinxcontrib-fulltoc==1.2.0
+#9 46.15 FLAKECERT_INSTALL line_ok seaborn==0.10.1
+#9 47.89 FLAKECERT_INSTALL line_ok more-itertools==8.4.0
+#9 47.89 FLAKECERT_INSTALL package_begin
+#9 49.83 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#9 51.15 FLAKECERT_INSTALL pytest_version 5.4.3
+rung python=3.9 build_exit=0
+collect nodes=0 matched=none
+rung python=3.9 result=FAIL collect
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+  /usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+/usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+  /usr/local/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+/usr/local/lib/python3.9/site-packages/matplotlib/_mathtext.py:45
+  /usr/local/lib/python3.9/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+=========================== short test summary info ============================
+ERROR tests/test_geometry.py - AttributeError: `np.float_` was removed in the...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+======================== 14 warnings, 1 error in 0.81s =========================
+COLLECT_RC ExitCode.INTERRUPTED
+COLLECT_FILE_BEGIN
+COLLECT_FILE_END
+rung python=3.8 start
+#9 0.183 FLAKECERT_INSTALL python 3.8.20
+#9 0.185 FLAKECERT_INSTALL files requirements.txt
+#9 0.185 FLAKECERT_INSTALL pipenv no
+#9 0.185 FLAKECERT_INSTALL package yes
+#9 4.665 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#9 28.11 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#9 28.11 FLAKECERT_INSTALL package_begin
+#9 30.25 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#9 31.36 FLAKECERT_INSTALL pytest_version 5.4.3
+rung python=3.8 build_exit=0
+collect nodes=4 matched=tests/test_geometry.py::test_correct_negative_angle
+rung python=3.8 result=PASS

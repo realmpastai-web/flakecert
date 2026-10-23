@@ -1,0 +1,39 @@
+PASS	gem.version	
+PASS	gem.license_mit	
+PASS	gem.sha256_matches_rubygems_api	a8823c6411667b60
+PASS	gem.data_tar_matches_signed_checksums	56e628d1e04d1c79
+PASS	excerpt.sha option_parser.rb	
+PASS	excerpt.sha ordering.rb	
+PASS	excerpt.sha notifications.rb	
+PASS	excerpt.sha formatters/json_formatter.rb	
+PASS	excerpt.sha example_status_persister.rb	
+PASS	excerpt.sha project_initializer/spec/spec_helper.rb	
+PASS	excerpt.sha example_group.rb	
+PASS	excerpt.sha metadata.rb	
+PASS	rea.unsupported_recorded	
+PASS	cli.seed_is_order_rand	
+PASS	cli.order_type_seed	
+PASS	order.sort_by_jenkins	
+PASS	order.default_seed_rand_0xFFFF	
+PASS	example_group.orders_examples	
+PASS	example_group.orders_children	
+PASS	id.rerun_path_scoped_id	
+PASS	srand.only_in_template	1
+PASS	srand.template_commented_out	=begin@49 =end@97
+PASS	json.example_keys	id,description,full_description,status,file_path,line_number,run_time,pending_message
+PASS	json.seed_only_if_used	
+PASS	json.version_key	
+PASS	text.prints_seed	
+PASS	persister.keys	
+PASS	gap.no_env_fields	RUBY_VERSION|Gemfile.lock|digest absent
+PASS	sample.sha .rspec	
+PASS	sample.sha Gemfile	
+PASS	sample.sha app/models/cart.rb	
+PASS	sample.sha app/models/coupon.rb	
+PASS	sample.sha spec/models/cart_spec.rb	
+PASS	sample.sha spec/models/coupon_spec.rb	
+PASS	sample.sha spec/models/stable_spec.rb	
+PASS	sample.sha spec/spec_helper.rb	
+PASS	predict.reproduces_frozen	
+PASS	predict.split_39_61	
+GATE PASS

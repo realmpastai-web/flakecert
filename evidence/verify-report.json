@@ -1,0 +1,437 @@
+{
+  "gates": {
+    "frozen_hash": {
+      "pass": true,
+      "actual": "a788832159f871780197e2cf9736904546ac0fdf36cad1e6b378837719b8a812",
+      "expected": "a788832159f871780197e2cf9736904546ac0fdf36cad1e6b378837719b8a812"
+    },
+    "effective_set": {
+      "pass": true,
+      "actual": "derived == committed"
+    },
+    "swaps_logged": {
+      "pass": true,
+      "actual": "0 unlogged; 2 rows matched"
+    },
+    "offline_run": {
+      "pass": true,
+      "actual": "20/20",
+      "expected": ">= 15/20"
+    },
+    "certificates": {
+      "pass": true,
+      "actual": "10/20",
+      "expected": ">= 10/20 each 3/3"
+    },
+    "blind_comparator": {
+      "pass": true,
+      "actual": "10/10",
+      "expected": ">= 8"
+    },
+    "bounds": {
+      "pass": true,
+      "actual": "10/10",
+      "expected": "100%"
+    },
+    "baseline_denominator": {
+      "pass": true,
+      "actual": "100/100 x20",
+      "expected": "100 reruns for every main test"
+    },
+    "summary_traceable": {
+      "pass": true,
+      "actual": "summary regenerated from logs"
+    },
+    "readme_ingest": {
+      "pass": true,
+      "actual": "README ingest block matches make ingest sha256=ae90c9d427a6aafb4c4a1e4b6f0a88b7d755e5c98e757312e5ec39a902d19ab2"
+    }
+  },
+  "checks": {
+    "a_frozen_hash": {
+      "pass": true,
+      "actual": "a788832159f871780197e2cf9736904546ac0fdf36cad1e6b378837719b8a812",
+      "expected": "a788832159f871780197e2cf9736904546ac0fdf36cad1e6b378837719b8a812"
+    },
+    "b_effective_set": {
+      "pass": true,
+      "actual": "derived == committed"
+    },
+    "c_swaps_logged": {
+      "pass": true,
+      "actual": "0 unlogged; 2 rows matched"
+    },
+    "d_resolve_preflight": {
+      "status": "match",
+      "pass": true,
+      "actual": "RESOLVED 31/32; deps 32 rows"
+    },
+    "e_cert_replay": {
+      "pass": true,
+      "actual": {
+        "F01": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c",
+              "outcome": "failed",
+              "exc": "ReframeFatalError"
+            },
+            {
+              "ok": true,
+              "sig": "92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c",
+              "outcome": "failed",
+              "exc": "ReframeFatalError"
+            },
+            {
+              "ok": true,
+              "sig": "92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c",
+              "outcome": "failed",
+              "exc": "ReframeFatalError"
+            }
+          ]
+        },
+        "F03": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "7d8eca31335da8ef0bd48a8d2a49115e42b721bf96ea3e1dae6d205f8990c948",
+              "outcome": "error",
+              "exc": "AssertionError"
+            },
+            {
+              "ok": true,
+              "sig": "7d8eca31335da8ef0bd48a8d2a49115e42b721bf96ea3e1dae6d205f8990c948",
+              "outcome": "error",
+              "exc": "AssertionError"
+            },
+            {
+              "ok": true,
+              "sig": "7d8eca31335da8ef0bd48a8d2a49115e42b721bf96ea3e1dae6d205f8990c948",
+              "outcome": "error",
+              "exc": "AssertionError"
+            }
+          ]
+        },
+        "F04": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec",
+              "outcome": "failed",
+              "exc": "FailedHealthCheck"
+            },
+            {
+              "ok": true,
+              "sig": "913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec",
+              "outcome": "failed",
+              "exc": "FailedHealthCheck"
+            },
+            {
+              "ok": true,
+              "sig": "913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec",
+              "outcome": "failed",
+              "exc": "FailedHealthCheck"
+            }
+          ]
+        },
+        "F06": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            },
+            {
+              "ok": true,
+              "sig": "6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            },
+            {
+              "ok": true,
+              "sig": "6c52b42a4e09652b187d2b4f829242f8993e2a6a1ebaaaa71e2c8be254ebd1d0",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            }
+          ]
+        },
+        "F08": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851",
+              "outcome": "failed",
+              "exc": "FileNotFoundError"
+            },
+            {
+              "ok": true,
+              "sig": "b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851",
+              "outcome": "failed",
+              "exc": "FileNotFoundError"
+            },
+            {
+              "ok": true,
+              "sig": "b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851",
+              "outcome": "failed",
+              "exc": "FileNotFoundError"
+            }
+          ]
+        },
+        "F10": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            },
+            {
+              "ok": true,
+              "sig": "976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            },
+            {
+              "ok": true,
+              "sig": "976c1a0a827e66e303306948441f4692818404f678f018718355b85c7a14f31f",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            }
+          ]
+        },
+        "F12": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b",
+              "outcome": "error",
+              "exc": "ValueError"
+            },
+            {
+              "ok": true,
+              "sig": "df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b",
+              "outcome": "error",
+              "exc": "ValueError"
+            },
+            {
+              "ok": true,
+              "sig": "df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b",
+              "outcome": "error",
+              "exc": "ValueError"
+            }
+          ]
+        },
+        "F14": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            },
+            {
+              "ok": true,
+              "sig": "d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            },
+            {
+              "ok": true,
+              "sig": "d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545",
+              "outcome": "failed",
+              "exc": "AssertionError"
+            }
+          ]
+        },
+        "F15": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584",
+              "outcome": "failed",
+              "exc": "IndexError"
+            },
+            {
+              "ok": true,
+              "sig": "f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584",
+              "outcome": "failed",
+              "exc": "IndexError"
+            },
+            {
+              "ok": true,
+              "sig": "f3e72f3a6156fec55365f33b6734216fcb0fed483f90c99724d0ca16e0312584",
+              "outcome": "failed",
+              "exc": "IndexError"
+            }
+          ]
+        },
+        "F16": {
+          "matched": "3/3",
+          "runs": [
+            {
+              "ok": true,
+              "sig": "98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2",
+              "outcome": "failed",
+              "exc": "FileNotFoundError"
+            },
+            {
+              "ok": true,
+              "sig": "98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2",
+              "outcome": "failed",
+              "exc": "FileNotFoundError"
+            },
+            {
+              "ok": true,
+              "sig": "98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2",
+              "outcome": "failed",
+              "exc": "FileNotFoundError"
+            }
+          ]
+        }
+      }
+    },
+    "f_bounds": {
+      "pass": true,
+      "actual": "100%"
+    },
+    "g_ledger_logs": {
+      "pass": true,
+      "actual": "every results row log exists"
+    },
+    "h_comparator": {
+      "pass": true,
+      "actual": "present"
+    },
+    "i_readme_numbers": {
+      "pass": true,
+      "actual": "README numbers are a subset of SUMMARY.md"
+    },
+    "j_readme_ingest": {
+      "pass": true,
+      "actual": "README ingest block matches make ingest sha256=ae90c9d427a6aafb4c4a1e4b6f0a88b7d755e5c98e757312e5ec39a902d19ab2"
+    }
+  },
+  "categories": {
+    "NOD": {
+      "tests": 11,
+      "ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F21"
+      ],
+      "offline": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F21"
+      ],
+      "certified_replay_3_of_3": [
+        "F01",
+        "F03",
+        "F04",
+        "F06",
+        "F08",
+        "F10"
+      ]
+    },
+    "OD-Vic": {
+      "tests": 6,
+      "ids": [
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16"
+      ],
+      "offline": [
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16"
+      ],
+      "certified_replay_3_of_3": [
+        "F12",
+        "F14",
+        "F15",
+        "F16"
+      ]
+    },
+    "NIO": {
+      "tests": 3,
+      "ids": [
+        "F17",
+        "F19",
+        "F20"
+      ],
+      "offline": [
+        "F17",
+        "F19",
+        "F20"
+      ],
+      "certified_replay_3_of_3": []
+    }
+  },
+  "offline_ids": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08",
+    "F09",
+    "F10",
+    "F11",
+    "F12",
+    "F13",
+    "F14",
+    "F15",
+    "F16",
+    "F17",
+    "F19",
+    "F20",
+    "F21"
+  ],
+  "certified_ids": [
+    "F01",
+    "F03",
+    "F04",
+    "F06",
+    "F08",
+    "F10",
+    "F12",
+    "F14",
+    "F15",
+    "F16"
+  ]
+}

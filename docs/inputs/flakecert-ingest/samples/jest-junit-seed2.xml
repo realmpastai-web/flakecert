@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="1" errors="0" time="0.194">
+  <testsuite name="undefined" errors="0" failures="1" skipped="1" timestamp="2026-10-18T06:20:43" time="0.153" tests="4">
+    <testcase classname=" pass" name=" pass" time="0.002" file="sample.test.js">
+    </testcase>
+    <testcase classname=" fail deterministic" name=" fail deterministic" time="0.003" file="sample.test.js">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 1
++ Received  + 1
+
+  Object {
+-   &quot;a&quot;: 2,
++   &quot;a&quot;: 1,
+  }
+    at Object.toEqual (/tmp/ing/proj/js/sample.test.js:3:51)
+    at Promise.then.completed (/tmp/ing/proj/js/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/tmp/ing/proj/js/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/tmp/ing/proj/js/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/tmp/ing/proj/js/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/tmp/ing/proj/js/node_modules/jest-circus/build/run.js:126:9)
+    at run (/tmp/ing/proj/js/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/tmp/ing/proj/js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/tmp/ing/proj/js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/tmp/ing/proj/js/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/tmp/ing/proj/js/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+    <testcase classname=" flaky seeded" name=" flaky seeded" time="0" file="sample.test.js">
+    </testcase>
+    <testcase classname=" skip" name=" skip" time="0" file="sample.test.js">
+      <skipped/>
+    </testcase>
+  </testsuite>
+</testsuites>

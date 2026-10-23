@@ -1,0 +1,83 @@
+W, [2026-10-20T06:20:05.993535 #135111]  WARN -- : Observer url is not configured!. Set GLCI_OBSERVER_URL environment variable or set observer_url in the exporter config.
+
+Test environment set up in 0.39195467299578013 seconds
+
+Gitlab::QueryLimiting::ActiveSupportSubscriber
+  # order defined
+  #sql
+No such file or directory @ rb_sysopen - /gitlab/rspec/fast_quarantine-gitlab.txt
+    increments the number of executed SQL queries
+    when the query is actually a rails cache hit
+      does not increment the number of executed SQL queries
+
+Gitlab::QueryLimiting::Middleware
+  # order defined
+  #call
+    runs the application with query limiting in place
+    skips query limiting when suppressed
+  #action_name
+    using a Rails request
+      returns the name of the controller and action
+      includes the content type if this is not text/html
+    using a Grape API request
+      returns the name of the request method and endpoint path
+      returns nil if the route can not be retrieved
+
+Gitlab::QueryLimiting::SidekiqMiddleware
+  # order defined
+  #call
+    runs the middleware with query limiting in place
+    yields block
+    returns value of block
+    skips query limiting when suppressed
+
+Gitlab::QueryLimiting::Transaction
+  # order defined
+  .current
+    returns nil when there is no transaction
+    returns the transaction when present
+  .run
+    runs a transaction and returns it and its return value
+    removes the transaction from the current thread upon completion
+    restores the previous transaction upon completion
+  #act_upon_results
+    when the query threshold is not exceeded
+      does nothing
+    when the query threshold is exceeded
+      raises an error when this is enabled
+    when there is a different threshold
+      when the query threshold is not exceeded
+        does nothing
+      when the query threshold is exceeded
+        raises an error when this is enabled
+  #increment
+    increments the number of executed queries
+    does not increment the number of executed queries when query limiting is disabled
+    does not increment the number of executed queries when the query is known to be ignorable
+  #raise_error?
+    returns true in a test environment
+    returns false in a production environment
+  #threshold_exceeded?
+    returns false when the threshold is not exceeded
+    returns true when the threshold is exceeded
+  #error_message
+    returns the error message to display when the threshold is exceeded
+    includes a list of executed queries
+    indicates if the log is truncated
+    includes the action name in the error message when present
+
+Finished in 8.77 seconds (files took 1 minute 2.54 seconds to load)
+32 examples, 0 failures
+
+[TEST PROF INFO] Time spent in factories: 00:00.114 (0.45% of total time)
+/gitlab/rspec/fast_quarantine-gitlab.txt doesn't exist!
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+unknown OID 2249: failed to recognize type of 'pg_stat_file'. It will be treated as String.
+/gitlab/app/models/concerns/integrations/base/integration.rb:67: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/app/models/work_items/widgets/start_and_due_date.rb:47: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/config/initializers/7_redis.rb:8: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/ee/app/models/geo/container_repository_registry.rb:16: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/api/import_github_oauth_webhooks.rb:12: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/ci/config.rb:97: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.
+/gitlab/lib/gitlab/cycle_analytics/summary/defaults.rb:11: [DEPRECATION] `# :nocov:` is deprecated and will be removed in a future release. Replace with `# simplecov:disable` / `# simplecov:enable` block comments.

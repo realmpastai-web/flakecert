@@ -1,0 +1,21 @@
++ phase=probe
++ seed=20
++ round=1
++ confirm=0
++ ids_n=1345
++ ids_sha256=a3af5810717b8f9b90ad8ce9b33c440b33c54cc124e3d710af8ce30860996c58
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/8bc99224071d0b1e3a3d706efb939eac52cdab4682e95223a6c7280a62a629d5/ids.txt
++ attempt=1
+elapsed_s=12.459
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: already initialized constant #<Class:0x00007feb32e653c8>::Axns::Foo
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: previous definition of Foo was here
+[] ⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE TEST !!
+
+	* Exception: StandardError
+	* Message: logger is misconfigured
+	* From: message_expectation.rb:188
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+docker_exit=0

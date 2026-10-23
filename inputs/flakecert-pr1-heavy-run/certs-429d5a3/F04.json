@@ -1,0 +1,67 @@
+{
+  "id": "F04",
+  "project": "https://github.com/ericmjl/nxviz",
+  "sha": "d2a2a622e834148a9f4337dbe1021a05c5f18548",
+  "pytest_id": "tests/test_geometry.py::test_correct_negative_angle",
+  "node_id": "tests/test_geometry.py::test_correct_negative_angle",
+  "image_digest": "sha256:35dfca679079409d44e535ab8d65e4468eb927cde50370d1209647e858f3efec",
+  "image_tag": "flakecert:F04",
+  "pip_freeze_sha": "5cbda693080b8dd1b36e76e784f479d6fc9fe00b2cf30d132b8380826ae85945",
+  "flakecert_version": "0.2.0",
+  "python": "3.8.20",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 3,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "tests/test_geometry.py::test_correct_negative_angle"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": "67301745399446783071885373769482976719"
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "FailedHealthCheck",
+    "sig": "913462344872d8d74882baaf3504f8f28ac32d14a752e50229cfeb078e822cec"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 9,
+    "empirical_rate": "1/9",
+    "compare": "empirical<lower"
+  }
+}

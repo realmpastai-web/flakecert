@@ -1,0 +1,103 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "45bb0728c2e474fcf963bec5334f6425a9e4ee54"
+  },
+  "hook_sha256": "2ca968444dc06bf9a1f2e0f44216ad2b0cf5541e2ca0f52be8ca40489135bd64",
+  "case": "H3",
+  "commit": "148c1c9b4c041b1659ea633f2632dd47eef8cb04",
+  "tarball_sha256": "db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5",
+  "rules": "F6",
+  "victim_id": "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5",
+  "polluter_ids": [
+    "./spaceship/spec/connect_api/models/webhook_spec.rb"
+  ],
+  "verdict": "FIXED",
+  "pair_logs": [
+    "flakecert/H3-pair-r1.log",
+    "flakecert/H3-pair-r2.log",
+    "flakecert/H3-pair-r3.log"
+  ],
+  "reverse_logs": [
+    "flakecert/H3-reverse-r1.log",
+    "flakecert/H3-reverse-r2.log",
+    "flakecert/H3-reverse-r3.log"
+  ],
+  "pair_runs": [
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H3-pair-r1.log",
+      "log_sha256": "37b233e49b5d35b55a2a4dadb3348cbfe47c3a23d5889538e618cf2e7f77ff47"
+    },
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H3-pair-r2.log",
+      "log_sha256": "fdbf466fa13a0e4e40fe346352250251121a47a63e5a45e9d6dd5b4614f82272"
+    },
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H3-pair-r3.log",
+      "log_sha256": "1960c1e472fe58f5ab504a2fcdaf7929a618c43c33313875f2da7e5e5a52dbec"
+    }
+  ],
+  "reverse_runs": [
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H3-reverse-r1.log",
+      "log_sha256": "2f741778027aa61c195d0968f0fac5336c84d212c1fcd380cc24051d62be2872"
+    },
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H3-reverse-r2.log",
+      "log_sha256": "cc1b788e0459736f94a9c15f521e93b68a2738f214c4cabf95cb82354da50416"
+    },
+    {
+      "exit_code": 0,
+      "example_count": 7,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H3-reverse-r3.log",
+      "log_sha256": "e0473e5708ccf3b7c6ae54c2c52fc7d139ac926ebe574ef8d4c83992457b666b"
+    }
+  ]
+}

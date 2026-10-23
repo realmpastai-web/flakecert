@@ -1,0 +1,172 @@
++ logical=rspec --order defined './spec/axn/extension_config_spec.rb[2:2]' './spec/axn/extensions/serialization_spec.rb[1:1:1]' './spec/axn/extensions/serialization_spec.rb[1:1:2]' './spec/axn/extensions/serialization_spec.rb[1:1:3]' './spec/axn/extensions/serialization_spec.rb[1:1:4]' './spec/axn/extensions/serialization_spec.rb[1:1:5]' './spec/axn/extensions_spec.rb[1:1:1]' './spec/axn/extensions_spec.rb[1:1:2]' './spec/axn/extensions_spec.rb[1:2:1]' './spec/axn/extensions_spec.rb[1:2:2]' './spec/axn/extensions_spec.rb[1:2:3]' './spec/axn/extensions_spec.rb[1:2:4]' './spec/axn/extensions_spec.rb[1:2:5]' './spec/axn/extensions_spec.rb[1:2:6]' './spec/axn/extensions_spec.rb[1:3:1]' './spec/axn/extensions_spec.rb[1:3:2:1]' './spec/axn/extensions_spec.rb[1:3:3:1]' './spec/axn/extensions_spec.rb[1:3:4:1]' './spec/axn/extensions_spec.rb[1:3:5:1]' './spec/axn/extensions_spec.rb[1:3:5:2]' './spec/axn/extensions_spec.rb[1:3:5:3]' './spec/axn/extensions_spec.rb[1:3:6:1]' './spec/axn/extensions_spec.rb[1:3:6:2]' './spec/axn/extensions_spec.rb[1:3:6:3]' './spec/axn/extensions_spec.rb[1:3:6:4]' './spec/axn/extensions_spec.rb[1:3:7:1]' './spec/axn/extensions_spec.rb[1:3:7:2]' './spec/axn/extensions_spec.rb[1:3:7:3]' './spec/axn/extensions_spec.rb[1:3:8:1]' './spec/axn/extensions_spec.rb[1:3:9:1]' './spec/axn/extensions_spec.rb[1:3:9:2]' './spec/axn/extensions_spec.rb[1:3:9:3]' './spec/axn/extensions_spec.rb[1:3:10:5]' './spec/axn/extensions_spec.rb[1:3:10:6]' './spec/axn/extensions_spec.rb[1:3:10:7]' './spec/axn/extensions_spec.rb[1:3:10:8]' './spec/axn/extensions_spec.rb[1:3:10:9]' './spec/axn/extensions_spec.rb[1:3:10:1:1]' './spec/axn/extensions_spec.rb[1:3:10:1:2]' './spec/axn/extensions_spec.rb[1:3:10:1:3]' './spec/axn/extensions_spec.rb[1:3:10:1:4]' './spec/axn/extensions_spec.rb[1:3:10:1:5]' './spec/axn/extensions_spec.rb[1:3:10:1:6]' './spec/axn/extensions_spec.rb[1:3:10:1:7]' './spec/axn/extensions_spec.rb[1:3:10:1:8]' './spec/axn/extensions_spec.rb[1:3:10:1:9]' './spec/axn/extensions_spec.rb[1:3:10:1:10]' './spec/axn/extensions_spec.rb[1:3:10:1:11]' './spec/axn/extensions_spec.rb[1:3:10:1:12]' './spec/axn/extensions_spec.rb[1:3:10:1:13]' './spec/axn/extensions_spec.rb[1:3:10:2:1]' './spec/axn/extensions_spec.rb[1:3:10:2:2]' './spec/axn/extensions_spec.rb[1:3:10:2:3]' './spec/axn/extensions_spec.rb[1:3:10:2:4]' './spec/axn/extensions_spec.rb[1:3:10:2:5]' './spec/axn/extensions_spec.rb[1:3:10:2:6]' './spec/axn/extensions_spec.rb[1:3:10:2:7]' './spec/axn/extensions_spec.rb[1:3:10:2:8]' './spec/axn/extensions_spec.rb[1:3:10:2:9]' './spec/axn/extensions_spec.rb[1:3:10:2:10]' './spec/axn/extensions_spec.rb[1:3:10:2:11]' './spec/axn/extensions_spec.rb[1:3:10:2:12]' './spec/axn/extensions_spec.rb[1:3:10:2:13]' './spec/axn/extensions_spec.rb[1:3:10:3:1]' './spec/axn/extensions_spec.rb[1:3:10:3:2]' './spec/axn/extensions_spec.rb[1:3:10:3:3]' './spec/axn/extensions_spec.rb[1:3:10:3:4]' './spec/axn/extensions_spec.rb[1:3:10:3:5]' './spec/axn/extensions_spec.rb[1:3:10:3:6]' './spec/axn/extensions_spec.rb[1:3:10:3:7]' './spec/axn/extensions_spec.rb[1:3:10:3:8]' './spec/axn/extensions_spec.rb[1:3:10:3:9]' './spec/axn/extensions_spec.rb[1:3:10:3:10]' './spec/axn/extensions_spec.rb[1:3:10:3:11]' './spec/axn/extensions_spec.rb[1:3:10:3:12]' './spec/axn/extensions_spec.rb[1:3:10:3:13]' './spec/axn/extensions_spec.rb[1:3:10:4:1]' './spec/axn/extensions_spec.rb[1:3:10:4:2]' './spec/axn/extensions_spec.rb[1:3:10:4:3]' './spec/axn/extensions_spec.rb[1:3:10:4:4]' './spec/axn/extensions_spec.rb[1:3:10:4:5]' './spec/axn/extensions_spec.rb[1:3:10:4:6]' './spec/axn/extensions_spec.rb[1:3:10:4:7]' './spec/axn/extensions_spec.rb[1:3:10:4:8]' './spec/axn/extensions_spec.rb[1:3:10:4:9]' './spec/axn/extensions_spec.rb[1:3:10:4:10]' './spec/axn/extensions_spec.rb[1:3:10:4:11]' './spec/axn/extensions_spec.rb[1:3:10:4:12]' './spec/axn/extensions_spec.rb[1:3:10:4:13]' './spec/axn/extensions_spec.rb[1:3:10:4:14]' './spec/axn/extensions_spec.rb[1:3:10:4:15]' './spec/axn/extensions_spec.rb[1:3:10:10:1]' './spec/axn/extensions_spec.rb[1:3:10:10:2]' './spec/axn/extensions_spec.rb[1:3:10:10:3]' './spec/axn/extensions_spec.rb[1:3:10:10:4]' './spec/axn/extensions_spec.rb[1:3:10:10:5]' './spec/axn/extensions_spec.rb[1:3:10:10:6]' './spec/axn/extras/strategies/client_registration_spec.rb[1:1]' './spec/axn/extras/strategies/client_registration_spec.rb[1:2]' './spec/axn/extras/strategies/client_registration_spec.rb[1:4]' './spec/axn/extras/strategies/client_registration_spec.rb[1:3:1]' './spec/axn/extras/strategies/client_registration_spec.rb[1:3:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:1:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:1:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:3:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:4:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:6:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:7:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:8:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:9:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:10:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:3]'
++ rspec_argv_len=5361
++ rspec_argv_n=127
++ docker_argv_len=5893
++ docker_argv_n=157
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s3:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --order defined './spec/axn/extension_config_spec.rb[2:2]' './spec/axn/extensions/serialization_spec.rb[1:1:1]' './spec/axn/extensions/serialization_spec.rb[1:1:2]' './spec/axn/extensions/serialization_spec.rb[1:1:3]' './spec/axn/extensions/serialization_spec.rb[1:1:4]' './spec/axn/extensions/serialization_spec.rb[1:1:5]' './spec/axn/extensions_spec.rb[1:1:1]' './spec/axn/extensions_spec.rb[1:1:2]' './spec/axn/extensions_spec.rb[1:2:1]' './spec/axn/extensions_spec.rb[1:2:2]' './spec/axn/extensions_spec.rb[1:2:3]' './spec/axn/extensions_spec.rb[1:2:4]' './spec/axn/extensions_spec.rb[1:2:5]' './spec/axn/extensions_spec.rb[1:2:6]' './spec/axn/extensions_spec.rb[1:3:1]' './spec/axn/extensions_spec.rb[1:3:2:1]' './spec/axn/extensions_spec.rb[1:3:3:1]' './spec/axn/extensions_spec.rb[1:3:4:1]' './spec/axn/extensions_spec.rb[1:3:5:1]' './spec/axn/extensions_spec.rb[1:3:5:2]' './spec/axn/extensions_spec.rb[1:3:5:3]' './spec/axn/extensions_spec.rb[1:3:6:1]' './spec/axn/extensions_spec.rb[1:3:6:2]' './spec/axn/extensions_spec.rb[1:3:6:3]' './spec/axn/extensions_spec.rb[1:3:6:4]' './spec/axn/extensions_spec.rb[1:3:7:1]' './spec/axn/extensions_spec.rb[1:3:7:2]' './spec/axn/extensions_spec.rb[1:3:7:3]' './spec/axn/extensions_spec.rb[1:3:8:1]' './spec/axn/extensions_spec.rb[1:3:9:1]' './spec/axn/extensions_spec.rb[1:3:9:2]' './spec/axn/extensions_spec.rb[1:3:9:3]' './spec/axn/extensions_spec.rb[1:3:10:5]' './spec/axn/extensions_spec.rb[1:3:10:6]' './spec/axn/extensions_spec.rb[1:3:10:7]' './spec/axn/extensions_spec.rb[1:3:10:8]' './spec/axn/extensions_spec.rb[1:3:10:9]' './spec/axn/extensions_spec.rb[1:3:10:1:1]' './spec/axn/extensions_spec.rb[1:3:10:1:2]' './spec/axn/extensions_spec.rb[1:3:10:1:3]' './spec/axn/extensions_spec.rb[1:3:10:1:4]' './spec/axn/extensions_spec.rb[1:3:10:1:5]' './spec/axn/extensions_spec.rb[1:3:10:1:6]' './spec/axn/extensions_spec.rb[1:3:10:1:7]' './spec/axn/extensions_spec.rb[1:3:10:1:8]' './spec/axn/extensions_spec.rb[1:3:10:1:9]' './spec/axn/extensions_spec.rb[1:3:10:1:10]' './spec/axn/extensions_spec.rb[1:3:10:1:11]' './spec/axn/extensions_spec.rb[1:3:10:1:12]' './spec/axn/extensions_spec.rb[1:3:10:1:13]' './spec/axn/extensions_spec.rb[1:3:10:2:1]' './spec/axn/extensions_spec.rb[1:3:10:2:2]' './spec/axn/extensions_spec.rb[1:3:10:2:3]' './spec/axn/extensions_spec.rb[1:3:10:2:4]' './spec/axn/extensions_spec.rb[1:3:10:2:5]' './spec/axn/extensions_spec.rb[1:3:10:2:6]' './spec/axn/extensions_spec.rb[1:3:10:2:7]' './spec/axn/extensions_spec.rb[1:3:10:2:8]' './spec/axn/extensions_spec.rb[1:3:10:2:9]' './spec/axn/extensions_spec.rb[1:3:10:2:10]' './spec/axn/extensions_spec.rb[1:3:10:2:11]' './spec/axn/extensions_spec.rb[1:3:10:2:12]' './spec/axn/extensions_spec.rb[1:3:10:2:13]' './spec/axn/extensions_spec.rb[1:3:10:3:1]' './spec/axn/extensions_spec.rb[1:3:10:3:2]' './spec/axn/extensions_spec.rb[1:3:10:3:3]' './spec/axn/extensions_spec.rb[1:3:10:3:4]' './spec/axn/extensions_spec.rb[1:3:10:3:5]' './spec/axn/extensions_spec.rb[1:3:10:3:6]' './spec/axn/extensions_spec.rb[1:3:10:3:7]' './spec/axn/extensions_spec.rb[1:3:10:3:8]' './spec/axn/extensions_spec.rb[1:3:10:3:9]' './spec/axn/extensions_spec.rb[1:3:10:3:10]' './spec/axn/extensions_spec.rb[1:3:10:3:11]' './spec/axn/extensions_spec.rb[1:3:10:3:12]' './spec/axn/extensions_spec.rb[1:3:10:3:13]' './spec/axn/extensions_spec.rb[1:3:10:4:1]' './spec/axn/extensions_spec.rb[1:3:10:4:2]' './spec/axn/extensions_spec.rb[1:3:1 ... truncated total_chars=6129
+elapsed_s=3.791
+Run options: include {:ids=>{"./spec/axn/extension_config_spec.rb"=>["2:2"], "./spec/axn/extensions/serialization_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5"], "./spec/axn/extensions_spec.rb"=>["1:1:1", "1:1:2", "1:2:1", "1:2:2", "1:2:3", "1:2:4", "1:2:5", "1:2:6", "1:3:1", "1:3:2:1", "1:3:3:1", "1:3:4:1", "1:3:5:1", "1:3:5:2", "1:3:5:3", "1:3:6:1", "1:3:6:2", "1:3:6:3", "1:3:6:4", "1:3:7:1", "1:3:7:2", "1:3:7:3", "1:3:8:1", "1:3:9:1", "1:3:9:2", "1:3:9:3", "1:3:10:5", "1:3:10:6", "1:3:10:7", "1:3:10:8", "1:3:10:9", "1:3:10:1:1", "1:3:10:1:2", "1:3:10:1:3", "1:3:10:1:4", "1:3:10:1:5", "1:3:10:1:6", "1:3:10:1:7", "1:3:10:1:8", "1:3:10:1:9", "1:3:10:1:10", "1:3:10:1:11", "1:3:10:1:12", "1:3:10:1:13", "1:3:10:2:1", "1:3:10:2:2", "1:3:10:2:3", "1:3:10:2:4", "1:3:10:2:5", "1:3:10:2:6", "1:3:10:2:7", "1:3:10:2:8", "1:3:10:2:9", "1:3:10:2:10", "1:3:10:2:11", "1:3:10:2:12", "1:3:10:2:13", "1:3:10:3:1", "1:3:10:3:2", "1:3:10:3:3", "1:3:10:3:4", "1:3:10:3:5", "1:3:10:3:6", "1:3:10:3:7", "1:3:10:3:8", "1:3:10:3:9", "1:3:10:3:10", "1:3:10:3:11", "1:3:10:3:12", "1:3:10:3:13", "1:3:10:4:1", "1:3:10:4:2", "1:3:10:4:3", "1:3:10:4:4", "1:3:10:4:5", "1:3:10:4:6", "1:3:10:4:7", "1:3:10:4:8", "1:3:10:4:9", "1:3:10:4:10", "1:3:10:4:11", "1:3:10:4:12", "1:3:10:4:13", "1:3:10:4:14", "1:3:10:4:15", "1:3:10:10:1", "1:3:10:10:2", "1:3:10:10:3", "1:3:10:10:4", "1:3:10:10:5", "1:3:10:10:6"], "./spec/axn/extras/strategies/client_registration_spec.rb"=>["1:1", "1:2", "1:4", "1:3:1", "1:3:2"], "./spec/axn/extras/strategies/client_spec.rb"=>["1:1:1:1", "1:1:1:2", "1:1:2:1", "1:1:2:2", "1:1:3:1", "1:1:4:1", "1:1:5:1", "1:1:5:2", "1:1:6:1", "1:1:7:1", "1:1:8:1", "1:1:9:1", "1:1:10:1", "1:1:11:1", "1:1:11:2", "1:1:11:3"]}}
+
+Axn::Extensions::Config semantic hints
+  lets an adapter register additional vocabulary
+
+Axn::Extensions::Serialization
+  .render
+    serializes each declared field by wire key (string)
+    renders the declared exposures and nothing else
+    derives the configs from a mocked result
+    renders an ordinary field name as a frozen UTF-8 property
+    threads reject_opaque: to the values it serializes
+
+Axn::Extensions
+  .swallowable?
+    answers from the class hierarchy, not from the instance
+    still answers true for the allowlist and its subclasses
+  .owned_failure?
+    is true for an Axn::Failure
+    is true for a user-facing validation error
+    is false for a validation error that is not user-facing
+    is false for a foreign exception
+    answers from the class hierarchy, not from the instance
+    does not let the exception's own is_a? replace the answer
+  .best_effort
+    returns the block's value on success
+    in production
+      logs a concise warning and returns nil
+    in non-production
+      logs a verbose warning and returns nil
+    with a custom action warn-target
+      warns on the action instead of the config logger
+    with best_effort_raises_in_dev enabled
+      re-raises in development
+      logs (does not raise) in test
+      re-raises a swallowable non-StandardError in development too
+    the non-StandardError allowlist
+      swallows every class on the allowlist by default
+      propagates every non-StandardError that is not on the allowlist
+      swallows the whole ScriptError family, which are faults in the code being run
+      keeps an enclosing Timeout.timeout working
+    when emitting the warning itself fails
+      swallows rather than escaping when the configured logger cannot write
+      gives the configured logger an independent attempt when an action's warn is the broken one
+      still swallows when both targets are broken
+    an exception carrying no usable backtrace
+      still warns and swallows rather than raising out of the warn path
+    standard_errors_only: true
+      still swallows StandardError
+      returns the block's value on success
+      propagates everything outside StandardError, allowlist included
+    the guarantee that reporting cannot replace the block's exception
+      keeps a valid multibyte message verbatim in the warning
+      renders a Latin-1 message as its text rather than as escapes
+      escapes a message with no UTF-8 rendering rather than losing the line
+      tolerates a desc that is not a String
+      renders a String desc whose bytes have no UTF-8 rendering
+      in production
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      in development
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      in test
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      with best_effort_raises_in_dev enabled
+        re-raises an ordinary exception itself, never a reporting failure
+        re-raises a message that raises itself, never a reporting failure
+        re-raises a message holding bytes with no UTF-8 rendering itself, never a reporting failure
+        re-raises a message that is not a String and whose to_s raises itself, never a reporting failure
+        re-raises a class whose name raises itself, never a reporting failure
+        re-raises a backtrace override answering a non-Array itself, never a reporting failure
+        re-raises a backtrace override that raises itself, never a reporting failure
+        re-raises a backtrace override answering Thread::Backtrace::Location frames itself, never a reporting failure
+        re-raises a rebuilt backtrace holding a blank frame itself, never a reporting failure
+        re-raises a valid multibyte message itself, never a reporting failure
+        re-raises a Latin-1 message itself, never a reporting failure
+        raises an axn-owned error carrying an #exception answering a different object as its cause, not what the hijack produced
+        raises an axn-owned error carrying an #exception that raises as its cause, not what the hijack produced
+        raises an axn-owned error carrying the original OBJECT when its #exception undefines itself
+        raises an axn-owned error carrying the original OBJECT when it answers about the absent #exception
+      a reporting failure raised by the guard's own collaborators
+        swallows a StandardError from the environment seam
+        swallows an allowlisted non-StandardError from the environment seam
+        lets a signal through rather than absorbing it into a swallowed warning
+        swallows rather than raising when the dev-loud decision cannot read the environment
+        lets a signal through from the dev-loud decision too
+        swallows rather than raising when the dev-loud setting itself cannot be read
+
+Axn::Extras::Strategies::Client registration
+  registers the strategy in a process that has not loaded faraday
+  resolves `use :client` when axn was loaded before faraday
+  re-raises a LoadError that names a file other than faraday
+  when faraday cannot be loaded
+    raises at declaration, naming the gem to add
+    still registers the strategy, so the failure names the missing gem rather than the strategy
+
+Axn::Extras::Strategies::Client
+  .configure
+    with default configuration
+      creates a client method with default name
+      sets default headers
+    with custom name
+      creates a client method with custom name
+      uses custom name in user agent
+    with custom user_agent
+      uses provided user agent
+    with prepend_config
+      calls prepend_config before default middleware
+    with debug option
+      enables logger middleware when debug is true
+      does not enable logger middleware when debug is false
+    with configuration block
+      calls the block with the connection
+    with callable options
+      hydrates callable options
+    with Faraday connection options
+      passes options to Faraday.new
+    memoization
+      memoizes the client instance
+    error handling
+      raises error if client name is already taken
+    with error_handler
+      injects ErrorHandlerMiddleware when error_handler is provided
+      does not inject ErrorHandlerMiddleware when error_handler is nil
+      does not inject ErrorHandlerMiddleware when error_handler is not provided
+
+Finished in 2.64 seconds (files took 0.59433 seconds to load)
+118 examples, 0 failures
+
+docker_exit=0

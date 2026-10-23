@@ -1,0 +1,89 @@
+{
+  "_links": {
+    "award_emoji": "https://gitlab.com/api/v4/projects/278964/issues/601848/award_emoji",
+    "closed_as_duplicate_of": null,
+    "notes": "https://gitlab.com/api/v4/projects/278964/issues/601848/notes",
+    "project": "https://gitlab.com/api/v4/projects/278964",
+    "self": "https://gitlab.com/api/v4/projects/278964/issues/601848"
+  },
+  "assignee": null,
+  "assignees": [],
+  "author": {
+    "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/438961/avatar.png?v=1792389436",
+    "id": 438961,
+    "locked": false,
+    "name": "Peter Leitzen",
+    "public_email": "",
+    "state": "active",
+    "username": "splattael",
+    "web_url": "https://gitlab.com/splattael"
+  },
+  "blocking_issues_count": 0,
+  "closed_at": null,
+  "closed_by": null,
+  "confidential": false,
+  "created_at": "2026-06-02T15:19:23.188Z",
+  "description": "<!--IssueSummary start-->\n\n<details>\n<summary>\n\nEveryone can contribute. [Help move this issue forward](https://handbook.gitlab.com/handbook/marketing/developer-relations/contributor-success/community-contributors-workflows/#contributor-links) while earning points, leveling up and collecting rewards.\n\n</summary>\n\n- [Work on this issue](https://contributors.gitlab.com/manage-issue?action=work&projectId=278964&issueIid=601848)\n- [Close this issue](https://contributors.gitlab.com/manage-issue?action=close&projectId=278964&issueIid=601848)\n\n</details>\n\n<!--IssueSummary end-->\n\n## Summary\n\n**5,381 FOSS spec files** are listed in\n[`spec/support/rspec_order_todo.yml`](../blob/master/spec/support/rspec_order_todo.yml)\nand run in **defined order** (`rspec --order defined`) instead of random order.\n\nRunning specs in random order surfaces hidden order-dependencies, reduces\nflakiness, and improves test isolation. The goal is to remove all FOSS entries\nfrom the todo list so every backend spec runs in random order.\n\nTo kick off, give an AI agent the following prompt:\n\n> Work on https://gitlab.com/gitlab-org/gitlab/-/issues/601848\n\nContributes to: https://gitlab.com/groups/gitlab-org/-/work_items/19585\nOriginal issue: https://gitlab.com/gitlab-org/gitlab/-/issues/407877\nOrder-dependent specs needing human attention: https://gitlab.com/gitlab-org/gitlab/-/issues/601849\n\n---\n\n## Agent Guidelines\n\n- **Batch size:** Check up to 50 candidate files per run; target **~25 passing files per MR** (stop once 25 pass, or candidates are exhausted).\n- **FOSS only.** Process only entries starting with `'./spec/'`. Skip `'./ee/spec/'` entries entirely.\n- **Check, don't fix.** Run `RANDOM_ORDER_RUNS=10 scripts/rspec_check_order_dependence` per file. If it **passes**, the script removes the entry from `rspec_order_todo.yml` automatically. If it **fails**, skip it and report it on https://gitlab.com/gitlab-org/gitlab/-/issues/601849.\n- **Conflict-avoidance is the top priority.** Use stride-based file selection (see Step 3) so concurrent MRs' hunks in `rspec_order_todo.yml` do not overlap.\n\n---\n\n## How the check script works\n\n```shell\n# Runs specs in: defined order, reverse order, random order (10x).\n# On success: auto-removes the file from spec/support/rspec_order_todo.yml.\n# On failure: exits non-zero; the YAML is NOT modified.\nRANDOM_ORDER_RUNS=10 scripts/rspec_check_order_dependence <path/to/spec_file.rb>\n```\n\nRun from the repo root. Requires a working GDK with a test database.\n\n---\n\n## Instructions\n\n### Setup (once per session)\n\n- **Current user ID:** call `get_user` (no args) -> `id`\n- **Current milestone ID:** search `gitlab-org` group milestones for the lowest-version milestone whose **due date is in the future** (e.g. `19.2`) -> `id`. Note: filter by `state=active` but then pick the one with the earliest due date that has not yet passed — many \"active\" milestones are expired.\n\n### Pre-flight (REQUIRED before every batch)\n\n**Step 0 — Pull master.**\n\n```shell\ngit checkout master && git pull origin master\n```\n\n**Step 1 — Build an exclusion set.**\n\nCollect files to skip from two sources, then union them:\n\na. **Already-claimed files:** Use GitLab MCP `search` (scope: `merge_requests`, project: `gitlab-org/gitlab`) to find all **open** MRs whose title contains `\"rspec_order_todo\"`. For each result call `list_merge_request_diffs` and collect every `old_path` / `new_path` ending in `_spec.rb`.\n\nb. **Previously failed files:** Fetch the description of https://gitlab.com/gitlab-org/gitlab/-/issues/601849 and parse the YAML block under `## Excluded specs`. Each listed path is a confirmed failure that must not be re-checked.\n\n**Step 2 — Check for branch-name collisions.**\n\n```shell\ngit ls-remote --heads origin '*rspec-order-todo-foss-batch-*'\n```\n\nNaming convention: `rspec-order-todo-foss-batch-NNN` (zero-padded, e.g. `001`). Pick the next unused number.\n\n**Step 3 — Select candidates with stride-based spread (conflict-avoidance).**\n\nRead `spec/support/rspec_order_todo.yml`. Keep only lines starting with `'./spec/'` (FOSS only). Remove any in the exclusion set. Call this **candidates**.\n\nStride selection:\n\n1. N = number of candidates, B = 50 (files to check this batch).\n2. S = round(N / B).\n3. Pick at indices 0, S, 2S, 3S, ... — advance past excluded entries.\n\nThis distributes each batch's deletion hunks ~S lines apart in the YAML, preventing context-window overlap between concurrent open MRs.\n\n### Per batch\n\n1. **Create branch:**\n   ```shell\n   git checkout -b rspec-order-todo-foss-batch-NNN\n   ```\n\n2. **Check each candidate:**\n   ```shell\n   RANDOM_ORDER_RUNS=10 scripts/rspec_check_order_dependence <path>\n   ```\n   - **Exit 0 (pass):** entry removed from YAML automatically. Add to **passed** list.\n   - **Non-zero (fail):** skip. **Read the instructions in https://gitlab.com/gitlab-org/gitlab/-/issues/601849 first** to determine the failure category (A vs B) and use the comment format defined there. Then:\n     1. Post the comment on that issue.\n     2. **Update the `## Excluded specs` list** in that issue's description by appending the new spec path.\n     3. Continue to the next candidate.\n\n   Stop once **25 files have passed**, or all candidates are exhausted.\n\n3. **Verify the YAML diff:**\n   ```shell\n   git diff spec/support/rspec_order_todo.yml\n   ```\n\n4. **Commit** (only `spec/support/rspec_order_todo.yml` modified):\n   ```\n   Remove N FOSS specs from rspec_order_todo (batch NNN)\n\n   These FOSS spec files pass the defined, reverse, and random-order checks\n   and no longer need to be excluded from random-order execution.\n\n   Contributes to https://gitlab.com/gitlab-org/gitlab/-/issues/601848\n   ```\n   Use the full URL — the commit-msg linter rejects short `#IID` references.\n\n5. **Push:**\n   ```shell\n   LEFTHOOK_EXCLUDE=openapi_docs,rubocop,danger,commit-message-linting \\\n     git push origin rspec-order-todo-foss-batch-NNN\n   ```\n\n6. **Create MR** via GitLab MCP:\n   - `title`: `Remove N FOSS specs from rspec_order_todo (batch NNN)`\n   - `labels`: `pipeline::tier-1`\n   - `squash`: `true`, `remove_source_branch`: `true`\n   - `assignee_ids`: current user ID, `milestone_id`: current milestone ID\n   - `description`:\n     ```markdown\n     ## Summary\n\n     Removes N FOSS spec files from `spec/support/rspec_order_todo.yml` so\n     they run in random order.\n\n     ## How each spec was verified\n\n     Each file was checked once using:\n\n     ```shell\n     RANDOM_ORDER_RUNS=10 scripts/rspec_check_order_dependence spec/path/to/file_spec.rb\n     ```\n\n     A single invocation runs the spec in three phases:\n     1. **Defined order** (`rspec --order defined`)\n     2. **Reverse order** (`rspec --order reverse`)\n     3. **Random order** (10× with different seeds — `rspec --bisect` runs automatically on failure)\n\n     On success it auto-removes the entry from `spec/support/rspec_order_todo.yml`. On failure it exits non-zero and leaves the YAML unmodified.\n\n     | File | Outcome |\n     |---|---|\n     | `spec/path/to/foo_spec.rb` | passed |\n\n     **Skipped (order-dependent — reported on https://gitlab.com/gitlab-org/gitlab/-/issues/601849):**\n     - `spec/path/to/bar_spec.rb` — failed reverse-order run\n\n     Contributes to https://gitlab.com/gitlab-org/gitlab/-/issues/601848\n     ```\n\n7. **Update this issue** with newly discovered patterns in the Learned Patterns section.\n\n---\n\n## Learned patterns\n\n- **Vite setup failures (Category A):** Specs under `spec/requests/` and `spec/graphql/` that call view helpers (e.g. `stylesheet_path`) fail with `Failure/Error: return ActionController::Base.helpers.stylesheet_path(path, **options) unless vite_enabled?` when Vite is enabled in GDK config but not running. Skip these and report on #601849.\n- **Fog/object storage specs (Category A):** Specs under `spec/models/ci/build_trace_chunks/` that exercise Fog object storage operations fail immediately with `5:storage does not exist` if the GDK Fog backend is not configured. Skip and report.\n- **Large request specs time out:** Specs like `spec/requests/api/ci/runner/jobs_request_post_spec.rb` exceed the 240 s per-spec timeout. Skipping them is appropriate; they can be retried with a longer timeout in a dedicated run.\n\n---\n\n## Definition of Done\n\n- [ ] All `'./spec/'` entries removed from `spec/support/rspec_order_todo.yml`\n- [ ] CI passes for every batch MR\n- [ ] No order-dependent failures introduced on `master`",
+  "discussion_locked": null,
+  "downvotes": 0,
+  "due_date": null,
+  "epic": {
+    "group_id": 9970,
+    "human_readable_end_date": "Oct 12, 2025",
+    "human_readable_timestamp": "<strong>Past due</strong>",
+    "id": 3790944,
+    "iid": 19585,
+    "title": "Run new backend specs in random order",
+    "url": "/groups/gitlab-org/-/epics/19585"
+  },
+  "epic_iid": 19585,
+  "has_tasks": false,
+  "health_status": null,
+  "id": 191591837,
+  "iid": 601848,
+  "imported": false,
+  "imported_from": "none",
+  "issue_type": "issue",
+  "iteration": null,
+  "labels": [
+    "backend",
+    "devops::developer experience",
+    "group::development tooling",
+    "maintenance::test-gap",
+    "section::developer experience",
+    "test",
+    "type::maintenance",
+    "workflow::ready for development"
+  ],
+  "merge_requests_count": 0,
+  "milestone": null,
+  "moved_to_id": null,
+  "project_id": 278964,
+  "references": {
+    "full": "gitlab-org/gitlab#601848",
+    "relative": "#601848",
+    "short": "#601848"
+  },
+  "service_desk_reply_to": null,
+  "severity": "UNKNOWN",
+  "start_date": null,
+  "state": "opened",
+  "subscribed": false,
+  "task_completion_status": {
+    "completed_count": 0,
+    "count": 3
+  },
+  "time_stats": {
+    "human_time_estimate": null,
+    "human_total_time_spent": null,
+    "time_estimate": 0,
+    "total_time_spent": 0
+  },
+  "title": "Remove FOSS specs from rspec_order_todo so they run in random order",
+  "type": "ISSUE",
+  "updated_at": "2026-06-17T09:06:53.225Z",
+  "upvotes": 0,
+  "user_notes_count": 1,
+  "web_url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/601848",
+  "weight": null
+}

@@ -1,0 +1,5 @@
+FAIL	R1.pup.byte_identical	
+FAIL	R2.fixed cart.test.js::total rounds to cents	not_fixed n=20 u=None
+FAIL	R2.fixed sync.test.js::drains queue	not_fixed n=50 u=None
+GATE FAIL ['R1.pup.byte_identical', 'R2.fixed cart.test.js::total rounds to cents', 'R2.fixed sync.test.js::drains queue']
+exit=1

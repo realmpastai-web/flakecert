@@ -1,0 +1,5 @@
+# frozen by Hark 2026-10-18. Versions = rubygems.org latest on that date (target/api-*.json).
+source "https://rubygems.org"
+gem "rspec-core", "3.13.6"
+gem "rspec-expectations", "3.13.5"
+gem "rspec-support", "3.13.7"

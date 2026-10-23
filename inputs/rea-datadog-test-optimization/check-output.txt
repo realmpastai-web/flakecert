@@ -1,0 +1,27 @@
+PASS	pin.tarball	
+PASS	rea.no_integrity_contradictions	ev_723213d06219e8dc
+PASS	rea.node_matches env.js	
+PASS	rea.node_matches jest.js	
+PASS	rea.node_matches test.js	
+PASS	tags.count_80	80 string tag constants
+PASS	tags.no_repro_fields	0 tags for seed/order/image digest/dependency lock/schedule/bound
+PASS	tags.has test.is_retry	
+PASS	tags.has test.is_new	
+PASS	tags.has test.retry_reason	
+PASS	tags.has test.has_failed_all_retries	
+PASS	tags.has test.test_management.is_quarantined	
+PASS	tags.has test.test_management.is_attempt_to_fix	
+PASS	tags.has test.test_management.attempt_to_fix_passed	
+PASS	env.records_os_runtime_only	
+PASS	jest.seed_stripped	
+PASS	docs.attempt_to_fix_20	
+PASS	docs.all_pass_marks_fix	
+PASS	docs.policy_7d_rate	
+PASS	docs.fixed_after_30d	
+PASS	docs.efd_new_tests	
+PASS	stats.20_of_20_upper	exact one-sided 95% upper=0.1391
+PASS	fc.certified_zero_baseline_9	F01,F03,F06,F08,F10,F12,F14,F15,F16
+PASS	fc.zero_baseline_runs_ge_100	[100, 105]
+PASS	fc.cert_has_repro_fields	
+PASS	fc.speedup_unproven	
+CHECK PASS

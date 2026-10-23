@@ -1,0 +1,210 @@
++ logical=rspec --order defined './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:7]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:8]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:5:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:2]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:3]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:4:2:1]' './spec/axn/core/versioning_spec.rb[1:1:1]' './spec/axn/core/versioning_spec.rb[1:2:1]' './spec/axn/core/versioning_spec.rb[1:3:1]' './spec/axn/core/versioning_spec.rb[1:3:2]' './spec/axn/core/versioning_spec.rb[1:3:3]' './spec/axn/core/versioning_spec.rb[1:3:4]' './spec/axn/core/versioning_spec.rb[1:4:1]' './spec/axn/core/versioning_spec.rb[1:4:2]' './spec/axn/core/versioning_spec.rb[1:4:3]' './spec/axn/core/versioning_spec.rb[1:4:4]' './spec/axn/core/versioning_spec.rb[1:5:1]' './spec/axn/core/versioning_spec.rb[1:6:1]' './spec/axn/core/versioning_spec.rb[1:6:2]' './spec/axn/core/versioning_spec.rb[1:6:3]' './spec/axn/core/versioning_spec.rb[1:6:4]' './spec/axn/emit_metrics_spec.rb[1:1:1:1]' './spec/axn/emit_metrics_spec.rb[1:1:2:1]' './spec/axn/emit_metrics_spec.rb[1:1:2:2]' './spec/axn/emit_metrics_spec.rb[1:1:3:1]' './spec/axn/emit_metrics_spec.rb[1:1:3:2]' './spec/axn/emit_metrics_spec.rb[1:1:4:1]' './spec/axn/emit_metrics_spec.rb[1:1:5:1]' './spec/axn/error_policy_spec.rb[1:1]' './spec/axn/error_policy_spec.rb[1:2]' './spec/axn/error_policy_spec.rb[1:3]' './spec/axn/error_policy_spec.rb[1:4]' './spec/axn/error_policy_spec.rb[1:5]' './spec/axn/error_policy_spec.rb[1:6]' './spec/axn/error_spec.rb[1:1]' './spec/axn/error_spec.rb[1:2]' './spec/axn/error_spec.rb[1:3]' './spec/axn/error_spec.rb[1:4]' './spec/axn/error_spec.rb[1:5]' './spec/axn/error_spec.rb[1:6]' './spec/axn/error_spec.rb[1:7]' './spec/axn/error_spec.rb[1:8]' './spec/axn/error_spec.rb[1:9:1]' './spec/axn/error_spec.rb[1:9:2]' './spec/axn/error_spec.rb[1:9:3]' './spec/axn/exceptions_field_errors_spec.rb[1:1]' './spec/axn/exceptions_field_errors_spec.rb[1:2]' './spec/axn/exceptions_field_errors_spec.rb[1:3]' './spec/axn/executor_spec.rb[1:1:1]' './spec/axn/executor_spec.rb[1:1:2]' './spec/axn/executor_spec.rb[1:1:3]' './spec/axn/executor_spec.rb[1:1:4]' './spec/axn/executor_spec.rb[1:1:5]' './spec/axn/executor_spec.rb[1:1:6]' './spec/axn/executor_spec.rb[1:2:1]' './spec/axn/extension_config_spec.rb[1:1:1]' './spec/axn/extension_config_spec.rb[1:1:2]' './spec/axn/extension_config_spec.rb[1:2:1]' './spec/axn/extension_config_spec.rb[1:2:2]' './spec/axn/extension_config_spec.rb[1:3:1]' './spec/axn/extension_config_spec.rb[1:3:2]' './spec/axn/extension_config_spec.rb[1:3:3]' './spec/axn/extension_config_spec.rb[1:3:4]' './spec/axn/extension_config_spec.rb[1:3:5]' './spec/axn/extension_config_spec.rb[1:4:1]' './spec/axn/extension_config_spec.rb[1:4:2]' './spec/axn/extension_config_spec.rb[1:4:3]' './spec/axn/extension_config_spec.rb[1:4:4]' './spec/axn/extension_config_spec.rb[1:5:1]' './spec/axn/extension_config_spec.rb[1:5:2]' './spec/axn/extension_config_spec.rb[1:5:3]' './spec/axn/extension_config_spec.rb[1:5:4]' './spec/axn/extension_config_spec.rb[1:5:5]' './spec/axn/extension_config_spec.rb[1:5:6]' './spec/axn/extension_config_spec.rb[1:5:7]' './spec/axn/extension_config_spec.rb[1:5:8]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]'
++ rspec_argv_len=6373
++ rspec_argv_n=127
++ docker_argv_len=6905
++ docker_argv_n=157
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s3:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --order defined './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:7]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:8]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:5:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:2]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:3]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:4:1]' './spec/ ... truncated total_chars=7141
+elapsed_s=1.531
+Run options: include {:ids=>{"./spec/axn/core/validations/validators/type_validator_spec.rb"=>["1:1:3:1:3", "1:1:3:2:1", "1:1:3:2:2", "1:1:3:2:3", "1:2:1:1", "1:2:1:2", "1:2:1:3", "1:2:1:4", "1:2:1:5", "1:2:1:6", "1:2:2:1", "1:2:2:2", "1:2:2:3", "1:2:2:4", "1:2:2:5", "1:2:3:1", "1:2:3:2", "1:2:3:3", "1:2:3:4", "1:2:3:5", "1:2:4:1", "1:2:4:2", "1:2:4:3", "1:2:4:4", "1:2:4:5", "1:2:5:1", "1:2:5:2", "1:2:5:3", "1:2:5:4", "1:2:5:5", "1:2:5:6", "1:2:5:7", "1:2:5:8"], "./spec/axn/core/validations/validators/validate_validator_spec.rb"=>["1:1:1:1", "1:1:2:1", "1:1:3:1", "1:1:4:1", "1:1:5:1", "1:2:1:1", "1:2:2:1", "1:2:3:1", "1:2:4:1", "1:3:1", "1:3:2", "1:3:3", "1:4:1", "1:4:2:1"], "./spec/axn/core/versioning_spec.rb"=>["1:1:1", "1:2:1", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:4:1", "1:4:2", "1:4:3", "1:4:4", "1:5:1", "1:6:1", "1:6:2", "1:6:3", "1:6:4"], "./spec/axn/emit_metrics_spec.rb"=>["1:1:1:1", "1:1:2:1", "1:1:2:2", "1:1:3:1", "1:1:3:2", "1:1:4:1", "1:1:5:1"], "./spec/axn/error_policy_spec.rb"=>["1:1", "1:2", "1:3", "1:4", "1:5", "1:6"], "./spec/axn/error_spec.rb"=>["1:1", "1:2", "1:3", "1:4", "1:5", "1:6", "1:7", "1:8", "1:9:1", "1:9:2", "1:9:3"], "./spec/axn/exceptions_field_errors_spec.rb"=>["1:1", "1:2", "1:3"], "./spec/axn/executor_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5", "1:1:6", "1:2:1"], "./spec/axn/extension_config_spec.rb"=>["1:1:1", "1:1:2", "1:2:1", "1:2:2", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:3:5", "1:4:1", "1:4:2", "1:4:3", "1:4:4", "1:5:1", "1:5:2", "1:5:3", "1:5:4", "1:5:5", "1:5:6", "1:5:7", "1:5:8"], "./spec/axn/extras/strategies/client_spec.rb"=>["1:1:11:2"]}}
+
+Axn::Validators::TypeValidator
+  type validation
+    boolean defaults with explicit false values
+      default: false should not override explicit false
+        preserves explicit true values
+      default: true should not override explicit false
+        preserves explicit false values
+        applies default when not provided
+        preserves explicit true values
+  regression tests for corrected allow_blank logic
+    Hash type with allow_blank
+      validates empty hash as valid Hash type
+      validates non-empty hash as valid Hash type
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid Hash type (not nil)
+      validates false as invalid Hash type (not nil)
+      validates empty array as invalid Hash type (not nil)
+    String type with allow_blank
+      validates non-empty string as valid String type
+      skips validation for nil when allow_blank is true
+      validates empty string as valid String type (correct type, just blank)
+      validates false as invalid String type (not nil)
+      validates number as invalid String type (not nil)
+    Boolean type with allow_blank
+      validates true as valid boolean type
+      validates false as valid boolean type
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid boolean type (not nil)
+      validates number as invalid boolean type (not nil)
+    Array type with allow_blank
+      validates non-empty array as valid Array type
+      validates empty array as valid Array type (correct type, just blank)
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid Array type (not nil)
+      validates hash as invalid Array type (not nil)
+    Multiple types with allow_blank
+      validates string as valid type
+      validates hash as valid type
+      validates empty string as valid String type
+      validates empty hash as valid Hash type
+      skips validation for nil when allow_blank is true
+      validates false as invalid type (not nil)
+      validates array as invalid type (not nil)
+      validates whitespace strings as valid (they are valid Strings)
+
+Axn::Validators::ValidateValidator
+  custom validations
+    when valid
+      is expected to be ok
+    when invalid
+      fails
+    when validator raises
+      fails
+    and allow_blank
+      validates
+    and allow_nil
+      validates
+  custom validations hash format
+    when valid
+      is expected to be ok
+    when invalid
+      fails
+    with custom message
+      uses custom message
+    and allow_blank
+      validates
+  misuse: a Hash without :with (e.g. ActiveModel validator keys)
+    raises at declaration (not at call time) with an actionable message
+    still accepts the valid Hash form (with: present)
+    still accepts the bare-callable form
+  Axn::Extensions.best_effort integration
+    calls Axn::Extensions.best_effort when custom validation raises
+    when the validator raises a non-StandardError
+      still fails the field rather than settling as an exception outcome
+
+Axn::Core::Versioning
+  reader default
+    is 1 when never declared
+  setter
+    stores the declared version and reads it back
+  validation
+    rejects zero
+    rejects negatives
+    rejects non-Integers
+    rejects the removed default: option as an unknown keyword, not a bad version
+  _tool_version_suffix (single source for parsing the ::Vn constant segment)
+    returns the number for a vN-suffixed constant
+    handles multi-digit versions
+    is nil for a non-vN trailing segment
+    is nil for an anonymous class
+  declared-here vs inherited
+    marks the declaring class but not an inheriting subclass
+  ::Vn mismatch guard
+    raises when the constant segment number disagrees with the declared version
+    accepts a matching ::Vn segment
+    is skipped for an anonymous class (no constant name)
+    ignores a trailing segment that is not the exact vN pattern
+
+Action axn.call notification metrics
+  axn.call notification emission for metrics
+    when action succeeds
+      emits notification with success outcome and correct resource
+    when action fails with fail!
+      emits notification with failure outcome
+      emits notification with failure outcome when using call!
+    when action raises an exception
+      emits notification with exception outcome
+      emits notification with exception outcome when using call!
+    when call! succeeds
+      emits notification with success outcome
+    when call! raises an exception
+      emits notification with exception outcome
+
+Axn exception tagging
+  finds the exception classes at all (guards against a walk that silently matches nothing)
+  tags every exception class except the pinned exclusions
+  keeps every pinned exclusion reachable, so a rename cannot leave a stale entry here
+  nests DuplicateFieldError with its ContractViolation siblings
+  names the substitute for what happened, not for the exception it replaced
+  refuses to raise an internal base class for a registry that names no error classes
+
+Axn::Error
+  is a module, not a class, so a gem can keep its own superclass
+  catches a tagged exception rooted at StandardError
+  catches a tagged exception rooted at ArgumentError
+  leaves the tagged class's own ancestry intact
+  catches DuplicateFieldError through its ContractViolation superclass
+  catches ReraiseFailed, the substitute for an exception raise cannot hand back as itself
+  does not catch Axn::Failure
+  does not catch internal-only exceptions
+  registry errors
+    have no Axn::Internal constant in their ancestry
+    are all catchable as Axn::Error
+    still descend from StandardError
+
+Axn::InboundValidationError
+  maps each error to {field:, message:} using the full message
+  surfaces base-level errors with field == :base
+  is empty when there are no errors
+
+Axn::Core::Executor
+  #resolve_inbound_facets
+    resolves input-derived tags and dimensions (one map per source)
+    filters by requested sources
+    resolves against raw inputs — does not run preprocess or apply defaults
+    excludes result-phase facets (from: :result), keeping input-phase ones
+    keeps a name declared as both a tag and a dimension in separate maps
+    omits a facet whose resolver raises, keeping the rest
+  #prepare_inbound_for_facets!
+    coerces a wire string before a facet reads the field
+
+Axn::Extensions::Config
+  Axn::Extensions.config
+    returns a Config instance
+    returns the same instance on repeated calls
+  #registered_field_metadata_keys
+    includes :description by default
+    returns a Set
+  #register_field_metadata_key
+    adds a single key
+    adds multiple keys
+    converts strings to symbols
+    accumulates keys across multiple calls
+    handles duplicate keys gracefully (Set semantics)
+  the reserved core DSL option names
+    is a frozen Set
+    draws from every source it is derived from
+    covers the kwargs that are bound before the splat, not only the misroutable keys
+    does not reserve :description, the metadata key axn registers itself
+  #register_field_metadata_key refusing a core DSL option name
+    refuses every reserved name
+    refuses :on, the collision that motivated the reservation
+    refuses the String spelling exactly as the Symbol
+    names every colliding key in one raise, and only the colliding ones
+    names a colliding key once however many times it was passed
+    says how to fix it
+    registers nothing when any key in the call is reserved
+    still registers a name the core DSL does not own
+
+Axn::Extras::Strategies::Client
+  .configure
+    with error_handler
+      does not inject ErrorHandlerMiddleware when error_handler is nil (FAILED - 1)
+
+Failures:
+
+  1) Axn::Extras::Strategies::Client.configure with error_handler does not inject ErrorHandlerMiddleware when error_handler is nil
+     Failure/Error: expect(middleware_klasses(instance.client)).not_to include(Axn::Extras::Strategies::Client::ErrorHandlerMiddleware)
+
+     NameError:
+       uninitialized constant Axn::Extras::Strategies::Client::ErrorHandlerMiddleware
+     # ./spec/axn/extras/strategies/client_spec.rb:172:in `block (4 levels) in <top (required)>'
+
+Finished in 0.39662 seconds (files took 0.59862 seconds to load)
+118 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/axn/extras/strategies/client_spec.rb:169 # Axn::Extras::Strategies::Client.configure with error_handler does not inject ErrorHandlerMiddleware when error_handler is nil
+
+docker_exit=1

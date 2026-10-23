@@ -1,0 +1,11 @@
+✖  . (2ms)
+
+=== Skipped
+=== SKIP: . TestSkip (0.00s)
+    sample_test.go:30: sample skip
+
+=== Failed
+=== FAIL: . TestFailDeterministic (0.00s)
+    sample_test.go:19: got 1 want 2
+
+DONE 4 tests, 1 skipped, 1 failure in 0.002s

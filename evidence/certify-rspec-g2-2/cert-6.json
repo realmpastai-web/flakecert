@@ -1,0 +1,396 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "560314276d82565fb1294346a4baceff12f46e95-dirty"
+  },
+  "repo": "teamshares/axn",
+  "base": {
+    "commit": "8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9",
+    "tarball_sha256": "63119f8a743e6681677668d5f9ba274b978e224c88d7044e72077bec7411823c"
+  },
+  "head": {
+    "commit": "6c62d568e27844bf7500be0a54425b7c9c65a8cc",
+    "tarball_sha256": "6b21ebd8606559104cfae3d2df20f2d55143a8f074a866378c980189303f46e0"
+  },
+  "image_id": "sha256:75d96121b9c7cad7a3f00037beaf3e80596aea21b14a34dff24a0e8760fef6e6",
+  "ruby": "ruby 3.3.12 (2026-07-16 revision 0581089df9) [x86_64-linux]",
+  "bundler": "Bundler version 2.5.6",
+  "rspec_core": "3.13.2",
+  "gemfile_lock_sha256": {
+    "base": "42ae032a7dfca943379c77d492fff5560f1338f36755f6e352b68ed4778c604a",
+    "head": "42ae032a7dfca943379c77d492fff5560f1338f36755f6e352b68ed4778c604a"
+  },
+  "seed": 1,
+  "seed_provenance": {
+    "seed": 1,
+    "seeds_failed": [
+      1,
+      4,
+      5,
+      7,
+      8,
+      15,
+      16,
+      18,
+      21,
+      23,
+      24,
+      27,
+      28,
+      30
+    ],
+    "s0": {
+      "seed": 1,
+      "base_failing_ids": [
+        "./spec/axn/strategies_spec.rb[1:1:5:1]",
+        "./spec/axn/tools/registry_spec.rb[1:5:7]",
+        "./spec/axn/tools/registry_spec.rb[1:5:6]",
+        "./spec/axn/tools/registry_spec.rb[1:5:3]",
+        "./spec/axn/tools/registry_spec.rb[1:4:2]",
+        "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+      ],
+      "head_failing_ids": []
+    }
+  },
+  "victim_id": "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+  "victim_location": "./spec/axn/extras/strategies/client_spec.rb:169",
+  "kind": "BRITTLE",
+  "enabler_ids": [
+    "./spec/axn/extras/strategies/client_spec.rb[1:1:11:1]"
+  ],
+  "commands": {
+    "alone": "rspec './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]'",
+    "enabled": "rspec --order defined './spec/axn/extras/strategies/client_spec.rb[1:1:11:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]'"
+  },
+  "runs": {
+    "base": {
+      "alone": [
+        {
+          "exit_code": 1,
+          "example_count": 1,
+          "failure_count": 1,
+          "first_error_class": "NameError",
+          "first_error_message_line": "uninitialized constant Axn::Extras::Strategies::Client::ErrorHandlerMiddleware",
+          "failed_ids": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "c8506d95b111d138236db2d0db6cb29ed005129a6791b46fa43970ae98cf04d5",
+          "log": "evidence/certify-rspec-g2/s2/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r1.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r1.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s2/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r1.json",
+          "victim_status": "failed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 1,
+          "failure_count": 1,
+          "first_error_class": "NameError",
+          "first_error_message_line": "uninitialized constant Axn::Extras::Strategies::Client::ErrorHandlerMiddleware",
+          "failed_ids": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "3a820ad98acf87e31b4d69232fc52caaf24e228d313e85917006be8bfc56fd0a",
+          "log": "evidence/certify-rspec-g2/s2/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r2.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r2.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s2/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r2.json",
+          "victim_status": "failed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 1,
+          "failure_count": 1,
+          "first_error_class": "NameError",
+          "first_error_message_line": "uninitialized constant Axn::Extras::Strategies::Client::ErrorHandlerMiddleware",
+          "failed_ids": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "b40c6eb399c9731fb5b2ea2654c0f1f2eee07667dff8eb66051e7f8cbb12b503",
+          "log": "evidence/certify-rspec-g2/s2/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r3.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r3.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s2/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-r3.json",
+          "victim_status": "failed",
+          "order_status": "OK"
+        }
+      ],
+      "enabled": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:1]",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "74a51ac6de0ac169b4e998eeb64a4b8ed2b45c96abfbb0043ff368d3af8c02f6",
+          "log": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r1.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:1]",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r1.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r1.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:1]",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "0292ff98cf4cc77acc69e156141db954bea08ce810cace4a7c680bfbf7e41788",
+          "log": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r2.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:1]",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r2.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r2.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:1]",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "1c98446221262c4f88a6063a9ead0836d4a71a696c07e9ca42c560e8f002f64e",
+          "log": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r3.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:1]",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r3.json"
+          ],
+          "tree_side": "base",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r3.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        }
+      ]
+    },
+    "head": {
+      "alone": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "bfe2b78117f56b3010b79cb1f919247249ce8583c8df0b283d8707f5d437a3ce",
+          "log": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r1.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r1.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r1.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "97c8555a6b223e722a3304be7e8624e701a086baf72899526e378ccb87b7f8c3",
+          "log": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r2.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r2.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r2.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "4525bdefdad81a9c56bb2b9f4527367d021f5021161870b04dfcf47c29d6ed82",
+          "log": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r3.log",
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spec/axn/extras/strategies/client_spec.rb[1:1:11:2]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r3.json"
+          ],
+          "tree_side": "head",
+          "json_host": "evidence/certify-rspec-g2/s4/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-6c62d56-alone-r3.json",
+          "victim_status": "passed",
+          "order_status": "OK"
+        }
+      ]
+    }
+  },
+  "label": "BRITTLE_CERTIFIED",
+  "reason": "",
+  "error_class": "NameError",
+  "execution": {
+    "mode": "docker",
+    "image": "ruby:3.3",
+    "trees": {
+      "base": "/tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9",
+      "head": "/tmp/flakecert-g2-1019/probe/src/axn-6c62d568e27844bf7500be0a54425b7c9c65a8cc"
+    },
+    "timeout_s": 900,
+    "bundler": "2.5.6",
+    "extra_mounts": [
+      "-v",
+      "/tmp/flakecert-g2-1019/probe/bundle:/bundle",
+      "-v",
+      "/tmp/flakecert-g2-1019/probe/gems:/gems"
+    ],
+    "extra_env": [
+      [
+        "GEM_HOME",
+        "/gems"
+      ],
+      [
+        "PATH",
+        "/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      ],
+      [
+        "BUNDLE_PATH",
+        "/bundle"
+      ],
+      [
+        "BUNDLE_SILENCE_ROOT_WARNING",
+        "1"
+      ]
+    ],
+    "clear_status": true,
+    "exec_argv": {}
+  }
+}

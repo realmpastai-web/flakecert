@@ -1,0 +1,1 @@
+rea-agents@6.5.0 extract-artifact <path> --format json ; exit=1 for both .gem and data.tar.gz (unsupported binary format). REA has no Ruby analyzer in 6.5.0 (--help list in rea-help.txt). Static plain tools used instead: tar, grep -n. Nothing executed.

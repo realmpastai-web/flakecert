@@ -1,0 +1,37 @@
+attributes.attributes.ci.job.name,attributes.attributes.ci.job.url,attributes.attributes.ci.pipeline.id,attributes.attributes.ci.pipeline.name,attributes.attributes.ci.pipeline.number,attributes.attributes.ci.pipeline.url,attributes.attributes.ci.provider.name,attributes.attributes.ci.stage.name,attributes.attributes.ci.workspace_path,attributes.attributes.duration,attributes.attributes.env,attributes.attributes.git.branch,attributes.attributes.git.commit.author.date,attributes.attributes.git.commit.author.date_timestamp,attributes.attributes.git.commit.author.email,attributes.attributes.git.commit.author.name,attributes.attributes.git.commit.committer.date,attributes.attributes.git.commit.committer.date_timestamp,attributes.attributes.git.commit.committer.email,attributes.attributes.git.commit.committer.name,attributes.attributes.git.commit.message,attributes.attributes.git.commit.sha,attributes.attributes.git.repository.host,attributes.attributes.git.repository.id,attributes.attributes.git.repository.name,attributes.attributes.git.repository.path,attributes.attributes.git.repository.scheme,attributes.attributes.git.repository_url,attributes.attributes.language,attributes.attributes.os.version,attributes.attributes.runtime.name,attributes.attributes.runtime.version,attributes.attributes.service,attributes.attributes.start,attributes.attributes.test.codeowners,attributes.attributes.test.fingerprint,attributes.attributes.test.full_name,attributes.attributes.test.has_parameters,attributes.attributes.test.name,attributes.attributes.test.service,attributes.attributes.test.status,attributes.attributes.test.suite,attributes.attributes.test.type,attributes.attributes.test_suite.fingerprint,attributes.tags,attributes.test_level,id,type
+test:go:race-bionic 1/2,https://gitlab.site.io/DataDog/repo/-/jobs/184817229,10630527,DataDog/repo,1669072,https://gitlab.site.io/DataDog/repo/pipelines/10630527,gitlab,stage-1,/go/src/github.com/DataDog/repo,0,test,staging-43,2022-10-21T14:24:33+00:00,1666362273000,support@datadoghq.com,ci.dd-go,2022-10-21T14:24:33+00:00,1666362273000,support@datadoghq.com,ci.dd-go,"Gitlab merged prod (c5fd9a72b75448ff60ba078960fe0ba5e23d7050) to staging-43
+
+Gitlab merged prod (07bd1d762138e4b5bebc0f792cd26ef078c0d872) to staging-43
+
+Gitlab merged prod (4ac1ba5d2b28caccc0640182d90e2d99a5234584) to staging-43
+
+Gitlab merged prod (1c27b214276d2e70d502fdc7c840200faa3d80cf) to staging-43
+
+Merge branch 'ting.tu/scheduling' (06242fc) into staging-43
+
+ pm_trace_id: 10629269
+ feature_branch_pipeline_id: 10629269
+ source: to-staging
+
+* commit '06242fcf113290ca0f273e23942d86f2fc803a6b':
+  update nits
+  Allow partial schedule
+",c34a29db1311b6945aaa644302a77f9bc30e2d7d,gitlab.site.io,gitlab.site.io/DataDog/repo,DataDog/repo,/DataDog/repo.git,https,https://gitlab.site.io/DataDog/repo.git,go,bionic,go,1.19.2,dd-go-metrics-retrieval,1666362737539000000,"[""@DataDog/repo""]",f156dcaa592eb047,github.com/DataDog/repo/apps/rocky/internal/catalog.TestOverscan,false,TestOverscan,dd-go-metrics-retrieval,pass,github.com/DataDog/repo/apps/rocky/internal/catalog,test,355d882863b0e6d8,"[""source:apm"",""source:apm""]",test,AQAAAYP69YODhSYeRgAAAABBWVA2OVlPREFBQjB3THBpOVlKQXRhMEg,citest
+test:go:race-bionic 1/2,https://gitlab.site.io/DataDog/repo/-/jobs/184817229,10630527,DataDog/repo,1669072,https://gitlab.site.io/DataDog/repo/pipelines/10630527,gitlab,stage-1,/go/src/github.com/DataDog/repo,0,test,staging-43,2022-10-21T14:24:33+00:00,1666362273000,support@datadoghq.com,ci.dd-go,2022-10-21T14:24:33+00:00,1666362273000,support@datadoghq.com,ci.dd-go,"Gitlab merged prod (c5fd9a72b75448ff60ba078960fe0ba5e23d7050) to staging-43
+
+Gitlab merged prod (07bd1d762138e4b5bebc0f792cd26ef078c0d872) to staging-43
+
+Gitlab merged prod (4ac1ba5d2b28caccc0640182d90e2d99a5234584) to staging-43
+
+Gitlab merged prod (1c27b214276d2e70d502fdc7c840200faa3d80cf) to staging-43
+
+Merge branch 'ting.tu/scheduling' (06242fc) into staging-43
+
+ pm_trace_id: 10629269
+ feature_branch_pipeline_id: 10629269
+ source: to-staging
+
+* commit '06242fcf113290ca0f273e23942d86f2fc803a6b':
+  update nits
+  Allow partial schedule
+",c34a29db1311b6945aaa644302a77f9bc30e2d7d,gitlab.site.io,gitlab.site.io/DataDog/repo,DataDog/repo,/DataDog/repo.git,https,https://gitlab.site.io/DataDog/repo.git,go,bionic,go,1.19.2,dd-go-metrics-retrieval,1666362737539000000,"[""@DataDog/repo""]",7baf20ec99e08277,github.com/DataDog/repo/apps/rocky/internal/catalog.TestHdqDebug,false,TestHdqDebug,dd-go-metrics-retrieval,pass,github.com/DataDog/repo/apps/rocky/internal/catalog,test,355d882863b0e6d8,"[""source:apm"",""source:apm""]",test,AQAAAYP69YODhSYeRwAAAABBWVA2OVlPREFBQmptZ3JJdUtpRmM0S3U,citest

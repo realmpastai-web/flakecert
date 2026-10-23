@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="2" errors="0" time="0.002059">
+	<testsuite tests="4" failures="2" skipped="1" time="0.002000" name="example.com/flakecertsample" timestamp="2026-10-18T06:21:27Z">
+		<properties>
+			<property name="go.version" value="go1.27.2 linux/arm64"></property>
+		</properties>
+		<testcase classname="example.com/flakecertsample" name="TestFailDeterministic" time="0.000000">
+			<failure message="Failed" type="">=== RUN   TestFailDeterministic&#xA;    sample_test.go:19: got 1 want 2&#xA;--- FAIL: TestFailDeterministic (0.00s)&#xA;</failure>
+		</testcase>
+		<testcase classname="example.com/flakecertsample" name="TestFlakySeeded" time="0.000000">
+			<failure message="Failed" type="">=== RUN   TestFlakySeeded&#xA;    sample_test.go:26: seeded draw 0.167 below threshold&#xA;--- FAIL: TestFlakySeeded (0.00s)&#xA;</failure>
+		</testcase>
+		<testcase classname="example.com/flakecertsample" name="TestSkip" time="0.000000">
+			<skipped message="=== RUN   TestSkip&#xA;    sample_test.go:30: sample skip&#xA;--- SKIP: TestSkip (0.00s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="example.com/flakecertsample" name="TestPass" time="0.000000"></testcase>
+	</testsuite>
+</testsuites>

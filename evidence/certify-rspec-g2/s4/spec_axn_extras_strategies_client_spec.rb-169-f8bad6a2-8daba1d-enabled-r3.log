@@ -1,0 +1,19 @@
++ logical=rspec --order defined './spec/axn/extras/strategies/client_spec.rb[1:1:11:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]'
++ rspec_argv_len=261
++ rspec_argv_n=11
++ docker_argv_len=793
++ docker_argv_n=41
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s4:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --order defined './spec/axn/extras/strategies/client_spec.rb[1:1:11:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]' --format json --out /out/spec_axn_extras_strategies_client_spec.rb-169-f8bad6a2-8daba1d-enabled-r3.json
+elapsed_s=1.223
+Run options: include {:ids=>{"./spec/axn/extras/strategies/client_spec.rb"=>["1:1:11:1", "1:1:11:2"]}}
+
+Axn::Extras::Strategies::Client
+  .configure
+    with error_handler
+      injects ErrorHandlerMiddleware when error_handler is provided
+      does not inject ErrorHandlerMiddleware when error_handler is nil
+
+Finished in 0.01345 seconds (files took 0.6276 seconds to load)
+2 examples, 0 failures
+
+docker_exit=0

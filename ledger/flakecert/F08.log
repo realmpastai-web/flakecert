@@ -1,0 +1,106 @@
+# flakecert-log-version: 1
+# id: F08
+# method: flakecert
+# category: NOD
+# project: https://github.com/dowjones/tokendito
+# sha: f5d8e5171ddcca0c62925263ddb80535f51aded3
+# python: 3.11.17
+# image: sha256:36197d43da0617eba31b5e7fc29ee31aa3781737bcb9b17510a37b597f5e4094
+# image_tag: flakecert:F08
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/functional_test.py::test_version[runnable2]
+# node_id: tests/functional_test.py::test_version[runnable2]
+# test_file: tests/functional_test.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 174
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/functional_test.py::test_version[runnable2]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=4.988 node=tests/functional_test.py::test_version[runnable2]
+SCHEDULE run=2 {"order": ["tests/functional_test.py::test_version[runnable2]", "tests/functional_test.py::test_version[runnable2]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=1.805 node=tests/functional_test.py::test_version[runnable2]
+SCHEDULE run=3 {"order": ["tests/functional_test.py::test_package_uninstall", "tests/functional_test.py::test_package_install", "tests/functional_test.py::test_package_exists", "tests/functional_test.py::test_version[runnable0]", "tests/functional_test.py::test_version[runnable1]", "tests/functional_test.py::test_version[runnable2]", "tests/functional_test.py::test_generate_credentials", "tests/functional_test.py::test_aws_credentials"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=7.324 node=tests/functional_test.py::test_version[runnable2]
+SCHEDULE run=4 {"order": ["tests/functional_test.py::test_aws_credentials", "tests/functional_test.py::test_generate_credentials", "tests/functional_test.py::test_version[runnable2]", "tests/functional_test.py::test_version[runnable1]", "tests/functional_test.py::test_version[runnable0]", "tests/functional_test.py::test_package_exists", "tests/functional_test.py::test_package_install", "tests/functional_test.py::test_package_uninstall"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=passed exc=- sig=- duration_s=7.370 node=tests/functional_test.py::test_version[runnable2]
+SCHEDULE run=5 {"order": ["tests/functional_test.py::test_package_uninstall", "tests/functional_test.py::test_package_install", "tests/functional_test.py::test_package_exists", "tests/functional_test.py::test_version[runnable0]", "tests/functional_test.py::test_version[runnable1]", "tests/functional_test.py::test_generate_credentials", "tests/functional_test.py::test_aws_credentials", "tests/functional_test.py::test_version[runnable2]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=passed exc=- sig=- duration_s=6.700 node=tests/functional_test.py::test_version[runnable2]
+SCHEDULE run=6 {"order": ["tests/functional_test.py::test_version[runnable2]", "tests/functional_test.py::test_package_uninstall", "tests/functional_test.py::test_package_install", "tests/functional_test.py::test_package_exists", "tests/functional_test.py::test_version[runnable0]", "tests/functional_test.py::test_version[runnable1]", "tests/functional_test.py::test_generate_credentials", "tests/functional_test.py::test_aws_credentials"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=6 outcome=passed exc=- sig=- duration_s=7.008 node=tests/functional_test.py::test_version[runnable2]
+SCHEDULE run=7 {"order": ["tests/functional_test.py::test_package_uninstall", "tests/functional_test.py::test_version[runnable2]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=7 outcome=failed exc=FileNotFoundError sig=b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851 duration_s=2.207 node=tests/functional_test.py::test_version[runnable2]
+TRACEBACK run=7
+___________________________ test_version[runnable2] ____________________________
+tests/functional_test.py:116: in test_version
+    proc = run_process(runnable)
+           ^^^^^^^^^^^^^^^^^^^^^
+tests/functional_test.py:46: in run_process
+    process = subprocess.Popen(proc, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/subprocess.py:1026: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/local/lib/python3.11/subprocess.py:1955: in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+E   FileNotFoundError: [Errno 2] No such file or directory: 'tokendito'
+ENDTRACEBACK run=7
+SCHEDULE run=8 {"order": ["tests/functional_test.py::test_version[runnable2]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=8 outcome=passed exc=- sig=- duration_s=1.995 node=tests/functional_test.py::test_version[runnable2]
+ABLATE source=order necessary=yes
+SCHEDULE run=9 {"order": ["tests/functional_test.py::test_package_uninstall", "tests/functional_test.py::test_version[runnable2]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=9 outcome=failed exc=FileNotFoundError sig=b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851 duration_s=1.990 node=tests/functional_test.py::test_version[runnable2]
+TRACEBACK run=9
+___________________________ test_version[runnable2] ____________________________
+tests/functional_test.py:116: in test_version
+    proc = run_process(runnable)
+           ^^^^^^^^^^^^^^^^^^^^^
+tests/functional_test.py:46: in run_process
+    process = subprocess.Popen(proc, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/subprocess.py:1026: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/local/lib/python3.11/subprocess.py:1955: in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+E   FileNotFoundError: [Errno 2] No such file or directory: 'tokendito'
+ENDTRACEBACK run=9
+SCHEDULE run=10 {"order": ["tests/functional_test.py::test_package_uninstall", "tests/functional_test.py::test_version[runnable2]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=10 outcome=failed exc=FileNotFoundError sig=b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851 duration_s=1.807 node=tests/functional_test.py::test_version[runnable2]
+TRACEBACK run=10
+___________________________ test_version[runnable2] ____________________________
+tests/functional_test.py:116: in test_version
+    proc = run_process(runnable)
+           ^^^^^^^^^^^^^^^^^^^^^
+tests/functional_test.py:46: in run_process
+    process = subprocess.Popen(proc, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/subprocess.py:1026: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/local/lib/python3.11/subprocess.py:1955: in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+E   FileNotFoundError: [Errno 2] No such file or directory: 'tokendito'
+ENDTRACEBACK run=10
+SCHEDULE run=11 {"order": ["tests/functional_test.py::test_package_uninstall", "tests/functional_test.py::test_version[runnable2]"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=11 outcome=failed exc=FileNotFoundError sig=b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851 duration_s=159.373 node=tests/functional_test.py::test_version[runnable2]
+TRACEBACK run=11
+___________________________ test_version[runnable2] ____________________________
+tests/functional_test.py:116: in test_version
+    proc = run_process(runnable)
+           ^^^^^^^^^^^^^^^^^^^^^
+tests/functional_test.py:46: in run_process
+    process = subprocess.Popen(proc, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/subprocess.py:1026: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/local/lib/python3.11/subprocess.py:1955: in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+E   FileNotFoundError: [Errno 2] No such file or directory: 'tokendito'
+ENDTRACEBACK run=11
+REPLAY id=F08 matched=3/3 sig=b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851
+CERT id=F08 certified=yes d=1 m=5 k=7 per_run_lower=1/5 runs_to_failure=7 sig=b9aa95e143ade65880a65649ba5a3b863bd664b77ef0052b766d6371987cf851
+SEARCH_STOP reason=certified index=11
+FLAKECERT_SUMMARY id=F08 runs=11 failures=4

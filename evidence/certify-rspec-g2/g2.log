@@ -1,0 +1,52 @@
+image_id sha256:75d96121b9c7cad7a3f00037beaf3e80596aea21b14a34dff24a0e8760fef6e6
+image_digest ruby@sha256:0a5633bcfe247d312edbc1e1c4a048ae3f5a99bea482af2d484b036c09cbd5a4
+docker_server 26.1.5+dfsg1
+ruby 3.3.12 (2026-07-16 revision 0581089df9) [x86_64-linux]
+Bundler version 2.5.6
+rspec-core 3.13.2
+wall_s 200.277
+exit_ok True
+
+CERTIFIED ./spec/support/shared_examples/registry_behavior.rb:100 class=ORDER-DEPENDENT polluters=1 seed=1
+CERTIFIED ./spec/axn/tools/registry_spec.rb:299 class=ORDER-DEPENDENT polluters=1 seed=1
+CERTIFIED ./spec/axn/tools/registry_spec.rb:283 class=ORDER-DEPENDENT polluters=1 seed=1
+CERTIFIED ./spec/axn/tools/registry_spec.rb:237 class=ORDER-DEPENDENT polluters=1 seed=1
+CERTIFIED ./spec/axn/tools/registry_spec.rb:171 class=ORDER-DEPENDENT polluters=1 seed=1
+BRITTLE_CERTIFIED ./spec/axn/extras/strategies/client_spec.rb:169 class=BRITTLE enablers=1 seed=1
+CERTIFIED ./spec/support/shared_examples/registry_behavior.rb:100 class=ORDER-DEPENDENT polluters=1 seed=3
+BRITTLE_CERTIFIED ./spec/axn/extras/strategies/client_spec.rb:175 class=BRITTLE enablers=1 seed=3
+
+SEEDS_SEARCHED 30
+SEEDS_FAILING_BASE 29
+SEEDS_FAILING_HEAD 0
+PRIMARY_SEED 5
+UNION 8
+OD 6
+BRITTLE 2
+CERTIFIED ./spec/axn/strategies_spec.rb[1:1:5:1],./spec/axn/tools/registry_spec.rb[1:5:7],./spec/axn/tools/registry_spec.rb[1:5:6],./spec/axn/tools/registry_spec.rb[1:5:3],./spec/axn/tools/registry_spec.rb[1:4:2],./spec/axn/async/registry_spec.rb[1:1:5:1]
+BRITTLE_CERTIFIED ./spec/axn/extras/strategies/client_spec.rb[1:1:11:2],./spec/axn/extras/strategies/client_spec.rb[1:1:11:3]
+REJECTED 
+ARM_C_INVALID_ORDER_BEFORE 12
+ARM_C_INVALID_ORDER_AFTER 0
+VICTIM ./spec/axn/strategies_spec.rb[1:1:5:1] CERTIFIED reason=arm C ran the named victim-then-polluter order and passed 3/3 at base and head
+VICTIM ./spec/axn/tools/registry_spec.rb[1:5:7] CERTIFIED
+VICTIM ./spec/axn/tools/registry_spec.rb[1:5:6] CERTIFIED
+VICTIM ./spec/axn/tools/registry_spec.rb[1:5:3] CERTIFIED
+VICTIM ./spec/axn/tools/registry_spec.rb[1:4:2] CERTIFIED
+VICTIM ./spec/axn/extras/strategies/client_spec.rb[1:1:11:2] BRITTLE_CERTIFIED
+VICTIM ./spec/axn/async/registry_spec.rb[1:1:5:1] CERTIFIED reason=arm C ran the named victim-then-polluter order and passed 3/3 at base and head
+VICTIM ./spec/axn/extras/strategies/client_spec.rb[1:1:11:3] BRITTLE_CERTIFIED
+LABEL_CHANGED ./spec/axn/strategies_spec.rb[1:1:5:1] UNRESOLVED CERTIFIED
+LABEL_CHANGED ./spec/axn/async/registry_spec.rb[1:1:5:1] UNRESOLVED CERTIFIED
+ACCEPTANCE_1 True
+ACCEPTANCE_2 True
+ACCEPTANCE_3 True
+ACCEPTANCE_4 True
+GO True
+===== acceptance 1 grep =====
++ grep -RInE 'custom|ErrorHandlerMiddleware|on_exception|RegistryFixtures|clear!' tools/certify_rspec
+
+grep_exit=1
++ grep -nE 'custom|ErrorHandlerMiddleware|on_exception|RegistryFixtures|clear!' evidence/certify-rspec-g2/invocation.txt
+
+grep_exit=1

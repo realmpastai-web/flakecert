@@ -1,0 +1,14 @@
+date_utc 2026-10-18T06:21:27Z
+uname Linux aarch64
+sample_repo_commit f711ef3b9426b92e2e73691439bf6d4dbaa6e341
+Python 3.12.15
+pytest 8.3.4
+Name: buildkite-test-collector
+Version: 1.9.0
+Home-page: https://github.com/buildkite/test-collector-python
+License-Expression: MIT
+node v22.23.3
+jest 29.7.0
+jest-junit 16.0.0
+go version go1.27.2 linux/arm64
+gotestsum version v1.13.0

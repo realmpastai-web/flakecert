@@ -1,0 +1,10 @@
++ phase=probe
++ seed=18
++ round=1
++ confirm=0
++ ids_n=5
++ ids_sha256=c983356d4e681513da5df01a0e59c5e02d75b339df53f944466bea3e3e3aef26
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/6eccbd82a1f37a3c54a0554d2fc3bee8e7e2788174bc4a0f4ccd27936b02210b/ids.txt
++ attempt=1
+elapsed_s=1.133
+docker_exit=1

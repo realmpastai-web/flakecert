@@ -1,0 +1,115 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "45bb0728c2e474fcf963bec5334f6425a9e4ee54"
+  },
+  "hook_sha256": "2ca968444dc06bf9a1f2e0f44216ad2b0cf5541e2ca0f52be8ca40489135bd64",
+  "case": "H4",
+  "commit": "148c1c9b4c041b1659ea633f2632dd47eef8cb04",
+  "tarball_sha256": "db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5",
+  "rules": "F6",
+  "victim_id": "./spaceship/spec/two_step_or_factor_client_spec.rb:76",
+  "polluter_ids": [
+    "./spaceship/spec/two_step_or_factor_client_spec.rb:94"
+  ],
+  "verdict": "NOT_FIXED",
+  "pair_logs": [
+    "flakecert/H4-pair-r1.log",
+    "flakecert/H4-pair-r2.log",
+    "flakecert/H4-pair-r3.log"
+  ],
+  "reverse_logs": [
+    "flakecert/H4-reverse-r1.log",
+    "flakecert/H4-reverse-r2.log",
+    "flakecert/H4-reverse-r3.log"
+  ],
+  "pair_runs": [
+    {
+      "exit_code": 1,
+      "example_count": 2,
+      "failure_count": 1,
+      "first_error_class": "RuntimeError",
+      "first_error_message_line": "2FA can only be performed in interactive mode",
+      "failed_ids": [
+        "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+      ],
+      "order": [
+        "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+      ],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H4-pair-r1.log",
+      "log_sha256": "80e1517947825254b1ca86b0a223ffc82c8e0417313a0f142aa1e03c1d458736"
+    },
+    {
+      "exit_code": 1,
+      "example_count": 2,
+      "failure_count": 1,
+      "first_error_class": "RuntimeError",
+      "first_error_message_line": "2FA can only be performed in interactive mode",
+      "failed_ids": [
+        "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+      ],
+      "order": [
+        "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+      ],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H4-pair-r2.log",
+      "log_sha256": "cc4eefd54d6793eefd9a526638b57d368ee4dea20ebbb029dae4a2e8a260868a"
+    },
+    {
+      "exit_code": 1,
+      "example_count": 2,
+      "failure_count": 1,
+      "first_error_class": "RuntimeError",
+      "first_error_message_line": "2FA can only be performed in interactive mode",
+      "failed_ids": [
+        "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+      ],
+      "order": [
+        "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+      ],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H4-pair-r3.log",
+      "log_sha256": "da206b451b1d0e75c260d76bdb2a3d50076bf0b94315619af41384f3d816be27"
+    }
+  ],
+  "reverse_runs": [
+    {
+      "exit_code": 0,
+      "example_count": 2,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H4-reverse-r1.log",
+      "log_sha256": "ff8706f15dc7dedaf5e51e51236b980f349b79cb8798d2bfc3969955791a23fe"
+    },
+    {
+      "exit_code": 0,
+      "example_count": 2,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H4-reverse-r2.log",
+      "log_sha256": "77522025bbda41fc25b4b589f9b1d2d8ca7ab65967efee7913458f0d3af3904b"
+    },
+    {
+      "exit_code": 0,
+      "example_count": 2,
+      "failure_count": 0,
+      "first_error_class": null,
+      "first_error_message_line": null,
+      "failed_ids": [],
+      "order": [],
+      "errors_outside_of_examples_count": 0,
+      "log": "flakecert/H4-reverse-r3.log",
+      "log_sha256": "c610fd8ae4b4023b1cf3053018790bfebb07c8dfdd843347d9189255ec141348"
+    }
+  ]
+}

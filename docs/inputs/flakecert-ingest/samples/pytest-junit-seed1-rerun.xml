@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="1" tests="4" time="0.024" timestamp="2026-10-18T06:21:26.874767+00:00" hostname="(none)"><testcase classname="test_sample" name="test_pass" time="0.000" /><testcase classname="test_sample" name="test_fail_deterministic" time="0.000"><failure message="AssertionError: assert {'a': 1} == {'a': 2}&#10;  &#10;  Differing items:&#10;  {'a': 1} != {'a': 2}&#10;  Use -v to get more diff">def test_fail_deterministic():
+&gt;       assert {"a": 1} == {"a": 2}
+E       AssertionError: assert {'a': 1} == {'a': 2}
+E         
+E         Differing items:
+E         {'a': 1} != {'a': 2}
+E         Use -v to get more diff
+
+test_sample.py:5: AssertionError</failure></testcase><testcase classname="test_sample" name="test_flaky_seeded" time="0.000"><failure message="AssertionError: seeded draw below threshold&#10;assert 0.13436424411240122 &gt;= 0.5&#10; +  where 0.13436424411240122 = &lt;built-in method random of Random object at 0xaaaaf5666a40&gt;()&#10; +    where &lt;built-in method random of Random object at 0xaaaaf5666a40&gt; = &lt;random.Random object at 0xaaaaf5666a40&gt;.random">def test_flaky_seeded():
+        # fails iff the seeded draw is &lt; 0.5; SEED is set by the harness, not recorded by any reporter
+        rng = random.Random(int(os.environ.get("SEED", "0")))
+&gt;       assert rng.random() &gt;= 0.5, "seeded draw below threshold"
+E       AssertionError: seeded draw below threshold
+E       assert 0.13436424411240122 &gt;= 0.5
+E        +  where 0.13436424411240122 = &lt;built-in method random of Random object at 0xaaaaf5666a40&gt;()
+E        +    where &lt;built-in method random of Random object at 0xaaaaf5666a40&gt; = &lt;random.Random object at 0xaaaaf5666a40&gt;.random
+
+test_sample.py:9: AssertionError</failure></testcase><testcase classname="test_sample" name="test_skip" time="0.000"><skipped type="pytest.skip" message="sample skip">/tmp/ing/proj/py/test_sample.py:10: sample skip</skipped></testcase></testsuite></testsuites>

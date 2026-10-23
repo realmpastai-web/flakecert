@@ -1,0 +1,16 @@
+rung files requirements.txt
+rung test_file unittests/test_policies.py
+rung python=3.11 start
+#11 0.205 FLAKECERT_INSTALL python 3.11.17
+#11 0.206 FLAKECERT_INSTALL files requirements.txt
+#11 0.206 FLAKECERT_INSTALL pipenv no
+#11 0.206 FLAKECERT_INSTALL package yes
+#11 3.857 FLAKECERT_INSTALL req /opt/pristine/requirements.txt
+#11 7.203 FLAKECERT_INSTALL req_ok /opt/pristine/requirements.txt
+#11 7.203 FLAKECERT_INSTALL package_begin
+#11 9.582 FLAKECERT_INSTALL package_ok no-deps-no-isolation
+#11 9.582 FLAKECERT_INSTALL pytest_pin none
+#11 10.79 FLAKECERT_INSTALL pytest_version 9.1.1
+rung python=3.11 build_exit=0
+collect nodes=41 matched=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+rung python=3.11 result=PASS

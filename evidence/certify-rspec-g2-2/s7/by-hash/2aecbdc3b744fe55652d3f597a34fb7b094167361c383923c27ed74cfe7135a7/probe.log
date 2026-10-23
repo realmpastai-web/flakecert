@@ -1,0 +1,21 @@
++ phase=probe
++ seed=19
++ round=1
++ confirm=0
++ ids_n=1830
++ ids_sha256=43e2a25dee817d5973e614afe1d2f307ca355bd94765bff5ca46700a37c94fa3
++ ids_file=evidence/certify-rspec-g2-2/s7/by-hash/2aecbdc3b744fe55652d3f597a34fb7b094167361c383923c27ed74cfe7135a7/ids.txt
++ attempt=1
+elapsed_s=31.570
+⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵⌵
+
+!! IGNORING EXCEPTION RAISED WHILE LOGGING A RESET! COLLISION !!
+
+	* Exception: RuntimeError
+	* Message: logger exploded
+	* From: configurable_spec.rb:801
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: already initialized constant #<Class:0x00007fdd32c81d80>::Axns::Foo
+/src/lib/axn/mountable/helpers/class_builder.rb:194: warning: previous definition of Foo was here
+docker_exit=1

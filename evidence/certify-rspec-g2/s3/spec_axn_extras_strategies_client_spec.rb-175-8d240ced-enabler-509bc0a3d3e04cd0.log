@@ -1,0 +1,43 @@
++ logical=rspec --order defined './spec/axn/extras/strategies/client_spec.rb[1:1:1:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:1:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:3:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:4:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:6:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:7:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:8:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:9:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:10:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:3]'
++ rspec_argv_len=1011
++ rspec_argv_n=25
++ docker_argv_len=1543
++ docker_argv_n=55
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s3:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --order defined './spec/axn/extras/strategies/client_spec.rb[1:1:1:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:1:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:3:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:4:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:6:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:7:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:8:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:9:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:10:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:3]' --format json --out /out/spec_axn_extras_strategies_client_spec.rb-175-8d240ced-enabler-509bc0a3d3e04cd0.json
+elapsed_s=1.158
+Run options: include {:ids=>{"./spec/axn/extras/strategies/client_spec.rb"=>["1:1:1:1", "1:1:1:2", "1:1:2:1", "1:1:2:2", "1:1:3:1", "1:1:4:1", "1:1:5:1", "1:1:5:2", "1:1:6:1", "1:1:7:1", "1:1:8:1", "1:1:9:1", "1:1:10:1", "1:1:11:1", "1:1:11:2", "1:1:11:3"]}}
+
+Axn::Extras::Strategies::Client
+  .configure
+    with default configuration
+      creates a client method with default name
+      sets default headers
+    with custom name
+      creates a client method with custom name
+      uses custom name in user agent
+    with custom user_agent
+      uses provided user agent
+    with prepend_config
+      calls prepend_config before default middleware
+    with debug option
+      enables logger middleware when debug is true
+      does not enable logger middleware when debug is false
+    with configuration block
+      calls the block with the connection
+    with callable options
+      hydrates callable options
+    with Faraday connection options
+      passes options to Faraday.new
+    memoization
+      memoizes the client instance
+    error handling
+      raises error if client name is already taken
+    with error_handler
+      injects ErrorHandlerMiddleware when error_handler is provided
+      does not inject ErrorHandlerMiddleware when error_handler is nil
+      does not inject ErrorHandlerMiddleware when error_handler is not provided
+
+Finished in 0.07753 seconds (files took 0.5659 seconds to load)
+16 examples, 0 failures
+
+docker_exit=0

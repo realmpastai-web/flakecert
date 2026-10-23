@@ -1,0 +1,866 @@
+{
+  "tool": {
+    "name": "certify_rspec",
+    "version": "1",
+    "git_sha": "43798e9482273e1c4deab048b925c9cde68ebc85-dirty"
+  },
+  "repo": "fastlane/fastlane",
+  "base": {
+    "commit": "76eeb3f9352a657fd979ae00e89e49a388729e30",
+    "tarball_sha256": "078c5e59b1765b88d829d9878b29deffb66e85122301a1f65d90b714bc81abaa"
+  },
+  "head": {
+    "commit": "148c1c9b4c041b1659ea633f2632dd47eef8cb04",
+    "tarball_sha256": "db53c7bc72519a447c11961956516a240472457042b28a6ea12f7138968390d5"
+  },
+  "image_id": "sha256:1f3248c0b71fb38ce02d05bc3cee8da5257792360158a660b83518c8cb827e63",
+  "ruby": "ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]",
+  "bundler": "Bundler version 2.6.9",
+  "rspec_core": "3.12.2",
+  "gemfile_lock_sha256": {
+    "base": "26645914f0dfa289ce50992aebfa8e750dadd987007de63d9cc27c8621d10053",
+    "head": "26645914f0dfa289ce50992aebfa8e750dadd987007de63d9cc27c8621d10053"
+  },
+  "seed": 48174,
+  "victim_id": "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+  "victim_location": "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5",
+  "polluter_ids": [
+    "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+  ],
+  "minimal_reproduction_command": "rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' --no-color --seed 48174",
+  "commands": {
+    "A": "rspec --seed 48174 './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]' './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]'",
+    "B": "rspec './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]'",
+    "C": "rspec --order defined './spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]' './spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]'"
+  },
+  "runs": {
+    "base": {
+      "A": [
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "TypeError",
+          "first_error_message_line": "You need to instantiate this module with test_flight_request_client",
+          "failed_ids": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "8bb649ae61af9cc2b25884aa0d372f9ce9d02870984a8e971f18b2901c58eaf5",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r1.log",
+          "elapsed_s": 2.9,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "TypeError",
+          "first_error_message_line": "You need to instantiate this module with test_flight_request_client",
+          "failed_ids": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "9f9be008ffba06d924b4a70b5df0f2540159b17e6d857b6fe47850c703d6c14b",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r2.log",
+          "elapsed_s": 2.803,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 1,
+          "example_count": 2,
+          "failure_count": 1,
+          "first_error_class": "TypeError",
+          "first_error_message_line": "You need to instantiate this module with test_flight_request_client",
+          "failed_ids": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "order": [
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "588e352990df3cf5aa9c8f41e6b71716feb6ace47602f9bc80fd377fcb22dda1",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r3.log",
+          "elapsed_s": 2.675,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r3.json",
+          "tree_side": "base"
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "cd2526d74d152c5fea0047312888309a4d480ca122da086a1f6b9383b549d79a",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r1.log",
+          "elapsed_s": 2.732,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "0195aed51d53e7ab5f4c1585d37ee42cc9a16170504b032fe55128b8af0989c9",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r2.log",
+          "elapsed_s": 2.894,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "c8eb708911973dcaa4eb30539fccca9e4c656fd7eaac0912d4242768d0798698",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r3.log",
+          "elapsed_s": 2.661,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r3.json",
+          "tree_side": "base"
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "e1e09d69ef74cf81e498a85bddc733e349b9ffbb4ae1df0e941615c972c9190c",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r1.log",
+          "elapsed_s": 2.87,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r1.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "aa6f6e084a4cb8e08ab8eb9fea90ca6871e6ccae4b8735cdc9ab075fc864a0ab",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r2.log",
+          "elapsed_s": 2.98,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r2.json",
+          "tree_side": "base"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "a95079671c4496a2ef2ce46f496d6cfbe3fc4256d780154e2f38148d79c466dc",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r3.log",
+          "elapsed_s": 2.776,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r3.json",
+          "tree_side": "base"
+        }
+      ]
+    },
+    "head": {
+      "A": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "98bf23824c013e10ee7c873a3f8725d07e99d9a1f3d9266502e7805443d7923e",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r1.log",
+          "elapsed_s": 3.786,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "a5c164ff5bace4553c157f49b9b4aa5947ffa9d54b2daeba49d109cd108b2915",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r2.log",
+          "elapsed_s": 2.968,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "3248e4ac0fe60b92f43079fc1e41bf1da0865235fbdecc002b6915f768649260",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r3.log",
+          "elapsed_s": 2.922,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r3.json",
+          "tree_side": "head"
+        }
+      ],
+      "B": [
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "083c70bcaa5d27a0d5d5d044666c2a52f1423edc0784dbbaa6cbaf4ec48fc8fe",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r1.log",
+          "elapsed_s": 3.027,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "27474c72512a14ea11c5f53c4f88202e3db40f6033004d18c6c2dac9933aceec",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r2.log",
+          "elapsed_s": 2.712,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 1,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "6ed66e3f5a403a38aa6eb1359c5d110dc920027a4e36e39cffa41e33d778b133",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r3.log",
+          "elapsed_s": 2.59,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r3.json",
+          "tree_side": "head"
+        }
+      ],
+      "C": [
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "307ca2f431c701ec59da7ef81ad7a177c28cc0ebdbb5b91216ff35280474977c",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r1.log",
+          "elapsed_s": 2.888,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r1.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r1.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "9a4e9d79ba56c68f77522dfaefcca78cb54162a9e00920971fb65f54d2678e64",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r2.log",
+          "elapsed_s": 3.032,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r2.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r2.json",
+          "tree_side": "head"
+        },
+        {
+          "exit_code": 0,
+          "example_count": 2,
+          "failure_count": 0,
+          "first_error_class": null,
+          "first_error_message_line": null,
+          "failed_ids": [],
+          "order": [
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+          ],
+          "errors_outside_of_examples_count": 0,
+          "parsed_from": "json",
+          "log_sha256": "b231517266c9c0222ccf9584b87cc5433f1f8808b833cb262680fb6b433ce9c7",
+          "log": "/workspace/hark-tasks/flakecert-g1-1019/evidence/certify-rspec-g1/s4/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r3.log",
+          "elapsed_s": 3.043,
+          "exec_argv": [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r3.json"
+          ],
+          "json_host": "/tmp/flakecert-g1-1019/work/rspec-json/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r3.json",
+          "tree_side": "head"
+        }
+      ]
+    }
+  },
+  "verdicts": {
+    "base": "NOT_FIXED",
+    "head": "FIXED"
+  },
+  "plain_retry_verdict": {
+    "base": "FIXED",
+    "head": "FIXED"
+  },
+  "rep_disagreement": false,
+  "c_passes": true,
+  "label": "CERTIFIED",
+  "execution": {
+    "mode": "docker",
+    "image": "flakecert-dryrun-fastlane:ruby31",
+    "trees": {
+      "base": "/tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30",
+      "head": "/tmp/flakecert-g1-1019/work/extract-head/fastlane-148c1c9b4c041b1659ea633f2632dd47eef8cb04"
+    },
+    "timeout_s": 240,
+    "exec_argv": {
+      "base": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-76eeb3f-C-r3.json"
+          ]
+        ]
+      },
+      "head": {
+        "A": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--seed",
+            "48174",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-A-r3.json"
+          ]
+        ],
+        "B": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-B-r3.json"
+          ]
+        ],
+        "C": [
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r1.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r2.json"
+          ],
+          [
+            "--format",
+            "documentation",
+            "--no-color",
+            "--order",
+            "defined",
+            "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+            "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]",
+            "--format",
+            "json",
+            "--out",
+            "/out/spaceship_spec_connect_api_models_build_beta_detail_spec.rb-5-148c1c9-C-r3.json"
+          ]
+        ]
+      }
+    }
+  }
+}

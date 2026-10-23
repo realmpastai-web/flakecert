@@ -1,0 +1,40 @@
++ logical=rspec './spaceship/spec/connect_api/models/device_spec.rb[1:1:6]'
++ rspec_argv_len=176
++ rspec_argv_n=8
++ docker_argv_len=464
++ docker_argv_n=25
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g1-1019/work/extract-base/fastlane-76eeb3f9352a657fd979ae00e89e49a388729e30:/src -v /tmp/flakecert-g1-1019/work/rspec-json:/out -w /src flakecert-dryrun-fastlane:ruby31 bundle exec rspec --format documentation --no-color './spaceship/spec/connect_api/models/device_spec.rb[1:1:6]' --format json --out /out/spaceship_spec_connect_api_models_device_spec.rb-55-r2.json
+elapsed_s=2.577
+[32m[Coveralls] Set up the SimpleCov formatter.[0m
+[32m[Coveralls] Using SimpleCov's default settings.[0m
+Changing stdout to /tmp/fastlane_tests, set `DEBUG` environment variable to print to stdout (e.g. when using `pry`)
+Run options: include {:ids=>{"./spaceship/spec/connect_api/models/device_spec.rb"=>["1:1:6"]}}
+
+Spaceship::ConnectAPI::Device
+  #client
+    #enable an existing disabled udid (FAILED - 1)
+
+Failures:
+
+  1) Spaceship::ConnectAPI::Device#client #enable an existing disabled udid
+     Failure/Error: existing_device = Spaceship::ConnectAPI::Device.enable(udid)
+
+     TypeError:
+       You need to instantiate this module with provisioning_request_client
+     # ./spaceship/lib/spaceship/connect_api/provisioning/provisioning.rb:17:in `provisioning_request_client'
+     # ./spaceship/lib/spaceship/connect_api/provisioning/provisioning.rb:171:in `get_devices'
+     # ./spaceship/lib/spaceship/connect_api/models/device.rb:58:in `all'
+     # ./spaceship/lib/spaceship/connect_api/models/device.rb:148:in `find_by_udid'
+     # ./spaceship/lib/spaceship/connect_api/models/device.rb:181:in `modify'
+     # ./spaceship/lib/spaceship/connect_api/models/device.rb:197:in `enable'
+     # ./spaceship/spec/connect_api/models/device_spec.rb:57:in `block (3 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.19624 seconds (files took 1.59 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:55 # Spaceship::ConnectAPI::Device#client #enable an existing disabled udid
+
+docker_exit=1

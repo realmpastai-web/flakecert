@@ -1,0 +1,1606 @@
+{
+  "target_sha256": "891dd3fe43c4fc8391934b237b1189bb1f661c932a84a840043db9d46a4e80df",
+  "pins": {
+    "base": "f8e201eaf7e8fc699c7f953a2f219ee933720bc3",
+    "activesupport": "8.1.4",
+    "minitest": "6.0.6",
+    "minitest_sha256": "153ea36d1d987a62942382b61075745042a2b3123b1cd48f4c3675af9cc7d6f1",
+    "railties_sha256": "b5e7a8e8984e33114d68af62227971960aae1e6c02bd7c9d826ffad97fff583c",
+    "rails_t2_commit": "926edf5d51c5a0cd2698810fc6abd04525eb1a3b",
+    "rails_t3_parent": "8082369f155e30dee70c7bf4dfa078affb1b90c4",
+    "ruby_tag": "v3_3_8",
+    "ruby_commit": "b200bad6cd40d08e9f33b93e1a85c270b337867c",
+    "control_brief": "inputs/rea-brief-test-queue/BRIEF.md O2-O5",
+    "queuetrail_spec_sha256": "27804a9600434f2e52b36feaa17934938962ec58d7302b782b8f2df32366f7d3",
+    "i18n": "1.14.8",
+    "i18n_sha256": "285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5"
+  },
+  "archives": {
+    "activesupport": {
+      "kind": "gem",
+      "role": "target",
+      "path": "activesupport-8.1.4.gem",
+      "sha256": "891dd3fe43c4fc8391934b237b1189bb1f661c932a84a840043db9d46a4e80df"
+    },
+    "minitest": {
+      "kind": "gem",
+      "path": "minitest-6.0.6.gem",
+      "sha256": "153ea36d1d987a62942382b61075745042a2b3123b1cd48f4c3675af9cc7d6f1"
+    },
+    "railties": {
+      "kind": "gem",
+      "path": "railties-8.1.4.gem",
+      "sha256": "b5e7a8e8984e33114d68af62227971960aae1e6c02bd7c9d826ffad97fff583c"
+    },
+    "rails_t2": {
+      "kind": "cited",
+      "files": {
+        "activesupport/lib/active_support/test_case.rb": {
+          "path": "cited/rails-926edf5/lib/active_support/test_case.rb",
+          "sha256": "9990a2b00c16255ed728f03e1b88ae8129560c014878eef14121215f97383046"
+        },
+        "activesupport/lib/active_support/testing/parallelization/server.rb": {
+          "path": "cited/rails-926edf5/lib/active_support/testing/parallelization/server.rb",
+          "sha256": "31b866ac397aac713f2b0f436355137dc1fc8cef6ee4cd81dee29e104417c980"
+        },
+        "activesupport/lib/active_support/testing/parallelization/test_distributor.rb": {
+          "path": "cited/rails-926edf5/lib/active_support/testing/parallelization/test_distributor.rb",
+          "sha256": "c16e2b138e60454ba14750624bd5d9959582f01d11241568d96772eb5f26b88a"
+        },
+        "activesupport/lib/active_support/testing/parallelization/thread_pool_executor.rb": {
+          "path": "cited/rails-926edf5/lib/active_support/testing/parallelization/thread_pool_executor.rb",
+          "sha256": "c1cdafa827d470092db33422a8d70c2603c836bfdc9d25475053137cca6a4ee9"
+        },
+        "activesupport/lib/active_support/testing/parallelization/worker.rb": {
+          "path": "cited/rails-926edf5/lib/active_support/testing/parallelization/worker.rb",
+          "sha256": "9e1ef497e469620672059772b77d5fc635b5591742de4486c0f15d4d870bd551"
+        },
+        "activesupport/lib/active_support/testing/parallelization.rb": {
+          "path": "cited/rails-926edf5/lib/active_support/testing/parallelization.rb",
+          "sha256": "e3e8f9d542f850b85ace0cd680d81dc8cafc985a44f707b08e56e99eebf0f657"
+        },
+        "activesupport/lib/active_support/testing/parallelize_executor.rb": {
+          "path": "cited/rails-926edf5/lib/active_support/testing/parallelize_executor.rb",
+          "sha256": "6044b91c3245cb50f195085f2d162b86ba542eea498237946f3534fa001a98cf"
+        }
+      }
+    },
+    "rails_t3": {
+      "kind": "cited",
+      "files": {
+        "activesupport/lib/active_support/test_case.rb": {
+          "path": "cited/rails-8082369/lib/active_support/test_case.rb",
+          "sha256": "b02f6f46c8d4b18234005d2acdaea77e0d746445439f409df94547e76884c9af"
+        },
+        "activesupport/lib/active_support/testing/parallelization/server.rb": {
+          "path": "cited/rails-8082369/lib/active_support/testing/parallelization/server.rb",
+          "sha256": "4298aac2ad3156d1763f1e9672dadf023abdb924cef5f912419fe747f94cbb89"
+        },
+        "activesupport/lib/active_support/testing/parallelization/worker.rb": {
+          "path": "cited/rails-8082369/lib/active_support/testing/parallelization/worker.rb",
+          "sha256": "bd3da183999774f419d2288a8912a3009120ec4615d4c52380dc5e659e31f341"
+        },
+        "activesupport/lib/active_support/testing/parallelization.rb": {
+          "path": "cited/rails-8082369/lib/active_support/testing/parallelization.rb",
+          "sha256": "1a98204f8a8619541fd76946221718f1af82695707d4c2f67ecd963c5b6148d5"
+        },
+        "activesupport/lib/active_support/testing/parallelize_executor.rb": {
+          "path": "cited/rails-8082369/lib/active_support/testing/parallelize_executor.rb",
+          "sha256": "30d4f6eba1c2e467440b7fb90fd020f5b5856b3dc2044cf3dac4db1a48964838"
+        }
+      }
+    },
+    "ruby": {
+      "kind": "cited",
+      "files": {
+        "internal/random.h": {
+          "path": "cited/ruby-v3_3_8/internal/random.h",
+          "sha256": "13e55eb51e49974a57f55f79433285a2ec9f5bd66d4c55741167c1d00dd77ec7"
+        },
+        "process.c": {
+          "path": "cited/ruby-v3_3_8/process.c",
+          "sha256": "899d71d4dce96d14f9fd28af82a4cf3f991423071479258e425996402d17313b"
+        },
+        "random.c": {
+          "path": "cited/ruby-v3_3_8/random.c",
+          "sha256": "62cb239aa6d4f7bf28b0bc97ed0f63a711ed209c4e72436ce9401e95608d7b3e"
+        },
+        "thread.c": {
+          "path": "cited/ruby-v3_3_8/thread.c",
+          "sha256": "a9170e641120eff578d355ff1e2cfa7e9273193154d9de85b6afec226e7c1fc8"
+        },
+        "thread_pthread.c": {
+          "path": "cited/ruby-v3_3_8/thread_pthread.c",
+          "sha256": "c9b4b21d0514830681c06ae25fb781c7c5a59d24d4e38ca0a0d426ab73754c5a"
+        }
+      }
+    },
+    "i18n": {
+      "kind": "gem",
+      "path": "i18n-1.14.8.gem",
+      "sha256": "285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5"
+    }
+  },
+  "notes": {
+    "R-Q1": "8.1.4 workers take jobs from an in-process Queue. Server#initialize sets @queue = Queue.new. Server#<< pushes the job. Server#pop pops it. Worker#work_from_queue loops while job = @queue.pop and calls perform_job. perform_job reads klass, method, reporter from job[0], job[1], job[2], sets the process title to Klass#method, and runs Minitest.run_one_method when that method exists, otherwise klass.new(method).run. The result object is passed to @queue.record. Minitest 6.0.6 removed Minitest.run_one_method, so the 8.1.4 else branch is the one that runs under the pinned minitest. ParallelizeExecutor#<< forwards to that queue only after parallelize_me!. Minitest::Parallel::Test::ClassMethods#run is what pushes [klass, method_name, reporter]. Status is read from that result via skipped?, error?, and passed?, not from the method name.",
+    "R-Q2": "No per-worker order is persisted. On parallelization.rb, server.rb, and worker.rb, grep -E 'srand|seed|File.write|File.open|log' has 0 hits (recon.log argv form, exit 1). On those three plus parallelize_executor.rb and test_case.rb, srand, seed, File.write, File.open, and Tempfile have 0 hits. The token log hits only test_case.rb:4 require tagged_logging. The token dump hits only server.rb:12 include DRb::DRbUndumped, which is a DRb marshalling marker, not a file dump. The whole activesupport 8.1.4 gem has 0 srand hits. @queue, @in_flight, @active_workers, and @worker_pids are in-memory.",
+    "R-Q3": "parallelize_setup registers Parallelization.after_fork_hook. parallelize_teardown registers run_cleanup_hook. Both comments say the feature is not available with threaded parallelization. after_fork sets parallel_worker_id to @number and calls each after_fork hook with @number. @number comes from @worker_count.times, so it is 0-based. set_process_title interpolates klass and method. with: :threads builds Minitest::Parallel::Executor. with: :processes builds Testing::Parallelization. PARALLEL_WORKERS overrides the worker count. Parallelization starts only when that env is set or the test count exceeds the threshold (default 50) and size > 1. railties' generated test_helper calls parallelize after rails/test_help.",
+    "R-Q4": "activesupport 8.1.4 contains no srand call. Worker#start uses fork do, which is Kernel#fork. Ruby v3_3_8 (b200bad6cd40d08e9f33b93e1a85c270b337867c, the revision reported by ruby 3.3.8 on this box) implements Kernel#fork as rb_f_fork -> rb_call_proc__fork -> proc_fork_pid -> rb_fork_ruby -> rb_fork_ruby2 -> after_fork_ruby. In the child (pid == 0) after_fork_ruby calls rb_thread_atfork, which calls rb_reset_random_seed. That function uninits the default MT and sets its seed to 0. The next default-rand use in rand_mt_start sees an uninitialized MT and draws a new seed via random_seed. Rails does not replace that with a recorded seed. This is a static citation, not a timed run.",
+    "R-Q5": "minitest 6.0.6 is the version locked by Rails v8.1.4 Gemfile.lock (minitest (6.0.6)); activesupport's gemspec only requires >= 5.1. --seed or SEED becomes Minitest.seed, then Minitest.run calls srand Minitest.seed. run_all_suites shuffles Runnable.runnables. For run_order :random or :parallel, runnable_methods calls srand Minitest.seed and methods.sort.shuffle. parallelize_me! sets run_order to :parallel and ClassMethods#run enqueues each method in that shuffled order. That enqueue order is the master order. It is not written down by Rails.",
+    "R-Q6": "Against parent 8082369, commit 926edf5 changes Server#pop to pop(worker_id) and replaces @queue.pop with @distributor.take(worker_id:). The parent still has @queue and pop with no worker id. Parallelization.new selects RoundRobinWorkStealingDistributor when work_stealing is true, otherwise RoundRobinDistributor. Round-robin add_test assigns @next_worker then increments it, so assignment follows arrival order. The test_distributor comment says arrival order is the Minitest seed shuffle and is reproducible for a given seed. test_case.rb says the same sequence runs on each worker for the same seed and worker count, and then says this is not a guarantee of deterministic test execution. work_stealing's next_job returns pop_now(worker_id) || steal(worker_id), and steal pops another worker's queue. Which queue is empty first depends on how long that worker's tests take. File.write, File.open, Tempfile, and Marshal.dump have 0 hits in the 8.2 parallelization files listed here, so 8.2 does not persist a per-worker trail. The word seed appears only in those comments.",
+    "C1": "Control is the already frozen test-queue 0.12.0 brief at inputs/rea-brief-test-queue/. BRIEF.md O2-O5: the worker keeps an ordered suite list and Marshal-dumps it under /tmp, the master reads and deletes that file, stats have no worker id, and the queue is pulled dynamically. Those observations are Q2 and Q4 in that directory's observations.json. This Rails brief does not re-execute that gem.",
+    "R-Q7": "i18n 1.14.8 is the version in Rails v8.1.4 Gemfile.lock (i18n (1.14.8)). activesupport 8.1.4's gemspec requires i18n >= 1.6 and < 2, not an exact version. The downloaded gem sha256 equals the RubyGems API sha 285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5. Config#locale= calls I18n.enforce_available_locales!(locale) before assigning @locale. enforce_available_locales! raises I18n::InvalidLocale when the locale is not available and enforcement is on. The default of @@enforce_available_locales is true. I18n.config is stored with Thread.current.thread_variable_get/set(:i18n_config), so the locale lives on the current thread. ActiveSupport::I18n::Railtie sets config.i18n, turns enforcement off while it copies settings, then restores the saved value (the default when the app did not set one). A locale that is not in available_locales therefore raises after initialization. with: :threads gives each thread its own config object."
+  },
+  "observations": {
+    "R-Q1": {
+      "groups": [
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 15,
+              "text": "          @queue = Queue.new"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 21,
+              "text": "        def record(reporter, result)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 28,
+              "text": "            reporter.record(result)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 32,
+              "text": "        def <<(o)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 33,
+              "text": "          o[2] = DRbObject.new(o[2]) if o"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 34,
+              "text": "          @queue << o"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 37,
+              "text": "        def pop"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 38,
+              "text": "          if test = @queue.pop"
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 36,
+              "text": "        def work_from_queue"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 37,
+              "text": "          while job = @queue.pop"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 38,
+              "text": "            perform_job(job)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 42,
+              "text": "        def perform_job(job)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 43,
+              "text": "          klass    = job[0]"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 44,
+              "text": "          method   = job[1]"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 45,
+              "text": "          reporter = job[2]"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 47,
+              "text": "          set_process_title(\"#{klass}##{method}\")"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 49,
+              "text": "          result = klass.with_info_handler reporter do"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 50,
+              "text": "            if Minitest.respond_to? :run_one_method"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 51,
+              "text": "              Minitest.run_one_method klass, method"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 52,
+              "text": "            else"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 53,
+              "text": "              klass.new(method).run"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 57,
+              "text": "          safe_record(reporter, result)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 64,
+              "text": "            @queue.record(reporter, result)"
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelization.rb",
+              "line": 54,
+              "text": "      def <<(work)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization.rb",
+              "line": 55,
+              "text": "        @queue_server << work"
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 22,
+              "text": "      def <<(work)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 23,
+              "text": "        parallel_executor << work if parallelized?"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 47,
+              "text": "        def parallelize"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 48,
+              "text": "          @parallelized = true"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 49,
+              "text": "          Minitest::Test.parallelize_me!"
+            }
+          ]
+        },
+        {
+          "archive": "minitest",
+          "lines": [
+            {
+              "file": "lib/minitest/parallel.rb",
+              "line": 61,
+              "text": "      module ClassMethods # :nodoc:"
+            },
+            {
+              "file": "lib/minitest/parallel.rb",
+              "line": 62,
+              "text": "        def run klass, method_name, reporter"
+            },
+            {
+              "file": "lib/minitest/parallel.rb",
+              "line": 63,
+              "text": "          Minitest.parallel_executor << [klass, method_name, reporter]"
+            }
+          ]
+        },
+        {
+          "archive": "minitest",
+          "lines": [
+            {
+              "file": "lib/minitest.rb",
+              "line": 611,
+              "text": "    def passed?"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 612,
+              "text": "      not self.failure"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 633,
+              "text": "    def result_code"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 634,
+              "text": "      self.failure and self.failure.result_code or \".\""
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 640,
+              "text": "    def skipped?"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 641,
+              "text": "      self.failure and Skip === self.failure"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 647,
+              "text": "    def error?"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 648,
+              "text": "      self.failures.any? UnexpectedError"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 659,
+              "text": "  class Result < Runnable"
+            }
+          ]
+        },
+        {
+          "archive": "minitest",
+          "lines": [
+            {
+              "file": "History.rdoc",
+              "line": 79,
+              "text": "    * Runnable.run_one_method -> Runnable.run"
+            },
+            {
+              "file": "History.rdoc",
+              "line": 80,
+              "text": "    * Removed Minitest.run_one_method (might bring it back to raise?)"
+            }
+          ]
+        },
+        {
+          "archive": "minitest",
+          "lines": [
+            {
+              "file": "lib/minitest.rb",
+              "line": 1057,
+              "text": "    def result_code # :nodoc:"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 1058,
+              "text": "      result_label[0, 1]"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 1061,
+              "text": "    def result_label # :nodoc:"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 1062,
+              "text": "      \"Failure\""
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 1069,
+              "text": "  class Skip < Assertion"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 1070,
+              "text": "    def result_label # :nodoc:"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 1071,
+              "text": "      \"Skipped\""
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 1109,
+              "text": "    def result_label # :nodoc:"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 1110,
+              "text": "      \"Error\""
+            }
+          ]
+        }
+      ]
+    },
+    "R-Q2": {
+      "groups": [
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 12,
+              "text": "        include DRb::DRbUndumped"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 16,
+              "text": "          @active_workers = Concurrent::Map.new"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 17,
+              "text": "          @worker_pids = Concurrent::Map.new"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 18,
+              "text": "          @in_flight = Concurrent::Map.new"
+            }
+          ]
+        }
+      ],
+      "scans": [
+        {
+          "archive": "activesupport",
+          "files": [
+            "lib/active_support/testing/parallelization.rb",
+            "lib/active_support/testing/parallelization/server.rb",
+            "lib/active_support/testing/parallelization/worker.rb"
+          ],
+          "pattern": "srand|seed|File\\.write|File\\.open|log",
+          "hits": []
+        },
+        {
+          "archive": "activesupport",
+          "files": [
+            "lib/active_support/testing/parallelization.rb",
+            "lib/active_support/testing/parallelization/server.rb",
+            "lib/active_support/testing/parallelization/worker.rb",
+            "lib/active_support/testing/parallelize_executor.rb",
+            "lib/active_support/test_case.rb"
+          ],
+          "pattern": "srand|seed|File\\.write|File\\.open|Tempfile",
+          "hits": []
+        },
+        {
+          "archive": "activesupport",
+          "files": [
+            "lib/active_support/testing/parallelization.rb",
+            "lib/active_support/testing/parallelization/server.rb",
+            "lib/active_support/testing/parallelization/worker.rb",
+            "lib/active_support/testing/parallelize_executor.rb",
+            "lib/active_support/test_case.rb"
+          ],
+          "pattern": "log",
+          "hits": [
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 4,
+              "text": "require \"active_support/testing/tagged_logging\""
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "files": [
+            "lib/active_support/testing/parallelization.rb",
+            "lib/active_support/testing/parallelization/server.rb",
+            "lib/active_support/testing/parallelization/worker.rb",
+            "lib/active_support/testing/parallelize_executor.rb",
+            "lib/active_support/test_case.rb"
+          ],
+          "pattern": "dump",
+          "hits": [
+            {
+              "file": "lib/active_support/testing/parallelization/server.rb",
+              "line": 12,
+              "text": "        include DRb::DRbUndumped"
+            }
+          ]
+        }
+      ]
+    },
+    "R-Q3": {
+      "groups": [
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 34,
+              "text": "      def parallel_worker_id"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 35,
+              "text": "        @@parallel_worker_id"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 38,
+              "text": "      def parallel_worker_id=(value) # :nodoc:"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 39,
+              "text": "        @@parallel_worker_id = value"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 91,
+              "text": "      # The default parallelization method is to fork processes. If you'd like to"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 92,
+              "text": "      # use threads instead you can pass <tt>with: :threads</tt> to the +parallelize+"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 96,
+              "text": "      #   parallelize(workers: :number_of_processors, with: :threads)"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 98,
+              "text": "      # The threaded parallelization uses minitest's parallel executor directly."
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 99,
+              "text": "      # The processes parallelization uses a Ruby DRb server."
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 113,
+              "text": "      def parallelize(workers: :number_of_processors, with: :processes, threshold: ActiveSupport.test_parallelization_threshold, parallelize_databases: ActiveSupport.parallelize_test_databases)"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 115,
+              "text": "        when ENV[\"PARALLEL_WORKERS\"]"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 116,
+              "text": "          workers = ENV[\"PARALLEL_WORKERS\"].to_i"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 121,
+              "text": "        if with == :processes"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 125,
+              "text": "        Minitest.parallel_executor = ActiveSupport::Testing::ParallelizeExecutor.new(size: workers, with: with, threshold: threshold)"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 146,
+              "text": "      # Note: this feature is not available with the threaded parallelization."
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 151,
+              "text": "      #     parallelize_setup do"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 155,
+              "text": "      def parallelize_setup(&block)"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 156,
+              "text": "        ActiveSupport::Testing::Parallelization.after_fork_hook(&block)"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 163,
+              "text": "      # Note: this feature is not available with the threaded parallelization."
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 168,
+              "text": "      #     parallelize_teardown do"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 172,
+              "text": "      def parallelize_teardown(&block)"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 173,
+              "text": "        ActiveSupport::Testing::Parallelization.run_cleanup_hook(&block)"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 199,
+              "text": "    def parallel_worker_id"
+            },
+            {
+              "file": "lib/active_support/test_case.rb",
+              "line": 200,
+              "text": "      self.class.parallel_worker_id"
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 47,
+              "text": "          set_process_title(\"#{klass}##{method}\")"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 84,
+              "text": "        def after_fork"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 85,
+              "text": "          ActiveSupport::TestCase.parallel_worker_id = @number"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 87,
+              "text": "          Parallelization.after_fork_hooks.each do |cb|"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 88,
+              "text": "            cb.call(@number)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 103,
+              "text": "          def set_process_title(status)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 104,
+              "text": "            Process.setproctitle(\"Rails test worker #{@number} - #{status}\")"
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelization.rb",
+              "line": 49,
+              "text": "        @worker_pool = @worker_count.times.map do |worker|"
+            },
+            {
+              "file": "lib/active_support/testing/parallelization.rb",
+              "line": 50,
+              "text": "          Worker.new(worker, @url).start"
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 36,
+              "text": "          case parallelize_with"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 37,
+              "text": "          when :processes"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 38,
+              "text": "            Testing::Parallelization.new(size)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 39,
+              "text": "          when :threads"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 40,
+              "text": "            ActiveSupport::TestCase.lock_threads = false if defined?(ActiveSupport::TestCase.lock_threads)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 41,
+              "text": "            Minitest::Parallel::Executor.new(size)"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 56,
+              "text": "        def should_parallelize?"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 57,
+              "text": "          (ENV[\"PARALLEL_WORKERS\"] || tests_count > threshold) && many_workers?"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 60,
+              "text": "        def many_workers?"
+            },
+            {
+              "file": "lib/active_support/testing/parallelize_executor.rb",
+              "line": 61,
+              "text": "          size > 1"
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support.rb",
+              "line": 105,
+              "text": "  cattr_accessor :test_parallelization_threshold, default: 50 # :nodoc:"
+            },
+            {
+              "file": "lib/active_support.rb",
+              "line": 106,
+              "text": "  cattr_accessor :parallelize_test_databases, default: true # :nodoc:"
+            }
+          ]
+        },
+        {
+          "archive": "railties",
+          "lines": [
+            {
+              "file": "lib/rails/test_help.rb",
+              "line": 9,
+              "text": "require \"active_support/test_case\""
+            },
+            {
+              "file": "lib/rails/test_help.rb",
+              "line": 11,
+              "text": "require \"active_support/testing/autorun\""
+            }
+          ]
+        },
+        {
+          "archive": "railties",
+          "lines": [
+            {
+              "file": "lib/rails/generators/rails/app/templates/test/test_helper.rb.tt",
+              "line": 1,
+              "text": "ENV[\"RAILS_ENV\"] ||= \"test\""
+            },
+            {
+              "file": "lib/rails/generators/rails/app/templates/test/test_helper.rb.tt",
+              "line": 2,
+              "text": "require_relative \"../config/environment\""
+            },
+            {
+              "file": "lib/rails/generators/rails/app/templates/test/test_helper.rb.tt",
+              "line": 3,
+              "text": "require \"rails/test_help\""
+            },
+            {
+              "file": "lib/rails/generators/rails/app/templates/test/test_helper.rb.tt",
+              "line": 7,
+              "text": "    # Run tests in parallel with specified workers"
+            },
+            {
+              "file": "lib/rails/generators/rails/app/templates/test/test_helper.rb.tt",
+              "line": 9,
+              "text": "    parallelize(workers: :number_of_processors)"
+            }
+          ]
+        }
+      ]
+    },
+    "R-Q4": {
+      "groups": [
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/testing/parallelization/worker.rb",
+              "line": 15,
+              "text": "          fork do"
+            }
+          ]
+        },
+        {
+          "archive": "ruby",
+          "lines": [
+            {
+              "file": "process.c",
+              "line": 1683,
+              "text": "after_fork_ruby(rb_pid_t pid)"
+            },
+            {
+              "file": "process.c",
+              "line": 1685,
+              "text": "    if (pid == 0) {"
+            },
+            {
+              "file": "process.c",
+              "line": 1686,
+              "text": "        // child"
+            },
+            {
+              "file": "process.c",
+              "line": 1688,
+              "text": "        rb_thread_atfork();"
+            },
+            {
+              "file": "process.c",
+              "line": 4224,
+              "text": "        before_fork_ruby();"
+            },
+            {
+              "file": "process.c",
+              "line": 4227,
+              "text": "            pid = rb_fork();"
+            },
+            {
+              "file": "process.c",
+              "line": 4235,
+              "text": "        after_fork_ruby(pid);"
+            },
+            {
+              "file": "process.c",
+              "line": 4263,
+              "text": "    rb_pid_t pid = rb_fork_ruby(NULL);"
+            },
+            {
+              "file": "process.c",
+              "line": 4273,
+              "text": "rb_call_proc__fork(void)"
+            },
+            {
+              "file": "process.c",
+              "line": 4278,
+              "text": "        return proc_fork_pid();"
+            },
+            {
+              "file": "process.c",
+              "line": 4293,
+              "text": " *  Currently, this is called via Kernel#fork, Process.fork, and"
+            },
+            {
+              "file": "process.c",
+              "line": 4310,
+              "text": "    rb_pid_t pid = proc_fork_pid();"
+            },
+            {
+              "file": "process.c",
+              "line": 4375,
+              "text": "rb_f_fork(VALUE obj)"
+            },
+            {
+              "file": "process.c",
+              "line": 4379,
+              "text": "    pid = rb_call_proc__fork();"
+            },
+            {
+              "file": "process.c",
+              "line": 9121,
+              "text": "    rb_define_global_function(\"fork\", rb_f_fork, 0);"
+            }
+          ]
+        },
+        {
+          "archive": "ruby",
+          "lines": [
+            {
+              "file": "thread.c",
+              "line": 4709,
+              "text": "rb_thread_atfork(void)"
+            },
+            {
+              "file": "thread.c",
+              "line": 4717,
+              "text": "    /* We don't want reproduce CVE-2003-0900. */"
+            },
+            {
+              "file": "thread.c",
+              "line": 4718,
+              "text": "    rb_reset_random_seed();"
+            }
+          ]
+        },
+        {
+          "archive": "ruby",
+          "lines": [
+            {
+              "file": "random.c",
+              "line": 144,
+              "text": "rand_mt_start(rb_random_mt_t *r)"
+            },
+            {
+              "file": "random.c",
+              "line": 146,
+              "text": "    if (!genrand_initialized(&r->mt)) {"
+            },
+            {
+              "file": "random.c",
+              "line": 147,
+              "text": "        r->base.seed = rand_init(&random_mt_if, &r->base, random_seed(Qundef));"
+            },
+            {
+              "file": "random.c",
+              "line": 1782,
+              "text": "rb_reset_random_seed(void)"
+            },
+            {
+              "file": "random.c",
+              "line": 1784,
+              "text": "    rb_random_mt_t *r = default_rand();"
+            },
+            {
+              "file": "random.c",
+              "line": 1785,
+              "text": "    uninit_genrand(&r->mt);"
+            },
+            {
+              "file": "random.c",
+              "line": 1786,
+              "text": "    r->base.seed = INT2FIX(0);"
+            }
+          ]
+        }
+      ],
+      "scans": [
+        {
+          "archive": "activesupport",
+          "suffix": ".rb",
+          "pattern": "srand",
+          "hits": []
+        }
+      ]
+    },
+    "R-Q5": {
+      "groups": [
+        {
+          "archive": "minitest",
+          "lines": [
+            {
+              "file": "lib/minitest.rb",
+              "line": 13,
+              "text": "  VERSION = \"6.0.6\" # :nodoc:"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 24,
+              "text": "  # The random seed used for this run. This is used to srand at the"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 29,
+              "text": "  cattr_accessor :seed"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 180,
+              "text": "      desc = \"Sets random seed. Also via env, eg: SEED=42\""
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 181,
+              "text": "      opts.on \"-s\", \"--seed SEED\", Integer, desc do |m|"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 182,
+              "text": "        options[:seed] = m"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 266,
+              "text": "    unless options[:seed] then"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 267,
+              "text": "      srand"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 268,
+              "text": "      options[:seed] = (ENV[\"SEED\"] || srand).to_i % 0xFFFF"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 269,
+              "text": "      orig_args << \"--seed\" << options[:seed].to_s"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 302,
+              "text": "    Minitest.seed = options[:seed]"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 303,
+              "text": "    srand Minitest.seed"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 353,
+              "text": "    suites = Runnable.runnables.shuffle"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 354,
+              "text": "    parallel, serial = suites.partition { |s| s.run_order == :parallel }"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 361,
+              "text": "    serial.map { |suite| suite.run_suite reporter, options } +"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 362,
+              "text": "      parallel.map { |suite| suite.run_suite reporter, options }"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 469,
+              "text": "        filtered_methods.each do |method_name|"
+            },
+            {
+              "file": "lib/minitest.rb",
+              "line": 473,
+              "text": "          run self, method_name, reporter"
+            }
+          ]
+        },
+        {
+          "archive": "minitest",
+          "lines": [
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 56,
+              "text": "    def self.parallelize_me!"
+            },
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 57,
+              "text": "      return unless Minitest.parallel_executor"
+            },
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 58,
+              "text": "      include Minitest::Parallel::Test"
+            },
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 59,
+              "text": "      extend Minitest::Parallel::Test::ClassMethods"
+            },
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 67,
+              "text": "    def self.runnable_methods"
+            },
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 70,
+              "text": "      case self.run_order"
+            },
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 71,
+              "text": "      when :random, :parallel then"
+            },
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 72,
+              "text": "        srand Minitest.seed"
+            },
+            {
+              "file": "lib/minitest/test.rb",
+              "line": 73,
+              "text": "        methods.sort.shuffle"
+            }
+          ]
+        },
+        {
+          "archive": "minitest",
+          "lines": [
+            {
+              "file": "lib/minitest/parallel.rb",
+              "line": 62,
+              "text": "        def run klass, method_name, reporter"
+            },
+            {
+              "file": "lib/minitest/parallel.rb",
+              "line": 63,
+              "text": "          Minitest.parallel_executor << [klass, method_name, reporter]"
+            },
+            {
+              "file": "lib/minitest/parallel.rb",
+              "line": 66,
+              "text": "        def run_order"
+            },
+            {
+              "file": "lib/minitest/parallel.rb",
+              "line": 67,
+              "text": "          :parallel"
+            }
+          ]
+        }
+      ]
+    },
+    "R-Q6": {
+      "groups": [
+        {
+          "archive": "rails_t3",
+          "lines": [
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 15,
+              "text": "          @queue = Queue.new"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 34,
+              "text": "          @queue << o"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 37,
+              "text": "        def pop"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 38,
+              "text": "          if test = @queue.pop"
+            }
+          ]
+        },
+        {
+          "archive": "rails_t3",
+          "lines": [
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/worker.rb",
+              "line": 39,
+              "text": "          while job = @queue.pop"
+            }
+          ]
+        },
+        {
+          "archive": "rails_t2",
+          "lines": [
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 13,
+              "text": "        def initialize(distributor:)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 14,
+              "text": "          @distributor = distributor"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 33,
+              "text": "          @distributor.add_test(o)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 36,
+              "text": "        def pop(worker_id)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/server.rb",
+              "line": 37,
+              "text": "          if test = @distributor.take(worker_id: worker_id)"
+            }
+          ]
+        },
+        {
+          "archive": "rails_t2",
+          "lines": [
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/worker.rb",
+              "line": 39,
+              "text": "          while job = @queue.pop(@number)"
+            }
+          ]
+        },
+        {
+          "archive": "rails_t2",
+          "lines": [
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization.rb",
+              "line": 38,
+              "text": "      def initialize(worker_count, work_stealing: false)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization.rb",
+              "line": 41,
+              "text": "        distributor = (work_stealing ? RoundRobinWorkStealingDistributor : RoundRobinDistributor).new \\"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization.rb",
+              "line": 42,
+              "text": "          worker_count: worker_count"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization.rb",
+              "line": 44,
+              "text": "        @queue_server = Server.new(distributor: distributor)"
+            }
+          ]
+        },
+        {
+          "archive": "rails_t2",
+          "lines": [
+            {
+              "file": "activesupport/lib/active_support/testing/parallelize_executor.rb",
+              "line": 8,
+              "text": "      def initialize(size:, with:, threshold: ActiveSupport.test_parallelization_threshold, work_stealing: false)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelize_executor.rb",
+              "line": 39,
+              "text": "            Testing::Parallelization.new(size, work_stealing: work_stealing)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelize_executor.rb",
+              "line": 42,
+              "text": "            distributor = (work_stealing ? Testing::Parallelization::RoundRobinWorkStealingDistributor : Testing::Parallelization::RoundRobinDistributor).new \\"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelize_executor.rb",
+              "line": 45,
+              "text": "            Testing::Parallelization::ThreadPoolExecutor.new(size: size, distributor: distributor)"
+            }
+          ]
+        },
+        {
+          "archive": "rails_t2",
+          "lines": [
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 46,
+              "text": "        def add_test(test)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 50,
+              "text": "        def take(...)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 69,
+              "text": "      # Tests arrive already shuffled by Minitest based on the seed. Since the arrival"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 70,
+              "text": "      # order is deterministic for a given seed, round-robin assignment produces"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 71,
+              "text": "      # reproducible test-to-worker distribution."
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 75,
+              "text": "      class RoundRobinDistributor < TestDistributor"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 87,
+              "text": "        def add_test(test)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 91,
+              "text": "            worker_id = @next_worker"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 92,
+              "text": "            @next_worker = (@next_worker + 1) % @worker_count"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 99,
+              "text": "        def take(worker_id:)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 160,
+              "text": "      # Round-robin distributor with work stealing enabled."
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 162,
+              "text": "      # but when a worker exhausts its queue, it can steal work from other workers"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 166,
+              "text": "          def next_job(worker_id)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 167,
+              "text": "            pop_now(worker_id) || steal(worker_id)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 170,
+              "text": "          def steal(worker_id)"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 174,
+              "text": "              if job = pop_now(other_id)"
+            }
+          ]
+        },
+        {
+          "archive": "rails_t2",
+          "lines": [
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 99,
+              "text": "      # Parallelization shuffles tests and distributes them to workers in"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 100,
+              "text": "      # round-robin order, so given the same seed value and worker count, the"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 101,
+              "text": "      # same sequence of tests will run on each worker. This makes flaky tests"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 102,
+              "text": "      # caused by parallel test interdependence somewhat easier to reproduce,"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 103,
+              "text": "      # though it is not a guarantee of deterministic test execution."
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 106,
+              "text": "      # of the slow tests. Enable +work_stealing+ to allow idle workers to steal"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 108,
+              "text": "      # reproducible flaky-test failures:"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 110,
+              "text": "      #   parallelize(workers: :number_of_processors, work_stealing: true)"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 120,
+              "text": "      def parallelize(workers: :number_of_processors, with: :processes, threshold: ActiveSupport.test_parallelization_threshold, parallelize_databases: ActiveSupport.parallelize_test_databases, work_stealing: false)"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 132,
+              "text": "        Minitest.parallel_executor = ActiveSupport::Testing::ParallelizeExecutor.new(size: workers, with: with, threshold: threshold, work_stealing: work_stealing)"
+            }
+          ]
+        }
+      ],
+      "scans": [
+        {
+          "archive": "rails_t2",
+          "files": [
+            "activesupport/lib/active_support/testing/parallelization.rb",
+            "activesupport/lib/active_support/testing/parallelization/server.rb",
+            "activesupport/lib/active_support/testing/parallelization/worker.rb",
+            "activesupport/lib/active_support/testing/parallelize_executor.rb",
+            "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+            "activesupport/lib/active_support/test_case.rb"
+          ],
+          "pattern": "File\\.write|File\\.open|Tempfile|Marshal\\.dump",
+          "hits": []
+        },
+        {
+          "archive": "rails_t2",
+          "files": [
+            "activesupport/lib/active_support/testing/parallelization.rb",
+            "activesupport/lib/active_support/testing/parallelization/server.rb",
+            "activesupport/lib/active_support/testing/parallelization/worker.rb",
+            "activesupport/lib/active_support/testing/parallelize_executor.rb",
+            "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+            "activesupport/lib/active_support/test_case.rb"
+          ],
+          "pattern": "\\bseed\\b",
+          "hits": [
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 69,
+              "text": "      # Tests arrive already shuffled by Minitest based on the seed. Since the arrival"
+            },
+            {
+              "file": "activesupport/lib/active_support/testing/parallelization/test_distributor.rb",
+              "line": 70,
+              "text": "      # order is deterministic for a given seed, round-robin assignment produces"
+            },
+            {
+              "file": "activesupport/lib/active_support/test_case.rb",
+              "line": 100,
+              "text": "      # round-robin order, so given the same seed value and worker count, the"
+            }
+          ]
+        }
+      ]
+    },
+    "R-Q7": {
+      "groups": [
+        {
+          "archive": "i18n",
+          "lines": [
+            {
+              "file": "lib/i18n/config.rb",
+              "line": 5,
+              "text": "module I18n"
+            },
+            {
+              "file": "lib/i18n/config.rb",
+              "line": 6,
+              "text": "  class Config"
+            },
+            {
+              "file": "lib/i18n/config.rb",
+              "line": 13,
+              "text": "    # Sets the current locale pseudo-globally, i.e. in the Thread.current hash."
+            },
+            {
+              "file": "lib/i18n/config.rb",
+              "line": 14,
+              "text": "    def locale=(locale)"
+            },
+            {
+              "file": "lib/i18n/config.rb",
+              "line": 15,
+              "text": "      I18n.enforce_available_locales!(locale)"
+            },
+            {
+              "file": "lib/i18n/config.rb",
+              "line": 16,
+              "text": "      @locale = locale && locale.to_sym"
+            },
+            {
+              "file": "lib/i18n/config.rb",
+              "line": 140,
+              "text": "    @@enforce_available_locales = true"
+            },
+            {
+              "file": "lib/i18n.rb",
+              "line": 57,
+              "text": "    def config"
+            },
+            {
+              "file": "lib/i18n.rb",
+              "line": 58,
+              "text": "      Thread.current.thread_variable_get(:i18n_config) ||"
+            },
+            {
+              "file": "lib/i18n.rb",
+              "line": 59,
+              "text": "        Thread.current.thread_variable_set(:i18n_config, I18n::Config.new)"
+            },
+            {
+              "file": "lib/i18n.rb",
+              "line": 63,
+              "text": "    def config=(value)"
+            },
+            {
+              "file": "lib/i18n.rb",
+              "line": 64,
+              "text": "      Thread.current.thread_variable_set(:i18n_config, value)"
+            },
+            {
+              "file": "lib/i18n.rb",
+              "line": 381,
+              "text": "    def enforce_available_locales!(locale)"
+            },
+            {
+              "file": "lib/i18n.rb",
+              "line": 382,
+              "text": "      if locale != false && config.enforce_available_locales"
+            },
+            {
+              "file": "lib/i18n.rb",
+              "line": 383,
+              "text": "        raise I18n::InvalidLocale.new(locale) if !locale_available?(locale)"
+            }
+          ]
+        },
+        {
+          "archive": "activesupport",
+          "lines": [
+            {
+              "file": "lib/active_support/i18n_railtie.rb",
+              "line": 11,
+              "text": "    config.i18n = ActiveSupport::OrderedOptions.new"
+            },
+            {
+              "file": "lib/active_support/i18n_railtie.rb",
+              "line": 43,
+              "text": "      enforce_available_locales = app.config.i18n.delete(:enforce_available_locales)"
+            },
+            {
+              "file": "lib/active_support/i18n_railtie.rb",
+              "line": 44,
+              "text": "      enforce_available_locales = I18n.enforce_available_locales if enforce_available_locales.nil?"
+            },
+            {
+              "file": "lib/active_support/i18n_railtie.rb",
+              "line": 45,
+              "text": "      I18n.enforce_available_locales = false"
+            },
+            {
+              "file": "lib/active_support/i18n_railtie.rb",
+              "line": 59,
+              "text": "          I18n.public_send(\"#{setting}=\", value)"
+            },
+            {
+              "file": "lib/active_support/i18n_railtie.rb",
+              "line": 65,
+              "text": "      # Restore available locales check so it will take place from now on."
+            },
+            {
+              "file": "lib/active_support/i18n_railtie.rb",
+              "line": 66,
+              "text": "      I18n.enforce_available_locales = enforce_available_locales"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

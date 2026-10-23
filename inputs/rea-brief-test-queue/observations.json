@@ -1,0 +1,127 @@
+{
+  "target_sha256": "78632f446a06657a5f11c0606d8de25b7738ed49912c9c1b2c5c6c0b0ee82343",
+  "control_sha256": "181898cbee2ffb1c796274ce31d27f792a421324609bfc7e9b5531d929d91eda",
+  "notes": {
+    "Q1": "The worker RNG is seeded by a bare srand with no argument. The return value is not stored. The worker startup line prints pid and hostname, not the seed.",
+    "Q2": "The ordered suite list is the in-memory @suite_stats array, dumped to /tmp/test_queue_worker_<pid>_suites, then deleted by the master after it is loaded.",
+    "Q3": "TEST_QUEUE_STATS defaults to .test_queue_stats. Each suite record is name, path, duration, and last_seen_at, stored in a hash keyed by name. No worker id or pid field.",
+    "Q4": "Iterator#each yields each suite. Runner#after_fork_internal(num, iterator) runs in the forked worker and then calls after_fork(num). num is 1-based (i + 1).",
+    "Q5": "QueueRunner is built from ARGV once. run_worker calls run_each and neither method assigns configuration.seed. The master prints configuration.seed. The worker inherits that configuration.",
+    "C1": "parallel_tests groups files statically and reprints a failing group with command_with_seed, which appends --seed. The control tree has no srand call.",
+    "O6": "An RSpec suite name is example_or_group.id when that method exists, otherwise full_description, otherwise metadata[:full_description], otherwise metadata[:example_group][:full_description]. split_groups keeps top-level groups, and yields each group's descendant examples when TEST_QUEUE_SPLIT_GROUPS=true, except groups whose metadata no_split is set.",
+    "O7": "ExampleGroup.failure_count maps status == 'failed' and then takes length, so the integer equals the number of direct examples, failed or not. Iterator#each adds that integer to @failures. @failures is compared with @early_failure_limit in the same file. The inference that the limit misfires on a real run is UNPROVEN until Part B. This entry is a static observation only."
+  },
+  "observations": {
+    "Q1": {
+      "gem": "target",
+      "lines": [
+        {"file": "lib/test_queue/runner.rb", "line": 370, "text": "      srand"},
+        {"file": "lib/test_queue/runner.rb", "line": 380, "text": "      puts \"==> Starting #{$0} (#{Process.pid} on #{Socket.gethostname}) - iterating over #{iterator.sock}\""}
+      ]
+    },
+    "Q2": {
+      "gem": "target",
+      "lines": [
+        {"file": "lib/test_queue/iterator.rb", "line": 12, "text": "      @suite_stats = []"},
+        {"file": "lib/test_queue/iterator.rb", "line": 68, "text": "          @suite_stats << TestQueue::Stats::Suite.new(suite_name, path, Time.now - start, Time.now)"},
+        {"file": "lib/test_queue/iterator.rb", "line": 79, "text": "      File.open(\"/tmp/test_queue_worker_#{$$}_suites\", 'wb') do |f|"},
+        {"file": "lib/test_queue/iterator.rb", "line": 80, "text": "        Marshal.dump(@suite_stats, f)"},
+        {"file": "lib/test_queue/runner.rb", "line": 443, "text": "      if File.exist?(file = \"/tmp/test_queue_worker_#{worker.pid}_suites\")"},
+        {"file": "lib/test_queue/runner.rb", "line": 444, "text": "        worker.suites.replace(Marshal.load(File.binread(file)))"},
+        {"file": "lib/test_queue/runner.rb", "line": 445, "text": "        FileUtils.rm(file)"},
+        {"file": "lib/test_queue/runner.rb", "line": 440, "text": "        FileUtils.rm(file)"}
+      ]
+    },
+    "Q3": {
+      "gem": "target",
+      "lines": [
+        {"file": "lib/test_queue/stats.rb", "line": 6, "text": "      attr_reader :name, :path, :duration, :last_seen_at"},
+        {"file": "lib/test_queue/stats.rb", "line": 27, "text": "        { name: name, path: path, duration: duration, last_seen_at: last_seen_at.to_i }"},
+        {"file": "lib/test_queue/stats.rb", "line": 52, "text": "    def record_suites(suites)"},
+        {"file": "lib/test_queue/stats.rb", "line": 53, "text": "      suites.each do |suite|"},
+        {"file": "lib/test_queue/stats.rb", "line": 54, "text": "        @suites[suite.name] = suite"},
+        {"file": "lib/test_queue/stats.rb", "line": 55, "text": "      end"},
+        {"file": "lib/test_queue/stats.rb", "line": 56, "text": "    end"},
+        {"file": "lib/test_queue/runner.rb", "line": 218, "text": "      ENV['TEST_QUEUE_STATS'] || '.test_queue_stats'"}
+      ]
+    },
+    "Q4": {
+      "gem": "target",
+      "lines": [
+        {"file": "lib/test_queue/iterator.rb", "line": 24, "text": "    def each"},
+        {"file": "lib/test_queue/iterator.rb", "line": 66, "text": "            yield suite"},
+        {"file": "lib/test_queue/iterator.rb", "line": 69, "text": "          @failures += suite.failure_count if suite.respond_to? :failure_count"},
+        {"file": "lib/test_queue/runner.rb", "line": 283, "text": "        num = i + 1"},
+        {"file": "lib/test_queue/runner.rb", "line": 289, "text": "          after_fork_internal(num, iterator)"},
+        {"file": "lib/test_queue/runner.rb", "line": 369, "text": "    def after_fork_internal(num, iterator)"},
+        {"file": "lib/test_queue/runner.rb", "line": 383, "text": "      after_fork(num)"},
+        {"file": "lib/test_queue/runner.rb", "line": 397, "text": "    def after_fork(num)"}
+      ]
+    },
+    "Q5": {
+      "gem": "target",
+      "lines": [
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 16, "text": "        @rspec = ::RSpec::Core::QueueRunner.new"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 20, "text": "        seed_notification = ::RSpec::Core::Notifications::SeedNotification.new(@rspec.configuration.seed, seed_used?)"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 26, "text": "      def run_worker(iterator)"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 27, "text": "        @rspec.run_each(iterator).to_i"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 38, "text": "        @rspec.configuration.seed && @rspec.configuration.seed_used?"},
+        {"file": "lib/test_queue/runner/rspec_ext.rb", "line": 24, "text": "    def initialize"},
+        {"file": "lib/test_queue/runner/rspec_ext.rb", "line": 25, "text": "      options = ConfigurationOptions.new(ARGV)"},
+        {"file": "lib/test_queue/runner/rspec_ext.rb", "line": 26, "text": "      super(options)"},
+        {"file": "lib/test_queue/runner/rspec_ext.rb", "line": 29, "text": "    def run_specs(iterator)"},
+        {"file": "lib/test_queue/runner/rspec_ext.rb", "line": 52, "text": "    alias run_each run_specs"}
+      ]
+    },
+    "C1": {
+      "gem": "control",
+      "absent": "srand",
+      "lines": [
+        {"file": "lib/parallel_tests/rspec/runner.rb", "line": 53, "text": "        def command_with_seed(cmd, seed)"},
+        {"file": "lib/parallel_tests/rspec/runner.rb", "line": 54, "text": "          clean = remove_command_arguments(cmd, '--seed', '--order')"},
+        {"file": "lib/parallel_tests/rspec/runner.rb", "line": 55, "text": "          [*clean, '--seed', seed]"},
+        {"file": "lib/parallel_tests/cli.rb", "line": 161, "text": "    def report_failure_rerun_commmand(test_results, options)"},
+        {"file": "lib/parallel_tests/cli.rb", "line": 169, "text": "          command = @runner.command_with_seed(command, failing_set[:seed]) if failing_set[:seed]"}
+      ]
+    },
+    "O6": {
+      "gem": "target",
+      "lines": [
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 70, "text": "          name = if example_or_group.respond_to?(:id)"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 71, "text": "                   example_or_group.id"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 72, "text": "                 elsif example_or_group.respond_to?(:full_description)"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 73, "text": "                   example_or_group.full_description"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 74, "text": "                 elsif example_or_group.metadata.key?(:full_description)"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 75, "text": "                   example_or_group.metadata[:full_description]"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 76, "text": "                 else"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 77, "text": "                   example_or_group.metadata[:example_group][:full_description]"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 85, "text": "      def split_groups(groups)"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 86, "text": "        return groups unless split_groups?"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 87, "text": ""},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 88, "text": "        groups_to_split, groups_to_keep = [], []"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 89, "text": "        groups.each do |group|"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 90, "text": "          (group.metadata[:no_split] ? groups_to_keep : groups_to_split) << group"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 91, "text": "        end"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 92, "text": "        queue = groups_to_split.flat_map(&:descendant_filtered_examples)"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 93, "text": "        queue.concat groups_to_keep"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 94, "text": "        queue"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 95, "text": "      end"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 96, "text": ""},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 97, "text": "      def split_groups?"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 98, "text": "        return @split_groups if defined?(@split_groups)"},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 99, "text": ""},
+        {"file": "lib/test_queue/runner/rspec.rb", "line": 100, "text": "        @split_groups = ENV['TEST_QUEUE_SPLIT_GROUPS'] && ENV['TEST_QUEUE_SPLIT_GROUPS'].strip.downcase == 'true'"}
+      ]
+    },
+    "O7": {
+      "gem": "target",
+      "lines": [
+        {"file": "lib/test_queue/runner/rspec_ext.rb", "line": 4, "text": "  def self.failure_count"},
+        {"file": "lib/test_queue/runner/rspec_ext.rb", "line": 5, "text": "    examples.map { |e| e.execution_result.status == 'failed' }.length"},
+        {"file": "lib/test_queue/runner/rspec_ext.rb", "line": 6, "text": "  end"},
+        {"file": "lib/test_queue/iterator.rb", "line": 33, "text": "        if @early_failure_limit && @failures >= @early_failure_limit"},
+        {"file": "lib/test_queue/iterator.rb", "line": 69, "text": "          @failures += suite.failure_count if suite.respond_to? :failure_count"}
+      ]
+    }
+  }
+}

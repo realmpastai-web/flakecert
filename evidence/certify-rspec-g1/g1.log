@@ -1,0 +1,43 @@
+image_id sha256:1f3248c0b71fb38ce02d05bc3cee8da5257792360158a660b83518c8cb827e63
+docker_server 26.1.5+dfsg1
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+rspec-core 3.12.2
+s1 913 examples, 31 failures
+bundle_check_exit=0 for both trees (run.log)
+
+CERTIFIED 4
+REJECTED build_delivery_spec.rb:5
+CONTROL two_step:76
+
+CERTIFIED ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5 base=NOT_FIXED head=FIXED plain=FIXED/FIXED polluters=1
+CERTIFIED ./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5 base=NOT_FIXED head=FIXED plain=FIXED/FIXED polluters=1
+CERTIFIED ./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5 base=NOT_FIXED head=FIXED plain=FIXED/FIXED polluters=1
+REJECTED ./spaceship/spec/connect_api/models/build_delivery_spec.rb:5 base=POLLUTER_FAILED head=FIXED plain=FIXED/FIXED polluters=1
+CERTIFIED ./spaceship/spec/portal/certificate_spec.rb:111 base=NOT_FIXED head=FIXED plain=FIXED/FIXED polluters=1
+CONTROL ./spaceship/spec/two_step_or_factor_client_spec.rb:76 base=NOT_FIXED head=NOT_FIXED plain=FIXED/FIXED polluters=1
+
+OD_COUNT 6
+ATTRIBUTED 6
+CERTIFIED ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5,./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5,./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5,./spaceship/spec/portal/certificate_spec.rb:111
+REJECTED ./spaceship/spec/connect_api/models/build_delivery_spec.rb:5
+CONTROL ./spaceship/spec/two_step_or_factor_client_spec.rb:76
+ACCEPTANCE_1 True
+ACCEPTANCE_2 True
+ACCEPTANCE_3 True
+ACCEPTANCE_4 True
+GO True
+===== acceptance 1 grep =====
++ grep -RInE 'webhook|capabilities|profile_spec|two_step|:94' tools/certify_rspec
+
+grep_exit=1
++ grep -nE 'webhook|capabilities|profile_spec|two_step|:94' evidence/certify-rspec-g1/invocation.txt
+
+grep_exit=1
+===== replay-check.log =====
+replay_exit=0
+replay_exit=0
+replay_exit=0
+replay_exit=0
+replay_exit=0
+replay_exit=0

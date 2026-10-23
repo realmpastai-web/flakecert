@@ -1,0 +1,110 @@
+rung files none
+rung test_file tests/test_taggerlib_filesorter.py
+rung python=3.11 start
+#9 0.185 FLAKECERT_INSTALL python 3.11.17
+#9 0.190 FLAKECERT_INSTALL files none
+#9 0.190 FLAKECERT_INSTALL pipenv yes
+#9 0.190 FLAKECERT_INSTALL package yes
+#9 3.979 FLAKECERT_INSTALL no_requirements
+#9 3.979 FLAKECERT_INSTALL pipenv_begin
+#9 8.057 FLAKECERT_INSTALL pipenv_requirements_ok
+#9 8.057 FLAKECERT_INSTALL req /tmp/pipenv-dev.txt
+#9 13.29 FLAKECERT_INSTALL req_fail_full /tmp/pipenv-dev.txt
+#9 13.29 FLAKECERT_INSTALL skip_option -i https://pypi.org/simple
+#9 14.27 FLAKECERT_INSTALL line_ok attrs==19.3.0
+#9 19.44 FLAKECERT_INSTALL line_ok coverage==5.2.1
+#9 20.56 FLAKECERT_INSTALL line_ok flake8==3.8.3
+#9 21.45 FLAKECERT_INSTALL line_ok importlib-metadata==1.7.0; python_version < '3.8'
+#9 22.53 FLAKECERT_INSTALL line_ok iniconfig==1.0.1
+#9 23.23 FLAKECERT_INSTALL line_ok mccabe==0.6.1
+#9 24.08 FLAKECERT_INSTALL line_ok more-itertools==8.4.0
+#9 25.10 FLAKECERT_INSTALL line_ok packaging==20.4
+#9 25.90 FLAKECERT_INSTALL line_ok pluggy==0.13.1
+#9 26.72 FLAKECERT_INSTALL line_ok py==1.9.0
+#9 27.43 FLAKECERT_INSTALL line_ok pycodestyle==2.6.0
+#9 28.12 FLAKECERT_INSTALL line_ok pyflakes==2.2.0
+#9 28.94 FLAKECERT_INSTALL line_ok pyparsing==2.4.7
+#9 29.91 FLAKECERT_INSTALL line_ok pytest==6.0.1
+#9 30.67 FLAKECERT_INSTALL line_ok pytest-cov==2.10.0
+#9 31.60 FLAKECERT_INSTALL line_ok six==1.15.0
+#9 32.37 FLAKECERT_INSTALL line_ok toml==0.10.1
+#9 33.18 FLAKECERT_INSTALL line_ok zipp==3.1.0
+#9 34.53 FLAKECERT_INSTALL line_ok darkseid==1.0.1
+#9 35.40 FLAKECERT_INSTALL line_ok natsort==7.0.1
+#9 36.16 FLAKECERT_INSTALL line_fail pillow==7.2.0
+#9 41.19 FLAKECERT_INSTALL line_ok ratelimit==2.2.1
+#9 41.19 FLAKECERT_INSTALL package_begin
+#9 45.65 FLAKECERT_INSTALL package_ok no-deps
+#9 45.65 FLAKECERT_INSTALL pytest_pin none
+#9 45.92 FLAKECERT_INSTALL pytest_fallback
+#9 47.25 FLAKECERT_INSTALL pytest_import_fail
+47.25 FLAKECERT_INSTALL pytest_import_fail
+rung python=3.11 build_exit=1
+rung python=3.11 result=FAIL build
+rung python=3.9 start
+#10 0.192 FLAKECERT_INSTALL python 3.9.25
+#10 0.194 FLAKECERT_INSTALL files none
+#10 0.194 FLAKECERT_INSTALL pipenv yes
+#10 0.194 FLAKECERT_INSTALL package yes
+#10 4.047 FLAKECERT_INSTALL no_requirements
+#10 4.047 FLAKECERT_INSTALL pipenv_begin
+#10 9.844 FLAKECERT_INSTALL pipenv_requirements_ok
+#10 9.844 FLAKECERT_INSTALL req /tmp/pipenv-dev.txt
+#10 13.25 FLAKECERT_INSTALL req_fail_full /tmp/pipenv-dev.txt
+#10 13.25 FLAKECERT_INSTALL skip_option -i https://pypi.org/simple
+#10 14.39 FLAKECERT_INSTALL line_ok attrs==19.3.0
+#10 16.11 FLAKECERT_INSTALL line_ok coverage==5.2.1
+#10 17.44 FLAKECERT_INSTALL line_ok flake8==3.8.3
+#10 18.46 FLAKECERT_INSTALL line_ok importlib-metadata==1.7.0; python_version < '3.8'
+#10 19.64 FLAKECERT_INSTALL line_ok iniconfig==1.0.1
+#10 20.53 FLAKECERT_INSTALL line_ok mccabe==0.6.1
+#10 21.62 FLAKECERT_INSTALL line_ok more-itertools==8.4.0
+#10 22.95 FLAKECERT_INSTALL line_ok packaging==20.4
+#10 24.03 FLAKECERT_INSTALL line_ok pluggy==0.13.1
+#10 25.21 FLAKECERT_INSTALL line_ok py==1.9.0
+#10 26.04 FLAKECERT_INSTALL line_ok pycodestyle==2.6.0
+#10 27.48 FLAKECERT_INSTALL line_ok pyflakes==2.2.0
+#10 29.28 FLAKECERT_INSTALL line_ok pyparsing==2.4.7
+#10 30.67 FLAKECERT_INSTALL line_ok pytest==6.0.1
+#10 31.86 FLAKECERT_INSTALL line_ok pytest-cov==2.10.0
+#10 33.06 FLAKECERT_INSTALL line_ok six==1.15.0
+#10 34.19 FLAKECERT_INSTALL line_ok toml==0.10.1
+#10 35.26 FLAKECERT_INSTALL line_ok zipp==3.1.0
+#10 37.13 FLAKECERT_INSTALL line_ok darkseid==1.0.1
+#10 38.87 FLAKECERT_INSTALL line_ok natsort==7.0.1
+#10 40.64 FLAKECERT_INSTALL line_fail pillow==7.2.0
+#10 42.81 FLAKECERT_INSTALL line_fail ratelimit==2.2.1
+#10 42.81 FLAKECERT_INSTALL package_begin
+#10 49.33 FLAKECERT_INSTALL package_fail
+#10 49.33 FLAKECERT_INSTALL pytest_pin none
+#10 50.21 FLAKECERT_INSTALL pytest_version 6.0.1
+rung python=3.9 build_exit=0
+collect nodes=0 matched=none
+rung python=3.9 result=FAIL collect
+lo_set=0
+COLLECT_RC ExitCode.USAGE_ERROR
+COLLECT_FILE_BEGIN
+COLLECT_FILE_END
+ImportError while loading conftest '/work/tests/conftest.py'.
+tests/conftest.py:7: in <module>
+    from metrontagger.taggerlib.metrontalker import MetronTalker
+metrontagger/taggerlib/metrontalker.py:13: in <module>
+    from ratelimit import limits, sleep_and_retry
+E   ModuleNotFoundError: No module named 'ratelimit'
+rung python=3.8 start
+#9 0.167 FLAKECERT_INSTALL python 3.8.20
+#9 0.172 FLAKECERT_INSTALL files none
+#9 0.172 FLAKECERT_INSTALL pipenv yes
+#9 0.172 FLAKECERT_INSTALL package yes
+#9 3.907 FLAKECERT_INSTALL no_requirements
+#9 3.907 FLAKECERT_INSTALL pipenv_begin
+#9 9.540 FLAKECERT_INSTALL pipenv_requirements_ok
+#9 9.540 FLAKECERT_INSTALL req /tmp/pipenv-dev.txt
+#9 15.25 FLAKECERT_INSTALL req_ok /tmp/pipenv-dev.txt
+#9 15.25 FLAKECERT_INSTALL package_begin
+#9 22.08 FLAKECERT_INSTALL package_fail
+#9 22.08 FLAKECERT_INSTALL pytest_pin none
+#9 22.96 FLAKECERT_INSTALL pytest_version 6.0.1
+rung python=3.8 build_exit=0
+collect nodes=2 matched=tests/test_taggerlib_filesorter.py::test_sort_comic
+rung python=3.8 result=PASS

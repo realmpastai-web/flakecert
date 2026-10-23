@@ -1,0 +1,23 @@
++ logical=rspec --seed 1 './spec/axn/tools/registry_spec.rb[1:11:1]' './spec/axn/tools/registry_spec.rb[1:5:7]'
++ rspec_argv_len=213
++ rspec_argv_n=11
++ docker_argv_len=745
++ docker_argv_n=41
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-6c62d568e27844bf7500be0a54425b7c9c65a8cc:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s4:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --seed 1 './spec/axn/tools/registry_spec.rb[1:11:1]' './spec/axn/tools/registry_spec.rb[1:5:7]' --format json --out /out/spec_axn_tools_registry_spec.rb-299-e262b04e-6c62d56-A-r2.json
+elapsed_s=1.103
+Run options: include {:ids=>{"./spec/axn/tools/registry_spec.rb"=>["1:11:1", "1:5:7"]}}
+
+Randomized with seed 1
+
+Axn::Tools::Registry
+  .ensure_loaded! (non-Rails, isolates a SyntaxError in one tool file from valid siblings)
+    loads a valid sibling despite a SyntaxError file, warning about the bad one and not raising
+  .members (duplicate tool_name detection)
+    sorts members by the per-adapter name
+
+Finished in 0.02085 seconds (files took 0.47523 seconds to load)
+2 examples, 0 failures
+
+Randomized with seed 1
+
+docker_exit=0

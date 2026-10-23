@@ -1,0 +1,68 @@
+{
+  "id": "F01",
+  "project": "https://github.com/eth-cscs/reframe",
+  "sha": "576eb3f1dcc015d1e6d7a10602c748d4f810da68",
+  "pytest_id": "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]",
+  "node_id": "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]",
+  "image_digest": "sha256:4a811a46308a2cd2d9276df5cefd7de6df9937f1e9d53a767f137403c0b93a97",
+  "image_tag": "flakecert:F01",
+  "pip_freeze_sha": "78b1371d7f23acd5742f8c2ef2afde0a744ce9985134802a7f9daae745951473",
+  "flakecert_version": "0.2.0",
+  "python": "3.11.17",
+  "sources": [
+    "order",
+    "seed",
+    "pythonhashseed",
+    "time_offset",
+    "tmpdir"
+  ],
+  "m": 5,
+  "k": 75,
+  "d": 1,
+  "schedule": [
+    {
+      "source": "order",
+      "value": [
+        "unittests/test_policies.py::test_kbd_interrupt_in_setup_with_concurrency",
+        "unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]"
+      ]
+    },
+    {
+      "source": "seed",
+      "value": ""
+    },
+    {
+      "source": "pythonhashseed",
+      "value": ""
+    },
+    {
+      "source": "time_offset",
+      "value": ""
+    },
+    {
+      "source": "tmpdir",
+      "value": ""
+    }
+  ],
+  "order_scope": "test_directory",
+  "seed": 20261017,
+  "pytest_args": [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts="
+  ],
+  "expected_failure": {
+    "exc": "ReframeFatalError",
+    "sig": "92908d480a9c35f2a7757a678e00e55c6a3224ad1a5f8c479f2ee2312368cb5c"
+  },
+  "bound": {
+    "per_run_lower": "1/5",
+    "formula": "1/(m*k^(d-1))",
+    "empirical_runs_to_failure": 75,
+    "empirical_rate": "1/75",
+    "compare": "empirical<lower"
+  }
+}

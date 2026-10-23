@@ -1,0 +1,16 @@
+rung files none
+rung test_file src/fparser/one/tests/test_block_stmts.py
+rung python=3.11 start
+#9 0.303 FLAKECERT_INSTALL python 3.11.17
+#9 0.331 FLAKECERT_INSTALL files none
+#9 0.331 FLAKECERT_INSTALL pipenv no
+#9 0.331 FLAKECERT_INSTALL package yes
+#9 4.801 FLAKECERT_INSTALL no_requirements
+#9 4.802 FLAKECERT_INSTALL package_begin
+#9 7.412 FLAKECERT_INSTALL package_ok with-deps-no-isolation
+#9 7.858 FLAKECERT_INSTALL pytest_pin none
+#9 7.886 FLAKECERT_INSTALL pytest_fallback
+#9 10.49 FLAKECERT_INSTALL pytest_version 7.4.4
+rung python=3.11 build_exit=0
+collect nodes=3 matched=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+rung python=3.11 result=PASS

@@ -1,0 +1,668 @@
++ logical=rspec --order defined './spec/axn/core/validations/shape_contracts_spec.rb[1:9:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:9:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:9:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:1:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:1:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:2:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:2:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:3:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:3:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:3:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:3:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:4:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:4:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:5:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:5:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:5:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:5:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:8]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:9]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:10]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:11]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:12]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:13]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:14]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:8]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:9]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:10]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:8]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:9]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:10]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:11]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:12]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:13]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:14]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:15]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:16]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:17]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:18]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:19]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:20]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:9:21]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:10:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:10:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:10:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:11:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:12:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:12:2]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:1:1]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:1:2]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:1:3]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:1:4]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:1:5]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:1:6]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:2:1]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:2:2]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:2:3]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:2:4]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:2:5]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:2:6]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:3:1]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:3:2]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:3:3]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:3:4]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:3:5]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:3:6]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:3:7]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:1]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:2]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:3]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:4]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:5]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:6]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:7]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:8]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:4:9]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:5:1]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:5:2]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:6:1]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:6:2]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:6:3]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:6:4]' './spec/axn/core/validations/stored_shape_traversal_spec.rb[1:6:5]' './spec/axn/core/validations/validate_lambda_misattribution_spec.rb[1:1]' './spec/axn/core/validations/validate_lambda_misattribution_spec.rb[1:2]' './spec/axn/core/validations/validate_lambda_misattribution_spec.rb[1:3]' './spec/axn/core/validations/validate_lambda_misattribution_spec.rb[2:1]' './spec/axn/core/validations/validate_lambda_misattribution_spec.rb[2:2]' './spec/axn/core/validations/validate_lambda_misattribution_spec.rb[2:3]' './spec/axn/core/validations/validator_class_cache_spec.rb[1:1]' './spec/axn/core/validations/validator_class_cache_spec.rb[1:2]' './spec/axn/core/validations/validator_class_cache_spec.rb[1:3]' './spec/axn/core/validations/validator_class_cache_spec.rb[1:4]' './spec/axn/core/validations/validator_class_cache_spec.rb[1:5]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:1:1]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:1:2]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:1:3]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:1:4]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:1]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:2]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:3]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:4]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:5]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:6]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:7]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:8]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:9]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:10]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:11]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:12]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:13]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:14]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:15]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:16]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:17]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:18]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:19]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:2:20]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:3:1]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:3:2]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:3:3]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:3:4]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:3:5]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:4:1]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:4:2]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:4:3]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:4:4]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:4:5]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:5:1]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:5:2]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:5:3]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:5:4]' './spec/axn/core/validations/validator_context_scope_spec.rb[1:5:5]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:1:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:1:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:1:3]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:1:4]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:2:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:2:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:3:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:3:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:3:3]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:4:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:4:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:4:3]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:5:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:5:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:5:3]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:6:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:6:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:7:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:7:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:7:3]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:8:1:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:8:1:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:8:2:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:8:2:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:8:3:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:8:3:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:9:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:10:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:10:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:10:3]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:10:4]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:11:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:11:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:12:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:12:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:13:1]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:13:2]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:13:3]' './spec/axn/core/validations/validators/of_validator_spec.rb[1:13:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:1:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:1:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:2:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:2:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:3:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:4:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:4:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:5:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:5:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:5:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:1:5:4:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:1:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:1:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:2:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:3:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:3:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:4:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:4:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:2:4:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:1:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:1:3:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:1:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:2:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:3:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:4:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:1]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:2]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:3]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:4]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:5]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:6]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:7]' './spec/axn/core/validations/validators/type_validator_spec.rb[1:2:5:8]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:1:5:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:1:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:2:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:2:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:2]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:3:3]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:4:1]' './spec/axn/core/validations/validators/validate_validator_spec.rb[1:4:2:1]' './spec/axn/core/versioning_spec.rb[1:1:1]' './spec/axn/core/versioning_spec.rb[1:2:1]' './spec/axn/core/versioning_spec.rb[1:3:1]' './spec/axn/core/versioning_spec.rb[1:3:2]' './spec/axn/core/versioning_spec.rb[1:3:3]' './spec/axn/core/versioning_spec.rb[1:3:4]' './spec/axn/core/versioning_spec.rb[1:4:1]' './spec/axn/core/versioning_spec.rb[1:4:2]' './spec/axn/core/versioning_spec.rb[1:4:3]' './spec/axn/core/versioning_spec.rb[1:4:4]' './spec/axn/core/versioning_spec.rb[1:5:1]' './spec/axn/core/versioning_spec.rb[1:6:1]' './spec/axn/core/versioning_spec.rb[1:6:2]' './spec/axn/core/versioning_spec.rb[1:6:3]' './spec/axn/core/versioning_spec.rb[1:6:4]' './spec/axn/emit_metrics_spec.rb[1:1:1:1]' './spec/axn/emit_metrics_spec.rb[1:1:2:1]' './spec/axn/emit_metrics_spec.rb[1:1:2:2]' './spec/axn/emit_metrics_spec.rb[1:1:3:1]' './spec/axn/emit_metrics_spec.rb[1:1:3:2]' './spec/axn/emit_metrics_spec.rb[1:1:4:1]' './spec/axn/emit_metrics_spec.rb[1:1:5:1]' './spec/axn/error_policy_spec.rb[1:1]' './spec/axn/error_policy_spec.rb[1:2]' './spec/axn/error_policy_spec.rb[1:3]' './spec/axn/error_policy_spec.rb[1:4]' './spec/axn/error_policy_spec.rb[1:5]' './spec/axn/error_policy_spec.rb[1:6]' './spec/axn/error_spec.rb[1:1]' './spec/axn/error_spec.rb[1:2]' './spec/axn/error_spec.rb[1:3]' './spec/axn/error_spec.rb[1:4]' './spec/axn/error_spec.rb[1:5]' './spec/axn/error_spec.rb[1:6]' './spec/axn/error_spec.rb[1:7]' './spec/axn/error_spec.rb[1:8]' './spec/axn/error_spec.rb[1:9:1]' './spec/axn/error_spec.rb[1:9:2]' './spec/axn/error_spec.rb[1:9:3]' './spec/axn/exceptions_field_errors_spec.rb[1:1]' './spec/axn/exceptions_field_errors_spec.rb[1:2]' './spec/axn/exceptions_field_errors_spec.rb[1:3]' './spec/axn/executor_spec.rb[1:1:1]' './spec/axn/executor_spec.rb[1:1:2]' './spec/axn/executor_spec.rb[1:1:3]' './spec/axn/executor_spec.rb[1:1:4]' './spec/axn/executor_spec.rb[1:1:5]' './spec/axn/executor_spec.rb[1:1:6]' './spec/axn/executor_spec.rb[1:2:1]' './spec/axn/extension_config_spec.rb[1:1:1]' './spec/axn/extension_config_spec.rb[1:1:2]' './spec/axn/extension_config_spec.rb[1:2:1]' './spec/axn/extension_config_spec.rb[1:2:2]' './spec/axn/extension_config_spec.rb[1:3:1]' './spec/axn/extension_config_spec.rb[1:3:2]' './spec/axn/extension_config_spec.rb[1:3:3]' './spec/axn/extension_config_spec.rb[1:3:4]' './spec/axn/extension_config_spec.rb[1:3:5]' './spec/axn/extension_config_spec.rb[1:4:1]' './spec/axn/extension_config_spec.rb[1:4:2]' './spec/axn/extension_config_spec.rb[1:4:3]' './spec/axn/extension_config_spec.rb[1:4:4]' './spec/axn/extension_config_spec.rb[1:5:1]' './spec/axn/extension_config_spec.rb[1:5:2]' './spec/axn/extension_config_spec.rb[1:5:3]' './spec/axn/extension_config_spec.rb[1:5:4]' './spec/axn/extension_config_spec.rb[1:5:5]' './spec/axn/extension_config_spec.rb[1:5:6]' './spec/axn/extension_config_spec.rb[1:5:7]' './spec/axn/extension_config_spec.rb[1:5:8]' './spec/axn/extension_config_spec.rb[2:1]' './spec/axn/extension_config_spec.rb[2:2]' './spec/axn/extensions/serialization_spec.rb[1:1:1]' './spec/axn/extensions/serialization_spec.rb[1:1:2]' './spec/axn/extensions/serialization_spec.rb[1:1:3]' './spec/axn/extensions/serialization_spec.rb[1:1:4]' './spec/axn/extensions/serialization_spec.rb[1:1:5]' './spec/axn/extensions_spec.rb[1:1:1]' './spec/axn/extensions_spec.rb[1:1:2]' './spec/axn/extensions_spec.rb[1:2:1]' './spec/axn/extensions_spec.rb[1:2:2]' './spec/axn/extensions_spec.rb[1:2:3]' './spec/axn/extensions_spec.rb[1:2:4]' './spec/axn/extensions_spec.rb[1:2:5]' './spec/axn/extensions_spec.rb[1:2:6]' './spec/axn/extensions_spec.rb[1:3:1]' './spec/axn/extensions_spec.rb[1:3:2:1]' './spec/axn/extensions_spec.rb[1:3:3:1]' './spec/axn/extensions_spec.rb[1:3:4:1]' './spec/axn/extensions_spec.rb[1:3:5:1]' './spec/axn/extensions_spec.rb[1:3:5:2]' './spec/axn/extensions_spec.rb[1:3:5:3]' './spec/axn/extensions_spec.rb[1:3:6:1]' './spec/axn/extensions_spec.rb[1:3:6:2]' './spec/axn/extensions_spec.rb[1:3:6:3]' './spec/axn/extensions_spec.rb[1:3:6:4]' './spec/axn/extensions_spec.rb[1:3:7:1]' './spec/axn/extensions_spec.rb[1:3:7:2]' './spec/axn/extensions_spec.rb[1:3:7:3]' './spec/axn/extensions_spec.rb[1:3:8:1]' './spec/axn/extensions_spec.rb[1:3:9:1]' './spec/axn/extensions_spec.rb[1:3:9:2]' './spec/axn/extensions_spec.rb[1:3:9:3]' './spec/axn/extensions_spec.rb[1:3:10:5]' './spec/axn/extensions_spec.rb[1:3:10:6]' './spec/axn/extensions_spec.rb[1:3:10:7]' './spec/axn/extensions_spec.rb[1:3:10:8]' './spec/axn/extensions_spec.rb[1:3:10:9]' './spec/axn/extensions_spec.rb[1:3:10:1:1]' './spec/axn/extensions_spec.rb[1:3:10:1:2]' './spec/axn/extensions_spec.rb[1:3:10:1:3]' './spec/axn/extensions_spec.rb[1:3:10:1:4]' './spec/axn/extensions_spec.rb[1:3:10:1:5]' './spec/axn/extensions_spec.rb[1:3:10:1:6]' './spec/axn/extensions_spec.rb[1:3:10:1:7]' './spec/axn/extensions_spec.rb[1:3:10:1:8]' './spec/axn/extensions_spec.rb[1:3:10:1:9]' './spec/axn/extensions_spec.rb[1:3:10:1:10]' './spec/axn/extensions_spec.rb[1:3:10:1:11]' './spec/axn/extensions_spec.rb[1:3:10:1:12]' './spec/axn/extensions_spec.rb[1:3:10:1:13]' './spec/axn/extensions_spec.rb[1:3:10:2:1]' './spec/axn/extensions_spec.rb[1:3:10:2:2]' './spec/axn/extensions_spec.rb[1:3:10:2:3]' './spec/axn/extensions_spec.rb[1:3:10:2:4]' './spec/axn/extensions_spec.rb[1:3:10:2:5]' './spec/axn/extensions_spec.rb[1:3:10:2:6]' './spec/axn/extensions_spec.rb[1:3:10:2:7]' './spec/axn/extensions_spec.rb[1:3:10:2:8]' './spec/axn/extensions_spec.rb[1:3:10:2:9]' './spec/axn/extensions_spec.rb[1:3:10:2:10]' './spec/axn/extensions_spec.rb[1:3:10:2:11]' './spec/axn/extensions_spec.rb[1:3:10:2:12]' './spec/axn/extensions_spec.rb[1:3:10:2:13]' './spec/axn/extensions_spec.rb[1:3:10:3:1]' './spec/axn/extensions_spec.rb[1:3:10:3:2]' './spec/axn/extensions_spec.rb[1:3:10:3:3]' './spec/axn/extensions_spec.rb[1:3:10:3:4]' './spec/axn/extensions_spec.rb[1:3:10:3:5]' './spec/axn/extensions_spec.rb[1:3:10:3:6]' './spec/axn/extensions_spec.rb[1:3:10:3:7]' './spec/axn/extensions_spec.rb[1:3:10:3:8]' './spec/axn/extensions_spec.rb[1:3:10:3:9]' './spec/axn/extensions_spec.rb[1:3:10:3:10]' './spec/axn/extensions_spec.rb[1:3:10:3:11]' './spec/axn/extensions_spec.rb[1:3:10:3:12]' './spec/axn/extensions_spec.rb[1:3:10:3:13]' './spec/axn/extensions_spec.rb[1:3:10:4:1]' './spec/axn/extensions_spec.rb[1:3:10:4:2]' './spec/axn/extensions_spec.rb[1:3:10:4:3]' './spec/axn/extensions_spec.rb[1:3:10:4:4]' './spec/axn/extensions_spec.rb[1:3:10:4:5]' './spec/axn/extensions_spec.rb[1:3:10:4:6]' './spec/axn/extensions_spec.rb[1:3:10:4:7]' './spec/axn/extensions_spec.rb[1:3:10:4:8]' './spec/axn/extensions_spec.rb[1:3:10:4:9]' './spec/axn/extensions_spec.rb[1:3:10:4:10]' './spec/axn/extensions_spec.rb[1:3:10:4:11]' './spec/axn/extensions_spec.rb[1:3:10:4:12]' './spec/axn/extensions_spec.rb[1:3:10:4:13]' './spec/axn/extensions_spec.rb[1:3:10:4:14]' './spec/axn/extensions_spec.rb[1:3:10:4:15]' './spec/axn/extensions_spec.rb[1:3:10:10:1]' './spec/axn/extensions_spec.rb[1:3:10:10:2]' './spec/axn/extensions_spec.rb[1:3:10:10:3]' './spec/axn/extensions_spec.rb[1:3:10:10:4]' './spec/axn/extensions_spec.rb[1:3:10:10:5]' './spec/axn/extensions_spec.rb[1:3:10:10:6]' './spec/axn/extras/strategies/client_registration_spec.rb[1:1]' './spec/axn/extras/strategies/client_registration_spec.rb[1:2]' './spec/axn/extras/strategies/client_registration_spec.rb[1:4]' './spec/axn/extras/strategies/client_registration_spec.rb[1:3:1]' './spec/axn/extras/strategies/client_registration_spec.rb[1:3:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:1:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:1:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:2:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:3:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:4:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:5:2]' './spec/axn/extras/strategies/client_spec.rb[1:1:6:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:7:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:8:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:9:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:10:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:1]' './spec/axn/extras/strategies/client_spec.rb[1:1:11:2]'
++ rspec_argv_len=26916
++ rspec_argv_n=477
++ docker_argv_len=27448
++ docker_argv_n=507
++ docker run --rm -e BUNDLE_APP_CONFIG=/src/.bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -e GEM_HOME=/gems -e PATH=/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e BUNDLE_PATH=/bundle -e BUNDLE_SILENCE_ROOT_WARNING=1 -v /tmp/flakecert-g2-1019/probe/src/axn-8daba1dcb4e1f44e2a26c87e2d602c10fc04eca9:/src -v /tmp/flakecert-g2-1019/probe/bundle:/bundle -v /tmp/flakecert-g2-1019/probe/gems:/gems -v /workspace/hark-tasks/flakecert-g2-1019/evidence/certify-rspec-g2/s3:/out -w /src ruby:3.3 bundle _2.5.6_ exec rspec --format documentation --no-color --order defined './spec/axn/core/validations/shape_contracts_spec.rb[1:9:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:9:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:9:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:10:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:1:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:1:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:2:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:2:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:3:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:3:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:3:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:3:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:4:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:4:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:5:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:5:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:5:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:5:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:6:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:8]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:9]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:10]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:11]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:12]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:13]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:7:14]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:1]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:2]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:3]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:4]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:5]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:6]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:7]' './spec/axn/core/validations/shape_contracts_spec.rb[1:11:8:8]' './spec/axn/core/validations/shape_contracts ... truncated total_chars=28384
+elapsed_s=5.385
+Run options: include {:ids=>{"./spec/axn/core/validations/shape_contracts_spec.rb"=>["1:9:2", "1:9:3", "1:9:4", "1:10:1", "1:10:2", "1:10:3", "1:10:4", "1:10:5", "1:10:6", "1:10:7", "1:11:1:1", "1:11:1:2", "1:11:2:1", "1:11:2:2", "1:11:3:1", "1:11:3:2", "1:11:3:3", "1:11:3:4", "1:11:4:1", "1:11:4:2", "1:11:5:1", "1:11:5:2", "1:11:5:3", "1:11:5:4", "1:11:6:1", "1:11:6:2", "1:11:6:3", "1:11:6:4", "1:11:6:5", "1:11:6:6", "1:11:6:7", "1:11:7:1", "1:11:7:2", "1:11:7:3", "1:11:7:4", "1:11:7:5", "1:11:7:6", "1:11:7:7", "1:11:7:8", "1:11:7:9", "1:11:7:10", "1:11:7:11", "1:11:7:12", "1:11:7:13", "1:11:7:14", "1:11:8:1", "1:11:8:2", "1:11:8:3", "1:11:8:4", "1:11:8:5", "1:11:8:6", "1:11:8:7", "1:11:8:8", "1:11:8:9", "1:11:8:10", "1:11:9:1", "1:11:9:2", "1:11:9:3", "1:11:9:4", "1:11:9:5", "1:11:9:6", "1:11:9:7", "1:11:9:8", "1:11:9:9", "1:11:9:10", "1:11:9:11", "1:11:9:12", "1:11:9:13", "1:11:9:14", "1:11:9:15", "1:11:9:16", "1:11:9:17", "1:11:9:18", "1:11:9:19", "1:11:9:20", "1:11:9:21", "1:11:10:1", "1:11:10:2", "1:11:10:3", "1:11:11:1", "1:11:12:1", "1:11:12:2"], "./spec/axn/core/validations/stored_shape_traversal_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5", "1:1:6", "1:2:1", "1:2:2", "1:2:3", "1:2:4", "1:2:5", "1:2:6", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:3:5", "1:3:6", "1:3:7", "1:4:1", "1:4:2", "1:4:3", "1:4:4", "1:4:5", "1:4:6", "1:4:7", "1:4:8", "1:4:9", "1:5:1", "1:5:2", "1:6:1", "1:6:2", "1:6:3", "1:6:4", "1:6:5"], "./spec/axn/core/validations/validate_lambda_misattribution_spec.rb"=>["1:1", "1:2", "1:3", "2:1", "2:2", "2:3"], "./spec/axn/core/validations/validator_class_cache_spec.rb"=>["1:1", "1:2", "1:3", "1:4", "1:5"], "./spec/axn/core/validations/validator_context_scope_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:2:1", "1:2:2", "1:2:3", "1:2:4", "1:2:5", "1:2:6", "1:2:7", "1:2:8", "1:2:9", "1:2:10", "1:2:11", "1:2:12", "1:2:13", "1:2:14", "1:2:15", "1:2:16", "1:2:17", "1:2:18", "1:2:19", "1:2:20", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:3:5", "1:4:1", "1:4:2", "1:4:3", "1:4:4", "1:4:5", "1:5:1", "1:5:2", "1:5:3", "1:5:4", "1:5:5"], "./spec/axn/core/validations/validators/of_validator_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:2:1", "1:2:2", "1:3:1", "1:3:2", "1:3:3", "1:4:1", "1:4:2", "1:4:3", "1:5:1", "1:5:2", "1:5:3", "1:6:1", "1:6:2", "1:7:1", "1:7:2", "1:7:3", "1:8:1:1", "1:8:1:2", "1:8:2:1", "1:8:2:2", "1:8:3:1", "1:8:3:2", "1:9:1", "1:10:1", "1:10:2", "1:10:3", "1:10:4", "1:11:1", "1:11:2", "1:12:1", "1:12:2", "1:13:1", "1:13:2", "1:13:3", "1:13:4"], "./spec/axn/core/validations/validators/type_validator_spec.rb"=>["1:1:1:1:1", "1:1:1:1:2:1", "1:1:1:1:3:1", "1:1:1:2:1", "1:1:1:2:2:1", "1:1:1:2:3:1", "1:1:1:3:1", "1:1:1:3:2:1", "1:1:1:4:1", "1:1:1:4:2:1", "1:1:1:5:1:1", "1:1:1:5:2:1", "1:1:1:5:3:1", "1:1:1:5:4:1", "1:1:2:1:1", "1:1:2:1:2:1", "1:1:2:1:3:1", "1:1:2:2:1", "1:1:2:2:2:1", "1:1:2:3:1", "1:1:2:3:2:1", "1:1:2:3:3:1", "1:1:2:4:1", "1:1:2:4:2:1", "1:1:2:4:3:1", "1:1:3:1:1", "1:1:3:1:2", "1:1:3:1:3", "1:1:3:2:1", "1:1:3:2:2", "1:1:3:2:3", "1:2:1:1", "1:2:1:2", "1:2:1:3", "1:2:1:4", "1:2:1:5", "1:2:1:6", "1:2:2:1", "1:2:2:2", "1:2:2:3", "1:2:2:4", "1:2:2:5", "1:2:3:1", "1:2:3:2", "1:2:3:3", "1:2:3:4", "1:2:3:5", "1:2:4:1", "1:2:4:2", "1:2:4:3", "1:2:4:4", "1:2:4:5", "1:2:5:1", "1:2:5:2", "1:2:5:3", "1:2:5:4", "1:2:5:5", "1:2:5:6", "1:2:5:7", "1:2:5:8"], "./spec/axn/core/validations/validators/validate_validator_spec.rb"=>["1:1:1:1", "1:1:2:1", "1:1:3:1", "1:1:4:1", "1:1:5:1", "1:2:1:1", "1:2:2:1", "1:2:3:1", "1:2:4:1", "1:3:1", "1:3:2", "1:3:3", "1:4:1", "1:4:2:1"], "./spec/axn/core/versioning_spec.rb"=>["1:1:1", "1:2:1", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:4:1", "1:4:2", "1:4:3", "1:4:4", "1:5:1", "1:6:1", "1:6:2", "1:6:3", "1:6:4"], "./spec/axn/emit_metrics_spec.rb"=>["1:1:1:1", "1:1:2:1", "1:1:2:2", "1:1:3:1", "1:1:3:2", "1:1:4:1", "1:1:5:1"], "./spec/axn/error_policy_spec.rb"=>["1:1", "1:2", "1:3", "1:4", "1:5", "1:6"], "./spec/axn/error_spec.rb"=>["1:1", "1:2", "1:3", "1:4", "1:5", "1:6", "1:7", "1:8", "1:9:1", "1:9:2", "1:9:3"], "./spec/axn/exceptions_field_errors_spec.rb"=>["1:1", "1:2", "1:3"], "./spec/axn/executor_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5", "1:1:6", "1:2:1"], "./spec/axn/extension_config_spec.rb"=>["1:1:1", "1:1:2", "1:2:1", "1:2:2", "1:3:1", "1:3:2", "1:3:3", "1:3:4", "1:3:5", "1:4:1", "1:4:2", "1:4:3", "1:4:4", "1:5:1", "1:5:2", "1:5:3", "1:5:4", "1:5:5", "1:5:6", "1:5:7", "1:5:8", "2:1", "2:2"], "./spec/axn/extensions/serialization_spec.rb"=>["1:1:1", "1:1:2", "1:1:3", "1:1:4", "1:1:5"], "./spec/axn/extensions_spec.rb"=>["1:1:1", "1:1:2", "1:2:1", "1:2:2", "1:2:3", "1:2:4", "1:2:5", "1:2:6", "1:3:1", "1:3:2:1", "1:3:3:1", "1:3:4:1", "1:3:5:1", "1:3:5:2", "1:3:5:3", "1:3:6:1", "1:3:6:2", "1:3:6:3", "1:3:6:4", "1:3:7:1", "1:3:7:2", "1:3:7:3", "1:3:8:1", "1:3:9:1", "1:3:9:2", "1:3:9:3", "1:3:10:5", "1:3:10:6", "1:3:10:7", "1:3:10:8", "1:3:10:9", "1:3:10:1:1", "1:3:10:1:2", "1:3:10:1:3", "1:3:10:1:4", "1:3:10:1:5", "1:3:10:1:6", "1:3:10:1:7", "1:3:10:1:8", "1:3:10:1:9", "1:3:10:1:10", "1:3:10:1:11", "1:3:10:1:12", "1:3:10:1:13", "1:3:10:2:1", "1:3:10:2:2", "1:3:10:2:3", "1:3:10:2:4", "1:3:10:2:5", "1:3:10:2:6", "1:3:10:2:7", "1:3:10:2:8", "1:3:10:2:9", "1:3:10:2:10", "1:3:10:2:11", "1:3:10:2:12", "1:3:10:2:13", "1:3:10:3:1", "1:3:10:3:2", "1:3:10:3:3", "1:3:10:3:4", "1:3:10:3:5", "1:3:10:3:6", "1:3:10:3:7", "1:3:10:3:8", "1:3:10:3:9", "1:3:10:3:10", "1:3:10:3:11", "1:3:10:3:12", "1:3:10:3:13", "1:3:10:4:1", "1:3:10:4:2", "1:3:10:4:3", "1:3:10:4:4", "1:3:10:4:5", "1:3:10:4:6", "1:3:10:4:7", "1:3:10:4:8", "1:3:10:4:9", "1:3:10:4:10", "1:3:10:4:11", "1:3:10:4:12", "1:3:10:4:13", "1:3:10:4:14", "1:3:10:4:15", "1:3:10:10:1", "1:3:10:10:2", "1:3:10:10:3", "1:3:10:10:4", "1:3:10:10:5", "1:3:10:10:6"], "./spec/axn/extras/strategies/client_registration_spec.rb"=>["1:1", "1:2", "1:4", "1:3:1", "1:3:2"], "./spec/axn/extras/strategies/client_spec.rb"=>["1:1:1:1", "1:1:1:2", "1:1:2:1", "1:1:2:2", "1:1:3:1", "1:1:4:1", "1:1:5:1", "1:1:5:2", "1:1:6:1", "1:1:7:1", "1:1:8:1", "1:1:9:1", "1:1:10:1", "1:1:11:1", "1:1:11:2"]}}
+
+shape contracts (block syntax for structured fields)
+  unsupported member options
+    raises when a member declares preprocess:
+    raises a shape-member-specific (not generic unknown-key) error when a member declares as:
+    raises a shape-member-specific (not generic unknown-key) error when a member declares prefix:
+  declaration-time guards
+    raises when a shape block is declared on a scalar type
+    raises when a shape block is declared with no type
+    raises when a shape block is declared on a Date (scalar) type
+    raises when a shape block is declared on a union type
+    accepts a shape block combined with on: (kwarg parity) and enforces the members
+    still enforces the structured-type rule for a shape block under on:
+    raises when a shape block is declared across multiple fields
+  method_call: opt-in for object/Array-method shape members (PRO-2907)
+    without the flag (safe default)
+      raises MethodCallNotPermittedError reading a non-Data object member (loud, not silent)
+      never mutates an element during validation (field :pop over Array elements does not run)
+    with method_call: true
+      resolves a non-Data object member by invoking its reader
+      resolves an Array-method member by invoking it
+    regression: safe members keep working with no flag
+      reads Hash-key members via dig
+      reads Struct members via dig
+      reads OpenStruct members via dig
+      reads Data members via #to_h (the axn-mcp array-element-shape-over-Data case)
+    gate is independent of action threading
+      raises even when an action IS present, as long as method_call was not permitted
+      resolves when method_call is permitted, action present or not
+    a raw shape that names no members
+      rejects an absent members list
+      rejects an explicit nil members list on the same terms
+      names the member carrying a malformed nested shape
+      accepts an explicitly empty members list
+    the member snapshot
+      stores axn's own ShapeConfig rather than the caller's object
+      stores a String member name as its Symbol
+      validates and reflects a String-keyed member bag as its canonical form
+      behaves identically for the Symbol-keyed spelling
+      does not let a mutated inclusion: list widen a declared member's enum
+      reflects an exposes member carrying a per-validator gate, which needs a config copy
+      ignores a #default reader, so the schema no longer promises a default nothing applies
+    a member's shorthand validator value
+      stores `type: Hash` as the bag every consumer reads
+      validates `type: Hash`, which used to fail every call with `must supply :klass`
+      reflects it as exactly what the `{ klass: }` spelling reflects, inbound and outbound
+      projects and validates a bare `of:`, which used to take the projection down
+      projects a bare `type:` carrying a nested shape, and validates through it
+      expands a String-keyed bag by its canonical keys
+      rejects a `validate:` Hash carrying no callable at declaration
+      rejects `model:` at declaration, as the block form does
+      rejects `confirmation:` at declaration, as the block form does
+      rejects `of:` beside a non-Array `type:` at declaration, with the field path's own message
+      rejects a bare `of:` with no `type:`, as the field path does
+      rejects `of: nil` at declaration, where it used to raise on every call
+      leaves `of: false` as inert on a member as it is on a field
+      detaches a bare `type:` list, so mutating it cannot widen a declared member
+    a member's nested `shape:`
+      derives the container from the member's own `type:`, where every call used to raise TypeError
+      stores the node the block form stores for the same declaration
+      derives an Array container for an Array-typed member, as the field path does
+      derives at every nesting level, not just the first
+      rejects a non-class nested `container:` at declaration, with the field path's own message
+      rejects one nested two levels down just the same
+      raises when the member declares no structured `type:` to derive from
+      leaves an explicit nested `container:` exactly as declared
+      gives one shared nested shape the container each position calls for
+      derives on the outbound route too
+    a member's option keys
+      rejects a typo at declaration, naming the member and the key
+      rejects one two levels down just the same
+      rejects a key that is not a Symbol at all
+      refuses a key that claims to be a recognized one, naming it by class
+      rejects optional: in the bag, pointing at where a member carries it
+      rejects sensitive: in the bag, pointing at where a member carries it
+      rejects user_facing: in the bag, pointing at where a member carries it
+      rejects method_call: in the bag, pointing at where a member carries it
+      rejects description: in the bag, pointing at where a member carries it
+      gives default: the block form's own reason rather than the unknown-key message
+      gives preprocess: the block form's own reason rather than the unknown-key message
+      gives as: the reader-less reason
+      gives prefix: the reader-less reason
+      refuses a top-level `coerce:`
+      refuses the `type: { coerce: true }` spelling, which used to be silently inert
+      refuses one two levels down
+      leaves `coerce: false` the legal no-op it is on a field
+      still accepts every validation a member legitimately carries
+      accepts ActiveModel's shared options, which apply on this route
+      leaves a member's own attributes alone — they were never bag keys
+      leaves the block form's own verdicts unchanged
+    duck-typed member contract (reflection)
+      reflects a member implementing only #field and #validations
+      reflects such a member on exposes too
+      still emits a description when the member defines one
+    duck-typed member contract (member without #method_call)
+      treats a member lacking #method_call as not opted in (safe default), no NoMethodError
+    nested shapes inherit the rule at each depth
+      raises for a method-dispatch member nested inside another shape without the flag
+      resolves a nested method-dispatch member when it opts in
+
+a shape graph a class holds that cannot be traversed
+  the projection walks
+    reports a bounded error on input_schema for a self-referential graph
+    reports a bounded error on input_schema for a generative graph
+    reports a bounded error on output_schema for a self-referential graph
+    reports a bounded error on output_schema for a generative graph
+    does not report a generative graph as a cycle
+    names the member by class rather than reading its name
+  the redaction walks
+    keeps the sensitive-member predicate exact for a self-referential graph
+    answers true past the depth bound, so a generative graph is masked wholesale
+    keeps the candidate walk bounded for a cycle graph
+    keeps the candidate walk bounded for a generative graph
+    keeps inspect's own redaction walk bounded
+    still settles a logged call as an ordinary result
+  the mask that descends a shaped value
+    masks a self-referential value wholesale where it repeats, instead of recursing
+    keeps inputs_for_logging bounded on a self-referential value
+    keeps the facade's inspect bounded on a self-referential value
+    descends a cyclic graph as far as an acyclic value goes
+    masks every position of a shared but acyclic graph
+    masks a value repeated among siblings in full at both positions
+    masks a cycle that closes through an array
+  the validation walk that descends a shaped value
+    settles a cyclic graph over a self-referential value as an ordinary result
+    closes the same cycle when it runs through an Array container
+    still validates every level a legal declared shape reaches into a self-referential value
+    descends a cyclic graph as far as an acyclic value goes
+    reports the required member of every distinct shape node one value is reached under
+    validates a value repeated among siblings at both positions
+    reports a bounded error for a generative graph over a self-referential value
+    validates the leaf of a graph declared at the maximum depth
+    leaves an ordinary nested shape validating exactly as before
+  the ambient placement check
+    is bounded when a later ambient subfield is declared over a cycle graph
+    is bounded when a later ambient subfield is declared over a generative graph
+  the bound itself
+    accepts an honest graph at the cap, for declaration AND projection
+    rejects one level past it at declaration
+    accepts a shared-tail graph at the cap, for declaration AND projection
+    logs a shared-tail graph at the cap in the clear, with no `sensitive:` declared
+    rejects a graph whose depth is reached only through subtrees already verified shallower
+
+a validate: lambda that raises an exception axn cannot describe
+  settles on the validation error for an ordinary raise (control)
+  settles on the validation error when the lambda's exception has a raising #message
+  settles on the validation error when the lambda's exception holds unrenderable message bytes
+
+a default:/preprocess: proc whose own raised exception axn cannot describe
+  does not let result.error raise for an unrenderable default: proc failure (weak on its own)
+  keeps the DefaultAssignmentError typing when the default: proc's own error has a raising #message
+  keeps the PreprocessingError typing when the preprocess: proc's own error has a raising #message
+
+validator class cache
+  reuses the same compiled validator class across two calls with the same config
+  builds a distinct class per coerce state for the same config
+  does not reuse a class across two distinct FieldConfigs for the same field name
+  invalidates when the class redeclares the field
+  gives a subclass its own cache rather than inheriting the parent's
+
+an `on:` that names a validation context
+  Validation::Base.entry_context_scoped?
+    reads a plain bag carrying on:
+    reads a bag without on: as unscoped
+    reads a non-Hash entry as unscoped
+    is not fooled by a bag that denies being a Hash and hides its keys
+  inside a validator's option bag
+    is refused on a top-level expects, naming the field, the validator and the fix
+    is refused on an exposes
+    is refused on an on: subfield, whose own on: is the parent and stays legal
+    is refused on a block-form shape member
+    is refused through Axn::Factory.build
+    is refused for on: :create
+    is refused for on: nil
+    is refused for on: false
+    is refused for on: []
+    is refused on length:
+    is refused on presence:
+    is refused on inclusion:
+    is refused on numericality:
+    is refused on format:
+    is refused on of:
+    is refused on validate:
+    is refused on a raw shape: bag's own on:
+    names every offending entry, not only the first
+    is refused on a raw shape: member, which bypasses expects' option handling
+    is refused on an object-backed member, which only the declaration walk sees
+  what stays legal
+    accepts a declaration-level on: — the subfield parent
+    accepts a declaration-level on: beside a legitimately gated entry
+    accepts on: :ambient_context
+    accepts every other ActiveModel shared option nested in an entry
+    accepts a nested strict:, which raises rather than being inert
+  at the top of a shape member's bag
+    is refused on a raw shape: member
+    is refused on a block-form member
+    keeps reporting an unknown key as unknown rather than as a context option
+    keeps reporting a reader option with the reader-less reason
+    still accepts the tolerance a member's bag may legitimately carry
+  at the top of an exposes declaration
+    is refused, naming both meanings it cannot have
+    is refused whatever the value, since nothing reads it either way
+    leaves an ordinary exposes untouched
+    is refused even where :on has been planted in the field-metadata registry
+    cannot be reached that way in the first place — registering :on is refused
+
+Axn::Validators::OfValidator
+  of: String
+    passes when all elements are strings
+    fails when any element is not a string
+    passes for empty array (element validation is vacuous; presence is separate)
+    fails for nil element (nil is not a String)
+  of: Integer
+    passes for integer elements
+    fails for non-integer elements
+  of: :boolean
+    passes for true/false elements
+    fails for nil element
+    fails for truthy non-boolean
+  of: :uuid
+    passes for valid UUID strings
+    fails for non-UUID strings
+    fails for a blank element even when the field allows blank (allow_blank governs the field, not its elements)
+  of: [String, Numeric]
+    passes when elements are any of the specified types
+    fails when an element matches none
+    passes with empty array (element validation is vacuous)
+  of: [:boolean, String]
+    accepts booleans and strings
+    rejects integers
+  of: <Data.define class>
+    passes when elements are instances of the Data class
+    fails for plain hashes — is_a? check is strict
+    fails for nil elements
+  whole-value nil/blank handling
+    with allow_nil
+      skips element validation when value is nil
+      still rejects a nil element inside the array
+    with allow_blank
+      skips element validation when value is nil
+      still rejects a nil element inside the array
+    with optional
+      skips element validation when value is nil
+      still rejects a nil element inside the array
+  when value is not an Array
+    does not double-report — TypeValidator owns the type error, not OfValidator
+  declaration-time validation
+    raises ArgumentError when of: is used without type: Array
+    raises ArgumentError when type: is a union containing Array
+    raises ArgumentError when of: is used without any type:
+    raises ArgumentError when of: is a hash with no :klass key
+  on exposes
+    validates exposed array elements
+    passes when exposed array elements match
+  on expects with on: (subfields)
+    passes when subfield array elements match
+    fails when a subfield array element does not match
+  error messages
+    names the single expected type
+    names all expected types for a union
+    includes the index of each failing element
+    honors a custom message: while still reporting the element index
+
+Axn::Validators::TypeValidator
+  type validation
+    standalone value format
+      boolean
+        validates
+        and allow_blank
+          validates
+        and allow_nil
+          validates
+      params
+        validates
+        and allow_blank
+          validates
+        with ActionController::Parameters
+          validates ActionController::Parameters
+      uuid
+        validates
+        and allow_blank
+          validates
+      class types
+        validates
+        and allow_blank
+          validates
+      array of types
+        when valid
+          is expected to be ok
+        when invalid
+          fails
+        when false
+          fails
+        and allow_blank
+          validates
+    hash format with with key
+      boolean
+        validates
+        with custom message
+          uses custom message
+        and allow_blank
+          validates
+      params
+        validates
+        and allow_blank
+          validates
+      class types
+        validates
+        with custom message
+          uses custom message
+        and allow_blank
+          validates
+      array of types
+        validates
+        with custom message
+          uses custom message
+        and allow_blank
+          validates
+    boolean defaults with explicit false values
+      default: false should not override explicit false
+        preserves explicit false values
+        applies defaults when not provided
+        preserves explicit true values
+      default: true should not override explicit false
+        preserves explicit false values
+        applies default when not provided
+        preserves explicit true values
+  regression tests for corrected allow_blank logic
+    Hash type with allow_blank
+      validates empty hash as valid Hash type
+      validates non-empty hash as valid Hash type
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid Hash type (not nil)
+      validates false as invalid Hash type (not nil)
+      validates empty array as invalid Hash type (not nil)
+    String type with allow_blank
+      validates non-empty string as valid String type
+      skips validation for nil when allow_blank is true
+      validates empty string as valid String type (correct type, just blank)
+      validates false as invalid String type (not nil)
+      validates number as invalid String type (not nil)
+    Boolean type with allow_blank
+      validates true as valid boolean type
+      validates false as valid boolean type
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid boolean type (not nil)
+      validates number as invalid boolean type (not nil)
+    Array type with allow_blank
+      validates non-empty array as valid Array type
+      validates empty array as valid Array type (correct type, just blank)
+      skips validation for nil when allow_blank is true
+      validates empty string as invalid Array type (not nil)
+      validates hash as invalid Array type (not nil)
+    Multiple types with allow_blank
+      validates string as valid type
+      validates hash as valid type
+      validates empty string as valid String type
+      validates empty hash as valid Hash type
+      skips validation for nil when allow_blank is true
+      validates false as invalid type (not nil)
+      validates array as invalid type (not nil)
+      validates whitespace strings as valid (they are valid Strings)
+
+Axn::Validators::ValidateValidator
+  custom validations
+    when valid
+      is expected to be ok
+    when invalid
+      fails
+    when validator raises
+      fails
+    and allow_blank
+      validates
+    and allow_nil
+      validates
+  custom validations hash format
+    when valid
+      is expected to be ok
+    when invalid
+      fails
+    with custom message
+      uses custom message
+    and allow_blank
+      validates
+  misuse: a Hash without :with (e.g. ActiveModel validator keys)
+    raises at declaration (not at call time) with an actionable message
+    still accepts the valid Hash form (with: present)
+    still accepts the bare-callable form
+  Axn::Extensions.best_effort integration
+    calls Axn::Extensions.best_effort when custom validation raises
+    when the validator raises a non-StandardError
+      still fails the field rather than settling as an exception outcome
+
+Axn::Core::Versioning
+  reader default
+    is 1 when never declared
+  setter
+    stores the declared version and reads it back
+  validation
+    rejects zero
+    rejects negatives
+    rejects non-Integers
+    rejects the removed default: option as an unknown keyword, not a bad version
+  _tool_version_suffix (single source for parsing the ::Vn constant segment)
+    returns the number for a vN-suffixed constant
+    handles multi-digit versions
+    is nil for a non-vN trailing segment
+    is nil for an anonymous class
+  declared-here vs inherited
+    marks the declaring class but not an inheriting subclass
+  ::Vn mismatch guard
+    raises when the constant segment number disagrees with the declared version
+    accepts a matching ::Vn segment
+    is skipped for an anonymous class (no constant name)
+    ignores a trailing segment that is not the exact vN pattern
+
+Action axn.call notification metrics
+  axn.call notification emission for metrics
+    when action succeeds
+      emits notification with success outcome and correct resource
+    when action fails with fail!
+      emits notification with failure outcome
+      emits notification with failure outcome when using call!
+    when action raises an exception
+      emits notification with exception outcome
+      emits notification with exception outcome when using call!
+    when call! succeeds
+      emits notification with success outcome
+    when call! raises an exception
+      emits notification with exception outcome
+
+Axn exception tagging
+  finds the exception classes at all (guards against a walk that silently matches nothing)
+  tags every exception class except the pinned exclusions
+  keeps every pinned exclusion reachable, so a rename cannot leave a stale entry here
+  nests DuplicateFieldError with its ContractViolation siblings
+  names the substitute for what happened, not for the exception it replaced
+  refuses to raise an internal base class for a registry that names no error classes
+
+Axn::Error
+  is a module, not a class, so a gem can keep its own superclass
+  catches a tagged exception rooted at StandardError
+  catches a tagged exception rooted at ArgumentError
+  leaves the tagged class's own ancestry intact
+  catches DuplicateFieldError through its ContractViolation superclass
+  catches ReraiseFailed, the substitute for an exception raise cannot hand back as itself
+  does not catch Axn::Failure
+  does not catch internal-only exceptions
+  registry errors
+    have no Axn::Internal constant in their ancestry
+    are all catchable as Axn::Error
+    still descend from StandardError
+
+Axn::InboundValidationError
+  maps each error to {field:, message:} using the full message
+  surfaces base-level errors with field == :base
+  is empty when there are no errors
+
+Axn::Core::Executor
+  #resolve_inbound_facets
+    resolves input-derived tags and dimensions (one map per source)
+    filters by requested sources
+    resolves against raw inputs — does not run preprocess or apply defaults
+    excludes result-phase facets (from: :result), keeping input-phase ones
+    keeps a name declared as both a tag and a dimension in separate maps
+    omits a facet whose resolver raises, keeping the rest
+  #prepare_inbound_for_facets!
+    coerces a wire string before a facet reads the field
+
+Axn::Extensions::Config
+  Axn::Extensions.config
+    returns a Config instance
+    returns the same instance on repeated calls
+  #registered_field_metadata_keys
+    includes :description by default
+    returns a Set
+  #register_field_metadata_key
+    adds a single key
+    adds multiple keys
+    converts strings to symbols
+    accumulates keys across multiple calls
+    handles duplicate keys gracefully (Set semantics)
+  the reserved core DSL option names
+    is a frozen Set
+    draws from every source it is derived from
+    covers the kwargs that are bound before the splat, not only the misroutable keys
+    does not reserve :description, the metadata key axn registers itself
+  #register_field_metadata_key refusing a core DSL option name
+    refuses every reserved name
+    refuses :on, the collision that motivated the reservation
+    refuses the String spelling exactly as the Symbol
+    names every colliding key in one raise, and only the colliding ones
+    names a colliding key once however many times it was passed
+    says how to fix it
+    registers nothing when any key in the call is reserved
+    still registers a name the core DSL does not own
+
+Axn::Extensions::Config semantic hints
+  seeds the core semantic-hint vocabulary
+  lets an adapter register additional vocabulary
+
+Axn::Extensions::Serialization
+  .render
+    serializes each declared field by wire key (string)
+    renders the declared exposures and nothing else
+    derives the configs from a mocked result
+    renders an ordinary field name as a frozen UTF-8 property
+    threads reject_opaque: to the values it serializes
+
+Axn::Extensions
+  .swallowable?
+    answers from the class hierarchy, not from the instance
+    still answers true for the allowlist and its subclasses
+  .owned_failure?
+    is true for an Axn::Failure
+    is true for a user-facing validation error
+    is false for a validation error that is not user-facing
+    is false for a foreign exception
+    answers from the class hierarchy, not from the instance
+    does not let the exception's own is_a? replace the answer
+  .best_effort
+    returns the block's value on success
+    in production
+      logs a concise warning and returns nil
+    in non-production
+      logs a verbose warning and returns nil
+    with a custom action warn-target
+      warns on the action instead of the config logger
+    with best_effort_raises_in_dev enabled
+      re-raises in development
+      logs (does not raise) in test
+      re-raises a swallowable non-StandardError in development too
+    the non-StandardError allowlist
+      swallows every class on the allowlist by default
+      propagates every non-StandardError that is not on the allowlist
+      swallows the whole ScriptError family, which are faults in the code being run
+      keeps an enclosing Timeout.timeout working
+    when emitting the warning itself fails
+      swallows rather than escaping when the configured logger cannot write
+      gives the configured logger an independent attempt when an action's warn is the broken one
+      still swallows when both targets are broken
+    an exception carrying no usable backtrace
+      still warns and swallows rather than raising out of the warn path
+    standard_errors_only: true
+      still swallows StandardError
+      returns the block's value on success
+      propagates everything outside StandardError, allowlist included
+    the guarantee that reporting cannot replace the block's exception
+      keeps a valid multibyte message verbatim in the warning
+      renders a Latin-1 message as its text rather than as escapes
+      escapes a message with no UTF-8 rendering rather than losing the line
+      tolerates a desc that is not a String
+      renders a String desc whose bytes have no UTF-8 rendering
+      in production
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      in development
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      in test
+        swallows an ordinary exception, and warns rather than losing the diagnostic
+        swallows a message that raises, and warns rather than losing the diagnostic
+        swallows a message holding bytes with no UTF-8 rendering, and warns rather than losing the diagnostic
+        swallows a message that is not a String and whose to_s raises, and warns rather than losing the diagnostic
+        swallows a class whose name raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering a non-Array, and warns rather than losing the diagnostic
+        swallows a backtrace override that raises, and warns rather than losing the diagnostic
+        swallows a backtrace override answering Thread::Backtrace::Location frames, and warns rather than losing the diagnostic
+        swallows a rebuilt backtrace holding a blank frame, and warns rather than losing the diagnostic
+        swallows a valid multibyte message, and warns rather than losing the diagnostic
+        swallows a Latin-1 message, and warns rather than losing the diagnostic
+        swallows an #exception answering a different object, and warns rather than losing the diagnostic
+        swallows an #exception that raises, and warns rather than losing the diagnostic
+      with best_effort_raises_in_dev enabled
+        re-raises an ordinary exception itself, never a reporting failure
+        re-raises a message that raises itself, never a reporting failure
+        re-raises a message holding bytes with no UTF-8 rendering itself, never a reporting failure
+        re-raises a message that is not a String and whose to_s raises itself, never a reporting failure
+        re-raises a class whose name raises itself, never a reporting failure
+        re-raises a backtrace override answering a non-Array itself, never a reporting failure
+        re-raises a backtrace override that raises itself, never a reporting failure
+        re-raises a backtrace override answering Thread::Backtrace::Location frames itself, never a reporting failure
+        re-raises a rebuilt backtrace holding a blank frame itself, never a reporting failure
+        re-raises a valid multibyte message itself, never a reporting failure
+        re-raises a Latin-1 message itself, never a reporting failure
+        raises an axn-owned error carrying an #exception answering a different object as its cause, not what the hijack produced
+        raises an axn-owned error carrying an #exception that raises as its cause, not what the hijack produced
+        raises an axn-owned error carrying the original OBJECT when its #exception undefines itself
+        raises an axn-owned error carrying the original OBJECT when it answers about the absent #exception
+      a reporting failure raised by the guard's own collaborators
+        swallows a StandardError from the environment seam
+        swallows an allowlisted non-StandardError from the environment seam
+        lets a signal through rather than absorbing it into a swallowed warning
+        swallows rather than raising when the dev-loud decision cannot read the environment
+        lets a signal through from the dev-loud decision too
+        swallows rather than raising when the dev-loud setting itself cannot be read
+
+Axn::Extras::Strategies::Client registration
+  registers the strategy in a process that has not loaded faraday
+  resolves `use :client` when axn was loaded before faraday
+  re-raises a LoadError that names a file other than faraday
+  when faraday cannot be loaded
+    raises at declaration, naming the gem to add
+    still registers the strategy, so the failure names the missing gem rather than the strategy
+
+Axn::Extras::Strategies::Client
+  .configure
+    with default configuration
+      creates a client method with default name
+      sets default headers
+    with custom name
+      creates a client method with custom name
+      uses custom name in user agent
+    with custom user_agent
+      uses provided user agent
+    with prepend_config
+      calls prepend_config before default middleware
+    with debug option
+      enables logger middleware when debug is true
+      does not enable logger middleware when debug is false
+    with configuration block
+      calls the block with the connection
+    with callable options
+      hydrates callable options
+    with Faraday connection options
+      passes options to Faraday.new
+    memoization
+      memoizes the client instance
+    error handling
+      raises error if client name is already taken
+    with error_handler
+      injects ErrorHandlerMiddleware when error_handler is provided
+      does not inject ErrorHandlerMiddleware when error_handler is nil
+
+Finished in 4.17 seconds (files took 0.65506 seconds to load)
+468 examples, 0 failures
+
+docker_exit=0

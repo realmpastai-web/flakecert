@@ -1,0 +1,299 @@
+[project]
+name = "skainet-bridge"
+version = "4.169.50"
+description = "Cross-platform local automation bridge for AI agents — one process, one port, modular Python architecture."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "IvanSkainet" }]
+keywords = ["ai", "agent", "automation", "mcp", "bridge", "cdp", "desktop-automation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+
+# Core runtime dependency. Everything else is optional and degrades gracefully.
+dependencies = [
+    "aiohttp>=3.14.1",
+]
+
+[project.optional-dependencies]
+# Recommended extras for the complete local bridge experience.
+full = [
+    "psutil>=5.9",
+    "websockets>=12.0",
+    "requests>=2.32",
+    "idna>=3.15",
+    "beautifulsoup4>=4.12",
+]
+# Tooling for contributors. v4.61.0 adds:
+#   * hypothesis>=6.0  -- property-based testing (skip if missing, tests self-skip)
+#   * pytest-cov>=4.0  -- coverage gate; the dev install pulls it in for
+#                        `make coverage` and CI.
+#   * pyrefly          -- type checking, gated by scripts/quality_ratchet.py.
+#                        mypy was dropped in v4.169.32: it was installed by
+#                        every CI job and never executed. The [tool.mypy]
+#                        section below stays -- it is pyrefly's config.
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "hypothesis>=6.0",
+    "ruff>=0.4",
+    # Serena 1.6.1 shares the local Python environment and pins this, so
+    # preserve the integration instead of letting a contributor install
+    # silently replace Serena's dependency. (The note here used to justify
+    # the pin by what mypy accepted; mypy left in v4.169.32 and Serena is
+    # the whole reason now.)
+    "pathspec==1.1.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/IvanSkainet/arena-agent"
+Repository = "https://github.com/IvanSkainet/arena-agent"
+Changelog = "https://github.com/IvanSkainet/arena-agent/blob/master/CHANGELOG.md"
+
+# The project is both runnable directly from a release ZIP and installable from
+# source. Explicit discovery is required because the repository intentionally
+# keeps non-Python top-level directories (skills, dashboard, assets, etc.).
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["unified_bridge"]
+
+[tool.setuptools.packages.find]
+include = ["arena*"]
+
+# ---------------------------------------------------------------------------
+# Tooling configuration.
+# ---------------------------------------------------------------------------
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+# The codebase is large and organically grown; start lint adoption gradually.
+extend-exclude = ["cloudflared", "backups", "logs", "reports"]
+
+[tool.ruff.lint]
+# Conservative starter rule set — expand over time as the code is cleaned up.
+select = ["E", "F", "W", "I", "RUF006"]
+ignore = [
+    "E501",  # line length handled by formatter, not enforced yet
+    "E722",  # bare except — to be cleaned up incrementally
+]
+
+[tool.ruff.lint.isort]
+# The codebase aliases imports heavily (monkeypatch-by-name convention).
+# isort's default splits each aliased member into its own statement; keep
+# them combined, matching the hand-written style and saving ~10 lines/file.
+combine-as-imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+# Per-test hard timeout (sec): catches asyncio hangs/deadlocks instead of
+# stalling CI for the global job timeout. pytest-randomly (in the CI lock)
+# additionally shuffles test order, exposing hidden order dependencies;
+# it prints its seed at startup so failures stay reproducible.
+timeout = 300
+# v4.61.0 introduced --cov. v4.169.43 aligns the default local floor with
+# the weakest supported CI runner (46% on Windows/macOS); CI explicitly raises
+# Linux to 51%. The stale 70% value made the canonical `pytest -q` command in
+# RELEASE.md fail on a green tree whose measured combined coverage is ~60%.
+# Coverage reports go to coverage.xml (for CI artefact upload) and stdout.
+# The branch flag catches a missed branch on a function with one early return.
+addopts = [
+    "-q",
+    "--strict-markers",
+    "--cov=arena",
+    "--cov-report=term-missing",
+    "--cov-report=xml:coverage.xml",
+    "--cov-branch",
+    "--cov-fail-under=46",
+]
+
+# ---------------------------------------------------------------------------
+# Coverage: which paths count, which are excluded. v4.61.0 starts with
+# `arena/` only — dashboard / docs / scripts are excluded so the gate
+# measures runtime code, not glue.
+# ---------------------------------------------------------------------------
+[tool.coverage.run]
+source = ["arena"]
+branch = true
+# Codecov (P3, 2026-08-02): without relative_files the XML carries
+# <source>=<abs path to the arena package dir> + bare filenames
+# ("agent_session.py"), which external coverage services cannot map
+# back onto the repo tree ("error processing coverage reports:
+# files paths"). With it, filenames are repo-relative
+# ("arena/agent_session.py") and Codecov processes the upload.
+relative_files = true
+omit = [
+    "arena/__main__.py",
+    "arena/conftest.py",
+    "arena/tests/*",
+    "*/__pycache__/*",
+    "*/.pytest_cache/*",
+    "*/site-packages/*",
+    # v4.81.1: Windows-only backend. Every non-trivial line is
+    # guarded by ``if not _IS_WINDOWS: raise NotImplementedError``,
+    # which coverage counts as an uncovered branch on Linux CI.
+    # The live Windows CI runners exercise these paths in the
+    # `test_live_*` tests; the Linux side is covered by the
+    # stub-raises tests in ``test_desktop_windows_backend.py``.
+    "arena/desktop/backends/windows.py",
+    "arena/desktop/backends/_win32_api.py",
+]
+
+[tool.coverage.report]
+# Per-module thresholds are aspirational; they trip on PRs that drop
+# coverage on a critical path. The cross-platform 46% default above is the
+# local safety net; CI raises the Linux floor to 51%.
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+    "\\.\\.\\.",
+    # v4.81.1: Windows-only branches added in v4.81.0. On Linux CI
+    # these are entered exactly zero times; on Windows CI they are
+    # exercised by the live tests but the coverage.xml is only
+    # collected on Linux, so we exclude them everywhere.
+    "if env\\.get\\(.has_win32_",
+    "if _USE_WIN32_ACTIVE_WINDOW",
+    "if sys\\.platform == .win32.",
+]
+
+
+sort = "Cover"
+skip_covered = false
+show_missing = true
+
+# ---------------------------------------------------------------------------
+# DO NOT DELETE THIS SECTION because "mypy is not installed".
+#
+# v4.169.32: the mypy package was removed from requirements-ci.in -- it was
+# installed by every CI job and never executed; type checking is pyrefly's.
+# This section is not leftover configuration for it. pyrefly has no config
+# of its own in this repository and imports its settings from here, and the
+# mere PRESENCE of the section selects the `legacy` preset:
+#
+#     No `pyrefly.toml` found -- using settings imported from `[tool.mypy]`
+#     in your `pyproject.toml` (preset: legacy).
+#
+# Measured on this tree, not assumed: with the section, pyrefly reports 0
+# errors under `legacy`. Delete it and pyrefly silently drops to `basic`,
+# which stops checking calls and assignments -- the quality ratchet then
+# fails with 11 new findings it never had to catch before, and the checks
+# that actually matter are gone. A `pyrefly.toml` with preset = "legacy" is
+# NOT equivalent; it produced a different result again (4 errors).
+#
+# scripts/pyrefly_preset_ratchet.py fails closed if this section vanishes
+# or if pyrefly stops resolving to `legacy`.
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_return_any = false
+disallow_untyped_defs = false      # most of arena/ has no annotations
+disallow_any_generics = false
+no_implicit_optional = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+# Auto-update and the restart helpers are the path we actively
+# maintain and where regressions hurt the most. Type-check them
+# strictly so a refactor that breaks the contract lands as a PR
+# failure, not as a 3am "bridge is dead" page.
+module = [
+    "arena.service.restart",
+]
+strict = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+warn_unused_ignores = true
+
+# ---------------------------------------------------------------------------
+# vulture: dead-code detection. Ratcheted at zero since v4.156.0; scope grew
+# to scripts/ and bin/ in v4.157.0 for the same reason the other gates did --
+# make_release_zip.py ships them, so the user executes that code.
+# ---------------------------------------------------------------------------
+[tool.vulture]
+paths = ["arena", "scripts", "bin"]
+min_confidence = 80
+# exc_type/exc_val/exc_tb: protocol-required __aexit__/__exit__ parameters.
+# install_timeout_s (mobile/audio_capture.capture_mic_audio): public kwarg
+# currently not wired into the adb install call — kept for API stability;
+# the wiring TODO is the honest state, deletion would silently shrink the
+# public signature.
+# complete_event: required by prompt_toolkit's Completer.get_completions
+# interface (bin/agentctl_tui.py). The parameter is the contract; the
+# implementation simply has no use for it.
+# _SENSITIVE_KEY_SUBSTRINGS: a backward-compat alias re-exported from
+# arena.observability.redact; tests/test_observability_redact.py asserts the
+# identity, so it is a contract rather than a leftover.
+ignore_names = ["exc_*", "install_timeout_s", "complete_event",
+                "_SENSITIVE_KEY_SUBSTRINGS"]
+# Two re-export facades where a static "unused" verdict is wrong by
+# construction:
+#   * arena/runtime_deps -- unified_bridge.py resolves names dynamically
+#     (_runtime_namespace[...], asserted by test_unified_bridge_compat_surface).
+#   * scripts/cdp_browser.py -- the runtime imports this file BY NAME
+#     (arena/browser/cdp/loader.py puts scripts/ on sys.path, then reads
+#     CDPTabManager and list_tabs off the module), so its imports ARE the
+#     module's surface. 27 of the 28 findings in scripts+bin were this file.
+# Everything else stays scanned.
+exclude = ["*/runtime_deps/*", "*/cdp_browser.py"]
+
+[tool.ruff.lint.per-file-ignores]
+# arena/runtime_deps is a re-export facade: unified_bridge.py assembles its
+# compatibility surface via dynamic namespace lookups (_runtime_namespace[...]),
+# so its "unused" imports are the module's whole purpose. Tracked by tests
+# (compat_surface contract), not by static usage analysis.
+"arena/runtime_deps/**" = ["F401"]
+
+# _SENSOR_DUMP in this module is verbatim `adb shell dumpsys sensorservice`
+# output, and the device pads each "Recent Sensor events" row with a trailing
+# space. Stripping it was measured to leave both parsers' results identical,
+# so the whitespace is not load bearing -- but the fixture's value is being
+# byte-for-byte what a real phone printed. Tidying it to please a linter would
+# quietly weaken the only evidence that the parser survives real input.
+"tests/test_mobile_v83_3.py" = ["W291"]
+
+# scripts/cdp_browser.py is a load-bearing shim, not dead code: the CDP
+# implementation moved into arena/browser/cdp_client/*, but the runtime still
+# imports this file BY NAME (arena/browser/cdp/loader.py inserts scripts/ on
+# sys.path and does `import cdp_browser`), then reads CDPTabManager and
+# list_tabs off the returned module. So the "unused" from-imports ARE the
+# module's contract, and the sys.path bootstrap has to run before them, which
+# is what E402 objects to. Twelve genuinely dead stdlib imports were removed
+# separately (AST-proven); these are the ones that must stay.
+"scripts/cdp_browser.py" = ["F401", "E402"]
+
+# ---------------------------------------------------------------------------
+# import-linter: architecture contracts. BLOCKING in CI — both contracts were
+# verified to hold before being declared. Additions must be verified against
+# the real import graph first (run lint-imports locally), never declared
+# aspirationally: a contract that does not hold is noise, a contract that
+# holds is a wall.
+# ---------------------------------------------------------------------------
+[tool.importlinter]
+root_package = "arena"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Browser and desktop automation stay independent"
+type = "independence"
+modules = ["arena.browser", "arena.desktop"]
+
+[[tool.importlinter.contracts]]
+name = "Production code never imports the test suite"
+type = "forbidden"
+source_modules = ["arena"]
+forbidden_modules = ["tests"]

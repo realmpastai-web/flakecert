@@ -1,0 +1,93 @@
+$ sha256sum test-queue-0.12.0.gem parallel_tests-5.8.0.gem
+78632f446a06657a5f11c0606d8de25b7738ed49912c9c1b2c5c6c0b0ee82343  test-queue-0.12.0.gem
+181898cbee2ffb1c796274ce31d27f792a421324609bfc7e9b5531d929d91eda  parallel_tests-5.8.0.gem
+
+$ curl -s https://rubygems.org/api/v1/gems/test-queue.json | jq -r .sha,.version
+78632f446a06657a5f11c0606d8de25b7738ed49912c9c1b2c5c6c0b0ee82343
+0.12.0
+
+The API document's version field was 0.12.0, so .sha above is the 0.12.0 gem sha. It matches the downloaded file.
+
+$ grep -n srand unpack/test-queue/lib/test_queue/runner.rb
+370:      srand
+
+$ grep -n 'def after_fork' unpack/test-queue/lib/test_queue/runner.rb
+369:    def after_fork_internal(num, iterator)
+397:    def after_fork(num)
+
+$ grep -n -E 'suite_stats|Marshal.dump|/tmp/test_queue_worker' unpack/test-queue/lib/test_queue/iterator.rb
+12:      @suite_stats = []
+68:          @suite_stats << TestQueue::Stats::Suite.new(suite_name, path, Time.now - start, Time.now)
+79:      File.open("/tmp/test_queue_worker_#{$$}_suites", 'wb') do |f|
+80:        Marshal.dump(@suite_stats, f)
+
+$ grep -n -E 'test_queue_worker_.*_suites|FileUtils.rm' unpack/test-queue/lib/test_queue/runner.rb
+243:          FileUtils.rm_f(@socket)
+276:      FileUtils.rm_f(@socket) if @socket && @server.is_a?(UNIXServer)
+440:        FileUtils.rm(file)
+443:      if File.exist?(file = "/tmp/test_queue_worker_#{worker.pid}_suites")
+445:        FileUtils.rm(file)
+
+$ grep -n TEST_QUEUE_STATS unpack/test-queue/lib/test_queue/runner.rb
+218:      ENV['TEST_QUEUE_STATS'] || '.test_queue_stats'
+
+$ grep -n -E 'attr_reader :name|def record_suites|suite.name|def to_h' unpack/test-queue/lib/test_queue/stats.rb
+6:      attr_reader :name, :path, :duration, :last_seen_at
+26:      def to_h
+48:    def suite(name)
+52:    def record_suites(suites)
+54:        @suites[suite.name] = suite
+70:    def to_h
+86:        @suites[suite.name] = suite
+
+$ grep -n -E 'def each|yield suite|failure_count' unpack/test-queue/lib/test_queue/iterator.rb
+24:    def each
+64:            @filter.call(suite) { yield suite }
+66:            yield suite
+69:          @failures += suite.failure_count if suite.respond_to? :failure_count
+
+$ grep -n -E 'seed|run_each|run_worker|QueueRunner' unpack/test-queue/lib/test_queue/runner/rspec.rb
+16:        @rspec = ::RSpec::Core::QueueRunner.new
+20:        seed_notification = ::RSpec::Core::Notifications::SeedNotification.new(@rspec.configuration.seed, seed_used?)
+21:        puts "#{seed_notification.fully_formatted}\n"
+26:      def run_worker(iterator)
+27:        @rspec.run_each(iterator).to_i
+37:      def seed_used?
+38:        @rspec.configuration.seed && @rspec.configuration.seed_used?
+
+$ grep -n -E 'def initialize|ARGV|def run_specs|run_each|seed' unpack/test-queue/lib/test_queue/runner/rspec_ext.rb
+24:    def initialize
+25:      options = ConfigurationOptions.new(ARGV)
+29:    def run_specs(iterator)
+52:    alias run_each run_specs
+
+$ grep -n -E 'command_with_seed|--seed' unpack/pt/src/lib/parallel_tests/rspec/runner.rb
+49:        # --seed 1234
+53:        def command_with_seed(cmd, seed)
+54:          clean = remove_command_arguments(cmd, '--seed', '--order')
+55:          [*clean, '--seed', seed]
+
+$ grep -n -E 'report_failure_rerun_commmand|command_with_seed' unpack/pt/src/lib/parallel_tests/cli.rb
+158:      report_failure_rerun_commmand(test_results, options)
+161:    def report_failure_rerun_commmand(test_results, options)
+169:          command = @runner.command_with_seed(command, failing_set[:seed]) if failing_set[:seed]
+
+$ grep -R -n srand unpack/pt/src/lib; echo EXIT:$?
+EXIT:1
+
+$ grep -n 'num = i + 1' unpack/test-queue/lib/test_queue/runner.rb
+283:        num = i + 1
+
+$ grep -n VERSION unpack/test-queue/lib/test_queue/version.rb
+4:  VERSION = '0.12.0'
+
+$ grep -n 'def spawn_workers' -A 8 unpack/test-queue/lib/test_queue/runner.rb
+281:    def spawn_workers
+282:      @concurrency.times do |i|
+283:        num = i + 1
+284:
+285:        pid = Process.fork do
+286:          @server&.close
+287:
+288:          iterator = Iterator.new(@test_framework, relay? ? @relay : @socket, method(:around_filter), early_failure_limit: @early_failure_limit, run_token: @run_token)
+289:          after_fork_internal(num, iterator)

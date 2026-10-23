@@ -1,0 +1,425 @@
+﻿2026-10-18T06:41:58.3904515Z Current runner version: '2.337.0'
+2026-10-18T06:41:58.3939156Z ##[group]Runner Image Provisioner
+2026-10-18T06:41:58.3941200Z Hosted Compute Agent
+2026-10-18T06:41:58.3942187Z Version: 20261012.601
+2026-10-18T06:41:58.3943359Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-18T06:41:58.3944600Z Build Date: 2026-10-12T17:48:21Z
+2026-10-18T06:41:58.3945931Z Worker ID: {3a3a1e6f-bbe5-47ff-99ca-1dfffaa2d772}
+2026-10-18T06:41:58.3947272Z Region: eastus
+2026-10-18T06:41:58.3948254Z Cloud: Azure
+2026-10-18T06:41:58.3949247Z ##[endgroup]
+2026-10-18T06:41:58.3952054Z ##[group]Operating System
+2026-10-18T06:41:58.3953391Z Ubuntu
+2026-10-18T06:41:58.3954313Z 24.04.5
+2026-10-18T06:41:58.3955243Z LTS
+2026-10-18T06:41:58.3956570Z ##[endgroup]
+2026-10-18T06:41:58.3957663Z ##[group]Runner Image
+2026-10-18T06:41:58.3958721Z Image: ubuntu-24.04
+2026-10-18T06:41:58.3960361Z Version: 20261012.334.1
+2026-10-18T06:41:58.3962809Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-18T06:41:58.3965646Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-18T06:41:58.3967615Z ##[endgroup]
+2026-10-18T06:41:58.3969946Z ##[group]GITHUB_TOKEN Permissions
+2026-10-18T06:41:58.3973028Z Contents: read
+2026-10-18T06:41:58.3974054Z Metadata: read
+2026-10-18T06:41:58.3975228Z Packages: read
+2026-10-18T06:41:58.3976201Z ##[endgroup]
+2026-10-18T06:41:58.3979110Z Secret source: Actions
+2026-10-18T06:41:58.3981117Z Cache mode: write
+2026-10-18T06:41:58.3982608Z Prepare workflow directory
+2026-10-18T06:41:58.4474014Z Prepare all required actions
+2026-10-18T06:41:58.4547457Z Getting action download info
+2026-10-18T06:41:58.6135161Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-18T06:41:58.6990506Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-18T06:41:58.7749477Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-18T06:41:58.9870005Z Complete job name: heavy
+2026-10-18T06:41:59.0627821Z ##[group]Run actions/checkout@v4
+2026-10-18T06:41:59.0628689Z with:
+2026-10-18T06:41:59.0629141Z   repository: realmpastai-web/flakecert
+2026-10-18T06:41:59.0632992Z   token: ***
+2026-10-18T06:41:59.0633423Z   ssh-strict: true
+2026-10-18T06:41:59.0633849Z   ssh-user: git
+2026-10-18T06:41:59.0634316Z   persist-credentials: true
+2026-10-18T06:41:59.0634799Z   clean: true
+2026-10-18T06:41:59.0635246Z   sparse-checkout-cone-mode: true
+2026-10-18T06:41:59.0635755Z   fetch-depth: 1
+2026-10-18T06:41:59.0636176Z   fetch-tags: false
+2026-10-18T06:41:59.0636605Z   show-progress: true
+2026-10-18T06:41:59.0637042Z   lfs: false
+2026-10-18T06:41:59.0637448Z   submodules: false
+2026-10-18T06:41:59.0637899Z   set-safe-directory: true
+2026-10-18T06:41:59.0638395Z   allow-unsafe-pr-checkout: false
+2026-10-18T06:41:59.0639304Z ##[endgroup]
+2026-10-18T06:41:59.1628067Z Syncing repository: realmpastai-web/flakecert
+2026-10-18T06:41:59.1630979Z ##[group]Getting Git version info
+2026-10-18T06:41:59.1632240Z Working directory is '/home/runner/work/flakecert/flakecert'
+2026-10-18T06:41:59.1633890Z [command]/usr/bin/git version
+2026-10-18T06:41:59.1680333Z git version 2.55.0
+2026-10-18T06:41:59.1701821Z ##[endgroup]
+2026-10-18T06:41:59.1715927Z Temporarily overriding HOME='/home/runner/work/_temp/cec617bf-a205-47eb-a582-c1ee7aa56e46' before making global git config changes
+2026-10-18T06:41:59.1718205Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-18T06:41:59.1721352Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/flakecert/flakecert
+2026-10-18T06:41:59.1790378Z Deleting the contents of '/home/runner/work/flakecert/flakecert'
+2026-10-18T06:41:59.1795176Z ##[group]Initializing the repository
+2026-10-18T06:41:59.1799405Z [command]/usr/bin/git init /home/runner/work/flakecert/flakecert
+2026-10-18T06:41:59.1887840Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-18T06:41:59.1890271Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-18T06:41:59.1892269Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-18T06:41:59.1893771Z hint: call:
+2026-10-18T06:41:59.1894677Z hint:
+2026-10-18T06:41:59.1895722Z hint: 	git config --global init.defaultBranch <name>
+2026-10-18T06:41:59.1896991Z hint:
+2026-10-18T06:41:59.1898106Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-18T06:41:59.1900078Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-18T06:41:59.1901587Z hint:
+2026-10-18T06:41:59.1902557Z hint: 	git branch -m <name>
+2026-10-18T06:41:59.1904314Z hint:
+2026-10-18T06:41:59.1905529Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-18T06:41:59.1906999Z Initialized empty Git repository in /home/runner/work/flakecert/flakecert/.git/
+2026-10-18T06:41:59.1910323Z [command]/usr/bin/git remote add origin https://github.com/realmpastai-web/flakecert
+2026-10-18T06:41:59.1950175Z ##[endgroup]
+2026-10-18T06:41:59.1951550Z ##[group]Disabling automatic garbage collection
+2026-10-18T06:41:59.1955632Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-18T06:41:59.1987823Z ##[endgroup]
+2026-10-18T06:41:59.1989159Z ##[group]Setting up auth
+2026-10-18T06:41:59.1996243Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-18T06:41:59.2030022Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-18T06:41:59.2385025Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-18T06:41:59.2427972Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-18T06:41:59.2667257Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-18T06:41:59.2703394Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-18T06:41:59.2927870Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-18T06:41:59.2968831Z ##[endgroup]
+2026-10-18T06:41:59.2969884Z ##[group]Fetching the repository
+2026-10-18T06:41:59.2978834Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +429d5a3c03a3e57f4c5d0eccb50c75c4a42062e7:refs/remotes/origin/feat/poc
+2026-10-18T06:41:59.4915531Z From https://github.com/realmpastai-web/flakecert
+2026-10-18T06:41:59.4917158Z  * [new ref]         429d5a3c03a3e57f4c5d0eccb50c75c4a42062e7 -> origin/feat/poc
+2026-10-18T06:41:59.4921885Z ##[endgroup]
+2026-10-18T06:41:59.4923222Z ##[group]Determining the checkout info
+2026-10-18T06:41:59.4925159Z ##[endgroup]
+2026-10-18T06:41:59.4931181Z [command]/usr/bin/git sparse-checkout disable
+2026-10-18T06:41:59.4984874Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-18T06:41:59.5016193Z ##[group]Checking out the ref
+2026-10-18T06:41:59.5021323Z [command]/usr/bin/git checkout --progress --force -B feat/poc refs/remotes/origin/feat/poc
+2026-10-18T06:41:59.5200435Z Switched to a new branch 'feat/poc'
+2026-10-18T06:41:59.5205476Z branch 'feat/poc' set up to track 'origin/feat/poc'.
+2026-10-18T06:41:59.5212897Z ##[endgroup]
+2026-10-18T06:41:59.5253480Z [command]/usr/bin/git log -1 --format=%H
+2026-10-18T06:41:59.5279561Z 429d5a3c03a3e57f4c5d0eccb50c75c4a42062e7
+2026-10-18T06:41:59.5568061Z ##[group]Run actions/setup-python@v5
+2026-10-18T06:41:59.5568638Z with:
+2026-10-18T06:41:59.5569043Z   python-version: 3.11
+2026-10-18T06:41:59.5569500Z   check-latest: false
+2026-10-18T06:41:59.5573562Z   token: ***
+2026-10-18T06:41:59.5574000Z   update-environment: true
+2026-10-18T06:41:59.5574491Z   allow-prereleases: false
+2026-10-18T06:41:59.5574970Z   freethreaded: false
+2026-10-18T06:41:59.5575403Z ##[endgroup]
+2026-10-18T06:41:59.6892863Z ##[group]Installed versions
+2026-10-18T06:41:59.6996586Z (node:2307) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-18T06:41:59.6997914Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-18T06:41:59.6999179Z Successfully set up CPython (3.11.17)
+2026-10-18T06:41:59.7000557Z ##[endgroup]
+2026-10-18T06:41:59.7177962Z ##[group]Run make freeze
+2026-10-18T06:41:59.7178564Z [36;1mmake freeze[0m
+2026-10-18T06:41:59.7179018Z [36;1mmake envs[0m
+2026-10-18T06:41:59.7179459Z [36;1mmake baseline[0m
+2026-10-18T06:41:59.7180272Z [36;1mmake flakecert[0m
+2026-10-18T06:41:59.7180751Z [36;1mmake comparator[0m
+2026-10-18T06:41:59.7181217Z [36;1mmake ledger[0m
+2026-10-18T06:41:59.7181671Z [36;1mmake verify[0m
+2026-10-18T06:41:59.7454322Z shell: /usr/bin/bash -e {0}
+2026-10-18T06:41:59.7454914Z env:
+2026-10-18T06:41:59.7455460Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-18T06:41:59.7456311Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-18T06:41:59.7457118Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-18T06:41:59.7457854Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-18T06:41:59.7458584Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-18T06:41:59.7459432Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-18T06:41:59.7463804Z   GITHUB_TOKEN: ***
+2026-10-18T06:41:59.7464247Z ##[endgroup]
+2026-10-18T06:41:59.7850907Z python3.11 tools/freeze.py
+2026-10-18T06:41:59.8885485Z frozen-set.csv sha256 a788832159f871780197e2cf9736904546ac0fdf36cad1e6b378837719b8a812
+2026-10-18T06:41:59.9994117Z idoft py-data.csv sha256 a1cf7425cd23096ae653af275fbba6c82d7d72ce5e17bb3db754e46e0e4c3c32
+2026-10-18T06:42:00.0137735Z idoft-rows-matched 32
+2026-10-18T06:42:00.2101417Z idoft_curl_sha256 a1cf7425cd23096ae653af275fbba6c82d7d72ce5e17bb3db754e46e0e4c3c32
+2026-10-18T06:42:00.2102917Z pyswarms_pins numpy==1.16.1 pytest==3.7.1 scipy==1.2.0
+2026-10-18T06:42:00.2104042Z numpy_1_16_1_python_versions ['cp27', 'cp35', 'cp36', 'cp37', 'source']
+2026-10-18T06:42:00.2105105Z wrote evidence/hark-checks.log
+2026-10-18T06:42:00.2105829Z freeze ok
+2026-10-18T06:42:00.2210721Z python3.11 tools/freeze.py
+2026-10-18T06:42:00.2688913Z frozen-set.csv sha256 a788832159f871780197e2cf9736904546ac0fdf36cad1e6b378837719b8a812
+2026-10-18T06:42:00.3064211Z idoft py-data.csv sha256 a1cf7425cd23096ae653af275fbba6c82d7d72ce5e17bb3db754e46e0e4c3c32
+2026-10-18T06:42:00.3142957Z idoft-rows-matched 32
+2026-10-18T06:42:00.4416292Z idoft_curl_sha256 a1cf7425cd23096ae653af275fbba6c82d7d72ce5e17bb3db754e46e0e4c3c32
+2026-10-18T06:42:00.4417097Z pyswarms_pins numpy==1.16.1 pytest==3.7.1 scipy==1.2.0
+2026-10-18T06:42:00.4417689Z numpy_1_16_1_python_versions ['cp27', 'cp35', 'cp36', 'cp37', 'source']
+2026-10-18T06:42:00.4418203Z wrote evidence/hark-checks.log
+2026-10-18T06:42:00.4418561Z freeze ok
+2026-10-18T06:42:00.4545640Z python3.11 tools/envs.py
+2026-10-18T06:42:00.6239627Z base flakecert-base:3.11 from python:3.11-slim-bookworm
+2026-10-18T06:42:22.3132646Z base flakecert-base:3.9 from python:3.9-slim-bookworm
+2026-10-18T06:42:43.8348048Z base flakecert-base:3.8 from python:3.8-slim-bookworm
+2026-10-18T06:43:05.4638730Z base flakecert-base:3.7 from python:3.7-slim-buster
+2026-10-18T06:43:23.5062514Z F01 clone eth-cscs/reframe@576eb3f1dc
+2026-10-18T06:43:23.5063343Z F02 clone bennymeg/Butter.MAS.PythonAPI@f86ebe75df
+2026-10-18T06:43:23.5067469Z F03 clone huashengdun/webssh@51d527fe75F04 clone ericmjl/nxviz@d2a2a622e8
+2026-10-18T06:43:23.5068129Z 
+2026-10-18T06:43:50.2774292Z F05 clone django-beam/django-beam@43b2111f5c
+2026-10-18T06:43:51.6960826Z F06 clone prancer-io/cloud-validation-framework@94522590d9
+2026-10-18T06:43:53.0948573Z F07 clone ljvmiranda921/pyswarms@08756526f3
+2026-10-18T06:47:25.0314145Z F08 clone dowjones/tokendito@f5d8e5171d
+2026-10-18T06:48:27.6351314Z F09 clone edasi/kool@efe847a05c
+2026-10-18T06:49:55.8041610Z F10 clone stfc/fparser@4be91d2e10
+2026-10-18T06:50:06.5782964Z F11 clone spulec/freezegun@b46da782a7
+2026-10-18T06:50:16.5283599Z F12 clone PyFunceble/domain2idna@39a1c4e1eb
+2026-10-18T06:50:36.5666661Z F13 clone santoshphilip/eppy@98e58583dc
+2026-10-18T06:50:39.3340531Z F14 clone microsoft/knack@dc7b7d857c
+2026-10-18T06:51:57.6543053Z F15 clone OpenDataServices/lib-cove@74ba874ec6
+2026-10-18T06:52:04.4937812Z F16 clone didix21/mdutils@2ef859ecc1
+2026-10-18T06:52:23.1606640Z F17 clone pustotnik/zenmake@6cff05114c
+2026-10-18T06:52:39.6058243Z F19 clone seanbreckenridge/keepassxc-pwned@aead83c174
+2026-10-18T06:52:52.3221549Z F20 clone bpepple/metron-tagger@2be1762932
+2026-10-18T06:53:10.8676274Z F21 clone mtik00/yamicache@1109d08b18
+2026-10-18T06:55:31.7575346Z image F01 tag=flakecert:F01 python=3.11.17 digest=sha256:fc465d48c483f1ab5333b4b675970ee4203a004e8bc749b73a971d3c3825a29d pip_freeze_sha256=78b1371d7f23acd5742f8c2ef2afde0a744ce9985134802a7f9daae745951473 node_id=unittests/test_policies.py::test_runall_skip_sanity_check[SerialExecutionPolicy]
+2026-10-18T06:55:31.7578983Z image F02 tag=flakecert:F02 python=3.11.17 digest=sha256:666668a694d2028890d29e0497becf902b3d17cda4160941dafa7cc13c677f6c pip_freeze_sha256=d728ecd46b5e82b31bfcf55093ff967a30657a145cf32afe73da8a3292c870b3 node_id=butter/mas/tests/clients/client_http_test.py::TestHttpClientApiMethods::testGetAvailableMotorRegisters
+2026-10-18T06:55:31.7584462Z image F03 tag=flakecert:F03 python=3.11.17 digest=sha256:a4982ae3f9f9ded6d76e426134b00802b4d5a13b4712f77e50108bfd48dbc8d5 pip_freeze_sha256=18a61e2c531c28165abc439532da0f8de7f6e38eaaf9a5ce4f73031eb6ee4d82 node_id=tests/test_app.py::TestAppBasic::test_app_with_correct_credentials_but_wrong_id
+2026-10-18T06:55:31.7588178Z image F04 tag=flakecert:F04 python=3.8.20 digest=sha256:96a36e399a47b9eb4b106f037c9cd16c2cb1a7f0997bc0d995d729eaeef8ae60 pip_freeze_sha256=5cbda693080b8dd1b36e76e784f479d6fc9fe00b2cf30d132b8380826ae85945 node_id=tests/test_geometry.py::test_correct_negative_angle
+2026-10-18T06:55:31.7592028Z image F05 tag=flakecert:F05 python=3.9.25 digest=sha256:5eed5f0569293c620e696af0f5671d0eee17d253ea02d3bf4bf9e18742598f56 pip_freeze_sha256=ef8c5085e390c5fb1e00ccf7470ca9b5d30955670f48baa98867dca2f48388c2 node_id=tests/test_views.py::test_detail
+2026-10-18T06:55:31.7596113Z image F06 tag=flakecert:F06 python=3.9.25 digest=sha256:1f55296e56f268a73e65c268186baa502bb392fb4533a65cd8f5cc8886f1bb8a pip_freeze_sha256=37afcee83be6af5758933593752bf1121ac6ef950e7a3611cd63a91369c87d02 node_id=tests/processor/helper/config/test_config_utils.py::test_framework_dir
+2026-10-18T06:55:31.7600988Z image F07 tag=flakecert:F07 python=3.7.17 digest=sha256:73630334721bf431aae29be1e71f0825d0b5218a87790c116393825c38eafe94 pip_freeze_sha256=6d5e89c3e8e4c6ef1d207fdd1603309039d84cb37baafac40288d905422751bb node_id=tests/optimizers/test_local_best.py::TestLocalBestOptimizer::()::test_obj_with_kwargs
+2026-10-18T06:55:31.7605346Z image F08 tag=flakecert:F08 python=3.11.17 digest=sha256:813ff69d9624616b610040abbed4579dce0c5230eb2ef526e2fced2f16e9e566 pip_freeze_sha256=e782eb4be141d6b3b0d34be35ecddad0484bdd29201c8514a1f76237de025384 node_id=tests/functional_test.py::test_version[runnable2]
+2026-10-18T06:55:31.7609538Z image F09 tag=flakecert:F09 python=3.9.25 digest=sha256:44e16a664d0f0cf8663ab289dc0d5675630dcdfc804a6d3a6fdc1b0200502ec4 pip_freeze_sha256=b0893efc80250eb1f2ea230f376c1008d17cb18ee7537f0cc251c6e0c1920747 node_id=tests/contrib/quizzes/test_question.py::TestQuestion::()::test_add_choices
+2026-10-18T06:55:31.7614116Z image F10 tag=flakecert:F10 python=3.11.17 digest=sha256:6aed77ce2bfa8c8744a7ec4a4dba7ba7ed0f0ff659243f35ba8ed017406ff075 pip_freeze_sha256=677d34269b7441582bb830e901cddd3c00a7f26d768954adc41b36a97073f4c6 node_id=src/fparser/one/tests/test_block_stmts.py::test_implicit_topyf
+2026-10-18T06:55:31.7618434Z image F11 tag=flakecert:F11 python=3.11.17 digest=sha256:0705df3b3d852cd3dce03928030e5562d6a64560989602949d6791d676497fa8 pip_freeze_sha256=151e6d0bb69f398992276af0365d9f5cc80ada9082b9bf7c7f1dfb8311405254 node_id=tests/test_datetimes.py::test_time_localtime
+2026-10-18T06:55:31.7622739Z image F12 tag=flakecert:F12 python=3.11.17 digest=sha256:9ff64859ea2be5b5f81e854833bbf8fd9091283f0daf357158c31edb62f721dd pip_freeze_sha256=98e8dcf72d18916cda44be2b8605b0fd366fe29adc57e17e1af6b376587f5708 node_id=tests/test_converter.py::TestConverter::test_commented_line
+2026-10-18T06:55:31.7627099Z image F13 tag=flakecert:F13 python=3.9.25 digest=sha256:7400c75e2745c8b2b641da6d8a582dc6e8feef4252e9cba79c88b8593540c76f pip_freeze_sha256=91242b39a649acff824e11021cc9ceede34de0f19eee1f7fbb2a1e6cfa638fe0 node_id=eppy/tests/test_modeleditor.py::test_initread
+2026-10-18T06:55:31.7631514Z image F14 tag=flakecert:F14 python=3.9.25 digest=sha256:012c55a90a217a681b2dba71319628c575e27a3b33c21b6fe4a3d16a25f34ab0 pip_freeze_sha256=adb2a481321ebe7c8b37baf0f0f9cf596cca2ad2085310e1093adf4fe7850001 node_id=tests/test_help.py::TestHelp::test_help_extra_params
+2026-10-18T06:55:31.7633756Z image F15 tag=flakecert:F15 python=3.11.17 digest=sha256:5f481ebef7d196673bc9097d7c64bcfe8b0f59ff11a8e102c5f26409c9eeac65 pip_freeze_sha256=35560a6e5ffb6ba81cf967dd137bfd10159916c8876ebab7a676c5b5258bdd08 node_id=tests/lib/test_converters.py::test_convert_json_1
+2026-10-18T06:55:31.7637267Z image F16 tag=flakecert:F16 python=3.11.17 digest=sha256:a7eca8fbf4c09ed981553c8fbbb2e9307c23e266701e481769247dceae5456c5 pip_freeze_sha256=21c585a94a71b59a7ac397b43faa8f527ffe1d3663ee4eeedd53fa67f8ab2b43 node_id=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+2026-10-18T06:55:31.7641446Z image F17 tag=flakecert:F17 python=3.11.17 digest=sha256:3f1cd539102cdc4e68d640cf822c16202df1303b989c663ce1e6a2b717316fcc pip_freeze_sha256=a5b2766ddd682bf744a25a4b601183f20576d1220f735d934b88226b903b9118 node_id=tests/test_waf_assist.py::testUsedWafTaskKeys
+2026-10-18T06:55:31.7645269Z image F19 tag=flakecert:F19 python=3.11.17 digest=sha256:4617e8ae45a10bd336232687e30daaa84cc7f9151397e970700ef65fda5be92c pip_freeze_sha256=116012fbfdd56f7f3370c9166a468cfc0259c9cd2034d13cfe4d2ac13ef32c5a node_id=tests/test_user_input.py::test_user_input_password_not_found
+2026-10-18T06:55:31.7649564Z image F20 tag=flakecert:F20 python=3.8.20 digest=sha256:6ce8166cb7c70aba4f6d55778bdc0f709b5f7510a8f99767f88198a67bf1460d pip_freeze_sha256=b24330126184eb601d1ed1611a16293c4a151c36a4092f2f733f257389491bb2 node_id=tests/test_taggerlib_filesorter.py::test_sort_comic
+2026-10-18T06:55:31.7653538Z image F21 tag=flakecert:F21 python=3.9.25 digest=sha256:64f2cfee3458b9c31d8f3c7c80f1da75473d5f016f18e2904568a475da341e3e pip_freeze_sha256=a70698b3c958eeea335a1ec80ddbaee58e5ec3af68b59cd3e4d2196017807e97 node_id=tests/test_gc.py::test_deco_timeout
+2026-10-18T06:55:31.7655818Z envs built 20/20
+2026-10-18T06:55:31.7900359Z python3.11 tools/baseline.py
+2026-10-18T06:55:31.8567511Z F04 baseline already logged
+2026-10-18T06:55:31.8569566Z F01 baseline already logged
+2026-10-18T06:55:31.8572482Z F03 baseline already logged
+2026-10-18T06:55:31.8585114Z F06 baseline already logged
+2026-10-18T06:55:31.8591070Z F02 baseline already logged
+2026-10-18T06:55:31.8597805Z F07 baseline already loggedF05 baseline already logged
+2026-10-18T06:55:31.8598755Z 
+2026-10-18T06:55:31.8599203Z F08 baseline already logged
+2026-10-18T06:55:31.8610696Z F10 baseline already logged
+2026-10-18T06:55:31.8623722Z F09 baseline already logged
+2026-10-18T06:55:31.8624349Z F11 baseline already logged
+2026-10-18T06:55:31.8631502Z F12 baseline already logged
+2026-10-18T06:55:31.8641392Z F13 baseline already logged
+2026-10-18T06:55:31.8644409Z F14 baseline already logged
+2026-10-18T06:55:31.8647128Z F15 baseline already logged
+2026-10-18T06:55:31.8660846Z F16 baseline already logged
+2026-10-18T06:55:31.8661437Z F19 baseline already logged
+2026-10-18T06:55:31.8662037Z F20 baseline already logged
+2026-10-18T06:55:31.8670413Z F17 baseline already logged
+2026-10-18T06:55:31.8673590Z F21 baseline already logged
+2026-10-18T06:55:31.8982808Z results.csv rows 4793
+2026-10-18T06:55:31.9238708Z python3.11 tools/flakecert_search.py
+2026-10-18T06:55:31.9903217Z F01 flakecert already loggedF02 flakecert already logged
+2026-10-18T06:55:31.9903757Z 
+2026-10-18T06:55:31.9910664Z F04 flakecert already logged
+2026-10-18T06:55:31.9912181Z F05 flakecert already logged
+2026-10-18T06:55:31.9914429Z F05 flakecert done
+2026-10-18T06:55:31.9914843Z F02 flakecert done
+2026-10-18T06:55:31.9915204Z F01 flakecert done
+2026-10-18T06:55:31.9915797Z F04 flakecert done
+2026-10-18T06:55:31.9918338Z F03 flakecert already logged
+2026-10-18T06:55:31.9918784Z F06 flakecert already logged
+2026-10-18T06:55:31.9921658Z F03 flakecert done
+2026-10-18T06:55:31.9922202Z F06 flakecert done
+2026-10-18T06:55:31.9922954Z F08 flakecert already logged
+2026-10-18T06:55:31.9924965Z F08 flakecert done
+2026-10-18T06:55:31.9927594Z F09 flakecert already logged
+2026-10-18T06:55:31.9938709Z F10 flakecert already loggedF07 flakecert already logged
+2026-10-18T06:55:31.9939345Z F09 flakecert done
+2026-10-18T06:55:31.9941297Z F12 flakecert already logged
+2026-10-18T06:55:31.9942926Z 
+2026-10-18T06:55:31.9945075Z F11 flakecert already logged
+2026-10-18T06:55:31.9948189Z F15 flakecert already logged
+2026-10-18T06:55:31.9948861Z F12 flakecert done
+2026-10-18T06:55:31.9949301Z F07 flakecert done
+2026-10-18T06:55:31.9949881Z F11 flakecert done
+2026-10-18T06:55:31.9950382Z F10 flakecert done
+2026-10-18T06:55:31.9952470Z F14 flakecert already logged
+2026-10-18T06:55:31.9955403Z F15 flakecert doneF16 flakecert already logged
+2026-10-18T06:55:31.9958472Z F20 flakecert already logged
+2026-10-18T06:55:31.9958764Z 
+2026-10-18T06:55:31.9960734Z F14 flakecert doneF17 flakecert already logged
+2026-10-18T06:55:31.9961953Z F13 flakecert already logged
+2026-10-18T06:55:31.9963906Z F19 flakecert already logged
+2026-10-18T06:55:31.9964278Z 
+2026-10-18T06:55:31.9964520Z F16 flakecert done
+2026-10-18T06:55:31.9966059Z F20 flakecert done
+2026-10-18T06:55:31.9966453Z F21 flakecert already logged
+2026-10-18T06:55:31.9966981Z F13 flakecert done
+2026-10-18T06:55:31.9967334Z F19 flakecert done
+2026-10-18T06:55:31.9967694Z F17 flakecert done
+2026-10-18T06:55:31.9968027Z F21 flakecert done
+2026-10-18T06:55:32.0269759Z results.csv rows 4793
+2026-10-18T06:55:32.0506812Z python3.11 tools/comparator.py
+2026-10-18T06:55:32.2075933Z F04 comparator fail
+2026-10-18T06:55:32.2093517Z F03 comparator fail
+2026-10-18T06:55:32.2102469Z F01 comparator fail
+2026-10-18T06:55:32.2130341Z F06 comparator fail
+2026-10-18T06:55:32.3063178Z F12 comparator fail
+2026-10-18T06:55:32.3083607Z F08 comparator fail
+2026-10-18T06:55:32.3089426Z F14 comparator fail
+2026-10-18T06:55:32.3252796Z F10 comparator fail
+2026-10-18T06:55:32.3797401Z F15 comparator fail
+2026-10-18T06:55:32.3809038Z F16 comparator fail
+2026-10-18T06:55:32.3816002Z comparator 0/10
+2026-10-18T06:55:32.4053194Z python3.11 tools/ledger.py
+2026-10-18T06:55:32.4888215Z results.csv rows 4793
+2026-10-18T06:55:32.4888985Z wrote /home/runner/work/flakecert/flakecert/ledger/SUMMARY.md
+2026-10-18T06:55:32.4890069Z wrote /home/runner/work/flakecert/flakecert/README.md
+2026-10-18T06:55:32.4962454Z python3.11 tools/verify.py  
+2026-10-18T06:55:32.5673656Z resolve F01
+2026-10-18T06:55:32.6865618Z resolve F02
+2026-10-18T06:55:32.7877479Z resolve F03
+2026-10-18T06:55:32.9289463Z resolve F04
+2026-10-18T06:55:33.0263303Z resolve F05
+2026-10-18T06:55:33.1868957Z resolve F06
+2026-10-18T06:55:33.3553981Z resolve F07
+2026-10-18T06:55:33.4508767Z resolve F08
+2026-10-18T06:55:33.5601945Z resolve F09
+2026-10-18T06:55:33.6620339Z resolve F10
+2026-10-18T06:55:33.7748785Z resolve F11
+2026-10-18T06:55:33.8765024Z resolve F12
+2026-10-18T06:55:33.9787257Z resolve F13
+2026-10-18T06:55:34.0827050Z resolve F14
+2026-10-18T06:55:34.1935228Z resolve F15
+2026-10-18T06:55:34.3054159Z resolve F16
+2026-10-18T06:55:34.4339628Z resolve F17
+2026-10-18T06:55:34.5484292Z resolve F18
+2026-10-18T06:55:34.6649484Z resolve F19
+2026-10-18T06:55:34.7733280Z resolve F20
+2026-10-18T06:55:34.9112357Z resolve F21
+2026-10-18T06:55:35.0281590Z resolve F22
+2026-10-18T06:55:35.1434706Z resolve F23
+2026-10-18T06:55:35.2367720Z resolve F24
+2026-10-18T06:55:35.3315371Z resolve F25
+2026-10-18T06:55:35.4193332Z resolve F26
+2026-10-18T06:55:35.5356329Z resolve F27
+2026-10-18T06:55:35.6287507Z resolve F28
+2026-10-18T06:55:35.7175982Z resolve F29
+2026-10-18T06:55:35.8073719Z resolve F30
+2026-10-18T06:55:35.9322154Z resolve F31
+2026-10-18T06:55:36.0895283Z resolve F32
+2026-10-18T06:55:36.2194824Z deps F01
+2026-10-18T06:55:36.7363714Z deps F02
+2026-10-18T06:55:37.1714192Z deps F03
+2026-10-18T06:55:37.3865364Z deps F04
+2026-10-18T06:55:37.5946315Z deps F05
+2026-10-18T06:55:37.8232070Z deps F06
+2026-10-18T06:55:38.0423964Z deps F07
+2026-10-18T06:55:38.2454319Z deps F08
+2026-10-18T06:55:38.4940210Z deps F09
+2026-10-18T06:55:38.7285148Z deps F10
+2026-10-18T06:55:38.9415958Z deps F11
+2026-10-18T06:55:39.1328058Z deps F12
+2026-10-18T06:55:39.4130942Z deps F13
+2026-10-18T06:55:39.6729824Z deps F14
+2026-10-18T06:55:39.9012108Z deps F15
+2026-10-18T06:55:40.3641079Z deps F16
+2026-10-18T06:55:40.6375114Z deps F17
+2026-10-18T06:55:40.9096901Z deps F18
+2026-10-18T06:55:41.1290157Z deps F19
+2026-10-18T06:55:41.5146994Z deps F20
+2026-10-18T06:55:41.9363839Z deps F21
+2026-10-18T06:55:42.2046446Z deps F22
+2026-10-18T06:55:42.4298889Z deps F23
+2026-10-18T06:55:42.7319683Z deps F24
+2026-10-18T06:55:42.9640734Z deps F25
+2026-10-18T06:55:43.4062717Z deps F26
+2026-10-18T06:55:43.6253569Z deps F27
+2026-10-18T06:55:43.8569429Z deps F28
+2026-10-18T06:55:44.0877940Z deps F29
+2026-10-18T06:55:44.4854359Z deps F30
+2026-10-18T06:55:44.6981478Z deps F31
+2026-10-18T06:55:45.0038270Z deps F32
+2026-10-18T06:55:45.4392131Z RESOLVED 31/32; deps 32 rows
+2026-10-18T06:55:45.4483000Z replay F01
+2026-10-18T06:55:45.4618083Z replay F01 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.4619017Z replay F03
+2026-10-18T06:55:45.4743033Z replay F03 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.4743824Z replay F04
+2026-10-18T06:55:45.4864399Z replay F04 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.4865092Z replay F06
+2026-10-18T06:55:45.4987141Z replay F06 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.4987662Z replay F08
+2026-10-18T06:55:45.5106764Z replay F08 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.5107297Z replay F10
+2026-10-18T06:55:45.5227278Z replay F10 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.5228155Z replay F12
+2026-10-18T06:55:45.5356857Z replay F12 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.5357645Z replay F14
+2026-10-18T06:55:45.5480415Z replay F14 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.5481292Z replay F15
+2026-10-18T06:55:45.5602298Z replay F15 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.5603189Z replay F16
+2026-10-18T06:55:45.5723079Z replay F16 NOT_RUN digest_mismatch
+2026-10-18T06:55:45.6630651Z GATES {"frozen_hash": true, "effective_set": true, "swaps_logged": true, "offline_run": true, "certificates": false, "blind_comparator": false, "bounds": true, "baseline_denominator": true, "summary_traceable": true}
+2026-10-18T06:55:45.6739548Z wrote /home/runner/work/flakecert/flakecert/evidence/verify-report.json
+2026-10-18T06:55:45.6952188Z make: *** [Makefile:32: verify] Error 1
+2026-10-18T06:55:45.6970515Z ##[error]Process completed with exit code 2.
+2026-10-18T06:55:45.7068785Z ##[group]Run actions/upload-artifact@v4
+2026-10-18T06:55:45.7069084Z with:
+2026-10-18T06:55:45.7069289Z   name: flakecert-evidence
+2026-10-18T06:55:45.7069545Z   path: ledger/
+certs/
+evidence/
+
+2026-10-18T06:55:45.7070014Z   if-no-files-found: warn
+2026-10-18T06:55:45.7070249Z   compression-level: 6
+2026-10-18T06:55:45.7070462Z   overwrite: false
+2026-10-18T06:55:45.7070674Z   include-hidden-files: false
+2026-10-18T06:55:45.7070901Z env:
+2026-10-18T06:55:45.7071149Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-18T06:55:45.7071579Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-18T06:55:45.7071996Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-18T06:55:45.7072561Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-18T06:55:45.7072947Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-18T06:55:45.7073324Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-18T06:55:45.7073685Z ##[endgroup]
+2026-10-18T06:55:45.8759720Z (node:39243) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-18T06:55:45.8760729Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-18T06:55:45.8935110Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-18T06:55:45.8938100Z The least common ancestor is /home/runner/work/flakecert/flakecert. This will be the root directory of the artifact
+2026-10-18T06:55:45.8939375Z With the provided path, there will be 64 files uploaded
+2026-10-18T06:55:45.8945628Z Artifact name is valid!
+2026-10-18T06:55:45.8946326Z Root directory input is valid!
+2026-10-18T06:55:46.0879786Z Beginning upload of artifact content to blob storage
+2026-10-18T06:55:46.1842117Z (node:39243) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-18T06:55:46.2149398Z Uploaded bytes 163113
+2026-10-18T06:55:46.2287694Z Finished uploading artifact content to blob storage!
+2026-10-18T06:55:46.2289049Z SHA256 digest of uploaded artifact zip is 08edd4e5c9291e68be8b820fa41e50e28b761d74d6903d5c9b8b45855aa8976b
+2026-10-18T06:55:46.2292037Z Finalizing artifact upload
+2026-10-18T06:55:46.4525755Z Artifact flakecert-evidence.zip successfully finalized. Artifact ID 12128760398
+2026-10-18T06:55:46.4527083Z Artifact flakecert-evidence has been successfully uploaded! Final size is 163113 bytes. Artifact ID is 12128760398
+2026-10-18T06:55:46.4533424Z Artifact download URL: https://github.com/realmpastai-web/flakecert/actions/runs/39104961633/artifacts/12128760398
+2026-10-18T06:55:46.4766872Z Post job cleanup.
+2026-10-18T06:55:46.5615992Z [command]/usr/bin/git version
+2026-10-18T06:55:46.5659454Z git version 2.55.0
+2026-10-18T06:55:46.5732664Z Temporarily overriding HOME='/home/runner/work/_temp/c8095e34-d819-4a64-877f-b5d056edb9d4' before making global git config changes
+2026-10-18T06:55:46.5734165Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-18T06:55:46.5738532Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/flakecert/flakecert
+2026-10-18T06:55:46.5779986Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-18T06:55:46.5817676Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-18T06:55:46.6074810Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-18T06:55:46.6106048Z http.https://github.com/.extraheader
+2026-10-18T06:55:46.6132841Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-18T06:55:46.6163697Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-18T06:55:46.6423550Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-18T06:55:46.6462148Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-18T06:55:46.6859046Z Cleaning up orphan processes
+2026-10-18T06:55:46.7254036Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

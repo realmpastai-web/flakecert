@@ -1,0 +1,38 @@
+<stdin>:2: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+run 2026-10-17T11:09:57.739108Z frozen-set sha256 a788832159f8...
+F01 main eth-cscs/reframe 576eb3f1dc unittests/test_policies.py HTTP 200 OK
+F02 main bennymeg/Butter.MAS.PythonAPI f86ebe75df butter/mas/tests/clients/client_http_test.py HTTP 200 OK
+F03 main huashengdun/webssh 51d527fe75 tests/test_app.py HTTP 200 OK
+F04 main ericmjl/nxviz d2a2a622e8 tests/test_geometry.py HTTP 200 OK
+F05 main django-beam/django-beam 43b2111f5c tests/test_views.py HTTP 200 OK
+F06 main prancer-io/cloud-validation-framework 94522590d9 tests/processor/helper/config/test_config_utils.py HTTP 200 OK
+F07 main ljvmiranda921/pyswarms 08756526f3 tests/optimizers/test_local_best.py HTTP 200 OK
+F08 main dowjones/tokendito f5d8e5171d tests/functional_test.py HTTP 200 OK
+F09 main edasi/kool efe847a05c tests/contrib/quizzes/test_question.py HTTP 200 OK
+F10 main stfc/fparser 4be91d2e10 src/fparser/one/tests/test_block_stmts.py HTTP 200 OK
+F11 main spulec/freezegun b46da782a7 tests/test_datetimes.py HTTP 200 OK
+F12 main PyFunceble/domain2idna 39a1c4e1eb tests/test_converter.py HTTP 200 OK
+F13 main santoshphilip/eppy 98e58583dc eppy/tests/test_modeleditor.py HTTP 200 OK
+F14 main microsoft/knack dc7b7d857c tests/test_help.py HTTP 200 OK
+F15 main OpenDataServices/lib-cove 74ba874ec6 tests/lib/test_converters.py HTTP 200 OK
+F16 main didix21/mdutils 2ef859ecc1 tests/test_mdutils.py HTTP 200 OK
+F17 main pustotnik/zenmake 6cff05114c tests/test_waf_assist.py HTTP 200 OK
+F18 main nithinmurali/pygsheets b34fb501f9 tests/online_test.py HTTP 200 OK
+F19 main seanbreckenridge/keepassxc-pwned aead83c174 tests/test_user_input.py HTTP 200 OK
+F20 main bpepple/metron-tagger 2be1762932 tests/test_taggerlib_filesorter.py HTTP 200 OK
+F21 reserve mtik00/yamicache 1109d08b18 tests/test_gc.py HTTP 200 OK
+F22 reserve Samreay/ChainConsumer 5606696525 tests/test_analysis.py HTTP 200 OK
+F23 reserve scrapinghub/spidermon d58090de7c test_validators_schematics.py HTTP 404 FAIL
+F24 reserve klieret/RandomFileTree aaaa975ae6 randomfiletree/test/test_core.py HTTP 200 OK
+F25 reserve sputt/qer c77e677796 tests/repos/test_pypi.py HTTP 200 OK
+F26 reserve abhinavsingh/proxy.py 9b4263777b tests/common/test_utils.py HTTP 200 OK
+F27 reserve avature/confight be2d162c99 test_confight.py HTTP 200 OK
+F28 reserve econ-ark/HARK c9138af45f HARK/ConsumptionSaving/tests/test_IndShockConsumerType.py HTTP 200 OK
+F29 reserve Qordobacode/fitbert 4b0f2f3f47 fitbert/tests.py HTTP 200 OK
+F30 reserve Osirium/vcdriver 2f311df9a7 test/unit/test_config.py HTTP 200 OK
+F31 reserve qiyangduan/schemaindex 83bfb96c78 test/test_plugin_mysql_hdfs.py HTTP 200 OK
+F32 reserve thundra-io/thundra-lambda-agent-python fcd1c2b0b3 tests/plugins/trace/test_traceable.py HTTP 200 OK
+RESOLVED 31/32
+# Follow-up F23: git tree at d58090de7c0fcb656fc4daa19b6119df95df57d6 (api.github.com/repos/scrapinghub/spidermon/git/trees/...?recursive=1)
+# has tests/test_validators_schematics.py. IDoFT records the pytest id relative to tests/ (rootdir quirk), so the file exists.
+# Harness must resolve the pytest rootdir/testpaths per repo and not assume the id is repo-root relative. The frozen set is NOT modified.

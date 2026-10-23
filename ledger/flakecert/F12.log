@@ -1,0 +1,106 @@
+# flakecert-log-version: 1
+# id: F12
+# method: flakecert
+# category: OD-Vic
+# project: https://github.com/PyFunceble/domain2idna
+# sha: 39a1c4e1ebb877ed511e53b618fbe437a685c970
+# python: 3.11.17
+# image: sha256:db9dc561b1a26a25579a801c0b05204b028a50b9ad59f649d6f4be55380e2e12
+# image_tag: flakecert:F12
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/test_converter.py::TestConverter::test_commented_line
+# node_id: tests/test_converter.py::TestConverter::test_commented_line
+# test_file: tests/test_converter.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 135
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=0.782 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=2 {"order": ["tests/test_converter.py::TestConverter::test_commented_line", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=0.727 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=3 {"order": ["tests/test_converter.py::TestConverter::test_commented_line", "tests/test_converter.py::TestConverter::test_hosts_file_format", "tests/test_converter.py::TestConverter::test_to_idna_multiple", "tests/test_converter.py::TestConverter::test_to_idna_multiple_urls", "tests/test_converter.py::TestConverter::test_to_idna_single"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=0.683 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=4 {"order": ["tests/test_converter.py::TestConverter::test_to_idna_single", "tests/test_converter.py::TestConverter::test_to_idna_multiple_urls", "tests/test_converter.py::TestConverter::test_to_idna_multiple", "tests/test_converter.py::TestConverter::test_hosts_file_format", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=passed exc=- sig=- duration_s=0.693 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=5 {"order": ["tests/test_converter.py::TestConverter::test_hosts_file_format", "tests/test_converter.py::TestConverter::test_to_idna_multiple", "tests/test_converter.py::TestConverter::test_to_idna_multiple_urls", "tests/test_converter.py::TestConverter::test_to_idna_single", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=passed exc=- sig=- duration_s=0.879 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=6 {"order": ["tests/test_converter.py::TestConverter::test_hosts_file_format", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=6 outcome=passed exc=- sig=- duration_s=0.690 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=7 {"order": ["tests/test_converter.py::TestConverter::test_hosts_file_format", "tests/test_converter.py::TestConverter::test_commented_line", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=7 outcome=passed exc=- sig=- duration_s=0.704 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=8 {"order": ["tests/test_converter.py::TestConverter::test_to_idna_multiple", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=8 outcome=passed exc=- sig=- duration_s=0.710 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=9 {"order": ["tests/test_converter.py::TestConverter::test_to_idna_multiple", "tests/test_converter.py::TestConverter::test_commented_line", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=9 outcome=passed exc=- sig=- duration_s=0.912 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=10 {"order": ["tests/test_converter.py::TestConverter::test_to_idna_multiple_urls", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=10 outcome=passed exc=- sig=- duration_s=0.870 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=11 {"order": ["tests/test_converter.py::TestConverter::test_to_idna_multiple_urls", "tests/test_converter.py::TestConverter::test_commented_line", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=11 outcome=passed exc=- sig=- duration_s=0.992 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=12 {"order": ["tests/test_converter.py::TestConverter::test_to_idna_single", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=12 outcome=passed exc=- sig=- duration_s=0.731 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=13 {"order": ["tests/test_converter.py::TestConverter::test_to_idna_single", "tests/test_converter.py::TestConverter::test_commented_line", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=13 outcome=passed exc=- sig=- duration_s=0.909 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=14 {"order": ["tests/test_cli.py::TestCLI::test_domain", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=14 outcome=passed exc=- sig=- duration_s=0.666 node=tests/test_converter.py::TestConverter::test_commented_line
+SCHEDULE run=15 {"order": ["tests/test_cli.py::TestCLI::test_domain_output", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=15 outcome=error exc=ValueError sig=df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b duration_s=0.805 node=tests/test_converter.py::TestConverter::test_commented_line
+TRACEBACK run=15
+_____________ ERROR at setup of TestConverter.test_commented_line ______________
+/usr/local/lib/python3.11/contextlib.py:137: in __enter__
+    return next(self.gen)
+E   ValueError: I/O operation on closed file
+____________ ERROR at teardown of TestConverter.test_commented_line ____________
+/usr/local/lib/python3.11/contextlib.py:137: in __enter__
+    return next(self.gen)
+E   ValueError: I/O operation on closed file
+ENDTRACEBACK run=15
+SCHEDULE run=16 {"order": ["tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=16 outcome=passed exc=- sig=- duration_s=0.695 node=tests/test_converter.py::TestConverter::test_commented_line
+ABLATE source=order necessary=yes
+SCHEDULE run=17 {"order": ["tests/test_cli.py::TestCLI::test_domain_output", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=17 outcome=error exc=ValueError sig=df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b duration_s=0.882 node=tests/test_converter.py::TestConverter::test_commented_line
+TRACEBACK run=17
+_____________ ERROR at setup of TestConverter.test_commented_line ______________
+/usr/local/lib/python3.11/contextlib.py:137: in __enter__
+    return next(self.gen)
+E   ValueError: I/O operation on closed file
+____________ ERROR at teardown of TestConverter.test_commented_line ____________
+/usr/local/lib/python3.11/contextlib.py:137: in __enter__
+    return next(self.gen)
+E   ValueError: I/O operation on closed file
+ENDTRACEBACK run=17
+SCHEDULE run=18 {"order": ["tests/test_cli.py::TestCLI::test_domain_output", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=18 outcome=error exc=ValueError sig=df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b duration_s=0.713 node=tests/test_converter.py::TestConverter::test_commented_line
+TRACEBACK run=18
+_____________ ERROR at setup of TestConverter.test_commented_line ______________
+/usr/local/lib/python3.11/contextlib.py:137: in __enter__
+    return next(self.gen)
+E   ValueError: I/O operation on closed file
+____________ ERROR at teardown of TestConverter.test_commented_line ____________
+/usr/local/lib/python3.11/contextlib.py:137: in __enter__
+    return next(self.gen)
+E   ValueError: I/O operation on closed file
+ENDTRACEBACK run=18
+SCHEDULE run=19 {"order": ["tests/test_cli.py::TestCLI::test_domain_output", "tests/test_converter.py::TestConverter::test_commented_line"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=19 outcome=error exc=ValueError sig=df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b duration_s=0.727 node=tests/test_converter.py::TestConverter::test_commented_line
+TRACEBACK run=19
+_____________ ERROR at setup of TestConverter.test_commented_line ______________
+/usr/local/lib/python3.11/contextlib.py:137: in __enter__
+    return next(self.gen)
+E   ValueError: I/O operation on closed file
+____________ ERROR at teardown of TestConverter.test_commented_line ____________
+/usr/local/lib/python3.11/contextlib.py:137: in __enter__
+    return next(self.gen)
+E   ValueError: I/O operation on closed file
+ENDTRACEBACK run=19
+REPLAY id=F12 matched=3/3 sig=df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b
+CERT id=F12 certified=yes d=1 m=5 k=15 per_run_lower=1/5 runs_to_failure=15 sig=df234fe7337107b8e9f38214bb390aa4893ad426069ae6b4d73c49447443092b
+SEARCH_STOP reason=certified index=19
+FLAKECERT_SUMMARY id=F12 runs=19 failures=4

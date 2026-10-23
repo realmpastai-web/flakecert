@@ -1,0 +1,31 @@
+  MAX_META_VALUE_LENGTH_TEST_OPTIMIZATION,
+} = require('./tags-processors')
+
+const ENCODING_VERSION = 1
+const ALLOWED_CONTENT_TYPES = new Set(['test_session_end', 'test_module_end', 'test_suite_end', 'test'])
+const ALLOWED_METADATA_TARGETS = new Set([...ALLOWED_CONTENT_TYPES, TEST_LEVELS_METADATA])
+
+const TEST_SUITE_KEYS_LENGTH = 12
+const TEST_MODULE_KEYS_LENGTH = 11
+const TEST_SESSION_KEYS_LENGTH = 10
+const TEST_AND_SPAN_KEYS_LENGTH = 11
+
+const INTAKE_SOFT_LIMIT = 2 * 1024 * 1024 // 2MB
+
+// Prefix is ~1 KB in practice; `MsgpackChunk` resizes on overflow.
+const PREFIX_CHUNK_INITIAL_SIZE = 2048
+
+function formatSpan (span) {
+  let encodingVersion = ENCODING_VERSION
+  if (span.type === 'test' && span.meta && span.meta.test_session_id) {
+    encodingVersion = 2
+  }
+  return {
+    type: ALLOWED_CONTENT_TYPES.has(span.type) ? span.type : 'span',
+    version: encodingVersion,
+    content: normalizeSpan(truncateSpanTestOpt(span)),
+  }
+}
+
+function isAllowedMetadataTarget (target) {
+  return ALLOWED_METADATA_TARGETS.has(target)

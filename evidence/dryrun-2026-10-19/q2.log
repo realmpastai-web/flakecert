@@ -1,0 +1,379 @@
+===== q2 F1 76eeb3f seed 48174 2026-10-19T05:36:31Z =====
++ ruby -v; bundle -v inside image with checkout
+ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+Bundler version 2.6.9
+bundler: command not found: rspec
+Install missing gem executables with `bundle install`
+version_exit=127
+
+===== q2 bundler path fix 2026-10-19T05:37:02Z =====
+note: ruby:3.1 image sets BUNDLE_APP_CONFIG=/usr/local/bundle, which hid vendor/bundle. Retry with BUNDLE_APP_CONFIG=/src/.bundle
++ env
+BUNDLE_APP_CONFIG=/usr/local/bundle
+BUNDLE_SILENCE_ROOT_WARNING=1
+GEM_HOME=/usr/local/bundle
++ bundle exec rspec --version with BUNDLE_APP_CONFIG=/src/.bundle
+Settings are listed in order of priority. The top value will be used.
+app_config
+Set via BUNDLE_APP_CONFIG: "/src/.bundle"
+
+path
+Set for your local app (/src/.bundle/config): "vendor/bundle"
+
+silence_root_warning
+Set via BUNDLE_SILENCE_ROOT_WARNING: true
+
+RSpec 3.12
+  - rspec-core 3.12.2
+  - rspec-expectations 3.12.3
+  - rspec-mocks 3.12.6
+  - rspec-support 3.12.1
+rspec_version_exit=0
+
+===== F1-76eeb3f-r1 grep 2026-10-19T05:38:26Z =====
++ grep -c 'has leaked into another example' rspec/F1-76eeb3f-r1.log
+0
++ tail summary
+Finished in 59.2 seconds (files took 1.99 seconds to load)
+913 examples, 31 failures
+
+Failed examples:
+
+rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+rspec ./spaceship/spec/spaceauth_spec.rb:81 # Spaceship::SpaceauthRunner#session_string should return the session when called after run
+rspec ./spaceship/spec/spaceauth_spec.rb:59 # Spaceship::SpaceauthRunner check_session option when passed a known user, it should return a message saying the session is logged in with an exit code of 0
+rspec ./spaceship/spec/spaceauth_spec.rb:49 # Spaceship::SpaceauthRunner check_session option when using the default user, it should return a message saying the session is logged in with an exit code of 0
+rspec ./spaceship/spec/spaceship_spec.rb:28 # Spaceship App Group
+rspec ./spaceship/spec/spaceship_spec.rb:12 # Spaceship Device
+rspec ./spaceship/spec/spaceship_spec.rb:24 # Spaceship App
+rspec ./spaceship/spec/spaceship_spec.rb:16 # Spaceship Certificate
+rspec ./spaceship/spec/spaceship_spec.rb:4 # Spaceship #select_team
+rspec ./spaceship/spec/spaceship_spec.rb:20 # Spaceship ProvisioningProfile
+rspec ./spaceship/spec/spaceship_spec.rb:8 # Spaceship should initialize with a client
+rspec ./spaceship/spec/spaceship_spec.rb:37 # Spaceship Spaceship::Launcher returns a scoped model class
+rspec ./spaceship/spec/spaceship_spec.rb:33 # Spaceship Spaceship::Launcher has a client
+rspec ./spaceship/spec/spaceship_spec.rb:45 # Spaceship Spaceship::Launcher passes the client to the models
+rspec ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5 # Spaceship::ConnectAPI::BuildBetaDetail#Spaceship::ConnectAPI #get_build_beta_details
+rspec ./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5 # Spaceship::ConnectAPI::BetaBuildMetric#Spaceship::ConnectAPI #get_beta_build_metrics
+rspec ./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5 # Spaceship::ConnectAPI::AppStoreVersionReleaseRequest#Spaceship::ConnectAPI #post_app_store_version_release_request
+rspec ./spaceship/spec/connect_api/models/build_delivery_spec.rb:5 # Spaceship::ConnectAPI::BuildDelivery#Spaceship::ConnectAPI #get_build_deliveries
+rspec ./spaceship/spec/portal/certificate_spec.rb:111 # Spaceship::Portal::Certificate#create can create a WebsitePush certificate
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:5 # Spaceship::ConnectAPI::Certificate#client #get_certificates
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:37 # Spaceship::ConnectAPI::Certificate#client #get_certificates with unsupported certificate types
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:60 # Spaceship::ConnectAPI::Certificate#client #get_certificates with a supported certificate type
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:62 # Spaceship::ConnectAPI::Device#client #disable an existing disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:55 # Spaceship::ConnectAPI::Device#client #enable an existing disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:36 # Spaceship::ConnectAPI::Device#client #find_by_udid with missing udid because it is a disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:30 # Spaceship::ConnectAPI::Device#client #find_by_udid with an existing enabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:42 # Spaceship::ConnectAPI::Device#client #find_by_udid with non-existing udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:48 # Spaceship::ConnectAPI::Device#client #find_by_udid with an existing disabled udid with include_disabled parameter set to true
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:5 # Spaceship::ConnectAPI::Device#client #get_devices
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:69 # Spaceship::ConnectAPI::Device#client #rename an existing disabled udid
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+rspec_exit=1
+
+===== F1-76eeb3f-r2 grep 2026-10-19T05:39:27Z =====
++ grep -c 'has leaked into another example' rspec/F1-76eeb3f-r2.log
+0
++ tail summary
+Finished in 57.94 seconds (files took 1.81 seconds to load)
+913 examples, 31 failures
+
+Failed examples:
+
+rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+rspec ./spaceship/spec/spaceauth_spec.rb:81 # Spaceship::SpaceauthRunner#session_string should return the session when called after run
+rspec ./spaceship/spec/spaceauth_spec.rb:59 # Spaceship::SpaceauthRunner check_session option when passed a known user, it should return a message saying the session is logged in with an exit code of 0
+rspec ./spaceship/spec/spaceauth_spec.rb:49 # Spaceship::SpaceauthRunner check_session option when using the default user, it should return a message saying the session is logged in with an exit code of 0
+rspec ./spaceship/spec/spaceship_spec.rb:28 # Spaceship App Group
+rspec ./spaceship/spec/spaceship_spec.rb:12 # Spaceship Device
+rspec ./spaceship/spec/spaceship_spec.rb:24 # Spaceship App
+rspec ./spaceship/spec/spaceship_spec.rb:16 # Spaceship Certificate
+rspec ./spaceship/spec/spaceship_spec.rb:4 # Spaceship #select_team
+rspec ./spaceship/spec/spaceship_spec.rb:20 # Spaceship ProvisioningProfile
+rspec ./spaceship/spec/spaceship_spec.rb:8 # Spaceship should initialize with a client
+rspec ./spaceship/spec/spaceship_spec.rb:37 # Spaceship Spaceship::Launcher returns a scoped model class
+rspec ./spaceship/spec/spaceship_spec.rb:33 # Spaceship Spaceship::Launcher has a client
+rspec ./spaceship/spec/spaceship_spec.rb:45 # Spaceship Spaceship::Launcher passes the client to the models
+rspec ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5 # Spaceship::ConnectAPI::BuildBetaDetail#Spaceship::ConnectAPI #get_build_beta_details
+rspec ./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5 # Spaceship::ConnectAPI::BetaBuildMetric#Spaceship::ConnectAPI #get_beta_build_metrics
+rspec ./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5 # Spaceship::ConnectAPI::AppStoreVersionReleaseRequest#Spaceship::ConnectAPI #post_app_store_version_release_request
+rspec ./spaceship/spec/connect_api/models/build_delivery_spec.rb:5 # Spaceship::ConnectAPI::BuildDelivery#Spaceship::ConnectAPI #get_build_deliveries
+rspec ./spaceship/spec/portal/certificate_spec.rb:111 # Spaceship::Portal::Certificate#create can create a WebsitePush certificate
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:5 # Spaceship::ConnectAPI::Certificate#client #get_certificates
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:37 # Spaceship::ConnectAPI::Certificate#client #get_certificates with unsupported certificate types
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:60 # Spaceship::ConnectAPI::Certificate#client #get_certificates with a supported certificate type
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:62 # Spaceship::ConnectAPI::Device#client #disable an existing disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:55 # Spaceship::ConnectAPI::Device#client #enable an existing disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:36 # Spaceship::ConnectAPI::Device#client #find_by_udid with missing udid because it is a disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:30 # Spaceship::ConnectAPI::Device#client #find_by_udid with an existing enabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:42 # Spaceship::ConnectAPI::Device#client #find_by_udid with non-existing udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:48 # Spaceship::ConnectAPI::Device#client #find_by_udid with an existing disabled udid with include_disabled parameter set to true
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:5 # Spaceship::ConnectAPI::Device#client #get_devices
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:69 # Spaceship::ConnectAPI::Device#client #rename an existing disabled udid
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+rspec_exit=1
+
+===== F1-76eeb3f-r3 grep 2026-10-19T05:40:29Z =====
++ grep -c 'has leaked into another example' rspec/F1-76eeb3f-r3.log
+0
++ tail summary
+Finished in 58.16 seconds (files took 1.9 seconds to load)
+913 examples, 31 failures
+
+Failed examples:
+
+rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+rspec ./spaceship/spec/spaceauth_spec.rb:81 # Spaceship::SpaceauthRunner#session_string should return the session when called after run
+rspec ./spaceship/spec/spaceauth_spec.rb:59 # Spaceship::SpaceauthRunner check_session option when passed a known user, it should return a message saying the session is logged in with an exit code of 0
+rspec ./spaceship/spec/spaceauth_spec.rb:49 # Spaceship::SpaceauthRunner check_session option when using the default user, it should return a message saying the session is logged in with an exit code of 0
+rspec ./spaceship/spec/spaceship_spec.rb:28 # Spaceship App Group
+rspec ./spaceship/spec/spaceship_spec.rb:12 # Spaceship Device
+rspec ./spaceship/spec/spaceship_spec.rb:24 # Spaceship App
+rspec ./spaceship/spec/spaceship_spec.rb:16 # Spaceship Certificate
+rspec ./spaceship/spec/spaceship_spec.rb:4 # Spaceship #select_team
+rspec ./spaceship/spec/spaceship_spec.rb:20 # Spaceship ProvisioningProfile
+rspec ./spaceship/spec/spaceship_spec.rb:8 # Spaceship should initialize with a client
+rspec ./spaceship/spec/spaceship_spec.rb:37 # Spaceship Spaceship::Launcher returns a scoped model class
+rspec ./spaceship/spec/spaceship_spec.rb:33 # Spaceship Spaceship::Launcher has a client
+rspec ./spaceship/spec/spaceship_spec.rb:45 # Spaceship Spaceship::Launcher passes the client to the models
+rspec ./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5 # Spaceship::ConnectAPI::BuildBetaDetail#Spaceship::ConnectAPI #get_build_beta_details
+rspec ./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5 # Spaceship::ConnectAPI::BetaBuildMetric#Spaceship::ConnectAPI #get_beta_build_metrics
+rspec ./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5 # Spaceship::ConnectAPI::AppStoreVersionReleaseRequest#Spaceship::ConnectAPI #post_app_store_version_release_request
+rspec ./spaceship/spec/connect_api/models/build_delivery_spec.rb:5 # Spaceship::ConnectAPI::BuildDelivery#Spaceship::ConnectAPI #get_build_deliveries
+rspec ./spaceship/spec/portal/certificate_spec.rb:111 # Spaceship::Portal::Certificate#create can create a WebsitePush certificate
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:5 # Spaceship::ConnectAPI::Certificate#client #get_certificates
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:37 # Spaceship::ConnectAPI::Certificate#client #get_certificates with unsupported certificate types
+rspec ./spaceship/spec/connect_api/models/certificate_spec.rb:60 # Spaceship::ConnectAPI::Certificate#client #get_certificates with a supported certificate type
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:62 # Spaceship::ConnectAPI::Device#client #disable an existing disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:55 # Spaceship::ConnectAPI::Device#client #enable an existing disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:36 # Spaceship::ConnectAPI::Device#client #find_by_udid with missing udid because it is a disabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:30 # Spaceship::ConnectAPI::Device#client #find_by_udid with an existing enabled udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:42 # Spaceship::ConnectAPI::Device#client #find_by_udid with non-existing udid
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:48 # Spaceship::ConnectAPI::Device#client #find_by_udid with an existing disabled udid with include_disabled parameter set to true
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:5 # Spaceship::ConnectAPI::Device#client #get_devices
+rspec ./spaceship/spec/connect_api/models/device_spec.rb:69 # Spaceship::ConnectAPI::Device#client #rename an existing disabled udid
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+rspec_exit=1
+
+===== F3 example id from F1 r1 Failed examples first line =====
++ first rspec line under Failed examples in rspec/F1-76eeb3f-r1.log
+rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+
+===== F3-76eeb3f-r1 grep 2026-10-19T05:42:16Z =====
++ grep -c 'has leaked into another example' rspec/F3-76eeb3f-r1.log
+0
++ tail
+     # ./spaceship/lib/spaceship/client.rb:1049:in `block in send_request'
+     # ./spaceship/lib/spaceship/client.rb:807:in `with_retry'
+     # ./spaceship/lib/spaceship/client.rb:1048:in `send_request'
+     # ./spaceship/lib/spaceship/client.rb:892:in `request'
+     # ./spaceship/lib/spaceship/client.rb:465:in `do_sirp'
+     # ./spaceship/lib/spaceship/client.rb:671:in `perform_login_method'
+     # ./spaceship/lib/spaceship/client.rb:595:in `send_shared_login_request'
+     # ./spaceship/lib/spaceship/tunes/tunes_client.rb:130:in `send_login_request'
+     # ./spaceship/lib/spaceship/client.rb:974:in `do_login'
+     # ./spaceship/lib/spaceship/client.rb:393:in `login'
+     # ./spaceship/lib/spaceship/client.rb:354:in `login'
+     # ./spaceship/lib/spaceship/tunes/spaceship.rb:24:in `login'
+     # ./spaceship/lib/spaceship/spaceauth_runner.rb:20:in `run'
+     # ./spaceship/spec/spaceauth_spec.rb:14:in `block (3 levels) in <top (required)>'
+     # ./spaceship/spec/spaceauth_spec.rb:13:in `block (2 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.20289 seconds (files took 1.48 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+
+rspec_exit=1
+
+===== F3-76eeb3f-r2 grep 2026-10-19T05:42:19Z =====
++ grep -c 'has leaked into another example' rspec/F3-76eeb3f-r2.log
+0
++ tail
+     # ./spaceship/lib/spaceship/client.rb:1049:in `block in send_request'
+     # ./spaceship/lib/spaceship/client.rb:807:in `with_retry'
+     # ./spaceship/lib/spaceship/client.rb:1048:in `send_request'
+     # ./spaceship/lib/spaceship/client.rb:892:in `request'
+     # ./spaceship/lib/spaceship/client.rb:465:in `do_sirp'
+     # ./spaceship/lib/spaceship/client.rb:671:in `perform_login_method'
+     # ./spaceship/lib/spaceship/client.rb:595:in `send_shared_login_request'
+     # ./spaceship/lib/spaceship/tunes/tunes_client.rb:130:in `send_login_request'
+     # ./spaceship/lib/spaceship/client.rb:974:in `do_login'
+     # ./spaceship/lib/spaceship/client.rb:393:in `login'
+     # ./spaceship/lib/spaceship/client.rb:354:in `login'
+     # ./spaceship/lib/spaceship/tunes/spaceship.rb:24:in `login'
+     # ./spaceship/lib/spaceship/spaceauth_runner.rb:20:in `run'
+     # ./spaceship/spec/spaceauth_spec.rb:14:in `block (3 levels) in <top (required)>'
+     # ./spaceship/spec/spaceauth_spec.rb:13:in `block (2 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.21779 seconds (files took 1.38 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+
+rspec_exit=1
+
+===== F3-76eeb3f-r3 grep 2026-10-19T05:42:21Z =====
++ grep -c 'has leaked into another example' rspec/F3-76eeb3f-r3.log
+0
++ tail
+     # ./spaceship/lib/spaceship/client.rb:1049:in `block in send_request'
+     # ./spaceship/lib/spaceship/client.rb:807:in `with_retry'
+     # ./spaceship/lib/spaceship/client.rb:1048:in `send_request'
+     # ./spaceship/lib/spaceship/client.rb:892:in `request'
+     # ./spaceship/lib/spaceship/client.rb:465:in `do_sirp'
+     # ./spaceship/lib/spaceship/client.rb:671:in `perform_login_method'
+     # ./spaceship/lib/spaceship/client.rb:595:in `send_shared_login_request'
+     # ./spaceship/lib/spaceship/tunes/tunes_client.rb:130:in `send_login_request'
+     # ./spaceship/lib/spaceship/client.rb:974:in `do_login'
+     # ./spaceship/lib/spaceship/client.rb:393:in `login'
+     # ./spaceship/lib/spaceship/client.rb:354:in `login'
+     # ./spaceship/lib/spaceship/tunes/spaceship.rb:24:in `login'
+     # ./spaceship/lib/spaceship/spaceauth_runner.rb:20:in `run'
+     # ./spaceship/spec/spaceauth_spec.rb:14:in `block (3 levels) in <top (required)>'
+     # ./spaceship/spec/spaceauth_spec.rb:13:in `block (2 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 0.20162 seconds (files took 1.4 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+
+rspec_exit=1
+
+===== q2 F2 grep results appended from q2-f2.log 2026-10-19T05:43:42Z =====
+
+===== F2-148c1c9-r1 grep 2026-10-19T05:38:37Z =====
++ grep -c 'has leaked into another example' rspec/F2-148c1c9-r1.log
+0
++ tail summary
+    works with valid inputs
+  #from_standard_to_itc
+    works with alternative values too
+    works with valid inputs
+    returns nil when element can't be found
+  from readable to value
+    works with valid inputs
+    returns nil when element doesn't exist
+
+Failures:
+
+  1) Spaceship::Client handle_two_factor when running non-interactive raises an error
+     Failure/Error: subject.handle_two_step_or_factor("response")
+
+     RuntimeError:
+       2FA can only be performed in interactive mode
+     # ./spaceship/lib/spaceship/two_step_or_factor_client.rb:7:in `handle_two_step_or_factor'
+     # ./spaceship/spec/two_step_or_factor_client_spec.rb:80:in `block (4 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 1 minute 7.66 seconds (files took 2 seconds to load)
+913 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+rspec_exit=1
+
+===== F2-148c1c9-r2 grep 2026-10-19T05:39:46Z =====
++ grep -c 'has leaked into another example' rspec/F2-148c1c9-r2.log
+0
++ tail summary
+    works with valid inputs
+  #from_standard_to_itc
+    works with alternative values too
+    works with valid inputs
+    returns nil when element can't be found
+  from readable to value
+    works with valid inputs
+    returns nil when element doesn't exist
+
+Failures:
+
+  1) Spaceship::Client handle_two_factor when running non-interactive raises an error
+     Failure/Error: subject.handle_two_step_or_factor("response")
+
+     RuntimeError:
+       2FA can only be performed in interactive mode
+     # ./spaceship/lib/spaceship/two_step_or_factor_client.rb:7:in `handle_two_step_or_factor'
+     # ./spaceship/spec/two_step_or_factor_client_spec.rb:80:in `block (4 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 1 minute 6.4 seconds (files took 1.78 seconds to load)
+913 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+rspec_exit=1
+
+===== F2-148c1c9-r3 grep 2026-10-19T05:40:52Z =====
++ grep -c 'has leaked into another example' rspec/F2-148c1c9-r3.log
+0
++ tail summary
+    works with valid inputs
+  #from_standard_to_itc
+    works with alternative values too
+    works with valid inputs
+    returns nil when element can't be found
+  from readable to value
+    works with valid inputs
+    returns nil when element doesn't exist
+
+Failures:
+
+  1) Spaceship::Client handle_two_factor when running non-interactive raises an error
+     Failure/Error: subject.handle_two_step_or_factor("response")
+
+     RuntimeError:
+       2FA can only be performed in interactive mode
+     # ./spaceship/lib/spaceship/two_step_or_factor_client.rb:7:in `handle_two_step_or_factor'
+     # ./spaceship/spec/two_step_or_factor_client_spec.rb:80:in `block (4 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/3.1.0/gems/webmock-3.26.2/lib/webmock/rspec.rb:39:in `block (2 levels) in <top (required)>'
+
+Finished in 1 minute 3.14 seconds (files took 1.74 seconds to load)
+913 examples, 1 failure
+
+Failed examples:
+
+rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+
+Randomized with seed 48174
+
+rspec_exit=1
+
+===== first Failed examples line per rspec log 2026-10-19T05:43:48Z =====
++ awk first rspec line under Failed examples
+F1-76eeb3f-r1.log: rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+F1-76eeb3f-r2.log: rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+F1-76eeb3f-r3.log: rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+F2-148c1c9-r1.log: rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+F2-148c1c9-r2.log: rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+F2-148c1c9-r3.log: rspec ./spaceship/spec/two_step_or_factor_client_spec.rb:76 # Spaceship::Client handle_two_factor when running non-interactive raises an error
+F3-76eeb3f-r1.log: rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+F3-76eeb3f-r2.log: rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session
+F3-76eeb3f-r3.log: rspec ./spaceship/spec/spaceauth_spec.rb:7 # Spaceship::SpaceauthRunner uses all required cookies for fastlane session

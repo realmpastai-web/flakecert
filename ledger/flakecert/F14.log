@@ -1,0 +1,416 @@
+# flakecert-log-version: 1
+# id: F14
+# method: flakecert
+# category: OD-Vic
+# project: https://github.com/microsoft/knack
+# sha: dc7b7d857ce3c11b2a3155b81f2470b3b579e7c9
+# python: 3.9.25
+# image: sha256:7eabf58851e166a1dc08aad67b9cb4e4d1b9c716d04cf747c4584f5f627b66e9
+# image_tag: flakecert:F14
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/test_help.py::TestHelp::test_help_extra_params
+# node_id: tests/test_help.py::TestHelp::test_help_extra_params
+# test_file: tests/test_help.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 365
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=0.877 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=2 {"order": ["tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=0.710 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=3 {"order": ["tests/test_help.py::TestHelpArgumentGroupRegistry::test_help_argument_group_registry", "tests/test_help.py::TestHelpObject::test_short_summary_exclamation_point", "tests/test_help.py::TestHelpObject::test_short_summary_fullstop", "tests/test_help.py::TestHelpObject::test_short_summary_no_fullstop", "tests/test_help.py::TestHelp::test_choice_list_with_ints", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_full_documentations", "tests/test_help.py::TestHelp::test_help_global_params", "tests/test_help.py::TestHelp::test_help_group_children", "tests/test_help.py::TestHelp::test_help_group_help", "tests/test_help.py::TestHelp::test_help_long_and_short_description_from_docstring", "tests/test_help.py::TestHelp::test_help_long_and_short_description_from_yaml", "tests/test_help.py::TestHelp::test_help_long_description_multi_line", "tests/test_help.py::TestHelp::test_help_missing_params", "tests/test_help.py::TestHelp::test_help_param", "tests/test_help.py::TestHelp::test_help_params_documentations", "tests/test_help.py::TestHelp::test_help_with_param_specified"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=0.837 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=4 {"order": ["tests/test_help.py::TestHelp::test_help_with_param_specified", "tests/test_help.py::TestHelp::test_help_params_documentations", "tests/test_help.py::TestHelp::test_help_param", "tests/test_help.py::TestHelp::test_help_missing_params", "tests/test_help.py::TestHelp::test_help_long_description_multi_line", "tests/test_help.py::TestHelp::test_help_long_and_short_description_from_yaml", "tests/test_help.py::TestHelp::test_help_long_and_short_description_from_docstring", "tests/test_help.py::TestHelp::test_help_group_help", "tests/test_help.py::TestHelp::test_help_group_children", "tests/test_help.py::TestHelp::test_help_global_params", "tests/test_help.py::TestHelp::test_help_full_documentations", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_choice_list_with_ints", "tests/test_help.py::TestHelpObject::test_short_summary_no_fullstop", "tests/test_help.py::TestHelpObject::test_short_summary_fullstop", "tests/test_help.py::TestHelpObject::test_short_summary_exclamation_point", "tests/test_help.py::TestHelpArgumentGroupRegistry::test_help_argument_group_registry"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=passed exc=- sig=- duration_s=0.940 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=5 {"order": ["tests/test_help.py::TestHelpArgumentGroupRegistry::test_help_argument_group_registry", "tests/test_help.py::TestHelpObject::test_short_summary_exclamation_point", "tests/test_help.py::TestHelpObject::test_short_summary_fullstop", "tests/test_help.py::TestHelpObject::test_short_summary_no_fullstop", "tests/test_help.py::TestHelp::test_choice_list_with_ints", "tests/test_help.py::TestHelp::test_help_full_documentations", "tests/test_help.py::TestHelp::test_help_global_params", "tests/test_help.py::TestHelp::test_help_group_children", "tests/test_help.py::TestHelp::test_help_group_help", "tests/test_help.py::TestHelp::test_help_long_and_short_description_from_docstring", "tests/test_help.py::TestHelp::test_help_long_and_short_description_from_yaml", "tests/test_help.py::TestHelp::test_help_long_description_multi_line", "tests/test_help.py::TestHelp::test_help_missing_params", "tests/test_help.py::TestHelp::test_help_param", "tests/test_help.py::TestHelp::test_help_params_documentations", "tests/test_help.py::TestHelp::test_help_with_param_specified", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=passed exc=- sig=- duration_s=0.793 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=6 {"order": ["tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelpArgumentGroupRegistry::test_help_argument_group_registry", "tests/test_help.py::TestHelpObject::test_short_summary_exclamation_point", "tests/test_help.py::TestHelpObject::test_short_summary_fullstop", "tests/test_help.py::TestHelpObject::test_short_summary_no_fullstop", "tests/test_help.py::TestHelp::test_choice_list_with_ints", "tests/test_help.py::TestHelp::test_help_full_documentations", "tests/test_help.py::TestHelp::test_help_global_params", "tests/test_help.py::TestHelp::test_help_group_children", "tests/test_help.py::TestHelp::test_help_group_help", "tests/test_help.py::TestHelp::test_help_long_and_short_description_from_docstring", "tests/test_help.py::TestHelp::test_help_long_and_short_description_from_yaml", "tests/test_help.py::TestHelp::test_help_long_description_multi_line", "tests/test_help.py::TestHelp::test_help_missing_params", "tests/test_help.py::TestHelp::test_help_param", "tests/test_help.py::TestHelp::test_help_params_documentations", "tests/test_help.py::TestHelp::test_help_with_param_specified"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=6 outcome=passed exc=- sig=- duration_s=1.036 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=7 {"order": ["tests/test_help.py::TestHelpArgumentGroupRegistry::test_help_argument_group_registry", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=7 outcome=passed exc=- sig=- duration_s=0.750 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=8 {"order": ["tests/test_help.py::TestHelpArgumentGroupRegistry::test_help_argument_group_registry", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=8 outcome=passed exc=- sig=- duration_s=0.720 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=9 {"order": ["tests/test_help.py::TestHelpObject::test_short_summary_exclamation_point", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=9 outcome=passed exc=- sig=- duration_s=0.688 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=10 {"order": ["tests/test_help.py::TestHelpObject::test_short_summary_exclamation_point", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=10 outcome=passed exc=- sig=- duration_s=0.776 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=11 {"order": ["tests/test_help.py::TestHelpObject::test_short_summary_fullstop", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=11 outcome=passed exc=- sig=- duration_s=1.048 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=12 {"order": ["tests/test_help.py::TestHelpObject::test_short_summary_fullstop", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=12 outcome=passed exc=- sig=- duration_s=1.030 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=13 {"order": ["tests/test_help.py::TestHelpObject::test_short_summary_no_fullstop", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=13 outcome=passed exc=- sig=- duration_s=0.751 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=14 {"order": ["tests/test_help.py::TestHelpObject::test_short_summary_no_fullstop", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=14 outcome=passed exc=- sig=- duration_s=0.747 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=15 {"order": ["tests/test_help.py::TestHelp::test_choice_list_with_ints", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=15 outcome=passed exc=- sig=- duration_s=0.798 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=16 {"order": ["tests/test_help.py::TestHelp::test_choice_list_with_ints", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=16 outcome=passed exc=- sig=- duration_s=0.764 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=17 {"order": ["tests/test_help.py::TestHelp::test_help_full_documentations", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=17 outcome=passed exc=- sig=- duration_s=0.860 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=18 {"order": ["tests/test_help.py::TestHelp::test_help_full_documentations", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=18 outcome=passed exc=- sig=- duration_s=0.832 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=19 {"order": ["tests/test_help.py::TestHelp::test_help_global_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=19 outcome=passed exc=- sig=- duration_s=0.735 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=20 {"order": ["tests/test_help.py::TestHelp::test_help_global_params", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=20 outcome=passed exc=- sig=- duration_s=0.707 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=21 {"order": ["tests/test_help.py::TestHelp::test_help_group_children", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=21 outcome=passed exc=- sig=- duration_s=0.738 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=22 {"order": ["tests/test_help.py::TestHelp::test_help_group_children", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=22 outcome=passed exc=- sig=- duration_s=0.723 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=23 {"order": ["tests/test_help.py::TestHelp::test_help_group_help", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=23 outcome=passed exc=- sig=- duration_s=0.797 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=24 {"order": ["tests/test_help.py::TestHelp::test_help_group_help", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=24 outcome=passed exc=- sig=- duration_s=0.821 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=25 {"order": ["tests/test_help.py::TestHelp::test_help_long_and_short_description_from_docstring", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=25 outcome=passed exc=- sig=- duration_s=0.716 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=26 {"order": ["tests/test_help.py::TestHelp::test_help_long_and_short_description_from_docstring", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=26 outcome=passed exc=- sig=- duration_s=0.712 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=27 {"order": ["tests/test_help.py::TestHelp::test_help_long_and_short_description_from_yaml", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=27 outcome=passed exc=- sig=- duration_s=1.076 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=28 {"order": ["tests/test_help.py::TestHelp::test_help_long_and_short_description_from_yaml", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=28 outcome=passed exc=- sig=- duration_s=1.085 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=29 {"order": ["tests/test_help.py::TestHelp::test_help_long_description_multi_line", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=29 outcome=passed exc=- sig=- duration_s=0.757 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=30 {"order": ["tests/test_help.py::TestHelp::test_help_long_description_multi_line", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=30 outcome=passed exc=- sig=- duration_s=0.774 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=31 {"order": ["tests/test_help.py::TestHelp::test_help_missing_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=31 outcome=passed exc=- sig=- duration_s=1.097 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=32 {"order": ["tests/test_help.py::TestHelp::test_help_missing_params", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=32 outcome=passed exc=- sig=- duration_s=0.870 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=33 {"order": ["tests/test_help.py::TestHelp::test_help_param", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=33 outcome=passed exc=- sig=- duration_s=1.141 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=34 {"order": ["tests/test_help.py::TestHelp::test_help_param", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=34 outcome=passed exc=- sig=- duration_s=0.730 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=35 {"order": ["tests/test_help.py::TestHelp::test_help_params_documentations", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=35 outcome=passed exc=- sig=- duration_s=0.726 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=36 {"order": ["tests/test_help.py::TestHelp::test_help_params_documentations", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=36 outcome=passed exc=- sig=- duration_s=0.755 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=37 {"order": ["tests/test_help.py::TestHelp::test_help_with_param_specified", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=37 outcome=passed exc=- sig=- duration_s=0.783 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=38 {"order": ["tests/test_help.py::TestHelp::test_help_with_param_specified", "tests/test_help.py::TestHelp::test_help_extra_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=38 outcome=passed exc=- sig=- duration_s=0.748 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=39 {"order": ["tests/test_cli_scenarios.py::TestCLIScenarios::test_case_insensitive_command_path", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=39 outcome=passed exc=- sig=- duration_s=0.749 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=40 {"order": ["tests/test_cli_scenarios.py::TestCLIScenarios::test_cli_exapp1", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=40 outcome=passed exc=- sig=- duration_s=0.758 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=41 {"order": ["tests/test_cli_scenarios.py::TestCLIScenarios::test_list_value_parameter", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=41 outcome=passed exc=- sig=- duration_s=0.730 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=42 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_cli_ctx_type_error", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=42 outcome=passed exc=- sig=- duration_s=0.769 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=43 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_command_build_argument_help_text", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=43 outcome=passed exc=- sig=- duration_s=0.703 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=44 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_dont_override_existing_option_string", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=44 outcome=passed exc=- sig=- duration_s=0.727 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=45 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_override_argtype_with_argtype", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=45 outcome=passed exc=- sig=- duration_s=0.713 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=46 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_override_existing_option_string", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=46 outcome=passed exc=- sig=- duration_s=0.766 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=47 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_override_remove_validator", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=47 outcome=passed exc=- sig=- duration_s=0.754 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=48 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_override_using_register_cli_argument", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=48 outcome=passed exc=- sig=- duration_s=0.742 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=49 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_cli_argument", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=49 outcome=passed exc=- sig=- duration_s=0.725 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=50 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_cli_argument_with_overrides", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=50 outcome=passed exc=- sig=- duration_s=0.711 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=51 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_command", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=51 outcome=passed exc=- sig=- duration_s=0.717 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=52 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_command_confirmation_bool", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=52 outcome=passed exc=- sig=- duration_s=0.790 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=53 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_command_confirmation_callable", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=53 outcome=passed exc=- sig=- duration_s=0.721 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=54 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_command_custom_excluded_params", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=54 outcome=passed exc=- sig=- duration_s=0.771 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=55 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_command_group_with_no_group_name", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=55 outcome=passed exc=- sig=- duration_s=0.745 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=56 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_extra_cli_argument", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=56 outcome=passed exc=- sig=- duration_s=0.719 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=57 {"order": ["tests/test_command_registration.py::TestCommandRegistration::test_register_ignore_cli_argument", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=57 outcome=passed exc=- sig=- duration_s=0.764 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=58 {"order": ["tests/test_command_with_configured_defaults.py::TestCommandWithConfiguredDefaults::test_apply_configured_defaults_on_optional_arg", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=58 outcome=passed exc=- sig=- duration_s=0.730 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=59 {"order": ["tests/test_command_with_configured_defaults.py::TestCommandWithConfiguredDefaults::test_apply_configured_defaults_on_required_arg", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=59 outcome=passed exc=- sig=- duration_s=0.687 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=60 {"order": ["tests/test_command_with_configured_defaults.py::TestCommandWithConfiguredDefaults::test_no_configured_default_on_required_arg", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=60 outcome=passed exc=- sig=- duration_s=0.843 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=61 {"order": ["tests/test_completion.py::TestCompletion::test_case_insensitive_choices_empty", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=61 outcome=passed exc=- sig=- duration_s=0.849 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=62 {"order": ["tests/test_completion.py::TestCompletion::test_case_insensitive_choices_empty_with_prefix", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=62 outcome=passed exc=- sig=- duration_s=0.716 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=63 {"order": ["tests/test_completion.py::TestCompletion::test_case_insensitive_choices_list_diff_case", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=63 outcome=passed exc=- sig=- duration_s=0.774 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=64 {"order": ["tests/test_completion.py::TestCompletion::test_case_insensitive_choices_list_diff_case_with_prefix", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=64 outcome=passed exc=- sig=- duration_s=0.769 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=65 {"order": ["tests/test_completion.py::TestCompletion::test_case_insensitive_choices_list_multi_case_with_prefix", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=65 outcome=passed exc=- sig=- duration_s=0.746 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=66 {"order": ["tests/test_completion.py::TestCompletion::test_case_insensitive_choices_list_same_case", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=66 outcome=passed exc=- sig=- duration_s=0.733 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=67 {"order": ["tests/test_completion.py::TestCompletion::test_cli_ctx_type_error", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=67 outcome=passed exc=- sig=- duration_s=0.781 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=68 {"order": ["tests/test_completion.py::TestCompletion::test_completer_active", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=68 outcome=passed exc=- sig=- duration_s=0.713 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=69 {"order": ["tests/test_completion.py::TestCompletion::test_completer_not_active", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=69 outcome=passed exc=- sig=- duration_s=0.707 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=70 {"order": ["tests/test_config.py::TestCLIConfig::test_get", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=70 outcome=passed exc=- sig=- duration_s=0.713 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=71 {"order": ["tests/test_config.py::TestCLIConfig::test_get_env", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=71 outcome=passed exc=- sig=- duration_s=0.696 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=72 {"order": ["tests/test_config.py::TestCLIConfig::test_get_fallback", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=72 outcome=passed exc=- sig=- duration_s=0.730 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=73 {"order": ["tests/test_config.py::TestCLIConfig::test_get_local", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=73 outcome=passed exc=- sig=- duration_s=0.740 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=74 {"order": ["tests/test_config.py::TestCLIConfig::test_get_not_found_option", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=74 outcome=passed exc=- sig=- duration_s=0.764 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=75 {"order": ["tests/test_config.py::TestCLIConfig::test_get_not_found_section", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=75 outcome=passed exc=- sig=- duration_s=0.696 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=76 {"order": ["tests/test_config.py::TestCLIConfig::test_getboolean", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=76 outcome=passed exc=- sig=- duration_s=0.686 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=77 {"order": ["tests/test_config.py::TestCLIConfig::test_getboolean_error", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=77 outcome=passed exc=- sig=- duration_s=0.733 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=78 {"order": ["tests/test_config.py::TestCLIConfig::test_getboolean_local", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=78 outcome=passed exc=- sig=- duration_s=0.691 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=79 {"order": ["tests/test_config.py::TestCLIConfig::test_getfloat", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=79 outcome=passed exc=- sig=- duration_s=0.688 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=80 {"order": ["tests/test_config.py::TestCLIConfig::test_getfloat_error", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=80 outcome=passed exc=- sig=- duration_s=0.694 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=81 {"order": ["tests/test_config.py::TestCLIConfig::test_getfloat_local", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=81 outcome=passed exc=- sig=- duration_s=0.751 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=82 {"order": ["tests/test_config.py::TestCLIConfig::test_getint", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=82 outcome=passed exc=- sig=- duration_s=0.762 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=83 {"order": ["tests/test_config.py::TestCLIConfig::test_getint_error", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=83 outcome=passed exc=- sig=- duration_s=0.814 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=84 {"order": ["tests/test_config.py::TestCLIConfig::test_getint_local", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=84 outcome=passed exc=- sig=- duration_s=0.761 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=85 {"order": ["tests/test_config.py::TestCLIConfig::test_has_option", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=85 outcome=passed exc=- sig=- duration_s=0.742 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=86 {"order": ["tests/test_config.py::TestCLIConfig::test_has_option_env", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=86 outcome=passed exc=- sig=- duration_s=0.731 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=87 {"order": ["tests/test_config.py::TestCLIConfig::test_has_option_env_no", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=87 outcome=passed exc=- sig=- duration_s=0.865 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=88 {"order": ["tests/test_config.py::TestCLIConfig::test_has_option_local", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=88 outcome=passed exc=- sig=- duration_s=0.809 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=89 {"order": ["tests/test_config.py::TestCLIConfig::test_set_config_value", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=89 outcome=passed exc=- sig=- duration_s=0.728 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=90 {"order": ["tests/test_config.py::TestCLIConfig::test_set_config_value_duplicate_section_ok", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=90 outcome=passed exc=- sig=- duration_s=0.759 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=91 {"order": ["tests/test_config.py::TestCLIConfig::test_set_config_value_duplicate_section_ok_local", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=91 outcome=passed exc=- sig=- duration_s=0.699 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=92 {"order": ["tests/test_config.py::TestCLIConfig::test_set_config_value_file_permissions", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=92 outcome=passed exc=- sig=- duration_s=0.906 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=93 {"order": ["tests/test_config.py::TestCLIConfig::test_set_config_value_not_string", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=93 outcome=passed exc=- sig=- duration_s=0.811 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=94 {"order": ["tests/test_deprecation.py::TestCommandDeprecation::test_deprecate_command_expired_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=94 outcome=passed exc=- sig=- duration_s=0.721 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=95 {"order": ["tests/test_deprecation.py::TestCommandDeprecation::test_deprecate_command_expired_execute_no_color", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=95 outcome=passed exc=- sig=- duration_s=0.723 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=96 {"order": ["tests/test_deprecation.py::TestCommandDeprecation::test_deprecate_command_expiring_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=96 outcome=passed exc=- sig=- duration_s=0.747 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=97 {"order": ["tests/test_deprecation.py::TestCommandDeprecation::test_deprecate_command_expiring_execute_no_color", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=97 outcome=passed exc=- sig=- duration_s=0.809 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=98 {"order": ["tests/test_deprecation.py::TestCommandDeprecation::test_deprecate_command_group_help", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=98 outcome=passed exc=- sig=- duration_s=0.770 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=99 {"order": ["tests/test_deprecation.py::TestCommandDeprecation::test_deprecate_command_help_hidden", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=99 outcome=passed exc=- sig=- duration_s=0.752 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=100 {"order": ["tests/test_deprecation.py::TestCommandDeprecation::test_deprecate_command_hidden_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=100 outcome=passed exc=- sig=- duration_s=0.707 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=101 {"order": ["tests/test_deprecation.py::TestCommandDeprecation::test_deprecate_command_plain_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=101 outcome=passed exc=- sig=- duration_s=0.890 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=102 {"order": ["tests/test_deprecation.py::TestCommandGroupDeprecation::test_deprecate_command_group_expired", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=102 outcome=passed exc=- sig=- duration_s=0.810 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=103 {"order": ["tests/test_deprecation.py::TestCommandGroupDeprecation::test_deprecate_command_group_help_expiring", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=103 outcome=passed exc=- sig=- duration_s=0.731 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=104 {"order": ["tests/test_deprecation.py::TestCommandGroupDeprecation::test_deprecate_command_group_help_expiring_no_color", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=104 outcome=passed exc=- sig=- duration_s=0.789 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=105 {"order": ["tests/test_deprecation.py::TestCommandGroupDeprecation::test_deprecate_command_group_help_hidden", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=105 outcome=passed exc=- sig=- duration_s=0.862 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=106 {"order": ["tests/test_deprecation.py::TestCommandGroupDeprecation::test_deprecate_command_group_help_plain", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=106 outcome=passed exc=- sig=- duration_s=0.766 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=107 {"order": ["tests/test_deprecation.py::TestCommandGroupDeprecation::test_deprecate_command_implicitly", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=107 outcome=passed exc=- sig=- duration_s=0.778 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=108 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_arguments_command_help", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=108 outcome=passed exc=- sig=- duration_s=0.942 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=109 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_arguments_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=109 outcome=passed exc=- sig=- duration_s=0.809 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=110 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_arguments_execute_expired", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=110 outcome=passed exc=- sig=- duration_s=0.730 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=111 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_arguments_execute_expiring", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=111 outcome=passed exc=- sig=- duration_s=0.755 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=112 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_arguments_execute_hidden", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=112 outcome=passed exc=- sig=- duration_s=0.750 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=113 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=113 outcome=passed exc=- sig=- duration_s=0.771 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=114 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute_expired", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=114 outcome=passed exc=- sig=- duration_s=1.076 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=115 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute_expired_non_deprecated", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=115 outcome=passed exc=- sig=- duration_s=0.719 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=116 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute_expiring", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=116 outcome=passed exc=- sig=- duration_s=0.693 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=117 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute_expiring_no_color", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=117 outcome=passed exc=- sig=- duration_s=1.061 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=118 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute_expiring_non_deprecated", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=118 outcome=passed exc=- sig=- duration_s=0.755 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=119 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute_hidden", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=119 outcome=passed exc=- sig=- duration_s=0.936 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=120 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute_hidden_non_deprecated", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=120 outcome=passed exc=- sig=- duration_s=0.704 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=121 {"order": ["tests/test_deprecation.py::TestArgumentDeprecation::test_deprecate_options_execute_non_deprecated", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=121 outcome=passed exc=- sig=- duration_s=0.770 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=122 {"order": ["tests/test_experimental.py::TestCommandExperimental::test_experimental_command_group_help", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=122 outcome=passed exc=- sig=- duration_s=0.704 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=123 {"order": ["tests/test_experimental.py::TestCommandExperimental::test_experimental_command_implicitly_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=123 outcome=passed exc=- sig=- duration_s=0.721 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=124 {"order": ["tests/test_experimental.py::TestCommandExperimental::test_experimental_command_plain_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=124 outcome=passed exc=- sig=- duration_s=0.751 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=125 {"order": ["tests/test_experimental.py::TestCommandGroupExperimental::test_experimental_command_group_help_plain", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=125 outcome=passed exc=- sig=- duration_s=0.738 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=126 {"order": ["tests/test_experimental.py::TestCommandGroupExperimental::test_experimental_command_implicitly", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=126 outcome=passed exc=- sig=- duration_s=0.790 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=127 {"order": ["tests/test_experimental.py::TestArgumentExperimental::test_experimental_arguments_command_help", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=127 outcome=passed exc=- sig=- duration_s=0.826 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=128 {"order": ["tests/test_experimental.py::TestArgumentExperimental::test_experimental_arguments_execute", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=128 outcome=passed exc=- sig=- duration_s=0.760 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=129 {"order": ["tests/test_introspection.py::TestExtractArgs::test_extract_args_custom_exclude", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=129 outcome=passed exc=- sig=- duration_s=0.755 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=130 {"order": ["tests/test_introspection.py::TestExtractArgs::test_extract_args_simple", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=130 outcome=passed exc=- sig=- duration_s=0.767 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=131 {"order": ["tests/test_introspection.py::TestOptionDescriptions::test_option_desc_simple", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=131 outcome=passed exc=- sig=- duration_s=0.680 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=132 {"order": ["tests/test_introspection.py::TestExtractSummary::test_extract_summary", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=132 outcome=passed exc=- sig=- duration_s=0.761 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=133 {"order": ["tests/test_introspection.py::TestExtractSummary::test_extract_summary_no_summary", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=133 outcome=passed exc=- sig=- duration_s=0.691 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=134 {"order": ["tests/test_log.py::TestLoggingEventHandling::test_cli_ctx_type_error", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=134 outcome=passed exc=- sig=- duration_s=0.712 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=135 {"order": ["tests/test_log.py::TestLoggingEventHandling::test_logging_argument_registrations", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=135 outcome=passed exc=- sig=- duration_s=0.757 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=136 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_all_flags", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=136 outcome=passed exc=- sig=- duration_s=0.713 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=137 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_debug", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=137 outcome=passed exc=- sig=- duration_s=0.797 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=138 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_default", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=138 outcome=passed exc=- sig=- duration_s=0.772 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=139 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_only_show_errors", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=139 outcome=passed exc=- sig=- duration_s=0.712 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=140 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_only_show_errors_config", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=140 outcome=passed exc=- sig=- duration_s=0.671 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=141 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_other_args_debug", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=141 outcome=passed exc=- sig=- duration_s=0.684 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=142 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_other_args_verbose", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=142 outcome=passed exc=- sig=- duration_s=0.732 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=143 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_v_v_v_default", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=143 outcome=passed exc=- sig=- duration_s=0.776 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=144 {"order": ["tests/test_log.py::TestLoggingLevel::test_determine_log_level_verbose", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=144 outcome=passed exc=- sig=- duration_s=0.726 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=145 {"order": ["tests/test_log.py::TestLoggingLevel::test_get_cli_logger", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=145 outcome=passed exc=- sig=- duration_s=0.735 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=146 {"order": ["tests/test_log.py::TestLoggingLevel::test_get_module_logger", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=146 outcome=passed exc=- sig=- duration_s=0.813 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=147 {"order": ["tests/test_log.py::TestCustomStreamHandler::test_get_color_wrapper", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=147 outcome=passed exc=- sig=- duration_s=0.701 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=148 {"order": ["tests/test_output.py::TestOutput::test_cli_ctx_type_error", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=148 outcome=passed exc=- sig=- duration_s=0.735 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=149 {"order": ["tests/test_output.py::TestOutput::test_out_json_byte", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=149 outcome=passed exc=- sig=- duration_s=0.795 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=150 {"order": ["tests/test_output.py::TestOutput::test_out_json_byte_empty", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=150 outcome=passed exc=- sig=- duration_s=0.681 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=151 {"order": ["tests/test_output.py::TestOutput::test_out_json_from_ordered_dict", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=151 outcome=passed exc=- sig=- duration_s=0.720 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=152 {"order": ["tests/test_output.py::TestOutput::test_out_json_non_ASCII", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=152 outcome=passed exc=- sig=- duration_s=0.719 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=153 {"order": ["tests/test_output.py::TestOutput::test_out_json_valid", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=153 outcome=passed exc=- sig=- duration_s=0.859 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=154 {"order": ["tests/test_output.py::TestOutput::test_out_table", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=154 outcome=passed exc=- sig=- duration_s=1.075 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=155 {"order": ["tests/test_output.py::TestOutput::test_out_table_complex_obj", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=155 outcome=passed exc=- sig=- duration_s=0.749 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=156 {"order": ["tests/test_output.py::TestOutput::test_out_table_list_of_lists", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=156 outcome=passed exc=- sig=- duration_s=0.762 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=157 {"order": ["tests/test_output.py::TestOutput::test_out_table_no_query_no_transformer_order", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=157 outcome=passed exc=- sig=- duration_s=0.830 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=158 {"order": ["tests/test_output.py::TestOutput::test_out_table_no_query_yes_jmespath_table_transformer", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=158 outcome=passed exc=- sig=- duration_s=0.807 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=159 {"order": ["tests/test_output.py::TestOutput::test_out_table_no_query_yes_transformer_order", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=159 outcome=passed exc=- sig=- duration_s=0.891 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=160 {"order": ["tests/test_output.py::TestOutput::test_out_table_with_number", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=160 outcome=passed exc=- sig=- duration_s=0.729 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=161 {"order": ["tests/test_output.py::TestOutput::test_out_yaml_byte", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=161 outcome=passed exc=- sig=- duration_s=0.735 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=162 {"order": ["tests/test_output.py::TestOutput::test_out_yaml_byte_empty", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=162 outcome=passed exc=- sig=- duration_s=0.700 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=163 {"order": ["tests/test_output.py::TestOutput::test_out_yaml_from_ordered_dict", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=163 outcome=passed exc=- sig=- duration_s=0.994 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=164 {"order": ["tests/test_output.py::TestOutput::test_out_yaml_non_ASCII", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=164 outcome=passed exc=- sig=- duration_s=0.701 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=165 {"order": ["tests/test_output.py::TestOutput::test_out_yaml_valid", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=165 outcome=passed exc=- sig=- duration_s=0.724 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=166 {"order": ["tests/test_output.py::TestOutput::test_output_format_dict", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=166 outcome=passed exc=- sig=- duration_s=0.733 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=167 {"order": ["tests/test_output.py::TestOutput::test_output_format_dict_sort", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=167 outcome=passed exc=- sig=- duration_s=0.763 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=168 {"order": ["tests/test_output.py::TestOutput::test_output_format_ordereddict_list_not_sorted", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=168 outcome=passed exc=- sig=- duration_s=0.881 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=169 {"order": ["tests/test_output.py::TestOutput::test_output_format_ordereddict_not_sorted", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=169 outcome=passed exc=- sig=- duration_s=0.757 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=170 {"order": ["tests/test_output.py::TestOutput::test_remove_color_no_tty", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=170 outcome=passed exc=- sig=- duration_s=0.790 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=171 {"order": ["tests/test_parser.py::TestParser::test_case_insensitive_enum_choices", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=171 outcome=passed exc=- sig=- duration_s=0.689 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=172 {"order": ["tests/test_parser.py::TestParser::test_cli_ctx_type_error", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=172 outcome=passed exc=- sig=- duration_s=0.796 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=173 {"order": ["tests/test_parser.py::TestParser::test_extra_nonargparse_parameters", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=173 outcome=passed exc=- sig=- duration_s=0.967 node=tests/test_help.py::TestHelp::test_help_extra_params
+SCHEDULE run=174 {"order": ["tests/test_parser.py::TestParser::test_nargs_parameter", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=174 outcome=failed exc=AssertionError sig=d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545 duration_s=0.727 node=tests/test_help.py::TestHelp::test_help_extra_params
+TRACEBACK run=174
+_______________________ TestHelp.test_help_extra_params ________________________
+tests/test_help.py:29: in wrapper
+    func(self)
+tests/test_help.py:396: in test_help_extra_params
+    self.cli_ctx.invoke('n1 -a 1 -b c -c extra'.split())
+E   AssertionError: SystemExit not raised
+ENDTRACEBACK run=174
+SCHEDULE run=175 {"order": ["tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=175 outcome=passed exc=- sig=- duration_s=0.991 node=tests/test_help.py::TestHelp::test_help_extra_params
+ABLATE source=order necessary=yes
+SCHEDULE run=176 {"order": ["tests/test_parser.py::TestParser::test_nargs_parameter", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=176 outcome=failed exc=AssertionError sig=d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545 duration_s=0.729 node=tests/test_help.py::TestHelp::test_help_extra_params
+TRACEBACK run=176
+_______________________ TestHelp.test_help_extra_params ________________________
+tests/test_help.py:29: in wrapper
+    func(self)
+tests/test_help.py:396: in test_help_extra_params
+    self.cli_ctx.invoke('n1 -a 1 -b c -c extra'.split())
+E   AssertionError: SystemExit not raised
+ENDTRACEBACK run=176
+SCHEDULE run=177 {"order": ["tests/test_parser.py::TestParser::test_nargs_parameter", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=177 outcome=failed exc=AssertionError sig=d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545 duration_s=0.717 node=tests/test_help.py::TestHelp::test_help_extra_params
+TRACEBACK run=177
+_______________________ TestHelp.test_help_extra_params ________________________
+tests/test_help.py:29: in wrapper
+    func(self)
+tests/test_help.py:396: in test_help_extra_params
+    self.cli_ctx.invoke('n1 -a 1 -b c -c extra'.split())
+E   AssertionError: SystemExit not raised
+ENDTRACEBACK run=177
+SCHEDULE run=178 {"order": ["tests/test_parser.py::TestParser::test_nargs_parameter", "tests/test_help.py::TestHelp::test_help_extra_params"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=178 outcome=failed exc=AssertionError sig=d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545 duration_s=0.743 node=tests/test_help.py::TestHelp::test_help_extra_params
+TRACEBACK run=178
+_______________________ TestHelp.test_help_extra_params ________________________
+tests/test_help.py:29: in wrapper
+    func(self)
+tests/test_help.py:396: in test_help_extra_params
+    self.cli_ctx.invoke('n1 -a 1 -b c -c extra'.split())
+E   AssertionError: SystemExit not raised
+ENDTRACEBACK run=178
+REPLAY id=F14 matched=3/3 sig=d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545
+CERT id=F14 certified=yes d=1 m=5 k=174 per_run_lower=1/5 runs_to_failure=174 sig=d49ae77a7a09a282844746667ccaaa73af8a8e35541e57da422d89d3e7f6f545
+SEARCH_STOP reason=certified index=178
+FLAKECERT_SUMMARY id=F14 runs=178 failures=4

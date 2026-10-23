@@ -1,0 +1,5 @@
+flakecert_commit ef1f8aa1f22133e36a13df68e828e6fcf45819bd
+pytest-junit	failure_signature(flaky) stable across same-seed rerun: True	sig=e65f2d82bf76a6c6
+jest-junit	failure_signature(flaky) stable across same-seed rerun: True	sig=539f820d6ea2a491
+gotestsum-junit	failure_signature(flaky) stable across same-seed rerun: True	sig=6dca6cc67056b5e9
+buildkite-collector-json	failure_signature(flaky) stable across same-seed rerun: True	sig=e65f2d82bf76a6c6

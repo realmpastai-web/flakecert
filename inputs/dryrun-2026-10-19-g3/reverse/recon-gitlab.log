@@ -1,0 +1,69 @@
+## sha256 (pinned artifacts; issues are snapshots, mutable upstream)
+2d59f154e4c0cb94a7d82813d2a6bff1fb74713631964dc9212df78569e86a53  todo-8004fe1c22e780c44d0db138293326037d847bf2.yml
+7d6decfdffc010275fac1603bb4b6e88fbafac78cb49b434727133314128829f  failures-8004fe1c22e780c44d0db138293326037d847bf2.yml
+0346cc6d2712fc0fe5557421e87397e9bf66bca5ae64a30dbeb73aa549b0e3f6  rspec_order-8004fe1c22e780c44d0db138293326037d847bf2.rb
+4438bc80c8fd3fdf71b5018ae36336fda5d0445d4ef0156912c0085c02b4ba83  check-8004fe1c22e780c44d0db138293326037d847bf2.sh
+2e21b0c3d7f6dab7e02c8ae9d5491a7a2dbd008c78afaf4d5e889a521a94c447  todo-1502df8e80f36cb3e70e1e3e2f8cc13bc18ceeab.yml
+b365e591878465cef5d41f9677c8932436663e304bb86f54e51718626959b027  issue-601848.json
+40027a9e08f2eea4f036b0163945dcda73b3d340b2d928f4b6843b00c8cbdd92  issue-601849.json
+## T1 todo entries at 8004fe1c22e780c44d0db138293326037d847bf2: total / ee / foss
+7436
+2208
+5228
+## T2 todo entries at 1502df8e80f36cb3e70e1e3e2f8cc13bc18ceeab (2026-05-30): total / ee / foss
+7611
+2230
+5381
+## T3 rspec_order_failures.yml entries at 8004fe1c22e780c44d0db138293326037d847bf2
+0
+## T4 issue metadata
+gitlab-org/gitlab#601848 created=2026-06-02T15:19:23.188Z updated=2026-06-17T09:06:53.225Z state=opened author=Peter Leitzen notes=1 labels=backend,devops::developer experience,group::development tooling,maintenance::test-gap,section::developer experience,test,type::maintenance,workflow::ready for development
+gitlab-org/gitlab#601849 created=2026-06-02T15:23:44.734Z updated=2026-06-17T09:06:02.711Z state=opened author=Peter Leitzen notes=5 labels=backend,devops::developer experience,group::development tooling,maintenance::test-gap,section::developer experience,test,type::maintenance,workflow::ready for development
+## T5 #601848 claims
+19:**5,381 FOSS spec files** are listed in
+39:- **Batch size:** Check up to 50 candidate files per run; target **~25 passing files per MR** (stop once 25 pass, or candidates are exhausted).
+130:   These FOSS spec files pass the defined, reverse, and random-order checks
+152:     Removes N FOSS spec files from `spec/support/rspec_order_todo.yml` so
+## T6 #601849 excluded set (YAML block) and category counts
+batch-001 Category A: asset compilation failure
+batch-001 Category A: Fog storage not configured
+batch-001 Category A: before(:suite) hook error
+batch-001 Category B1: reverse-order failure
+batch-003 Category A: setup failure
+batch-003 Category A: Vite not running
+batch-002 Category A: Vite not running
+batch-003 Category A: Vite not running
+batch-002 Category A: Vite not running
+batch-002 Category A: Vite not running
+batch-002 Category A: setup failure
+count=11
+10
+1
+## T7 #601849 Category A definition (includes missing constant)
+55:**Definition:** The spec fails even when run in **defined order** (the very
+61:- Error is `LoadError`, missing constant, missing factory, wrong database state, etc.
+68:### Category B — Order-dependency failure
+70:**Definition:** The spec passes in defined order but fails in **reverse** or
+## S1 check script phases: only the listed files run ($@), --fail-fast, defined -> reverse -> N random, default N
+15:#   - Adjustable via RANDOM_ORDER_RUNS=10 scripts/rspec_check_order_dependence
+19:  echo "  RANDOM_ORDER_RUNS=5 $0 <files...>"
+24:RSPEC_ARGS=(--fail-fast --format progress)
+25:RANDOM_ORDER_RUNS=${RANDOM_ORDER_RUNS:-5}
+71:  bin/rspec --bisect "${args[@]}" "$@"
+102:rspec_run --order defined "$@"
+105:RSPEC_ORDER=reverse rspec_run "$@"
+110:  rspec_run --order random "$@"
+138:  sed -i.bak "/- '.\/$escaped_file/d" "$TODO_YAML"
+## S2 order selection: todo + failures files run defined; RSPEC_ORDER env overrides
+8:    TODO_YAML = File.join(__dir__, 'rspec_order_todo.yml')
+9:    FAILURE_YAML = File.join(__dir__, 'rspec_order_failures.yml')
+13:    def order_for(example_group)
+14:      order_from_env || random_order(example_group)
+23:      @order_from_env = ENV['RSPEC_ORDER']
+29:      :random unless potential_order_dependent?(path)
+## B1 bound for 0 failures in n random runs (one-sided 95% Clopper-Pearson upper = 1-0.05^(1/n))
+5 45.07%
+10 25.89%
+30 9.50%
+59 4.95%
+299 1.00%

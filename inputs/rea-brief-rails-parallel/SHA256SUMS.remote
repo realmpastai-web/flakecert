@@ -1,0 +1,5 @@
+# Codeload tarballs are not in this git tree. sha256 is the tarball downloaded in Phase 1.
+# sha256sum -c SHA256SUMS does not read this file. Cited copies are what the checker reads.
+e40f1a951c3ce7e76876248207cfcdbf77fcc3a781d325976a0642740aadf4d8  rails-926edf5.tar.gz  https://codeload.github.com/rails/rails/tar.gz/926edf5d51c5a0cd2698810fc6abd04525eb1a3b
+fbae926556d89f853f2bb8d5170367db14a2e55815e1bb0f36089146d2c5f56b  rails-8082369.tar.gz  https://codeload.github.com/rails/rails/tar.gz/8082369f155e30dee70c7bf4dfa078affb1b90c4
+62847a96f708f7bb34bb682570b902034416f7a3e6ec94fd4ab86af5d997fea0  ruby-v3_3_8.tar.gz  https://codeload.github.com/ruby/ruby/tar.gz/b200bad6cd40d08e9f33b93e1a85c270b337867c

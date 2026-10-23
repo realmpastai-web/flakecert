@@ -1,0 +1,198 @@
+# flakecert-log-version: 1
+# id: F16
+# method: flakecert
+# category: OD-Vic
+# project: https://github.com/didix21/mdutils
+# sha: 2ef859ecc1e4f1a3e24f4150c96f61180bc57ceb
+# python: 3.11.17
+# image: sha256:d3426f19c40e181468001805a99090ec2d4c7a958183b201b6060f300d33c312
+# image_tag: flakecert:F16
+# network: none
+# netns_cmd: ip link set lo up
+# pytest_id: tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+# node_id: tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+# test_file: tests/test_mdutils.py
+# order_scope: test_directory
+# seed: 20261017
+# sources: order,seed,pythonhashseed,time_offset,tmpdir
+# budget: 500
+# plan: 500
+# structured: 246
+# order_scope: test_directory
+# network: none
+# netns_cmd: ip link set lo up
+SCHEDULE run=1 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=1 outcome=passed exc=- sig=- duration_s=0.704 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=2 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=2 outcome=passed exc=- sig=- duration_s=0.848 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=3 {"order": ["tests/test_mdutils.py::TestMdUtils::test_create_md_file", "tests/test_mdutils.py::TestMdUtils::test_insert_code", "tests/test_mdutils.py::TestMdUtils::test_new_bold_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_checked_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_code_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_header", "tests/test_mdutils.py::TestMdUtils::test_new_inline_image", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_align_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_empty", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_text_empty", "tests/test_mdutils.py::TestMdUtils::test_new_italics_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_line", "tests/test_mdutils.py::TestMdUtils::test_new_list", "tests/test_mdutils.py::TestMdUtils::test_new_paragraph", "tests/test_mdutils.py::TestMdUtils::test_new_reference_image", "tests/test_mdutils.py::TestMdUtils::test_new_reference_image_markdown_data", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_align_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_bold_italics_code_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_table_of_contents", "tests/test_mdutils.py::TestMdUtils::test_references_placed_in_markdown_file"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=3 outcome=passed exc=- sig=- duration_s=0.609 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=4 {"order": ["tests/test_mdutils.py::TestMdUtils::test_references_placed_in_markdown_file", "tests/test_mdutils.py::TestMdUtils::test_new_table_of_contents", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_bold_italics_code_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_align_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_reference_image_markdown_data", "tests/test_mdutils.py::TestMdUtils::test_new_reference_image", "tests/test_mdutils.py::TestMdUtils::test_new_paragraph", "tests/test_mdutils.py::TestMdUtils::test_new_list", "tests/test_mdutils.py::TestMdUtils::test_new_line", "tests/test_mdutils.py::TestMdUtils::test_new_italics_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_text_empty", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_empty", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_align_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link", "tests/test_mdutils.py::TestMdUtils::test_new_inline_image", "tests/test_mdutils.py::TestMdUtils::test_new_header", "tests/test_mdutils.py::TestMdUtils::test_new_code_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_checked_list", "tests/test_mdutils.py::TestMdUtils::test_new_bold_reference_link", "tests/test_mdutils.py::TestMdUtils::test_insert_code", "tests/test_mdutils.py::TestMdUtils::test_create_md_file"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=4 outcome=passed exc=- sig=- duration_s=0.633 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=5 {"order": ["tests/test_mdutils.py::TestMdUtils::test_create_md_file", "tests/test_mdutils.py::TestMdUtils::test_insert_code", "tests/test_mdutils.py::TestMdUtils::test_new_bold_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_checked_list", "tests/test_mdutils.py::TestMdUtils::test_new_code_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_header", "tests/test_mdutils.py::TestMdUtils::test_new_inline_image", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_align_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_empty", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_text_empty", "tests/test_mdutils.py::TestMdUtils::test_new_italics_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_line", "tests/test_mdutils.py::TestMdUtils::test_new_list", "tests/test_mdutils.py::TestMdUtils::test_new_paragraph", "tests/test_mdutils.py::TestMdUtils::test_new_reference_image", "tests/test_mdutils.py::TestMdUtils::test_new_reference_image_markdown_data", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_align_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_bold_italics_code_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_table_of_contents", "tests/test_mdutils.py::TestMdUtils::test_references_placed_in_markdown_file", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=5 outcome=passed exc=- sig=- duration_s=0.659 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=6 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_create_md_file", "tests/test_mdutils.py::TestMdUtils::test_insert_code", "tests/test_mdutils.py::TestMdUtils::test_new_bold_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_checked_list", "tests/test_mdutils.py::TestMdUtils::test_new_code_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_header", "tests/test_mdutils.py::TestMdUtils::test_new_inline_image", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_align_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_empty", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_inline_link_text_empty", "tests/test_mdutils.py::TestMdUtils::test_new_italics_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_line", "tests/test_mdutils.py::TestMdUtils::test_new_list", "tests/test_mdutils.py::TestMdUtils::test_new_paragraph", "tests/test_mdutils.py::TestMdUtils::test_new_reference_image", "tests/test_mdutils.py::TestMdUtils::test_new_reference_image_markdown_data", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_align_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_bold_italics_code_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_table_of_contents", "tests/test_mdutils.py::TestMdUtils::test_references_placed_in_markdown_file"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=6 outcome=passed exc=- sig=- duration_s=0.664 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=7 {"order": ["tests/test_mdutils.py::TestMdUtils::test_create_md_file", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=7 outcome=passed exc=- sig=- duration_s=0.585 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=8 {"order": ["tests/test_mdutils.py::TestMdUtils::test_create_md_file", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=8 outcome=passed exc=- sig=- duration_s=0.581 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=9 {"order": ["tests/test_mdutils.py::TestMdUtils::test_insert_code", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=9 outcome=passed exc=- sig=- duration_s=0.581 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=10 {"order": ["tests/test_mdutils.py::TestMdUtils::test_insert_code", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=10 outcome=passed exc=- sig=- duration_s=0.607 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=11 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_bold_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=11 outcome=passed exc=- sig=- duration_s=0.633 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=12 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_bold_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=12 outcome=passed exc=- sig=- duration_s=0.663 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=13 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_checkbox_checked_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=13 outcome=passed exc=- sig=- duration_s=0.610 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=14 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_checkbox_checked_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=14 outcome=passed exc=- sig=- duration_s=0.639 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=15 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_code_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=15 outcome=passed exc=- sig=- duration_s=0.619 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=16 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_code_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=16 outcome=passed exc=- sig=- duration_s=0.545 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=17 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_header", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=17 outcome=passed exc=- sig=- duration_s=0.589 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=18 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_header", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=18 outcome=passed exc=- sig=- duration_s=0.691 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=19 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_image", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=19 outcome=passed exc=- sig=- duration_s=0.720 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=20 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_image", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=20 outcome=passed exc=- sig=- duration_s=0.590 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=21 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=21 outcome=passed exc=- sig=- duration_s=0.666 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=22 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=22 outcome=passed exc=- sig=- duration_s=0.610 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=23 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_align_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=23 outcome=passed exc=- sig=- duration_s=0.621 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=24 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_align_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=24 outcome=passed exc=- sig=- duration_s=0.564 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=25 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=25 outcome=passed exc=- sig=- duration_s=0.586 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=26 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=26 outcome=passed exc=- sig=- duration_s=0.809 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=27 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=27 outcome=passed exc=- sig=- duration_s=0.654 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=28 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=28 outcome=passed exc=- sig=- duration_s=0.762 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=29 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=29 outcome=passed exc=- sig=- duration_s=0.847 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=30 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_bold_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=30 outcome=passed exc=- sig=- duration_s=0.784 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=31 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=31 outcome=passed exc=- sig=- duration_s=0.667 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=32 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_code_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=32 outcome=passed exc=- sig=- duration_s=0.829 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=33 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_empty", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=33 outcome=passed exc=- sig=- duration_s=0.735 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=34 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_empty", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=34 outcome=passed exc=- sig=- duration_s=0.787 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=35 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=35 outcome=passed exc=- sig=- duration_s=0.695 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=36 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_italic_format", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=36 outcome=passed exc=- sig=- duration_s=0.591 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=37 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_text_empty", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=37 outcome=passed exc=- sig=- duration_s=0.586 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=38 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_inline_link_text_empty", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=38 outcome=passed exc=- sig=- duration_s=0.580 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=39 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_italics_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=39 outcome=passed exc=- sig=- duration_s=0.561 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=40 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_italics_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=40 outcome=passed exc=- sig=- duration_s=0.570 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=41 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_line", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=41 outcome=passed exc=- sig=- duration_s=0.629 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=42 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_line", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=42 outcome=passed exc=- sig=- duration_s=0.584 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=43 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=43 outcome=passed exc=- sig=- duration_s=0.617 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=44 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=44 outcome=passed exc=- sig=- duration_s=0.616 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=45 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_paragraph", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=45 outcome=passed exc=- sig=- duration_s=0.626 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=46 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_paragraph", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=46 outcome=passed exc=- sig=- duration_s=0.672 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=47 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_image", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=47 outcome=passed exc=- sig=- duration_s=0.577 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=48 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_image", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=48 outcome=passed exc=- sig=- duration_s=0.581 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=49 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_image_markdown_data", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=49 outcome=passed exc=- sig=- duration_s=0.615 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=50 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_image_markdown_data", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=50 outcome=passed exc=- sig=- duration_s=0.584 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=51 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=51 outcome=passed exc=- sig=- duration_s=0.595 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=52 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_link", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=52 outcome=passed exc=- sig=- duration_s=0.582 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=53 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_align_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=53 outcome=passed exc=- sig=- duration_s=0.572 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=54 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_align_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=54 outcome=passed exc=- sig=- duration_s=0.593 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=55 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_bold_italics_code_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=55 outcome=passed exc=- sig=- duration_s=0.620 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=56 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_reference_link_when_reference_tag_not_defined_and_bold_italics_code_is_defined", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=56 outcome=passed exc=- sig=- duration_s=0.788 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=57 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_table_of_contents", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=57 outcome=passed exc=- sig=- duration_s=0.587 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=58 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_table_of_contents", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=58 outcome=passed exc=- sig=- duration_s=0.799 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=59 {"order": ["tests/test_mdutils.py::TestMdUtils::test_references_placed_in_markdown_file", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=59 outcome=passed exc=- sig=- duration_s=0.772 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=60 {"order": ["tests/test_mdutils.py::TestMdUtils::test_references_placed_in_markdown_file", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=60 outcome=passed exc=- sig=- duration_s=0.611 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+SCHEDULE run=61 {"order": ["tests/test_fileutils/test_fileutils.py::TestMarkdownFile::test_append_end", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=61 outcome=failed exc=FileNotFoundError sig=98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2 duration_s=0.665 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+TRACEBACK run=61
+______________________ TestMdUtils.test_new_checkbox_list ______________________
+tests/test_mdutils.py:381: in test_new_checkbox_list
+    md_file.create_md_file()
+/usr/local/lib/python3.11/site-packages/mdutils/mdutils.py:70: in create_md_file
+    md_file = MarkDownFile(self.file_name)
+/usr/local/lib/python3.11/site-packages/mdutils/fileutils/fileutils.py:23: in __init__
+    self.file = open(self.file_name, 'w+', encoding='UTF-8')
+E   FileNotFoundError: [Errno 2] No such file or directory: 'Test_file.md'
+ENDTRACEBACK run=61
+SCHEDULE run=62 {"order": ["tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert run=62 outcome=passed exc=- sig=- duration_s=0.613 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+ABLATE source=order necessary=yes
+SCHEDULE run=63 {"order": ["tests/test_fileutils/test_fileutils.py::TestMarkdownFile::test_append_end", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=63 outcome=failed exc=FileNotFoundError sig=98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2 duration_s=0.704 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+TRACEBACK run=63
+______________________ TestMdUtils.test_new_checkbox_list ______________________
+tests/test_mdutils.py:381: in test_new_checkbox_list
+    md_file.create_md_file()
+/usr/local/lib/python3.11/site-packages/mdutils/mdutils.py:70: in create_md_file
+    md_file = MarkDownFile(self.file_name)
+/usr/local/lib/python3.11/site-packages/mdutils/fileutils/fileutils.py:23: in __init__
+    self.file = open(self.file_name, 'w+', encoding='UTF-8')
+E   FileNotFoundError: [Errno 2] No such file or directory: 'Test_file.md'
+ENDTRACEBACK run=63
+SCHEDULE run=64 {"order": ["tests/test_fileutils/test_fileutils.py::TestMarkdownFile::test_append_end", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=64 outcome=failed exc=FileNotFoundError sig=98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2 duration_s=0.617 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+TRACEBACK run=64
+______________________ TestMdUtils.test_new_checkbox_list ______________________
+tests/test_mdutils.py:381: in test_new_checkbox_list
+    md_file.create_md_file()
+/usr/local/lib/python3.11/site-packages/mdutils/mdutils.py:70: in create_md_file
+    md_file = MarkDownFile(self.file_name)
+/usr/local/lib/python3.11/site-packages/mdutils/fileutils/fileutils.py:23: in __init__
+    self.file = open(self.file_name, 'w+', encoding='UTF-8')
+E   FileNotFoundError: [Errno 2] No such file or directory: 'Test_file.md'
+ENDTRACEBACK run=64
+SCHEDULE run=65 {"order": ["tests/test_fileutils/test_fileutils.py::TestMarkdownFile::test_append_end", "tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list"], "pythonhashseed": "", "seed": "", "time_offset": "", "tmpdir": ""}
+RUN method=flakecert-replay run=65 outcome=failed exc=FileNotFoundError sig=98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2 duration_s=0.628 node=tests/test_mdutils.py::TestMdUtils::test_new_checkbox_list
+TRACEBACK run=65
+______________________ TestMdUtils.test_new_checkbox_list ______________________
+tests/test_mdutils.py:381: in test_new_checkbox_list
+    md_file.create_md_file()
+/usr/local/lib/python3.11/site-packages/mdutils/mdutils.py:70: in create_md_file
+    md_file = MarkDownFile(self.file_name)
+/usr/local/lib/python3.11/site-packages/mdutils/fileutils/fileutils.py:23: in __init__
+    self.file = open(self.file_name, 'w+', encoding='UTF-8')
+E   FileNotFoundError: [Errno 2] No such file or directory: 'Test_file.md'
+ENDTRACEBACK run=65
+REPLAY id=F16 matched=3/3 sig=98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2
+CERT id=F16 certified=yes d=1 m=5 k=61 per_run_lower=1/5 runs_to_failure=61 sig=98f535fa962281ad22165647340b281a41cfa53933d4a7727986e42dc89115e2
+SEARCH_STOP reason=certified index=65
+FLAKECERT_SUMMARY id=F16 runs=65 failures=4

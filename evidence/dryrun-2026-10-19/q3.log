@@ -1,0 +1,15 @@
+# Skeptic pass against the q-logs
+
+1. Linux A1 did not reproduce the victim failure. `q1-junit-outcomes.log` `VICTIM` lines for A1-eb925fa-r1, r2, r3 and A1-aec7800-r1, r2, r3 are all `('passed', '', '')`. A0 and A2 at both pins are the same. No macos-latest / py3.12 cell was run. `q1.log` contains no `--randomly-seed`.
+
+2. The e2e bridge is a child process (`rea-notes.md`, `test_bridge_live.py` fixture at line 124). A1's victim stayed passed while that file ran first, which matches the spec's O5: the child's Popen cannot reach the parent's patch. The in-process sabotage thread did move the victim: S1 reps r03, r04, r07, r09, and r14 failed at `tests/test_mcp_client_parity_v4_169_39.py:169` with an argv ending in `--version` (`q1-junit-outcomes.log`). The other S1 reps passed. That is the control, and it does not identify the #206 polluter.
+
+3. Coverage addopts are still `--cov-fail-under=46` in both pins (`rea-notes.md`). Runs passed `--no-cov`. Outcomes above are from junit, not from the pytest exit code. A1/A2 `pytest_exit=1` in `q1.log` is the allowlist assertion at `tests/e2e/test_bridge_live.py:454`, recorded as `failed` in `q1-junit-outcomes.log`, while the victim case is `passed`.
+
+4. `E2E_SETUP_ERRORS` is `0` on every junit file in `q1-junit-outcomes.log`. The bridge came up: the other e2e cases passed. A1 is a real victim result, not a setup-error stand-in.
+
+5. S1 is racy in these logs: 5 of the 20 `VICTIM` lines are `failed`, 15 are `passed`. It shows a thread-borne `subprocess.run([sys.executable, "--version"])` can hit the patched `Popen`. It does not show that #206 is that leak.
+
+6. F1 at seed 48174: `q2.log` `grep -c 'has leaked into another example'` printed `0` on r1, r2, and r3. The suite line is `913 examples, 31 failures` (`q2.log` lines 38, 83, 128). F2 at the same seed: grep printed `0`, suite line `913 examples, 1 failure` (`q2-f2.log` lines 27, 62, 97, copied onto `q2.log`). Those figures are the log lines. No other seed was run. F3 ran the first F1 failed example id, `./spaceship/spec/spaceauth_spec.rb:7`, alone. `q2.log` lines 194, 224, and 254: `1 example, 1 failure`. The error is `WebMock::NetConnectNotAllowedError` (`rspec/F3-76eeb3f-r1.log` line 18), and the leak grep is `0`.
+
+7. Counts in `SUMMARY.md` are copied from `q1-junit-outcomes.log` and `q2.log`. `predictions.json` was not opened. `inputs/dryrun-2026-10-19/` was not edited.

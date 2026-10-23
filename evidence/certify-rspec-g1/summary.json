@@ -1,0 +1,122 @@
+{
+  "od_count": 6,
+  "attributed_count": 6,
+  "od": [
+    "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5",
+    "./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5",
+    "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5",
+    "./spaceship/spec/connect_api/models/build_delivery_spec.rb:5",
+    "./spaceship/spec/portal/certificate_spec.rb:111",
+    "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+  ],
+  "attributed": [
+    "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5",
+    "./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5",
+    "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5",
+    "./spaceship/spec/connect_api/models/build_delivery_spec.rb:5",
+    "./spaceship/spec/portal/certificate_spec.rb:111",
+    "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+  ],
+  "certified": [
+    "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5",
+    "./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5",
+    "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5",
+    "./spaceship/spec/portal/certificate_spec.rb:111"
+  ],
+  "control": [
+    "./spaceship/spec/two_step_or_factor_client_spec.rb:76"
+  ],
+  "rows": [
+    {
+      "location": "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb:5",
+      "id": "./spaceship/spec/connect_api/models/build_beta_detail_spec.rb[1:1:1]",
+      "base": "NOT_FIXED",
+      "head": "FIXED",
+      "plain_base": "FIXED",
+      "plain_head": "FIXED",
+      "polluter_ids": [
+        "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+      ],
+      "label": "CERTIFIED",
+      "cert": "cert-1.json"
+    },
+    {
+      "location": "./spaceship/spec/connect_api/models/beta_build_metric_spec.rb:5",
+      "id": "./spaceship/spec/connect_api/models/beta_build_metric_spec.rb[1:1:1]",
+      "base": "NOT_FIXED",
+      "head": "FIXED",
+      "plain_base": "FIXED",
+      "plain_head": "FIXED",
+      "polluter_ids": [
+        "./spaceship/spec/connect_api/models/webhook_spec.rb[1:1:1:1]"
+      ],
+      "label": "CERTIFIED",
+      "cert": "cert-2.json"
+    },
+    {
+      "location": "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb:5",
+      "id": "./spaceship/spec/connect_api/models/app_store_version_release_request_spec.rb[1:1:1]",
+      "base": "NOT_FIXED",
+      "head": "FIXED",
+      "plain_base": "FIXED",
+      "plain_head": "FIXED",
+      "polluter_ids": [
+        "./spaceship/spec/connect_api/models/capabilities_spec.rb[1:1:1]"
+      ],
+      "label": "CERTIFIED",
+      "cert": "cert-3.json"
+    },
+    {
+      "location": "./spaceship/spec/connect_api/models/build_delivery_spec.rb:5",
+      "id": "./spaceship/spec/connect_api/models/build_delivery_spec.rb[1:1:1]",
+      "base": "POLLUTER_FAILED",
+      "head": "FIXED",
+      "plain_base": "FIXED",
+      "plain_head": "FIXED",
+      "polluter_ids": [
+        "./spaceship/spec/connect_api/provisioning/provisioning_client_spec.rb[1:1:2:1:2]"
+      ],
+      "label": "REJECTED",
+      "cert": "cert-4.json"
+    },
+    {
+      "location": "./spaceship/spec/portal/certificate_spec.rb:111",
+      "id": "./spaceship/spec/portal/certificate_spec.rb[1:5:3]",
+      "base": "NOT_FIXED",
+      "head": "FIXED",
+      "plain_base": "FIXED",
+      "plain_head": "FIXED",
+      "polluter_ids": [
+        "./spaceship/spec/provisioning_profile_spec.rb[1:12:3:1]"
+      ],
+      "label": "CERTIFIED",
+      "cert": "cert-5.json"
+    },
+    {
+      "location": "./spaceship/spec/two_step_or_factor_client_spec.rb:76",
+      "id": "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:1:1]",
+      "base": "NOT_FIXED",
+      "head": "NOT_FIXED",
+      "plain_base": "FIXED",
+      "plain_head": "FIXED",
+      "polluter_ids": [
+        "./spaceship/spec/two_step_or_factor_client_spec.rb[1:2:3:1]"
+      ],
+      "label": "CONTROL",
+      "cert": "cert-6.json"
+    }
+  ],
+  "exit_ok": true,
+  "image_id": "sha256:1f3248c0b71fb38ce02d05bc3cee8da5257792360158a660b83518c8cb827e63",
+  "docker_server": "26.1.5+dfsg1",
+  "ruby": "ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]",
+  "bundler": "Bundler version 2.6.9",
+  "rspec_core": "3.12.2",
+  "s1_examples": 913,
+  "s1_failing": 31,
+  "coveralls_mentions_s1_doc": 2,
+  "stdout_redirect_mentions_s1_doc": 1,
+  "rejected": [
+    "./spaceship/spec/connect_api/models/build_delivery_spec.rb:5"
+  ]
+}

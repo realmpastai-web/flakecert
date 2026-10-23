@@ -1,0 +1,50 @@
+# Breaker sets B(v): ConnectAPI @client writers (recon-f6 M6) that leave no test_flight/tunes request client, in F1 r1 order before each victim
+# source: flakecert main (a75858b/f338f24) evidence/dryrun-2026-10-19/rspec/F1-76eeb3f-r1.log
+b1018b2fc2e6718a4cc0e9c14149012d16422d12978b838fd2923928b5d6c923  evidence/dryrun-2026-10-19/rspec/F1-76eeb3f-r1.log
+# cmd: sed strip ANSI | awk 'NR>10 && /^[A-Z]/ && prev==""' (top-level group headers, line|name) up to 'Failures:'
+12|Spaceship::SpaceauthRunner
+22|Spaceship::Portal::Key
+38|Spaceship
+51|Spaceship::ConnectAPI::BetaTester
+55|Spaceship::ConnectAPI::APIClient
+91|Spaceship::Tunes::IAPDetail
+117|Spaceship::ConnectAPI::BuildUpload
+121|Spaceship::Portal::Persons
+127|Spaceship::ConnectAPI::BetaAppReviewDetail
+131|Spaceship::Tunes
+135|Spaceship::ConnectAPI::BetaGroup
+144|Spaceship::ConnectAPI::BundleId
+148|Spaceship::ConnectAPI::Webhook
+158|Spaceship::TestFlight::TestInfo
+163|Spaceship::ConnectAPI::BuildBetaDetail
+167|Spaceship::Hashcash
+171|Spaceship::Tunes::Territory
+177|Spaceship::Portal::ProvisioningProfile
+183|Spaceship::ConnectAPI::BetaBuildMetric
+187|Spaceship::Tunes::SandboxTester
+197|Spaceship::Client
+210|Spaceship::ConnectAPI::Capabilities
+214|Spaceship::Tunes::Availability
+247|Spaceship::Tunes::IAPFamilies
+252|Spaceship::ConnectAPI::AppStoreVersionReleaseRequest
+256|Spaceship::ConnectAPI
+276|Spaceship::Portal::Persons
+280|Spaceship::Tunes::AppDetails
+288|Spaceship::ConnectAPI::BundleIdCapability
+292|Spaceship::ConnectAPI::PreReleaseVersion
+296|String
+304|Spaceship::Portal::ProvisioningProfile
+311|Spaceship::ConnectAPI::Users::Client
+339|Spaceship::ConnectAPI::Profile
+343|Spaceship::Tunes::IAPList
+350|Spaceship::ConnectAPI::Provisioning::Client
+380|Spaceship::ConnectAPI::BuildDelivery
+384|Spaceship::Tunes::Members
+397|Spaceship::Client
+# breakers (writer kind, from inputs/dryrun-2026-10-19-f6/reverse/recon.log M1/M5): webhook_spec (after: token=nil), bundle_id_spec, capabilities_spec, bundle_id_capability_spec, profile_spec, provisioning_client_spec (portal-only login)
+# groups 51-135 (BetaTester, APIClient, BuildUpload, BetaAppReviewDetail, BetaGroup) use only the shared Tunes.login: not writers (grep in recon M6 list)
+B(build_beta_detail:5 @163)       = bundle_id(144), webhook(148)
+B(beta_build_metric:5 @183)       = bundle_id(144), webhook(148)
+B(app_store_version_release_request:5 @252) = bundle_id(144), webhook(148), capabilities(210)
+B(build_delivery:5 @380)          = bundle_id(144), webhook(148), capabilities(210), bundle_id_capability(288), profile(339), provisioning_client(350); connect_api/spaceship_spec(256) leaves an rspec double (fix comment) -> other error class
+Control two_step:76 (@1413): only ':94 when running interactive' (@1411) leaves SPACESHIP_ONLY_ALLOW_INTERACTIVE_2FA=true (f6 recon N1)

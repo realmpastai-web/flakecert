@@ -1,0 +1,61 @@
+datadog-ci 1.42.0
+gem file: datadog-ci-1.42.0.gem
+sha256: 7591591919baaecff0fa5e344bf8f8261a882d093e79de900a6b6f2efd1b42c7
+fetched on the host with `gem fetch datadog-ci` (rubygems.org latest) and unpacked with `gem unpack`. Not run inside the test container.
+
+The shipped default matches 20. Remote library settings can replace that count when the settings payload includes test_management.attempt_to_fix_retries. If that key is absent, the gem keeps the local default of 20.
+
+Local default (env DD_TEST_MANAGEMENT_ATTEMPT_TO_FIX_RETRIES):
+lib/datadog/ci/ext/settings.rb:29
+        ENV_TEST_MANAGEMENT_ATTEMPT_TO_FIX_RETRIES = "DD_TEST_MANAGEMENT_ATTEMPT_TO_FIX_RETRIES"
+
+lib/datadog/ci/configuration/settings.rb:192-196
+              option :test_management_attempt_to_fix_retries_count do |o|
+                o.type :int
+                o.env CI::Ext::Settings::ENV_TEST_MANAGEMENT_ATTEMPT_TO_FIX_RETRIES
+                o.default 20
+              end
+
+That option is the max_attempts passed into the attempt-to-fix strategy:
+lib/datadog/ci/configuration/components.rb:159-160
+            retry_flaky_fixed_tests_enabled: settings.ci.test_management_enabled,
+            retry_flaky_fixed_tests_max_attempts: settings.ci.test_management_attempt_to_fix_retries_count,
+
+Retry reason string and the strategy that uses the count:
+lib/datadog/ci/ext/test.rb:196
+          RETRY_FLAKY_FIXED = "attempt_to_fix"
+
+lib/datadog/ci/test_retries/strategy/retry_flaky_fixed.rb:23-26
+          def configure(library_settings, test_session)
+            @enabled &&= library_settings.test_management_enabled?
+            @max_attempts = library_settings.attempt_to_fix_retries_count || @max_attempts
+          end
+
+lib/datadog/ci/test_retries/strategy/retry_flaky_fixed.rb:34-37
+          def build_driver(test_span)
+            Datadog.logger.debug { "#{test_span.name} is attempt_to_fix, will be retried" }
+
+            Driver::RetryFlakyFixed.new(test_span, max_attempts: max_attempts)
+
+Server override (nil when the key is missing, so the local 20 remains):
+lib/datadog/ci/ext/transport.rb:51-52
+        DD_API_SETTINGS_RESPONSE_TEST_MANAGEMENT_KEY = "test_management"
+        DD_API_SETTINGS_RESPONSE_ATTEMPT_TO_FIX_RETRIES_KEY = "attempt_to_fix_retries"
+
+lib/datadog/ci/remote/library_settings.rb:158-163
+        def attempt_to_fix_retries_count
+          return @attempt_to_fix_retries_count if defined?(@attempt_to_fix_retries_count)
+
+          @attempt_to_fix_retries_count = test_management_payload.fetch(
+            Ext::Transport::DD_API_SETTINGS_RESPONSE_ATTEMPT_TO_FIX_RETRIES_KEY, nil
+          )
+
+Driver stop condition (retry while attempts < max_attempts and no failure yet):
+lib/datadog/ci/test_retries/driver/retry_flaky_fixed.rb:22-24
+          def should_retry?
+            @attempts < @max_attempts && !@failed_once
+          end
+
+Which tests are marked attempt-to-fix comes from fetched test properties, not from the retry count:
+lib/datadog/ci/test_management/component.rb:69
+          test_span.set_tag(Ext::Test::TAG_IS_ATTEMPT_TO_FIX, "true") if test_properties["attempt_to_fix"]
