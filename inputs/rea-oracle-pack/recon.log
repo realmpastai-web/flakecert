@@ -1,0 +1,15 @@
+REA Oracle Pack — Week-1 static slice — recon
+built-in-sandbox: Hark Linux, Node v22.23.3, python3
+date: 2026-10-26 IST
+scope: STATIC ONLY. No target execution, no network testing, no live probe.
+source evidence (on team box, NOT in this sandbox):
+  C5 Kestrel HTTP/1 model  -> inputs/rea-c5-* (team box)
+  C7 Kestrel HTTP/3 map    -> branch rea-c7-kestrel-h3, commit 434e35b (team box), SHA256SUMS verified there
+  C6 YARP forwarder behavior -> /workspace/work/rea-c6-yarp/inputs/rea-c6-yarp-reqsmuggle/ (NO-GO FINDINGS)
+constraint: this sandbox holds only the CURSOR-TASK .md files for C5/C7, not the committed decompiled snippets.
+  => oracle rows carry an evidence pointer + status. A row is CONFIRMED only after the committed C5/C7
+     decomp file is synced in and sha-matched on the box. Until then: PENDING-EVIDENCE-SYNC.
+public buyer-gap evidence fetched this session (see SPEC.md §Buyer):
+  portswigger HTTP Request Smuggler (live/timing/parser-discrepancy probing)
+  USENIX Sec 2025 "Silent Danger in HTTP" (predefined payloads lack new-variant capability; needs an oracle)
+  T-Reqs (differential fuzzing across RUNNING servers), Gudifu (guided differential fuzzing, running echo servers)

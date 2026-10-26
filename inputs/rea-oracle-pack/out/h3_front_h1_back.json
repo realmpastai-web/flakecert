@@ -1,0 +1,43 @@
+{
+  "front": "h3",
+  "back": "h1",
+  "confirmed_only": false,
+  "oracle_rows": 3,
+  "divergences": 2,
+  "cases": [
+    {
+      "id": "OR-001-chunked-framing",
+      "axis": "body-length-source",
+      "front": "h3",
+      "front_verdict": "n/a:no-chunked(frame-length)",
+      "back": "h1",
+      "back_verdict": "framing-source:TE-or-CL",
+      "divergence_class": "absent-vs-framing-source",
+      "payable_at_boundary": true,
+      "status": "PENDING-EVIDENCE-SYNC",
+      "evidence": {
+        "h1": "C5@team:SPEC.md#chunked-decoder",
+        "h3": "C7@434e35b:SPEC.md#http3-body-length",
+        "yarp": "C6:/workspace/work/rea-c6-yarp/inputs/rea-c6-yarp-reqsmuggle/FINDINGS.md"
+      },
+      "field_set": "request body framed with Transfer-Encoding: chunked",
+      "narrative": "h3/h2 derive body length from DATA frames; an h1 downstream re-reads TE/CL -> length-source mismatch at the boundary"
+    },
+    {
+      "id": "OR-002-extended-connect-protocol",
+      "axis": "pseudo-header-acceptance",
+      "front": "h3",
+      "front_verdict": "accept-if:EnableWebTransportAndH3Datagrams",
+      "back": "h1",
+      "back_verdict": "n/a:no-pseudo-headers",
+      "divergence_class": "accept-vs-absent",
+      "payable_at_boundary": true,
+      "status": "PENDING-EVIDENCE-SYNC",
+      "evidence": {
+        "h3": "C7@434e35b:FINDINGS.md#protocol-connect-only"
+      },
+      "field_set": ":protocol pseudo-header (Extended CONNECT)",
+      "narrative": "config-gated acceptance differs h2 vs h3; a fronting hop unaware of :protocol may mis-route"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "front": "h3",
+  "back": "h1",
+  "confirmed_only": false,
+  "oracle_rows": 3,
+  "divergences": 2,
+  "cases": [
+    {
+      "id": "HO-01-obs-fold",
+      "axis": "header-value-validation",
+      "front": "h3",
+      "front_verdict": "n/a:no-obs-fold",
+      "back": "h1",
+      "back_verdict": "reject:obs-fold",
+      "divergence_class": "absent-vs-reject",
+      "payable_at_boundary": false,
+      "status": "PENDING-EVIDENCE-SYNC",
+      "evidence": null,
+      "field_set": "obs-fold (header value continued on a leading-whitespace next line)",
+      "narrative": ""
+    },
+    {
+      "id": "HO-03-te-not-chunked",
+      "axis": "body-length-source",
+      "front": "h3",
+      "front_verdict": "n/a:no-TE",
+      "back": "h1",
+      "back_verdict": "reject:TE-not-chunked",
+      "divergence_class": "absent-vs-reject",
+      "payable_at_boundary": false,
+      "status": "PENDING-EVIDENCE-SYNC",
+      "evidence": null,
+      "field_set": "Transfer-Encoding: gzip (not chunked) with no CL",
+      "narrative": ""
+    }
+  ]
+}
