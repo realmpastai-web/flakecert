@@ -1,0 +1,9 @@
+{
+  "id": "haproxy-mode-http-default",
+  "edge_heading": "HAProxy edge",
+  "count_prefix": "HAProxy count:",
+  "score_heading": "HAProxy 3.4.7, default `mode http`",
+  "verdict_heading": "HAProxy 3.4.7 `mode http`",
+  "pin_rel": "pins/haproxy-3.4.7.tar.gz",
+  "rebuild_prefix": "**HAProxy.**"
+}

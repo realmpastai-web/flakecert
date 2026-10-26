@@ -1,0 +1,9 @@
+{
+  "id": "nginx-proxy_pass-default",
+  "edge_heading": "nginx edge",
+  "count_prefix": "nginx count:",
+  "score_heading": "nginx 1.28.3, default `proxy_pass`",
+  "verdict_heading": "nginx 1.28.3 `proxy_pass`",
+  "pin_rel": "pins/nginx-1.28.3.tar.gz",
+  "rebuild_prefix": "**nginx.**"
+}
