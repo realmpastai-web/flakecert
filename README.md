@@ -4,6 +4,14 @@ Proof-of-concept harness for certifying flaky tests under controlled sources of 
 
 The deps-preflight classifier implements a rule Hark states is RECONSTRUCTED and verified against the frozen log, not the original script. The requirements-file cap on that log is a display limit only. Install selection does not use the capped list.
 
+## Book an HTTP Desync audit
+
+SanFire runs a static, offline HTTP Desync Conformance Audit for a reverse proxy or CDN (nginx, HAProxy, IIS, YARP, Cloudflare) in front of ASP.NET Core Kestrel. It checks 25 RFC 9110/9112 framing rules pinned to your exact edge and .NET versions. You get a GO / HARDENING-REQUIRED verdict with severities, a hardening checklist with exact config lines, a PDF report, a sha256-frozen evidence pack and one retest. No traffic is sent to your systems, and all delivery is in writing.
+
+- One-page redacted sample report: [sample/HTTP-Desync-Sample-Report.pdf](sample/HTTP-Desync-Sample-Report.pdf)
+- Full public method and verdicts: [desync-oracle/](desync-oracle/)
+- To book or get a scoping sheet: email Santhosh Madhava, SanFire OPC Pvt Ltd, at [santhoshmadhava@sanfire.in](mailto:santhoshmadhava@sanfire.in)
+
 ## Auditing a fixed verdict
 
 The bound covers only the run distribution that was sampled. Plain retries and FlakeCert seeded schedules sample different distributions, which is why the second number counts seeded runs. A seeded run that fails ends the count and becomes a certificate instead.
